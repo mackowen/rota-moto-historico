@@ -1,0 +1,146 @@
+# Estado Atual dos Projetos
+
+Estado inspecionado em 2026-10-01. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0019.
+
+## Identidade e autorização do backend futuro
+
+- O Restaurante ainda não tem autenticação real, credenciais de usuário, sessões ou membership no backend. `users`, `profiles`, `companies`, permissões e `currentUserId` são estado local no IndexedDB e não são autoridade de segurança.
+- O contrato compartilhado atual é Local-First e orientado a dados de domínio; esta análise não o alterou. Recomendações ainda não foram aprovadas como decisões de implementação.
+- Registro 0004 contém análise e fontes consultadas; decisões pendentes sobre onboarding, credenciais, permissões, integração, IDs e offline estão em `PENDENCIAS.md`.
+
+## RotaMoto Motoboy
+
+- **Baseline:** tag `v39.6-ui-mobile-fix2`, commit `79c527b59d32d8b55236c62042acb868166ed4ad`; tag preservada.
+- **Branch atual:** `codex/setup-workflow`.
+- **Último commit:** `4b4fd6acf137134b38ed6d37c992c7aee2199c6a` — `fix(settings): serialize transactional settings updates` (Registro 0018).
+- **Situação do worktree:** limpo após Registro 0018.
+- **Funcionalidades relevantes:** README descreve finalização de corrida protegida por assinatura do cliente, slider de confirmação, persistência da assinatura/horário e validação de distância/GPS. `AGENTS.md` descreve aplicativo web do entregador e estratégia local-first com IndexedDB.
+- **Pendências conhecidas:** nenhuma listada em `PENDENCIAS.md` nem encontrada nas seções consultadas dos documentos do projeto; não é afirmação de ausência absoluta de trabalho futuro.
+- **Testes disponíveis:** `npm test` executa contratos/fluxos de sync, ciclo de vida de storage, persistência de pacotes, comandos e exclusão; passou no Registro 0018. `tests/test-command-persistence.js` verifica estruturalmente commit/erro/fila dos comandos locais.
+- **Infraestrutura de browser testing:** instruções documentam Chromium/CDP e workspace compartilhado. Situação corrente detalhada em “Infraestrutura”.
+
+## RotaMoto Restaurante
+
+- **Baseline:** tag `v5.50-ui-mobile-fix5`, commit `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; HEAD está seis commits à frente. Tag não alterada. (O Registro 0001 tinha referência abreviada incorreta; este hash foi conferido diretamente na tag.)
+- **Branch atual:** `codex/setup-workflow`.
+- **Último commit conhecido:** `133da3d0bc9ec953e4175e5bbb40a89abb5cd2ba` — `fix(server): return 413 for oversized request bodies` (2026-10-01).
+- **Situação do worktree:** limpo após Registro 0006; nenhum arquivo staged, unstaged ou não rastreado.
+- **Funcionalidades relevantes:** README descreve painel de restaurante, origens de pedidos e laboratório local-first para integrações incluindo iFood, 99Food e Keeta; `AGENTS.md` documenta contrato de dados e integrações desacopladas.
+- **Pendências conhecidas:** nenhuma listada em `PENDENCIAS.md` nem encontrada nas seções consultadas dos documentos do projeto; não é afirmação de ausência absoluta de trabalho futuro.
+- **Testes disponíveis:** scripts `npm test` (auditoria, integrações, segurança do servidor, sync, billing e iFood), `npm run test:sync` (contrato e fluxos de sync) e `npm run check` (sintaxe do `server.js`). Arquivos listados em `tests/`: audit, integrations, server-security, sync-adversarial, sync-contract e sync-flows. Também existem `test-billing.js` e `test-ifood.js` referenciados pelo script. Nada foi executado nesta leitura.
+- **Infraestrutura de browser testing:** instruções documentam Chromium/CDP e workspace compartilhado. Situação corrente detalhada em “Infraestrutura”.
+
+## Infraestrutura
+
+- **Termux:** caminhos observados estão sob `/data/data/com.termux/files/home`; versão não verificada.
+- **Node/npm:** Node `v26.4.0`, npm `11.20.0` no ambiente desta leitura. Restaurante declara requisito Node `>=18`.
+- **Browser testing compartilhado:** `~/projetos/browser-tests` existe; pacote declara `chrome-remote-interface ^0.34.0`, resolvível em `node_modules`. `scripts/` existe, sem arquivos. O `package.json` do workspace tem somente script `test` sem testes configurados.
+- **Chromium:** `$PREFIX/lib/chromium/chrome` existe e é executável; `--version` informou `Chromium 149.0.7827.155`.
+- **CDP em localhost:9222:** nenhum processo Chromium com porta de depuração foi encontrado; consulta a `http://127.0.0.1:9222/json/version` falhou com conexão recusada (HTTP 000). Portanto, binário e cliente estão instalados, mas não havia sessão CDP ativa. Nenhum browser testing foi executado.
+- **PHP / PostgreSQL / Nginx / SSH:** situação não verificada.
+- **Codex:** utilizado nesta interação; versão/runtime não inspecionado.
+- **Demais componentes:** não verificados; não presumir instalação, execução ou configuração ativa.
+
+## Auditoria Git — Registro 0005
+
+- Restaurante: `codex/setup-workflow`, HEAD `133da3d0bc9ec953e4175e5bbb40a89abb5cd2ba`, sete commits após `v5.50-ui-mobile-fix5`; worktree limpo.
+- Motoboy: `codex/setup-workflow`, HEAD `6ccd8b9059c6fa5bc4ac7165c762a5f094ee750e`, quatro commits após `v39.6-ui-mobile-fix2`; worktree limpo.
+- Registro 0006: auditoria funcional/de sync/segurança encontrou defeito médio no limite de 1 MiB do corpo HTTP do Restaurante; fix commitado e coberto por teste. Suíte completa e `node --check server.js` passaram. Testes do Motoboy e `node --check app.js` passaram. Nenhum browser test foi necessário para a mudança backend.
+- As tags baselines continuam apontando para os commits `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e `79c527b59d32d8b55236c62042acb868166ed4ad`; worktrees limpos e nenhum push realizado.
+
+## Atualização — Registro 0007
+
+- Motoboy: branch `codex/setup-workflow`, HEAD `ec668b19265e70c9f039956668a36355f040a472` (`fix(storage): persist rider state atomically`), worktree limpo. Persistência de `races`, `deliveries` e `meta.settings` agora é atômica numa transação multi-store; falhas do IndexedDB propagam ao chamador.
+- Restaurante: sem alterações; branch `codex/setup-workflow`, HEAD `133da3d0bc9ec953e4175e5bbb40a89abb5cd2ba`, worktree limpo.
+- Baselines verificadas sem alteração: Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- Registro 0007 executou testes de sync e sintaxe no Motoboy e a suíte completa/check no Restaurante; nenhum browser QA. Nenhum push.
+
+## Atualização — Registro 0008
+
+- Histórico mais recente: Registro 0008.
+- Motoboy: branch `codex/setup-workflow`, HEAD `b150b73f4f97fc8dd4ca88be9a750be2a5e453b8` (`fix(sync): persist rider events with state atomically`), worktree limpo. A transação que salva corrida e projeção agora também salva `deliveryEvents` e `outbox` nas transições operacionais; falhas do IndexedDB propagam e restauram o estado em memória. `npm test` executa os três testes de sync existentes.
+- Restaurante: sem alterações; branch `codex/setup-workflow`, HEAD `133da3d0bc9ec953e4175e5bbb40a89abb5cd2ba`, worktree limpo. Suíte e check passaram.
+- Baselines preservadas: Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`; Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- Nenhum push; browser QA e chamadas reais a provedores externos não foram realizados.
+
+## Atualização — Registro 0009
+
+- Histórico mais recente: Registro 0009. DEC-0002 adota a arquitetura de identidade/tenant e o plano faseado. As pendências agora são implementação dependente de PostgreSQL, secret manager/KMS e entrega de email.
+- Restaurante: branch `codex/setup-workflow`, HEAD `3a0ed99c0a1db9b50d19711f0fed2502be4360a2` (`fix(security): restrict unauthenticated service to loopback`), worktree limpo. O servidor recusa inicialização com HOST não-loopback enquanto não existe autenticação humana/tenant.
+- Motoboy: sem alteração nesta etapa; branch `codex/setup-workflow`, HEAD `b150b73f4f97fc8dd4ca88be9a750be2a5e453b8`, worktree limpo.
+- Baselines permanecem inalteradas: Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- Testes dos dois projetos e `git diff --check` passaram. Nenhum push, browser QA ou chamada real a provedor externo.
+
+## Atualização — Registro 0010
+
+- Motoboy: branch `codex/setup-workflow`, HEAD `b150b73f4f97fc8dd4ca88be9a750be2a5e453b8`; sem alterações nesta etapa.
+- Restaurante: branch `codex/setup-workflow`, HEAD `af711d39064c0e487e07f187720408434104ff80` (`fix(security): reject untrusted delivery status markup`), worktree limpo.
+- Corrigido XSS armazenado: status desconhecido vindo de backup/import ou dados de integração não é mais devolvido como HTML; recebe rótulo fixo. Incluído teste de segurança com payload de markup.
+- Baselines confirmadas sem alteração: Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`; Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- `npm test` nos dois apps, `npm run check` do Restaurante, verificações `node --check` e `git diff --check` passaram. Browser QA não executado conforme solicitado. Nenhum push.
+
+
+## Atualização — Registro 0011
+
+- Restaurante: branch `codex/setup-workflow`, HEAD `92ddb8df9a060446c098fb0edc0c0d121c5d6369` (`fix(sync): compare tombstones against staged deliveries`), worktree limpo. O recebimento agora compara tombstones também com gravações já preparadas no pacote, evitando que exclusão mais antiga vença entrega mais recente.
+- Motoboy: branch `codex/setup-workflow`, HEAD `b150b73f4f97fc8dd4ca88be9a750be2a5e453b8`, worktree limpo; sem alteração nesta etapa.
+- Baselines continuam preservadas: Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- Testes completos dos dois apps, `npm run check` do Restaurante e verificações de sintaxe/diff passaram. Nenhum browser QA ou chamada externa. Push: NÃO.
+
+## Atualização — Registro 0012
+
+- Restaurante: branch `codex/setup-workflow`, HEAD `381ab17a8b9e430fb0bd485037eaf53213c0cbb7` (`fix(sync): make packet receipt idempotent in transaction`), worktree limpo. A checagem final de `syncReceipts` agora ocorre dentro da mesma transação readwrite que grava o conteúdo do pacote; chamadas concorrentes com o mesmo `packetId` não reaplicam o pacote.
+- Motoboy: sem alteração nesta etapa; branch `codex/setup-workflow`, HEAD `b150b73f4f97fc8dd4ca88be9a750be2a5e453b8`, worktree limpo.
+- Baselines preservadas e ancestrais dos HEADs: Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- `npm test` nos dois aplicativos, `npm run check` do Restaurante, verificações de sintaxe e `git diff --check` passaram. Browser QA não executado conforme solicitado. Push: NÃO.
+
+## Atualização — Registro 0013
+
+- Motoboy: branch `codex/setup-workflow`, HEAD `50b9dff` (`fix(storage): recover IndexedDB connection lifecycle`), worktree limpo. `openDB()` agora limpa a Promise cacheada ao falhar, trata abertura bloqueada, fecha a conexão em `versionchange` e fecha uma conexão que abra após a falha por bloqueio. Suite dedicada cobre retry, troca de versão, bloqueio e sucesso tardio.
+- Restaurante: sem alteração; branch `codex/setup-workflow`, HEAD `381ab17a8b9e430fb0bd485037eaf53213c0cbb7`, worktree limpo.
+- Baselines inalteradas: Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`; Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- Testes completos dos dois aplicativos, `npm run check` do Restaurante, verificações de sintaxe, `git diff --check` e estados Git finais passaram. Nenhum browser QA ou push.
+
+## Atualização — Registro 0014
+
+- Motoboy: branch `codex/setup-workflow`, HEAD `c81d18b8614976b4b4353f4c7ee08174e8dd18a2` (`fix(storage): clear rider history atomically`), worktree limpo. Exclusão do histórico grava tombstones e limpa corridas, projeções e stores relacionados na mesma transação; memória/UI muda após o commit.
+- Restaurante: branch `codex/setup-workflow`, HEAD `381ab17a8b9e430fb0bd485037eaf53213c0cbb7`, sem alteração e worktree limpo.
+- Baselines preservadas: Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`; Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- Testes completos dos dois aplicativos, verificações de sintaxe relevantes e `git diff --check` passaram. Cobertura da garantia nova é estrutural, pois o ambiente Node não oferece IndexedDB nem simulador instalado. Nenhum browser QA ou push.
+
+## Atualização — Registro 0015
+
+- Histórico mais recente: Registro 0015. Branch `codex/setup-workflow` nos dois projetos; worktrees limpos após commits.
+- Motoboy: HEAD `9b0a5acd5e9cad0055a946c92587ac12041ebcc9` (`fix(sync): apply rider packets atomically`). Recebimento de pacotes do Restaurante prepara `nextRaces`, grava projeções alteradas e recibo na mesma transação `races`/`deliveries`/`inbox`, e só atualiza memória/UI após `oncomplete`. Repetição consulta o recibo dentro da transação. `persistOnly` segue gravando `races`, projeções, settings e opcionalmente evento/outbox numa transação, mas chamadores gerais ainda mutam estado global antes de persistir.
+- Restaurante: HEAD `b1ef1bcc47e8294cc15dbc83e4f5f63add14d231` (`test(sync): cover tombstone rollback on receipt`), após também `b721257e36af7c09038278c25b58562ca197c288` (`test(sync): exercise transactional packet recovery`). Recebimento existente já prepara staged writes e confirma domínio, tombstones, recibo e settings numa transação; memória e eventos de sucesso são publicados depois do commit. A cobertura executável inclui tombstone no rollback/retry/replay.
+- Baselines verificadas como ancestrais dos HEADs e inalteradas: Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`; Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- Suítes `npm test` de ambos, `npm run check` do Restaurante, `node --check` dos JS relevantes e `git diff --check` passaram. Os novos testes usam transação fake isolada nos testes e exercitam erro/abort depois de enfileirar gravações, rollback, retry e pacote repetido.
+- Limitação: Node neste ambiente não oferece IndexedDB; os testes não provam escalonamento/browser, quota, upgrade bloqueado nem detalhes de abort nativos. Nenhum browser QA, chamada externa ou push foi realizado.
+
+
+## Atualização — Registro 0016
+
+- Motoboy: fronteira `commitRiderCommand` serializa comandos migrados e persiste snapshot antes de publicar estado/render. Cadastro/edição, iniciar, chegada, finalizar, problema, cancelamento e recálculo de taxas migrados. Teste estrutural cobre sucesso, falha e concorrência.
+- Pendências remanescentes desta frente: ajustes gerais ainda mutam `state.settings` antes de persistir; exclusão de corrida grava tombstone separadamente; outros mutadores de rota/GPS seguem usando persistência sobre estado global já alterado.
+- `node --check app.js`, `npm test` e `git diff --check` passaram. Runtime sem IndexedDB nativo; sem browser QA e sem push. HEAD `46844e1a6d4ee00b4fe86b939d08123d574a72e9` (`fix(race): serialize transactional race commands`); worktree limpo.
+
+
+## Atualização — Registro 0017
+
+- Motoboy: HEAD `9faa45fcb6f5ece8810f45ce8749dd679d873af1` (`fix(race): make deletion and tombstone atomic`), branch `codex/setup-workflow`, worktree limpo. Exclusão serializada agora confirma races/deliveries/settings e tombstone em transação única; backup/estado/UI só avançam após commit. A edição enfileirada após delete não recria a corrida.
+- QA Chromium 149.0.7827.155 via CDP, viewport mobile 412×915: criação, edição, início, exclusão, leitura IndexedDB e reload controlado pelo service worker passaram; sem erro JS/IndexedDB ou HTTP local 4xx/5xx. QA browser concluído sem SIGKILL durante este registro. Mensagens de GPU fatal ocorreram no stderr somente ao encerrar Chromium voluntariamente após QA.
+- `node --check app.js`, `node --check service-worker.js`, testes direcionados, `npm test` e `git diff --check` passaram. Sem push. Ajustes/autosave e outros mutadores continuam pendentes.
+
+
+## Atualização — Registro 0018
+
+- Motoboy: HEAD `4b4fd6acf137134b38ed6d37c992c7aee2199c6a` na branch `codex/setup-workflow`; worktree limpo. Baseline `v39.6-ui-mobile-fix2` (`79c527b59d32d8b55236c62042acb868166ed4ad`) preservada.
+- Autosave e salvamento manual de ajustes, tema/idioma e fechamento diário usam `commitRiderCommand` através de `commitSettingsCommand`; os valores são aplicados ao snapshot enfileirado e a memória/UI só são publicadas após `persistOnly` confirmar. Recalculo de taxas usa as configurações candidatas. Falha mantém configuração anterior e restaura os controles; tiers permanecem rascunho até salvamento/autosave.
+- `node --check app.js`, `node tests/test-command-persistence.js`, `npm test` e `git diff --check` passaram. Teste de persistência é estrutural; IndexedDB nativo não foi exercitado. Browser QA não executado conforme escopo. Nenhum push.
+
+
+## Atualização — Registro 0019
+
+- Varredura consolidada no Motoboy encontrou falhas de persistência em normalização inicial, distâncias/ordem de rota, GPS, importação e limpeza; também tombstones recebidos que não eram retidos e HTML que não escapava IDs/assinaturas importados. Correções usam a fila/snapshot e transações existentes.
+- HEAD final `b57afc2ae5c82ad0ae65a4857c59e95581ed809d` (`fix(motoboy): consolidate remaining technical issues`); baseline `v39.6-ui-mobile-fix2` preservada; Restaurante sem alteração.
+- `node --check app.js`, `npm test` e `git diff --check` passaram. Browser QA não executado. Uma limitação de concorrência entre abas independentes permanece documentada no Registro 0019.
