@@ -1,6 +1,13 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0021.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0022.
+
+## Atualização — Registro 0022 (2026-10-03)
+
+- QA Chromium/CDP nos dois apps em desktop, tablet e mobile. Restaurante corrigido para exibir integralmente ações/QR da tabela completa e manter o título do modal acima do cabeçalho fixo. Motoboy não exigiu mudança.
+- Commit Restaurante `36b05e830ceb9c36e964207ecc83ac4731f4a572`, branch `codex/qa-functional-2026-10-03`; sem push. Motoboy permaneceu limpo em `b57afc2ae5c82ad0ae65a4857c59e95581ed809d` na branch `codex/qa-functional-2026-10-03`.
+- `npm test`, `node --check app.js` e `git diff --check` passaram nos dois repositórios. Regressão de fluxos corrigidos repetida via CDP.
+- Baselines `v5.50-ui-mobile-fix5` e `v39.6-ui-mobile-fix2` permanecem inalteradas e ancestrais dos respectivos HEADs. Câmera não existe no runtime Chromium; validação de finalização/assinatura Motoboy dependente de GPS não pôde ser concluída de modo confiável. Ver [Registro 0022](REGISTROS/0022.md).
 
 ## Atualização — Registro 0021 (2026-10-03)
 

@@ -1,5 +1,11 @@
 # Pendências
 
+## QA de navegador — Registro 0022 (2026-10-03)
+
+- [ ] Repetir no runtime com câmera disponível o fluxo de leitura/captura do Motoboy; no Chromium headless do Termux não há dispositivo (`NotFoundError`). O fallback manual foi exercitado.
+- [ ] Validar o fluxo de chegada e assinatura/finalização do Motoboy em runtime que mantenha permissão de geolocalização ativa; a permissão simulada não permaneceu confiável durante esta sessão headless.
+- O QA dos fluxos restantes, backup/importação e sync passou; detalhes e evidências estão no [Registro 0022](REGISTROS/0022.md). Estas limitações são do ambiente de teste e não motivaram workaround no app.
+
 ## Alta prioridade — antes de expor operações ou dados reais fora do host local
 
 - [ ] Manter o serviço Node em loopback até existir autenticação humana e autorização tenant server-side. Proteção atual: Registro 0009; não remover sem concluir as fases 1–3.
