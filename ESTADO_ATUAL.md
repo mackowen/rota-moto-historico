@@ -1,6 +1,12 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0024.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0025.
+
+## Atualização — Registro 0025 (2026-10-03)
+
+- Branches locais `codex/qa-functional-2026-10-03` removidas dos dois aplicativos após confirmar que todo o conteúdo estava preservado em `codex/setup-workflow`. No Restaurante, o commit QA `36b05e8` tem patch/tree idênticos ao cherry-pick `3b12dec`; no Motoboy, ambas as branches apontavam para `b57afc2`.
+- Branches remotas QA não existiam. Estado final limpo em `codex/setup-workflow`: Motoboy HEAD `b57afc2ae5c82ad0ae65a4857c59e95581ed809d`; Restaurante HEAD `3b12dec0923c779a4745d1a834c2bbf6b40b1f2f`.
+- Baselines Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad` e Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e os respectivos `main` não foram alterados. Sem push. Detalhes: [Registro 0025](REGISTROS/0025.md).
 
 ## Atualização — Registro 0024 (2026-10-03)
 
