@@ -1,5 +1,14 @@
 # Pendências
 
+## Atualização — Registro 0032 (2026-10-03)
+
+- [x] Diagnóstico read-only de owners, grants, schemas/tabelas/sequences, funções/triggers, policies/RLS, default privileges, memberships e database ACL concluído.
+- [x] Script e runbook versionados para separar `u0_a436` (DBA), `rotamoto_migrator` (ownership/DDL/migrations) e `rotamoto_app` (runtime/API com DML explícito); preparados, não executados.
+- [ ] Produzir e validar checkpoint completo com DBA; o dump parcial `.incomplete` do Registro 0031 não é backup válido.
+- [ ] Executar manualmente `role-split.sql` como `u0_a436`, definir senha do migrator com `\\password` em sessão interativa e executar as queries pós-execução do runbook. Até então database/objetos continuam no ownership atual.
+- [ ] Adaptar `test:postgres` para conexões separadas de migrator e runtime antes de validar o estado pós-split; não usar migrator para afirmar RLS/grants runtime testados.
+- Ver [Registro 0032](REGISTROS/0032.md) e `rota-moto-restaurante/backend/postgres/admin/role-split-runbook.md`.
+
 ## Atualização — Registro 0031 (2026-10-03)
 
 - [ ] Separação estrutural PostgreSQL segue bloqueada: o único acesso pgpass disponível autentica `rotamoto_app`, que não tem `CREATEROLE`/superuser e é owner do database/schema/tabelas. Não criar owner/migrator nem alterar grants sem sessão DBA autorizada.

@@ -1,6 +1,13 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0031.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0032.
+
+## Atualização — Registro 0032 (2026-10-03)
+
+- Restaurante: preparação versionada para split DBA/migrator/runtime commitada como `70e42e0` em `codex/setup-workflow`. Inclui script SQL administrativo ainda não executado, runbook de backup/execução manual/validação/rollback e ajuste documental; nenhuma migration foi alterada.
+- Auditoria PostgreSQL foi somente leitura via `rotamoto_app`: database/schema/18 tabelas ainda pertencem ao runtime; duas funções e trigger; nenhuma sequence/default ACL customizado; dez tabelas continuam RLS `FORCE`. `u0_a436` aparece como superuser nos catálogos, mas não foi autenticado nem teve senha solicitada/lida.
+- Script atribui database ao DBA, objetos de `rotamoto` ao futuro `rotamoto_migrator`, e grants DML específicos ao HTTP `rotamoto_app`. Script não executado: checkpoint completo, configuração segura da senha do migrator e verificações pós-split continuam pendentes.
+- `node --check backend/postgres/migrate.js` e `git diff --check` passaram; sem testes amplos/browser. O harness `test:postgres` ainda mistura conexão migration e runtime. Motoboy não mudou; baselines e `main` intactas. Ver [Registro 0032](REGISTROS/0032.md).
 
 ## Atualização — Registro 0031 (2026-10-03)
 
