@@ -1,6 +1,11 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0022.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0023.
+
+## Atualização — Registro 0023 (2026-10-03)
+
+- Correção de QA Restaurante `36b05e830ceb9c36e964207ecc83ac4731f4a572` consolidada por cherry-pick em `codex/setup-workflow`; HEAD final `3b12dec0923c779a4745d1a834c2bbf6b40b1f2f`. Cherry-pick sem conflito; `npm test`, `node --check app.js` e `git diff --check` passaram.
+- Baseline `v5.50-ui-mobile-fix5` continua no commit `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` (ref anotada `9ebb7098725200bdec82e79be1e9ea622fe20120`). `main` e tags não foram alteradas; sem push. Detalhes: [Registro 0023](REGISTROS/0023.md).
 
 ## Atualização — Registro 0022 (2026-10-03)
 
