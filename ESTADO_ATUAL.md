@@ -1,6 +1,13 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0019.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0021.
+
+## Atualização — Registro 0021 (2026-10-03)
+
+- A infraestrutura compartilhada `~/projetos/browser-tests/run-qa-infra.sh` foi criada e commitada no workspace de browser testing como `8a2d463`.
+- Diagnóstico inicial identificou Chromium/CDP e servidores locais ausentes. A execução validada usa Chromium `149.0.7827.155`, CDP em `127.0.0.1:9222`, Restaurante em `8788` e Motoboy em `8789`, com `--disable-gpu` para contornar instabilidade de GPU no Termux/Android.
+- Navegação real via CDP confirmou acesso aos dois aplicativos. Chromium/CDP e servidores temporários foram encerrados corretamente após o uso.
+- Nenhum aplicativo ou baseline foi alterado. A limitação de Chromium/GPU no Termux/Android permanece; consulte o [Registro 0021](REGISTROS/0021.md).
 
 ## Atualização — Registro 0020 (2026-10-03)
 
