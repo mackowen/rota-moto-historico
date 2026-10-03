@@ -1,5 +1,12 @@
 # Pendências
 
+## Atualização — Registro 0031 (2026-10-03)
+
+- [ ] Separação estrutural PostgreSQL segue bloqueada: o único acesso pgpass disponível autentica `rotamoto_app`, que não tem `CREATEROLE`/superuser e é owner do database/schema/tabelas. Não criar owner/migrator nem alterar grants sem sessão DBA autorizada.
+- [ ] Antes da operação administrativa, obter procedimento de checkpoint completo que leia os dados sob RLS forced. `pg_dump` com a role runtime parou em `audit_log`; o arquivo `.incomplete` não é backup restaurável. O dump schema-only validado não substitui backup de dados.
+- [ ] Após disponibilizar acesso DBA e checkpoint completo, criar role dedicada owner/migrator, transferir ownership/grants, reduzir runtime a privilégios DML mínimos, verificar RLS forced/default-deny e separar configuração do migration runner da conexão HTTP; testar migrations/status e conexão/runtime.
+- Ver [Registro 0031](REGISTROS/0031.md). Nenhuma alteração foi feita no banco ou nos aplicativos nesta execução.
+
 ## Atualização — Registro 0030 (2026-10-03)
 
 - [x] Auditoria da estrutura base, constraints, FKs, índices, RLS e migration runner concluída. Migration `0004_foundation_integrity_constraints` aplicada; fecha integridade do actor de auditoria, ordem de expiração da sessão e timestamp de publicação da outbox.

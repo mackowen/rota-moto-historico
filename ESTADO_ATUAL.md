@@ -1,6 +1,13 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0030.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0031.
+
+## Atualização — Registro 0031 (2026-10-03)
+
+- Restaurante e Motoboy permanecem limpos em `codex/setup-workflow`, nos HEADs `7403ab9736775f078c7ec40c7a9312d1c03d94c9` e `c0e019d607a0e713f308447e4581ef60e09ddf6e`. Nenhum commit de aplicativo foi criado.
+- PostgreSQL oficial 18.6 em `127.0.0.1:5432/rotamoto` aceita conexão por `.pgpass` somente como `rotamoto_app`. Essa role não é superuser, não cria roles, não faz bypass de RLS, mas é owner do database/schema/tabelas e tem `CREATE` no database/schema.
+- Não há credencial DBA disponível no `.pgpass`. O dump completo foi bloqueado por RLS forced em `audit_log`; o artefato parcial foi marcado `.incomplete`. Dump somente de schema foi validado, mas não constitui checkpoint de dados.
+- Nenhuma role/grant/ownership, migration, configuração PostgreSQL, código, main ou baseline foi alterada. `migrate.js status` e conexão Node da aplicação passaram; separação de privilégios permanece bloqueada até acesso DBA seguro e checkpoint completo. Detalhes no [Registro 0031](REGISTROS/0031.md).
 
 ## Atualização — Registro 0030 (2026-10-03)
 
