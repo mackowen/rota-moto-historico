@@ -1,6 +1,14 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0028.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0029.
+
+## Atualização — Registro 0029 (2026-10-03)
+
+- Restaurante: branch `codex/setup-workflow`, HEAD `014c286c1957c77a687d4bcfb0d0f1a666b408ad`, árvore limpa após commit. API HTTP de identidade montada no servidor loopback; endpoints e controles estão detalhados no [Registro 0029](REGISTROS/0029.md).
+- A camada HTTP conecta-se ao PostgreSQL oficial 18.6 em `127.0.0.1:5432`, banco `rotamoto`, usuário `rotamoto_app`, usando `.pgpass`. Fixtures sintéticas foram revertidas; queries posteriores confirmaram zero tenants/usuários de teste persistidos.
+- Argon2id usa `argon2` 0.45.1 compatível com Node >=18; addon compilado no Termux. `npm test`, `npm run test:postgres`, HTTP direcionado, `npm audit --omit=dev`, sintaxe JS e `git diff --check` passaram. Smoke do servidor: health 200 e sessão anônima 401.
+- Motoboy permaneceu sem alteração em `codex/setup-workflow`, HEAD `c0e019d607a0e713f308447e4581ef60e09ddf6e`. Baseline Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e `main` `8fcd9f0ffffe37047a79834161cc1f791f20d76f` intactos; sem push.
+- Provisionamento real continua fechado sem adapter de operador, prova de titularidade, email, HTTPS e MFA/KMS. Não há UI/browser flow integrado; sessão de owner permanece bloqueada por MFA obrigatória. O rate limit é local por processo/socket; proxy/múltiplas instâncias exigem configuração explícita antes do deploy.
 
 ## Atualização — Registro 0028 (2026-10-03)
 
