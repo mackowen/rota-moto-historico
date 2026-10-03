@@ -1,5 +1,14 @@
 # Pendências
 
+## Atualização — Registro 0030 (2026-10-03)
+
+- [x] Auditoria da estrutura base, constraints, FKs, índices, RLS e migration runner concluída. Migration `0004_foundation_integrity_constraints` aplicada; fecha integridade do actor de auditoria, ordem de expiração da sessão e timestamp de publicação da outbox.
+- [x] Migration runner testado para checksums, detecção de migration ausente, reexecução concorrente/idempotente, rollback transacional, down fail-closed e clean install em schema temporário rollback.
+- [ ] Bloqueio estrutural: a role runtime `rotamoto_app` é owner do database, schema e todas as tabelas e tem `CREATE` efetivo no database. Pode alterar policies/triggers/RLS; não é fronteira de privilégio segura para fases expostas.
+- [ ] Separar owner/migrator da role runtime exige operação DBA de ownership/grants/roles. Não realizada porque alterar privilégios está proibido; PostgreSQL permanece sem mudança de roles/configuração.
+- Conclusão: schema local tem integridade validada, mas fundação segura para avançar fases com acesso operacional ou exposição não está completa até existir separação de ownership. Não expor API; manter loopback.
+- Ver [Registro 0030](REGISTROS/0030.md) para diagnóstico, migration, testes, commits e limites.
+
 ## Atualização — Registro 0029 (2026-10-03)
 
 - [x] API HTTP local de identidade no Restaurante: login/logout/sessão, seleção tenant, recuperação/consumo, aceitação de convite/verificação e endpoint administrativo protegido por adapter. Não há signup público.

@@ -1,6 +1,14 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0029.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0030.
+
+## Atualização — Registro 0030 (2026-10-03)
+
+- Restaurante: `codex/setup-workflow`, HEAD `7403ab9736775f078c7ec40c7a9312d1c03d94c9`, árvore limpa após commit. Migration `0004_foundation_integrity_constraints` aplicada ao PostgreSQL oficial; nenhuma migration anterior foi editada.
+- Validação cobriu 17 tabelas de domínio, 25 FKs, 10 tabelas RLS forçadas, checksums, migrations ausentes, lock concorrente, reexecução idempotente, rollback de DDL e clean install em schema temporário revertido. `npm run test:postgres`, `npm test`, syntax checks e `git diff --check` passaram.
+- PostgreSQL 18.6 continuou em `127.0.0.1:5432`/`rotamoto`, conexão `rotamoto_app` via `.pgpass`; nenhuma role, privilégio, ownership ou configuração foi alterada. Nenhum dado sintético permaneceu.
+- Lacuna crítica: `rotamoto_app` é proprietário do database, schema e das tabelas; owner pode mudar policies/triggers e RLS. Separação entre runtime e migration/owner requer operação administrativa de ownership/grants, não permitida nesta etapa. Portanto a fundação não está pronta para exposição nem para fases operacionais que dependam dessa fronteira.
+- Motoboy permaneceu limpo em `codex/setup-workflow`, HEAD `c0e019d607a0e713f308447e4581ef60e09ddf6e`. Baselines e `main` dos aplicativos permaneceram intactas; sem push.
 
 ## Atualização — Registro 0029 (2026-10-03)
 
