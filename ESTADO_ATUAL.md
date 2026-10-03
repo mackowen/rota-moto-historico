@@ -1,6 +1,11 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0023.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0024.
+
+## Atualização — Registro 0024 (2026-10-03)
+
+- A tag anotada Motoboy `v39.6-ui-mobile-fix2` tem ref/tag object `d5b8f463f9daec615fecf1b01ff7f61533fd1827`; seu commit após peel, que é o SHA real da baseline, é `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- O checkout estava limpo na branch `codex/qa-functional-2026-10-03`. A verificação foi somente leitura; nenhum arquivo, branch ou tag do aplicativo foi alterado. Ver [Registro 0024](REGISTROS/0024.md).
 
 ## Atualização — Registro 0023 (2026-10-03)
 
