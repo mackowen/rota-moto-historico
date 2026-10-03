@@ -1,6 +1,14 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0027.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0028.
+
+## Atualização — Registro 0028 (2026-10-03)
+
+- Restaurante: branch `codex/setup-workflow`, HEAD final `5c6e9b4fc64bfad62d7011c14135fa273ae80788`; commits `f521431310a0bc29c4a21f6b9f1d354ff3c7e875` (serviços de identidade) e `5c6e9b4fc64bfad62d7011c14135fa273ae80788` (cobertura de expiração de sessão); árvore limpa.
+- PostgreSQL oficial 18.6/`rotamoto` em `127.0.0.1:5432`, usuário `rotamoto_app` por `.pgpass` modo 600; migrations 0001–0003 aplicadas. Testes transacionais foram revertidos; tabelas de tenant, conta, token, sessão e auditoria sem registros sintéticos persistidos.
+- Provisionamento, Argon2id, convite/verificação, recovery, sessão/CSRF, RBAC e contexto RLS estão implementados como serviços internos e passaram testes. Não existe endpoint/API conectado; autorização real de provisionador, email/HTTPS e MFA/KMS faltam. Identidade requer Node >=24.7 por `crypto.argon2` release-candidate; o serviço existente declara Node >=18.
+- `npm test`, `npm run test:postgres`, syntax checks, `git diff --check` passaram nos apps. Motoboy permaneceu sem mudança. Audit: Restaurante offline zero vulnerabilidades (online sem DNS); Motoboy online zero.
+- Baselines e `main` não mudaram; sem push. Detalhes em [Registro 0028](REGISTROS/0028.md).
 
 ## Atualização — Registro 0027 (2026-10-03)
 
