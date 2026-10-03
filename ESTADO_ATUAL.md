@@ -1,6 +1,16 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0032.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0033.
+
+## Atualização — Registro 0033 (2026-10-03)
+
+- Restaurante: `codex/setup-workflow`, HEAD `c96907bc46165ec8ff2f7dda721bdc6b8160b0a2`, árvore limpa; commit `fix(db): enforce dedicated migration role`. `main` permanece `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5` continua no SHA `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- O checkpoint completo foi validado e o script administrativo do Registro 0032 foi executado manualmente com sucesso pelo operador DBA. Não foram usados `u0_a436`, sua senha ou `.pgpass` por esta execução; conexões foram somente como `rotamoto_app`/`rotamoto_migrator` via mecanismo existente.
+- Catálogo PostgreSQL 18.6 confirma: database `rotamoto` owned pela role DBA de emergência; schema, 18 tabelas e duas funções owned por `rotamoto_migrator`; ambas roles LOGIN sem SUPERUSER/CREATEDB/CREATEROLE/BYPASSRLS. Runtime tem CONNECT/USAGE e DML explícito, sem CREATE/TEMP/DDL, sem `schema_migrations`, sem DELETE/TRUNCATE e sem UPDATE/DELETE de auditoria. Migrator pode criar objetos e ler o ledger.
+- Dez policies tenant permanecem com RLS ENABLE/FORCE. Trigger append-only de `audit_log` rejeitou UPDATE e DELETE; runtime default-deny e cross-tenant também passaram. ACL padrão global foi ajustada para que funções futuras do migrator não recebam EXECUTE de PUBLIC.
+- Runner usa `MIGRATOR_DATABASE_URL` e confere role/destino/conexão; servidor usa `DATABASE_URL` como `rotamoto_app`, valida loopback e faz preflight de `current_user`. `npm run test:postgres`, `node tests/test-server-security.js`, `migrate.js status`, smoke HTTP (health 200 e login sintético 401 esperado), `node --check` dos JS alterados e `git diff --check` passaram. Suites reverteram fixtures; nenhuma conta/tenant de teste foi mantida. Não foi executada bateria ampla nem Browser QA.
+- Motoboy permaneceu sem alteração em `codex/setup-workflow`, HEAD `c0e019d607a0e713f308447e4581ef60e09ddf6e`, árvore limpa; baseline permanece `79c527b59d32d8b55236c62042acb868166ed4ad`. Sem push.
+- Após revisar DEC-0002 e pendências, nenhum bloco subsequente foi implementado: owner real depende de adapter/prova de titularidade, email e MFA/KMS; integrações e sync/import dependem dessas capacidades e do contrato/rollout Local-First. Serviço permanece loopback. Ver [Registro 0033](REGISTROS/0033.md).
 
 ## Atualização — Registro 0032 (2026-10-03)
 

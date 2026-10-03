@@ -1,28 +1,33 @@
 # Pendências
 
+## Atualização — Registro 0033 (2026-10-03)
+
+- [x] PostgreSQL role split concluído e validado: database sob ownership DBA, schema/objetos sob `rotamoto_migrator`, runtime `rotamoto_app` sem CREATE/TEMP/DDL nem acesso ao ledger; RLS/FORCE e append-only confirmados.
+- [x] Runner e configuração separados: `DATABASE_URL` só para runtime `rotamoto_app`; `MIGRATOR_DATABASE_URL` apenas para migrations, com validação de role/destino e senha fora da URL.
+- [x] `npm run test:postgres`, teste da configuração de segurança, `migrate.js status` como migrator e smoke HTTP como runtime passaram. Nenhum dado sintético ficou persistido.
+- [ ] Fase 2 operacional depende de adapter de operador/prova de titularidade, provider de email, HTTPS/domínio e MFA com KMS/secret manager. Não provisionar tenant/owner real antes disso.
+- [ ] Fases posteriores de integração humana, secrets, sync e import/export dependem da identidade operacional e do contrato/rollout Local-First. Não foi identificado bloco independente seguro nesta execução sem antecipar essas dependências ou inventar semântica/permissões.
+- Ver [Registro 0033](REGISTROS/0033.md) e commit Restaurante `c96907bc46165ec8ff2f7dda721bdc6b8160b0a2`.
+
 ## Atualização — Registro 0032 (2026-10-03)
 
 - [x] Diagnóstico read-only de owners, grants, schemas/tabelas/sequences, funções/triggers, policies/RLS, default privileges, memberships e database ACL concluído.
-- [x] Script e runbook versionados para separar `u0_a436` (DBA), `rotamoto_migrator` (ownership/DDL/migrations) e `rotamoto_app` (runtime/API com DML explícito); preparados, não executados.
-- [ ] Produzir e validar checkpoint completo com DBA; o dump parcial `.incomplete` do Registro 0031 não é backup válido.
-- [ ] Executar manualmente `role-split.sql` como `u0_a436`, definir senha do migrator com `\\password` em sessão interativa e executar as queries pós-execução do runbook. Até então database/objetos continuam no ownership atual.
-- [ ] Adaptar `test:postgres` para conexões separadas de migrator e runtime antes de validar o estado pós-split; não usar migrator para afirmar RLS/grants runtime testados.
+- [x] Script/runbook, checkpoint completo validado e execução manual do split concluídos; queries pós-flight confirmadas no Registro 0033.
+- [x] Runner e suíte PostgreSQL separados entre conexão de migrations/DDL e conexão runtime/RLS.
 - Ver [Registro 0032](REGISTROS/0032.md) e `rota-moto-restaurante/backend/postgres/admin/role-split-runbook.md`.
 
 ## Atualização — Registro 0031 (2026-10-03)
 
-- [ ] Separação estrutural PostgreSQL segue bloqueada: o único acesso pgpass disponível autentica `rotamoto_app`, que não tem `CREATEROLE`/superuser e é owner do database/schema/tabelas. Não criar owner/migrator nem alterar grants sem sessão DBA autorizada.
-- [ ] Antes da operação administrativa, obter procedimento de checkpoint completo que leia os dados sob RLS forced. `pg_dump` com a role runtime parou em `audit_log`; o arquivo `.incomplete` não é backup restaurável. O dump schema-only validado não substitui backup de dados.
-- [ ] Após disponibilizar acesso DBA e checkpoint completo, criar role dedicada owner/migrator, transferir ownership/grants, reduzir runtime a privilégios DML mínimos, verificar RLS forced/default-deny e separar configuração do migration runner da conexão HTTP; testar migrations/status e conexão/runtime.
+- [x] Bloqueio administrativo resolvido após checkpoint íntegro e operação manual; conclusão verificável no Registro 0033.
 - Ver [Registro 0031](REGISTROS/0031.md). Nenhuma alteração foi feita no banco ou nos aplicativos nesta execução.
 
 ## Atualização — Registro 0030 (2026-10-03)
 
 - [x] Auditoria da estrutura base, constraints, FKs, índices, RLS e migration runner concluída. Migration `0004_foundation_integrity_constraints` aplicada; fecha integridade do actor de auditoria, ordem de expiração da sessão e timestamp de publicação da outbox.
 - [x] Migration runner testado para checksums, detecção de migration ausente, reexecução concorrente/idempotente, rollback transacional, down fail-closed e clean install em schema temporário rollback.
-- [ ] Bloqueio estrutural: a role runtime `rotamoto_app` é owner do database, schema e todas as tabelas e tem `CREATE` efetivo no database. Pode alterar policies/triggers/RLS; não é fronteira de privilégio segura para fases expostas.
-- [ ] Separar owner/migrator da role runtime exige operação DBA de ownership/grants/roles. Não realizada porque alterar privilégios está proibido; PostgreSQL permanece sem mudança de roles/configuração.
-- Conclusão: schema local tem integridade validada, mas fundação segura para avançar fases com acesso operacional ou exposição não está completa até existir separação de ownership. Não expor API; manter loopback.
+- [x] Bloqueio estrutural de ownership/runtime foi resolvido e validado após a operação DBA manual no Registro 0033.
+- [x] Owner/migrator e runtime estão separados; migration runner/status e testes específicos usam credenciais/roles distintas.
+- Conclusão do Registro 0030 foi superada: a separação de privilégios está pronta, mas API permanece loopback e fases operacionais ainda aguardam dependências descritas no Registro 0033.
 - Ver [Registro 0030](REGISTROS/0030.md) para diagnóstico, migration, testes, commits e limites.
 
 ## Atualização — Registro 0029 (2026-10-03)
