@@ -1,6 +1,13 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0026.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0027.
+
+## Atualização — Registro 0027 (2026-10-03)
+
+- Restaurante: commit `a82160037e4538525e398db70d25aef4165e1c38` em `codex/setup-workflow`; schema/migration DEC-0002 Fase 1 aplicado no PostgreSQL oficial 18.6 em `127.0.0.1:5432`, banco `rotamoto`, usuário `rotamoto_app` via `.pgpass`. Não foram criadas contas/tenants ou endpoints de login/API.
+- Motoboy permaneceu sem alterações nesta execução em `codex/setup-workflow`, HEAD `c0e019d607a0e713f308447e4581ef60e09ddf6e`. O Restaurante está em `codex/setup-workflow`, HEAD final `a82160037e4538525e398db70d25aef4165e1c38`.
+- `npm test` passou nos dois; PostgreSQL migration/RLS, sintaxe JS, `git diff --check`, `npm audit` e Browser QA desktop/tablet/mobile passaram. Captura sintética de câmera e finalização Motoboy com assinatura sobreviveram ao reload. Varredura não encontrou novo bug de aplicação.
+- Baselines continuam Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad`; `main` inalterada; sem push. Fase 2 depende de prova operacional de titularidade e serviço de email; KMS/secret manager e demais fases também permanecem pendentes. Veja [Registro 0027](REGISTROS/0027.md).
 
 ## Atualização — Registro 0026 (2026-10-03)
 

@@ -1,22 +1,24 @@
 # Pendências
 
-## Atualização — Registro 0026 (2026-10-03)
+## Atualização — Registro 0027 (2026-10-03)
 
-- Resolvida a pendência P1 do Registro 0019: comandos/escritas do Motoboy agora compartilham lock exclusivo entre abas e relêem o IndexedDB antes de gerar snapshot. Recebimento sync e limpeza de histórico usam a mesma fronteira.
-- [ ] Confirmar suporte a Web Locks nos navegadores-alvo de produção. Sem `navigator.locks`, gravações de usuário falham de forma explícita para evitar perda de dados; a validação funcional desta etapa foi no Chromium 149/localhost.
-- Ver [Registro 0026](REGISTROS/0026.md) para causa, reprodução, correção e evidências. As fases DEC-0002, câmera e finalização GPS Motoboy continuam abertas abaixo.
+- O P1 do Registro 0019 segue resolvido pelo Registro 0026: comandos/escritas Motoboy compartilham Web Lock e relêem IndexedDB antes do snapshot.
+- Fase 1 DEC-0002 agora concluída no PostgreSQL de desenvolvimento oficial via `.pgpass`; migrations, tabelas, checksum e RLS default-deny testados. Nenhuma conta/tenant foi provisionada.
+- [ ] Confirmar Web Locks na matriz real de navegadores de produção. O projeto não declara essa matriz; Chromium 149 foi testado, e gravações falham explicitamente sem lock.
+- A Fase 2 depende de processo de prova de titularidade/provisionamento do primeiro owner e serviço de email verificado, inexistentes. Fases 3–6 aguardam essa identidade operacional.
+- Ver [Registro 0027](REGISTROS/0027.md) para estado cruzado, QA, Fase 1, commits e limites; o histórico anterior do P1 está em [Registro 0026](REGISTROS/0026.md).
 
 ## QA de navegador — Registro 0022 (2026-10-03)
 
-- [ ] Repetir no runtime com câmera disponível o fluxo de leitura/captura do Motoboy; no Chromium headless do Termux não há dispositivo (`NotFoundError`). O fallback manual foi exercitado.
-- [ ] Validar o fluxo de chegada e assinatura/finalização do Motoboy em runtime que mantenha permissão de geolocalização ativa; a permissão simulada não permaneceu confiável durante esta sessão headless.
-- O QA dos fluxos restantes, backup/importação e sync passou; detalhes e evidências estão no [Registro 0022](REGISTROS/0022.md). Estas limitações são do ambiente de teste e não motivaram workaround no app.
+- [x] Teste de captura Motoboy concluído com câmera sintética: Chromium headless sem câmera física falha com `NotFoundError`, mas dispositivo virtual 640×480 gerou imagem no fluxo de captura. Teste em hardware real segue para validação de campo.
+- [x] Chegada, assinatura e finalização Motoboy validadas com geolocalização CDP; estado `done` e assinatura PNG sobreviveram ao reload. Teste em GPS físico não disponível nesta sessão.
+- Fluxos dos dois apps passaram em desktop/tablet/mobile, backup/import e conteúdo não confiável; sem HTTP local 4xx/5xx nem overflow horizontal da página. Detalhes anteriores em [Registro 0022](REGISTROS/0022.md), repetição em [Registro 0027](REGISTROS/0027.md).
 
 ## Alta prioridade — antes de expor operações ou dados reais fora do host local
 
 - [ ] Manter o serviço Node em loopback até existir autenticação humana e autorização tenant server-side. Proteção atual: Registro 0009; não remover sem concluir as fases 1–3.
-- [ ] Provisionar PostgreSQL e secret manager/KMS em ambiente apropriado; definir migrations, backup/restore e gestão/rotação de chaves.
-- [ ] Implementar migrations para User, Credential, RecoveryToken, Company, Membership, Session, Role/Permission, Integration, ExternalAccount, audit log, canonical ID map e inbox/outbox persistentes.
+- [x] PostgreSQL 18.6 oficial acessível em `127.0.0.1:5432`, banco `rotamoto`, usuário `rotamoto_app` por `.pgpass`; Fase 1 versionada aplicada. [ ] Secret manager/KMS, backup/restore e rotação de chaves continuam sem infraestrutura.
+- [x] Fase 1: schema/migrations para User, Credential, RecoveryToken, Company, Membership, Session, Role/Permission, Integration, ExternalAccount, audit log, canonical ID map e inbox/outbox persistentes.
 - [ ] Implementar processo operacional auditável de criação de tenant/owner com prova de titularidade, convite de uso único e verificação/entrega de email.
 - [ ] Implementar credencial Argon2id, verificação e recuperação de conta; MFA para operações globais/administrativas; gestão de sessões, limites e revogação.
 - [ ] Implementar sessão opaca em cookie Secure/HttpOnly/SameSite, rotação, CSRF, expiração idle/absoluta e troca de empresa verificada em membership.
@@ -30,15 +32,11 @@
 
 ## Ordem de execução
 
-1. Infraestrutura PostgreSQL/KMS/email e política operacional de tenant.
-2. Schema/migrações e IDs canônicos/mapeamento local.
-3. Convites, credenciais, sessão e recuperação.
-4. Autorização e tenant context/RLS; proteger APIs humanas.
-5. External Accounts, webhooks e workers.
-6. Sync/offline/import/export e migração de dados.
-7. Verificação automatizada e rollout controlado.
+1. Fase 0 loopback e Fase 1 schema/migrations concluídas.
+2. Próxima: Fase 2 — prova de titularidade, provisionamento auditável, convite, email verificado, credenciais e recuperação (bloqueada por processo operacional/email ausentes).
+3. Depois: sessões/CSRF/RBAC, integrações/webhooks/workers, Local-First sync/import/export e validação/rollout na ordem DEC-0002.
 
-As decisões arquiteturais foram adotadas em `DECISOES.md` (DEC-0002). As fases 1–7 ainda não estão implementadas; a contenção do listener está concluída. Não expor backend com dados reais antes dos itens bloqueadores acima.
+As decisões arquiteturais permanecem em `DECISOES.md` (DEC-0002). O listener continua em loopback. Não expor backend com dados reais antes das fases 2–6 e dos itens operacionais bloqueadores acima. IndexedDB continua como persistência local/offline; PostgreSQL é a camada canônica do servidor.
 
 ## Reconciliação do plano — Registro 0020 (2026-10-03)
 
