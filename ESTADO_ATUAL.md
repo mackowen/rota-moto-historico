@@ -1,6 +1,12 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0025.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0026.
+
+## Atualização — Registro 0026 (2026-10-03)
+
+- Motoboy: correção da concorrência entre abas commitada como `c0e019d607a0e713f308447e4581ef60e09ddf6e` em `codex/setup-workflow`; HEAD final `c0e019d607a0e713f308447e4581ef60e09ddf6e`, árvore limpa. Web Lock exclusivo protege snapshot persistido/rebase dos comandos; dois ajustes concorrentes sobreviveram ao reload em Chromium/CDP.
+- `npm test`, `node --check app.js` e `git diff --check` passaram no Motoboy. `npm test` e `git diff --check` passaram no Restaurante, que permaneceu sem alteração em `3b12dec0923c779a4745d1a834c2bbf6b40b1f2f`.
+- Baselines Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad` e Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e os respectivos `main` não foram alterados. Sem push. Suporte Web Locks nos browsers-alvo e pendências DEC-0002/câmera/GPS continuam abertas. [Registro 0026](REGISTROS/0026.md).
 
 ## Atualização — Registro 0025 (2026-10-03)
 

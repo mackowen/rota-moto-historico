@@ -1,5 +1,11 @@
 # Pendências
 
+## Atualização — Registro 0026 (2026-10-03)
+
+- Resolvida a pendência P1 do Registro 0019: comandos/escritas do Motoboy agora compartilham lock exclusivo entre abas e relêem o IndexedDB antes de gerar snapshot. Recebimento sync e limpeza de histórico usam a mesma fronteira.
+- [ ] Confirmar suporte a Web Locks nos navegadores-alvo de produção. Sem `navigator.locks`, gravações de usuário falham de forma explícita para evitar perda de dados; a validação funcional desta etapa foi no Chromium 149/localhost.
+- Ver [Registro 0026](REGISTROS/0026.md) para causa, reprodução, correção e evidências. As fases DEC-0002, câmera e finalização GPS Motoboy continuam abertas abaixo.
+
 ## QA de navegador — Registro 0022 (2026-10-03)
 
 - [ ] Repetir no runtime com câmera disponível o fluxo de leitura/captura do Motoboy; no Chromium headless do Termux não há dispositivo (`NotFoundError`). O fallback manual foi exercitado.
@@ -45,6 +51,7 @@ DEC-0002 continua definindo oficialmente a Fase 1: schema e migrations PostgreSQ
 - Registro 0008: estado, evento operacional e outbox Motoboy são persistidos na mesma transação; `npm test` padrão do Motoboy executa a suíte.
 - Registro 0009: serviço de integrações Restaurante recusa inicialização em host não-loopback enquanto não houver autenticação humana/tenant. Isso reduz exposição acidental, mas não substitui autenticação das rotas locais.
 - Registro 0010: renderização do Restaurante não reflete status desconhecido fornecido por backup ou integração como HTML; fallback seguro e teste contra markup malicioso adicionados.
+- Registro 0026: snapshots gerados por abas Motoboy diferentes já não se sobrescrevem silenciosamente; a atualização é rebaseada nos dados persistidos sob Web Lock.
 
 ## Revisão do Registro 0009 — 2026-10-01
 
