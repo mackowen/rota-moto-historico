@@ -28,6 +28,10 @@
 
 As decisões arquiteturais foram adotadas em `DECISOES.md` (DEC-0002). As fases 1–7 ainda não estão implementadas; a contenção do listener está concluída. Não expor backend com dados reais antes dos itens bloqueadores acima.
 
+## Reconciliação do plano — Registro 0020 (2026-10-03)
+
+DEC-0002 continua definindo oficialmente a Fase 1: schema e migrations PostgreSQL de identidade, tenant/membership, sessão, roles/permissões, integrações/contas externas e mapeamento de IDs. O roadmap técnico posterior de persistência do Restaurante complementa o planejamento de persistência local-first e evolução para sincronização; não substitui essa Fase 1. Nenhum item da Fase 1 foi implementado na execução do Registro 0020.
+
 ## Histórico resolvido
 
 - Registro 0006: corpo HTTP acima de 1 MiB recebe 413.

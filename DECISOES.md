@@ -69,6 +69,10 @@ A separação evita tratar estado local como autoridade e mantém compatibilidad
 ### Impacto
 Esta decisão substitui as propostas provisórias do Registro 0004. A contenção de loopback é implementação imediata. As demais fases continuam pendentes de infraestrutura e implementação; não declarar o backend seguro para exposição até completá-las e validar o deploy.
 
+### Reconciliação de escopo — Registro 0020 (2026-10-03)
+
+DEC-0002 mantém autoridade sobre o nome e o escopo da Fase 1: schema/migrations PostgreSQL para identidade, tenant, sessão, roles/permissões, integrações e mapeamento de IDs. O roadmap técnico posterior de persistência do Restaurante é complementar e não substitui esta decisão. A reconciliação não declara implementação concluída.
+
 ## DEC-0003 — Publicar estado sincronizado somente após commit
 
 ### Data

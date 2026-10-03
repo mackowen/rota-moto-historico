@@ -2,6 +2,14 @@
 
 Estado inspecionado em 2026-10-01. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0019.
 
+## Atualização — Registro 0020 (2026-10-03)
+
+- Histórico mais recente: Registro 0020. Validação somente leitura dos aplicativos; nenhum arquivo de aplicação foi alterado.
+- Restaurante: branch `codex/setup-workflow`, HEAD `b1ef1bcc47e8294cc15dbc83e4f5f63add14d231`, worktree limpo. Baseline `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`, ancestral do HEAD.
+- Motoboy: branch `codex/setup-workflow`, HEAD `b57afc2ae5c82ad0ae65a4857c59e95581ed809d`, worktree limpo. Baseline `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`, ancestral do HEAD.
+- `npm test` passou nos dois aplicativos. Browser QA bloqueado: CDP em `127.0.0.1:9222` retornou `ECONNREFUSED`.
+- Nenhuma implementação da Fase 1 foi realizada. Segundo DEC-0002, ela cobre schema/migrations PostgreSQL para identidade, tenant, sessão, roles/permissões, integrações e mapeamento de IDs. O roadmap posterior de persistência do Restaurante é complementar e não substitui essa definição.
+
 ## Identidade e autorização do backend futuro
 
 - O Restaurante ainda não tem autenticação real, credenciais de usuário, sessões ou membership no backend. `users`, `profiles`, `companies`, permissões e `currentUserId` são estado local no IndexedDB e não são autoridade de segurança.
