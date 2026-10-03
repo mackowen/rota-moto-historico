@@ -1,6 +1,16 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0033.
+Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0034.
+
+## Atualização — Registro 0034 (2026-10-03)
+
+- Restaurante: `codex/setup-workflow`, commit `e3e0656` (`feat(sync): add canonical tenant domain API`), árvore limpa após commit. Migrations `0005`–`0007` aplicadas pelo migrator no PostgreSQL oficial; `migrate.js status` confirma 0001–0007 aplicadas.
+- Schema inclui `sync_installations` e `domain_records` canônicos, relações/aliases tenant-scoped, idempotência por pacote/evento, FK/checks/índices, RLS ENABLE/FORCE e grants runtime mínimos. API loopback `POST /api/sync/push` e `GET /api/sync/pull` usa sessão/RBAC `sync.push`/`sync.pull`, CSRF e tenant derivado server-side.
+- `npm run test:postgres` e `npm test` Restaurante passaram; `npm test` Motoboy passou; checks de sintaxe e `git diff --check` passaram. Fixtures do novo teste PostgreSQL foram revertidas; nenhum dado sintético permaneceu. Sem Browser QA.
+- Motoboy não foi alterado: branch `codex/setup-workflow`, HEAD `c0e019d607a0e713f308447e4581ef60e09ddf6e`, árvore limpa.
+- PostgreSQL confirmado: 18.6, `rotamoto_app` em database `rotamoto`; `rotamoto_migrator` executou migrations. Nenhuma alteração administrativa de roles/ownership/grants foi feita nesta execução.
+- Restaurante `main` preservada em `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5` em `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`. Motoboy `main` preservada em `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baseline `v39.6-ui-mobile-fix2` em `79c527b59d32d8b55236c62042acb868166ed4ad`. Nenhuma tag/branch protegida ou contrato foi alterado; sem push.
+- Limites: os apps ainda não chamam a API; ownership por campo de Delivery e ack/retention não estão definidos; `Earning` diverge entre o dono financeiro no contrato e o pacote Motoboy; source.app é metadado cliente. Detalhes e próximos passos em [Registro 0034](REGISTROS/0034.md).
 
 ## Atualização — Registro 0033 (2026-10-03)
 

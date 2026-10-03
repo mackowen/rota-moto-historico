@@ -26,6 +26,7 @@ Atualizações do histórico não modificam os repositórios nem requerem commit
 ### Status
 ATIVA
 
+
 ## Revisão do Registro 0005 — 2026-10-01
 
 A auditoria de consolidação não introduziu nem alterou decisões técnicas. As decisões de identidade e autorização analisadas no Registro 0004 continuam propostas, sem implementação autorizada nesta interação.
@@ -113,6 +114,35 @@ Os fluxos migrados devem enfileirar comandos, preparar um snapshot isolado a par
 
 ### Impacto e limite
 Aplicada no Registro 0016 a cadastro/edição, transições selecionadas e recálculo de taxas. Ajustes gerais, exclusão e outros mutadores ainda precisam migrar.
+
+### Status
+ATIVA
+
+
+## DEC-0005 — Persistência canônica de domínio e sync v1
+
+### Data
+2026-10-03
+
+### Projeto
+RotaMoto Restaurante e Motoboy
+
+### Contexto
+O contrato compartilhado v1 enumerava entidades e regras de sync, mas o PostgreSQL tinha apenas identidade, aliases e inbox/outbox. Os clientes ainda operam em IndexedDB e não existe schema formal completo por entidade. Precisávamos iniciar a autoridade canônica do servidor sem inventar campos nem substituir a operação offline.
+
+### Decisão
+
+1. PostgreSQL persiste Company na tabela de identidade existente e as demais entidades v1 em `domain_records`, com `entity_type`, UUIDv7 server-side, tenant, versão, timestamps, tombstone e payload JSONB compatível. O payload tipado será normalizado por migrations futuras quando o contrato definir seus campos.
+2. Aliases de IDs locais ficam associados a tenant, aplicativo e instalação/dispositivo. Nunca se fundem tenants. Referência ambígua falha com conflito; uma Delivery entre instalações pode ser reconhecida pelo Order canônico somente quando há exatamente uma relação.
+3. `packetId` é idempotente por tenant e digest do pacote; `eventId` é idempotente por tenant entre instalações. Recebimento, estado canônico, recibo, auditoria e outbox confirmam na mesma transação. Eventos de execução são fatos imutáveis; tombstones são exclusões lógicas.
+4. Sync HTTP deriva tenant da sessão, exige permission keys dedicadas `sync.push`/`sync.pull`, aplica CSRF na escrita e mantém loopback. IndexedDB e outbox locais continuam sendo a base offline; cada comando é reautorizado quando recebido pelo servidor.
+5. `source.app` é metadado não confiável, não uma credencial. Até haver papéis menos privilegiados, `sync.push` é ampla para o owner. Antes de delegar sync, definir autorização por entidade/campo. O contrato atual não define ownership de campos de Delivery, ownership de Earning coerente com ambos os clientes ou ack/retention do outbox; essas decisões permanecem abertas.
+
+### Motivo
+O envelope JSON preserva a compatibilidade v1 enquanto constraints relacionais estabelecem tenant, aliases e as relações já explícitas. IDs canônicos não dependem de colisões locais. Uma transação única impede que inbox/outbox confirmem operações parciais. Não atribuir semântica ausente mantém os clientes e fatos históricos intactos.
+
+### Impacto e limites
+Aplicada no Registro 0034 com migrations 0005–0007 e APIs push/pull. Não integra os clientes, não cria schema de campos que o contrato não define e não implementa ack/worker nem ownership de provider. Registro de decisão não autoriza acesso externo: endpoint segue loopback, e papéis não owner não recebem a nova permission sem desenho de autorização granular.
 
 ### Status
 ATIVA
