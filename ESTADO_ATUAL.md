@@ -1,3 +1,11 @@
+## Atualização — Registro 0046 / F4 integrações externas (2026-10-04)
+
+- Restaurante `codex/setup-workflow` HEAD `0ace64884a9f546368909073e60dbe5a8b363647`, árvore limpa; commit anterior `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`. `main` preservada em `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5` preservada em `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- iFood, 99Food e Keeta não têm integração externa real comprovada. Adapters/handlers antigos continham protocolo não verificado; labs eram sintéticos. Fronteiras agora falham fechado, API admin mostra estado tenant-scoped sem secrets, rotas provider respondem 503 e laboratório iFood fica só em memória sem criar Orders.
+- Nenhuma migration ou mudança no PostgreSQL oficial/grants/RLS. Testes focados de integração/segurança/readiness, identidade UI/auditoria, `node --check` e `git diff --check` passaram; sem Browser QA, npm test amplo, test:postgres ou push.
+- F4 classificada **B — infraestrutura local concluída; dependências externas isoladas**. Detalhes e classificação individual em [Registro 0046](REGISTROS/0046.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
+- Motoboy não alterado: `codex/setup-workflow` HEAD `2c82d094ef8a2f04aa436507a36682b4f36e95fc`, árvore limpa; main/baseline intactas. Próxima macrofase indicada pelo plano é F8, não iniciada; F9 pendente.
+
 ## Atualização — Registro 0045 / F7 UI/UX (2026-10-04)
 
 - Restaurante: `codex/setup-workflow` @ `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`, árvore limpa. Motoboy: `codex/setup-workflow` @ `2c82d094ef8a2f04aa436507a36682b4f36e95fc`, árvore limpa. Cada app tem commits separados de consolidação da UI e escopo das configurações; nenhum push.
@@ -29,7 +37,7 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0044.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0046.
 
 ## Atualização — Registro 0044 / vínculo canônico User↔Driver (2026-10-04)
 

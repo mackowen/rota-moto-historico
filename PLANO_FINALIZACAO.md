@@ -111,7 +111,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 - **Concluído no Registro 0038:** matriz versionada em `MODELO_DADOS.md` cobrindo domínio, identidade, sync e segurança; authority, stores, PG/API/sync, IDs/revisões/relações/constraints, offline, legado, sensibilidade e retenção; revisão read-only migrations 0001–0008/schema instalado; decisão de manter JSONB onde campos completos não estão definidos; registry IndexedDB com versão final Restaurante 4→6 e Motoboy 5→7, índices não únicos, marker e upgrade abortável sem regravar registros.
 - **Concluído no Registro 0039:** schemas compartilhados, Route→Delivery, Earning em unidades monetárias inteiras, referência de mídia, migrations PostgreSQL 0009–0010, backup v1 integral e merge seguro. F1 não depende de decisão externa para sua conclusão estrutural.
 - **Limites não bloqueantes:** blob storage real e backup cifrado dependem de provider e decisão segura de chave/UX. Retenção legal/operacional de GPS, PII, foto/assinatura e audit depende de política aprovada. Bikes e users/profiles continuam estruturas locais sem migração conceitual inventada.
-- **Componentes:** `CONTRACT.md`, `contract.js`, `DECISOES.md` DEC-0005/0006; Restaurante `app.js`/`backup-format.js` e stores `rota-moto-restaurante-local-v30`; Motoboy `app.js`/`backup-format.js` e DB `RotaMotoDB`; migrations Restaurante `backend/postgres/migrations/0001–0010`; `backend/domain/sync-service.js` e `media-storage.js`.
+- **Componentes:** `CONTRACT.md`, `contract.js`, `DECISOES.md` DEC-0005/0006; Restaurante `app.js`/`backup-format.js` e stores `rota-moto-restaurante-local-v30`; Motoboy `app.js`/`backup-format.js` e DB `RotaMotoDB`; migrations Restaurante `backend/postgres/migrations/0001–0013`; `backend/domain/sync-service.js` e `media-storage.js`.
 - **Dependências:** nenhum bloqueio externo impede fechar o schema v1; validação real do IndexedDB segue em F9.
 - **Bloqueios externos:** blob storage cifrado, export cifrado e política de retenção dependem de infraestrutura/decisão próprias, sem bloquear F1.
 - **Conclusão objetiva:** modelo estrutural v1 implementado; PostgreSQL mantém JSONB com constraints/índices somente onde há ganho concreto, preservando RLS/FORCE e roles. Browser QA real foi adiado para F9 e não mantém F1 aberta.
@@ -141,14 +141,16 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F4 — Integrações externas e arquitetura de providers
 
-- **Estado:** Parcial/simulada; existem adapters, mas nenhum provider foi homologado nesta revisão.
-- **Lacunas/tarefas:** adapters isolados por plataforma; configuração por tenant; secrets fora do cliente; assinatura/webhook baseada em docs oficiais; durable inbox/dedup; normalização de Order/status; polling/cursor somente quando documentado; retry/backoff/rate limit; saúde/auditoria; credenciais rotativas; isolamento dos labs simulados.
-- **Componentes:** Restaurante `ifood-integration.js`, `99food-integration.js`, `99food-service.js`, `keeta-integration.js`, `keeta-service.js`, `server.js`, settings/lab em `app.js`; backend integration tables.
-- **Dependências:** docs oficiais, contas/merchant/sandbox, credenciais e aprovação de parceiro; KMS/secret store para produção.
-- **Bloqueios externos reais:** nenhum teste real ou webhook de produção sem credenciais/contas e material oficial. Adapter/fakes e filas locais podem avançar sem eles.
-- **Conclusão objetiva:** contrato/provider documentado por plataforma; fixtures success/error/signature/replay passam; conexão/health e status são visíveis; segredo nunca aparece em browser/log.
-- **Testes:** fakes HTTP com timeout/5xx/401/rate-limit, assinatura inválida/replay, normalização/idempotência e isolamento tenant.
-- **Browser QA:** sim para configuração/status e feedback quando UI integrar adapters.
+- **Estado:** **B — infraestrutura e implementação local concluídas; protocolos/contas externas bloqueados** (Registro 0046).
+- **Classificação do código anterior:** iFood tinha handlers OAuth, polling, ACK e normalização plausíveis, mas sem teste/documentação oficial de versão no repositório; sua tela é laboratório sintético. 99Food tinha client bearer, rotas configuráveis e HMAC presumido, sem prova oficial. Keeta tinha host/caminhos/signatura assumidos e simulator. Nenhuma dessas implementações foi confirmada por conexão real, merchant, homologação ou credencial. Não contar mocks/fixtures como integração.
+- **Concluído localmente:** registry comum bloqueado por padrão, catálogo administrativo tenant-scoped e sem segredos, classificação/sanitização de erro e política retryable; clientes 99Food/Keeta e serviços server-side falham fechado; rotas HTTP legadas dos três providers retornam `503 PROVIDER_BLOCKED_EXTERNAL`; polling em background removido; configuração visual separa origem local de conexão externa e não oferece connect/reconnect falso; o laboratório iFood mantém simulações exclusivamente em memória e fora de Orders/IndexedDB; nenhuma normalização sintética é tratada como contrato.
+- **Componentes:** Restaurante `backend/integrations/registry.js`, `backend/admin/repository.js`, `server.js`, `99food-service.js`, `keeta-service.js`, três clientes UI, `app.js`, `identity-ui.js`, `docs/API-v1.md`, `README-IFOOD.md` e testes de integração/segurança.
+- **Modelo atual:** `integrations`/`external_accounts` existentes mantêm tenant isolation e RLS/FORCE; runtime conserva somente leitura. `GET /api/admin/integrations` exige sessão e `integrations.manage`; `secret_ref`, payloads e tokens não saem da API. Uma linha `active`/conta confirmada não significa conexão verificada. Sem migration: não habilitamos eventos externos e não há base segura para grant runtime/esquema de inbox provider antes de definir autenticação e retenção de payload potencialmente pessoal.
+- **Pipeline canônico:** a fronteira documentada é adapter verificado → serviço tenant-scoped → mapping aprovado → caso de uso canônico Order/Delivery → idempotência persistente/sync. Pedido externo ainda não é aceito. Até existir documentação, autenticidade verificável, external ID estável e mapping aprovado, o pipeline falha fechado e não grava payload bruto nem cria pedido; conflitos com edição local deverão exigir revisão explícita.
+- **Bloqueios externos reais por provider:** iFood requer documentação/protocolo oficial aplicável, conta/merchant, credenciais e homologação; 99Food requer documentação oficial/parceria, credenciais e homologação; Keeta requer documentação oficial da versão/protocolo, conta e credenciais/homologação. Produção também requer secret manager/KMS e execução segura de worker/webhook. Não há provider funcional declarado.
+- **Próximas tarefas externas:** quando materiais oficiais e credenciais chegarem, validar um provider de cada vez, implementar adapter real, webhook autenticado, fila persistente/idempotente, mapping canônico, health/audit/retry e controles tenant/RBAC/MFA; então habilitar mutação segura de Integration/ExternalAccount e UI de connect/disable/reconnect. Não configurar endpoints, assinaturas ou campos por inferência.
+- **Testes:** testes focados do registry/catalog, ausência de segredo, bloqueio client/service, respostas HTTP 503, CORS/health readiness, isolamento do laboratório, sintaxe e diff; sem migration, Browser QA ou suite ampla.
+- **Browser QA:** pendente somente em F9 para interface e integração com o restante do produto; não é parte do bloqueio externo de protocolo.
 
 ### F5 — Fluxos completos do Restaurante
 
@@ -219,7 +221,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1/F2 estão concluídas; F3 mantém dependências externas registradas; F5/F6 estão implementadas; F7 está implementada estaticamente pelo Registro 0045 e aguarda validação renderizada em F9. Próxima macrofase pela ordem do plano: F4 (adapters/providers). F8/F9 não foram iniciadas.
+F1/F2 estão concluídas; F3 mantém dependências externas registradas; F5/F6 estão implementadas; F7 está implementada estaticamente pelo Registro 0045 e aguarda validação renderizada em F9. F4 local concluída com providers bloqueados externamente. Próxima macrofase do plano: F8, ainda não iniciada; F9 também permanece pendente.
 
 ## Bloqueios externos reais versus trabalho local
 

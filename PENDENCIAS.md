@@ -1,5 +1,15 @@
 # Pendências
 
+## Atualização — Registro 0046 / F4 integrações (2026-10-04)
+
+- [x] Registry provider-neutral bloqueado por padrão; estados administrativos nunca inferem conexão por cadastro/credencial declarada.
+- [x] Rotas legadas de iFood/99Food/Keeta e serviços de 99Food/Keeta desativados fail-closed; nenhum polling automático ou verificação presumida de webhook.
+- [x] Catálogo administrativo protegido por sessão, tenant/RLS e `integrations.manage`; não expõe `secret_ref`, credenciais ou payload.
+- [x] UI distingue origem local, simulador de laboratório e provider não conectado; pedidos sintéticos iFood ficam em memória e não alteram Orders/IndexedDB.
+- [ ] Implementar os protocolos reais somente após documentação oficial aplicável, credenciais/conta e homologação por provider. KMS/secret manager, autenticidade webhook e armazenamento/retention de payload também precisam de suporte operacional.
+- F4 classificada **B — infraestrutura/implementação local concluída com dependências externas claramente isoladas**. Sem migration; sem Browser QA ou push. Ver [Registro 0046](REGISTROS/0046.md).
+
+
 ## Atualização — Registro 0045 / F7 UI/UX (2026-10-04)
 
 - [x] Consolidação estática de navegação, conta/sessão e diálogos acessíveis nos dois apps; foco por teclado, Escape/Tab, retorno de foco e fundo inerte.
@@ -101,7 +111,7 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [x] F3: implementação local de clientes/telas e APIs de identidade concluída no 0041; permanecem apenas o primeiro operador/owner, MFA operacional segura, email real e Browser QA em F9 conforme bloqueios externos registrados.
 - [x] F5 Restaurante: fluxos administrativos/operacionais registrados no 0042.
 - [x] F6 Motoboy: vínculo User/Membership↔Driver e enforcement server-side concluídos no Registro 0044; Browser QA continua em F9. Provider de blob e hardware/permissões físicos são dependências de capacidade, não bloqueios da implementação F6.
-- [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.
+- [x] F4: registry/catalog e bloqueio local seguro concluídos no Registro 0046. [ ] Adapters reais, fila/inbox, ingestão e configuração operativa continuam condicionados a documentação oficial, credenciais/contas, homologação e secret manager por provider.
 - [x] F7: implementação estática concluída no Registro 0045; Browser QA/renderização permanece para F9.
 - [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.
 - [ ] F9: QA integrado CDP desktop/tablet/mobile e hardening depois das fases anteriores.
