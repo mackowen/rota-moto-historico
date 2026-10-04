@@ -1,6 +1,15 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-01, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0034.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0035.
+
+## Atualização — Registro 0035 (2026-10-04)
+
+- Restaurante: branch `codex/setup-workflow`, commit `78e10f2217edc053e2d0193b1b297d7e7fc16bd3`; árvore limpa. Migration 0008 associa instalação sync à identidade que a registrou. Serviço impõe ownership por entidade/campo, revisão canônica e ACK por operação; `source.app` não seleciona autoridade.
+- Motoboy: branch `codex/setup-workflow`, commit `d88aeea9cbfedfa2e7e0e46e2437fec39155e5f2`; árvore limpa. Transporte Local-First envia fatos de execução/localização/provas, sem publicar Delivery, Earning ou dados administrativos como canônicos.
+- `CONTRACT.md` e `contract.js` estão sincronizados. Restaurante escreve Order/Earning/Route/Driver e planejamento/cancelamento de Delivery; Motoboy escreve eventos de execução, LocationPoint e DeliveryProof. `DeliveryEvent` é imutável/idempotente. ACK individual distingue accepted/duplicate/rejected/conflict; retry usa IDs/revisões, sem LWW.
+- Ambos preservam IndexedDB/outbox/inbox/syncState e operação offline. ACK só é aplicado após resposta; pull é keyset e cacheado sem sobrescrever projeções locais. Login/CSRF existem como helpers de sync, mas não há fluxo visual de login; merge de snapshots ao modelo da UI ainda requer reconciliação que preserve alterações pendentes. Sem Browser QA.
+- `npm test` passou em ambos; `npm run test:postgres` passou no Restaurante contra PostgreSQL oficial; migration status confirma 0001–0008. Sintaxe JS e `git diff --check` passaram. Nenhum dado sintético persistiu.
+- `main` permanece Restaurante `8fcd9f0ffffe37047a79834161cc1f791f20d76f` e Motoboy `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baselines preservadas em `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e `79c527b59d32d8b55236c62042acb868166ed4ad`. Sem push. Detalhes em [Registro 0035](REGISTROS/0035.md).
 
 ## Atualização — Registro 0034 (2026-10-03)
 

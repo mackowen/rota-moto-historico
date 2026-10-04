@@ -1,17 +1,17 @@
 # Pendências
 
-## Atualização — Registro 0034 (2026-10-03)
+## Atualização — Registro 0035 (2026-10-04)
 
-- [x] Migrations `0005`–`0007`: domínio canônico tenant-scoped, instalações, relações/FKs, aliases locais, idempotência de packet/event, grants runtime mínimos, RLS/FORCE e permission keys de sync.
-- [x] API autenticada `POST /api/sync/push` e `GET /api/sync/pull`; sessão/RBAC dedicado, CSRF, limites, validação, transações, audit/outbox e cursors de microssegundos.
-- [x] Testes PostgreSQL direcionados de integridade, RLS/default-deny, cross-tenant, permission denied, rollback, transições, tombstones, referências, idempotência e segurança de input; `npm run test:postgres` e suítes padrão dos dois apps passaram.
-- [ ] Integrar ambos os clientes Local-First à API, preservar outbox/inbox/syncState local, gravar aliases remotos e tratar conflitos/reautenticação offline. Nenhum IndexedDB foi substituído.
-- [ ] Definir ownership de campos compartilhados de Delivery e permissões de sync por entidade antes de atribuir `sync.push` a papéis menos privilegiados. `source.app` enviado no envelope não autentica o aplicativo; owner atual recebe a permissão ampla.
-- [ ] Resolver divergência de `Earning`: contrato atribui cálculo financeiro ao Restaurante, enquanto Motoboy inclui `earnings` no pacote. API recusa Motoboy para Earning até decisão de ownership/contrato.
-- [ ] Definir relações/campos canônicos ainda ausentes no contrato (ex.: associação Route→Delivery), ack/`ackFor`, cursor por instalação e retenção/publicação de outbox. Aliases ambíguos já falham fechados.
-- [ ] Fluxo de convite de outros membros, operação real de owner, email, HTTPS/domínio e MFA/KMS continuam dependentes de semântica/provedores/infraestrutura; não foram improvisados.
-- [ ] Migração dos endpoints humanos de iFood/Keeta/99Food para permission checks; webhooks/workers e segredos externos aguardam autorização e infraestrutura correspondentes.
-- Motoboy não teve mudanças nesta etapa; baselines/main protegidas. Ver [Registro 0034](REGISTROS/0034.md) e commit Restaurante `e3e0656`.
+- [x] Formalizar ownership de Order, Earning, Delivery, DeliveryEvent, LocationPoint, DeliveryProof, Route, Driver e Company em DEC-0006 e manter `CONTRACT.md`/`contract.js` sincronizados.
+- [x] Vincular instalação sync à sessão/usuário/tenant e app key escolhida por endpoint server-side; não confiar em `source.app`.
+- [x] ACK inequívoco por operação (`accepted`, `duplicate`, `rejected`, `conflict`), canonical ID/revision/código; revisão e transições explícitas sem LWW; retry de packet/event idempotente.
+- [x] Corrigir divergência de Earning: Restaurante calcula/escreve canonical Earning; Motoboy não publica Earning.
+- [x] Integrar os dois clientes aos endpoints de instalação/push/pull preservando IndexedDB e operação offline, outbox retry, ACK no `syncState`, aliases/revisões e cursor/cache em transações.
+- [x] Migration aditiva 0008 aplicada e testada; migrations 0001–0007 permaneceram intactas.
+- [ ] Login/sync ainda não tem fluxo visual integrado. Pull guarda snapshots/eventos canônicos em `inbox`/`syncState`; aplicação automática aos modelos visuais deve aguardar estratégia de merge que preserve edições locais pendentes.
+- [ ] Definir no contrato semântica/campos de relações canônicas ainda ausentes (ex.: Route→Delivery), antes de materializar esses vínculos no servidor.
+- [ ] Email real, HTTPS/domínio de implantação e eventuais segredos/provedores externos continuam dependências externas; não bloqueiam os fluxos locais/offline nem o backend de sync loopback.
+- Ver [Registro 0035](REGISTROS/0035.md), DEC-0006 e commits Restaurante `78e10f2`, Motoboy `d88aeea`.
 
 ## Atualização — Registro 0033 (2026-10-03)
 

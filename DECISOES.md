@@ -146,3 +146,36 @@ Aplicada no Registro 0034 com migrations 0005–0007 e APIs push/pull. Não inte
 
 ### Status
 ATIVA
+
+## DEC-0006 — Autoridade compartilhada, revisão e ACK por operação
+
+### Data
+2026-10-04
+
+### Projeto
+RotaMoto Restaurante e Motoboy
+
+### Contexto
+O Registro 0034 deixou abertas a autoridade por entidade/campo, a identidade da aplicação que sincroniza e a resposta de operações parcialmente aceitas. Os clientes mantêm modelos Local-First diferentes e `source.app` vem do próprio envelope.
+
+### Decisão
+
+1. Restaurante é autoridade de escrita de `Order`, `Earning`, `Route` e cadastro/membership de `Driver`. Company e identidade permanecem server-side. Motoboy só consome esses registros e não publica Earning canônico.
+2. Restaurante cria, planeja, atribui e cancela `Delivery`. Motoboy publica fatos imutáveis de execução em `DeliveryEvent`, `LocationPoint` e `DeliveryProof`; o servidor valida transições e projeta os eventos permitidos sobre o estado de Delivery. Motoboy não grava campos comerciais/de planejamento, nem altera cadastro de Driver. Restaurante não reescreve fatos/estados de execução.
+3. `DeliveryEvent` é append-only e idempotente por `eventId`. Localização e prova são escritas pelo Motoboy e lidas pelo Restaurante. Rotas e ganhos seguem a autoridade Restaurante. Ajustes e projeções de interface, como `races`, são locais.
+4. `source.app` é somente metadado. Um endpoint explícito registra a instalação no servidor, vinculada ao usuário autenticado, tenant e app key; toda operação exige essa instalação. Esse vínculo não pretende atestar o binário carregado no browser.
+5. Push v1 preserva o envelope, mas a resposta traz ACK inequívoco por operação: `accepted`, `duplicate`, `rejected` ou `conflict`, IDs local/canônico, revisão canônica e código estável quando disponíveis. HTTP 200 significa que o pacote foi processado, não que todas as operações foram aceitas. Packet/event retries são idempotentes.
+6. Atualizações usam revisão canônica (`baseVersion`/`sync.canonicalVersion`) e regras de ownership/transição. Não existe last-write-wins genérico. Rejeição/conflito preserva a cópia local pendente. Pull usa cursor keyset e cache/inbox transacionais; só ACK inequívoco permite marcar uma operação local como concluída.
+7. IndexedDB continua sendo a base de operação offline. Uma falha de rede não bloqueia escrita local válida. Snapshots canônicos recebidos ficam separados das projeções locais até que uma reconciliação segura possa aplicá-los sem sobrescrever edição local pendente.
+
+### Motivo
+As fronteiras seguem a responsabilidade operacional e financeira já decidida e evitam que um cliente troque a autoridade apenas mudando um campo do JSON. Revisão explícita e ACK por operação permitem retry sem perda local, mesmo quando um pacote contém operações aceitas e recusadas.
+
+### Impacto e limites
+Implementada no Registro 0035 com migration aditiva 0008, endpoints de instalação, enforcement e transportes Local-First explícitos. O login e o sync exigem sessão autenticada e CSRF mantidos em memória; não há UI de login integrada, domínio/HTTPS de implantação ou Browser QA nesta etapa. Pull persiste eventos/cache transacionalmente, enquanto mesclagem automática em modelos de interface permanece condicionada à revisão de conflitos locais.
+
+### Relação
+DEC-0006 complementa DEC-0005 e substitui seu item 5 e os limites de ownership/ack onde forem incompatíveis. O formato do envelope continua protocol/schema v1.
+
+### Status
+ATIVA
