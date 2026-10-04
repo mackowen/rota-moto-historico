@@ -134,3 +134,41 @@ Os achados originais acima permanecem preservados como evidência histórica. Os
 **Ambiente:** Chromium 149.0.7827.155, CDP loopback 9222; Restaurante 8788 e Motoboy 8789; launcher terminou os processos temporários. O teste de sessão interceptou apenas o GET de sessão e forneceu 401 anônimo controlado para reproduzir a ordem; não acessou sessão/credencial real. Requests sem falha/4xx/5xx observados. Única mensagem de console Motoboy foi o diagnóstico esperado de câmera indisponível; zero exception/unhandled. Restaurante sem erros de console.
 
 **Não alterados:** os P3 originais continuam abertos. Contagem corrente: P0 0, P1 0, P2 0, P3 2, BLOCKED_EXTERNAL 8. F9 não concluída. Ver [Registro 0050](REGISTROS/0050.md).
+
+## Atualização — Registro 0051: correções P3 e QA exploratório ampliado
+
+O inventário e a evidência inicial acima permanecem preservados. Esta atualização registra o estado após correção e a exploração adicional.
+
+### Correções dos achados originais P3
+
+| Achado original | Estado em 0051 | Repetição |
+|---|---|---|
+| Restaurante: primeiro 401 anônimo exibia “Sua sessão expirou” | **FIXED** | API local retornou 401 real sem cookie; estado final “Sem sessão autenticada”, sem mensagem falsa, exceção ou unhandled rejection. A resposta atrasada após escolha local continua sem tornar `#app` inert. |
+| Motoboy: aviso longo de sincronização deformava card de ganhos | **FIXED** | Sem Earning canônico, o card mostra `—`; explicação fica fora da grade. Confirmado nos seis viewports; em 360 px a largura do documento permaneceu 360 px. Service worker avançado a `rota-moto-v40.7`; shell offline exibiu a UI atualizada. |
+
+Os quatro achados P1/P2 originais permanecem **FIXED**. A repetição dirigida do Registro 0051 confirmou novamente: bootstrap Motoboy sem exception; quatro controles de período registrados; capture e fallback manual sem câmera; 401 sem unhandled rejection; corrida da escolha local no Restaurante preservada; Motoboy sem controles administrativos; `<main>` desktop termina antes da bottom navigation e a navegação mobile mantém `position: fixed`.
+
+### Matriz e resultado da exploração
+
+Chromium `149.0.7827.155`, CDP `127.0.0.1:9222`; servidores estáticos loopback Restaurante `8788` e Motoboy `8789`. Matriz executada nos dois aplicativos: `360x800`, `393x873`, `412x915`, `768x1024`, `1366x768`, `1920x1080`.
+
+- Restaurante: 9 áreas (`dashboard`, `orders`, `bikes`, `routes`, `reports`, `events`, `settings`, `integrationLab`, `admin`), mais diálogo vazio de criação de operação em cada viewport. Nenhum registro foi salvo. Navegação/overflow, estado sem dados, configurações, rotas/relatórios/eventos, formulário e modal foram exercitados. O laboratório visto segue explicitamente local/simulado; não exibiu integração conectada.
+- Motoboy: `home`, `races`, `routesScreen`, `earnings`, `settings` em cada viewport, mais entrada “Nova corrida”/capture sem salvar. Card e nav não tiveram overflow. A home/capture funciona com ausência de câmera; a câmera ausente foi tratada como limitação esperada do browser.
+- Em ambos: conta/login anônimo, recuperação e convite apenas abertos/inspecionados, modo local, estado vazio, labels, required/validity, navegação por teclado e retorno de foco dentro do diálogo foram examinados. Tab no último controle do painel foi contido no diálogo. Não se enviaram credenciais/tokens nem se criou usuário, tenant, Driver, Delivery, pedido ou provider.
+- IndexedDB no perfil de QA: Restaurante `rota-moto-restaurante-local-v30` versão 6; Motoboy `RotaMotoDB` versão 7. Foram apenas lidos os nomes/versões; nenhum store foi limpo/substituído. Sem submissão de formulários.
+- Console/network: zero exception JS e zero unhandled rejection nos dois apps. Restaurante: zero console error, HTTP ≥400 ou request failure inesperado na varredura. Motoboy: seis logs de diagnóstico `Camera NotFoundError` (um por abertura deliberada de capture sem dispositivo); nenhum uncaught error, HTTP failure ou rejeição. Um `ERR_INTERNET_DISCONNECTED` do request de navegação durante teste offline foi atendido pelo shell do service worker; `navigator.onLine` permaneceu `true` pela limitação da emulação CDP. API não é cacheada pelo contrato do SW.
+- Backend local: `npm start` no Restaurante iniciou em `127.0.0.1:8787` com a configuração existente do runtime; `/health/live` e `/health/ready` retornaram 200. O readiness completou pela role de runtime e fez apenas leituras. O GET de sessão anônimo real retornou 401 `UNAUTHENTICATED`, esperado. Nenhuma escrita, migration, alteração de configuração/role/grant ou segredo acessado. API e launcher foram encerrados e as portas ficaram fechadas.
+
+### Achado novo
+
+**P3 — Motoboy: mensagem de expiração incorreta no estado anônimo.** Com a API runtime e PostgreSQL ready, o primeiro `GET /api/identity/session` sem cookie retornou 401 real; o cabeçalho da conta corretamente mostra “Sem sessão autenticada”, mas o formulário mostra “Sua sessão expirou. Entre novamente.”. Sem erro JS/rejeição. Provável origem: mapeamento `UNAUTHENTICATED` em `identity-ui.js` Motoboy, distinto da cópia corrigida no Restaurante. Não corrigido nesta rodada por não ser um dos dois P3 autorizados para correção. Evidência: `motoboy-entry-393x873.png` na pasta externa abaixo e verificação CDP com resposta HTTP real.
+
+Não houve outro P0/P1/P2/P3 reproduzido na exploração sem dados/identidade. Os requests 401 de sessão anônima foram esperados, não classificados como defeito.
+
+### Contagens e bloqueios
+
+`F9_ROUND_2 = PASS_WITH_FINDINGS`; inventário corrente: **P0_OPEN=0, P1_OPEN=0, P2_OPEN=0, P3_OPEN=1, BLOCKED_EXTERNAL=8**. Os oito grupos permanecem os mesmos do Registro 0049: (1) fluxos administrativos/autenticados sem conta, membership/tenant/Driver de QA autorizados; (2) email de convite/recuperação; (3) MFA/armazenamento seguro; (4) câmera/GPS físicos/permissões; (5) storage de mídia; (6) iFood; (7) 99Food; (8) Keeta. Providers seguem não conectados; nenhum mock foi usado para afirmar disponibilidade.
+
+Evidências e screenshots brutos fora do Git: `/data/data/com.termux/files/home/projetos/browser-tests/f9-round-2-2026-10-04/` e `/data/data/com.termux/files/home/projetos/browser-tests/f9-correction-round-2-2026-10-04/`. Exemplos: `restaurante-360x800-create-dialog.png`, `restaurante-393x873-dashboard.png`, `motoboy-360x800-home.png`, `motoboy-1366x768-home.png`, `motoboy-393x873-account.png`, `motoboy-capture-no-camera-393x873.png`, `restaurant-local-choice-after-delayed-401-393x873.png`, `report.json`.
+
+F9 continua aberta; o inventário visual não substitui fluxos reais autenticados, end-to-end com Delivery autorizada, dispositivo físico, leitores de tela ou integrações externas.

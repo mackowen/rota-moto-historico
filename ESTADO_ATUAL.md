@@ -1,3 +1,13 @@
+## Atualização — Registro 0051 / QA ampliado F9 (2026-10-04)
+
+- Restaurante: `codex/setup-workflow` @ `63f50026cfddfc6139771a3040a9f9f00107586c`, árvore limpa; `main` `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `69b1e76595ae4a4f6aee8021685761d03f034d91`, árvore limpa; `main` `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baseline peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta. Sem push.
+- Os dois P3 originais do Registro 0049 estão corrigidos. QA ampliado em 360×800, 393×873, 412×915, 768×1024, 1366×768 e 1920×1080; sem overflow horizontal, exceções JS ou unhandled rejections. P0/P1/P2 abertos = 0; novo P3 Motoboy: texto “Sua sessão expirou” em 401 anônimo embora o status seja “Sem sessão autenticada”.
+- Browser usou somente perfis Chromium temporários, sem criação de usuário/tenant/Driver/Delivery ou credencial. IndexedDB observado: Restaurante `rota-moto-restaurante-local-v30` v6 e Motoboy `RotaMotoDB` v7; nenhum store foi limpo ou substituído. Formulários/modais foram abertos, sem salvar dados.
+- API local iniciada em loopback com runtime para health/readiness e GET de sessão anônimo: live/ready 200, sessão 401 esperado. Nenhuma operação de escrita/administração/schema; API, servidores 8788/8789 e Chromium/CDP encerrados, portas fechadas. PostgreSQL oficial não foi alterado.
+- Testes: `npm test` nos dois apps; `node --check` JS alterados; `git diff --check`; matriz e foco teclado CDP. iFood/99Food/Keeta, login real, email/MFA, GPS/câmera física e storage permanecem BLOCKED_EXTERNAL conforme capacidades já documentadas; F9 segue aberta.
+- Commits: Motoboy `69b1e76595ae4a4f6aee8021685761d03f034d91`; Restaurante `63f50026cfddfc6139771a3040a9f9f00107586c`. Relatório/screenshot brutos fora do Git em `~/projetos/browser-tests/f9-round-2-2026-10-04/`.
+
 ## Atualização — Registro 0050 / F9 correção dirigida P1/P2 (2026-10-04)
 
 - Motoboy: `codex/setup-workflow` @ `09bcf745965486e545649d875a03e77df01825d3`, árvore limpa; main `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478` e baseline `79c527b59d32d8b55236c62042acb868166ed4ad` intactas.
@@ -54,7 +64,7 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0049.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0051.
 
 ## Atualização — Registro 0049 / QA visual inicial F9 (2026-10-04)
 
