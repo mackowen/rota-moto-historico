@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0045, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy implementada (classificação B, Registro 0044); F7 UI/UX consolidada estaticamente (classificação B, Registro 0045; Browser QA em F9). Browser QA permanece em F9.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0047, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F4 com infraestrutura local concluída e providers externos bloqueados (Registro 0046); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy implementada (classificação B, Registro 0044); F7 UI/UX consolidada estaticamente (classificação B, Registro 0045); F8 preparação operacional local concluída com implantação externa pendente (classificação B, Registro 0047). F9 permanece não iniciada.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -15,12 +15,14 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 
 A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável após o Registro 0045
+## Estado atual verificável após o Registro 0047
 
-- Restaurante: `codex/setup-workflow` @ `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
-- Motoboy: `codex/setup-workflow` @ `2c82d094ef8a2f04aa436507a36682b4f36e95fc`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- Restaurante: `codex/setup-workflow` @ `22a06c248b3e9baa9c2ad047f9155d18921151f7`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `3e0f42b1129930a8d69d5a979b5da14149089fa7`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
-- PostgreSQL oficial: migration 0013 do vínculo Membership↔Driver permanece aplicada conforme Registro 0044. F7 não alterou schema, roles, grants, configuração nem dados.
+- Restaurante `main`: `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; Motoboy `main`: `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`. Nenhuma tag/baseline mudou.
+- PostgreSQL oficial: somente leitura nesta execução; readiness passou pela role runtime e `migrate.js status` confirmou 0001–0013 aplicadas via migrator. Nenhum schema, dado, role, grant ou configuração foi alterado.
+- O Termux/PostgreSQL/nginx existente continua classificado como desenvolvimento/homologação local, não produção. F8 não aplicou configuração de servidor ou proxy.
 
 As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da F1 foram atualizadas pelos Registros 0038–0039 e pela seção F1 vigente.
 
@@ -188,14 +190,18 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F8 — Instalação, deploy, segurança e operação
 
-- **Estado:** Parcial; loopback de desenvolvimento e role split seguros; sem rollout de produção demonstrado.
-- **Lacunas/tarefas:** runtime Node suportado e pinned; configuração/secrets manager; TLS/domínio/reverse proxy/IP trusted; deploy/restart/health; migrations controladas como migrator separado; logs sem segredo, métricas/alertas; PostgreSQL backup/restore ensaiado e RPO/RTO; rotação credenciais/cookies; atualização app/SW/cache/schema e rollback compatível; rate limiting multi-instância; retenção/auditoria.
-- **Componentes:** server/migrate, scripts/package config, manifests/SW, documentação de operação, PostgreSQL e infraestrutura de deploy.
-- **Dependências:** arquitetura e procedures podem ser preparados localmente; rollout exige ambiente/dono operacional.
-- **Bloqueios externos reais:** domínio/TLS, KMS/secret manager, host de produção, canal de distribuição e operadores/on-call.
-- **Conclusão objetiva:** runbooks reproduzíveis de deploy, migration, restore testado, monitoramento e rollback; runtime mínimo privilege; RLS e segredos verificados sem credenciais no Git.
-- **Testes:** security audit, migration em staging, restore com validação, health/shutdown, atualização SW e smoke depois de deploy aprovado.
-- **Browser QA:** sim após deploy/staging e atualização PWA; não agora.
+- **Estado:** **B — preparação operacional local concluída com implantação e ensaios externos pendentes** (Registro 0047). O ambiente Termux/PostgreSQL/nginx não é declarado produção.
+- **Concluído localmente:** modos development/test/production; defaults somente fora de produção; produção exige DATABASE_URL de `rotamoto_app` sem senha e com TLS `verify-full`, CA e secret-provider externo, origins HTTPS, Host allowlist e proxy IP allowlist; listener loopback; não confia X-Forwarded-Proto; cliente encaminhado só é lido de peer confiável e para rate limit. Segurança HTTP/CSP/HSTS, body/time limits, pool/timeouts, readiness de schema e startup fail-closed; nenhuma migration no startup.
+- **Lifecycle/observabilidade:** request IDs e logs JSON sem body/credenciais; readiness verifica role e objetos das migrations 0005/0008/0012/0013; SIGTERM/SIGINT fecham listener, drenam conexões até timeout e fecham pool; erros de bootstrap saem sanitizados. Rate limit local é por processo, complementado pelo limite por IP do proxy de exemplo.
+- **Deploy/proxy:** exemplo versionado `docs/operations/nginx-api.conf.example`, nunca instalado; sequência de deploy e rollback proíbe rollback destrutivo automático, exige migration status separado, artefato compatível e readiness.
+- **Backup/restore:** runbook PostgreSQL cobre dump custom, TOC/checksum, RLS/roles, restore isolado e validação; IndexedDB documenta backup v1 plaintext sensível, merge não sobrescrevente e recuperação sem apagar DB. Procedimento não foi executado: falta alvo isolado de restore e política/RPO/RTO aprovados.
+- **PWA:** Motoboy usa cache de shell versionado, cache-first apenas para URLs exatas de assets same-origin, API nunca é interceptada/cacheada, atualização espera abas anteriores fecharem e não apaga IndexedDB. Restaurante não tem service worker próprio no checkout auditado.
+- **Componentes:** Restaurante `backend/runtime/*`, `server.js`, handlers HTTP, `.env.example`, `.node-version`, docs de operação e testes runtime; Motoboy `service-worker.js` e teste do contrato PWA.
+- **PostgreSQL/migrations:** nenhuma migration criada/aplicada. `migrate.js status` read-only como `rotamoto_migrator` confirmou 0001–0013; readiness/smoke `rotamoto_app` passou. Role split/RLS/FORCE/grants ficaram intactos.
+- **Bloqueios externos reais:** domínio/certificado/TLS, host e PostgreSQL de produção, módulo real de secrets/KMS e CA, email/MFA operational providers, canal de distribuição/operadores, política de retenção/RPO/RTO e alvo isolado para ensaio de restore. Nenhum provider foi fingido.
+- **Testes:** `npm test` nos dois apps passou; testes dirigidos de configuração fail-closed, proxy/Host/security headers/CORS/health/readiness contra PostgreSQL oficial, shutdown, documentação/runbooks e service worker passaram; migration status; `node --check` e `git diff --check`. Aviso conhecido: `pg` 8.23.1 avisa que seu suporte pgpass será removido em pg 9; credencial existente não foi lida nem alterada.
+- **Classificação:** F8 **B — implementação operacional local concluída com dependências externas isoladas**; não houve deploy, backup/restore real, nginx -t ou Browser QA.
+- **Browser QA:** reservado para F9 após ambiente de staging aprovado; não executado.
 
 ### F9 — QA integrado e hardening final
 
@@ -221,7 +227,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1/F2 estão concluídas; F3 mantém dependências externas registradas; F5/F6 estão implementadas; F7 está implementada estaticamente pelo Registro 0045 e aguarda validação renderizada em F9. F4 local concluída com providers bloqueados externamente. Próxima macrofase do plano: F8, ainda não iniciada; F9 também permanece pendente.
+F1/F2 estão concluídas; F3 mantém dependências externas registradas; F4 local concluída com providers bloqueados externamente; F5/F6 estão implementadas; F7 está implementada estaticamente; F8 está preparada localmente, sem rollout/restore de produção. **Próxima fase: F9**, QA integrado/hardening, ainda não iniciada e dependente de ambiente/Chromium e capacidades físicas/externas conforme cada fluxo.
 
 ## Bloqueios externos reais versus trabalho local
 

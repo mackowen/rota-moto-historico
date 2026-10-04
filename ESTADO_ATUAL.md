@@ -1,3 +1,13 @@
+## Atualização — Registro 0047 / F8 preparação operacional (2026-10-04)
+
+- Restaurante: `codex/setup-workflow` @ `22a06c248b3e9baa9c2ad047f9155d18921151f7`, árvore limpa; `main` `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5^{}` `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intactos.
+- Motoboy: `codex/setup-workflow` @ `3e0f42b1129930a8d69d5a979b5da14149089fa7`, árvore limpa; `main` `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baseline `v39.6-ui-mobile-fix2^{}` `79c527b59d32d8b55236c62042acb868166ed4ad` intactos. Nenhum push.
+- F8: config production fail-closed, proxy/Host/origin/IP trust delimitados, security headers, timeouts/pool, readiness de schema, shutdown drenado e documentação de deploy/backup/restore/retention. Não houve migration nem alteração no PostgreSQL oficial.
+- Motoboy: SW v40.5 limita cache a URLs exatas same-origin de shell, exclui API, espera abas existentes antes de ativar novo shell e não altera IndexedDB. Restaurante não possui SW próprio.
+- `npm test` nos dois apps passou; testes focados runtime/security/readiness (PG oficial via rotamoto_app), migration status (0001–0013 via rotamoto_migrator), lifecycle, runbooks, PWA, checks JS e `git diff --check` passaram. Nenhum backup/restore/deploy/nginx foi executado.
+- Classificação F8 **B — preparação operacional local concluída com bloqueios externos isolados**. Termux/nginx/PostgreSQL local não é produção. Registro detalha pendências de TLS/domínio, provider de secrets/KMS, DB/host de produção, RPO/RTO, retention, restore isolado e operadores.
+- Commits: Restaurante `22a06c248b3e9baa9c2ad047f9155d18921151f7`; Motoboy `3e0f42b1129930a8d69d5a979b5da14149089fa7`. Próxima macrofase é F9, não iniciada.
+
 ## Atualização — Registro 0046 / F4 integrações externas (2026-10-04)
 
 - Restaurante `codex/setup-workflow` HEAD `0ace64884a9f546368909073e60dbe5a8b363647`, árvore limpa; commit anterior `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`. `main` preservada em `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5` preservada em `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
@@ -37,7 +47,7 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0046.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0047.
 
 ## Atualização — Registro 0044 / vínculo canônico User↔Driver (2026-10-04)
 

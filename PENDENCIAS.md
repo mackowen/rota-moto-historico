@@ -1,5 +1,15 @@
 # Pendências
 
+## Atualização — Registro 0047 / F8 operação (2026-10-04)
+
+- [x] Configuração development/test/production com defaults locais somente fora de produção; startup production fail-closed para DB runtime/TLS/CA/secret provider, HTTPS origins, Host e proxy confiável.
+- [x] Backend loopback, headers seguros, limites/timeouts/pool, readiness de schema compatível sem migration automática, request ID/log JSON sanitizado e shutdown SIGTERM/SIGINT com drain.
+- [x] Runbooks versionados de deploy/rollback, PostgreSQL e IndexedDB backup/restore, retenção; nginx apenas exemplo não instalado.
+- [x] Service worker Motoboy cacheia somente assets same-origin exatos, nunca API, usa ativação aguardando abas antigas e não apaga IndexedDB; contrato estático testado.
+- [ ] Produção ainda depende de domínio/TLS, host e PostgreSQL de produção, secret provider/KMS/CA, email/MFA, operadores/distribuição; executar deploy e restore em alvo isolado com RPO/RTO aprovado.
+- [ ] Definir retenção legal/operacional para GPS, proofs, PII, audit/logs, inbox/outbox, aliases e backups; não foi inventado TTL.
+- F8 classificada **B — preparação local concluída com dependências externas isoladas**. Nenhuma configuração real do Termux/nginx/PostgreSQL mudou. Ver [Registro 0047](REGISTROS/0047.md).
+
 ## Atualização — Registro 0046 / F4 integrações (2026-10-04)
 
 - [x] Registry provider-neutral bloqueado por padrão; estados administrativos nunca inferem conexão por cadastro/credencial declarada.
@@ -113,7 +123,7 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [x] F6 Motoboy: vínculo User/Membership↔Driver e enforcement server-side concluídos no Registro 0044; Browser QA continua em F9. Provider de blob e hardware/permissões físicos são dependências de capacidade, não bloqueios da implementação F6.
 - [x] F4: registry/catalog e bloqueio local seguro concluídos no Registro 0046. [ ] Adapters reais, fila/inbox, ingestão e configuração operativa continuam condicionados a documentação oficial, credenciais/contas, homologação e secret manager por provider.
 - [x] F7: implementação estática concluída no Registro 0045; Browser QA/renderização permanece para F9.
-- [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.
+- [x] F8: preparação local de runtime/proxy/shutdown, logs/readiness, backup/restore e runbooks concluída no Registro 0047; [ ] deploy real, provider TLS/secrets, RPO/RTO e restore isolado aguardam infraestrutura/operador.
 - [ ] F9: QA integrado CDP desktop/tablet/mobile e hardening depois das fases anteriores.
 - Route→Delivery foi decidido e implementado em F1/Registro 0039. Retenção legal/operacional de localização/provas permanece pendente, sem prazo inventado.
 - [ ] Provider de email, primeiro operador/owner, MFA seguro, contas/documentação de fornecedores e ambiente de produção são bloqueios externos apenas para as capacidades correspondentes; continuar trabalho independente local.
