@@ -1,3 +1,17 @@
+## Atualização — Registro 0042 / F5 Restaurante (2026-10-04)
+
+- [x] Pedidos locais: criar/editar/validar e persistir Order+Delivery+Earning numa transação; IDs canônicos e projeções não substituem fatos de execução.
+- [x] Entregas: atribuição/change de motorista com transição permitida e `driverId`; cancelamento mantém Order/Delivery e histórico; estados Motoboy, eventos e provas aparecem no detalhe; rejected/conflict ficam observáveis via syncState.
+- [x] Reentrega: UI solicita somente a partir de `DELIVERED`, `FAILED` ou `RETURNED`; servidor mapeia `DELIVERY_RETURNED`, aplica a transição de contrato, audita com actor da sessão e permite reatribuição posterior.
+- [x] Rotas: gestão por `Route.deliveryIds`, ordenação de paradas, prevenção de associação duplicada/entre empresas e preservação de membros históricos terminalizados.
+- [x] Motoristas: administração de nome/telefone/status sem editar GPS/presença de execução; atribuição usa Driver ID.
+- [x] Earnings/relatórios: registros usam `amountMinor`, moeda, componentes e regra; repasse em relatório soma inteiros; indicadores de conclusão usam horário de conclusão.
+- [x] Backup/restore existente foi conectado à área de dados com aviso de JSON plaintext sensível e merge seguro sem sobrescrever registros/outbox/conflitos atuais.
+- [x] Sync constrói Order/Driver/Delivery/Route em shape do contrato, preserva status canônico de execução ao enviar edição comercial e não depende de geocoding para montar pacote.
+- [x] Testes: `npm test`, `npm run test:sync`, teste PostgreSQL dirigido `tests/test-domain-sync-postgres.js`, syntax checks e `git diff --check` passaram. Sem alteração de schema/migration; sem Browser QA.
+- [ ] Browser QA integrado F5 fica em F9 e não mantém F5 aberta.
+- F5 classificada **B — implementação concluída / Browser QA pendente**. Próximo bloco planejado: F6. Ver [Registro 0042](REGISTROS/0042.md).
+
 # Pendências
 
 ## Atualização — Registro 0041 / F3 Identidade (2026-10-04)

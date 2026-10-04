@@ -1,6 +1,17 @@
+## Atualização — Registro 0042 / F5 Restaurante (2026-10-04)
+
+- F5 está **implementada** (classificação B: Browser QA integrado fica para F9). Restaurante permanece em `codex/setup-workflow`, HEAD `104b552273059c1848dc2ca3f7b5df2d45b1c016`; a árvore está limpa após os commits `b85b57a5c661324f705022055e323c1c310a212c` e `104b552273059c1848dc2ca3f7b5df2d45b1c016`. `main` continua `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5` continua em `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- Fluxos cobertos: criação/edição de pedidos; Delivery, atribuição/troca/cancelamento/reentrega; eventos/provas; Route com `deliveryIds` ordenáveis e sem relação inversa; cadastro Driver separado de GPS; ganhos/relatórios em unidades monetárias inteiras; indicadores de conclusão por `completedAt`; backup com aviso plaintext e merge sem sobrescrever; projeções sync canônicas e estado/rejeição visível.
+- Corrigidos status executivos rebaixados por sync, exclusão física que quebrava Order/histórico, GPS editável no cadastro Driver, `driverId`/Earning ausentes na atribuição, falta de ID estável em pedidos legados e redelivery impossível no enforcement do servidor. A reentrega só é aceita depois de `DELIVERED`, `FAILED` ou `RETURNED` e gera audit_log via actor da sessão; `DELIVERY_RETURNED` agora atualiza a projeção canônica.
+- Aplicativo: commit `b85b57a5c661324f705022055e323c1c310a212c` (`feat(restaurante): complete local-first operating flows`). Arquivos: `app.js`, `restaurant-operations.js`, `backend/domain/sync-service.js`, `index.html`, `styles.css`, `package.json`, `tests/test-restaurant-operations.js`, `tests/test-domain-sync-postgres.js`, `tests/test-sync-flows.js`. Nenhuma migration foi necessária; PostgreSQL oficial não teve alteração administrativa.
+- Testes finais: Restaurante `npm test` e `npm run test:sync` passaram; teste PostgreSQL dirigido passou com `DATABASE_URL` runtime `rotamoto_app` e `MIGRATOR_DATABASE_URL` `rotamoto_migrator` via pgpass, sem senha na URL. Fixture transacional foi revertida; sem dados sintéticos residuais. `node --check` dos JS alterados e `git diff --check` passaram. Sem Browser QA.
+- Motoboy permaneceu sem alteração: `codex/setup-workflow`, HEAD `3634b3da045500a1dbb84cb82bd967f03b332167`. Baseline do Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad` intacta. Nenhum push, F4/F6/F7/F8/F9 ou mudança em `main` iniciada.
+- Próxima fase recomendada no plano: F6 Motoboy. Bloqueios F3 externos continuam conforme Registro 0041; importação de pedidos reais depende de F4; browser integrado de F5 fica para F9.
+- Ver [Registro 0042](REGISTROS/0042.md), [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) e [PENDENCIAS.md](PENDENCIAS.md).
+
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0041.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0042.
 
 ## Atualização — Registro 0041 / F3 (2026-10-04)
 

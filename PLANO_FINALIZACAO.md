@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0041, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL). Browser QA permanece em F9.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0042, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F5 Restaurante implementada (classificação B, Registro 0042). Browser QA permanece em F9.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -15,9 +15,9 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 
 A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável após o Registro 0041
+## Estado atual verificável após o Registro 0042
 
-- Restaurante: `codex/setup-workflow` @ `03634a6199cdc6b94440c55367f652f66df6e68f`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Restaurante: `codex/setup-workflow` @ `104b552273059c1848dc2ca3f7b5df2d45b1c016`, árvore limpa após os commits F5; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
 - Motoboy: `codex/setup-workflow` @ `3634b3da045500a1dbb84cb82bd967f03b332167`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
 - PostgreSQL oficial: migrations 0001–0012 aplicadas; 0012 registra invitation purpose/MFA verification marker e grants mínimos para lifecycle RBAC. RLS/FORCE e separação `rotamoto_app`/`rotamoto_migrator` preservadas.
@@ -152,14 +152,14 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F5 — Fluxos completos do Restaurante
 
-- **Estado:** Parcial; operações locais de pedidos, planejamento, atribuição, motos, rotas, relatórios e eventos existem; autoridade/sync com servidor ainda sem identidade UI.
-- **Lacunas/tarefas:** mapear cada fluxo e estado; pedidos externos→Order local/canônico; atribuição/cancelamento de Delivery sem editar fatos de execução; fatos recebidos Motoboy; indicadores financeiros derivados de Earning autoritativo; casos de rede/sessão/rejected/conflict/tombstone; reconciliação de dados preexistentes.
-- **Componentes:** Restaurante `app.js`, stores orders/deliveries/bikes/routes/events/deliveryEvents/earnings; adapters e sync transport/reconciler.
-- **Dependências:** modelo F1 concluído; API F2 e login F3 para sync autenticado; provider F4 só bloqueia pedidos externos reais.
-- **Bloqueios externos:** credenciais e homologação para importar pedidos reais.
-- **Conclusão objetiva:** casos de uso principais passam local/offline e online; cada transição tem feedback e auditoria; nenhuma operação local válida depende da rede; servidor mantém autoridade definida.
-- **Testes:** testes de use cases/IndexedDB/migration, API integração e regressão de pedido→Delivery→atribuição→execução→ganho.
-- **Browser QA:** sim em F9 para desktop/tablet/mobile e fluxo integrado.
+- **Estado:** **B — implementação concluída / Browser QA integrado pendente em F9** (Registro 0042). F1/F2/F3 continuam fechadas; nenhum outro macrobloco foi iniciado.
+- **Concluído:** ciclo local de Order/Delivery; validação de criação/edição; projeções transacionais de Order+Delivery+Earning; atribuição com `driverId`/`assignedAt` e estados permitidos; cancelamento administrativo sem exclusão física; pedido de reentrega auditado para transições `DELIVERED|FAILED|RETURNED → REDELIVERY → ASSIGNED`; o backend também projeta `DELIVERY_RETURNED` para `RETURNED`; fatos/provas recebidos são visíveis no detalhe; edição explícita de Route por `deliveryIds`, com ordenação, exclusividade visual e preservação de paradas históricas; Driver editável como cadastro sem edição manual de GPS/presença; relatório de repasse usa `amountMinor`; KPIs de conclusão usam horário de conclusão; export/import existente exibe que JSON é plaintext e mantém merge sem sobrescrita; pedido/Driver/Delivery/Route são enviados como projeções canônicas restritas; falha de geocoding não bloqueia construir pacote sync.
+- **Correções de causa raiz:** sincronização de uma edição de Order não rebaixa Delivery em execução a `ASSIGNED`; Delivery sem ID recebe ID estável antes de salvar; edição de perfil não permite status canônico de execução; pedido não é removido fisicamente ao cancelar; serviço de sync aceita/audita reentrega somente depois de estado terminal permitido.
+- **Componentes:** Restaurante `app.js`, `restaurant-operations.js`, `backend/domain/sync-service.js`, `index.html`, `styles.css`; stores orders/deliveries/bikes/routes/deliveryEvents/proofs/earnings e transporte/reconciler existente.
+- **Dependências:** F1/F2/F3 concluídas. Provider F4 só bloqueia entrada real de pedidos externos; não bloqueia fluxo operacional manual/local.
+- **Bloqueios externos/validação:** Browser QA de UI/IndexedDB e fluxo real integrado fica em F9, conforme escopo. Provider/contas para pedidos externos continuam F4. Nenhuma dessas dependências mantém a implementação F5 aberta.
+- **Testes:** `npm test`; `npm run test:sync`; integração dirigida `tests/test-domain-sync-postgres.js` contra o PostgreSQL oficial para rejeição de reentrega prematura, falha/retorno, reentrega autorizada, reatribuição, auditoria via permissão de insert e rollback/limpeza; syntax checks e `git diff --check`.
+- **Browser QA:** reservado a F9; não executado em F5.
 
 ### F6 — Fluxos completos do Motoboy
 
@@ -210,7 +210,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 1. **F1 — Modelo definitivo:** implementação concluída no Registro 0039; Browser QA/IndexedDB real fica em F9.
 2. **F2 — Backend/API:** concluída no Registro 0040 para operações internas v1; não duplicar sync nem reimplementar API read.
 3. **F3 — Identidade/login/RBAC:** implementação local concluída no Registro 0041; external owner/MFA/email fail-closed e Browser QA fica para F9.
-4. **F5 e F6 — Fechar fluxos dos apps**, integrando leituras API/sync e preservando operação offline e autoridade.
+4. **F5 — Restaurante:** implementação fechada no Registro 0042; Browser QA fica em F9. **F6 — Motoboy:** próxima fase de fluxos funcionais; não iniciada.
 5. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
 6. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
 7. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional.**
@@ -218,7 +218,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1 e F2 estão concluídas nos limites registrados. F3 implementou o máximo local seguro; suas capacidades restantes exigem operação/serviços externos. O próximo bloco recomendado é F5 — fluxos completos do Restaurante, sem iniciar F4 nesta execução.
+F1 e F2 estão concluídas; F3 permanece parcial apenas por dependências externas registradas; F5 está implementada conforme Registro 0042 e aguarda somente validação de browser em F9. Próximo bloco recomendado: F6 — fluxos completos do Motoboy. F4 não foi iniciada em F5.
 
 ## Bloqueios externos reais versus trabalho local
 
