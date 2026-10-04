@@ -1,3 +1,12 @@
+## Atualização — Registro 0043 / F6 Motoboy (2026-10-04)
+
+- [x] Ciclo local de execução `ACCEPTED/PICKED_UP/OUT_FOR_DELIVERY/ARRIVED/DELIVERED/FAILED/RETURNED`, motivos, eventos/outbox idempotentes e preservação offline.
+- [x] Pull de Delivery/Order/Route/Earning atualiza stores e telas depois de commit; revisões stale não regridem cache; reentrega arquiva tentativa anterior.
+- [x] GPS real validado/throttled e persistido localmente; assinatura PNG limitada/hash fica explicitamente local até provider seguro; Motoboy não publica Earning.
+- [x] API sync projetando eventos de aceite/coleta; Service Worker não armazena resposta `/api/`. `npm test` Motoboy e PostgreSQL dirigido passaram.
+- [ ] **F6 bloqueada para conclusão segura:** modelar vínculo canônico autenticado User/Membership↔Driver e limitar server-side o pull/push às Deliveries do próprio motorista. `driverId`, `actor` e `source.app` vindos do cliente não são autoridade.
+- [ ] Provider de blob para envio de prova/foto; permissões/hardware GPS/câmera real; Browser QA somente em F9. Ver [Registro 0043](REGISTROS/0043.md).
+
 ## Atualização — Registro 0042 / F5 Restaurante (2026-10-04)
 
 - [x] Pedidos locais: criar/editar/validar e persistir Order+Delivery+Earning numa transação; IDs canônicos e projeções não substituem fatos de execução.
@@ -67,8 +76,9 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [x] F1.2: schemas, Route→Delivery, Earning, mídia, backup/merge e migrations aditivas concluídos no Registro 0039.
 - [ ] Validar o upgrade/import em IndexedDB real no checkpoint F9; F1 não fica aberta por essa validação.
 - [x] F2: API v1 interna definida e implementada para identidade, domínio read, sync write, administração de leitura, health/readiness, RBAC/RLS e erros/logs; migration/grants e documentação concluídos no Registro 0040.
-- [ ] F3: clientes/telas de login, logout, sessão, seleção de tenant, convite/recuperação e gestão server-side de usuários/permissões, sempre fail-closed onde MFA/operador faltar.
-- [ ] F5/F6: fechar fluxos Restaurante/Motoboy com identidade, estados de sync/conflito e autoridade canônica preservando offline.
+- [x] F3: implementação local de clientes/telas e APIs de identidade concluída no 0041; permanecem apenas o primeiro operador/owner, MFA operacional segura, email real e Browser QA em F9 conforme bloqueios externos registrados.
+- [x] F5 Restaurante: fluxos administrativos/operacionais registrados no 0042.
+- [ ] F6 Motoboy: implementação Local-First registrada no 0043; falta autorização server-side por vínculo User/Membership↔Driver; storage de prova e teste de browser continuam nas suas dependências.
 - [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.
 - [ ] F7: feedback de sync, configurações tenant vs locais, acessibilidade e responsividade após fluxos estabilizados.
 - [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.

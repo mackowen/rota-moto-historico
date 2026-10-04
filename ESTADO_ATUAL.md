@@ -1,3 +1,12 @@
+## Atualização — Registro 0043 / F6 Motoboy (2026-10-04)
+
+- Motoboy: branch `codex/setup-workflow`, HEAD `d92e5915ca94dba80c37d234cac14634deadcd4f`, árvore limpa. Implementados ciclo de execução de DeliveryEvent, fluxo offline/outbox, GPS/assinatura local fail-closed, arquivo de tentativas na reentrega, reconciliação de Route/Earning, estado de sync, atualização das projeções e exclusão de `/api/` do cache PWA.
+- Restaurante: branch `codex/setup-workflow`, HEAD `86e0185f66aa8e9342b6582ad8a38bd91dc9957d`, árvore limpa. Backend agora projeta `DELIVERY_ACCEPTED` e `DELIVERY_PICKED_UP`, preservando timestamps canônicos. Shared contract docs/scripts estão idênticos.
+- F6 classificada **C — parcial** por lacuna de segurança: não existe vínculo canônico server-side User/Membership↔Driver, então o backend não prova atribuição individual nas operações/pull Motoboy. Não inferido por email/cliente. Provas remotas também dependem de storage provider; Browser QA permanece para F9.
+- Testes: `npm test` Motoboy passou; `tests/test-domain-sync-postgres.js` passou contra PostgreSQL oficial via pgpass; node --check e git diff --check nos arquivos alterados passaram. Nenhuma migration/administração PostgreSQL, Browser QA, push ou mudança em main/tags/baselines.
+- Baselines: Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad`; Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`. `main` preservada nos dois repositórios.
+- Ver [Registro 0043](REGISTROS/0043.md), [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) e [PENDENCIAS.md](PENDENCIAS.md).
+
 ## Atualização — Registro 0042 / F5 Restaurante (2026-10-04)
 
 - F5 está **implementada** (classificação B: Browser QA integrado fica para F9). Restaurante permanece em `codex/setup-workflow`, HEAD `104b552273059c1848dc2ca3f7b5df2d45b1c016`; a árvore está limpa após os commits `b85b57a5c661324f705022055e323c1c310a212c` e `104b552273059c1848dc2ca3f7b5df2d45b1c016`. `main` continua `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5` continua em `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
@@ -11,7 +20,7 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0042.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0043.
 
 ## Atualização — Registro 0041 / F3 (2026-10-04)
 
