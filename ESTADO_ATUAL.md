@@ -1,6 +1,15 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0036.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0037.
+
+## Atualização — Registro 0037 (2026-10-04)
+
+- Foi criado [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade para concluir os dois aplicativos. Reconcilia DEC-0002–0006, Registros 0001–0036, contrato, código, IndexedDB estático, migrations 0001–0008, catálogo PostgreSQL read-only, API, integrações e UI.
+- Restaurante: `codex/setup-workflow` @ `df562f7fd26fb93a2f3c857234987fa1d34800c9`, árvore limpa; baseline `v5.50-ui-mobile-fix5` peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`. Motoboy: `codex/setup-workflow` @ `6a1574f6a72e5ed87b0b8cbf16a3c90533d68b22`, árvore limpa; baseline `v39.6-ui-mobile-fix2` peel `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- PostgreSQL oficial 18.6 em `127.0.0.1:5432/rotamoto`; migrations 0001–0008 aplicadas. Catálogo read-only: 20 tabelas, 12 tenant-scoped com RLS ENABLE/FORCE, 50 índices, 258 constraints catalogadas. Nenhuma alteração no banco.
+- Nenhuma alteração nos aplicativos, `main`, tags ou baselines. Sem Browser QA, QA end-to-end ou suites amplas. Sync/reconciliação 0034–0036 foi aceito como concluído, sem reimplementação.
+- Ordem planejada: F1 modelo de dados; F2 backend/API; F3 identidade; F5/F6 fluxos dos apps; F4 integrações em paralelo; F7 UX; F8 produção; F9 QA final. Primeiro bloco recomendado: matriz por entidade/campo entre CONTRACT, IndexedDB dos dois apps, PostgreSQL/API e fixtures legadas, antes de migrations.
+- Ver [Registro 0037](REGISTROS/0037.md). Commit somente no histórico; sem push.
 
 ## Atualização — Registro 0036 (2026-10-04)
 

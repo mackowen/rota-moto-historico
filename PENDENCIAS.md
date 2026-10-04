@@ -1,12 +1,29 @@
 # Pendências
 
+## Plano mestre — Registro 0037 (2026-10-04)
+
+Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não duplique trabalho concluído em 0033–0036.
+
+- [ ] F1.1: matriz versionada de campos/autoridade entre CONTRACT, IndexedDB Restaurante/Motoboy, PostgreSQL/API e formatos legados; produzir fixtures e proposta de upgrade sem migration prematura.
+- [ ] F1.2/F2: decidir tipagem/constraints/migrations aditivas a partir da matriz; completar casos de uso/API e validar RLS/transações.
+- [ ] F3: clientes/telas de login, logout, sessão, seleção de tenant, convite/recuperação e gestão server-side de usuários/permissões, sempre fail-closed onde MFA/operador faltar.
+- [ ] F5/F6: fechar fluxos Restaurante/Motoboy com identidade, estados de sync/conflito e autoridade canônica preservando offline.
+- [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.
+- [ ] F7: feedback de sync, configurações tenant vs locais, acessibilidade e responsividade após fluxos estabilizados.
+- [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.
+- [ ] F9: QA integrado CDP desktop/tablet/mobile e hardening depois das fases anteriores.
+- [ ] Definir Route→Delivery e retenção de localização/provas antes de criar semântica/tabelas que dependam dessas decisões.
+- [ ] Provider de email, primeiro operador/owner, MFA seguro, contas/documentação de fornecedores e ambiente de produção são bloqueios externos apenas para as capacidades correspondentes; continuar trabalho independente local.
+
+O inventário estático de IndexedDB não leu dados reais; não rodar Browser QA nem reimplementar sync/reconciliação 0034–0036 nesta etapa de planejamento. Ver [Registro 0037](REGISTROS/0037.md).
+
 ## Atualização — Registro 0036 (2026-10-04)
 
 - [x] Pull canônico reconciliado às projeções IndexedDB dos dois apps, com validação de tenant/ID/revisão, preservação de alterações pendentes e tombstones explícitos.
 - [x] ACK por operação integrado aos clientes; accepted/duplicate confirmam canonical ID/revisão; rejected/conflict preservam dados/estado e evitam retry infinito da mesma versão.
 - [x] Outbox/inbox/syncState têm ciclo de vida, status observável, retry transitório, single-flight/Web Locks e compactação conservadora documentada.
 - [x] Bootstrap de sessão existente, retomada CSRF, sync após gravação local/retorno de conectividade/manual; operação local permanece independente de rede.
-- [ ] Login visual e autenticação operacional de owner continuam dependentes de MFA/identidade operacional; manter fail-closed.
+- [ ] Implementar login visual/sessão nos dois clientes com estado fail-closed; ativação do primeiro owner permanece dependente de operador e MFA seguro.
 - [ ] Definir no contrato as relações canônicas ainda ausentes, em especial Route→Delivery, antes de materializar vínculos.
 - [ ] QA end-to-end via Chromium/CDP permanece para checkpoint posterior, conforme solicitação de não executar Browser QA nesta etapa.
 - [ ] Email real, domínio/TLS e serviços/credenciais de fornecedores externos continuam pendências externas independentes.
@@ -20,7 +37,7 @@
 - [x] Corrigir divergência de Earning: Restaurante calcula/escreve canonical Earning; Motoboy não publica Earning.
 - [x] Integrar os dois clientes aos endpoints de instalação/push/pull preservando IndexedDB e operação offline, outbox retry, ACK no `syncState`, aliases/revisões e cursor/cache em transações.
 - [x] Migration aditiva 0008 aplicada e testada; migrations 0001–0007 permaneceram intactas.
-- [ ] Login/sync ainda não tem fluxo visual integrado. Pull guarda snapshots/eventos canônicos em `inbox`/`syncState`; aplicação automática aos modelos visuais deve aguardar estratégia de merge que preserve edições locais pendentes.
+- [x] Pull guardava snapshots/eventos antes de haver reconciliação automática; estratégia de merge que preserva edições pendentes foi implementada no Registro 0036. Não reimplementar; cobrir regressões em QA final.
 - [ ] Definir no contrato semântica/campos de relações canônicas ainda ausentes (ex.: Route→Delivery), antes de materializar esses vínculos no servidor.
 - [ ] Email real, HTTPS/domínio de implantação e eventuais segredos/provedores externos continuam dependências externas; não bloqueiam os fluxos locais/offline nem o backend de sync loopback.
 - Ver [Registro 0035](REGISTROS/0035.md), DEC-0006 e commits Restaurante `78e10f2`, Motoboy `d88aeea`.
