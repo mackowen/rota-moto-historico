@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0048, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; nenhum bloqueio interno identificado antes da F9. **READY_FOR_F9: YES.** F9 não foi iniciada; dependências de produção/provedores permanecem isoladas e não impedem QA integrado local.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0049, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 iniciada pelo bloco de QA visual/renderizado (Registro 0049). O pré-requisito `READY_FOR_F9 = YES` foi confirmado no Registro 0048; o QA inicial agora tem achados internos que devem ser corrigidos antes de avançar a campanha integrada.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -217,14 +217,14 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F9 — QA integrado e hardening final
 
-- **Estado:** Pendente intencionalmente; infraestrutura CDP foi criada no Registro 0021 e usada antes, mas nenhum QA nesta revisão.
-- **Lacunas/tarefas:** roteiro de ponta a ponta por app e roles; desktop/tablet/mobile; sync multi-app; offline/reconnect/reload/conflitos; provider fake/real separado; acessibilidade; HTTP/console; backup/upgrade; evidências e correção de regressões.
+- **Estado:** Em andamento. Primeiro bloco de QA inicial visual/renderizado concluído no Registro 0049: `F9_INITIAL_QA = PASS_WITH_FINDINGS` (P0 0, P1 2, P2 2, P3 2, BLOCKED_EXTERNAL 8). F9 não está concluída.
+- **Lacunas/tarefas:** corrigir os achados P1/P2/P3 do `F9_QA_INICIAL.md` e repetir; depois roteiro autorizado de ponta a ponta por app, sync multi-app, offline/reconnect/reload/conflitos, backup/upgrade, roles e acessibilidade. Não contornar dependências externas.
 - **Componentes:** `~/projetos/browser-tests/run-qa-infra.sh`, app servidores, testes automatizados e checklist deste plano.
 - **Dependências:** F1–F8 em estado fechável; dados sintéticos isolados/limpos; Chromium/Termux vivo.
 - **Bloqueios externos reais:** Chromium pode sofrer limitações GPU/processo no Termux/Android; permissões físicas e integrações reais dependem de hardware/contas. Continuar testes automatizados e registrar limitações.
-- **Conclusão objetiva:** critérios de fluxos passam nos dois apps em desktop/tablet/mobile; sem erros JS/HTTP inesperados; sync/DB consistente; baseline/main preservadas; evidências anexadas ao histórico.
+- **Conclusão do bloco 0049:** matriz de telas/viewports executada; houve erros JS e fluxos P1, portanto esta primeira rodada não certifica critérios finais nem conclui F9. Evidências e inventário em `F9_QA_INICIAL.md`; aplicativos ficaram sem alteração.
 - **Testes:** `npm test` nos dois apps, `npm run test:postgres`, checks de sintaxe/diff, CDP dirigido a fluxos e acessibilidade.
-- **Browser QA:** sim; é o objetivo desta fase.
+- **Browser QA:** autorizado e iniciado; sem screenshots/CDP adicionais fora de F9. Repetir depois das correções. Sessão real, providers, hardware e storage seguem isolados.
 
 ## Ordem definitiva recomendada
 

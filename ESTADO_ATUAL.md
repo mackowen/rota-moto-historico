@@ -47,7 +47,16 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0048.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0049.
+
+## Atualização — Registro 0049 / QA visual inicial F9 (2026-10-04)
+
+- F9 começou com QA visual/renderizado e exploratório nos dois apps via Chromium 149/CDP, servidores loopback 8788/8789 e API local 8787. Matriz de 360×800, 393×873, 412×915, 768×1024, 1366×768 e 1920×1080; navegação, estados vazios, identidade anônima, modal Restaurante, modo offline/PWA e console/rede foram inspecionados.
+- Resultado `F9_INITIAL_QA = PASS_WITH_FINDINGS`: P0 0, P1 2, P2 2, P3 2, BLOCKED_EXTERNAL 8. P1: Motoboy tem exceção durante setup e a captura “Nova corrida” falha; Restaurante pode ficar `#app.inert` após escolher modo local antes da resposta assíncrona de sessão. P2: boot de identity-ui Motoboy falha ao acessar controles removidos e bottom navigation Motoboy sobrepõe conteúdo no desktop. P3: estado sync quebra a hierarquia do card de ganhos Motoboy; Restaurante mostra mensagem de sessão expirada na primeira sessão anônima.
+- Histórico visual: topbar/alinhamento, navegação horizontal mobile Restaurante, empty state do mapa, overflow horizontal de documento e modal/foco do Restaurante não apresentaram os defeitos históricos; bottom nav desktop do Motoboy foi reproduzida. Sem tabelas preenchidas/dados reais para validar conteúdo largo.
+- Sem credenciais/tenant/conta real, sessão/Driver/Delivery de teste, envio de recovery/invite, MFA, hardware de câmera/GPS ou storage provider; capacidades de integração iFood/99Food/Keeta continuam BLOCKED_EXTERNAL. Sem contorno. Sem alteração de apps, PostgreSQL, config de Termux/nginx, main, tags ou baselines; nenhum push.
+- Ambiente, passos, arquivos prováveis, evidências/screenshot, console/rede e classificação de cada achado: [F9_QA_INICIAL.md](F9_QA_INICIAL.md). Capturas/relatório brutos permanecem fora dos repos em `~/projetos/browser-tests/f9-initial-qa-2026-10-04/`.
+- HEADs permanecem Restaurante `22a06c248b3e9baa9c2ad047f9155d18921151f7` e Motoboy `3e0f42b1129930a8d69d5a979b5da14149089fa7`; branches `codex/setup-workflow`; main e baselines mantidas. Só o repositório de histórico será commitado nesta execução.
 
 ## Atualização — Registro 0048 / reconciliação pré-F9 (2026-10-04)
 

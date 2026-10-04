@@ -1,5 +1,16 @@
 # Pendências
 
+## F9 QA inicial — Registro 0049 (2026-10-04)
+
+- [ ] **P1 Restaurante:** proteger escolha de modo local contra `restore()` atrasado; 401 de sessão anônima deixa `#app.inert=true`/`data-gated=true` depois da escolha. `identity-ui.js`; reproduzido com clique antes de concluir a sessão.
+- [ ] **P1 Motoboy:** corrigir erro de inicialização na linha 470 (`$('.historyPeriod button').forEach` usa seletor singular); setup interrompido deixa bindings/declarations posteriores ausentes e “Nova corrida” cai em TDZ de `lastCapturedFile`/`cameraStream`. `app.js`.
+- [ ] **P2 Motoboy:** `showSession(null)` acessa `[data-invite]`/`[data-members]` que foram removidos com `[data-admin]`, causando unhandled rejection e status “Verificando sessão…” persistente. `identity-ui.js`.
+- [ ] **P2 Motoboy:** bottom navigation fixa sobrepõe título/conteúdo no desktop 1366×768. `styles.css`.
+- [ ] **P3 Motoboy:** “Aguardando sincronização do Restaurante” quebra excessivamente o card “Ganhos confirmados”; apresentar estado longo sem disfarçar valor. `app.js`/`index.html`/`styles.css`.
+- [ ] **P3 Restaurante:** primeira sessão sem cookie é apresentada também como “Sua sessão expirou. Entre novamente”; separar ausência de sessão de expiração. `identity-ui.js`.
+- Fluxos externos/sem dados ainda não testados: login/logout administrativo com conta autorizada; email de convite/recovery; MFA seguro; Driver/Delivery canônicos; câmera/GPS em hardware; blob storage; iFood, 99Food e Keeta. Não criar credenciais/dados para destravar.
+- `F9_INITIAL_QA = PASS_WITH_FINDINGS` (P0 0/P1 2/P2 2/P3 2/BLOCKED_EXTERNAL 8). F9 permanece aberta. Navegação mobile Restaurante, mapa empty state, topbar/alinhamento geral e overflow horizontal não reproduziram os relatos históricos; barra inferior desktop Motoboy reproduz sobreposição. Ver [F9_QA_INICIAL.md](F9_QA_INICIAL.md) e [Registro 0049](REGISTROS/0049.md).
+
 ## Reconciliação pré-F9 — Registro 0048 (2026-10-04)
 
 - F1–F8 reconciliadas contra contratos, código atual, testes e PostgreSQL: F1 B, F2 A, F3 B, F4 B, F5 B, F6 B, F7 B, F8 B. **Não há pendência interna estrutural bloqueando a F9. READY_FOR_F9 = YES.**
