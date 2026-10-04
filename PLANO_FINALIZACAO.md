@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0047, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F4 com infraestrutura local concluída e providers externos bloqueados (Registro 0046); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy implementada (classificação B, Registro 0044); F7 UI/UX consolidada estaticamente (classificação B, Registro 0045); F8 preparação operacional local concluída com implantação externa pendente (classificação B, Registro 0047). F9 permanece não iniciada.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0048, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; nenhum bloqueio interno identificado antes da F9. **READY_FOR_F9: YES.** F9 não foi iniciada; dependências de produção/provedores permanecem isoladas e não impedem QA integrado local.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -13,9 +13,22 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 - **Legado:** estrutura mantida para compatibilidade/migração, sem autoridade canônica.
 - **Externo:** requer fornecedor, domínio/HTTPS, credencial, decisão operacional ou ambiente fora dos repositórios.
 
-A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
+A inspeção histórica do Registro 0037 foi estática. Nesta reconciliação, `npm test` passou nos dois apps, `npm run test:postgres` passou contra o PostgreSQL oficial e `migrate.js status` confirmou 0001–0013 aplicadas. Nenhuma senha foi lida ou exibida; não houve Browser QA.
 
-## Estado atual verificável após o Registro 0047
+| Fase | Classificação pré-F9 | Base | Pendência interna impeditiva de F9 |
+|---|---|---|---|
+| F1 — modelo/Local-First | B | Registro 0039 | Nenhuma identificada; validar IndexedDB real/import no roteiro F9. |
+| F2 — Backend/API | A | Registro 0040 | Nenhuma identificada para API interna v1. |
+| F3 — identidade/RBAC | B | Registro 0041 | Nenhuma interna identificada; owner operacional, MFA seguro e email são externos/fail-closed. |
+| F4 — integrações | B | Registro 0046 | Nenhuma interna identificada; protocolos/contas/homologações dos três providers externos. |
+| F5 — Restaurante | B | Registro 0042 | Nenhuma identificada; QA integrado fica em F9. |
+| F6 — Motoboy | B | Registro 0044 | Nenhuma identificada; blob/hardware real são capacidades externas. |
+| F7 — UI/UX | B | Registro 0045 | Nenhuma identificada; renderização/dispositivo/leitor de tela ficam para F9. |
+| F8 — operação | B | Registro 0047 | Nenhuma local impeditiva; produção, restore isolado e política operacional dependem de infraestrutura/decisão externa. |
+
+**READY_FOR_F9: YES.** A decisão significa que não foi encontrada pendência interna estrutural anterior ao QA integrado; não declara integração externa funcional nem ambiente de produção.
+
+## Estado atual verificável após a reconciliação do Registro 0048
 
 - Restaurante: `codex/setup-workflow` @ `22a06c248b3e9baa9c2ad047f9155d18921151f7`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
 - Motoboy: `codex/setup-workflow` @ `3e0f42b1129930a8d69d5a979b5da14149089fa7`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
@@ -24,55 +37,55 @@ A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Regist
 - PostgreSQL oficial: somente leitura nesta execução; readiness passou pela role runtime e `migrate.js status` confirmou 0001–0013 aplicadas via migrator. Nenhum schema, dado, role, grant ou configuração foi alterado.
 - O Termux/PostgreSQL/nginx existente continua classificado como desenvolvimento/homologação local, não produção. F8 não aplicou configuração de servidor ou proxy.
 
-As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da F1 foram atualizadas pelos Registros 0038–0039 e pela seção F1 vigente.
-
-| Área | Estado em 2026-10-04 | Resumo |
+| Área | Estado reconciliado em 2026-10-04 | Evidência/limite |
 |---|---|---|
-| Restaurante | Parcial, branch limpa `codex/setup-workflow`, HEAD `f837268222b351145116690c6cee7649b9a09c78` | F1 implementada; fluxo de identidade, administração e produção seguem em fases posteriores. |
-| Motoboy | Parcial, branch limpa `codex/setup-workflow`, HEAD `f1ac938ca2fde6150e5f24b94b8125d466e19e24` | F1 implementada; identidade visual/operacional e fluxos restantes seguem em fases posteriores. |
-| PostgreSQL oficial | Parcial, PostgreSQL 18.6 em `127.0.0.1:5432`, banco `rotamoto` | Migrations 0001–0010 aplicadas; modelo de domínio continua em `domain_records` JSONB com novas garantias para Route/Earning. |
-| API/backend | Parcial, loopback | Identidade e sync HTTP existem; autorização/session/CSRF e role split foram testados. Falta administração operacional completa, frontend de identidade, processamento durável de integrações e operação de produção. |
-| Contrato | F1 concluída | `CONTRACT.md` e `contract.js` byte a byte idênticos nos apps; schemas v1 fecham as entidades do escopo F1 e regras Route/Earning/mídia. |
-| QA final | Pendente | CDP existe, mas QA end-to-end integrado deve ocorrer após fechamento dos fluxos e depende de runtime Chromium/Termux estável. |
+| Restaurante | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `22a06c248b3e9baa9c2ad047f9155d18921151f7` | Main/baseline preservadas; pendências externas de provider/produção não impedem iniciar F9. |
+| Motoboy | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `3e0f42b1129930a8d69d5a979b5da14149089fa7` | Main/baseline preservadas; prova local offline e leitura de Driver são testadas; hardware real fica para F9. |
+| PostgreSQL oficial | Estruturalmente compatível no estado instalado | Migrations 0001–0013 status aplicadas; suite de migration/RLS/identity/domain/sync passou sem DDL nesta reconciliação. Não é instância de produção. |
+| API/backend | Coerente para API v1 definida | Sessão/CSRF/RBAC/tenant/sync/Driver e fail-closed de providers cobertos por testes; email/MFA/provider/produção externos permanecem indisponíveis. |
+| Contrato e Local-First | Sincronizados e coerentes | `CONTRACT.md`, `contract.js` e `backup-format.js` byte a byte idênticos; IndexedDB 6/7, outbox/inbox e merge cobertos por testes. |
+| QA final / F9 | Pronta para iniciar; ainda não iniciada | Launcher CDP está presente; esta reconciliação não abriu browser. QA real, IndexedDB browser e viewports são o próximo passo. |
 
 ## Matriz de dados: IndexedDB ↔ PostgreSQL ↔ contrato/API
 
+Esta matriz foi reconciliada no Registro 0048. Descrições anteriores do snapshot 0037/0038 abaixo foram substituídas pelos estados atuais F1–F8; elas não devem ser usadas como pendências vigentes.
+
 | Entidade/conceito | Restaurante IndexedDB | Motoboy IndexedDB | PostgreSQL/API e contrato | Estado e trabalho pendente |
 |---|---|---|---|---|
-| Company/tenant | `companies`, perfis/configuração e identificadores legados | tenant/configuração local em `meta`/sync state | `companies`, memberships, sessão; tenant derivado no servidor | Parcial/legado. Mapear onboarding dos IDs locais para tenant canônico sem associar tenant por payload. |
-| User/Driver | `users`, `profiles`, cadastro local de bikes/driver | perfil/configuração local | `users`, `credentials`, `memberships`, roles/permissions; Driver em `domain_records` conforme contrato | Parcial. Separar identidade, membership, cadastro administrativo de Driver e preferências/execução locais; fluxo de membros e gestão não tem UI/API completa. |
-| Order | `orders` | não há store de pedidos dedicado; dados chegam em cache/projeções da entrega | `domain_records(Order)`; escrita autoritativa Restaurante | Parcial. Especificar projeção mínima e ligação segura da Order canônica na experiência Motoboy; preservar dados comerciais. |
-| Delivery | `deliveries` e projeções relacionadas | `deliveries` mais `races` como projeção operacional | `domain_records(Delivery)` com revisão, ownership por campo e transições | Parcial. Diferenças de modelos e campos locais exigem mapeamento/versionamento; não há LWW. `races` é derivado/local. |
-| Route | `routes` e planejamento | sem store canônico próprio; rota recebida é cacheada | `domain_records(Route)`, escrita/plano Restaurante | A auditoria inicial dizia “não definida”; fechada no Registro 0039 por `Route.deliveryIds`, sem campo inverso. |
-| DeliveryEvent | `deliveryEvents`/`events` | `deliveryEvents` | `domain_records`, append-only, imutável e idempotente por `eventId` | Completo no contrato/sync; verificar mapeamentos legados e visualização/consulta operacional na fase de fluxo/QA. |
-| LocationPoint | `locations` | `locations` | `domain_records`, escrita Motoboy e leitura Restaurante | Parcial operacional. Política de retenção/privacidade, volume e consulta agregada ainda precisam definição antes de produção. |
-| DeliveryProof | `proofs` | `proofs` | `domain_records`, escrita Motoboy e leitura Restaurante | Parcial. Contrato de metadados existe; armazenamento/limites de binários, política de retenção e exportação operacional precisam fechar antes de produção. |
-| Earning | `earnings` calculado pelo Restaurante | `earnings` para consulta/projeção | `domain_records(Earning)`, autoritativo Restaurante; Motoboy não escreve | Completo quanto à autoridade; reconciliação de dados históricos/legados e regra financeira auditável continuam trabalho local. |
-| IDs, versões, tombstones | `meta`, `outbox`, `inbox`, `tombstones`, `syncState` | stores equivalentes | `local_id_maps`, `sync_inbox/outbox`, `sync_installations`, revisões e tombstones | Parcial. Migração de IDs legados e retenção entre reinstalações ainda precisam política/testes de recuperação. Protocolo/ACK/retry/pull já concluídos em 0035–0036. |
-| Configuração | settings em `meta`/estado da app | settings em `meta` | integração/configuração server-side parcial; sem secrets no cliente | Parcial. Separar preferências locais de configuração tenant e segredos de provider. |
-| Backup/import | export/import local em ambos, com formatos próprios | JSON/local backup e compatibilidade localStorage antiga | sem fluxo completo tenant-scoped de backup/restore canônico | Parcial/legado. Planejar formato versionado, validação, preview, merge, auditoria e recuperação sem sobregravar sync pendente. |
+| Company/tenant | R `companies`; M mantém apenas hint/cache | PG `companies` e memberships; tenant sempre da sessão | Estruturado; onboarding/primeiro owner exige operador controlado, não há signup público. |
+| User/Membership/Role/Permission | Stores locais são perfil/UX, não identidade autoritativa | Sessão vem do backend; nenhum segredo é persistido em IDB/localStorage | Lifecycle, grants por subset, último owner, autoelevação, associação Driver e auditoria protegidos por API/RLS; email/MFA operacional externo/fail-closed. |
+| Driver | R administra `bikes`/projeção Driver | M usa perfil local como executor, sem autoridade cadastral | Driver em `domain_records`; `Membership.driver_id` tenant-scoped e único, resolvido server-side; atribuição e acesso Motoboy validam Driver da sessão. |
+| Order | R `orders`, autoridade de escrita | Sem store Order dedicado; subset operacional chega em cache/projeção da Delivery | JSONB `domain_records`, revisão/alias/sync; Motoboy apenas lê os campos permitidos. |
+| Delivery | R `deliveries`; campos administrativos e projeções | M `deliveries` + `races` como projeção | Ownership por campo/origem, revisão, transições e Driver atribuída validados; reatribuição não apaga fatos e rejeita push atrasado do antigo Driver. |
+| Route | R `routes` | M consome cache/snapshot | JSONB `Route.deliveryIds` é fonte única: rota contém 0..N deliveries; Delivery pertence a no máximo uma rota ativa; sem campo inverso. |
+| DeliveryEvent | R `deliveryEvents`/`events` | M `deliveryEvents` e outbox | Fato append-only, eventId idempotente, ACK por operação e projeções locais; histórico preservado em reentrega/retorno. |
+| LocationPoint/DeliveryProof | R lê fatos permitidos | M persiste localmente e publica pelo sync quando autorizado | Tenant/Driver/Delivery validados no servidor. Provas usam metadata+storageRef canônico; blobs não são enviados sem provider. GPS/provas têm retenção legal pendente. |
+| Earning | R calcula em `amountMinor`/currency/components/rule | M consome snapshot canônico | Restaurante é autoridade; Motoboy não publica/calc. Valor monetário não usa float binário como autoridade. |
+| Sync IDs/revisions/tombstones | Inbox/outbox/syncState/aliases e backup v1 | Stores equivalentes, sem apagar pendências/conflitos | PostgreSQL aliases/inbox/outbox/installations, cursor, baseVersion, canonicalVersion; ACK accepted/duplicate/rejected/conflict; retry idempotente sem LWW. |
+| Backup/import | Export Local-First versionado | Mesmo formato compartilhado | Merge explícito não sobrescrevente, validação/limites e sanitização de segredos; plaintext é sensível, export cifrado depende de chave/UX. |
+| Integrações | UI mostra estado sanitizado, nenhum segredo/client real | Sem credenciais/provider store | iFood/99Food/Keeta ficam `BLOCKED_EXTERNAL`, sem status conectado falso, sem normalização/provider ativo. |
 
-### Estruturas IndexedDB observadas estaticamente
+### Estruturas IndexedDB reconciliadas (inspeção estática + testes de contrato)
 
-- **Restaurante:** DB `rota-moto-restaurante-local-v30`, `DB_VERSION=4`; stores `meta`, `companies`, `orders`, `deliveries`, `bikes`, `routes`, `events`, `deliveryEvents`, `locations`, `proofs`, `earnings`, `outbox`, `inbox`, `tombstones`, `syncState`, `logs`, `profiles`, `users`. Chaves primárias existem; poucos índices de consulta são criados. Migração é concentrada em normalização/upgrade, sem catálogo explícito de migrações de domínio.
-- **Motoboy:** DB `RotaMotoDB`, `DB_VERSION=5`; stores `meta`, `races`, `deliveries`, `deliveryEvents`, `locations`, `proofs`, `earnings`, `outbox`, `inbox`, `tombstones`, `syncState`. Índices observados em `races` para status/createdAt; dados/configuração adicional em `meta`. Compatibilidade legado inclui `rotaMoto.backup`/`motoboy.db.v2` em localStorage.
-- **Lacuna comum:** nomes, campos e índices não formam ainda uma matriz versionada única com o contrato. Planejar inventário de campos, migrações idempotentes e fixtures de dados legados; manter os bancos separados e compatibilidade offline. A auditoria estática não prova conteúdo real dos perfis locais.
+- **Restaurante:** 18 stores existentes, registry incremental, DB_VERSION 6; índices não únicos aditivos e upgrade em `versionchange` abortável sem regravar stores. Backup Local-First v1 cobre stores e merge transacional.
+- **Motoboy:** 11 stores existentes, registry incremental, DB_VERSION 7; atualização de shell não limpa IndexedDB. Backup Local-First v1 mantém compatibilidade com formatos legados reconhecidos.
+- **Limite:** os testes usam harness de IndexedDB e contratos; o comportamento real em Chromium, atualização de abas abertas e importação em aparelhos permanecem para F9, não são pendência interna comprovada nesta reconciliação.
 
 ### PostgreSQL e evolução de schema
 
-O catálogo consultado em modo read-only no Registro 0037 mostrava schema `public`, 20 tabelas, 50 índices e 258 constraints. Após a F1, migrations 0001–0010 estão aplicadas; roles e RLS permanecem conforme Registros 0030/0033. O runner preserva transação, advisory lock, checksums, detecção de migration ausente e rollback.
+O status read-only executado nesta reconciliação confirmou migrations 0001–0013 aplicadas. `npm run test:postgres` passou com `rotamoto_app`/`rotamoto_migrator` explícitos e pgpass. O role split, RLS/FORCE, least privilege e default-deny são cobertos pelos testes PostgreSQL; nenhum DDL foi executado nesta reconciliação.
 
-`companies`, identidade/RBAC, integrações, aliases e inbox/outbox têm tabelas relacionais. Os tipos de domínio compartilhado, exceto Company, residem em `domain_records` com JSONB, UUID canônico, tenant, revisão, timestamps e tombstone; há integridade genérica/tenant e trigger de imutabilidade para eventos, mas não colunas/FKs tipadas por entidade nem validação SQL de todos os payloads/estados. Isso é uma decisão deliberada do DEC-0005 até que o contrato de campos amadureça. Próxima evolução deve começar por matriz de payloads e invariantes, criando migrations aditivas apenas quando contrato e consultas justificarem; não alterar migrations aplicadas nem criar tabelas artificiais.
+Identidade, roles, integrações, aliases e filas de sync têm tabelas relacionais; domínio operacional usa `domain_records` JSONB com UUID canônico, tenant, revisão, timestamps e tombstone e constraints seletivas para invariantes comprovados. A escolha acompanha DEC-0005; não há evidência nesta reconciliação que justifique nova migration. Operações Motoboy são filtradas por membership.driver_id e atribuição da Delivery.
 
 ## Integrações de delivery
 
 | Provider | Implementado no código | Simulação/parcial | Dependência/risco e próximo trabalho |
 |---|---|---|---|
-| iFood | Adaptador servidor com OAuth exchange/refresh, polling, ACK e operações de pedido/status; normalização e helper PKCE no cliente | “Laboratório” oferece simulação. Estado/polling/cache é em memória e temporizador local; não equivale a worker durável por tenant. | **Parcial + externo.** Sem prova de credenciais/merchant/sandbox ou execução contra provider nesta inspeção. Validar APIs e termos em documentação oficial, isolar adapter, persistir conexão/cursores, idempotência, retry/backoff/rate limit, health/auditoria. |
-| 99Food | Adapter HTTP configurável, bearer auth, rotas de status/pedidos/ações e webhook com HMAC/timing-safe compare | Lab simula eventos; deduplicação é mapa limitado em memória, sem fila durável/normalização persistida demonstrada; polling não está implementado. | **Parcial + externo.** Assinatura/endpoints precisam confirmação oficial. Implementar fila durável e idempotência depois da especificação oficial; credenciais e conta de parceiro são externas. |
-| Keeta | Adapter com OAuth/token refresh em memória, polling/ACK, ações e webhook | Lab simula. Webhook usa cálculo próprio de assinatura e dedup temporária; host/rotas por default não foram validados contra material oficial. | **Parcial + externo.** Verificar host, protocolo, assinatura e capacidades em documentação oficial antes de integração real; depois adapter isolado, fila, cursor, retry e status. |
+| iFood | Nenhuma conexão/protocolo externo validado ativo; fronteira local bloqueada | Laboratório sintético restrito à memória, sem criar Order/alterar IndexedDB | **B — BLOCKED_EXTERNAL** até documentação oficial, conta/credenciais e homologação; status conectado sempre falso. |
+| 99Food | Nenhum client de produção ativo; endpoints legados falham fechado | Fixtures/testes não representam conexão real | **B — BLOCKED_EXTERNAL** pelas mesmas dependências oficiais/conta/homologação; secrets externos ausentes. |
+| Keeta | Nenhum client de produção ativo; endpoints legados falham fechado | Simulação não é indicada como provider conectado | **B — BLOCKED_EXTERNAL** por protocolo/documentação oficial, conta/credenciais e homologação. |
 
-Para todos: criar fronteira de provider/adapters e configuração tenant-scoped sem enviar secrets ao browser; segredo via vault/KMS quando disponível; normalizar evento/pedido para casos de uso; persistir webhook inbox e dedup; processar com worker durável; aplicar timeout, retry com backoff/jitter, rate limits, circuit/health e auditoria sem payload/token. Não presumir endpoints, assinatura, polling ou autorização externa ainda não documentados. “Código existe” não significa integração homologada ou credencial ativa.
+Para todos, a fronteira interna e estado fail-closed estão implementados. Não existe endpoint/provider conectado; avançar exige material oficial e credenciais/homologação, além de secret manager para produção. Não presumir endpoints, assinatura, polling ou autorização externa. “Código de laboratório” não significa integração homologada ou credencial ativa.
 
 ## Identidade, telas e fluxos
 
@@ -80,20 +93,19 @@ Para todos: criar fronteira de provider/adapters e configuração tenant-scoped 
 
 O backend de identidade oferece login/logout/sessão atual, tenant selection, recuperação/consumo, aceitação de convite/verificação e provisionamento administrativo protegido por adapter fail-closed. Sessões opacas, cookie seguro, CSRF, expiração/revogação, RBAC e RLS existem. Sync restaura sessão e opera quando já há sessão. Não há signup público. Operador real/primeiro owner e MFA operacional seguem fail-closed.
 
-### Lacunas exatas de produto
+### Estado reconciliado após F3/F5/F6/F7 (Registros 0041–0045)
 
-- **Restaurante:** falta tela/rota de login ligada à API, logout visível, sessão expirada/renovação, seleção de empresa, recuperação de conta, confirmação de convite/verificação, loading/erro/offline de identidade e bootstrap pós-login. Administração atual de `users`/`profiles` é local e permissões são UX, não gestão server-side de membership/role. Settings de integração não provisionam conexão externa segura.
-- **Motoboy:** não há telas de login/logout/recuperação/convite/verificação/seleção de empresa; perfil/cadastro/configuração do motorista é local. Falta mostrar conta bloqueada/sessão expirada, permissões, sincronização pós-login e distinção de perfil administrativo versus dados de execução.
-- **Ambos:** UI ainda não expõe claramente estado de sync (pendentes, rejeitados, conflitos, último êxito, offline) apesar do estado interno; não há fluxo de resolução humana para conflito canônico. Feedback/estados existentes são mistos com toasts/estados locais e precisam ser mapeados por fluxo.
-- **MFA:** schema exige MFA para owner, mas challenge/enrollment/recovery operacional não está implementado. Não contornar o fail-closed. Login visual pode avançar com fluxo de sessão que respeite erro “MFA indisponível”; ativação real depende de KMS/segredo e decisão operacional.
+- **Restaurante e Motoboy:** login/logout, sessão, recuperação/convite, estados de loading/error, bootstrap e administração aplicável foram implementados nos limites atuais. Senhas/tokens não são persistidos no storage local; APIs continuam autoridade.
+- **Pendências externas:** primeiro owner requer operador; email e MFA real exigem providers/armazenamento seguro. Os adapters permanecem fail-closed. Sync exibe estado/rejeições, mas resolução humana completa de conflitos complexos continua melhoria do produto, sem bloquear teste integrado dos fluxos existentes.
+- O inventário estático não substitui verificação renderizada nem prova de hardware/permissões; ambos são parte da F9, não uma constatação de defeito prévio.
 
 ## Inventário estático de UX/arquitetura
 
 - Restaurante organiza painel, pedidos, motos, rotas, relatórios, eventos, configurações, laboratório de integração e administração em `app.js`; renderização e parte das regras ainda são monolíticas. Há estados vazios/toasts e diálogos; CSS responsivo existente deve ser preservado e auditado em navegador só na fase final.
-- Motoboy organiza início/corridas, rotas, ganhos e configurações em `app.js`; projeção `races` não é entidade canônica. GPS/localização, prova e eventos são operações locais. Manifest/service worker mantêm recursos offline; consistência de versão do branding/cache precisa ser revisada. Sem inspeção visual nesta execução.
+- Motoboy organiza início/corridas, rotas, ganhos, conta e configurações em `app.js`; `races` continua projeção local. Service worker atual v40.5 cacheia somente shell same-origin allowlisted e exclui API; teste de contrato passou no Registro 0047 e nesta reconciliação.
 - A separação desejada UI → aplicação/use cases → domínio → repositories/adapters → IndexedDB/HTTP → backend/PostgreSQL/providers existe parcialmente: backend já separa handler/serviço e clientes têm transporte/reconciliação separados, mas a UI e regras antigas continuam concentradas em arquivos grandes.
-- Backup local existe, mas formatos/migrações, mídia, retenção e troca entre versão antiga/nova precisam matriz de compatibilidade. Service worker cacheia app; não há worker de sync de fundo, e o desenho deve continuar limitado por sessão/CSRF e APIs de browser.
-- Acessibilidade e responsividade são incompletas até medição automatizada/manual final: teclado/foco, labels/erros, dialogs, contrastes, tamanhos de toque, viewport estreito e tabelas/mapas.
+- Backup local versionado com merge não sobrescrevente, sanitização de segredos e aviso plaintext; restore foi testado por harness, mas restore real/recovery drill permanece operação F8/F9.
+- F7 implementou foco/dialogs/labels/safe areas por inspeção estática e testes. Contraste renderizado, teclado virtual em aparelhos e leitores de tela não foram medidos e ficam para F9.
 
 ## Macrofases de finalização
 
@@ -122,7 +134,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F2 — Backend/API e operação de domínio
 
-- **Estado:** **Concluída para as operações internas v1 definidas** no Registro 0040. A implementação usa HTTP → application/use cases → domain services → repositories → PostgreSQL. F1 não foi reaberta.
+- **Estado:** **A — CONCLUÍDA** para as operações internas v1 definidas no Registro 0040. A implementação usa HTTP → application/use cases → domain services → repositories → PostgreSQL. F1 não foi reaberta.
 - **Concluído:** inventário versionado em `rota-moto-restaurante/docs/API-v1.md`; identidade/sessão existente; health liveness/readiness com conexão curta e runtime `rotamoto_app`; leitura tenant-scoped de Order, Delivery, Route, Driver, DeliveryEvent, LocationPoint, DeliveryProof e Earning; leituras administrativas de Company, Membership, Role/Permission e estado/metadados não secretos de Integration/ExternalAccount. Filtros são allowlisted/parametrizados, paginação keyset, UUIDs e cursor validados, sessão duplicada rejeitada. Escritas operacionais continuam nos use cases de sync/outbox/inbox com ACK por operação, sem CRUD HTTP paralelo.
 - **Segurança:** tenant vem de sessão/identity context e RLS; RBAC por permission key; `companyId` em query rejeitado; memberships e integrações são protegidos por permissão; external account não expõe `secret_ref`; sem novo endpoint público. Erros padronizam code/message/requestId; logs estruturados guardam método/path/status/duração/error code sem payload; readiness sanitiza falhas; rate limit por IP/endpoint. `ALLOWED_ORIGIN` governa preflight/POST e credenciais/CSRF são permitidos só para a origem configurada. `rotamoto_app` segue sem DDL e ganhou somente SELECT em duas tabelas tenant-scoped.
 - **Migration:** `0011_runtime_integration_read`, up/down versionados e aplicada pelo `rotamoto_migrator`; sem alteração de 0001–0010. Verificadas leituras, ausência de escrita e RLS/FORCE já vigente.
@@ -132,7 +144,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F3 — Identidade, login e RBAC nos dois clientes
 
-- **Estado:** Implementação local extensa; **PARCIAL** apenas para capacidades externas/operacionais identificadas abaixo. APIs administrativas de lifecycle e clientes de conta existem nos dois apps.
+- **Estado:** **B — implementação local concluída com dependências externas explicitamente isoladas**. APIs administrativas de lifecycle e clientes de conta existem nos dois apps; não há bypass para email/MFA/primeiro operador.
 - **Concluído no Registro 0041:** lifecycle User/Membership/Role/Permission com grants limitados, convite autorizado, bloqueio de self-escalation e proteção transacional do último owner válido; auditoria; Migration 0012; login/logout/restauração/expiração/recuperação/convite/troca de tenant; gate de áreas autenticadas e modo offline local claramente separado; UI administrativa do Restaurante; fluxo focado de login/conta Motoboy; MFA challenge fail-closed e nenhuma credencial/session/CSRF persistida no storage local.
 - **API:** `POST /api/admin/roles`, `PATCH /api/admin/roles/:roleId`, `PATCH /api/admin/memberships/:membershipId`, `POST /api/identity/invitations`, além das rotas identity/session existentes. Toda mutação verifica sessão, CSRF, tenant derivado server-side, permission subset, MFA quando exigido e auditoria. Não há signup público.
 - **Lacunas locais fechadas:** mascaramento de endpoints POST por rota GET, convite que ignorava marker MFA, falta de controle da membership suspend/re-role, falha em impedir rebaixamento do último owner, ausência de integração de sessão nos clientes, caminhos duplicados/quebrados de assets no Motoboy e campo de formulário oculto ainda visível pelo CSS.
@@ -156,7 +168,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F5 — Fluxos completos do Restaurante
 
-- **Estado:** **B — implementação concluída / Browser QA integrado pendente em F9** (Registro 0042). F1/F2/F3 continuam fechadas; nenhum outro macrobloco foi iniciado.
+- **Estado:** **B — implementação concluída / Browser QA integrado pendente em F9** (Registro 0042). F1/F2/F3 permanecem fechadas.
 - **Concluído:** ciclo local de Order/Delivery; validação de criação/edição; projeções transacionais de Order+Delivery+Earning; atribuição com `driverId`/`assignedAt` e estados permitidos; cancelamento administrativo sem exclusão física; pedido de reentrega auditado para transições `DELIVERED|FAILED|RETURNED → REDELIVERY → ASSIGNED`; o backend também projeta `DELIVERY_RETURNED` para `RETURNED`; fatos/provas recebidos são visíveis no detalhe; edição explícita de Route por `deliveryIds`, com ordenação, exclusividade visual e preservação de paradas históricas; Driver editável como cadastro sem edição manual de GPS/presença; relatório de repasse usa `amountMinor`; KPIs de conclusão usam horário de conclusão; export/import existente exibe que JSON é plaintext e mantém merge sem sobrescrita; pedido/Driver/Delivery/Route são enviados como projeções canônicas restritas; falha de geocoding não bloqueia construir pacote sync.
 - **Correções de causa raiz:** sincronização de uma edição de Order não rebaixa Delivery em execução a `ASSIGNED`; Delivery sem ID recebe ID estável antes de salvar; edição de perfil não permite status canônico de execução; pedido não é removido fisicamente ao cancelar; serviço de sync aceita/audita reentrega somente depois de estado terminal permitido.
 - **Componentes:** Restaurante `app.js`, `restaurant-operations.js`, `backend/domain/sync-service.js`, `index.html`, `styles.css`; stores orders/deliveries/bikes/routes/deliveryEvents/proofs/earnings e transporte/reconciler existente.

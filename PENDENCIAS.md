@@ -1,5 +1,13 @@
 # Pendências
 
+## Reconciliação pré-F9 — Registro 0048 (2026-10-04)
+
+- F1–F8 reconciliadas contra contratos, código atual, testes e PostgreSQL: F1 B, F2 A, F3 B, F4 B, F5 B, F6 B, F7 B, F8 B. **Não há pendência interna estrutural bloqueando a F9. READY_FOR_F9 = YES.**
+- Itens marcados como abertos em seções históricas abaixo representam o estado na data daqueles registros. Em especial, o vínculo User/Membership↔Driver do 0043 foi resolvido pelo 0044; login/RBAC listado antes de 0041, rotas/provas/backup anteriores a F1 e adapters externos não verificados anteriores a 0046 não são backlog interno atual.
+- Antes/durante F9: Browser QA real nos fluxos integrados e IndexedDB; documentar limitações de Chromium/Termux e evidências. Isso é validação planejada, não defeito de implementação.
+- Bloqueios externos isolados: protocolos, contas e homologação iFood/99Food/Keeta; primeiro owner/operator auditável; provider email; MFA com armazenamento seguro; blob storage; domínio/TLS/host/PostgreSQL de produção; decisão de retenção/RPO/RTO e restore em alvo isolado. Nenhum foi simulado ou declarado disponível.
+- Validação desta reconciliação: `npm test` nos dois apps; `npm run test:postgres` Restaurante; `migrate.js status` (0001–0013 aplicadas); `node --check` JS nos dois apps; `git diff --check`; igualdade byte a byte de `CONTRACT.md`, `contract.js` e `backup-format.js`. Nenhuma migration foi executada nem dado/role/configuração foi alterado. Ver [Registro 0048](REGISTROS/0048.md).
+
 ## Atualização — Registro 0047 / F8 operação (2026-10-04)
 
 - [x] Configuração development/test/production com defaults locais somente fora de produção; startup production fail-closed para DB runtime/TLS/CA/secret provider, HTTPS origins, Host e proxy confiável.

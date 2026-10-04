@@ -47,7 +47,17 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0047.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0048.
+
+## Atualização — Registro 0048 / reconciliação pré-F9 (2026-10-04)
+
+- Restaurante: `codex/setup-workflow` @ `22a06c248b3e9baa9c2ad047f9155d18921151f7`; árvore limpa após auditoria. `main` `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline `v5.50-ui-mobile-fix5^{}` `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`.
+- Motoboy: `codex/setup-workflow` @ `3e0f42b1129930a8d69d5a979b5da14149089fa7`; árvore limpa após auditoria. `main` `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baseline `v39.6-ui-mobile-fix2^{}` `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- Contratos compartilhados `CONTRACT.md`, `contract.js` e `backup-format.js` são byte a byte idênticos. PostgreSQL oficial consultado sem DDL: migration status 0001–0013 aplicadas; suíte PostgreSQL passou com runtime/migrator por URLs sem senha e pgpass.
+- `npm test` passou nos dois aplicativos; `node --check` passou para os arquivos JavaScript dos dois apps; `git diff --check` passou. iFood/99Food/Keeta permanecem fail-closed; nenhuma conectividade real inferida.
+- Foram corrigidas descrições contraditórias antigas no plano/matriz: login/admin ainda listados como ausentes, Route→Delivery descrito como aberto, versões IndexedDB/migrations e backups apontados como anteriores, e providers antigos descritos como adapters ativos. Nenhum defeito de código concreto foi reproduzido; nenhuma alteração de app ou banco foi necessária.
+- Classificação pré-F9: F1 B; F2 A; F3 B; F4 B; F5 B; F6 B; F7 B; F8 B. Pendências externas não impedem QA integrado local.
+- **READY_FOR_F9 = YES.** Não existe pendência interna estrutural identificada que deva ser corrigida antes do Browser QA. F9 não foi iniciada nesta execução; sem browser/CDP/screenshots, sem push, sem alteração de main/tag/baseline ou configuração administrativa.
 
 ## Atualização — Registro 0044 / vínculo canônico User↔Driver (2026-10-04)
 
