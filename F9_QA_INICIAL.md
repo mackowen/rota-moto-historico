@@ -118,3 +118,19 @@ Contadas como oito bloqueios agrupados por capacidade: (1) fluxo real de login/a
 6. Repetir os fluxos corrigidos e depois prosseguir a F9 com conta de QA autorizada, quando disponível; não usar identidade ou dados reais.
 
 **Sem correções de produto nesta execução.** Erros iniciais no harness CDP (variáveis fora do contexto da página e serialização de promise IndexedDB) foram corrigidos apenas no script temporário fora dos repositórios; as execuções finais foram feitas após a correção. Nenhum código/baseline/tag/main/PostgreSQL/configuração de servidor foi alterado.
+
+
+## Atualização de correção dirigida — Registro 0050
+
+Os achados originais acima permanecem preservados como evidência histórica. Os quatro P1/P2 foram corrigidos; nenhum se reproduziu na repetição CDP.
+
+| Achado do 0049 | Estado após correção | Repetição renderizada | Evidência externa |
+|---|---|---|---|
+| P1 Motoboy bootstrap/capture | **FIXED** | 393×873: boot sem exception; 401 anônimo sem unhandled rejection; status “Sem sessão autenticada”; 4 history handlers ativos e “7 dias” selecionável; Nova corrida abre capture; sem câmera mostra fallback; formulário manual abre. | `motoboy-capture-no-camera-393x873.png`; report.json |
+| P1 Restaurante escolha modo local | **FIXED** | 393×873: sessão suspensa; escolha local antes do 401; depois do 401 `inert=false`, `data-gated=false`, `offline=true`; Conta reabre com formulário enabled. | `restaurant-local-choice-after-delayed-401-393x873.png`; report.json |
+| P2 Motoboy identity após 401 | **FIXED** | Incluído no bootstrap 393×873; nenhum unhandled rejection, status não fica verificando, sem exceção administrativa. | `motoboy-home-393x873.png`; report.json |
+| P2 Motoboy bottom nav desktop | **FIXED** | 1366×768: `<main>` encerra no início do espaço próprio da navegação, sem interseção/oclusão; 360×800: posição fixa mobile preservada. | `motoboy-home-1366x768.png`, `motoboy-home-360x800.png`; report.json |
+
+**Ambiente:** Chromium 149.0.7827.155, CDP loopback 9222; Restaurante 8788 e Motoboy 8789; launcher terminou os processos temporários. O teste de sessão interceptou apenas o GET de sessão e forneceu 401 anônimo controlado para reproduzir a ordem; não acessou sessão/credencial real. Requests sem falha/4xx/5xx observados. Única mensagem de console Motoboy foi o diagnóstico esperado de câmera indisponível; zero exception/unhandled. Restaurante sem erros de console.
+
+**Não alterados:** os P3 originais continuam abertos. Contagem corrente: P0 0, P1 0, P2 0, P3 2, BLOCKED_EXTERNAL 8. F9 não concluída. Ver [Registro 0050](REGISTROS/0050.md).

@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0049, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 iniciada pelo bloco de QA visual/renderizado (Registro 0049). O pré-requisito `READY_FOR_F9 = YES` foi confirmado no Registro 0048; o QA inicial agora tem achados internos que devem ser corrigidos antes de avançar a campanha integrada.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0050, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 iniciada pelo bloco de QA visual/renderizado (Registro 0049). O pré-requisito `READY_FOR_F9 = YES` foi confirmado no Registro 0048; o Registro 0050 corrigiu os quatro achados internos P1/P2; os dois P3 permanecem deliberadamente abertos e a campanha integrada continua pendente.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -13,7 +13,7 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 - **Legado:** estrutura mantida para compatibilidade/migração, sem autoridade canônica.
 - **Externo:** requer fornecedor, domínio/HTTPS, credencial, decisão operacional ou ambiente fora dos repositórios.
 
-A inspeção histórica do Registro 0037 foi estática. Nesta reconciliação, `npm test` passou nos dois apps, `npm run test:postgres` passou contra o PostgreSQL oficial e `migrate.js status` confirmou 0001–0013 aplicadas. Nenhuma senha foi lida ou exibida; não houve Browser QA.
+No Registro 0048, `npm test` passou nos dois apps, `npm run test:postgres` passou contra o PostgreSQL oficial e `migrate.js status` confirmou 0001–0013 aplicadas; aquela reconciliação não fez Browser QA. O Registro 0050 validou os quatro P1/P2 no Chromium/CDP. Nenhuma senha foi lida ou exibida.
 
 | Fase | Classificação pré-F9 | Base | Pendência interna impeditiva de F9 |
 |---|---|---|---|
@@ -26,12 +26,12 @@ A inspeção histórica do Registro 0037 foi estática. Nesta reconciliação, `
 | F7 — UI/UX | B | Registro 0045 | Nenhuma identificada; renderização/dispositivo/leitor de tela ficam para F9. |
 | F8 — operação | B | Registro 0047 | Nenhuma local impeditiva; produção, restore isolado e política operacional dependem de infraestrutura/decisão externa. |
 
-**READY_FOR_F9: YES.** A decisão significa que não foi encontrada pendência interna estrutural anterior ao QA integrado; não declara integração externa funcional nem ambiente de produção.
+**READY_FOR_F9: YES.** A decisão significa que não foi encontrada pendência interna estrutural anterior ao QA integrado; não declara integração externa funcional nem ambiente de produção. O QA inicial do Registro 0049 encontrou dois P1 e dois P2, todos corrigidos e repetidos com sucesso no Registro 0050; F9 permanece aberta para a campanha restante.
 
-## Estado atual verificável após a reconciliação do Registro 0048
+## Estado atual verificável após a rodada de correções do Registro 0050
 
-- Restaurante: `codex/setup-workflow` @ `22a06c248b3e9baa9c2ad047f9155d18921151f7`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
-- Motoboy: `codex/setup-workflow` @ `3e0f42b1129930a8d69d5a979b5da14149089fa7`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- Restaurante: `codex/setup-workflow` @ `5a80a75b26c1dc3484ad51b7b7f274f407898ec8`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `09bcf745965486e545649d875a03e77df01825d3`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
 - Restaurante `main`: `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; Motoboy `main`: `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`. Nenhuma tag/baseline mudou.
 - PostgreSQL oficial: somente leitura nesta execução; readiness passou pela role runtime e `migrate.js status` confirmou 0001–0013 aplicadas via migrator. Nenhum schema, dado, role, grant ou configuração foi alterado.
@@ -39,12 +39,18 @@ A inspeção histórica do Registro 0037 foi estática. Nesta reconciliação, `
 
 | Área | Estado reconciliado em 2026-10-04 | Evidência/limite |
 |---|---|---|
-| Restaurante | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `22a06c248b3e9baa9c2ad047f9155d18921151f7` | Main/baseline preservadas; pendências externas de provider/produção não impedem iniciar F9. |
-| Motoboy | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `3e0f42b1129930a8d69d5a979b5da14149089fa7` | Main/baseline preservadas; prova local offline e leitura de Driver são testadas; hardware real fica para F9. |
+| Restaurante | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `5a80a75b26c1dc3484ad51b7b7f274f407898ec8` | P1/P2 iniciais corrigidos; P3 e QA integrado ainda pendentes. |
+| Motoboy | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `09bcf745965486e545649d875a03e77df01825d3` | P1/P2 iniciais corrigidos; P3 e QA integrado ainda pendentes. |
 | PostgreSQL oficial | Estruturalmente compatível no estado instalado | Migrations 0001–0013 status aplicadas; suite de migration/RLS/identity/domain/sync passou sem DDL nesta reconciliação. Não é instância de produção. |
 | API/backend | Coerente para API v1 definida | Sessão/CSRF/RBAC/tenant/sync/Driver e fail-closed de providers cobertos por testes; email/MFA/provider/produção externos permanecem indisponíveis. |
 | Contrato e Local-First | Sincronizados e coerentes | `CONTRACT.md`, `contract.js` e `backup-format.js` byte a byte idênticos; IndexedDB 6/7, outbox/inbox e merge cobertos por testes. |
-| QA final / F9 | Pronta para iniciar; ainda não iniciada | Launcher CDP está presente; esta reconciliação não abriu browser. QA real, IndexedDB browser e viewports são o próximo passo. |
+| QA final / F9 | Iniciada; correção dirigida concluída, campanha ainda aberta | Quatro P1/P2 corrigidos e repetidos em CDP; dois P3, fluxos end-to-end autorizados e capacidades externas permanecem pendentes. |
+
+## F9 — rodada de correção P1/P2 (Registro 0050)
+
+- P1 Motoboy bootstrap/capture, P1 Restaurante corrida de modo local, P2 Motoboy estado de identidade e P2 Motoboy navegação desktop foram corrigidos e não se reproduziram nos testes CDP dirigidos em 393×873, 1366×768 e 360×800.
+- Regressões automatizadas dos dois apps passam. P3 mantidos: cópia inicial de sessão anônima no Restaurante e quebra textual do status de sync no card de ganhos do Motoboy.
+- F9 continua aberta. Inventário atualizado: P0 0, P1 0, P2 0, P3 2, BLOCKED_EXTERNAL 8. Evidências/commits no [Registro 0050](REGISTROS/0050.md) e [F9_QA_INICIAL.md](F9_QA_INICIAL.md).
 
 ## Matriz de dados: IndexedDB ↔ PostgreSQL ↔ contrato/API
 
@@ -217,14 +223,14 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F9 — QA integrado e hardening final
 
-- **Estado:** Em andamento. Primeiro bloco de QA inicial visual/renderizado concluído no Registro 0049: `F9_INITIAL_QA = PASS_WITH_FINDINGS` (P0 0, P1 2, P2 2, P3 2, BLOCKED_EXTERNAL 8). F9 não está concluída.
-- **Lacunas/tarefas:** corrigir os achados P1/P2/P3 do `F9_QA_INICIAL.md` e repetir; depois roteiro autorizado de ponta a ponta por app, sync multi-app, offline/reconnect/reload/conflitos, backup/upgrade, roles e acessibilidade. Não contornar dependências externas.
+- **Estado:** Em andamento. QA inicial visual/renderizado no Registro 0049: `F9_INITIAL_QA = PASS_WITH_FINDINGS` (contagem de entrada: P0 0, P1 2, P2 2, P3 2, BLOCKED_EXTERNAL 8). Registro 0050 corrigiu e repetiu os quatro P1/P2; estado corrente P0 0/P1 0/P2 0/P3 2/BLOCKED_EXTERNAL 8. F9 não está concluída.
+- **Lacunas/tarefas:** P1/P2 do Registro 0049 corrigidos no 0050. Permanecem os dois P3; seguir com roteiro autorizado de ponta a ponta por app, sync multi-app, offline/reconnect/reload/conflitos, backup/upgrade, roles e acessibilidade. Não contornar dependências externas.
 - **Componentes:** `~/projetos/browser-tests/run-qa-infra.sh`, app servidores, testes automatizados e checklist deste plano.
 - **Dependências:** F1–F8 em estado fechável; dados sintéticos isolados/limpos; Chromium/Termux vivo.
 - **Bloqueios externos reais:** Chromium pode sofrer limitações GPU/processo no Termux/Android; permissões físicas e integrações reais dependem de hardware/contas. Continuar testes automatizados e registrar limitações.
-- **Conclusão do bloco 0049:** matriz de telas/viewports executada; houve erros JS e fluxos P1, portanto esta primeira rodada não certifica critérios finais nem conclui F9. Evidências e inventário em `F9_QA_INICIAL.md`; aplicativos ficaram sem alteração.
+- **Conclusão do bloco 0049:** matriz inicial executada; erros JS e fluxos P1 foram inventariados sem alteração de app. O Registro 0050 corrigiu os quatro achados P1/P2 e repetiu os fluxos. A matriz inicial não certifica critérios finais nem conclui F9; evidências preservadas em `F9_QA_INICIAL.md`.
 - **Testes:** `npm test` nos dois apps, `npm run test:postgres`, checks de sintaxe/diff, CDP dirigido a fluxos e acessibilidade.
-- **Browser QA:** autorizado e iniciado; sem screenshots/CDP adicionais fora de F9. Repetir depois das correções. Sessão real, providers, hardware e storage seguem isolados.
+- **Browser QA:** autorizado; primeira matriz e repetição corretiva executadas via CDP. Evidências fora do Git em `~/projetos/browser-tests/f9-initial-qa-2026-10-04/` e `f9-correction-round-1-2026-10-04/`. Sessão real, providers, hardware e storage seguem isolados.
 
 ## Ordem definitiva recomendada
 
@@ -239,7 +245,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1/F2 estão concluídas; F3 mantém dependências externas registradas; F4 local concluída com providers bloqueados externamente; F5/F6 estão implementadas; F7 está implementada estaticamente; F8 está preparada localmente, sem rollout/restore de produção. **Próxima fase: F9**, QA integrado/hardening, ainda não iniciada e dependente de ambiente/Chromium e capacidades físicas/externas conforme cada fluxo.
+F1/F2 estão concluídas; F3 mantém dependências externas registradas; F4 local concluída com providers bloqueados externamente; F5/F6 estão implementadas; F7 está implementada estaticamente; F8 está preparada localmente, sem rollout/restore de produção. **F9 está em andamento**: P1/P2 do QA inicial foram corrigidos; permanecem P3 e QA end-to-end/hardening. A disponibilidade de capacidades físicas/externas limita somente seus fluxos respectivos.
 
 ## Bloqueios externos reais versus trabalho local
 
