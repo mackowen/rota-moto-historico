@@ -1,3 +1,9 @@
+## F9 — Registro 0053: isolamento PostgreSQL de QA
+
+- [ ] **Database QA descartável para E2E autenticado:** nenhuma das roles existentes `rotamoto_app`/`rotamoto_migrator` possui `CREATEDB`; não há database QA pré-criada. Não conceder privilégio permanente às roles de produto e não usar `rotamoto` para fixtures.
+- [ ] **Após definir o ambiente autorizado:** adaptar runner somente para alvo de teste allowlisted, implementar guardas pré-conexão, adapters exclusivos de teste, fixture via casos de uso, smoke mínimo e teardown completo. O runner atual restringe `/rotamoto`; nenhuma dessas etapas foi iniciada neste Registro.
+- A avaliação parou na Fase 1 por falta de ciclo seguro de criação/destruição. Fingerprint oficial antes/depois idêntico; sem app/DB alterado. F9 continua aberta com P0/P1/P2/P3 = 0 e sete grupos externos reais inalterados. Ver [Registro 0053](REGISTROS/0053.md).
+
 ## F9 — Atualização Registro 0052 (2026-10-04)
 
 - [x] **P3 Motoboy — resolvido:** 401 na primeira visita sem sessão autenticada não afirma que sessão expirou; uma sessão anteriormente autenticada conserva mensagem de expiração. Helper segue a mesma regra do Restaurante. Regressão automatizada, cache SW v40.8 e CDP nos três viewports passaram.

@@ -1,8 +1,14 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0052, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 em QA visual/renderizado e exploratório. Registro 0051 corrigiu os dois P3 originais, avançou o shell offline do Motoboy e corrigiu também a mensagem de sessão anônima do Motoboy no Registro 0052; F9 segue aberta para E2E autenticado com fixture segura.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0053, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 aberta. A avaliação do Registro 0053 confirmou que as roles atuais não podem criar uma database QA descartável no cluster oficial.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
+
+## Atualização F9 — Registro 0053: database de QA isolada
+
+- Fase 1 de viabilidade encerrada: `rotamoto_app` e `rotamoto_migrator` têm `CREATEDB=false`, `CREATEROLE=false`, `SUPERUSER=false` e `BYPASSRLS=false`. `CREATE` no database oficial para o migrator permite DDL local, não criação de outra database. Não existe database `rotamoto_e2e%` pré-criada.
+- O runner de migrations aceita somente a URL do migrator terminada em `/rotamoto`. Criar/destruir uma database QA com o cluster/roles atuais exigiria intervenção DBA ou ampliação administrativa; não foi feita. Adaptação de teste do runner, harness, smoke e teardown aguardam uma estratégia autorizada de database QA. Não criar fixture no `rotamoto` oficial.
+- Evidência read-only antes/depois: OID oficial `16389`, migrations 13, fingerprint do ledger `5d41e67f362c2cbf87c1ec8ce204b1cd`, 12 tabelas `ENABLE/FORCE RLS`, database QA 0; todos os valores iguais. P0/P1/P2/P3 abertos = 0, sete grupos externos inalterados. F9 permanece aberta. Ver [Registro 0053](REGISTROS/0053.md).
 
 ## Atualização F9 — Registro 0052 (2026-10-04)
 

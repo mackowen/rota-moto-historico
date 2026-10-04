@@ -1,3 +1,10 @@
+## Atualização — Registro 0053 / viabilidade do E2E autenticado (2026-10-04)
+
+- Restaurante `codex/setup-workflow` @ `63f50026cfddfc6139771a3040a9f9f00107586c`; Motoboy `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`. Árvores limpas, main/tags/baselines preservadas; nenhum push ou commit de app.
+- PostgreSQL oficial `127.0.0.1:5432/rotamoto` 18.6 consultado apenas por pgpass e transações read-only: runtime/migrator sem `CREATEDB`, superuser, `CREATEROLE` ou `BYPASSRLS`; database QA inexistente. Runner de migrations restringe `/rotamoto`. Sem database descartável criada ou privilégios administrativos novos, não foi possível construir o harness seguro nem executar smoke autenticado.
+- Fingerprint antes/depois do banco oficial igual: OID 16389, 13 migrations, digest do ledger `5d41e67f362c2cbf87c1ec8ce204b1cd`, 12 tabelas com RLS forçada, 0 databases `rotamoto_e2e%`. Nenhum dado/role/grant/schema/configuração alterado. Portas QA temporárias fechadas.
+- F9 aberta: P0/P1/P2/P3 = 0; sete grupos externos de 0052 inalterados. O impedimento do E2E autenticado é local e administrativo. Ver [Registro 0053](REGISTROS/0053.md).
+
 ## Atualização — Registro 0052 / F9 sessão e pré-condições E2E (2026-10-04)
 
 - Motoboy: `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`, árvore limpa; `main` `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baseline peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta. Primeiro 401 anônimo não mostra mensagem de expiração; 401 com sessão anterior ainda informa expiração. Service worker v40.8 contém o helper.
