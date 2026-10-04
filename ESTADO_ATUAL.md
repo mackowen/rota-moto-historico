@@ -1,6 +1,15 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0035.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0036.
+
+## Atualização — Registro 0036 (2026-10-04)
+
+- Restaurante: `codex/setup-workflow`, commit `df562f7fd26fb93a2f3c857234987fa1d34800c9` após `de53138cf68a4abba42530158fb793064e85069f`; sync agora reconcilia pull canônico em Inbox e projeções IndexedDB, preservando conflitos/edições locais.
+- Motoboy: `codex/setup-workflow`, commit `6a1574f6a72e5ed87b0b8cbf16a3c90533d68b22` após `1eb7e6ae2a1fea31dd7e10e72c52892cd1ce5fae`; Delivery atribuída, Order, eventos, provas, pontos e earnings recebidos são associados às projeções/cache sem duplicar eventos ou substituir execução pendente.
+- ACK por operação diferencia accepted/duplicate/rejected/conflict; IDs/revisões canônicos e estado são persistidos. Outbox mantém retry de rede e não repete automaticamente a mesma rejeição/conflito. Sync calcula status, restaura sessão existente, renova CSRF em caso de concorrência entre abas, serializa e continua paginação limitada.
+- `npm test` passou nos dois apps; `npm run test:postgres` passou no Restaurante contra PostgreSQL oficial (migrations/RLS, identidade/CSRF/tenant e sync canônico). Syntax checks e `git diff --check` passaram também após correção de paginação. Sem Browser QA, conforme solicitado.
+- Sem login visual/owner operacional enquanto MFA e identidade operacional não existirem; contrato ainda não define vínculo Route→Delivery; QA end-to-end via CDP fica para etapa posterior. Email, domínio/TLS e integrações externas permanecem dependências externas.
+- `main` e baselines permanecem inalteradas; sem push. Detalhes no [Registro 0036](REGISTROS/0036.md).
 
 ## Atualização — Registro 0035 (2026-10-04)
 
