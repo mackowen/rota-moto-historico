@@ -1,6 +1,17 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0040.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0041.
+
+## Atualização — Registro 0041 / F3 (2026-10-04)
+
+- F3 implementada localmente até o limite seguro, classificada **PARCIAL** somente por dependências operacionais externas: primeiro owner/operator auditável, MFA enrollment/verificação com armazenamento seguro de chave e entrega real de convite/recuperação por email. Não existe signup público nem bypass MFA. Browser QA foi deliberadamente adiado para F9 e não mantém a implementação F3 aberta.
+- Restaurante adicionou lifecycle administrativo de roles/memberships/convites, subset permission grants, proteção transacional do último owner e prevenção de autoelevação; alterações auditadas. Migration aditiva `0012_identity_rbac_lifecycle` aplicada pelo migrator oficial. APIs de criação/atualização de role, mudança de membership e convite usam sessão, CSRF, tenant da sessão, MFA exigida e erros sanitizados.
+- Ambos os clientes agora têm login/logout, restauração e expiração de sessão, troca de tenant validada, recuperação/aceitação de convite, challenge MFA fail-closed, estados de loading/erro e sincronização best-effort após autenticação. Senha, session token, CSRF e tokens de recuperação/convite não são persistidos em IndexedDB/localStorage. O Motoboy diferencia modo local/offline de sessão autenticada; a UI do Restaurante expõe administração conforme permission keys e mantém profiles locais explicitamente separados.
+- Corrigidos: POST de roles sombreado por GET; MFA ausente no fluxo de convite; último owner podia ser rebaixado em corrida; ausência das telas/clientes de identidade; assets/scripts duplicados/quebrados no Motoboy; campo oculto visível por CSS. Implementados testes de UI/API e sincronizados `identity-ui.js`/`.css`.
+- PostgreSQL oficial `18.6`, `127.0.0.1:5432/rotamoto`, migrations 0001–0012 aplicadas; runtime continua `rotamoto_app`, DDL via `rotamoto_migrator`, RLS/FORCE preservada. Nenhuma role/configuração administrativa foi alterada nesta execução.
+- Testes de fechamento: `npm test` nos dois apps e `npm run test:postgres` no Restaurante passaram; `node --check` nos JS modificados e `git diff --check` passaram. Sem Browser QA, sem push, sem dados sintéticos persistentes.
+- Restaurante: branch `codex/setup-workflow`, HEAD `03634a6199cdc6b94440c55367f652f66df6e68f`; commits F3 `5a814d8` e `03634a6`. Motoboy: branch `codex/setup-workflow`, HEAD `3634b3da045500a1dbb84cb82bd967f03b332167`; commit F3 `3634b3d`. `main` preservada; tags/baselines permanecem Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` e Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- Ver [Registro 0041](REGISTROS/0041.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md). Próxima fase recomendada: F5. F4 não foi iniciada.
 
 ## Atualização — Registro 0040 (2026-10-04)
 

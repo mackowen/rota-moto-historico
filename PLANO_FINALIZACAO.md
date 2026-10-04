@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0040, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 backend/API concluída para as operações v1 definidas. Browser QA permanece em F9.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0041, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL). Browser QA permanece em F9.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -15,12 +15,12 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 
 A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável após o Registro 0040
+## Estado atual verificável após o Registro 0041
 
-- Restaurante: `codex/setup-workflow` @ `3cd0476e24feec8834028165da23a42d7b94db0e`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
-- Motoboy: `codex/setup-workflow` @ `f1ac938ca2fde6150e5f24b94b8125d466e19e24`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- Restaurante: `codex/setup-workflow` @ `03634a6199cdc6b94440c55367f652f66df6e68f`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `3634b3da045500a1dbb84cb82bd967f03b332167`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
-- PostgreSQL oficial: migrations 0001–0011 aplicadas; 0009 adiciona checks monetários e de Route, função de validação, índice GIN; 0010 concede somente EXECUTE para validação de constraint no runtime; 0011 concede SELECT somente em `integrations`/`external_accounts` para a consulta administrativa, sob RLS/FORCE.
+- PostgreSQL oficial: migrations 0001–0012 aplicadas; 0012 registra invitation purpose/MFA verification marker e grants mínimos para lifecycle RBAC. RLS/FORCE e separação `rotamoto_app`/`rotamoto_migrator` preservadas.
 
 As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da F1 foram atualizadas pelos Registros 0038–0039 e pela seção F1 vigente.
 
@@ -130,14 +130,14 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F3 — Identidade, login e RBAC nos dois clientes
 
-- **Estado:** Backend parcial; interfaces de conta ausentes. Owner operacional e MFA fail-closed.
-- **Lacunas/tarefas:** cliente compartilhado de sessão; telas login/logout/sessão expirada/tenant/recovery/invite/verification; estado de loading/erro/rede; pós-login restaurar sessão e disparar sync; tela de usuários/membership/permissões baseada em autorização; motorista administrativo distinto da execução; refresh/CSRF sem persistir secret em IndexedDB/localStorage.
-- **Componentes:** `backend/identity/*`; Restaurante views/render em `app.js`, local `users/profiles`; Motoboy configurações em `app.js`; contrato/permissions.
-- **Dependências:** API existe para subset. Modelar fluxos de invitation management e MFA conforme operações reais, sem bypass.
-- **Bloqueios externos reais:** primeiro owner exige operador/prova auditável; MFA operacional requer storage de segredo seguro; email real requer provider/domínio. É possível implementar UI/client e testes fake antes disso mantendo login fail-closed.
-- **Conclusão objetiva:** os dois apps têm fluxo de sessão testável; role/tenant vêm do servidor; conta sem MFA exigido funciona conforme política; owner permanece bloqueado quando MFA não configurado; logout revoga sessão server-side.
-- **Testes:** unidade/HTTP, sessão expirada/revogada, CSRF, troca tenant, permissões e cliente com API fake; browser em F9.
-- **Browser QA:** sim, obrigatório para navegação, cookie/redirects, loading/erro/mobile.
+- **Estado:** Implementação local extensa; **PARCIAL** apenas para capacidades externas/operacionais identificadas abaixo. APIs administrativas de lifecycle e clientes de conta existem nos dois apps.
+- **Concluído no Registro 0041:** lifecycle User/Membership/Role/Permission com grants limitados, convite autorizado, bloqueio de self-escalation e proteção transacional do último owner válido; auditoria; Migration 0012; login/logout/restauração/expiração/recuperação/convite/troca de tenant; gate de áreas autenticadas e modo offline local claramente separado; UI administrativa do Restaurante; fluxo focado de login/conta Motoboy; MFA challenge fail-closed e nenhuma credencial/session/CSRF persistida no storage local.
+- **API:** `POST /api/admin/roles`, `PATCH /api/admin/roles/:roleId`, `PATCH /api/admin/memberships/:membershipId`, `POST /api/identity/invitations`, além das rotas identity/session existentes. Toda mutação verifica sessão, CSRF, tenant derivado server-side, permission subset, MFA quando exigido e auditoria. Não há signup público.
+- **Lacunas locais fechadas:** mascaramento de endpoints POST por rota GET, convite que ignorava marker MFA, falta de controle da membership suspend/re-role, falha em impedir rebaixamento do último owner, ausência de integração de sessão nos clientes, caminhos duplicados/quebrados de assets no Motoboy e campo de formulário oculto ainda visível pelo CSS.
+- **Bloqueios externos reais:** primeiro owner exige operador/ato auditável; MFA enrollment/verificação real exige adapter seguro para chave/verificador (KMS/secret store ou política aprovada); entrega de convite/recovery exige provider de email e domínio. Sem esses elementos as capacidades permanecem fail-closed, sem tokens de convite/recovery expostos por API de produção.
+- **Componentes:** Restaurante `backend/admin/*`, `backend/identity/*`, `backend/postgres/migrations/0012*`, `identity-ui.*`, `app.js`, `sync-client.js`; Motoboy `identity-ui.*`, `app.js`, `sync-client.js`, `index.html`, `sw.js`; API descrita em `docs/API-v1.md`.
+- **Critério:** lifecycle/admin local, sessões e UI existentes, tenant/RBAC server-side, auditoria, testes direcionados e migration aplicada. Browser QA/cookies/redirects/responsividade completa continua no checkpoint F9, sem reabrir implementação por isso.
+- **Testes:** `npm test` dos dois apps, `npm run test:postgres` no Restaurante via as roles oficiais, checagem de todos os JS alterados e `git diff --check`; detalhes em Registro 0041. Sem Browser QA.
 
 ### F4 — Integrações externas e arquitetura de providers
 
@@ -209,7 +209,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 1. **F1 — Modelo definitivo:** implementação concluída no Registro 0039; Browser QA/IndexedDB real fica em F9.
 2. **F2 — Backend/API:** concluída no Registro 0040 para operações internas v1; não duplicar sync nem reimplementar API read.
-3. **F3 — Cliente e telas de identidade/admin**, em fail-closed e com API fake; fechar as políticas de alteração membership/roles e convites.
+3. **F3 — Identidade/login/RBAC:** implementação local concluída no Registro 0041; external owner/MFA/email fail-closed e Browser QA fica para F9.
 4. **F5 e F6 — Fechar fluxos dos apps**, integrando leituras API/sync e preservando operação offline e autoridade.
 5. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
 6. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
@@ -218,7 +218,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1 foi implementada até o limite sem Browser QA. F2 está concluída para o contrato/backend v1. O próximo bloco recomendado é F3 — sessão/login/admin nos clientes e políticas seguras de membership/roles, sem ativar operador, MFA ou entrega externa fictícios.
+F1 e F2 estão concluídas nos limites registrados. F3 implementou o máximo local seguro; suas capacidades restantes exigem operação/serviços externos. O próximo bloco recomendado é F5 — fluxos completos do Restaurante, sem iniciar F4 nesta execução.
 
 ## Bloqueios externos reais versus trabalho local
 

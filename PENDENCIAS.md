@@ -1,5 +1,19 @@
 # Pendências
 
+## Atualização — Registro 0041 / F3 Identidade (2026-10-04)
+
+- [x] Política de lifecycle User/Membership/Role/Permission; grants de permission subset; sem autoelevação; último owner protegido com serialização transacional; tenant e actor derivados no servidor; auditoria.
+- [x] APIs de role e membership e convite administrativo protegidas por sessão, CSRF, permission keys e MFA exigida; signup público inexistente.
+- [x] Migração aditiva `0012_identity_rbac_lifecycle` aplicada; runtime/migrator, RLS/FORCE e grants mínimos preservados.
+- [x] Restaurante e Motoboy: login, logout, restore/expiração, recuperação, convite, MFA fail-closed, troca de tenant e estados de UI; pós-login dispara sync best-effort sem bloquear operação local offline.
+- [x] Administração no Restaurante para empresa ativa, memberships/status, roles/permissões, convites e metadados suportados de integrações; controles limitados por permission key. Profiles locais identificados como locais.
+- [x] Testes finais `npm test` nos dois apps, `npm run test:postgres` no Restaurante, `node --check` dos JS modificados e `git diff --check` passaram.
+- [ ] Provisionamento do primeiro owner requer operador autorizado e ato administrativo auditável. Não foi criado operador ou conta real.
+- [ ] MFA operacional requer adapter/verificador e armazenamento seguro de segredo/chave; challenge permanece fail-closed, sem modo de desenvolvimento que reduza a proteção.
+- [ ] Envio real de convite/recuperação requer provider de email e domínio/configuração operacional; sem envio real ou exposição de token bruto.
+- [ ] Browser QA dos formulários, cookies, redirects e layout fica para F9; não executado conforme escopo.
+- F3 classificada **PARCIAL** apenas pelas dependências externas acima. Próximo bloco: F5; não iniciar F4 neste registro. Ver [Registro 0041](REGISTROS/0041.md).
+
 ## Atualização — Registro 0040 / F2 (2026-10-04)
 
 - [x] Inventário e documentação versionada da API v1 do Restaurante em `docs/API-v1.md`, com métodos, autenticação, permission keys, entradas, saídas, erros e idempotência.
