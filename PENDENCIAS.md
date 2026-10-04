@@ -1,3 +1,11 @@
+## F9 — Atualização Registro 0052 (2026-10-04)
+
+- [x] **P3 Motoboy — resolvido:** 401 na primeira visita sem sessão autenticada não afirma que sessão expirou; uma sessão anteriormente autenticada conserva mensagem de expiração. Helper segue a mesma regra do Restaurante. Regressão automatizada, cache SW v40.8 e CDP nos três viewports passaram.
+- P1/P2 e dois P3 anteriores seguem FIXED. Inventário aberto: P0 0 / P1 0 / P2 0 / P3 0. F9 segue aberta.
+- Reclassificação de 0051: o grupo identidade/tenant/Driver é **B — fixture/provisionamento controlável**, não `BLOCKED_EXTERNAL`. Permanecem sete grupos C: email, MFA/armazenamento seguro, câmera/GPS físicos, blob remoto, iFood, 99Food, Keeta.
+- **Pré-condição local antes de E2E autenticado:** lifecycle de fixture QA isolada. O endpoint de primeiro tenant exige `authorizeProvisioner` não configurado; email/MFA falham fechado; não há limpeza integral de Company/User/audit. Não provisionar fixture na configuração oficial atual.
+- Próxima etapa: especificar ambiente de teste isolado e limpeza/auditáveis antes de qualquer criação; enquanto isso prosseguir com suites rollback e browser anônimo/local. Detalhes A/B/C no [Registro 0052](REGISTROS/0052.md).
+
 # Pendências
 
 ## F9 QA inicial — Registro 0049 (2026-10-04)
@@ -8,9 +16,9 @@
 - [x] **P2 Motoboy — resolvido no Registro 0050:** main rolável ocupa área separada da navegação desktop; bottom nav mobile segue fixa.
 - [x] **P3 Motoboy — corrigido no Registro 0051:** valor sem Earning canônico agora usa `—`, com explicação de sync fora da grade numérica; shell offline avançado para v40.7.
 - [x] **P3 Restaurante — corrigido no Registro 0051:** 401 no primeiro restore anônimo não exibe “Sua sessão expirou”; uma sessão anterior efetivamente autenticada continua recebendo aviso de expiração.
-- [ ] **P3 Motoboy — achado novo do Registro 0051:** primeira restauração anônima real retorna status “Sem sessão autenticada”, mas ainda mostra “Sua sessão expirou. Entre novamente.”. Reproduzido com `GET /api/identity/session` real 401 em Chromium 393×873; `identity-ui.js` Motoboy. Preservado para rodada seguinte, sem corrigir fora do escopo solicitado.
+- [x] **P3 Motoboy — corrigido no Registro 0052:** o `GET /api/identity/session` real 401 exibia copy de expiração sem sessão anterior; corrigido no Registro 0052 e revalidado em três viewports.
 - Fluxos externos/sem dados ainda não testados: login/logout administrativo com conta autorizada; email de convite/recovery; MFA seguro; Driver/Delivery canônicos; câmera/GPS em hardware; blob storage; iFood, 99Food e Keeta. Não criar credenciais/dados para destravar.
-- `F9_INITIAL_QA = PASS_WITH_FINDINGS` preserva a contagem de entrada do 0049 (P0 0/P1 2/P2 2/P3 2/BLOCKED_EXTERNAL 8). Estado corrente após 0051: `P0_OPEN=0`, `P1_OPEN=0`, `P2_OPEN=0`, `P3_OPEN=1`, `BLOCKED_EXTERNAL=8`; F9 permanece aberta. A matriz em seis viewports não encontrou overflow horizontal; a bottom nav desktop havia sido reproduzida e foi corrigida no 0050. Ver [F9_QA_INICIAL.md](F9_QA_INICIAL.md), [Registro 0049](REGISTROS/0049.md) e [Registro 0051](REGISTROS/0051.md).
+- `F9_INITIAL_QA = PASS_WITH_FINDINGS` preserva a contagem de entrada do 0049 (P0 0/P1 2/P2 2/P3 2/BLOCKED_EXTERNAL 8). Estado corrente após 0052: `P0_OPEN=0`, `P1_OPEN=0`, `P2_OPEN=0`, `P3_OPEN=0`, `BLOCKED_EXTERNAL=7`; fixture autenticada permanece como pré-condição B, e F9 permanece aberta. A matriz em seis viewports não encontrou overflow horizontal; a bottom nav desktop havia sido reproduzida e foi corrigida no 0050. Ver [F9_QA_INICIAL.md](F9_QA_INICIAL.md), [Registro 0049](REGISTROS/0049.md) e [Registro 0051](REGISTROS/0051.md).
 
 ## Reconciliação pré-F9 — Registro 0048 (2026-10-04)
 

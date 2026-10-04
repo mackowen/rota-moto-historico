@@ -172,3 +172,14 @@ Não houve outro P0/P1/P2/P3 reproduzido na exploração sem dados/identidade. O
 Evidências e screenshots brutos fora do Git: `/data/data/com.termux/files/home/projetos/browser-tests/f9-round-2-2026-10-04/` e `/data/data/com.termux/files/home/projetos/browser-tests/f9-correction-round-2-2026-10-04/`. Exemplos: `restaurante-360x800-create-dialog.png`, `restaurante-393x873-dashboard.png`, `motoboy-360x800-home.png`, `motoboy-1366x768-home.png`, `motoboy-393x873-account.png`, `motoboy-capture-no-camera-393x873.png`, `restaurant-local-choice-after-delayed-401-393x873.png`, `report.json`.
 
 F9 continua aberta; o inventário visual não substitui fluxos reais autenticados, end-to-end com Delivery autorizada, dispositivo físico, leitores de tela ou integrações externas.
+
+
+## Atualização — Registro 0052: sessão anônima Motoboy e auditoria de pré-condições
+
+O P3 novo de 0051 está **FIXED**. `restore()` distingue 401 sem sessão anterior de 401 depois de sessão autenticada, alinhado ao helper do Restaurante; o service worker Motoboy avançou a v40.8 e inclui o novo helper no shell. `npm test`, `node --check` e `git diff --check` passaram.
+
+CDP Chromium 149 repetiu a entrada anônima nos viewports 360×800, 393×873 e 1366×768: “Sem sessão autenticada”, sem copy de sessão expirada, exception ou unhandled rejection. A repetição também confirmou que bootstrap/history/capture, captura sem câmera, controles de identidade, nav desktop, card de ganhos e corrida modo local do Restaurante continuam FIXED. Screenshots/relatório: `/data/data/com.termux/files/home/projetos/browser-tests/f9-correction-round-3-2026-10-04/`.
+
+Inventário atualizado: P0 0 / P1 0 / P2 0 / P3 0. O `BLOCKED_EXTERNAL=8` de 0051 não descrevia corretamente todos os grupos: fixture autenticada (tenant, owner, membership, Driver e dados de domínio) é **B — pré-condição local controlável**. Permanecem **7 grupos C**: email real, MFA/verifier e secret storage, câmera/GPS físicos, blob remoto e protocolo/conta/credencial/homologação para cada provider iFood, 99Food e Keeta.
+
+Auditoria read-only de código/docs/schema e `migrate.js status` (0001–0013 aplicadas): API de provisionamento de tenant existe, mas `authorizeProvisioner` não tem adapter operacional; convite depende de email e operações administrativas/MFA continuam fail-closed. Os testes existentes usam fakes e rollback, não criam sessão navegável persistente. Não existe fluxo de remoção integral segura para Company/User/audit/DeliveryEvent; fechar tenant/revogar membership conserva rastreabilidade e não equivale a apagar tudo. Portanto, **não é seguro provisionar e remover tenant E2E pela configuração/mecanismos atuais**. F9 segue aberta; primeiro projetar fixture QA isolada e seu lifecycle de limpeza, sem inserir fixture no PostgreSQL oficial nesta rodada. Ver [Registro 0052](REGISTROS/0052.md).

@@ -1,3 +1,11 @@
+## Atualização — Registro 0052 / F9 sessão e pré-condições E2E (2026-10-04)
+
+- Motoboy: `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`, árvore limpa; `main` `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`; baseline peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta. Primeiro 401 anônimo não mostra mensagem de expiração; 401 com sessão anterior ainda informa expiração. Service worker v40.8 contém o helper.
+- Restaurante: sem alteração, `codex/setup-workflow` @ `63f50026cfddfc6139771a3040a9f9f00107586c`, árvore limpa; main e baseline peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intactas.
+- `npm test` Motoboy, `node --check` nos JS alterados e `git diff --check` passaram. CDP 360×800/393×873/1366×768 corrigiu P3 e revalidou P1/P2 + P3 anteriores; sem exceções/rejeições/falhas de request inesperadas.
+- Auditoria read-only: status migrations 0001–0013 aplicado. Provisionamento de primeiro owner não é operacional (adapter `authorizeProvisioner` ausente); email/MFA fail-closed. Não há mecanismo de remoção integral de fixture mantendo audit/fatos. E2E autenticado requer desenho de fixture QA isolada, não usar o tenant/banco oficial sob a configuração atual.
+- Contagem: P0/P1/P2/P3 abertos = 0. `BLOCKED_EXTERNAL` reavaliado de 8 para 7 grupos reais (email, MFA/secret storage, hardware GPS/câmera, blob e 3 providers); fixture de identidade/Driver é categoria B, não externa. F9 continua aberta. Sem push/fixture/alteração PostgreSQL. Ver [Registro 0052](REGISTROS/0052.md). Histórico terá commit separado.
+
 ## Atualização — Registro 0051 / QA ampliado F9 (2026-10-04)
 
 - Restaurante: `codex/setup-workflow` @ `63f50026cfddfc6139771a3040a9f9f00107586c`, árvore limpa; `main` `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; baseline peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.

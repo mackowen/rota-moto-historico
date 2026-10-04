@@ -1,8 +1,15 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0051, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 em QA visual/renderizado e exploratório. Registro 0051 corrigiu os dois P3 originais, avançou o shell offline do Motoboy e encontrou um novo P3 de mensagem de sessão no Motoboy; a campanha funcional autorizada segue pendente.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0052, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 em QA visual/renderizado e exploratório. Registro 0051 corrigiu os dois P3 originais, avançou o shell offline do Motoboy e corrigiu também a mensagem de sessão anônima do Motoboy no Registro 0052; F9 segue aberta para E2E autenticado com fixture segura.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
+
+## Atualização F9 — Registro 0052 (2026-10-04)
+
+- Motoboy: primeiro 401 sem sessão anterior agora deixa a mensagem de expiração vazia; sessão previamente autenticada mantém o aviso. Helper alinhado byte a byte com a regra do Restaurante; cache do shell v40.8 inclui o helper. Commit `422c3edd7f5b05f13943733ec184dfc4edcf22d4`.
+- `npm test`, checks JS e `git diff --check` passaram. Browser QA dirigido em 360×800, 393×873 e 1366×768; P1/P2 e dois P3 anteriormente corrigidos rechecados sem regressão.
+- Contagem corrente: P0 0, P1 0, P2 0, P3 0. F9 não concluída. O antigo `BLOCKED_EXTERNAL=8` foi decomposto: identidade/tenant/Driver com fixture controlada é B (local, não externo); restam 7 grupos C: email, MFA+armazenamento, hardware GPS/câmera, blob e iFood/99Food/Keeta.
+- O primeiro owner não pode ser criado pelo mecanismo atual: `authorizeProvisioner` operacional ausente, provider email/MFA fail-closed; também não há limpeza física segura de tenant/identidade/audit. Não criar tenant E2E usando a configuração atual. Próximo bloco: definir fixture QA isolada e lifecycle de cleanup antes de autorizar provisionamento. Migration status read-only confirma 0001–0013 aplicadas. Ver [Registro 0052](REGISTROS/0052.md).
 
 ## Legenda e limites da inspeção
 
@@ -28,10 +35,12 @@ No Registro 0048, `npm test` passou nos dois apps, `npm run test:postgres` passo
 
 **READY_FOR_F9: YES.** A decisão significa que não foi encontrada pendência interna estrutural anterior ao QA integrado; não declara integração externa funcional nem ambiente de produção. O QA inicial do Registro 0049 encontrou dois P1 e dois P2, todos corrigidos e repetidos com sucesso no Registro 0050; F9 permanece aberta para a campanha restante.
 
-## Estado atual verificável após QA ampliado do Registro 0051
+## Estado atual verificável após auditoria do Registro 0052
+
+O P3 de primeiro acesso anônimo no Motoboy foi corrigido; inventário corrente P0/P1/P2/P3 = 0. O grupo de identidade/tenant/Driver para E2E é pré-condição B, não externo. Permanecem 7 grupos BLOCKED_EXTERNAL/C. Provisionar e remover tenant usando a operação atual não é seguro: adapter operacional ausente e cleanup integral inexistente.
 
 - Restaurante: `codex/setup-workflow` @ `63f50026cfddfc6139771a3040a9f9f00107586c`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
-- Motoboy: `codex/setup-workflow` @ `69b1e76595ae4a4f6aee8021685761d03f034d91`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- Motoboy: `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
 - Restaurante `main`: `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; Motoboy `main`: `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`. Nenhuma tag/baseline mudou.
 - PostgreSQL oficial: API iniciou em loopback usando `rotamoto_app`; health live/readiness passou e os GETs anônimos de sessão retornaram 401 esperado. Foram apenas leituras de readiness/sessão; nenhum schema, dado, role, grant ou configuração foi alterado. API e launcher temporários foram encerrados; portas 8787–8789/9222 ficaram fechadas.
@@ -40,11 +49,11 @@ No Registro 0048, `npm test` passou nos dois apps, `npm run test:postgres` passo
 | Área | Estado reconciliado em 2026-10-04 | Evidência/limite |
 |---|---|---|
 | Restaurante | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `63f50026cfddfc6139771a3040a9f9f00107586c` | Achado inicial de primeira sessão anônima corrigido; sem sessão/perfil empresarial autorizado para fluxos protegidos. |
-| Motoboy | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `69b1e76595ae4a4f6aee8021685761d03f034d91` | Card de ganhos corrigido; novo P3 de mensagem de expiração para sessão ausente permanece. |
+| Motoboy | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `422c3edd7f5b05f13943733ec184dfc4edcf22d4` | Card de ganhos e copy de sessão anônima corrigidos; E2E autenticado aguarda fixture segura. |
 | PostgreSQL oficial | Estruturalmente compatível no estado instalado | Migrations 0001–0013 status aplicadas; suite de migration/RLS/identity/domain/sync passou sem DDL nesta reconciliação. Não é instância de produção. |
 | API/backend | Coerente para API v1 definida | Sessão/CSRF/RBAC/tenant/sync/Driver e fail-closed de providers cobertos por testes; email/MFA/provider/produção externos permanecem indisponíveis. |
 | Contrato e Local-First | Sincronizados e coerentes | `CONTRACT.md`, `contract.js` e `backup-format.js` byte a byte idênticos; IndexedDB 6/7, outbox/inbox e merge cobertos por testes. |
-| QA final / F9 | QA visual/renderizado ampliado executado; F9 aberta | Os dois P3 originais foram corrigidos; surgiu um P3 de copy anônima no Motoboy. Sem P0/P1/P2; conta/Driver autorizados e capacidades externas ainda limitam fluxos protegidos/reais. |
+| QA final / F9 | QA visual/renderizado ampliado executado; F9 aberta | P0/P1/P2/P3 abertos = 0. Fixture de identidade/Driver é B; 7 dependências externas C. Falta definir provisionamento/limpeza segura de QA autenticado. |
 
 ## F9 — rodada de correção P1/P2 (Registro 0050)
 
@@ -230,7 +239,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F9 — QA integrado e hardening final
 
-- **Estado:** Em andamento. QA inicial no Registro 0049: `F9_INITIAL_QA = PASS_WITH_FINDINGS`; Registro 0050 corrigiu/repetiu P1/P2; Registro 0051 corrigiu os dois P3 originais e executou exploração ampliada. Estado corrente P0 0/P1 0/P2 0/P3 1/BLOCKED_EXTERNAL 8. F9 não está concluída.
+- **Estado:** Em andamento. QA inicial no Registro 0049: `F9_INITIAL_QA = PASS_WITH_FINDINGS`; Registro 0050 corrigiu/repetiu P1/P2; Registro 0051 corrigiu os dois P3 originais e executou exploração ampliada. Estado corrente após Registro 0052 P0 0/P1 0/P2 0/P3 0; sete grupos C externos. Fixture autenticada é B, com lifecycle seguro ainda por definir. F9 não está concluída.
 - **Lacunas/tarefas:** novo P3 de copy na restauração anônima do Motoboy ainda aberto. Seguir com roteiro autorizado ponta a ponta por app, sync multi-app, offline/reconnect/reload/conflitos, backup/upgrade e papéis. Não contornar dependências externas.
 - **Componentes:** `~/projetos/browser-tests/run-qa-infra.sh`, app servidores, testes automatizados e checklist deste plano.
 - **Dependências:** F1–F8 em estado fechável; dados sintéticos isolados/limpos; Chromium/Termux vivo.
