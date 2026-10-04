@@ -1,6 +1,6 @@
 # Modelo de dados RotaMoto — matriz F1
 
-**Versão:** 1.0 · **Revisão:** 2026-10-04 · **Fontes:** CONTRACT v1/contract.js, DEC-0002/0005/0006, Registros 0033–0037, branches codex/setup-workflow, migrations PostgreSQL 0001–0008 e catálogo oficial read-only.
+**Versão:** 2.0 · **Revisão:** 2026-10-04 · **Atualização:** Registro 0039 atualiza o estado vigente da F1 · **Fontes:** CONTRACT v1/contract.js, DEC-0002/0005/0006, Registros 0033–0037, branches codex/setup-workflow, migrations PostgreSQL 0001–0008 e catálogo oficial read-only.
 
 Matriz de campos contratuais e modelos observados; quando o contrato não fixa forma ou semântica, fica explicitamente “não definido”. IndexedDB foi inspecionado estaticamente, sem ler dados reais. PostgreSQL não foi alterado nesta execução.
 
@@ -89,7 +89,9 @@ Migrations 0005–0008 fornecem UUID canônico, tenant, revision, installation o
 
 Não inventar prazo nem apagar dados sem política. Não compactar outbox/conflicts/tombstones/aliases que sustentem retry, dedup ou restore.
 
-## Lacunas genuínas restantes da F1
+## Lacunas genuínas restantes no snapshot do Registro 0038
+
+Os itens abaixo descreviam o estado antes das decisões aprovadas e implementações do Registro 0039; a classificação vigente está na seção seguinte.
 
 1. Schema canônico de campos completo de Order, Route, Driver, LocationPoint, DeliveryProof e Earning (incluindo moeda/fórmula).
 2. Route→Delivery e semântica de replanejamento/cancelamento; código atual não prova vínculo inequívoco.
@@ -100,3 +102,35 @@ Não inventar prazo nem apagar dados sem política. Não compactar outbox/confli
 7. Verificação do upgrade contra IndexedDB real/browser e backup antigo exige ambiente/browser; nesta execução o comportamento transacional foi testado por harness de registry, sem Browser QA.
 
 Estes itens impedem chamar o modelo inteiro de definitivo e criar constraints/tabelas por suposição; não bloqueiam trabalho independente futuro nem migrations locais aditivas seguras.
+
+
+## Estado vigente após o Registro 0039
+
+As notas de inspeção anteriores descrevem o snapshot do Registro 0038. Este fechamento atualiza as lacunas executáveis; não mantenha F1 aberta por QA real adiado para F9.
+
+| Entidade | Schema canônico e autoridade | Relações/revisão/tombstone | Local, sensibilidade, legado | Persistência e validação |
+|---|---|---|---|---|
+| Order | id, companyId, createdAt, updatedAt, version; number, customer, phone, address, notes, items, payments, amountMinor/currency, source/externalId opcionais. Restaurante cria/altera/exclui logicamente. | Referência Delivery.orderId; alias local resolve UUID canônico. | R orders; M somente consome projeção. Nome/endereço/telefone/notas são PII; prazo legal pendente. Campos legados ficam preservados. | JSONB; contrato valida campos/tipos conhecidos; nenhuma migração destrutiva de value/amount legado. |
+| Driver | id, companyId, createdAt, updatedAt, version; name, phone, email, status opcionais. Restaurante/servidor administra. | User/Membership são identidade distinta; bike/veículo fica operacional separado. | R bikes; perfil/meta M identifica o executor local, sem alterar cadastro. Contato é PII. | JSONB/revisão canônica. Não há evidência para canonicalizar bike como entidade independente. |
+| Route | id, companyId, createdAt, updatedAt, version, deliveryIds obrigatórios; 0..500 IDs; stops/origin/status opcionais. Restaurante planeja. | deliveryIds é fonte única: Route contém 0..N e Delivery está em no máximo uma Route não tombstonada. Não há Delivery.routeId inverso. Alterações ficam em audit_log. | R routes; M consome snapshot; indisponibilidade de rede conserva última projeção. | JSONB, CHECK de UUID/duplicidade, GIN parcial e validação transacional de existência/tenant/concorrência no sync-service. Advisory lock protege mudanças simultâneas. |
+| Delivery | id, companyId, status, createdAt, updatedAt, version; orderId/driverId, priority, timestamps de execução e distâncias opcionais. Authority dividida por campo entre Restaurante e Motoboy. | orderId tenant-safe; relação Route existe somente em deliveryIds; transições server-side; tombstone não apaga fatos. | R deliveries; M deliveries/races (races é projeção). Conflito preserva alterações locais. | JSONB, FKs/relação genérica existente, status CHECK, ownership/revisão/transição no backend, RLS/FORCE. |
+| DeliveryEvent | eventId, entity, entityId, type, occurredAt e protocolVersion; actor/payload opcionais no envelope local. Fato append-only. | Referencia Order ou Delivery; idempotência por eventId; sem update/tombstone. | R events/deliveryEvents; M deliveryEvents/outbox. Conteúdo potencialmente sensível; prazo pendente. | JSONB imutável, idempotência e RLS/FORCE existentes. |
+| LocationPoint | id, deliveryId, latitude, longitude, recordedAt; accuracyM/eventId opcionais. Motoboy escreve; Restaurante lê. | Referência Delivery; latitude [-90,90], longitude [-180,180]. | R/M locations; GPS sensível. Somente ponto confirmado pode ser compactado localmente após 30 dias; pending/conflict permanece. | JSONB e FK genérica tenant-scoped; nenhum índice geoespacial sem consulta definida. Retenção server-side/consentimento dependem de política. |
+| DeliveryProof | id, deliveryId, createdAt, media obrigatórios; kind/note/revisão opcionais. Motoboy cria; Restaurante lê. | deliveryId canônico; correção é nova prova/fato. | R/M proofs e assinatura PNG em race legado. Data URL legada permanece local/backup; sem perda. | media exige image/png ou image/jpeg, até 8 MiB, SHA-256 e storageRef com provider/objectKey. API rejeita Data URL sem blob storage. |
+| Earning | id, companyId, amountMinor inteiro, currency ISO explícita, createdAt/updatedAt/version; deliveryId, driverId, components e rule opcionais. Restaurante calcula/escreve; Motoboy consulta. | Alias de Delivery/Driver validado; revisão server-side. | R/M earnings; sem recálculo/autoridade no Motoboy; dados financeiros sensíveis. | JSONB + checks de inteiro seguro/moeda/componentes. Sem fórmula fixa. Entrada legada decimal é adaptada para centavos BRL; o registro canônico só guarda amountMinor/currency. |
+
+### IndexedDB e backup/restore
+
+- Não foi necessário adicionar stores, índices ou elevar DB_VERSION no Registro 0039; as migrations explícitas 0038 preservam dados legados e já suportam o modelo v1.
+- Backup Local-First v1 inclui snapshots de todas as stores em ambos os apps e metadata do banco/aplicação. Sanitização recursiva remove senha/hash, sessão/cookie, CSRF, MFA, token, autorização e secrets. Não grava segredo novo.
+- Restore v1 é merge explícito, não sobrescrevente, transacional em todas as stores. Chaves existentes são preservadas mesmo que o conteúdo do backup difira; só chaves ausentes são adicionadas. Isso conserva outbox pending, conflicts, tombstones e settings atuais. Import legado versão 8 é reconhecido pelo adaptador. Nenhum modo replace é oferecido.
+- Backup é sensível e atualmente plaintext. Conteúdo Data URL legado permitido é PNG/JPEG até 8 MiB por objeto. Export cifrado depende de decisão segura de chave/UX e permanece bloqueado sem inventar senha.
+
+### PostgreSQL e retenção
+
+- Migrations 0001–0008 ficaram intactas. Migration 0009 adicionou função/constraint valid_route_delivery_ids, checks condicionais para amountMinor/currency/components e GIN parcial de deliveryIds. Migration 0010 concedeu somente EXECUTE dessa função imutável a rotamoto_app, necessário porque CHECKs executam no runtime. Ownership segue rotamoto_migrator; runtime sem DDL, BYPASSRLS ou grants de leitura de audit_log.
+- Entidades de domínio permanecem em domain_records JSONB. Não foi criada join table: Route.deliveryIds é a relação canônica única, com integridade referencial/tenant/uniqueness validada na transação de push e alterações históricas em audit_log. PostgreSQL mantém RLS/FORCE.
+- Retenção implementada anteriormente: inbox local mantém até 1.500 eventos reconciliados; ACKs de outbox e GPS confirmados podem ser compactados após 30 dias. Pending, conflito não resolvido, tombstone útil, fato DeliveryEvent e aliases necessários não são removidos. Restaurante tem limpeza manual de logs locais com configuração de 365 dias.
+- PII, GPS, fotos/assinaturas, audit e retenção server-side de inbox/outbox/aliases não recebem prazo jurídico inventado. Consentimento, eliminação e retenção operacional são decisões pendentes; não bloqueiam F1.
+
+**Classificação da F1:** implementação concluída; Browser QA/IndexedDB real pendente em F9. Blob storage externo e backup cifrado são capacidades não ativadas, isoladas e documentadas; não deixam F1 em aberto.

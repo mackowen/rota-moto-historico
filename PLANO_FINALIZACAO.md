@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0038, os dois checkouts em `codex/setup-workflow`, o contrato sincronizado e inspeções read-only do PostgreSQL oficial. **Estado:** F1 em execução; F1.1 e a infraestrutura segura de upgrade IndexedDB foram concluídas no Registro 0038.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0039, os dois checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); Browser QA/IndexedDB real permanece em F9.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -13,17 +13,24 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 - **Legado:** estrutura mantida para compatibilidade/migração, sem autoridade canônica.
 - **Externo:** requer fornecedor, domínio/HTTPS, credencial, decisão operacional ou ambiente fora dos repositórios.
 
-A inspeção de IndexedDB foi estática: os bancos de usuários não foram abertos nem modificados. Não se executou Browser QA, npm test amplo ou test:postgres amplo nesta revisão. PostgreSQL foi consultado somente em transações read-only e pelo mecanismo pgpass existente; não se inspecionaram credenciais. `migrate.js status` confirmou 0001–0008 aplicadas. A role runtime não pode ler `schema_migrations`; o status foi consultado com `rotamoto_migrator`.
+A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável
+## Estado atual verificável após o Registro 0039
+
+- Restaurante: `codex/setup-workflow` @ `40f712f1dc62dc7e2cbda227068acd2f530dca55`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `89deced058173161cef7a3604b0996d97ef032f7`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- `main` dos apps não foi alterada; nenhum push foi feito.
+- PostgreSQL oficial: migrations 0001–0010 aplicadas; 0009 adiciona checks monetários e de Route, função de validação, índice GIN; 0010 concede somente EXECUTE para validação de constraint no runtime.
+
+As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da F1 foram atualizadas pelos Registros 0038–0039 e pela seção F1 vigente.
 
 | Área | Estado em 2026-10-04 | Resumo |
 |---|---|---|
-| Restaurante | Parcial, branch limpa `codex/setup-workflow`, HEAD `df562f7fd26fb93a2f3c857234987fa1d34800c9` | UI, integrações e IndexedDB maduros para operação local; sync canônico reconciliado. Identidade visual/operacional e administração server-side não integradas. |
-| Motoboy | Parcial, branch limpa `codex/setup-workflow`, HEAD `6a1574f6a72e5ed87b0b8cbf16a3c90533d68b22` | Operação local, GPS/provas/eventos e sync reconciliado. Identidade visual/operacional, administração e consolidação de dados ainda incompletas. |
-| PostgreSQL oficial | Parcial, PostgreSQL 18.6 em `127.0.0.1:5432`, banco `rotamoto` | Migrações 0001–0008 aplicadas; 20 tabelas, 12 relações tenant-scoped com RLS ENABLE/FORCE, 50 índices e 258 constraints catalogadas. Modelo de domínio usa `domain_records` JSONB genérico. |
+| Restaurante | Parcial, branch limpa `codex/setup-workflow`, HEAD `40f712f1dc62dc7e2cbda227068acd2f530dca55` | F1 implementada; fluxo de identidade, administração e produção seguem em fases posteriores. |
+| Motoboy | Parcial, branch limpa `codex/setup-workflow`, HEAD `89deced058173161cef7a3604b0996d97ef032f7` | F1 implementada; identidade visual/operacional e fluxos restantes seguem em fases posteriores. |
+| PostgreSQL oficial | Parcial, PostgreSQL 18.6 em `127.0.0.1:5432`, banco `rotamoto` | Migrations 0001–0010 aplicadas; modelo de domínio continua em `domain_records` JSONB com novas garantias para Route/Earning. |
 | API/backend | Parcial, loopback | Identidade e sync HTTP existem; autorização/session/CSRF e role split foram testados. Falta administração operacional completa, frontend de identidade, processamento durável de integrações e operação de produção. |
-| Contrato | Parcialmente completo | `CONTRACT.md` e `contract.js` sincronizados para v1 e DEC-0006 define autoridade/ACK. A relação Route→Delivery e alguns campos/estados ainda não têm semântica suficiente para persistência tipada. |
+| Contrato | F1 concluída | `CONTRACT.md` e `contract.js` byte a byte idênticos nos apps; schemas v1 fecham as entidades do escopo F1 e regras Route/Earning/mídia. |
 | QA final | Pendente | CDP existe, mas QA end-to-end integrado deve ocorrer após fechamento dos fluxos e depende de runtime Chromium/Termux estável. |
 
 ## Matriz de dados: IndexedDB ↔ PostgreSQL ↔ contrato/API
@@ -34,7 +41,7 @@ A inspeção de IndexedDB foi estática: os bancos de usuários não foram abert
 | User/Driver | `users`, `profiles`, cadastro local de bikes/driver | perfil/configuração local | `users`, `credentials`, `memberships`, roles/permissions; Driver em `domain_records` conforme contrato | Parcial. Separar identidade, membership, cadastro administrativo de Driver e preferências/execução locais; fluxo de membros e gestão não tem UI/API completa. |
 | Order | `orders` | não há store de pedidos dedicado; dados chegam em cache/projeções da entrega | `domain_records(Order)`; escrita autoritativa Restaurante | Parcial. Especificar projeção mínima e ligação segura da Order canônica na experiência Motoboy; preservar dados comerciais. |
 | Delivery | `deliveries` e projeções relacionadas | `deliveries` mais `races` como projeção operacional | `domain_records(Delivery)` com revisão, ownership por campo e transições | Parcial. Diferenças de modelos e campos locais exigem mapeamento/versionamento; não há LWW. `races` é derivado/local. |
-| Route | `routes` e planejamento | sem store canônico próprio; rota recebida é cacheada | `domain_records(Route)`, escrita/plano Restaurante | Parcial. Relação Route→Delivery não está definida; não inventar vínculo. |
+| Route | `routes` e planejamento | sem store canônico próprio; rota recebida é cacheada | `domain_records(Route)`, escrita/plano Restaurante | A auditoria inicial dizia “não definida”; fechada no Registro 0039 por `Route.deliveryIds`, sem campo inverso. |
 | DeliveryEvent | `deliveryEvents`/`events` | `deliveryEvents` | `domain_records`, append-only, imutável e idempotente por `eventId` | Completo no contrato/sync; verificar mapeamentos legados e visualização/consulta operacional na fase de fluxo/QA. |
 | LocationPoint | `locations` | `locations` | `domain_records`, escrita Motoboy e leitura Restaurante | Parcial operacional. Política de retenção/privacidade, volume e consulta agregada ainda precisam definição antes de produção. |
 | DeliveryProof | `proofs` | `proofs` | `domain_records`, escrita Motoboy e leitura Restaurante | Parcial. Contrato de metadados existe; armazenamento/limites de binários, política de retenção e exportação operacional precisam fechar antes de produção. |
@@ -51,7 +58,7 @@ A inspeção de IndexedDB foi estática: os bancos de usuários não foram abert
 
 ### PostgreSQL e evolução de schema
 
-O catálogo consultado em modo read-only mostrou schema `public`, 20 tabelas (incluindo ledger), 12 tabelas tenant-scoped com policy e RLS ENABLE/FORCE, 50 índices e 258 constraints. A política de default-deny é reforçada pela role `rotamoto_app` sem DDL/ledger; ownership/migrations pertencem a `rotamoto_migrator`. Migrations 0001–0008 estão aplicadas e o runner existente implementa transação, advisory lock, checksums, detecção de migration ausente e rollback conforme Registros 0030/0033.
+O catálogo consultado em modo read-only no Registro 0037 mostrava schema `public`, 20 tabelas, 50 índices e 258 constraints. Após a F1, migrations 0001–0010 estão aplicadas; roles e RLS permanecem conforme Registros 0030/0033. O runner preserva transação, advisory lock, checksums, detecção de migration ausente e rollback.
 
 `companies`, identidade/RBAC, integrações, aliases e inbox/outbox têm tabelas relacionais. Os tipos de domínio compartilhado, exceto Company, residem em `domain_records` com JSONB, UUID canônico, tenant, revisão, timestamps e tombstone; há integridade genérica/tenant e trigger de imutabilidade para eventos, mas não colunas/FKs tipadas por entidade nem validação SQL de todos os payloads/estados. Isso é uma decisão deliberada do DEC-0005 até que o contrato de campos amadureça. Próxima evolução deve começar por matriz de payloads e invariantes, criando migrations aditivas apenas quando contrato e consultas justificarem; não alterar migrations aplicadas nem criar tabelas artificiais.
 
@@ -92,22 +99,23 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F1 — Modelo de dados definitivo e evolução Local-First
 
-- **Estado:** Parcial. F1.1 (matriz de entidade/campo e decisão JSONB/relacional) concluída no Registro 0038. Registry e upgrade aditivo IndexedDB também implementados. Sync/reconciliação 0034–0036 continua concluído e não foi reimplementado.
+- **Estado:** Implementação concluída. Classificação: B — implementação concluída / Browser QA pendente para F9. F1.1 foi fechada no Registro 0038; F1.2 no Registro 0039. O sync/reconciliação dos Registros 0034–0036 foi preservado.
 - **Checklist desta fase:**
   - [x] F1.1: matriz entidade/campo e authority entre contrato, ambos IndexedDBs, PostgreSQL/API e sync.
   - [x] Auditar as stores, versões e caminhos de upgrade dos dois IndexedDBs; implementar registry incremental e índices seguros sem regravar dados.
   - [x] Revisar migrations 0001–0008 e schema instalado em read-only; manter JSONB quando ainda não há ganho concreto para normalização.
   - [x] Classificar dados sensíveis e explicitar retenções confirmadas versus políticas pendentes.
-  - [ ] Definir schema integral dos campos ainda incompletos e constraints seguras por entidade.
-  - [ ] Fechar Route→Delivery, moeda/fórmula de Earning, política de retenção/media, compatibilidade de import/backup e validação com IndexedDB real.
+  - [x] Fechar schemas canônicos e constraints seguras por entidade.
+  - [x] Fechar Route→Delivery, moeda segura do Earning, modelo de prova/mídia e backup/restore sem sobrescrita.
+  - [x] Aplicar e testar constraints PostgreSQL aditivas 0009–0010; manter o registry IndexedDB 0038 sem bump desnecessário.
 - **Concluído no Registro 0038:** matriz versionada em `MODELO_DADOS.md` cobrindo domínio, identidade, sync e segurança; authority, stores, PG/API/sync, IDs/revisões/relações/constraints, offline, legado, sensibilidade e retenção; revisão read-only migrations 0001–0008/schema instalado; decisão de manter JSONB onde campos completos não estão definidos; registry IndexedDB com versão final Restaurante 4→6 e Motoboy 5→7, índices não únicos, marker e upgrade abortável sem regravar registros.
-- **Ainda aberto em F1:** schema completo de Order/Route/Driver/LocationPoint/DeliveryProof/Earning; Route→Delivery; moeda/fórmula Earning; retenção/consentimento/eliminação; mídia; migração users/profiles/bikes; retenção inbox/outbox/aliases; formato e restore integral seguro de backup; validar upgrade/import com IndexedDB real/fixtures em QA posterior.
-- **Tarefas seguintes:** completar campos/normalizações com fixtures e evidência; decidir constraints/tabelas/migrations aditivas apenas onde contrato estável e ganho concreto existirem. Não normalizar JSONB por estética.
-- **Componentes:** `CONTRACT.md`, `contract.js`, `DECISOES.md` DEC-0005/0006; Restaurante `app.js` e stores `rota-moto-restaurante-local-v30`; Motoboy `app.js` e DB `RotaMotoDB`; migrations em Restaurante `backend/postgres/migrations/0001–0008`; `backend/domain/sync-service.js`.
-- **Dependências:** decisões de campos/semântica podem ser feitas por comparação de código, exceto Route→Delivery, retenção de dados sensíveis e exigências regulatórias/operacionais.
-- **Bloqueios externos:** nenhum para inventário e migrações locais; retenção final de geolocalização/provas precisa política do produto/privacidade.
-- **Conclusão objetiva:** cada campo de entidade tem autoridade, validação e mapeamento nos quatro lados; fixtures antigas migram sem perda; constraints e RLS testadas por tenant; nenhum payload válido é rejeitado sem código de erro estável. F1 só fecha após resolver ou isolar explicitamente os itens em aberto e testar upgrade/backup local.
-- **Testes:** registry/upgrade dirigidos passaram em ambos (fresh e versão imediatamente anterior simulados, sentinel preservado); lifecycle de storage Motoboy, `node --check` e `git diff --check`. Sem suite ampla/browser. Ao fechar F1: migration clean/replay/rollback; IndexedDB upgrade com fixtures legadas; RLS/constraints/idempotência/tombstone/conflito/offline.
+- **Concluído no Registro 0039:** schemas compartilhados, Route→Delivery, Earning em unidades monetárias inteiras, referência de mídia, migrations PostgreSQL 0009–0010, backup v1 integral e merge seguro. F1 não depende de decisão externa para sua conclusão estrutural.
+- **Limites não bloqueantes:** blob storage real e backup cifrado dependem de provider e decisão segura de chave/UX. Retenção legal/operacional de GPS, PII, foto/assinatura e audit depende de política aprovada. Bikes e users/profiles continuam estruturas locais sem migração conceitual inventada.
+- **Componentes:** `CONTRACT.md`, `contract.js`, `DECISOES.md` DEC-0005/0006; Restaurante `app.js`/`backup-format.js` e stores `rota-moto-restaurante-local-v30`; Motoboy `app.js`/`backup-format.js` e DB `RotaMotoDB`; migrations Restaurante `backend/postgres/migrations/0001–0010`; `backend/domain/sync-service.js` e `media-storage.js`.
+- **Dependências:** nenhum bloqueio externo impede fechar o schema v1; validação real do IndexedDB segue em F9.
+- **Bloqueios externos:** blob storage cifrado, export cifrado e política de retenção dependem de infraestrutura/decisão próprias, sem bloquear F1.
+- **Conclusão objetiva:** modelo estrutural v1 implementado; PostgreSQL mantém JSONB com constraints/índices somente onde há ganho concreto, preservando RLS/FORCE e roles. Browser QA real foi adiado para F9 e não mantém F1 aberta.
+- **Testes:** ver Registro 0039: schemas/backup, integração PostgreSQL, suites finais dos dois apps, checks de sintaxe e diff. Sem Browser QA nesta etapa.
 - **Browser QA:** não para schema; sim em F9 para upgrade/recovery nos clientes reais.
 
 ### F2 — Backend/API e operação de domínio
@@ -148,7 +156,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 - **Estado:** Parcial; operações locais de pedidos, planejamento, atribuição, motos, rotas, relatórios e eventos existem; autoridade/sync com servidor ainda sem identidade UI.
 - **Lacunas/tarefas:** mapear cada fluxo e estado; pedidos externos→Order local/canônico; atribuição/cancelamento de Delivery sem editar fatos de execução; fatos recebidos Motoboy; indicadores financeiros derivados de Earning autoritativo; casos de rede/sessão/rejected/conflict/tombstone; reconciliação de dados preexistentes.
 - **Componentes:** Restaurante `app.js`, stores orders/deliveries/bikes/routes/events/deliveryEvents/earnings; adapters e sync transport/reconciler.
-- **Dependências:** F1/F2 e login F3 para sync autenticado; provider F4 só bloqueia pedidos externos reais.
+- **Dependências:** modelo F1 concluído; API F2 e login F3 para sync autenticado; provider F4 só bloqueia pedidos externos reais.
 - **Bloqueios externos:** credenciais e homologação para importar pedidos reais.
 - **Conclusão objetiva:** casos de uso principais passam local/offline e online; cada transição tem feedback e auditoria; nenhuma operação local válida depende da rede; servidor mantém autoridade definida.
 - **Testes:** testes de use cases/IndexedDB/migration, API integração e regressão de pedido→Delivery→atribuição→execução→ganho.
@@ -159,7 +167,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 - **Estado:** Parcial; corridas/projeções, estados, GPS, prova, eventos e ganhos locais existem; integração de identidade/dados administrativos e UX de conflitos falta.
 - **Lacunas/tarefas:** consumir atribuição/Order/Route/cancelamento com autoridade Restaurante; garantir offline/reload e não perder fatos pendentes; separar cadastro Driver de execução; feedback de localização/prova e permissões; sincronizar eventos e refletir ACK/conflict sem duplicação; política de localização e prova.
 - **Componentes:** Motoboy `app.js`, stores deliveries/races/events/locations/proofs/earnings/meta; sync transport/reconciler; service worker/manifest.
-- **Dependências:** F1/F2/F3; Route→Delivery requer contrato antes de implementação.
+- **Dependências:** modelo F1 e API F2/F3; vínculo Route→Delivery está definido no contrato, restam os fluxos de produto.
 - **Bloqueios externos:** permissões reais do dispositivo/serviços de mapa e política de geolocalização/prova em produção.
 - **Conclusão objetiva:** receber atribuição/cancelamento e executar/registrar fatos offline, reload e retry sem perda nem autoridade cruzada; ganho é somente consulta.
 - **Testes:** transições/eventos, prova/localização, IndexedDB offline/reload, conflito/retry, permissões e regressão por estados.
@@ -200,8 +208,8 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ## Ordem definitiva recomendada
 
-1. **F1.1 — Matriz canônica:** concluída no Registro 0038; manter campos desconhecidos e Route→Delivery explicitamente abertos.
-2. **F1.2 — Fechar a parte executável do modelo local/canônico:** revisar campos de consultas/transições e formalizar backup/restore integral sem apagar sync pendente; adicionar fixtures de versões antigas; definir constraints/migrations aditivas somente para campos confirmados. F1.2 precede F2.
+1. **F1 — Modelo definitivo:** implementação concluída no Registro 0039; Browser QA/IndexedDB real fica em F9.
+2. **F2 — Backend/API:** próxima macrofase planejada, não iniciada no Registro 0039.
 3. **F2 — Validar/completar API** com schema estável, casos de uso e testes de isolamento; DDL via migrator.
 4. **F3 — Cliente e telas de identidade**, em fail-closed e com API fake; sem provisionador/bypass real.
 5. **F5 e F6 — Fechar fluxos dos apps**, preservando operação offline e autoridade.
@@ -212,13 +220,13 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-Continuar com **F1.2**: especificar backup/restore integral e seguro (os formatos atuais são parciais e Motoboy substitui races/settings), confirmar campos/transformações com fixtures legadas e revisar consultas/transições. A matriz está em `MODELO_DADOS.md` e registry de upgrade local foi implementado; não criar DDL até haver ganho baseado em schema estável. Route→Delivery e retenções sensíveis continuam abertas. Não iniciar F2 automaticamente.
+F1 foi implementada até o limite sem Browser QA. O próximo bloco planejado é F2 — revisão dos casos de uso da API e implementação orientada pelos schemas v1. F2 não foi iniciada nesta execução.
 
 ## Bloqueios externos reais versus trabalho local
 
 **Bloqueios externos reais:** primeiro owner exige operador/prova de autoridade; MFA de owner exige armazenamento seguro de segredo/KMS ou decisão operacional equivalente; convite/recovery por email exige provider/domínio; APIs reais exigem documentação oficial, conta/merchant/sandbox e credenciais de cada fornecedor; deploy exige domínio/TLS, host e operação; QA final pode sofrer encerramento de Chromium/GPU pelo Termux; avaliação de GPS/câmera requer dispositivo/permissões reais; regras de retenção de geolocalização/provas podem exigir decisão de produto/privacidade.
 
-**Trabalho que pode avançar agora:** matriz de dados e fixtures; migrações IndexedDB idempotentes; validação/constraints orientadas ao contrato; UI cliente de identidade usando APIs/fakes sem permitir login inseguro; gestão administrativa server-side protegida/fail-closed; fluxos locais do Restaurante/Motoboy; feedback de sync e conflitos; adapters e filas testadas com fakes; backup/export versionado; logging/health e runbooks; acessibilidade estática e testes automatizados. Nenhum bloqueio externo justifica interromper estes blocos independentes.
+**Trabalho que pode avançar agora:** UI cliente de identidade usando APIs/fakes sem permitir login inseguro; gestão administrativa server-side protegida/fail-closed; fluxos locais do Restaurante/Motoboy; feedback de sync e conflitos; adapters e filas testadas com fakes; logging/health e runbooks; acessibilidade estática e testes automatizados. O modelo canônico v1, migrations IndexedDB base e backup local versionado foram concluídos na F1. Nenhum bloqueio externo justifica interromper estes blocos independentes.
 
 ## Proteções de execução
 

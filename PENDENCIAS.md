@@ -1,23 +1,32 @@
 # Pendências
 
-## Atualização — Registro 0038 / F1 (2026-10-04)
+## Atualização — Registro 0039 / F1 (2026-10-04)
+
+- [x] F1 concluída como implementação. Classificação B: Browser QA/IndexedDB real segue no checkpoint F9 e não mantém a F1 aberta.
+- [x] Schemas canônicos compartilhados, Route→Delivery, Earning seguro em minor units, modelo de mídia/storageRef, migrations PostgreSQL 0009–0010 e backup Local-First v1 com merge transacional não sobrescrevente.
+- [x] Migrações IndexedDB explícitas do Registro 0038 permanecem sem bump; nenhuma estrutura local nova foi necessária.
+- [ ] Blob storage real/cifrado e backup cifrado aguardam provider e decisão de chave/UX. Retenção de GPS/PII/provas/audit aguarda política produto/legal. Estes itens são capacidades bloqueadas independentes, não impedem F1.
+- Ver [Registro 0039](REGISTROS/0039.md), [MODELO_DADOS.md](MODELO_DADOS.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
+
+## Registro 0038 — estado histórico da F1 antes da conclusão
 
 - [x] F1.1: matriz versionada das entidades/campos conhecidos, authority, local/PG/API/sync, IDs/revisões/relações, constraints/índices, offline, legado, sensibilidade e retenção criada em [MODELO_DADOS.md](MODELO_DADOS.md).
 - [x] Revisão read-only das migrations PostgreSQL 0001–0008 e schema instalado; `migrate.js status` confirmou todas aplicadas. Decidido manter entidades de domínio em JSONB até campos/consultas estarem definidos; sem migration PG nova.
 - [x] Registry de migrations IndexedDB aditivas implementado: Restaurante 4→6 e Motoboy 5→7; adiciona índices secundários não únicos e marcador versionado sem regravar registros; paths de eventos/logs corrigidos em novas migrations aditivas; aborta upgrade em erro.
 - [x] Testes dirigidos dos registries, bootstrap/upgrade de versões anteriores simulado, sentinel local preservado, lifecycle Motoboy; syntax checks e `git diff --check` passaram.
-- [ ] F1 permanece parcialmente aberta: definir o schema completo de Order/Route/Driver/LocationPoint/DeliveryProof/Earning e as constraints seguras correspondentes; não inferir campos.
-- [ ] Decidir Route→Delivery, fórmula/moeda Earning, retenção/consentimento de GPS/provas/PII/auditoria, storage e limites de mídia, import de users/profiles/bikes, retenção de inbox/outbox/aliases.
-- [ ] Definir backup/restore integral: exports atuais são parciais (Restaurante omite deliveries e stores de sync; Motoboy exporta races/settings e import substitui esses dados). Preservar pendências/tombstones/conflitos; definir validação, preview, merge/replace e transação antes de ampliar formato.
-- [ ] Validar upgrade/import com fixtures IndexedDB reais/backup legado no QA posterior; nesta execução usou-se harness de registry, sem Browser QA.
-- Não houve alteração no contrato, migrations PostgreSQL, banco, main, tags ou baselines. Ver [Registro 0038](REGISTROS/0038.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
+- [x] Os schemas, relação, moeda, mídia e backup/merge foram implementados no Registro 0039; ver a matriz vigente em MODELO_DADOS.md.
+- [x] Export/import v1 cobre todas as stores; colisões são preservadas e operações pendentes/conflitos/tombstones não são sobrescritos.
+- [x] F1.2 foi implementada no Registro 0039: schemas, Route→Delivery, Earning minor units, mídia referenciada, migrations 0009–0010 e backup/restore v1 seguro.
+- [ ] Validar upgrade/import no Chromium real no checkpoint F9; não é pendência de implementação F1.
+- Contrato e migrations/banco mudaram no Registro 0039; main, tags e baselines permaneceram intactas. Ver [Registro 0038](REGISTROS/0038.md), [Registro 0039](REGISTROS/0039.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
 
 ## Plano mestre — Registro 0037 (2026-10-04)
 
 Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não duplique trabalho concluído em 0033–0036.
 
 - [x] F1.1: matriz versionada de entidades/campos/autoridade e decisão JSONB/relacional criada; registry IndexedDB e upgrades aditivos base implementados no Registro 0038.
-- [ ] F1.2: completar schema de campos/constraints, compatibilidade de fixture/backup e decisões de retenção/Route→Delivery; ver itens abertos em MODELO_DADOS.md. Depois disso, seguir para F2 conforme o plano.
+- [x] F1.2: schemas, Route→Delivery, Earning, mídia, backup/merge e migrations aditivas concluídos no Registro 0039.
+- [ ] Validar o upgrade/import em IndexedDB real no checkpoint F9; F1 não fica aberta por essa validação.
 - [ ] F2: tipagem/API/casos de uso orientados por campos estáveis e validar RLS/transações.
 - [ ] F3: clientes/telas de login, logout, sessão, seleção de tenant, convite/recuperação e gestão server-side de usuários/permissões, sempre fail-closed onde MFA/operador faltar.
 - [ ] F5/F6: fechar fluxos Restaurante/Motoboy com identidade, estados de sync/conflito e autoridade canônica preservando offline.
@@ -25,7 +34,7 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [ ] F7: feedback de sync, configurações tenant vs locais, acessibilidade e responsividade após fluxos estabilizados.
 - [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.
 - [ ] F9: QA integrado CDP desktop/tablet/mobile e hardening depois das fases anteriores.
-- [ ] Definir Route→Delivery e retenção de localização/provas antes de criar semântica/tabelas que dependam dessas decisões.
+- Route→Delivery foi decidido e implementado em F1/Registro 0039. Retenção legal/operacional de localização/provas permanece pendente, sem prazo inventado.
 - [ ] Provider de email, primeiro operador/owner, MFA seguro, contas/documentação de fornecedores e ambiente de produção são bloqueios externos apenas para as capacidades correspondentes; continuar trabalho independente local.
 
 O inventário estático de IndexedDB não leu dados reais; não rodar Browser QA nem reimplementar sync/reconciliação 0034–0036 nesta etapa de planejamento. Ver [Registro 0037](REGISTROS/0037.md).
@@ -37,7 +46,7 @@ O inventário estático de IndexedDB não leu dados reais; não rodar Browser QA
 - [x] Outbox/inbox/syncState têm ciclo de vida, status observável, retry transitório, single-flight/Web Locks e compactação conservadora documentada.
 - [x] Bootstrap de sessão existente, retomada CSRF, sync após gravação local/retorno de conectividade/manual; operação local permanece independente de rede.
 - [ ] Implementar login visual/sessão nos dois clientes com estado fail-closed; ativação do primeiro owner permanece dependente de operador e MFA seguro.
-- [ ] Definir no contrato as relações canônicas ainda ausentes, em especial Route→Delivery, antes de materializar vínculos.
+- [x] Route→Delivery foi formalizada em F1/Registro 0039 por `Route.deliveryIds`, sem relação inversa redundante.
 - [ ] QA end-to-end via Chromium/CDP permanece para checkpoint posterior, conforme solicitação de não executar Browser QA nesta etapa.
 - [ ] Email real, domínio/TLS e serviços/credenciais de fornecedores externos continuam pendências externas independentes.
 - Ver [Registro 0036](REGISTROS/0036.md), DEC-0006 e commits Motoboy `1eb7e6a`/`6a1574f`, Restaurante `de53138`/`df562f7`.
@@ -51,7 +60,7 @@ O inventário estático de IndexedDB não leu dados reais; não rodar Browser QA
 - [x] Integrar os dois clientes aos endpoints de instalação/push/pull preservando IndexedDB e operação offline, outbox retry, ACK no `syncState`, aliases/revisões e cursor/cache em transações.
 - [x] Migration aditiva 0008 aplicada e testada; migrations 0001–0007 permaneceram intactas.
 - [x] Pull guardava snapshots/eventos antes de haver reconciliação automática; estratégia de merge que preserva edições pendentes foi implementada no Registro 0036. Não reimplementar; cobrir regressões em QA final.
-- [ ] Definir no contrato semântica/campos de relações canônicas ainda ausentes (ex.: Route→Delivery), antes de materializar esses vínculos no servidor.
+- [x] Route→Delivery e seus campos/regras de membership foram formalizados e implementados em F1/Registro 0039.
 - [ ] Email real, HTTPS/domínio de implantação e eventuais segredos/provedores externos continuam dependências externas; não bloqueiam os fluxos locais/offline nem o backend de sync loopback.
 - Ver [Registro 0035](REGISTROS/0035.md), DEC-0006 e commits Restaurante `78e10f2`, Motoboy `d88aeea`.
 
