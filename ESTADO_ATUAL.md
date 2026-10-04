@@ -5,7 +5,7 @@ Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamen
 ## Atualização — Registro 0039 (2026-10-04)
 
 - F1 implementada e encerrada na classificação **B: implementação concluída / Browser QA pendente para F9**. O plano não mantém F1 aberta por QA real posterior; F2 não foi iniciada.
-- Restaurante: `codex/setup-workflow`, HEAD `f837268a7d3510313404408982d7bdf0cf6bb440`, árvore limpa; commits F1 `40f712f` e `f837268`. Motoboy: `codex/setup-workflow`, HEAD `f1ac9388dcecf02b6ec657241e411243c8ee0654`, árvore limpa; commits F1 `89deced` e `f1ac938`.
+- Restaurante: `codex/setup-workflow`, HEAD `f837268222b351145116690c6cee7649b9a09c78`, árvore limpa; commits F1 `40f712f` e `f837268`. Motoboy: `codex/setup-workflow`, HEAD `f1ac938ca2fde6150e5f24b94b8125d466e19e24`, árvore limpa; commits F1 `89deced` e `f1ac938`.
 - Baselines preservadas: Restaurante `v5.50-ui-mobile-fix5` → `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; Motoboy `v39.6-ui-mobile-fix2` → `79c527b59d32d8b55236c62042acb868166ed4ad`. `main` dos apps não foi alterada; sem push.
 - Contrato `CONTRACT.md`/`contract.js` byte a byte idêntico nos apps. Schemas canônicos v1 atualizados; Route→Delivery representa 0..N por `Route.deliveryIds`, sem campo inverso; o backend valida tenant/existência/tombstone, exclusividade de Route ativa, serializa concorrência e audita alterações.
 - Earning usa `amountMinor` inteiro seguro, moeda explícita, componentes tipados e `rule`/`ruleVersion` opcionais; Restaurante calcula/escreve e Motoboy apenas consome. Provas usam metadata + storageRef/SHA-256, PNG/JPEG até 8 MiB; adapter de blob falha fechado enquanto não configurado e Data URL permanece somente local/legado.
