@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0039, os dois checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); Browser QA/IndexedDB real permanece em F9.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0040, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 backend/API concluída para as operações v1 definidas. Browser QA permanece em F9.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -15,12 +15,12 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 
 A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável após o Registro 0039
+## Estado atual verificável após o Registro 0040
 
-- Restaurante: `codex/setup-workflow` @ `f837268222b351145116690c6cee7649b9a09c78`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Restaurante: `codex/setup-workflow` @ `3c5cd4bb4ddab957988a3e7e7a5dd4b487092c3d`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
 - Motoboy: `codex/setup-workflow` @ `f1ac938ca2fde6150e5f24b94b8125d466e19e24`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
-- PostgreSQL oficial: migrations 0001–0010 aplicadas; 0009 adiciona checks monetários e de Route, função de validação, índice GIN; 0010 concede somente EXECUTE para validação de constraint no runtime.
+- PostgreSQL oficial: migrations 0001–0011 aplicadas; 0009 adiciona checks monetários e de Route, função de validação, índice GIN; 0010 concede somente EXECUTE para validação de constraint no runtime; 0011 concede SELECT somente em `integrations`/`external_accounts` para a consulta administrativa, sob RLS/FORCE.
 
 As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da F1 foram atualizadas pelos Registros 0038–0039 e pela seção F1 vigente.
 
@@ -120,14 +120,13 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F2 — Backend/API e operação de domínio
 
-- **Estado:** Parcial; API loopback de identidade e sync push/pull existe, com handlers separados, mas a API não cobre todas as operações humanas/administrativas.
-- **Lacunas/tarefas:** mapear casos de uso e endpoints restantes somente a partir do contrato; CRUD seguro de memberships/roles/conexões; limites e paginação; idempotência/auditoria por operação; health/readiness; worker/filas duráveis locais para providers; padronizar repositories e fronteira transacional sem refatoração ampla; rate-limit distribuído apenas se houver múltiplas instâncias.
-- **Componentes:** Restaurante `server.js`, `backend/identity/http.js`, `backend/domain/sync-service.js`, serviços identity/domain, `backend/postgres/migrate.js`, migrations e testes API.
-- **Dependências:** autorização e semantics de cada caso; identidade de operador para provisionamento. Não criar signup público.
-- **Bloqueios externos:** operação de produção requer domínio/TLS e ambiente de execução gerenciado; local loopback não é produção.
-- **Conclusão objetiva:** API cobre casos aprovados; tenant é sempre derivado da sessão; erros/logs não vazam dados; contratos e testes integração cobrem autorização/transação/duplicação.
-- **Testes:** HTTP de autorização/CSRF, tenant, payload/limites, idempotência, falha/rollback, auditoria, shutdown/health e testes PostgreSQL direcionados.
-- **Browser QA:** fluxo navegável será verificado em F9, não durante serviço headless.
+- **Estado:** **Concluída para as operações internas v1 definidas** no Registro 0040. A implementação usa HTTP → application/use cases → domain services → repositories → PostgreSQL. F1 não foi reaberta.
+- **Concluído:** inventário versionado em `rota-moto-restaurante/docs/API-v1.md`; identidade/sessão existente; health liveness/readiness com conexão curta e runtime `rotamoto_app`; leitura tenant-scoped de Order, Delivery, Route, Driver, DeliveryEvent, LocationPoint, DeliveryProof e Earning; leituras administrativas de Company, Membership, Role/Permission e estado/metadados não secretos de Integration/ExternalAccount. Filtros são allowlisted/parametrizados, paginação keyset, UUIDs e cursor validados, sessão duplicada rejeitada. Escritas operacionais continuam nos use cases de sync/outbox/inbox com ACK por operação, sem CRUD HTTP paralelo.
+- **Segurança:** tenant vem de sessão/identity context e RLS; RBAC por permission key; `companyId` em query rejeitado; memberships e integrações são protegidos por permissão; external account não expõe `secret_ref`; sem novo endpoint público. Erros padronizam code/message/requestId; logs estruturados guardam método/path/status/duração/error code sem payload; readiness sanitiza falhas; rate limit por IP/endpoint. `rotamoto_app` segue sem DDL e ganhou somente SELECT em duas tabelas tenant-scoped.
+- **Migration:** `0011_runtime_integration_read`, up/down versionados e aplicada pelo `rotamoto_migrator`; sem alteração de 0001–0010. Verificadas leituras, ausência de escrita e RLS/FORCE já vigente.
+- **Ainda fora da F2:** mutações administrativas de memberships/roles e convite genérico dependem da semântica de lifecycle/RBAC que será fechada em F3; provisionamento segue sem adapter operacional e fail-closed. Nenhuma dessas rotas foi improvisada. Provider real, TLS/domínio e deploy seguem F4/F8.
+- **Testes:** `npm test` Restaurante; `npm run test:postgres` no PostgreSQL oficial; consultas de domínio/admin, tenant/RBAC, IDs/cursor, cookies ambíguos, health/readiness, migração/grants/rollback e erros; `node --check` dos JS alterados; `git diff --check`. Sem Browser QA.
+- **Critério:** rotas internas definidas, cases desacoplados, isolamento/RBAC, validação/erros/logs, readiness, migration/grants, docs e testes dirigidos satisfeitos. Cliente/browser continua para F3/F5/F6/F9.
 
 ### F3 — Identidade, login e RBAC nos dois clientes
 
@@ -209,18 +208,17 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 ## Ordem definitiva recomendada
 
 1. **F1 — Modelo definitivo:** implementação concluída no Registro 0039; Browser QA/IndexedDB real fica em F9.
-2. **F2 — Backend/API:** próxima macrofase planejada, não iniciada no Registro 0039.
-3. **F2 — Validar/completar API** com schema estável, casos de uso e testes de isolamento; DDL via migrator.
-4. **F3 — Cliente e telas de identidade**, em fail-closed e com API fake; sem provisionador/bypass real.
-5. **F5 e F6 — Fechar fluxos dos apps**, preservando operação offline e autoridade.
-6. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
-7. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
-8. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional.**
-9. **F9 — QA end-to-end e regressão final**, depois das fases anteriores.
+2. **F2 — Backend/API:** concluída no Registro 0040 para operações internas v1; não duplicar sync nem reimplementar API read.
+3. **F3 — Cliente e telas de identidade/admin**, em fail-closed e com API fake; fechar as políticas de alteração membership/roles e convites.
+4. **F5 e F6 — Fechar fluxos dos apps**, integrando leituras API/sync e preservando operação offline e autoridade.
+5. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
+6. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
+7. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional.**
+8. **F9 — QA end-to-end e regressão final**, depois das fases anteriores.
 
 ### Próximo bloco recomendado
 
-F1 foi implementada até o limite sem Browser QA. O próximo bloco planejado é F2 — revisão dos casos de uso da API e implementação orientada pelos schemas v1. F2 não foi iniciada nesta execução.
+F1 foi implementada até o limite sem Browser QA. F2 está concluída para o contrato/backend v1. O próximo bloco recomendado é F3 — sessão/login/admin nos clientes e políticas seguras de membership/roles, sem ativar operador, MFA ou entrega externa fictícios.
 
 ## Bloqueios externos reais versus trabalho local
 

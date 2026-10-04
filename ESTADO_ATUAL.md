@@ -1,6 +1,16 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0039.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0040.
+
+## Atualização — Registro 0040 (2026-10-04)
+
+- F2 concluída para as operações internas v1 definidas: Restaurante adicionou consulta tenant-scoped para Order, Delivery, Route, Driver, DeliveryEvent, LocationPoint, DeliveryProof e Earning; leitura administrativa de Company, memberships, roles/permissões e metadados de integrações; health/readiness PostgreSQL; erros/request IDs/logs estruturados e documentação `rota-moto-restaurante/docs/API-v1.md` no app.
+- Todas as leituras derivam tenant da sessão e verificam permission key; RLS/FORCE permanece defesa adicional. Não foi criado CRUD de domínio paralelo ao sync. As mutações de domínio seguem nos serviços/use cases de sync com ACK por operação. A API administrativa não revela `secret_ref` ou credenciais.
+- Migration `0011_runtime_integration_read` concedeu somente SELECT em `integrations` e `external_accounts` a `rotamoto_app`; sem grants de escrita ou alteração de 0001–0010. Aplicada com `rotamoto_migrator`; status confirmou 0001–0011. PostgreSQL oficial continua 18.6 em `127.0.0.1:5432/rotamoto`.
+- Testes: `npm test` e `npm run test:postgres` Restaurante passaram contra a instância oficial; cobrem migração/rollback/reapply, RLS, privilégios, endpoints, tenant, RBAC, sessão, sync e readiness. `node --check` em todos os JS alterados e `git diff --check` passaram. Sem Browser QA; sem dados sintéticos persistidos.
+- Restaurante: `codex/setup-workflow`, commit `3c5cd4bb4ddab957988a3e7e7a5dd4b487092c3d`, árvore limpa. Motoboy sem alteração, branch `codex/setup-workflow`, HEAD permanece `f1ac938ca2fde6150e5f24b94b8125d466e19e24`, árvore limpa.
+- Baselines intactas: Restaurante tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`; Motoboy tag peel `79c527b59d32d8b55236c62042acb868166ed4ad`. `main` dos dois apps não alterada; nenhum push.
+- Mutação de memberships/roles e convites genéricos requer política de lifecycle/RBAC da F3; primeiro operador/email/MFA continuam fail-closed. Integrações reais/deploy permanecem F4/F8. F2 não fica aberta por essas fases. Ver [Registro 0040](REGISTROS/0040.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
 
 ## Atualização — Registro 0039 (2026-10-04)
 

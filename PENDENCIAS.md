@@ -1,5 +1,16 @@
 # Pendências
 
+## Atualização — Registro 0040 / F2 (2026-10-04)
+
+- [x] Inventário e documentação versionada da API v1 do Restaurante em `docs/API-v1.md`, com métodos, autenticação, permission keys, entradas, saídas, erros e idempotência.
+- [x] Health liveness/readiness, request ID, logs estruturados sem payload, respostas de erro estáveis, rate limit e consultas autenticadas/paginadas por entidade com tenant/RLS/RBAC.
+- [x] Administração de leitura para company, memberships, roles/permissions e status de integrações sem secrets. Operações de domínio mutáveis permanecem nos casos de uso do sync Local-First.
+- [x] Migration `0011_runtime_integration_read`: runtime recebeu somente SELECT em integrations/external_accounts; RLS/FORCE mantida, sem DDL/escrita runtime.
+- [x] Testes HTTP/PostgreSQL de permissões, tenant, cursor/IDs, métodos, estado readiness, grants e migration rollback/reapply; `npm test`, `npm run test:postgres`, checks JS e `git diff --check` passaram.
+- [ ] Mutação de memberships/roles e convite genérico entram em F3 após fechar lifecycle, proteção contra escalada e UX; provisionamento do primeiro owner continua fail-closed sem adapter operacional. Isso não bloqueia as operações de domínio v1 cobertas em F2.
+- [ ] Browser QA das novas superfícies e dos clientes permanece para F9; não foi executado nesta etapa.
+- F2 classificada **concluída para operações internas v1 definidas**. Próximo bloco recomendado: F3, sem iniciar nesta execução. Ver [Registro 0040](REGISTROS/0040.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
+
 ## Atualização — Registro 0039 / F1 (2026-10-04)
 
 - [x] F1 concluída como implementação. Classificação B: Browser QA/IndexedDB real segue no checkpoint F9 e não mantém a F1 aberta.
@@ -27,7 +38,7 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [x] F1.1: matriz versionada de entidades/campos/autoridade e decisão JSONB/relacional criada; registry IndexedDB e upgrades aditivos base implementados no Registro 0038.
 - [x] F1.2: schemas, Route→Delivery, Earning, mídia, backup/merge e migrations aditivas concluídos no Registro 0039.
 - [ ] Validar o upgrade/import em IndexedDB real no checkpoint F9; F1 não fica aberta por essa validação.
-- [ ] F2: tipagem/API/casos de uso orientados por campos estáveis e validar RLS/transações.
+- [x] F2: API v1 interna definida e implementada para identidade, domínio read, sync write, administração de leitura, health/readiness, RBAC/RLS e erros/logs; migration/grants e documentação concluídos no Registro 0040.
 - [ ] F3: clientes/telas de login, logout, sessão, seleção de tenant, convite/recuperação e gestão server-side de usuários/permissões, sempre fail-closed onde MFA/operador faltar.
 - [ ] F5/F6: fechar fluxos Restaurante/Motoboy com identidade, estados de sync/conflito e autoridade canônica preservando offline.
 - [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.
