@@ -30,7 +30,7 @@ No Registro 0048, `npm test` passou nos dois apps, `npm run test:postgres` passo
 
 ## Estado atual verificável após a rodada de correções do Registro 0050
 
-- Restaurante: `codex/setup-workflow` @ `5a80a75b26c1dc3484ad51b7b7f274f407898ec8`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Restaurante: `codex/setup-workflow` @ `996144b51cb36d0d19fbbc13a352c430b8915aef`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
 - Motoboy: `codex/setup-workflow` @ `09bcf745965486e545649d875a03e77df01825d3`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
 - Restaurante `main`: `8fcd9f0ffffe37047a79834161cc1f791f20d76f`; Motoboy `main`: `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478`. Nenhuma tag/baseline mudou.
@@ -39,7 +39,7 @@ No Registro 0048, `npm test` passou nos dois apps, `npm run test:postgres` passo
 
 | Área | Estado reconciliado em 2026-10-04 | Evidência/limite |
 |---|---|---|
-| Restaurante | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `5a80a75b26c1dc3484ad51b7b7f274f407898ec8` | P1/P2 iniciais corrigidos; P3 e QA integrado ainda pendentes. |
+| Restaurante | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `996144b51cb36d0d19fbbc13a352c430b8915aef` | P1/P2 iniciais corrigidos; P3 e QA integrado ainda pendentes. |
 | Motoboy | Implementação F1–F8 pronta para validação integrada; branch limpa `codex/setup-workflow`, HEAD `09bcf745965486e545649d875a03e77df01825d3` | P1/P2 iniciais corrigidos; P3 e QA integrado ainda pendentes. |
 | PostgreSQL oficial | Estruturalmente compatível no estado instalado | Migrations 0001–0013 status aplicadas; suite de migration/RLS/identity/domain/sync passou sem DDL nesta reconciliação. Não é instância de produção. |
 | API/backend | Coerente para API v1 definida | Sessão/CSRF/RBAC/tenant/sync/Driver e fail-closed de providers cobertos por testes; email/MFA/provider/produção externos permanecem indisponíveis. |

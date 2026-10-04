@@ -1,8 +1,8 @@
 ## Atualização — Registro 0050 / F9 correção dirigida P1/P2 (2026-10-04)
 
 - Motoboy: `codex/setup-workflow` @ `09bcf745965486e545649d875a03e77df01825d3`, árvore limpa; main `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478` e baseline `79c527b59d32d8b55236c62042acb868166ed4ad` intactas.
-- Restaurante: `codex/setup-workflow` @ `5a80a75b26c1dc3484ad51b7b7f274f407898ec8`, árvore limpa; main `8fcd9f0ffffe37047a79834161cc1f791f20d76f` e baseline `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intactas.
-- Corrigidos os quatro achados P1/P2 do Registro 0049; `npm test` e CDP dirigido passaram. Sem push, PostgreSQL/schema/administração ou dados de QA persistidos.
+- Restaurante: `codex/setup-workflow` @ `996144b51cb36d0d19fbbc13a352c430b8915aef`, árvore limpa; main `8fcd9f0ffffe37047a79834161cc1f791f20d76f` e baseline `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intactas.
+- Corrigidos os quatro achados P1/P2 do Registro 0049; um follow-up também impede que 401 obsoleto de `/identity/session` expire identidade posterior. `npm test` e CDP dirigido passaram. Sem push, PostgreSQL/schema/administração ou dados de QA persistidos.
 - P3 não alterados. F9 continua aberta. Evidências, contagens e detalhes em [Registro 0050](REGISTROS/0050.md).
 
 ## Atualização — Registro 0047 / F8 preparação operacional (2026-10-04)
