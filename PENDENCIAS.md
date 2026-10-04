@@ -1,11 +1,24 @@
 # Pendências
 
+## Atualização — Registro 0038 / F1 (2026-10-04)
+
+- [x] F1.1: matriz versionada das entidades/campos conhecidos, authority, local/PG/API/sync, IDs/revisões/relações, constraints/índices, offline, legado, sensibilidade e retenção criada em [MODELO_DADOS.md](MODELO_DADOS.md).
+- [x] Revisão read-only das migrations PostgreSQL 0001–0008 e schema instalado; `migrate.js status` confirmou todas aplicadas. Decidido manter entidades de domínio em JSONB até campos/consultas estarem definidos; sem migration PG nova.
+- [x] Registry de migrations IndexedDB aditivas implementado: Restaurante 4→6 e Motoboy 5→7; adiciona índices secundários não únicos e marcador versionado sem regravar registros; paths de eventos/logs corrigidos em novas migrations aditivas; aborta upgrade em erro.
+- [x] Testes dirigidos dos registries, bootstrap/upgrade de versões anteriores simulado, sentinel local preservado, lifecycle Motoboy; syntax checks e `git diff --check` passaram.
+- [ ] F1 permanece parcialmente aberta: definir o schema completo de Order/Route/Driver/LocationPoint/DeliveryProof/Earning e as constraints seguras correspondentes; não inferir campos.
+- [ ] Decidir Route→Delivery, fórmula/moeda Earning, retenção/consentimento de GPS/provas/PII/auditoria, storage e limites de mídia, import de users/profiles/bikes, retenção de inbox/outbox/aliases.
+- [ ] Definir backup/restore integral: exports atuais são parciais (Restaurante omite deliveries e stores de sync; Motoboy exporta races/settings e import substitui esses dados). Preservar pendências/tombstones/conflitos; definir validação, preview, merge/replace e transação antes de ampliar formato.
+- [ ] Validar upgrade/import com fixtures IndexedDB reais/backup legado no QA posterior; nesta execução usou-se harness de registry, sem Browser QA.
+- Não houve alteração no contrato, migrations PostgreSQL, banco, main, tags ou baselines. Ver [Registro 0038](REGISTROS/0038.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
+
 ## Plano mestre — Registro 0037 (2026-10-04)
 
 Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não duplique trabalho concluído em 0033–0036.
 
-- [ ] F1.1: matriz versionada de campos/autoridade entre CONTRACT, IndexedDB Restaurante/Motoboy, PostgreSQL/API e formatos legados; produzir fixtures e proposta de upgrade sem migration prematura.
-- [ ] F1.2/F2: decidir tipagem/constraints/migrations aditivas a partir da matriz; completar casos de uso/API e validar RLS/transações.
+- [x] F1.1: matriz versionada de entidades/campos/autoridade e decisão JSONB/relacional criada; registry IndexedDB e upgrades aditivos base implementados no Registro 0038.
+- [ ] F1.2: completar schema de campos/constraints, compatibilidade de fixture/backup e decisões de retenção/Route→Delivery; ver itens abertos em MODELO_DADOS.md. Depois disso, seguir para F2 conforme o plano.
+- [ ] F2: tipagem/API/casos de uso orientados por campos estáveis e validar RLS/transações.
 - [ ] F3: clientes/telas de login, logout, sessão, seleção de tenant, convite/recuperação e gestão server-side de usuários/permissões, sempre fail-closed onde MFA/operador faltar.
 - [ ] F5/F6: fechar fluxos Restaurante/Motoboy com identidade, estados de sync/conflito e autoridade canônica preservando offline.
 - [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.

@@ -1,6 +1,15 @@
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0037.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0038.
+
+## Atualização — Registro 0038 (2026-10-04)
+
+- F1.1 concluída: [MODELO_DADOS.md](MODELO_DADOS.md) mapeia entidades, campos conhecidos/desconhecidos, authority CRUD/tombstone, IndexedDB, PostgreSQL/API/sync, IDs/revisões/relations/constraints/indexes, offline/conflict/legacy, sensibilidade e retenção.
+- Restaurante: `codex/setup-workflow`, HEAD `3efe7c3c8bb866d8c028a91ada00d03efa346914` (base `09f0c8c` + correção `3efe7c3`); DB_VERSION 4→6 com registry explícito e índices secundários não únicos.
+- Motoboy: `codex/setup-workflow`, HEAD `a99356e1472e94b958c63bbebe985d3505bc4fa7` (base `f852b6d` + correção `a99356e`); DB_VERSION 5→7 com registry, índices e atualização do cache/service worker. Os upgrades não regravam/apagam registros; marker fica em meta e erro aborta versionchange transaction.
+- PostgreSQL oficial 18.6 verificado read-only/status via `rotamoto_migrator`; migrations 0001–0008 aplicadas. Nenhum dado/schema/role foi alterado. Nenhuma migration PostgreSQL nova; domínio permanece JSONB enquanto campos/consultas não justificarem normalização. CONTRACT/contract.js permaneceram idênticos nos dois repos.
+- Testes dirigidos: migration registry em ambos; lifecycle storage Motoboy; `node --check` dos JS/testes/service worker alterados; validação package JSON e `git diff --check` passaram. Sem `npm test` amplo, `test:postgres` amplo ou Browser QA. Banco local real/browser não foi aberto.
+- F1 está **parcial**, não concluída: além de Route→Delivery, schema de algumas entidades e retenção, exports atuais são parciais e restore seguro de estado sync precisa semântica/testes. Próximo bloco permanece F1.2, sem iniciar F2. Ver [Registro 0038](REGISTROS/0038.md) e [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md).
 
 ## Atualização — Registro 0037 (2026-10-04)
 

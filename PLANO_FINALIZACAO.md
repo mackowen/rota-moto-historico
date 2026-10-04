@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0036, os dois checkouts em `codex/setup-workflow`, o contrato sincronizado e uma inspeção read-only do PostgreSQL oficial. **Estado:** planejamento; nenhuma implementação de fase foi iniciada neste registro.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0038, os dois checkouts em `codex/setup-workflow`, o contrato sincronizado e inspeções read-only do PostgreSQL oficial. **Estado:** F1 em execução; F1.1 e a infraestrutura segura de upgrade IndexedDB foram concluídas no Registro 0038.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -92,13 +92,22 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F1 — Modelo de dados definitivo e evolução Local-First
 
-- **Estado:** Parcial; sync/reconciliação v1 concluídos em 0034–0036; bancos locais, legado e JSONB ainda não reconciliados campo a campo.
-- **Lacunas/tarefas:** matriz CONTRACT↔stores↔payload PostgreSQL; regras tipadas por entidade; campos requeridos/opcionais/enumerações; índice por consultas reais; relação Route→Delivery apenas após decisão contratual; política de retenção de localização/provas; migrações IndexedDB nomeadas/idempotentes; fixtures/export de versões antigas; mapeamento de IDs/tombstones e recuperação de conflitos.
+- **Estado:** Parcial. F1.1 (matriz de entidade/campo e decisão JSONB/relacional) concluída no Registro 0038. Registry e upgrade aditivo IndexedDB também implementados. Sync/reconciliação 0034–0036 continua concluído e não foi reimplementado.
+- **Checklist desta fase:**
+  - [x] F1.1: matriz entidade/campo e authority entre contrato, ambos IndexedDBs, PostgreSQL/API e sync.
+  - [x] Auditar as stores, versões e caminhos de upgrade dos dois IndexedDBs; implementar registry incremental e índices seguros sem regravar dados.
+  - [x] Revisar migrations 0001–0008 e schema instalado em read-only; manter JSONB quando ainda não há ganho concreto para normalização.
+  - [x] Classificar dados sensíveis e explicitar retenções confirmadas versus políticas pendentes.
+  - [ ] Definir schema integral dos campos ainda incompletos e constraints seguras por entidade.
+  - [ ] Fechar Route→Delivery, moeda/fórmula de Earning, política de retenção/media, compatibilidade de import/backup e validação com IndexedDB real.
+- **Concluído no Registro 0038:** matriz versionada em `MODELO_DADOS.md` cobrindo domínio, identidade, sync e segurança; authority, stores, PG/API/sync, IDs/revisões/relações/constraints, offline, legado, sensibilidade e retenção; revisão read-only migrations 0001–0008/schema instalado; decisão de manter JSONB onde campos completos não estão definidos; registry IndexedDB com versão final Restaurante 4→6 e Motoboy 5→7, índices não únicos, marker e upgrade abortável sem regravar registros.
+- **Ainda aberto em F1:** schema completo de Order/Route/Driver/LocationPoint/DeliveryProof/Earning; Route→Delivery; moeda/fórmula Earning; retenção/consentimento/eliminação; mídia; migração users/profiles/bikes; retenção inbox/outbox/aliases; formato e restore integral seguro de backup; validar upgrade/import com IndexedDB real/fixtures em QA posterior.
+- **Tarefas seguintes:** completar campos/normalizações com fixtures e evidência; decidir constraints/tabelas/migrations aditivas apenas onde contrato estável e ganho concreto existirem. Não normalizar JSONB por estética.
 - **Componentes:** `CONTRACT.md`, `contract.js`, `DECISOES.md` DEC-0005/0006; Restaurante `app.js` e stores `rota-moto-restaurante-local-v30`; Motoboy `app.js` e DB `RotaMotoDB`; migrations em Restaurante `backend/postgres/migrations/0001–0008`; `backend/domain/sync-service.js`.
 - **Dependências:** decisões de campos/semântica podem ser feitas por comparação de código, exceto Route→Delivery, retenção de dados sensíveis e exigências regulatórias/operacionais.
 - **Bloqueios externos:** nenhum para inventário e migrações locais; retenção final de geolocalização/provas precisa política do produto/privacidade.
-- **Conclusão objetiva:** cada campo de entidade tem autoridade, validação e mapeamento nos quatro lados; fixtures antigas migram sem perda; constraints e RLS testadas por tenant; nenhum payload válido é rejeitado sem código de erro estável.
-- **Testes:** migration clean/replay/rollback; IndexedDB upgrade com fixtures; schema/constraint/FK/RLS/cross-tenant; idempotência, tombstone, conflitos e compatibilidade offline.
+- **Conclusão objetiva:** cada campo de entidade tem autoridade, validação e mapeamento nos quatro lados; fixtures antigas migram sem perda; constraints e RLS testadas por tenant; nenhum payload válido é rejeitado sem código de erro estável. F1 só fecha após resolver ou isolar explicitamente os itens em aberto e testar upgrade/backup local.
+- **Testes:** registry/upgrade dirigidos passaram em ambos (fresh e versão imediatamente anterior simulados, sentinel preservado); lifecycle de storage Motoboy, `node --check` e `git diff --check`. Sem suite ampla/browser. Ao fechar F1: migration clean/replay/rollback; IndexedDB upgrade com fixtures legadas; RLS/constraints/idempotência/tombstone/conflito/offline.
 - **Browser QA:** não para schema; sim em F9 para upgrade/recovery nos clientes reais.
 
 ### F2 — Backend/API e operação de domínio
@@ -191,18 +200,19 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ## Ordem definitiva recomendada
 
-1. **F1.1 — Matriz canônica de campos e migração de dados local:** inventariar modelos reais, payloads/fixtures legadas e autoridade por campo; resolver lacunas de contrato sem inventar Route→Delivery; produzir plano de upgrade aditivo.
-2. **F1.2/F2 — Validar e fechar schema/API orientados pela matriz:** tipagem/constraints apenas onde há contrato estável; consultas/repositories/casos de uso e testes de isolamento; migration aditiva via migrator.
-3. **F3 — Cliente e telas de identidade**, inicialmente com estados fail-closed e API fake; completar endpoints administrativos sem provisionador/bypass real.
-4. **F5 e F6 — Fechar fluxos de cada app**, preservando operação offline e campos/autoridade; fazer integração funcional antes de polir estados visuais.
-5. **F4 — Providers:** preparar durabilidade/fakes localmente em paralelo; validar cada integração real somente quando docs, contas e credenciais existirem. Esta dependência não bloqueia F5/F6 com dados locais.
-6. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos/estados serem reais.
-7. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional**; separar preparação local da ativação externa.
-8. **F9 — QA end-to-end e regressão final**; somente após fases anteriores e com browser permitido.
+1. **F1.1 — Matriz canônica:** concluída no Registro 0038; manter campos desconhecidos e Route→Delivery explicitamente abertos.
+2. **F1.2 — Fechar a parte executável do modelo local/canônico:** revisar campos de consultas/transições e formalizar backup/restore integral sem apagar sync pendente; adicionar fixtures de versões antigas; definir constraints/migrations aditivas somente para campos confirmados. F1.2 precede F2.
+3. **F2 — Validar/completar API** com schema estável, casos de uso e testes de isolamento; DDL via migrator.
+4. **F3 — Cliente e telas de identidade**, em fail-closed e com API fake; sem provisionador/bypass real.
+5. **F5 e F6 — Fechar fluxos dos apps**, preservando operação offline e autoridade.
+6. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
+7. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
+8. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional.**
+9. **F9 — QA end-to-end e regressão final**, depois das fases anteriores.
 
-### Primeiro bloco recomendado
+### Próximo bloco recomendado
 
-Começar por **F1.1, sem migration ainda**: gerar uma matriz versionada por entidade e campo a partir do `CONTRACT.md`/`contract.js`, stores e normalizadores de cada app, `domain_records`/services e fixtures de backup legado. O resultado deve marcar autoridade, tipo, nulabilidade, normalização, alias/canonical ID, tombstone, revisão, projeção e compatibilidade. Isso reduz risco de schema genérico ou perda em upgrades e fornece critério objetivo para decidir migrations e os fluxos subsequentes. A relação Route→Delivery e retenções sensíveis ficam explicitamente abertas até decisão apropriada.
+Continuar com **F1.2**: especificar backup/restore integral e seguro (os formatos atuais são parciais e Motoboy substitui races/settings), confirmar campos/transformações com fixtures legadas e revisar consultas/transições. A matriz está em `MODELO_DADOS.md` e registry de upgrade local foi implementado; não criar DDL até haver ganho baseado em schema estável. Route→Delivery e retenções sensíveis continuam abertas. Não iniciar F2 automaticamente.
 
 ## Bloqueios externos reais versus trabalho local
 
