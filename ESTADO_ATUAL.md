@@ -20,7 +20,16 @@
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0043.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0044.
+
+## Atualização — Registro 0044 / vínculo canônico User↔Driver (2026-10-04)
+
+- Restaurante: `codex/setup-workflow` @ `ec0fc333ea2373c5ac6207fee7b3727a6da1c5ad`. Motoboy: `codex/setup-workflow` @ `f8f3e2e251bc54111e0f445c40cf18780dc9ccbb`. Histórico será commitado ao final; sem push.
+- Migration `0013_membership_driver_binding` aplicada no PostgreSQL oficial `18.6`, `127.0.0.1:5432/rotamoto`, via `rotamoto_migrator`; conexão runtime permaneceu em `rotamoto_app`/pgpass. Não houve alteração de role/configuração administrativa.
+- Membership guarda vínculo opcional único ao Driver canônico do mesmo tenant. API administrativa protegida por RBAC, CSRF, MFA e auditoria. Sessão retorna o Driver resolvido no servidor; não há inferência por dados do cliente.
+- Sync Motoboy exige vínculo server-side; pull/domínio respeitam o Driver e push valida sob lock atribuição corrente de DeliveryEvent/LocationPoint/DeliveryProof. Reatribuição preserva fatos e notifica minimamente o Driver anterior; fatos atrasados ficam rejeitados/conflict no cliente, sem perder modo offline.
+- Testes focados de migration/status, constraints/FKs/grants/RLS e API/sync PostgreSQL passaram; testes Motoboy de workflow/reconciliação, syntax checks e `git diff --check` passaram. Sem Browser QA, suites amplas ou fixtures persistidas.
+- F6 classificada **B — implementação concluída / Browser QA pendente em F9**. Restam provider de blob e permissões/hardware físicos como capacidades externas, sem bloquear implementação. Não iniciadas F4/F7/F8/F9. Baselines e main intactas; sem push.
 
 ## Atualização — Registro 0041 / F3 (2026-10-04)
 

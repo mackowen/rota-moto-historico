@@ -1,3 +1,15 @@
+# Pendências
+
+## Atualização — Registro 0044 / F6 Motoboy (2026-10-04)
+
+- [x] Vínculo canônico User/Membership↔Driver: migration `0013_membership_driver_binding`, FK composta tenant/type, unicidade por Driver, RLS/FORCE mantida e rollback protegido contra perda de vínculo/notificação.
+- [x] API administrativa PUT/DELETE para associar/desassociar; RBAC `company.manage`, CSRF, MFA, validação de tenant/Driver/membership, idempotência e auditoria.
+- [x] Sessão resolve `driverId` server-side. Instalação, push/pull Motoboy e leituras não administrativas sem Driver ficam bloqueados/escopados. `source.app`, `actor` e hints de `driverId` não autorizam.
+- [x] Reatribuição envia notificação mínima ao Driver anterior; fatos aceitos não são removidos; push atrasado de evento/localização/prova é rejeitado e conflito local preservado. Operações locais offline continuam possíveis.
+- [x] Testes relacionados de migration, integridade/grants/RLS, membership, MFA/CSRF, sessão, pull/push, ownership, reatribuição e Motoboy foram executados; fixtures transacionais revertidas. Sem Browser QA.
+- [ ] Provider de blob para envio real de DeliveryProof; acesso a GPS/câmera físicos permanece dependente de hardware/permissões; Browser QA integrado permanece em F9. Esses itens não mantêm F6 parcial.
+- F6 classificada **B — implementação concluída / Browser QA pendente para F9**. Baselines e `main` preservadas; sem push. Ver [Registro 0044](REGISTROS/0044.md).
+
 ## Atualização — Registro 0043 / F6 Motoboy (2026-10-04)
 
 - [x] Ciclo local de execução `ACCEPTED/PICKED_UP/OUT_FOR_DELIVERY/ARRIVED/DELIVERED/FAILED/RETURNED`, motivos, eventos/outbox idempotentes e preservação offline.
@@ -21,7 +33,7 @@
 - [ ] Browser QA integrado F5 fica em F9 e não mantém F5 aberta.
 - F5 classificada **B — implementação concluída / Browser QA pendente**. Próximo bloco planejado: F6. Ver [Registro 0042](REGISTROS/0042.md).
 
-# Pendências
+## Histórico de pendências anteriores
 
 ## Atualização — Registro 0041 / F3 Identidade (2026-10-04)
 
@@ -78,7 +90,7 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [x] F2: API v1 interna definida e implementada para identidade, domínio read, sync write, administração de leitura, health/readiness, RBAC/RLS e erros/logs; migration/grants e documentação concluídos no Registro 0040.
 - [x] F3: implementação local de clientes/telas e APIs de identidade concluída no 0041; permanecem apenas o primeiro operador/owner, MFA operacional segura, email real e Browser QA em F9 conforme bloqueios externos registrados.
 - [x] F5 Restaurante: fluxos administrativos/operacionais registrados no 0042.
-- [ ] F6 Motoboy: implementação Local-First registrada no 0043; falta autorização server-side por vínculo User/Membership↔Driver; storage de prova e teste de browser continuam nas suas dependências.
+- [x] F6 Motoboy: vínculo User/Membership↔Driver e enforcement server-side concluídos no Registro 0044; Browser QA continua em F9. Provider de blob e hardware/permissões físicos são dependências de capacidade, não bloqueios da implementação F6.
 - [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.
 - [ ] F7: feedback de sync, configurações tenant vs locais, acessibilidade e responsividade após fluxos estabilizados.
 - [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.

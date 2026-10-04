@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0043, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy com implementação operacional local e bloqueio de autorização User↔Driver (classificação C, Registro 0043). Browser QA permanece em F9.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0044, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy implementada (classificação B, Registro 0044; Browser QA em F9). Browser QA permanece em F9.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -15,7 +15,7 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 
 A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável após o Registro 0043
+## Estado atual verificável após o Registro 0044
 
 - Restaurante: `codex/setup-workflow` @ `86e0185f66aa8e9342b6582ad8a38bd91dc9957d`, árvore limpa após F5 e a projeção dos novos fatos Motoboy; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
 - Motoboy: `codex/setup-workflow` @ `d92e5915ca94dba80c37d234cac14634deadcd4f`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
@@ -163,13 +163,15 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F6 — Fluxos completos do Motoboy
 
-- **Estado:** **C — parcial** (Registro 0043). Ciclo de execução, estados/eventos, operação offline, GPS local, assinatura local, reconciliação, Route/Earning de leitura e Service Worker foram implementados/testados.
+- **Estado:** **B — implementação concluída / Browser QA pendente para F9** (Registro 0044 resolveu o último bloqueio de autorização individual). Ciclo de execução, estados/eventos, operação offline, GPS local, assinatura local, reconciliação, Route/Earning de leitura, PWA e enforcement server-side estão implementados; não reabre F1–F5.
 - **Concluído:** aceitar/coletar/sair/chegar/finalizar/falhar/retornar segundo contrato; motivos para falha/retorno; ACK e retry permanecem por fato; atualização de telas após pull; Route.deliveryIds dirige ordenação; Earnings vêm somente do Restaurante; tentativas anteriores são arquivadas antes da reentrega; sync expõe pendências, rejeições, conflitos e provas locais; respostas `/api/` não entram no cache offline.
-- **Bloqueio de segurança:** falta vínculo canônico server-side User/Membership↔Driver. Sem ele, pull/push são tenant-scoped, mas o servidor não prova que o principal só recebe/atua em Deliveries atribuídas ao seu Driver. Não inferir por email, localStorage, actor ou source.app. A conclusão da F6 exige modelagem/lifecycle e enforcement em pull e push.
-- **Capacidades dependentes:** provider de blobs para envio de DeliveryProof; permissão e hardware reais para GPS/câmera; Browser QA reservado a F9.
-- **Componentes:** Motoboy `app.js`, `execution-workflow.js`, stores deliveries/races/events/locations/proofs/earnings/meta, sync e reconciliação, PWA; Restaurante `backend/domain/sync-service.js`; `CONTRACT.md`/`contract.js` sincronizados.
-- **Testes:** Motoboy `npm test`; PostgreSQL dirigido `tests/test-domain-sync-postgres.js`; node --check e git diff --check. Sem migration nem alteração administrativa PostgreSQL.
-- **Conclusão objetiva restante:** criar relação autenticada de Driver e provar escopo de atribuição nas rotas/push do backend. Browser QA não é o motivo para manter F6 parcial.
+- **Autorização fechada:** migration `0013_membership_driver_binding` liga Membership a um Driver canônico da mesma empresa por FK composta e unicidade; API `PUT/DELETE /api/admin/memberships/{membershipId}/driver` requer RBAC, CSRF e MFA, valida membership/permissions/tenant, audita link/unlink e não infere identidade. A sessão passa a resolver `driverId` no servidor.
+- **Isolamento Motoboy:** instalação, push e pull exigem Driver da sessão. Pull e leituras de domínio de usuários sem permissão administrativa são limitadas às entregas atribuídas; Order/eventos/localização/provas/earnings e rotas são escopados. DeliveryEvent/LocationPoint/DeliveryProof são verificados sob lock da Delivery. `source.app`, `actor` e `driverId` do pacote não concedem autorização. Idempotência/revisões permanecem.
+- **Reatribuição:** fatos já aceitos não são removidos; fatos offline do executor anterior recebem `DRIVER_NOT_ASSIGNED`, permanecem como conflito local e deixam de repetir automaticamente sem mudança. O backend direciona `CANONICAL_ASSIGNMENT_REVOKED` minimal ao Driver anterior. Motoboy encerra sua projeção local e desativa ações sem apagar fatos/outbox. A nova atribuição permanece sob autoridade Restaurante.
+- **Componentes:** Motoboy `app.js`, `execution-workflow.js`, `sync-reconciliation.js`, Service Worker/assets e testes; Restaurante `backend/admin/*`, `backend/identity/*`, `backend/domain/{sync,query}-*`, migration `0013_membership_driver_binding`, testes e `docs/API-v1.md`; `CONTRACT.md` idêntico nos dois repositórios.
+- **Testes:** Motoboy `node tests/test-execution-workflow.js`, `node tests/test-sync-reconciliation.js`, `node --check` dos JS alterados e `git diff --check`; Restaurante `tests/test-postgres-migrations.js` e `tests/test-domain-sync-postgres.js` no PostgreSQL oficial via runtime `rotamoto_app`/migrator `rotamoto_migrator`. Fixtures tenant-scoped foram revertidas. Sem Browser QA ou suite ampla.
+- **Capacidades externas/validação:** provider de blobs para envio real de DeliveryProof; permissão/hardware físicos para GPS/câmera; Browser QA integrado reservado a F9. Nenhum deles mantém a implementação da F6 parcial.
+- **Conclusão:** F6 classificada **B — implementação concluída / Browser QA pendente para F9**. Não iniciar F4/F7/F8/F9 nesta execução.
 
 ### F7 — UI/UX, configurações, acessibilidade e responsividade
 
@@ -209,7 +211,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 1. **F1 — Modelo definitivo:** implementação concluída no Registro 0039; Browser QA/IndexedDB real fica em F9.
 2. **F2 — Backend/API:** concluída no Registro 0040 para operações internas v1; não duplicar sync nem reimplementar API read.
 3. **F3 — Identidade/login/RBAC:** implementação local concluída no Registro 0041; external owner/MFA/email fail-closed e Browser QA fica para F9.
-4. **F5 — Restaurante:** implementação fechada no Registro 0042; Browser QA fica em F9. **F6 — Motoboy:** próxima fase de fluxos funcionais; não iniciada.
+4. **F5 — Restaurante:** implementação fechada no Registro 0042; Browser QA fica em F9. **F6 — Motoboy:** implementação fechada no Registro 0044; Browser QA fica em F9.
 5. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
 6. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
 7. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional.**
@@ -217,7 +219,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1 e F2 estão concluídas; F3 permanece parcial apenas por dependências externas registradas; F5 está implementada conforme Registro 0042. F6 avançou no Registro 0043, mas exige resolver o bloqueio server-side User/Membership↔Driver antes de ser concluída. Próxima fase de plano após essa dependência: F7; não iniciar F4/F7/F8/F9 automaticamente nesta execução. F4 não foi iniciada em F5.
+F1 e F2 estão concluídas; F3 permanece parcial apenas por dependências externas registradas; F5 e F6 estão implementadas conforme Registros 0042 e 0044, com Browser QA para F9. F4/F7/F8/F9 não foram iniciadas nesta execução. Próxima macrofase pela ordem do plano: F4 (adapters/providers), sem dependência do vínculo Driver agora resolvido.
 
 ## Bloqueios externos reais versus trabalho local
 
