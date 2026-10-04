@@ -1,5 +1,15 @@
 # Pendências
 
+## Atualização — Registro 0045 / F7 UI/UX (2026-10-04)
+
+- [x] Consolidação estática de navegação, conta/sessão e diálogos acessíveis nos dois apps; foco por teclado, Escape/Tab, retorno de foco e fundo inerte.
+- [x] Restaurante: administração visual de vínculo Membership↔Driver por API existente, labels de busca/filtros e estilos de identidade responsivos.
+- [x] Motoboy: estados de navegação/filtros semanticamente corretos, toast acessível, modal de execução e layout com safe-area/teclado virtual.
+- [x] Ajuste de contraste do acento verde e remoção de regras CSS obsoletas/ineficazes; suítes `npm test` dos dois apps passaram.
+- [x] As configurações agora informam o escopo local deste aparelho; o Motoboy esclarece que custos/metas são estimativas e Earning canônico vem do Restaurante.
+- [ ] Validação visual renderizada e em dispositivos assistivos permanece para F9; não houve Browser QA, screenshots ou CDP conforme escopo.
+- F7 classificada **B — implementação concluída / Browser QA pendente para F9**. Commits dos apps: Restaurante `69e3492e6ace36c781425baaeba199a208eb451e` e `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`; Motoboy `7e41182e55f365c368e3ca730ddb7e9231b337a5` e `2c82d094ef8a2f04aa436507a36682b4f36e95fc`. Ver [Registro 0045](REGISTROS/0045.md).
+
 ## Atualização — Registro 0044 / F6 Motoboy (2026-10-04)
 
 - [x] Vínculo canônico User/Membership↔Driver: migration `0013_membership_driver_binding`, FK composta tenant/type, unicidade por Driver, RLS/FORCE mantida e rollback protegido contra perda de vínculo/notificação.
@@ -92,7 +102,7 @@ Use [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) como fonte de verdade e não du
 - [x] F5 Restaurante: fluxos administrativos/operacionais registrados no 0042.
 - [x] F6 Motoboy: vínculo User/Membership↔Driver e enforcement server-side concluídos no Registro 0044; Browser QA continua em F9. Provider de blob e hardware/permissões físicos são dependências de capacidade, não bloqueios da implementação F6.
 - [ ] F4: persistência durável, adapter e configuração tenant-scoped para providers; não afirmar integração real sem documentação oficial, conta/credenciais e homologação.
-- [ ] F7: feedback de sync, configurações tenant vs locais, acessibilidade e responsividade após fluxos estabilizados.
+- [x] F7: implementação estática concluída no Registro 0045; Browser QA/renderização permanece para F9.
 - [ ] F8: deploy, TLS/domínio, KMS/secrets, observabilidade, backup/restore PostgreSQL ensaiado, rotação e atualização.
 - [ ] F9: QA integrado CDP desktop/tablet/mobile e hardening depois das fases anteriores.
 - Route→Delivery foi decidido e implementado em F1/Registro 0039. Retenção legal/operacional de localização/provas permanece pendente, sem prazo inventado.

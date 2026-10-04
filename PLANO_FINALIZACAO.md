@@ -1,6 +1,6 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0044, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy implementada (classificação B, Registro 0044; Browser QA em F9). Browser QA permanece em F9.
+**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, os Registros 0001–0045, os checkouts em `codex/setup-workflow`, o contrato sincronizado e o PostgreSQL oficial. **Estado:** F1 concluída como implementação (classificação B); F2 concluída para operações v1; F3 implementada localmente com bloqueios externos explícitos (classificação PARCIAL); F5 Restaurante implementada (classificação B, Registro 0042); F6 Motoboy implementada (classificação B, Registro 0044); F7 UI/UX consolidada estaticamente (classificação B, Registro 0045; Browser QA em F9). Browser QA permanece em F9.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
@@ -15,12 +15,12 @@ Este plano reúne trabalho já comprovado, lacunas encontradas no código e depe
 
 A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Registro 0039), ambos `npm test` e o `npm run test:postgres` foram executados. Não se executou Browser QA. Migrations 0009–0010 foram aplicadas e validadas no PostgreSQL oficial pelo `rotamoto_migrator`, usando pgpass; status confirma 0001–0010 aplicadas. Nenhuma senha foi lida ou exibida.
 
-## Estado atual verificável após o Registro 0044
+## Estado atual verificável após o Registro 0045
 
-- Restaurante: `codex/setup-workflow` @ `86e0185f66aa8e9342b6582ad8a38bd91dc9957d`, árvore limpa após F5 e a projeção dos novos fatos Motoboy; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
-- Motoboy: `codex/setup-workflow` @ `d92e5915ca94dba80c37d234cac14634deadcd4f`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- Restaurante: `codex/setup-workflow` @ `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `2c82d094ef8a2f04aa436507a36682b4f36e95fc`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
-- PostgreSQL oficial: migrations 0001–0012 aplicadas; 0012 registra invitation purpose/MFA verification marker e grants mínimos para lifecycle RBAC. RLS/FORCE e separação `rotamoto_app`/`rotamoto_migrator` preservadas.
+- PostgreSQL oficial: migration 0013 do vínculo Membership↔Driver permanece aplicada conforme Registro 0044. F7 não alterou schema, roles, grants, configuração nem dados.
 
 As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da F1 foram atualizadas pelos Registros 0038–0039 e pela seção F1 vigente.
 
@@ -175,14 +175,14 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F7 — UI/UX, configurações, acessibilidade e responsividade
 
-- **Estado:** Parcial e inspecionado somente estaticamente; identidade visual existente preservada.
-- **Lacunas/tarefas:** feedback de sync/online/offline/conflicts; telas de conta/admin; settings tenant vs local; estado vazio/loading/error consistente; teclado/foco/labels/contrast/touch; layout de tabelas, mapa, dialogs e navegação; remover duplicação apenas quando os fluxos funcionais estabilizarem.
-- **Componentes:** HTML/CSS/JS e manifests dos dois apps; `app.js` concentra muitas vistas e regras.
-- **Dependências:** fluxos F3–F6 estabilizados para desenhar estados reais, não mocks.
-- **Bloqueios externos:** nenhum para acessibilidade/usabilidade local; validação física de dispositivos é externa.
-- **Conclusão objetiva:** checklist WCAG aplicável atendido, sem overflow/foco perdido, fluxos utilizáveis em viewports alvo e estados de sync acionáveis.
-- **Testes:** análise estática, testes de DOM/teclado quando possível, Chromium screenshots/viewport e auditoria manual assistiva.
-- **Browser QA:** sim, obrigatório.
+- **Estado:** **B — implementação concluída / Browser QA pendente para F9** (Registro 0045). Revisão estática e consolidação nos dois aplicativos, sem reabrir F1–F6.
+- **Concluído:** conta/sessão integrada ao header, diálogos com foco, Escape/Tab e fundo inerte; associação Membership↔Driver administrável visualmente no Restaurante usando APIs existentes; labels de busca/filtros, semântica correta de navegação versus filtros; feedback de toast acessível; layout de header/dialog/nav considera safe areas e teclado virtual; tokens de foco/radius reunidos e regras CSS comprovadamente duplicadas/ineficazes removidas; contraste do token verde Motoboy melhorado sem trocar a identidade visual; telas de configurações identificam o escopo local e distinguem estimativas de ganhos canônicos.
+- **Componentes:** `app.js`, `index.html`, `identity-ui.js`, `identity-ui.css`, `styles.css` e testes estáticos de UI em ambos os apps.
+- **Dependências:** F3–F6 estabilizadas; nenhuma dependência de serviço externo para as alterações implementadas.
+- **Bloqueios externos:** nenhum para implementação local. Validação com navegador/renderização, leitores de tela e hardware real está deliberadamente reservada para F9.
+- **Conclusão objetiva:** implementação e suítes locais passam; sem Browser QA não se declara verificado o layout renderizado em desktop/tablet/mobile nem a interação em dispositivo físico.
+- **Testes:** `npm test` em ambos os apps; testes direcionados de identidade/navegação e sincronização estática; `node --check` dos JS e testes alterados; `git diff --check`.
+- **Browser QA:** não nesta execução; obrigatório em F9.
 
 ### F8 — Instalação, deploy, segurança e operação
 
@@ -213,13 +213,13 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 3. **F3 — Identidade/login/RBAC:** implementação local concluída no Registro 0041; external owner/MFA/email fail-closed e Browser QA fica para F9.
 4. **F5 — Restaurante:** implementação fechada no Registro 0042; Browser QA fica em F9. **F6 — Motoboy:** implementação fechada no Registro 0044; Browser QA fica em F9.
 5. **F4 — Providers:** preparar adapters/fakes localmente; validar integrações reais quando docs, conta e credenciais existirem.
-6. **F7 — UX/configurações/acessibilidade/responsividade** após fluxos estabilizados.
+6. **F7 — UX/configurações/acessibilidade/responsividade:** implementação estática fechada no Registro 0045; validar layout renderizado em F9.
 7. **F8 — Deploy, secrets, observabilidade, backup/restore, atualização e hardening operacional.**
 8. **F9 — QA end-to-end e regressão final**, depois das fases anteriores.
 
 ### Próximo bloco recomendado
 
-F1 e F2 estão concluídas; F3 permanece parcial apenas por dependências externas registradas; F5 e F6 estão implementadas conforme Registros 0042 e 0044, com Browser QA para F9. F4/F7/F8/F9 não foram iniciadas nesta execução. Próxima macrofase pela ordem do plano: F4 (adapters/providers), sem dependência do vínculo Driver agora resolvido.
+F1/F2 estão concluídas; F3 mantém dependências externas registradas; F5/F6 estão implementadas; F7 está implementada estaticamente pelo Registro 0045 e aguarda validação renderizada em F9. Próxima macrofase pela ordem do plano: F4 (adapters/providers). F8/F9 não foram iniciadas.
 
 ## Bloqueios externos reais versus trabalho local
 

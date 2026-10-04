@@ -1,3 +1,12 @@
+## Atualização — Registro 0045 / F7 UI/UX (2026-10-04)
+
+- Restaurante: `codex/setup-workflow` @ `3e84fad04eb877b466a6757a4fedf2db8e0f66c8`, árvore limpa. Motoboy: `codex/setup-workflow` @ `2c82d094ef8a2f04aa436507a36682b4f36e95fc`, árvore limpa. Cada app tem commits separados de consolidação da UI e escopo das configurações; nenhum push.
+- Conta autenticada/offline agora fica no header e usa diálogo modal acessível com foco controlado e fundo inerte. Restaurante ganhou UI administrativa para Membership↔Driver via endpoints existentes; Motoboy recebeu semântica correta de navegação/filtros, feedback anunciável e modais acessíveis.
+- Safe areas/teclado virtual foram tratados; tokens/estilos de identidade consolidados, regras CSS mortas removidas e contraste do acento verde Motoboy ajustado. As telas de configuração informam que as preferências são locais e separam estimativas locais de Earning canônico. Nenhum domínio, sync, IndexedDB, contrato, PostgreSQL ou regra de negócio foi alterado.
+- `npm test` passou nos dois apps; testes focados de identidade/sync, `node --check` e `git diff --check` passaram. A primeira execução detectou uma expectativa antiga de versão de assets no teste Motoboy; a expectativa foi alinhada aos arquivos já existentes (`sync-reconciliation`/`execution-workflow` v2 e app v40.2) e a suíte passou.
+- F7 classificada **B — implementação concluída / Browser QA pendente para F9**. Sem Browser QA, screenshots, CDP ou dispositivos físicos nesta execução. Nenhuma alteração em `main` ou baseline: Restaurante `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc`, Motoboy `79c527b59d32d8b55236c62042acb868166ed4ad`.
+- Ver [Registro 0045](REGISTROS/0045.md), [PLANO_FINALIZACAO.md](PLANO_FINALIZACAO.md) e [PENDENCIAS.md](PENDENCIAS.md).
+
 ## Atualização — Registro 0043 / F6 Motoboy (2026-10-04)
 
 - Motoboy: branch `codex/setup-workflow`, HEAD `d92e5915ca94dba80c37d234cac14634deadcd4f`, árvore limpa. Implementados ciclo de execução de DeliveryEvent, fluxo offline/outbox, GPS/assinatura local fail-closed, arquivo de tentativas na reentrega, reconciliação de Route/Earning, estado de sync, atualização das projeções e exclusão de `/api/` do cache PWA.
