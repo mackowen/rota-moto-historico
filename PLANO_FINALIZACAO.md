@@ -17,8 +17,8 @@ A inspeção histórica do Registro 0037 foi estática; na conclusão F1 (Regist
 
 ## Estado atual verificável após o Registro 0039
 
-- Restaurante: `codex/setup-workflow` @ `40f712f1dc62dc7e2cbda227068acd2f530dca55`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
-- Motoboy: `codex/setup-workflow` @ `89deced058173161cef7a3604b0996d97ef032f7`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
+- Restaurante: `codex/setup-workflow` @ `f837268a7d3510313404408982d7bdf0cf6bb440`, árvore limpa; baseline tag peel `a5b81fed1b9eccfa18fa7f454e9e71813f52ffcc` intacta.
+- Motoboy: `codex/setup-workflow` @ `f1ac9388dcecf02b6ec657241e411243c8ee0654`, árvore limpa; baseline tag peel `79c527b59d32d8b55236c62042acb868166ed4ad` intacta.
 - `main` dos apps não foi alterada; nenhum push foi feito.
 - PostgreSQL oficial: migrations 0001–0010 aplicadas; 0009 adiciona checks monetários e de Route, função de validação, índice GIN; 0010 concede somente EXECUTE para validação de constraint no runtime.
 
@@ -26,8 +26,8 @@ As linhas de auditoria abaixo preservam o panorama do Registro 0037; lacunas da 
 
 | Área | Estado em 2026-10-04 | Resumo |
 |---|---|---|
-| Restaurante | Parcial, branch limpa `codex/setup-workflow`, HEAD `40f712f1dc62dc7e2cbda227068acd2f530dca55` | F1 implementada; fluxo de identidade, administração e produção seguem em fases posteriores. |
-| Motoboy | Parcial, branch limpa `codex/setup-workflow`, HEAD `89deced058173161cef7a3604b0996d97ef032f7` | F1 implementada; identidade visual/operacional e fluxos restantes seguem em fases posteriores. |
+| Restaurante | Parcial, branch limpa `codex/setup-workflow`, HEAD `f837268a7d3510313404408982d7bdf0cf6bb440` | F1 implementada; fluxo de identidade, administração e produção seguem em fases posteriores. |
+| Motoboy | Parcial, branch limpa `codex/setup-workflow`, HEAD `f1ac9388dcecf02b6ec657241e411243c8ee0654` | F1 implementada; identidade visual/operacional e fluxos restantes seguem em fases posteriores. |
 | PostgreSQL oficial | Parcial, PostgreSQL 18.6 em `127.0.0.1:5432`, banco `rotamoto` | Migrations 0001–0010 aplicadas; modelo de domínio continua em `domain_records` JSONB com novas garantias para Route/Earning. |
 | API/backend | Parcial, loopback | Identidade e sync HTTP existem; autorização/session/CSRF e role split foram testados. Falta administração operacional completa, frontend de identidade, processamento durável de integrações e operação de produção. |
 | Contrato | F1 concluída | `CONTRACT.md` e `contract.js` byte a byte idênticos nos apps; schemas v1 fecham as entidades do escopo F1 e regras Route/Earning/mídia. |
