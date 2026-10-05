@@ -179,3 +179,31 @@ DEC-0006 complementa DEC-0005 e substitui seu item 5 e os limites de ownership/a
 
 ### Status
 ATIVA
+
+
+## DEC-0007 — Lifecycle rollback-scoped para fixtures autenticadas E2E
+
+### Data
+2026-10-05
+
+### Projeto
+RotaMoto Restaurante / PostgreSQL E2E
+
+### Contexto
+A database `rotamoto_e2e` passou a reproduzir a ACL efetiva runtime do banco de referência. Era necessário criar Company/owner e dados canônicos para QA autenticado sem apontar o produto ao banco E2E, conceder privilégios, inserir domínio manualmente ou deixar fixtures persistentes.
+
+### Decisão
+1. O harness reside exclusivamente nos testes do Restaurante e não é importado pelo servidor operacional. Só aceita `NODE_ENV=test` e URLs password-free de loopback, database exata `rotamoto_e2e`, runtime `rotamoto_app` e verificador `rotamoto_migrator`; valida antes da construção de clientes e confirma identidade após conectar.
+2. Os testes abrem uma transação externa com `rotamoto_app`; operações de serviço que iniciam transação usam savepoints seriais. Teardown reverte a transação inteira e verifica ausência de resíduos com consulta read-only. Não usar DELETE/INSERT de limpeza para suprimir invariantes.
+3. Provisionamento, convite, credencial, MFA verificado, Membership↔Driver e entidades de domínio passam pelos serviços/endpoints existentes. Provas sintéticas de operador, email e MFA ficam em memória somente no harness. Não criar switch/fake utilizável pelo produto.
+4. A diferença do owner da database é aceitável se o banco continuar sob `rotamoto_migrator`, runtime não for owner/membro e não puder criar objetos/assumir role, os roles não tiverem atributos elevados, ACLs efetivas relevantes coincidirem e o lifecycle funcional passar.
+5. O banco `rotamoto` é referência exclusiva em transações read-only; qualquer fixture/rollback ocorre apenas em `rotamoto_e2e`.
+
+### Motivo
+A transação externa permite exercitar o caminho HTTP/identidade/RBAC/RLS/sync real sem persistência residual. A dupla validação da URL e da identidade conectada limita o alcance antes e depois da conexão. Serviços existentes mantêm constraints e regras de domínio como autoridade.
+
+### Impacto e limites
+Implementada em `tests/e2e-support/` e documentada em `backend/postgres/README.md` no Registro 0056. O lifecycle valida smoke HTTP e fixtures transacionais; não substitui a campanha Browser F9 nem habilita providers operacionais. O processo normal não recebe as URLs ou os providers do harness.
+
+### Status
+ATIVA

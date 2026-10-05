@@ -1,3 +1,31 @@
+## Atualização — Registro 0057 / Browser E2E autenticado F9 (2026-10-05)
+
+- Restaurante `codex/setup-workflow` @ `f6f99a41c5edbab04ef2994c6bbe3889f355ddba`; Motoboy `codex/setup-workflow` @ `268c716144a7b740b38ae732e3ebd6a4a438a28e`; histórico na branch `codex/f9-browser-e2e-0057`. Nenhum push; `main`, tags e baselines preservadas.
+- Campanha CDP autenticada usou somente lifecycle test-only e `rotamoto_e2e`, com rollback/consulta tenant-scoped sem resíduo. `rotamoto` somente READ ONLY; fingerprint catálogo/ledger antes/depois idêntico: `0ce3aa0ae64db6398f54840d0894917c249cd76a0581b2f7f8e64aecd46303c9`.
+- PASS: MFA/sessão/CSRF, CRUD Order/Delivery, vínculo de Driver, Route multi-stop, relatórios/eventos, ciclo Restaurante→PostgreSQL→Motoboy→PostgreSQL→Restaurante até DELIVERED, FAILED/RETURNED, retry offline, escopo tenant/Driver, API sem cache e sem secrets em browser storage, ledger negado e 8 viewports sem overflow. Nenhum finding ou erro JS/console na rodada final.
+- FIXED: push duplicado de registros canônicos importados entre instalações, preservando UUID canônico por resolução tenant/type e `baseVersion`; além de regressões concretas de CSRF/sessão, transação multi-store, submit Route e lock assíncrono de ação Motoboy. Contratos e regressões atualizados nos apps.
+- Sem bug interno aberto. O browser de reatribuição/fato atrasado com segunda identidade não cabe na fixture atual de um Driver e permanece NOT_TESTABLE_WITH_CURRENT_CAPABILITY; as suítes de API/sync cobrem as proteções. BLOCKED_EXTERNAL: email/recovery real, armazenamento operacional de segredo MFA, hardware câmera/GPS, blob remoto e iFood/99Food/Keeta. Sem teste ou aprovação desses serviços.
+- `npm test` dos dois apps, guards/lifecycle E2E, checks de sintaxe e diff passaram. F9 local autenticada pode ser encerrada para capacidades disponíveis; F9 global fica condicionada ao critério de aceite externo. Ver [Registro 0057](REGISTROS/0057.md).
+
+## Atualização — Registro 0056 / gate e lifecycle E2E (2026-10-05)
+
+- Restaurante `codex/setup-workflow` @ `9d5b8ecca988eec18f4fcee3b2a2779270475547` (27 commits à frente do upstream antes desta atualização); Motoboy `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`; histórico `main` @ `e0aa51b36ce1522619a3688bb2d65683fbff798d`. Commit local de implementação no Restaurante; sem push.
+- Gate read-only 0055 repetido e aprovado: grants efetivos de runtime, PUBLIC, ownership de objetos, RLS/FORCE, policies, ledger e checksums 0001–0013 equivalentes. Owner de database difere com runtime sem ownership/CREATE/membership/SET ROLE e lifecycle funcional comprovando o modelo.
+- Fixture test-only usa somente `rotamoto_e2e`; guards rejeitam alvo inseguro pré-conexão e identificam endereço/role após conectar. Owner provisionado por serviço, MFA/CSRF exigidos, Driver/Order/Delivery por serviços e sync, vínculo existente via endpoint. Rollback externo + consulta read-only tenant-scoped confirmaram zero resíduo. `rotamoto` ficou restrito à auditoria read-only.
+- Passaram `npm run test:e2e-guards`, `npm run test:e2e-security`, `npm run test:e2e-lifecycle`, `npm test` e `git diff --check`. Fingerprint oficial de catálogo/ledger antes/depois do lifecycle idêntico: `c50f8de9bf4d6d4a88d0f56f56640b7793c51bfc6d9bf43d507306949b62e6e6`. Sem campaign Browser F9, providers reais ou alteração de migrations; F9 permanece aberta. A pré-condição de privilégios do E2E está liberada. Próximo passo: usar o lifecycle nas fixtures da campanha Browser F9 em `rotamoto_e2e`. Ver [Registro 0056](REGISTROS/0056.md) e [DEC-0007](DECISOES.md).
+
+## Atualização — Registro 0055 / auditoria de privilégios E2E (2026-10-04)
+
+- Restaurante `codex/setup-workflow` @ `df5e980c8072912281f47499fa1071acb9d14918`; Motoboy `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`; histórico `main` @ `e0aa51b36ce1522619a3688bb2d65683fbff798d`. Os registros 0054/0055 agora estão apenas no repositório canônico; cópias não rastreadas removidas de Restaurante `docs/`. Nenhum commit corretivo foi necessário, sem push.
+- Migrations 0001–0013 aplicadas no `rotamoto_e2e` e ledger confirmado. Após `REVOKE TEMPORARY ... FROM PUBLIC`, CONNECT/CREATE/TEMP de runtime/migrator estão conforme a matriz fornecida.
+- Comparação dos catálogos em transações `READ ONLY`: equivalência reprovada. Divergem owner da database (oficial `u0_a436`, E2E `rotamoto_migrator`), `rotamoto_app` sem USAGE no schema E2E e grants ausentes em `audit_log`, `companies`, `credentials`, `identity_tokens`, `memberships`, `permissions`, `provisioning_requests`, `recovery_tokens`, `roles`, `sessions` e `users`. `PUBLIC` ainda tem CONNECT na database E2E e EXECUTE nas quatro funções do schema; tais ACLs não existem no oficial. Detalhes no [Registro 0055](REGISTROS/0055.md).
+- RLS/FORCE, 12 policies, owners de schema/objetos e acesso negado de `rotamoto_app` ao ledger coincidem. Nenhum dado/schema/grant foi alterado nesta comparação. **Não iniciar fixtures/runtime/browser E2E** até avaliação administrativa e nova validação read-only. F9 aberta; não continuar além deste gate.
+
+## Atualização — Registro 0054 / migrations na database E2E (2026-10-04)
+
+- O modo de migration `--e2e` exige `NODE_ENV=test`, alvo exato separado, `up/status` somente e validação pré-conexão; os guardas passaram. `rotamoto_e2e` foi criada administrativamente e recebeu 0001–0013 sem modificar migrations nem tocar dados/schema de `rotamoto`.
+- `status --e2e` confirmou as 13 migrations; o schema tem 12 policies e RLS/FORCE esperado. A divergência TEMP inicial foi corrigida administrativamente depois, conforme Registro 0055. Sem fixtures/browser ou bypass. Ver [Registro 0054](REGISTROS/0054.md).
+
 ## Atualização — Registro 0053 / viabilidade do E2E autenticado (2026-10-04)
 
 - Restaurante `codex/setup-workflow` @ `63f50026cfddfc6139771a3040a9f9f00107586c`; Motoboy `codex/setup-workflow` @ `422c3edd7f5b05f13943733ec184dfc4edcf22d4`. Árvores limpas, main/tags/baselines preservadas; nenhum push ou commit de app.

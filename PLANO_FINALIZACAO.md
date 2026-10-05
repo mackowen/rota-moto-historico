@@ -1,14 +1,29 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-04 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0006, Registros 0001–0053, checkouts atuais, contrato sincronizado e status read-only do PostgreSQL oficial. **Fases:** F1 B; F2 A; F3–F8 B; F9 aberta. A avaliação do Registro 0053 confirmou que as roles atuais não podem criar uma database QA descartável no cluster oficial.
+**Revisão:** 2026-10-05 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0007, Registros 0001–0056, checkouts atuais, contrato sincronizado e auditoria PostgreSQL read-only. **Fases:** F1 B; F2 A; F3–F8 B; F9 aberta. ACL E2E aprovada e lifecycle rollback-scoped pronto; Browser F9 ainda pendente.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 
-## Atualização F9 — Registro 0053: database de QA isolada
+## Atualização F9 — Registro 0056: gate e fixture lifecycle concluídos
 
-- Fase 1 de viabilidade encerrada: `rotamoto_app` e `rotamoto_migrator` têm `CREATEDB=false`, `CREATEROLE=false`, `SUPERUSER=false` e `BYPASSRLS=false`. `CREATE` no database oficial para o migrator permite DDL local, não criação de outra database. Não existe database `rotamoto_e2e%` pré-criada.
-- O runner de migrations aceita somente a URL do migrator terminada em `/rotamoto`. Criar/destruir uma database QA com o cluster/roles atuais exigiria intervenção DBA ou ampliação administrativa; não foi feita. Adaptação de teste do runner, harness, smoke e teardown aguardam uma estratégia autorizada de database QA. Não criar fixture no `rotamoto` oficial.
-- Evidência read-only antes/depois: OID oficial `16389`, migrations 13, fingerprint do ledger `5d41e67f362c2cbf87c1ec8ce204b1cd`, 12 tabelas `ENABLE/FORCE RLS`, database QA 0; todos os valores iguais. P0/P1/P2/P3 abertos = 0, sete grupos externos inalterados. F9 permanece aberta. Ver [Registro 0053](REGISTROS/0053.md).
+- Comparação read-only 0055 repetida: ACL efetiva do runtime, PUBLIC, ownership dos objetos, RLS/FORCE, policies, acesso/checksums do ledger equivalem; migrations 0001–0013 confirmadas. Owner da database E2E permanece migrator e é aceito sob as provas registradas em DEC-0007, sem elevar o runtime.
+- Harness autenticado usa `NODE_ENV=test`, URLs E2E loopback estritas, serviços existentes, MFA/CSRF/RBAC e sync canônico; operação envolta em transaction/savepoints no role app, seguida de rollback e verificação read-only sem resíduo. Guardas, paridade, lifecycle e `npm test` passaram.
+- `rotamoto` foi exclusivamente referência read-only; nenhuma escrita/grant/revoke/migration/dado nele. Não executar ainda campaign Browser F9 nesta etapa. Próximo: consumir o harness em Browser F9, mantendo alvo E2E isolado. Ver [Registro 0056](REGISTROS/0056.md).
+
+## Registro 0055 — gate de privilégios E2E (estado naquele registro; liberado no 0056)
+
+- O banco E2E está migrado (0001–0013), e a divergência TEMP inicial foi removida administrativamente. A comparação somente leitura encontrou equivalência incompleta: owner de database diferente; `rotamoto_app` sem `USAGE` no schema E2E e sem os mesmos grants em onze tabelas; ACLs `PUBLIC` extras (`CONNECT` na database e `EXECUTE` nas quatro funções do schema). Sem fixture/runtime/browser E2E até a avaliação/correção administrativa e nova comparação read-only.
+- RLS/FORCE, 12 policies, owners do schema/objetos e isolamento do ledger são iguais. `rotamoto_app` segue CONNECT=true, CREATE=false, TEMP=false nos dois; nenhum role tem atributos elevados. F9 aberta, P0/P1/P2/P3=0 e sete dependências externas inalteradas. Ver [Registro 0055](REGISTROS/0055.md).
+
+## Atualização F9 — Registro 0054: runner e schema E2E instalados
+
+- Database `rotamoto_e2e` criada manualmente após 0053; owner `rotamoto_migrator`. Modo `up/status --e2e` exige `NODE_ENV=test`, URL separada e alvo exato, sem `down`; guardas pré-conexão aprovados.
+- Migrations 0001–0013 aplicadas e verificadas em QA. Na validação inicial, TEMP de `rotamoto_app` divergiu; a administração revogou TEMP de `PUBLIC` depois, e a matriz informada no Registro 0055 confirma o resultado. Sem fixture/browser/bypass. Ver [Registro 0054](REGISTROS/0054.md).
+
+## Atualização F9 — Registro 0053: database de QA isolada (pré-condição resolvida no 0054)
+
+- A limitação administrativa registrada em 0053 foi resolvida manualmente: database `rotamoto_e2e` existe e recebeu as migrations em 0054. Não conceder CREATEDB permanente nem usar `rotamoto` para fixtures.
+- O bloqueio atual é a equivalência de privilégios catalogada no Registro 0055; não iniciar fixtures até nova validação read-only aprovada. F9 permanece aberta. Ver [Registro 0053](REGISTROS/0053.md).
 
 ## Atualização F9 — Registro 0052 (2026-10-04)
 
@@ -245,14 +260,15 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### F9 — QA integrado e hardening final
 
-- **Estado:** Em andamento. QA inicial no Registro 0049: `F9_INITIAL_QA = PASS_WITH_FINDINGS`; Registro 0050 corrigiu/repetiu P1/P2; Registro 0051 corrigiu os dois P3 originais e executou exploração ampliada. Estado corrente após Registro 0052 P0 0/P1 0/P2 0/P3 0; sete grupos C externos. Fixture autenticada é B, com lifecycle seguro ainda por definir. F9 não está concluída.
-- **Lacunas/tarefas:** novo P3 de copy na restauração anônima do Motoboy ainda aberto. Seguir com roteiro autorizado ponta a ponta por app, sync multi-app, offline/reconnect/reload/conflitos, backup/upgrade e papéis. Não contornar dependências externas.
-- **Componentes:** `~/projetos/browser-tests/run-qa-infra.sh`, app servidores, testes automatizados e checklist deste plano.
-- **Dependências:** F1–F8 em estado fechável; dados sintéticos isolados/limpos; Chromium/Termux vivo.
-- **Bloqueios externos reais:** Chromium pode sofrer limitações GPU/processo no Termux/Android; permissões físicas e integrações reais dependem de hardware/contas. Continuar testes automatizados e registrar limitações.
-- **Conclusão dos blocos 0049–0051:** matriz inicial e repetição ampliada executadas; quatro P1/P2 e dois P3 originais estão corrigidos e não reproduzidos. Um P3 novo no Motoboy e a campanha autenticada/integrações permanecem. F9 não concluída; evidências iniciais preservadas em `F9_QA_INICIAL.md`.
-- **Testes:** `npm test` nos dois apps, `npm run test:postgres`, checks de sintaxe/diff, CDP dirigido a fluxos e acessibilidade.
-- **Browser QA:** autorizado; matriz inicial, correção dirigida e exploração ampliada executadas via CDP. Evidências fora do Git em `~/projetos/browser-tests/f9-initial-qa-2026-10-04/`, `f9-correction-round-1-2026-10-04/` e `f9-round-2-2026-10-04/`. Sessão real de usuário, providers, hardware e storage seguem isolados.
+- **Estado:** campanha Browser E2E autenticada local executada no Registro 0057. Capacidades disponíveis aprovadas; sem bug interno P0/P1/P2/P3 aberto. O fechamento global depende de o aceite exigir ou excluir as integrações/hardware externos ainda não testados.
+- **PASS:** sessão/MFA/CSRF, CRUD Order/Delivery, Route com múltiplas paradas, eventos/relatórios, ciclo canônico restaurante→motoboy→restaurante, ACCEPTED/PICKED_UP/OUT_FOR_DELIVERY/ARRIVED/DELIVERED, FAILED, RETURNED e retry após offline; escopo tenant/Driver, segredo/storage e service worker/API; lifecycle rollback sem resíduos; 4 viewports × 2 apps sem overflow.
+- **FIXED:** entidades canônicas importadas não são reenviadas como registros locais duplicados; UUID canônico é resolvido sob tenant/tipo, `baseVersion` preserva concorrência e não persiste no payload. Corrigidas regressões de sessão/CSRF, multi-store, submit da rota e ação assíncrona Motoboy. Contrato atualizado em ambos apps.
+- **OPEN:** nenhum bug interno reproduzível. Reatribuição Browser entre duas identidades e fato atrasado são NOT_TESTABLE_WITH_CURRENT_CAPABILITY pela fixture atual de um Driver; serviços têm testes de segurança/reconciliação.
+- **BLOCKED_EXTERNAL / NOT_TESTABLE_WITH_CURRENT_CAPABILITY:** email/recovery real; storage operacional de MFA; câmera/GPS físicos; blob remoto; iFood, 99Food e Keeta. Fallback manual de câmera e prova local foram testados; provider/hardware real não foi declarado aprovado.
+- **Banco:** `rotamoto` permaneceu read-only; fingerprint catálogo/ledger antes/depois igual (`0ce3aa0ae64db6398f54840d0894917c249cd76a0581b2f7f8e64aecd46303c9`). Todas as fixtures browser usaram `rotamoto_e2e` sob lifecycle transacional, rollback e verificação de ausência de resíduos.
+- **Testes:** `npm test` ambos; `npm run test:e2e-guards`, `npm run test:e2e-lifecycle`, `node --check` e `git diff --check` passaram. Chromium/CDP reports em `~/projetos/browser-tests/f9-authenticated-2026-10-05-round-61/` a `round-64/`; relatórios finais com lista de findings vazia.
+- **Commits sem push:** Restaurante `f6f99a41c5edbab04ef2994c6bbe3889f355ddba`; Motoboy `268c716144a7b740b38ae732e3ebd6a4a438a28e`. Branches de trabalho; main/tags/baselines intactas.
+- **Decisão de fechamento:** o bloco F9 autenticado local pode ser encerrado. Manter F9 global pendente se o critério final exigir validação externa; encerrar somente após aceite explícito de escopo que exclua esses serviços ou após testes autorizados em ambientes/contas reais. Ver [Registro 0057](REGISTROS/0057.md).
 
 ## Ordem definitiva recomendada
 
@@ -267,7 +283,7 @@ As fases são incrementais; uma dependência externa bloqueia somente a capacida
 
 ### Próximo bloco recomendado
 
-F1/F2 estão concluídas; F3 mantém dependências externas registradas; F4 local concluída com providers bloqueados externamente; F5/F6 estão implementadas; F7 está implementada estaticamente; F8 está preparada localmente, sem rollout/restore de produção. **F9 está em andamento**: matriz visual ampliada passou sem P0/P1/P2; os P3 originais foram corrigidos, um P3 novo de copy no Motoboy permanece, além da validação autenticada/end-to-end e capacidades externas.
+F1/F2 estão concluídas; F3 mantém dependências externas registradas; F4 local concluída com providers bloqueados externamente; F5/F6 estão implementadas; F7 está implementada e validada nos viewports da campanha; F8 está preparada localmente, sem rollout/restore de produção. **F9 local autenticada passou no Registro 0057** sem bug interno reproduzível; apenas os testes externos listados na seção F9 permanecem condicionados a escopo/ambiente autorizados.
 
 ## Bloqueios externos reais versus trabalho local
 

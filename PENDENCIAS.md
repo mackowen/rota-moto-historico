@@ -1,8 +1,11 @@
-## F9 — Registro 0053: isolamento PostgreSQL de QA
+## F9 — Atualização do Registro 0057: campanha autenticada executada
 
-- [ ] **Database QA descartável para E2E autenticado:** nenhuma das roles existentes `rotamoto_app`/`rotamoto_migrator` possui `CREATEDB`; não há database QA pré-criada. Não conceder privilégio permanente às roles de produto e não usar `rotamoto` para fixtures.
-- [ ] **Após definir o ambiente autorizado:** adaptar runner somente para alvo de teste allowlisted, implementar guardas pré-conexão, adapters exclusivos de teste, fixture via casos de uso, smoke mínimo e teardown completo. O runner atual restringe `/rotamoto`; nenhuma dessas etapas foi iniciada neste Registro.
-- A avaliação parou na Fase 1 por falta de ciclo seguro de criação/destruição. Fingerprint oficial antes/depois idêntico; sem app/DB alterado. F9 continua aberta com P0/P1/P2/P3 = 0 e sete grupos externos reais inalterados. Ver [Registro 0053](REGISTROS/0053.md).
+- [x] Browser E2E local autenticado integrado ao lifecycle rollback-scoped em `rotamoto_e2e`; ciclo Order→Delivery→Motoboy→reconciliação, FAILED, RETURNED e retry após offline passaram.
+- [x] Segurança: MFA/sessão/CSRF, tenant e Driver server-side, ausência de API cache, ausência de secrets em localStorage/IndexedDB e ledger negado ao runtime passaram. Oito combinações dos quatro viewports não tiveram overflow. Nenhum bug interno P0/P1/P2/P3 aberto.
+- [x] Regressão de identidade de sync corrigida: UUID canônico de Order/Delivery importado em nova instalação resolve ao mesmo registro, com alias tenant/type e `baseVersion`; sem duplicação. Commits: Restaurante `f6f99a4`, Motoboy `268c716`.
+- [ ] Reatribuição e fato atrasado com duas identidades permanecem NOT_TESTABLE_WITH_CURRENT_CAPABILITY pela fixture de um Driver; suítes de serviço cobrem autorização/reconciliação. Sem bug interno aberto.
+- **F9 local:** campanha das capacidades disponíveis aprovada. **F9 global:** depende de decidir se aceite inclui grupos externos ainda não verificáveis: email/recovery real; armazenamento operacional do segredo MFA; câmera/GPS físicos; blob remoto; iFood, 99Food e Keeta. Nenhum foi simulado como aprovado.
+- Guardas, paridade e lifecycle E2E; `npm test` nos dois apps; node checks e diff-check passaram. `rotamoto` somente READ ONLY; fingerprint catálogo/ledger antes/depois `0ce3aa0ae64db6398f54840d0894917c249cd76a0581b2f7f8e64aecd46303c9`; rollback sem resíduo. Evidências em `~/projetos/browser-tests/f9-authenticated-2026-10-05-round-{61,62,63,64}/`. Ver [Registro 0057](REGISTROS/0057.md).
 
 ## F9 — Atualização Registro 0052 (2026-10-04)
 
