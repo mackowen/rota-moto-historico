@@ -515,3 +515,12 @@ Rehearsal real do backup PostgreSQL encerrado com PASS: backup `d5cf784a-027a-48
 ## Atualização — Registro 0064 (2026-10-05)
 
 Recovery coordenado PostgreSQL+DeliveryProof/filesystem implementado. Rehearsal real PASS em `rotamoto_disposable_rehearsal` com conjunto `2d72d436-9eee-4bed-b03c-61c653e2f54c`; 21 relações, migrations 0001–0015, 13/13 RLS/FORCE e 13 policies coincidiram. A origem tinha zero referências de mídia, portanto o componente de mídia real restaurou zero blobs; fixture de arquivo não foi gravada em `rotamoto`. `npm test`, E2E guards, audit e checks finais passaram. ON_PREM_PRODUCTION_READY permanece **NO**: falta ensaio não vazio em DB test-only autorizado, instalar paths/chave persistentes e cron/monitoramento, e passar smoke TLS/CA/proxy/SMTP/URL/readiness no host de deployment. Ver [Registro 0064](REGISTROS/0064.md).
+## Atualização — Registro 0069 / inventário operacional Termux (2026-10-05)
+
+- Inspeção read-only: PostgreSQL está ativo em loopback com data dir privado `0700`; TLS local está desligado. nginx ativo é default HTTP `localhost:8080` para conteúdo estático, sem proxy TLS para API; PHP-FPM é independente do Node e não aplicável. Serviço Node RotaMoto não estava ativo e readiness em 8787 indisponível.
+- `npm run operator` reporta storage, SMTP, secrets/keystore, backup, chave e URL pública `not_configured`. Não há volumes convencionais de mídia/backup/keystore nem job recorrente comprovado. Configuração pgpass foi identificada somente por metadata `0600`; conteúdo nunca lido. Autenticação SQL `u0_a436` não estava disponível via mecanismo não interativo desta sessão e não foi contornada.
+- FIXED: runbooks reconciliados com Registro 0068 e rotação atual do keystore; exemplo nginx passou a permitir upload de prova de 8 MiB com margem multipart. `npm test`, `npm audit --omit=dev` (0), node check e diff-check PASS.
+- Restaurante `codex/setup-workflow` @ `c04bcdb3757a27ecd853c23ce7003431caad2ad4`; Motoboy `codex/setup-workflow` @ `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`. Sem alteração de banco/ACL/migration/fixture; sem push.
+- **ON_PREM_PRODUCTION_READY = NO.** Gates e ações do operador estão detalhados em [Registro 0069](REGISTROS/0069.md); recuperação 0068 continua encerrada e não foi repetida.
+
+## Atualização — Registro 0068 / recovery PostgreSQL + mídia não vazio encerrado (2026-10-05)

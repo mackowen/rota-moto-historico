@@ -422,4 +422,13 @@ OPEN para ON_PREM_PRODUCTION_READY: (1) rehearsal com ao menos uma DeliveryProof
 - [ ] **OPEN — cloud-ready separado:** escolher e validar no deployment cloud storage/secret/backup provider, cópia offsite e restore. Não é requisito para filesystem local on-prem.
 - iFood/99Food/Keeta e hardware GPS/câmera permanecem externos/inerentes; não bloqueiam o core self-hosted.
 
-## Atualização — Registro 0067 (histórico do bloqueio anterior; resolvido pelo 0068)
+## Atualização Registro 0069 — deployment Termux inspecionado
+
+- [ ] **NEEDS_CONFIGURATION — volumes:** escolher paths persistentes separados para `ROTAMOTO_MEDIA_DIRECTORY`, `ROTAMOTO_BACKUP_DIRECTORY`, `ROTAMOTO_SECRET_STORE_DIRECTORY` e arquivos de key; provisionar ownership/permissões privadas fora do checkout/webroot e espaço/alertas. Não usar shared Android storage para segredos/backups sensíveis.
+- [ ] **NEEDS_CONFIGURATION — serviço e rede:** instalar serviço Node supervisionado e ambiente privado; configurar `DATABASE_URL` de runtime, keystore/ref DB, `PUBLIC_BASE_URL`, origins/hosts e proxy TLS; provisionar domínio/certificado/cadeia e CA TLS PostgreSQL conforme topologia; executar readiness e smoke autenticado.
+- [ ] **BLOCKED_EXTERNAL / NEEDS_CONFIGURATION — SMTP:** operador precisa prover relay/host/conta/credencial, guardar a credencial no keystore, configurar SMTP e validar TLS/entrega para convite/recovery.
+- [ ] **NEEDS_CONFIGURATION — backup:** criar chave de backup permanente fora do DB, guardar cópia offline protegida separadamente, configurar role/url pgpass no serviço operacional, agendar `backup:create`/verify, retenção e alertas. O recovery set não vazio permanece comprovado pelo 0068.
+- [ ] **NEEDS_OPERATOR_DECISION — operação:** definir frequência/RPO, medir restore/RTO no host destino, aprovar retenção com responsável legal/operacional e decidir necessidade/destino de offsite. Defaults de 30 dias e grace 45d são parâmetros técnicos, não obrigação legal.
+- **Sem código impeditivo identificado no inventário.** PHP-FPM não se aplica à API Node; cloud providers não são requisitos on-prem; iFood/99Food/Keeta e hardware físico não bloqueiam o core.
+
+## Atualização Registro 0067 (2026-10-05)

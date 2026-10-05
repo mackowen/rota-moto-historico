@@ -338,3 +338,11 @@ O ensaio PostgreSQL de backup/restore está concluído e validado em `rotamoto_d
 ## Atualização — Registro 0064
 
 A etapa de implementação coordenada está concluída; não reabrir o rehearsal PostgreSQL isolado. Para encerrar on-prem: provisionar deployment persistente (storage, backup key fora do DB e cópia offline), configurar/monitorar scheduler, executar rehearsal de mídia não vazia em DB test-only aprovado e passar preflight/smoke no host com TLS/CA/proxy, SMTP/PUBLIC_BASE_URL e health/readiness; medir RPO/RTO e decidir retenção/offsite. A promoção do staging validado ao volume de produção segue procedimento operador com serviços parados. Cloud exige validar as mesmas etapas no storage/key/backup cloud. Evidência: [Registro 0064](REGISTROS/0064.md).
+## Atualização Registro 0069 — inventário de deployment on-prem
+
+- O Termux atual é desenvolvimento/homologação: PostgreSQL local ativo (loopback, TLS off), nginx default HTTP estático em 8080, PHP-FPM alheio à API e backend Node/readiness não ativo. Status sanitizado do operador reporta mídia, backup/chave, keystore, SMTP e `PUBLIC_BASE_URL` não configurados; não há scheduler recorrente comprovado.
+- Runbooks agora refletem o rehearsal não vazio já encerrado no 0068, a rotação staged disponível e o limite nginx compatível com upload de prova.
+- **Próxima etapa: somente configuração/provisionamento do operador**, salvo regressão concreta: volumes e permissões privadas; chaves duráveis + cópia offline; SMTP real; domínio/URL/TLS/CA/proxy; serviço Node; scheduler/alertas; readiness/smoke e RPO/RTO/retention aprovados.
+- `ON_PREM_PRODUCTION_READY = NO`. Não repetir recovery 0068 sem nova evidência. Ver matriz e ações exatas no [Registro 0069](REGISTROS/0069.md).
+
+## Atualização Registro 0068 — recovery não vazio encerrado; deployment continua aberto
