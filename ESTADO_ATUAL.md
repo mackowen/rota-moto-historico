@@ -1,3 +1,13 @@
+## Atualização — Registro 0060 / núcleo self-hosted (2026-10-05)
+
+- Restaurante `codex/setup-workflow` @ `9b5fe50f3df976d2913e9408948d96ec840392e3`; Motoboy @ `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`. Sem push; main/tags/baselines intactas. Registro 0060 é a única nova peça canônica desta rodada.
+- Migration aditiva `0015_proof_media_upload_intents` aplicada em `rotamoto` e `rotamoto_e2e`; security parity passou em 15 checksums. Nenhuma fixture em `rotamoto`. Divergência material ao 0059: ledger estava ausente no banco operacional local; runner aplicou 0001–0015, e consultas read-only confirmam `companies=0`, `domain_records=0`.
+- DeliveryProof upload/sync agora usa intent tenant-scoped e advisory lock compartilhado; GC dry-run por padrão, mínimo 45 dias, checagem de referência canônica e intent. Motoboy vincula upload ao ID local, mantendo assinatura/retry/offline.
+- CLI separado de operador: status de storage/SMTP/secrets/backup/URL; secret stdin write-only; auditoria local. Keystore tem rotação staged, cópia segura e rollback. Backup PostgreSQL custom é stream AES-256-GCM, manifesto HMAC/checksum, retenção e restore limitado a `rotamoto_disposable_*`.
+- PASS: `npm test` ambos, E2E lifecycle/guards/security, 15 checksums, node checks, diff check; `npm audit --omit=dev` ambos com zero vulnerabilidades. Browser/CDP não disponível nesta sessão; Chromium Android/Termux tinha falhado com exit 134 no Registro 0059. Backup+restore real não executado: `rotamoto_backup`/`rotamoto_restore`/target descartável inexistentes e precisam DBA. Não executar `npm run test:postgres`, pois grava em `rotamoto`.
+- OPEN: snapshot/restore de mídia no backup, retenção de intents abandonadas, decisão/medição RPO/RTO, deployment real TLS/CA/SMTP/keys. BLOCKED: DBA role/alvo e restore rehearsal real. SELF-HOSTED: PG/API/email/MFA FUNCTIONAL; Restaurante/Motoboy PARTIAL sem browser; storage FUNCTIONAL no fluxo de prova/GC mas mídia ausente do backup; secrets PARTIAL; backup/restore BLOCKED. ON_PREM_PRODUCTION_READY=NO; CLOUD_READY=NO.
+- Ver [Registro 0060](REGISTROS/0060.md) e [Registro 0059](REGISTROS/0059.md).
+
 ## Atualização — Registro 0059 / Integração self-hosted (2026-10-05)
 
 - Restaurante `codex/setup-workflow` @ `a7762124197d3b1668e2be701c1dc3697a5a46cd`; Motoboy `codex/setup-workflow` @ `7d02b44b139bb8170b8909f6513c0ac280588ef4`; histórico em `codex/f9-browser-e2e-0057`, Registro 0059 salvo em `8ff99a12b9fbc9de07934aad0cdf93c04386a587`. Nenhum push; branches principais, tags e baselines intactas.

@@ -1,3 +1,16 @@
+## Atualização — Registro 0060 (2026-10-05)
+
+- [x] Garbage collection filesystem com dry-run, grace mínimo 45d, confirmação canônica incluindo tombstones, intents persistentes e isolamento RLS tenant; upload/sync/GC compartilham lock. Intent sem sync não expira para preservar Motoboy offline; blobs abandonados podem reter espaço.
+- [x] Superfície local do operador com status sanitizado e secret write-only via stdin; filesystem config/env separado de tenant; auditoria local 0600 com actorRef. Não há settings tenant autorizando paths, keys, banco ou config global.
+- [x] CLI de rotação do keystore cobre exatamente inventário local manifesto, recriptografa/valida em stage, backup privado e rollback; falhas intermediárias testadas.
+- [x] Pipeline operacional de backup PostgreSQL implementado: pg_dump custom, AES-256-GCM, chave externa ao banco, manifest HMAC/checksum, retenção, verificação TOC e restore explicitamente limitado a database descartável. Nenhuma opção aceita `rotamoto`.
+- [ ] Cópia e restore seguros do volume de mídia/provas dentro do conjunto de backup ainda ausentes.
+- [ ] Provisionar `rotamoto_backup` e `rotamoto_restore` pelo DBA e criar target `rotamoto_disposable_*`; executar dump/restore rehearsal real e validar owners, grants, RLS/FORCE, policies, checksum/manifesto e operação canônica. Não conceder BYPASSRLS ao runtime.
+- [ ] Definir e medir RPO/RTO, prazo legal/operacional de retenção e janela de expiração para upload intents abandonadas; configurar deploy TLS/CA/SMTP/keys/audit/scheduler.
+- [ ] Browser E2E MFA/DeliveryProof offline retry não verificável: nenhum browser/CDP host-managed exposto nesta sessão; Chromium Termux encerrou com 134/inotify na tentativa anterior.
+- Não executar `npm run test:postgres` legado enquanto suas fixtures escreverem em `rotamoto`. Usar `rotamoto_e2e` com lifecycle rollback e security parity.
+- Observação: `rotamoto` local estava sem migration ledger apesar da afirmação em 0059; 0001–0015 aplicadas, e queries read-only mostram zero `companies` e `domain_records`. Nenhuma fixture/dado tenant foi criado. Ver [Registro 0060](REGISTROS/0060.md).
+
 ## F9 — Atualização do Registro 0057: campanha autenticada executada
 
 - [x] Browser E2E local autenticado integrado ao lifecycle rollback-scoped em `rotamoto_e2e`; ciclo Order→Delivery→Motoboy→reconciliação, FAILED, RETURNED e retry após offline passaram.

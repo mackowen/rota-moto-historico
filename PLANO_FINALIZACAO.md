@@ -1,5 +1,13 @@
 # Plano mestre de finalização do RotaMoto
 
+## Atualização Registro 0060 — núcleo on-prem ainda bloqueado por recuperação operacional
+
+- Restaurante HEAD `9b5fe50f3df976d2913e9408948d96ec840392e3`, Motoboy HEAD `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`; sem push. `0015_proof_media_upload_intents` aplicada e security parity 15 migrations aprovada.
+- DeliveryProof com intent persistente/GC tenant-safe, operator CLI separado, rotação do keystore staged/rollback e backup PG AES-GCM/manifest/retention/restore guard foram implementados e cobertos por testes automatizados. Filesystem local continua caminho válido sem S3/KMS.
+- **ON_PREM_PRODUCTION_READY = NO.** Requer provisioning DBA e rehearsal restore PostgreSQL real em `rotamoto_disposable_*`, além de backup/restore do volume de media/provas, definição/medição RPO/RTO e deployment validado TLS/CA/SMTP/keys/audit. O DB local `rotamoto` recebeu migrations 0001–0015 porque o ledger estava ausente, mas permanece sem tenants/registros; nenhum fixture foi gravado nele.
+- **CLOUD_READY = NO.** Também exige smoke em infraestrutura cloud, proxy/PostgreSQL TLS real, provider de mídia/secret e offsite backup conforme deployment. iFood/99Food/Keeta e hardware físico seguem inerentes.
+- Gates: `npm test` ambos, guards/lifecycle/security parity E2E (15 checksums), node --check, diff-check e npm audits (0 vulnerabilidades) passaram. Browser E2E NOT_TESTABLE sem browser/CDP host-managed; restore de banco real NOT_TESTABLE sem roles/alvo DBA. `npm run test:postgres` omitido para proteger `rotamoto` contra fixtures. Ver [Registro 0060](REGISTROS/0060.md).
+
 ## Atualização Registro 0058 — base self-hosted ainda não production-ready
 
 - Restaurante `9a3c3a5`: keystore AES-GCM local, SMTP TLS adapter, object store local, TOTP/recovery primitives e backup writer filesystem. Deployment on-prem/VPS documentado; cloud provider permanece interface futura. Motoboy não precisou de alterações.
