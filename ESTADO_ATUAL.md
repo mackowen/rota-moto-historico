@@ -457,3 +457,12 @@ Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamen
 - Varredura consolidada no Motoboy encontrou falhas de persistência em normalização inicial, distâncias/ordem de rota, GPS, importação e limpeza; também tombstones recebidos que não eram retidos e HTML que não escapava IDs/assinaturas importados. Correções usam a fila/snapshot e transações existentes.
 - HEAD final `b57afc2ae5c82ad0ae65a4857c59e95581ed809d` (`fix(motoboy): consolidate remaining technical issues`); baseline `v39.6-ui-mobile-fix2` preservada; Restaurante sem alteração.
 - `node --check app.js`, `npm test` e `git diff --check` passaram. Browser QA não executado. Uma limitação de concorrência entre abas independentes permanece documentada no Registro 0019.
+## Atualização — Registro 0058 / fundação self-hosted (2026-10-05)
+
+- Restaurante `codex/setup-workflow` @ `9a3c3a5`; Motoboy `codex/setup-workflow` @ `268c716144a7b740b38ae732e3ebd6a4a438a28e`. Sem push/main/tag/baseline.
+- PASS: keystore local AES-GCM com scopes, primitives storage local/hash/limits, SMTP TLS adapter, primitives TOTP/recovery, backup writer filesystem e guia on-prem/VPS. Node >=24.7.
+- OPEN interno: ligar upload/reading de mídia com auth/CSRF/RBAC/RLS e metadata PG; enrollment MFA com persistência/anti-replay/rate limit/auditoria/recovery; templates/URLs SMTP; UI de status/separação de configuração; backup criptografado/agenda/restore/retention/remote; rotação de master key. Recursos não integrados permanecem fail-closed.
+- Sem migration ou mudança em PostgreSQL; nenhum write em `rotamoto`; lifecycle E2E com rollback passou. Browser não reaberto por ausência de mudança visual/regressão.
+- `npm test` nos dois apps, guards/lifecycle, node checks, diff-check e audit passaram. Paridade PostgreSQL read-only e integration PG geral não conectaram devido URLs de auditoria ausentes.
+- SMTP: self-host adapter disponível, integração final pendente. MFA: primitives nativas, enrollment pendente. DeliveryProof: store filesystem primitivo, API pendente. Backup: writer local, política/restore pendentes. Hardware câmera/GPS; iFood/99Food/Keeta externos.
+- Não considerar production-ready on-prem ou cloud-ready até fechar os itens OPEN. Ver [Registro 0058](REGISTROS/0058.md).

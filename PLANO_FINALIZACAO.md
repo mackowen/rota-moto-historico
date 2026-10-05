@@ -1,6 +1,13 @@
 # Plano mestre de finalização do RotaMoto
 
-**Revisão:** 2026-10-05 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0007, Registros 0001–0056, checkouts atuais, contrato sincronizado e auditoria PostgreSQL read-only. **Fases:** F1 B; F2 A; F3–F8 B; F9 aberta. ACL E2E aprovada e lifecycle rollback-scoped pronto; Browser F9 ainda pendente.
+## Atualização Registro 0058 — base self-hosted ainda não production-ready
+
+- Restaurante `9a3c3a5`: keystore AES-GCM local, SMTP TLS adapter, object store local, TOTP/recovery primitives e backup writer filesystem. Deployment on-prem/VPS documentado; cloud provider permanece interface futura. Motoboy não precisou de alterações.
+- Não houve migration, alteração de schema/dados nem escrita em `rotamoto`; lifecycle E2E rollback e guards passam. Sem Browser F9 por falta de mudança UI.
+- **F8 permanece incompleta:** integrar media upload/read autenticados + metadata; MFA enrollment/replay/rate-limit/auditoria; email templates/URLs e admin status UI; secret rotation; backups criptografados, agendados, retention/restore; repetir gates PG read-only/integration quando URLs estiverem disponíveis.
+- Deploy on-prem/VPS não pode ser marcado production-ready e cloud-ready continua pendente até concluir esses controles. External blockers restantes: hardware câmera/GPS e homologações/contas/credenciais iFood/99Food/Keeta. Ver [Registro 0058](REGISTROS/0058.md).
+
+**Revisão:** 2026-10-05 · **Fonte de verdade:** este documento, reconciliado com DEC-0002 a DEC-0007, Registros 0001–0058, checkouts atuais e contrato sincronizado. **Fases:** F1 B; F2 A; F3–F7 B; F8 incompleta; campanha F9 local aprovada no 0057. Gates read-only que exigem URL não reexecutados no 0058.
 
 Este plano reúne trabalho já comprovado, lacunas encontradas no código e dependências externas reais. Não reabre o trabalho concluído nos Registros 0033–0036: role split, domínio canônico, ownership, ACK, transporte e reconciliação Local-First permanecem concluídos nos limites registrados. `main`, tags e baselines são referências protegidas.
 

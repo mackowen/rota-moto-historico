@@ -347,3 +347,13 @@ Corrigidos: transação parcial de normalização inicial; publicação prematur
 Pendente P1: a fila `commitRiderCommand` é local à instância JavaScript. Duas abas simultâneas podem calcular snapshots independentes e uma gravação posterior pode substituir a mais recente; esta rodada não introduziu lock/CAS entre abas para evitar ampliar a arquitetura sem cobertura de runtime. Também não há teste com IndexedDB nativo neste runtime.
 
 Limitação existente: atualização de `localStorage` após commit continua best-effort; falha de quota/escrita é registrada no console, mantendo IndexedDB como estado principal. Browser QA não executado.
+## Atualização Registro 0058 — fundações self-hosted
+
+- [x] Fundamentos no Restaurante: filesystem object store (UUID, limites, tipo/hash/integridade, atomicidade), keystore AES-GCM escopado, SMTP TLS adapter, TOTP/recovery primitives, writer de backup filesystem e documentação de deployment.
+- [ ] **OPEN P1 — DeliveryProof:** ligar upload/leitura autenticados a CSRF, tenant e Driver server-side; persistir metadata PostgreSQL/RLS e testar lifecycle/remoção de órfãos.
+- [ ] **OPEN P1 — MFA:** implementar enrollment, confirmação, seed server-side criptografado, contador replay persistente, rate-limit/auditoria e recovery codes one-time sem criar bypass; manter MFA administrativo fail-closed até lá.
+- [ ] **OPEN P1 — Email/config:** completar templates/URLs web de convite/recovery, administração status-only e separação visível instalação vs tenant; testar SMTP em ambiente autorizado sem retornar segredos.
+- [ ] **OPEN P1 — Secrets:** runbook/ferramenta de rotação segura da master key e validação operacional de permissões/backup offline.
+- [ ] **OPEN P1 — Backup:** integração `pg_dump`, criptografia, agenda/retention, checksum/manifest e restore ensaiado em DB descartável; remota opcional.
+- [ ] **OPEN P1 — Paridade/PG:** repetir PostgreSQL suite e auditoria read-only com URLs provisionadas; `npm run test:e2e-security` e `npm run test:postgres` não conectaram por falta das URLs.
+- iFood/99Food/Keeta seguem BLOCKED_EXTERNAL; câmera/GPS dependem de dispositivo. F9 aprovada no 0057 não foi reaberta. Ver [Registro 0058](REGISTROS/0058.md).
