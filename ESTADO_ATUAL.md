@@ -1,6 +1,6 @@
 ## Atualização — Registro 0059 / Integração self-hosted (2026-10-05)
 
-- Restaurante `codex/setup-workflow` @ `a7762124197d3b1668e2be701c1dc3697a5a46cd`; Motoboy `codex/setup-workflow` @ `7d02b44b139bb8170b8909f6513c0ac280588ef4`; histórico em `codex/f9-browser-e2e-0057` (commit desta síntese a registrar). Nenhum push; branches principais, tags e baselines intactas.
+- Restaurante `codex/setup-workflow` @ `a7762124197d3b1668e2be701c1dc3697a5a46cd`; Motoboy `codex/setup-workflow` @ `7d02b44b139bb8170b8909f6513c0ac280588ef4`; histórico em `codex/f9-browser-e2e-0057`, Registro 0059 salvo em `8ff99a12b9fbc9de07934aad0cdf93c04386a587`. Nenhum push; branches principais, tags e baselines intactas.
 - Migration `0014_native_totp_lifecycle` aditiva aplicada em `rotamoto` e `rotamoto_e2e`; ledger 14/14. 0001–0013 intactas. Nenhuma fixture/teste escreveu em `rotamoto`.
 - DeliveryProof filesystem autenticado integrado a Motoboy/sync, metadata canônica, hash, leitura protegida e UI de status; MFA TOTP nativo, recovery codes por digest, replay/rate limit/auditoria e UI nos dois apps; SMTP integrado a convite/recovery, links corretos e harness local SMTP test-only.
 - `npm test` ambos; E2E lifecycle rollback, guards, security parity (14 checksums), migration status, `node --check`, `git diff --check` e `npm audit --omit=dev` ambos passaram. Auditorias: 0 vulnerabilidades.
