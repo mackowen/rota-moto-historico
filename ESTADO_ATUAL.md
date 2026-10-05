@@ -490,3 +490,7 @@ Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamen
 ## Atualização — Registro 0063 (2026-10-05)
 
 Rehearsal real do backup PostgreSQL encerrado com PASS: backup `d5cf784a-027a-482f-a062-5d7d99506e7e` (SHA-256 `156bc40f195f3ebbdcff3d7b403e421f2ce11d85cbbcb563a52c61c012546470`) verificado e restaurado em `rotamoto_disposable_rehearsal`. Comparação read-only confirmou 21 relações, ledger 0001–0015, 13/13 RLS/FORCE, 13 policies e completude estrutural/contagens. `rotamoto` e `rotamoto_e2e` permaneceram intocados. Rehearsal de banco encerrado; instalação on-prem ainda **não** production-ready por falta de backup coordenado de mídia e smoke/provisioning operacional. Ver [Registro 0063](REGISTROS/0063.md).
+
+## Atualização — Registro 0064 (2026-10-05)
+
+Recovery coordenado PostgreSQL+DeliveryProof/filesystem implementado. Rehearsal real PASS em `rotamoto_disposable_rehearsal` com conjunto `2d72d436-9eee-4bed-b03c-61c653e2f54c`; 21 relações, migrations 0001–0015, 13/13 RLS/FORCE e 13 policies coincidiram. A origem tinha zero referências de mídia, portanto o componente de mídia real restaurou zero blobs; fixture de arquivo não foi gravada em `rotamoto`. `npm test`, E2E guards, audit e checks finais passaram. ON_PREM_PRODUCTION_READY permanece **NO**: falta ensaio não vazio em DB test-only autorizado, instalar paths/chave persistentes e cron/monitoramento, e passar smoke TLS/CA/proxy/SMTP/URL/readiness no host de deployment. Ver [Registro 0064](REGISTROS/0064.md).

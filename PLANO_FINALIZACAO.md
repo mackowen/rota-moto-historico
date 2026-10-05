@@ -321,3 +321,7 @@ Todos os trabalhos seguintes continuam em `codex/setup-workflow` nos dois apps; 
 ## Atualização — Registro 0063
 
 O ensaio PostgreSQL de backup/restore está concluído e validado em `rotamoto_disposable_rehearsal`; não repetir sem nova autorização explícita para reset do descartável. Próximo bloco de fechamento on-prem: implementar e ensaiar recuperação coordenada de mídia + banco; automatizar preflight/smoke de instalação local; finalizar runbook operacional com retenção e RPO/RTO decididos pelo operador. Só então reavaliar ON_PREM_PRODUCTION_READY. Cloud continua exigindo adaptação/validação de storage e gestão de chaves no ambiente-alvo. Evidência: [Registro 0063](REGISTROS/0063.md).
+
+## Atualização — Registro 0064
+
+A etapa de implementação coordenada está concluída; não reabrir o rehearsal PostgreSQL isolado. Para encerrar on-prem: provisionar deployment persistente (storage, backup key fora do DB e cópia offline), configurar/monitorar scheduler, executar rehearsal de mídia não vazia em DB test-only aprovado e passar preflight/smoke no host com TLS/CA/proxy, SMTP/PUBLIC_BASE_URL e health/readiness; medir RPO/RTO e decidir retenção/offsite. A promoção do staging validado ao volume de produção segue procedimento operador com serviços parados. Cloud exige validar as mesmas etapas no storage/key/backup cloud. Evidência: [Registro 0064](REGISTROS/0064.md).

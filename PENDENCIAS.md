@@ -387,3 +387,9 @@ Limitação existente: atualização de `localStorage` após commit continua bes
 Fechado: rehearsal real pg_dump → artefato cifrado/manifesto → verificação → restore PostgreSQL descartável, incluindo comparação do ledger, estrutura, RLS/FORCE, policies, ownership e contagens.
 
 Continuam OPEN para fechar ON_PREM_PRODUCTION_READY: (1) backup/restore coordenado filesystem DeliveryProof + PostgreSQL, com checksums/manifesto e validação canônica de referências; (2) provisioning/preflight/smoke completo em instalação limpa, incluindo permissões, keystore, SMTP, TLS/CA/proxy e scheduler; (3) retenção e decisão operacional de offsite/RPO/RTO com medição. Não são requisitos legais presumidos. Browser E2E não foi executado nesta rodada por escopo. Detalhes/evidências em [Registro 0063](REGISTROS/0063.md).
+
+## Atualização — Registro 0064
+
+Fechado no código e no ensaio: backup set indivisível lógico DB+mídia, cifra/HMAC/checksum, snapshot lock compartilhado por upload/sync/GC, restore staging para alvos descartáveis, validação por referência, retenção como diretório completo, status de operador e runbooks cron/timer.
+
+OPEN para ON_PREM_PRODUCTION_READY: (1) rehearsal com ao menos uma DeliveryProof canônica não vazia em database test-only autorizado; o `rotamoto` real tinha zero referências, e `rotamoto_e2e` não recebeu grant de backup; (2) paths de mídia/backup persistentes e backup key durável com cópia offline protegida; (3) instalar cron/systemd/runit e alertas de falha/idade/espaço; (4) smoke de deployment real para TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore, scheduler e readiness; (5) medir RPO/RTO no deployment e decidir retenção/offsite operacionalmente. Retenção default 30d não é obrigação legal. Hardlink físico ficou NOT_TESTABLE por restrição Android/Termux. Detalhes no [Registro 0064](REGISTROS/0064.md).
