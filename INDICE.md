@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0071 | 2026-10-05 | RotaMoto Restaurante / Motoboy | CONTRATO / TESTES CROSS-APP | Paridade semântica do contrato sync v1 | Divergência corrigida: Motoboy aceita `baseVersion` de update como Restaurante; regressão compara semântica v1 sem impor igualdade de stores locais. npm test em ambos passou. | [REGISTROS/0071.md](REGISTROS/0071.md) |
 | 0070 | 2026-10-05 | RotaMoto Restaurante / Motoboy | AUDITORIA / DESENHO FUNCIONAL | Frota híbrida, analytics, QR/scanner, OCR e impressão | Auditoria somente leitura concluída; QR atual expõe PII; desenho e ordem incremental registrados. Nenhuma funcionalidade implementada. ON_PREM_PRODUCTION_READY=NO. | [REGISTROS/0070.md](REGISTROS/0070.md) |
 | 0069 | 2026-10-05 | RotaMoto Restaurante / deployment Termux | INVENTÁRIO / ON-PREM / RUNBOOK | Inventário read-only do deployment atual | Produto e recovery implementados; deployment Termux sem API, mídia, backup, keystore, SMTP, URL pública, TLS ou scheduler configurados. ON_PREM_PRODUCTION_READY=NO. | [REGISTROS/0069.md](REGISTROS/0069.md) |
 | 0068 | 2026-10-05 | RotaMoto Restaurante / PostgreSQL descartável / DeliveryProof | RECOVERY / RESTORE / E2E / TEARDOWN | Recovery set não vazio PostgreSQL + mídia | PASS: backup cifrado, verify, restore descartável e equivalência metadata↔blob; teardown e revogação concluídos. ON_PREM_PRODUCTION_READY=NO por gates de deployment. | [REGISTROS/0068.md](REGISTROS/0068.md) |

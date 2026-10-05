@@ -148,7 +148,11 @@ Preflight somente leitura confirmou `rotamoto_backup` sem CONNECT/USAGE em `rota
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Atualização mais recente: Registro 0070.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Atualização mais recente: Registro 0071.
+
+## Atualização — Registro 0071 / paridade do contrato v1 (2026-10-05)
+
+Restaurante `codex/setup-workflow` @ `6fb45c0aee3d2d21c029d349f6fddc16dd4aff25`; Motoboy `codex/setup-workflow` @ `ffe2d66081a1845eebd61def4608fd7bf0d92816`. Regressão semântica cross-app adicionada aos `npm test` dos dois apps. Motoboy agora permite `baseVersion` opcional e positivo nas mesmas entidades que Restaurante; servidor continua removendo esse metadado antes de persistir canonical payload. Protocol/schema v1, IndexedDB e contrato documental não mudaram. `npm test`, node checks e diff check passaram. Sem PostgreSQL/migrations/fixtures/Browser E2E ou push; baselines preservadas. QR/OCR/analytics/frota híbrida/impressão não foram implementados. Ver [Registro 0071](REGISTROS/0071.md).
 
 ## Atualização — Registro 0070 / auditoria funcional cross-app (2026-10-05)
 
