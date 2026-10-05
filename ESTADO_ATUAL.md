@@ -1,3 +1,7 @@
+## Atualização — Registro 0066 / grants removidos; autenticação impede recovery (2026-10-05)
+
+O escopo temporário DBA em `rotamoto_e2e` foi confirmado por catálogo (CONNECT, USAGE, SELECT nas 21 relações; sem escrita/CREATE/TEMP) e depois integralmente revogado por `rotamoto_migrator`; pós-validação encontrou zero grants residuais. `rotamoto_backup` não autenticou via pgpass para `rotamoto_e2e` (`no password supplied`), então nenhuma fixture, backup ou restore foi iniciado. Restaurante permanece limpo em `40c9702feca4ab066bcaf73b9429dac60f341538`. Gate não vazio **ABERTO**; `ON_PREM_PRODUCTION_READY = NO`. Ver [Registro 0066](REGISTROS/0066.md).
+
 ## Atualização — Registro 0065 / recovery não vazio bloqueado (2026-10-05)
 
 Preflight somente leitura confirmou `rotamoto_backup` sem CONNECT/USAGE em `rotamoto_e2e`. O lifecycle E2E aprovado sempre reverte a transação externa e remove o filesystem temporário, portanto `pg_dump` independente não enxerga a DeliveryProof. Nenhuma fixture, ACL, migration ou dado foi alterado. Gate “recovery PostgreSQL + mídia não vazio” **ABERTO**; `ON_PREM_PRODUCTION_READY = NO`. Ver [Registro 0065](REGISTROS/0065.md).

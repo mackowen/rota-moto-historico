@@ -1,3 +1,10 @@
+## Atualização — Registro 0066 (2026-10-05)
+
+- [ ] **OPEN — rehearsal não vazio:** `rotamoto_backup` não autenticou em `rotamoto_e2e` via pgpass. O grant temporário mínimo foi comprovado e revogado; nenhum fixture/backup/restore foi executado. Prosseguir somente com mecanismo de autenticação já autorizado para essa entrada, sem criar/copiar credenciais ou trocar de role.
+- [ ] Demais gates de deployment do Registro 0064: paths/chave duráveis e cópia offline; scheduler/monitoramento; smoke TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore/readiness; medição RPO/RTO e decisão operacional de retenção/offsite.
+
+Ver [Registro 0066](REGISTROS/0066.md).
+
 ## Atualização — Registro 0065 (2026-10-05)
 
 - [ ] **OPEN — recovery não vazio PostgreSQL + mídia:** `rotamoto_backup` não tem CONNECT/USAGE em `rotamoto_e2e`; o lifecycle aprovado reverte a fixture antes que `pg_dump` independente possa capturá-la. Não conceder permissões nem deixar fixture persistente sem procedimento test-only autorizado.
