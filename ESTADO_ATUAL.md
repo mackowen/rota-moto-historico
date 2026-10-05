@@ -148,7 +148,11 @@ Preflight somente leitura confirmou `rotamoto_backup` sem CONNECT/USAGE em `rota
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Atualização mais recente: Registro 0071.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Atualização mais recente: Registro 0072.
+
+## Atualização — Registro 0072 / QR seguro de Delivery (2026-10-05)
+
+Restaurante `codex/setup-workflow` @ `a48ab2532ca3bc9a31ccaaffdc482be0c84906b6`; Motoboy `codex/setup-workflow` @ `2a1ec2a7cf4d90476cd38bcd1d6f3801c0503d6a`. O QR antigo com PII deixou de ser emitido; emissão autenticada no backend usa token Ed25519 versionado, tenant-bound, com revisão/expiração e chave privada no keystore. Motoboy valida assinatura/tenant/Delivery/Driver/revisão/estado, revalida online, suporta snapshot offline com aviso e exige confirmação antes de abrir. Decoder jsQR é local e incluído no shell offline. Não houve migration nem mudança do contrato/sync v1. `npm test` passou nos dois, assim como testes QR, `node --check` e `git diff --check`. Browser E2E e câmera física não foram testados: sem harness/browser host-managed aprovado disponível. A chave do deployment precisa ser provisionada/configurada pelo operador antes da emissão real. Baselines, main e tags preservadas; sem push. Ver [Registro 0072](REGISTROS/0072.md).
 
 ## Atualização — Registro 0071 / paridade do contrato v1 (2026-10-05)
 
