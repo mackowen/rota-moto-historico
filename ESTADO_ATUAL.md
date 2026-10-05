@@ -1,3 +1,9 @@
+## Atualização — Registro 0073 / OCR Motoboy local e offline (2026-10-05)
+
+- Motoboy `codex/setup-workflow` @ `bc3d9ced58694606d1252ca97e4dcf54562505ec`; Restaurante `codex/setup-workflow` @ `a48ab2532ca3bc9a31ccaaffdc482be0c84906b6` sem alteração. Baselines e `main` preservadas; sem push.
+- OCR agora usa pipeline modular Tesseract.js/modelo português self-hosted, cache PWA, normalização PT-BR, candidatos e confidence por campo, limites de imagem e revisão obrigatória antes de salvar. Corpus sintético 14 layouts e Browser E2E Chromium offline passaram; 72 valores anotados corretos e nenhum falso preenchimento nos campos avaliados.
+- Fotos, texto OCR e evidências permanecem locais e voláteis; câmera física/qualidade com fotos reais Android não testadas. Não houve alteração do contrato/sync/DB/migrations nem do Restaurante. Ver [Registro 0073](REGISTROS/0073.md).
+
 ## Atualização — Registro 0068 / recovery PostgreSQL + mídia não vazio encerrado (2026-10-05)
 
 - Rehearsal real em databases exclusivos `rotamoto_disposable_0068_source` e `rotamoto_disposable_0068_restore`: lifecycle HTTP criou DeliveryProof filesystem canônica e blob real; recovery set cifrado/autenticado foi verificado e restaurado. ID `7f45a0c3-fe9a-40b2-b776-4b514bfe70cf`; SHA-256 dump cifrado `c7678cf206695e64bc3cb118569e9918017c838f6e00523b3b598c438d3d7d59`; 1 blob `image/png`, 9 bytes, hash `843ac23b1736b4487ec81cf7c07ddd9bb46ae5b7818c2c3843d99d62fa75f3c9`.

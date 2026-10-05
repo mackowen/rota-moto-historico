@@ -1,3 +1,11 @@
+## Atualização — Registro 0073 (2026-10-05)
+
+- OCR multi-layout local/offline implementado e verificado com corpus sintético e Chromium offline. Não há bloqueio interno de código identificado nesta campanha.
+- [ ] Validar OCR/câmera em Android físico com comandas reais anonimizadas, registrar métricas por campo e ajustar thresholds/aliases somente a partir dessa evidência. Não inferir qualidade de produção do corpus sintético.
+- O gate recovery PostgreSQL+mídia não vazio listado em registros anteriores foi encerrado pelo Registro 0068; as entradas históricas abaixo não representam estado atual desse gate.
+
+Ver [Registro 0073](REGISTROS/0073.md).
+
 ## Atualização — Registro 0067 (2026-10-05)
 
 - [ ] **OPEN — recovery não vazio + teardown:** o lifecycle autenticado criou a prova, mas o trigger append-only impediu apagar 15 audit rows; Company/User permanecem pelas FKs. Não remover/alterar auditoria nem enfraquecer o trigger. Definir procedimento E2E que mantenha fixture transacional visível ao snapshot/pg_dump e reverta integralmente, ou reset isolado aprovado para `rotamoto_e2e`.
