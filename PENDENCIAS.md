@@ -17,6 +17,17 @@
 
 # Pendências
 
+## Self-hosted readiness — Registro 0059 (2026-10-05)
+
+- [ ] **P1 — Storage:** implementar coleta tenant-safe de arquivos sem prova canônica referenciando-os, com período de graça; cobrir resposta HTTP perdida e falha de sync. Upload/read e persistência canônica já operam; storage segue PARTIAL até cleanup seguro.
+- [ ] **P1 — Backup/restore PostgreSQL:** falta papel/procedimento autorizado que leia o conjunto completo sem desabilitar RLS forced ou elevar runtime; depois integrar pg_dump criptografado, manifesto/checksum, retenção, verificação e restore em alvo descartável. Estado BLOCKED, não executar DDL/role admin sem a autorização operacional necessária.
+- [ ] **P1 — Configuração de instalação:** criar superfície separada de operador com status sanitizado para storage, SMTP, backup, keystore/provider e URL base; operações de secrets write-only/audited. Tenant não pode alterar opções globais.
+- [ ] **P1 — Keystore:** ferramenta CLI segura de rotação transacional com backup temporário, rollback, arquivos 0600 e procedimento de recuperação. Atualmente só provisioning e uso criptografado.
+- [ ] **P2 — Browser:** repetir CDP E2E de MFA, links SMTP e DeliveryProof offline/retry quando Chromium do Termux/CDP ficar disponível; rodada 0059 parou em 404 do harness estático e encerramento Chromium 134.
+- [ ] **P2 — Cloud:** validar deploy com TLS/proxy/PostgreSQL gerenciado, providers remotos S3/MinIO, KMS/Vault e backup offsite criptografado. Providers remotos são opcionais para on-prem filesystem; necessários conforme topologia cloud escolhida.
+- [ ] **External inherent:** protocolos/contas/homologação iFood, 99Food e Keeta; GPS/câmera físicos e permissões de dispositivos.
+- [x] MFA TOTP/recovery nativo e fluxo SMTP de convite/recovery integrado; delivery proof filesystem e authorization tenant/Driver/CSRF integrados. Migration 0014 aplicada; lifecycle E2E rollback e security parity em 14 migrations passaram.
+
 ## F9 QA inicial — Registro 0049 (2026-10-04)
 
 - [x] **P1 Restaurante — resolvido no Registro 0050:** leitura de sessão obsoleta não reverte escolha local; 401 atrasado preserva app não-inert, e Conta reabre para nova autenticação.

@@ -1,3 +1,13 @@
+## Atualização — Registro 0059 / Integração self-hosted (2026-10-05)
+
+- Restaurante `codex/setup-workflow` @ `a7762124197d3b1668e2be701c1dc3697a5a46cd`; Motoboy `codex/setup-workflow` @ `7d02b44b139bb8170b8909f6513c0ac280588ef4`; histórico em `codex/f9-browser-e2e-0057` (commit desta síntese a registrar). Nenhum push; branches principais, tags e baselines intactas.
+- Migration `0014_native_totp_lifecycle` aditiva aplicada em `rotamoto` e `rotamoto_e2e`; ledger 14/14. 0001–0013 intactas. Nenhuma fixture/teste escreveu em `rotamoto`.
+- DeliveryProof filesystem autenticado integrado a Motoboy/sync, metadata canônica, hash, leitura protegida e UI de status; MFA TOTP nativo, recovery codes por digest, replay/rate limit/auditoria e UI nos dois apps; SMTP integrado a convite/recovery, links corretos e harness local SMTP test-only.
+- `npm test` ambos; E2E lifecycle rollback, guards, security parity (14 checksums), migration status, `node --check`, `git diff --check` e `npm audit --omit=dev` ambos passaram. Auditorias: 0 vulnerabilidades.
+- Browser E2E novo não concluiu: servidor temporário respondeu 404 na raiz e Chromium Termux encerrou com 134/inotify antes de segunda execução. Não houve correção no produto por causa desse runtime. Legacy `npm run test:postgres` omitido porque writes fixture em `rotamoto`; lifecycle seguro usou `rotamoto_e2e`.
+- SELF-HOSTED CORE: PostgreSQL/API/Restaurante/Motoboy/email/MFA FUNCTIONAL; storage/secrets PARTIAL; backup/restore BLOCKED. Falta cleanup de blobs órfãos, superfície de configuração administrativa instalação/tenant, rotação do keystore e backup/restore PG criptografado com papel autorizado compatível com RLS forced.
+- On-prem production-ready: NÃO. Cloud-ready: NÃO. iFood/99Food/Keeta, GPS/câmera físicos e providers remotos seguem externos/inerentes ou opcionais conforme Registro 0059. Ver [Registro 0059](REGISTROS/0059.md).
+
 ## Atualização — Registro 0057 / Browser E2E autenticado F9 (2026-10-05)
 
 - Restaurante `codex/setup-workflow` @ `f6f99a41c5edbab04ef2994c6bbe3889f355ddba`; Motoboy `codex/setup-workflow` @ `268c716144a7b740b38ae732e3ebd6a4a438a28e`; histórico na branch `codex/f9-browser-e2e-0057`. Nenhum push; `main`, tags e baselines preservadas.
