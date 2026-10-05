@@ -1,6 +1,6 @@
 ## Atualização — Registro 0060 / núcleo self-hosted (2026-10-05)
 
-- Restaurante `codex/setup-workflow` @ `9b5fe50f3df976d2913e9408948d96ec840392e3`; Motoboy @ `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`. Sem push; main/tags/baselines intactas. Registro 0060 é a única nova peça canônica desta rodada.
+- Restaurante `codex/setup-workflow` @ `9b5fe50f3df976d2913e9408948d96ec840392e3`; Motoboy @ `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`; histórico `codex/f9-browser-e2e-0057` @ `21437fa95b8def9c7452c531fba70f7f26823611`. Sem push; main/tags/baselines intactas. Registro 0060 é a única nova peça canônica desta rodada.
 - Migration aditiva `0015_proof_media_upload_intents` aplicada em `rotamoto` e `rotamoto_e2e`; security parity passou em 15 checksums. Nenhuma fixture em `rotamoto`. Divergência material ao 0059: ledger estava ausente no banco operacional local; runner aplicou 0001–0015, e consultas read-only confirmam `companies=0`, `domain_records=0`.
 - DeliveryProof upload/sync agora usa intent tenant-scoped e advisory lock compartilhado; GC dry-run por padrão, mínimo 45 dias, checagem de referência canônica e intent. Motoboy vincula upload ao ID local, mantendo assinatura/retry/offline.
 - CLI separado de operador: status de storage/SMTP/secrets/backup/URL; secret stdin write-only; auditoria local. Keystore tem rotação staged, cópia segura e rollback. Backup PostgreSQL custom é stream AES-256-GCM, manifesto HMAC/checksum, retenção e restore limitado a `rotamoto_disposable_*`.
