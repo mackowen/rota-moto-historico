@@ -1,3 +1,7 @@
+## Atualização — Registro 0067 / teardown E2E retido por auditoria imutável (2026-10-05)
+
+Grant temporário de backup em `rotamoto_e2e` foi validado e integralmente revogado. Lifecycle autenticado criou DeliveryProof/blob; os dados funcionais e o diretório do blob foram removidos. O trigger append-only reteve 15 eventos de auditoria e FK mantém Company/User âncora. Não foi comprovado recovery set/restore não vazio; nenhuma auditoria foi alterada. Gate **ABERTO**, `ON_PREM_PRODUCTION_READY = NO`. Ver [Registro 0067](REGISTROS/0067.md).
+
 ## Atualização — Registro 0066 / grants removidos; autenticação impede recovery (2026-10-05)
 
 O escopo temporário DBA em `rotamoto_e2e` foi confirmado por catálogo (CONNECT, USAGE, SELECT nas 21 relações; sem escrita/CREATE/TEMP) e depois integralmente revogado por `rotamoto_migrator`; pós-validação encontrou zero grants residuais. `rotamoto_backup` não autenticou via pgpass para `rotamoto_e2e` (`no password supplied`), então nenhuma fixture, backup ou restore foi iniciado. Restaurante permanece limpo em `40c9702feca4ab066bcaf73b9429dac60f341538`. Gate não vazio **ABERTO**; `ON_PREM_PRODUCTION_READY = NO`. Ver [Registro 0066](REGISTROS/0066.md).

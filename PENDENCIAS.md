@@ -1,3 +1,11 @@
+## Atualização — Registro 0067 (2026-10-05)
+
+- [ ] **OPEN — recovery não vazio + teardown:** o lifecycle autenticado criou a prova, mas o trigger append-only impediu apagar 15 audit rows; Company/User permanecem pelas FKs. Não remover/alterar auditoria nem enfraquecer o trigger. Definir procedimento E2E que mantenha fixture transacional visível ao snapshot/pg_dump e reverta integralmente, ou reset isolado aprovado para `rotamoto_e2e`.
+- [ ] Recovery-set `rotamoto_e2e`→restore descartável não ficou comprovado nesta tentativa; não há ID/checksum aprovado para registrar.
+- [ ] Paths/chave duráveis e cópia offline; scheduler/monitoramento; smoke TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore/readiness; medir RPO/RTO e decidir retenção/offsite conforme Registro 0064.
+
+Ver [Registro 0067](REGISTROS/0067.md).
+
 ## Atualização — Registro 0066 (2026-10-05)
 
 - [ ] **OPEN — rehearsal não vazio:** `rotamoto_backup` não autenticou em `rotamoto_e2e` via pgpass. O grant temporário mínimo foi comprovado e revogado; nenhum fixture/backup/restore foi executado. Prosseguir somente com mecanismo de autenticação já autorizado para essa entrada, sem criar/copiar credenciais ou trocar de role.
