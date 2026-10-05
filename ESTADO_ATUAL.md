@@ -148,7 +148,22 @@ Preflight somente leitura confirmou `rotamoto_backup` sem CONNECT/USAGE em `rota
 
 # Estado Atual dos Projetos
 
-Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Histórico mais recente: Registro 0051.
+Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamente abaixo. Este documento resume somente fatos verificáveis nos checkouts locais; não presume estado de produção ou de serviços remotos. Atualização mais recente: Registro 0070.
+
+## Atualização — Registro 0070 / auditoria funcional cross-app (2026-10-05)
+
+Auditoria e desenho somente leitura para frota híbrida, analytics, QR/scanner,
+OCR e impressão. Os apps permanecem sem alterações. O contrato narrativo é igual,
+mas há drift em `contract.js` nos campos `baseVersion`. O QR atual inclui PII e
+deve ser substituído por payload opaco assinado antes de uso operacional mais
+amplo. Frota logística externa, heatmap histórico, scanner, OCR independente de
+layout e impressão estão ausentes ou parciais; migrations aditivas provavelmente
+são necessárias para frota híbrida, SLA/custos/região e impressão centralizada.
+Plano incremental e impactos completos em [Registro 0070](REGISTROS/0070.md).
+O gate de recovery não vazio do 0068 permanece encerrado; o deployment 0069 não
+foi reaberto. `ON_PREM_PRODUCTION_READY = NO`. Próxima ordem recomendada:
+paridade contratual, QR seguro/scanner, OCR offline extensível, baseline de
+analytics, fundação de provider manual, analytics geo/provider e impressão.
 
 ## Atualização — Registro 0049 / QA visual inicial F9 (2026-10-04)
 
