@@ -1,3 +1,12 @@
+## Atualização — Registro 0068 / recovery PostgreSQL + mídia não vazio encerrado (2026-10-05)
+
+- Rehearsal real em databases exclusivos `rotamoto_disposable_0068_source` e `rotamoto_disposable_0068_restore`: lifecycle HTTP criou DeliveryProof filesystem canônica e blob real; recovery set cifrado/autenticado foi verificado e restaurado. ID `7f45a0c3-fe9a-40b2-b776-4b514bfe70cf`; SHA-256 dump cifrado `c7678cf206695e64bc3cb118569e9918017c838f6e00523b3b598c438d3d7d59`; 1 blob `image/png`, 9 bytes, hash `843ac23b1736b4487ec81cf7c07ddd9bb46ae5b7818c2c3843d99d62fa75f3c9`.
+- Estrutura origem↔restore aprovada: migrations 15/15, 21 relações/contagens, 284 constraints, 58 indexes, 13 policies, 13 RLS e FORCE RLS. Tenant/Delivery/storageRef/MIME/tamanho/hash e conteúdo por SHA-256 coincidiram. Testes adversariais reais falharam fechados. Teardown dos DBs pelo operador e limpeza filesystem completos; grants temporários revogados; zero resíduos.
+- Restaurante `codex/setup-workflow` @ `52829738bc7acaf7cc6e75eb12d4973921a4e3dc`; sem push. Motoboy sem alteração. `npm test`, guards E2E, security parity READ ONLY, audit, sintaxe e diff-check passaram.
+- Gate **“recovery PostgreSQL + mídia não vazio”: ENCERRADO**. `ON_PREM_PRODUCTION_READY = NO`: ainda faltam volumes/chaves duráveis e cópia offline, scheduler/monitoramento, smoke real de PostgreSQL TLS/CA/proxy + SMTP/PUBLIC_BASE_URL + keystore/filesystem/readiness e RPO/RTO/decisões operacionais. `CLOUD_READY = NO`; validar providers e restore cloud no deployment escolhido. Hardlink físico NOT_TESTABLE em Android/Termux.
+
+Ver [Registro 0068](REGISTROS/0068.md).
+
 ## Atualização — Registro 0067 / teardown E2E retido por auditoria imutável (2026-10-05)
 
 Grant temporário de backup em `rotamoto_e2e` foi validado e integralmente revogado. Lifecycle autenticado criou DeliveryProof/blob; os dados funcionais e o diretório do blob foram removidos. O trigger append-only reteve 15 eventos de auditoria e FK mantém Company/User âncora. Não foi comprovado recovery set/restore não vazio; nenhuma auditoria foi alterada. Gate **ABERTO**, `ON_PREM_PRODUCTION_READY = NO`. Ver [Registro 0067](REGISTROS/0067.md).

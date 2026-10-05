@@ -1,5 +1,12 @@
 # Plano mestre de finalização do RotaMoto
 
+## Atualização Registro 0068 — recovery não vazio encerrado; deployment continua aberto
+
+- Recovery coordenado PostgreSQL + mídia foi ensaiado de ponta a ponta com fixture canônica em origem descartável exclusiva; restore completo passou em DB/filesystem descartáveis; metadata, storageRef e blob foram comparados. Ambos DBs e diretórios temporários foram destruídos/removidos, grants temporários revogados. Ver [Registro 0068](REGISTROS/0068.md).
+- Não repetir esse rehearsal sem nova autorização para provisionar alvos descartáveis. O guard de origem permite exclusivamente `rotamoto` em produção e a origem exata 0068 sob test guard.
+- **ON_PREM_PRODUCTION_READY = NO.** Próximo bloco restante: configurar paths/volumes duráveis e permissões; proteger chave externa ao DB com cópia offline; instalar/monitorar scheduler; executar smoke de PostgreSQL TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore, filesystem e readiness no host alvo; medir RPO/RTO e definir retenção. Validar promoção de staging de restore como operação de deployment.
+- **CLOUD_READY = NO** em gate separado: selecionar/testar providers cloud e cópia offsite/restore no ambiente efetivo. Filesystem local permanece opção válida para on-prem. Integrações alimentares e hardware físico não são gates do core.
+
 ## Atualização Registro 0065 — ensaio não vazio bloqueado pelo isolamento E2E
 
 - Preflight read-only confirmou que `rotamoto_backup` não tem CONNECT/USAGE em `rotamoto_e2e`. O lifecycle de fixture envolve criação e confirmação de DeliveryProof em transação revertida; pg_dump independente não enxerga a fixture.

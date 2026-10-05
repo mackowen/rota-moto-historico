@@ -415,3 +415,11 @@ Continuam OPEN para fechar ON_PREM_PRODUCTION_READY: (1) backup/restore coordena
 Fechado no código e no ensaio: backup set indivisível lógico DB+mídia, cifra/HMAC/checksum, snapshot lock compartilhado por upload/sync/GC, restore staging para alvos descartáveis, validação por referência, retenção como diretório completo, status de operador e runbooks cron/timer.
 
 OPEN para ON_PREM_PRODUCTION_READY: (1) rehearsal com ao menos uma DeliveryProof canônica não vazia em database test-only autorizado; o `rotamoto` real tinha zero referências, e `rotamoto_e2e` não recebeu grant de backup; (2) paths de mídia/backup persistentes e backup key durável com cópia offline protegida; (3) instalar cron/systemd/runit e alertas de falha/idade/espaço; (4) smoke de deployment real para TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore, scheduler e readiness; (5) medir RPO/RTO no deployment e decidir retenção/offsite operacionalmente. Retenção default 30d não é obrigação legal. Hardlink físico ficou NOT_TESTABLE por restrição Android/Termux. Detalhes no [Registro 0064](REGISTROS/0064.md).
+## Atualização — Registro 0068 (2026-10-05)
+
+- [x] **FECHADO — recovery PostgreSQL + mídia não vazio:** rehearsal real nos databases descartáveis 0068 com uma DeliveryProof filesystem canônica; conjunto cifrado/autenticado, verify, restore DB+filesystem, validação origem↔restore, teardown integral, grants revogados e resíduos ausentes. Ver [Registro 0068](REGISTROS/0068.md).
+- [ ] **OPEN — deployment on-prem:** provisionar volumes/paths duráveis e permissões; manter chave de backup fora do DB com cópia offline protegida; instalar/monitorar cron/timer; executar smoke no host com PostgreSQL TLS/CA/proxy, SMTP, PUBLIC_BASE_URL, keystore, filesystem e health/readiness; medir RPO/RTO e decidir retenção operacional.
+- [ ] **OPEN — cloud-ready separado:** escolher e validar no deployment cloud storage/secret/backup provider, cópia offsite e restore. Não é requisito para filesystem local on-prem.
+- iFood/99Food/Keeta e hardware GPS/câmera permanecem externos/inerentes; não bloqueiam o core self-hosted.
+
+## Atualização — Registro 0067 (histórico do bloqueio anterior; resolvido pelo 0068)
