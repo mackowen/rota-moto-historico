@@ -486,3 +486,7 @@ Estado inspecionado em 2026-10-04, com atualizações registradas cronologicamen
 - `npm test` nos dois apps, guards/lifecycle, node checks, diff-check e audit passaram. Paridade PostgreSQL read-only e integration PG geral não conectaram devido URLs de auditoria ausentes.
 - SMTP: self-host adapter disponível, integração final pendente. MFA: primitives nativas, enrollment pendente. DeliveryProof: store filesystem primitivo, API pendente. Backup: writer local, política/restore pendentes. Hardware câmera/GPS; iFood/99Food/Keeta externos.
 - Não considerar production-ready on-prem ou cloud-ready até fechar os itens OPEN. Ver [Registro 0058](REGISTROS/0058.md).
+
+## Atualização — Registro 0063 (2026-10-05)
+
+Rehearsal real do backup PostgreSQL encerrado com PASS: backup `d5cf784a-027a-482f-a062-5d7d99506e7e` (SHA-256 `156bc40f195f3ebbdcff3d7b403e421f2ce11d85cbbcb563a52c61c012546470`) verificado e restaurado em `rotamoto_disposable_rehearsal`. Comparação read-only confirmou 21 relações, ledger 0001–0015, 13/13 RLS/FORCE, 13 policies e completude estrutural/contagens. `rotamoto` e `rotamoto_e2e` permaneceram intocados. Rehearsal de banco encerrado; instalação on-prem ainda **não** production-ready por falta de backup coordenado de mídia e smoke/provisioning operacional. Ver [Registro 0063](REGISTROS/0063.md).

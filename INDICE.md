@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0063 | 2026-10-05 | RotaMoto Restaurante / PostgreSQL | BACKUP / RESTORE / REHEARSAL | Backup real e restore PostgreSQL em alvo descartável | Backup cifrado verificado e restaurado em `rotamoto_disposable_rehearsal`; estrutura, 15 migrations, RLS/FORCE, policies e isolamento passaram. Rehearsal DB encerrado; mídia e provisioning permanecem OPEN; sem push. | [REGISTROS/0063.md](REGISTROS/0063.md) |
 
 | 0001 | 2026-10-01 | RotaMoto Motoboy e Restaurante | CONFIGURAÇÃO | Configuração do sistema de histórico | Estrutura de histórico criada fora dos repositórios; estado inicial documentado por inspeção somente leitura. | [REGISTROS/0001.md](REGISTROS/0001.md) |
 | 0002 | 2026-10-01 | RotaMoto Motoboy e Restaurante | AUDITORIA | Diagnóstico do estado atual dos projetos | Branches, baselines, commits, worktrees, testes e browser testing verificados sem alterar os repositórios; estado consolidado atualizado. | [REGISTROS/0002.md](REGISTROS/0002.md) |

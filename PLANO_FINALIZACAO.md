@@ -317,3 +317,7 @@ Todos os trabalhos seguintes continuam em `codex/setup-workflow` nos dois apps; 
 - Restaurante: `backend/postgres/migrations/0001–0008`, `backend/domain/sync-service.js`, `backend/identity/`, `server.js`, `app.js`, `ifood-integration.js`, `99food-*`, `keeta-*`, manifest/service worker e testes.
 - Motoboy: `app.js`, sync transport/reconciliation, IndexedDB upgrade/normalizers, manifest/service worker, backup/import e testes.
 - PostgreSQL oficial: catálogo read-only e status do migration runner em 2026-10-04, sem alteração de schema/dados/roles.
+
+## Atualização — Registro 0063
+
+O ensaio PostgreSQL de backup/restore está concluído e validado em `rotamoto_disposable_rehearsal`; não repetir sem nova autorização explícita para reset do descartável. Próximo bloco de fechamento on-prem: implementar e ensaiar recuperação coordenada de mídia + banco; automatizar preflight/smoke de instalação local; finalizar runbook operacional com retenção e RPO/RTO decididos pelo operador. Só então reavaliar ON_PREM_PRODUCTION_READY. Cloud continua exigindo adaptação/validação de storage e gestão de chaves no ambiente-alvo. Evidência: [Registro 0063](REGISTROS/0063.md).

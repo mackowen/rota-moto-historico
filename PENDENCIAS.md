@@ -381,3 +381,9 @@ Limitação existente: atualização de `localStorage` após commit continua bes
 - [ ] **OPEN P1 — Backup:** integração `pg_dump`, criptografia, agenda/retention, checksum/manifest e restore ensaiado em DB descartável; remota opcional.
 - [ ] **OPEN P1 — Paridade/PG:** repetir PostgreSQL suite e auditoria read-only com URLs provisionadas; `npm run test:e2e-security` e `npm run test:postgres` não conectaram por falta das URLs.
 - iFood/99Food/Keeta seguem BLOCKED_EXTERNAL; câmera/GPS dependem de dispositivo. F9 aprovada no 0057 não foi reaberta. Ver [Registro 0058](REGISTROS/0058.md).
+
+## Atualização — Registro 0063
+
+Fechado: rehearsal real pg_dump → artefato cifrado/manifesto → verificação → restore PostgreSQL descartável, incluindo comparação do ledger, estrutura, RLS/FORCE, policies, ownership e contagens.
+
+Continuam OPEN para fechar ON_PREM_PRODUCTION_READY: (1) backup/restore coordenado filesystem DeliveryProof + PostgreSQL, com checksums/manifesto e validação canônica de referências; (2) provisioning/preflight/smoke completo em instalação limpa, incluindo permissões, keystore, SMTP, TLS/CA/proxy e scheduler; (3) retenção e decisão operacional de offsite/RPO/RTO com medição. Não são requisitos legais presumidos. Browser E2E não foi executado nesta rodada por escopo. Detalhes/evidências em [Registro 0063](REGISTROS/0063.md).
