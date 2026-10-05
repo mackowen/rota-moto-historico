@@ -1,3 +1,7 @@
+## Atualização — Registro 0065 / recovery não vazio bloqueado (2026-10-05)
+
+Preflight somente leitura confirmou `rotamoto_backup` sem CONNECT/USAGE em `rotamoto_e2e`. O lifecycle E2E aprovado sempre reverte a transação externa e remove o filesystem temporário, portanto `pg_dump` independente não enxerga a DeliveryProof. Nenhuma fixture, ACL, migration ou dado foi alterado. Gate “recovery PostgreSQL + mídia não vazio” **ABERTO**; `ON_PREM_PRODUCTION_READY = NO`. Ver [Registro 0065](REGISTROS/0065.md).
+
 ## Atualização — Registro 0060 / núcleo self-hosted (2026-10-05)
 
 - Restaurante `codex/setup-workflow` @ `9b5fe50f3df976d2913e9408948d96ec840392e3`; Motoboy @ `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`; histórico `codex/f9-browser-e2e-0057` @ `21437fa95b8def9c7452c531fba70f7f26823611`. Sem push; main/tags/baselines intactas. Registro 0060 é a única nova peça canônica desta rodada.

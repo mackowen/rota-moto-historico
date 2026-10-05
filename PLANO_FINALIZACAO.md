@@ -1,5 +1,11 @@
 # Plano mestre de finalização do RotaMoto
 
+## Atualização Registro 0065 — ensaio não vazio bloqueado pelo isolamento E2E
+
+- Preflight read-only confirmou que `rotamoto_backup` não tem CONNECT/USAGE em `rotamoto_e2e`. O lifecycle de fixture envolve criação e confirmação de DeliveryProof em transação revertida; pg_dump independente não enxerga a fixture.
+- Nenhuma ACL foi concedida e não houve fixture, backup ou restore. Não contornar o isolamento nem manter fixture persistente sem fluxo QA/operacional autorizado.
+- **Gate “recovery PostgreSQL + mídia não vazio”: ABERTO. ON_PREM_PRODUCTION_READY = NO.** Pendências: procedimento test-only administrativo isolado e teardown verificado; paths/chave duráveis e cópia offline; scheduler/monitoramento; smoke real TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore/readiness; medir RPO/RTO e decidir retenção/offsite. Ver [Registro 0065](REGISTROS/0065.md).
+
 ## Atualização Registro 0060 — núcleo on-prem ainda bloqueado por recuperação operacional
 
 - Restaurante HEAD `9b5fe50f3df976d2913e9408948d96ec840392e3`, Motoboy HEAD `9a1adfc445a0eb3d4bea83f1a15b701d804a8848`; sem push. `0015_proof_media_upload_intents` aplicada e security parity 15 migrations aprovada.

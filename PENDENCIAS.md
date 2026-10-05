@@ -1,3 +1,10 @@
+## Atualização — Registro 0065 (2026-10-05)
+
+- [ ] **OPEN — recovery não vazio PostgreSQL + mídia:** `rotamoto_backup` não tem CONNECT/USAGE em `rotamoto_e2e`; o lifecycle aprovado reverte a fixture antes que `pg_dump` independente possa capturá-la. Não conceder permissões nem deixar fixture persistente sem procedimento test-only autorizado.
+- [ ] Configurar paths/chave duráveis e cópia offline protegida; instalar/monitorar scheduler; executar smoke de deployment (TLS/CA/proxy, SMTP/PUBLIC_BASE_URL, keystore/readiness); medir RPO/RTO e decidir retenção/offsite operacionalmente.
+
+Detalhes em [Registro 0065](REGISTROS/0065.md).
+
 ## Atualização — Registro 0060 (2026-10-05)
 
 - [x] Garbage collection filesystem com dry-run, grace mínimo 45d, confirmação canônica incluindo tombstones, intents persistentes e isolamento RLS tenant; upload/sync/GC compartilham lock. Intent sem sync não expira para preservar Motoboy offline; blobs abandonados podem reter espaço.
