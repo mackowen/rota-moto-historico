@@ -1,3 +1,10 @@
+## Atualização — Registro 0080 / impressão de comandas (2026-10-06)
+
+- Impressão browser-native no Restaurante: configurações locais por dispositivo, manual e modo automático com fila deduplicada e confirmação humana, preview, layout térmico/normal e QR `rm-delivery.v1` opcional autenticado. Sem print silencioso, cópia configurável ou adapter físico.
+- Shell offline same-origin versionado inclui os módulos de impressão e nunca cacheia `/api/*`. Testes automatizados offline do service worker passaram; CDP não conseguiu atestar `navigator.onLine=false`, então browser offline e impressão física permanecem NOT_TESTABLE.
+- Restaurante @ `851ef485287db5b912a561aa5563a9a1ed95ce88`; Motoboy inalterado @ `2709d6e0bde3f28056eaf0c7781fd081fd52c3f`. `npm test` ambos, guards, cross-app, audits zero, node checks e diff-check passaram. PostgreSQL oficial confirmado read-only em 0019/19, sem migration ou escrita.
+- Nenhum bloqueio interno da campanha. `ON_PREM_PRODUCTION_READY` permanece fora do escopo e NÃO declarado: deployment e smoke do Registro 0069 ainda precisam de configuração/prova no host alvo.
+
 ## Atualização — Registro 0079 / 0019 aplicada e validada (2026-10-06)
 
 - O operador corrigiu autenticação local via pgpass. Prova SQL real como `rotamoto_app` no E2E e no oficial retorna negação PostgreSQL `42501` para `logistics_providers.secret_ref`; stdout foi descartado, nenhum valor foi consultado/exposto.

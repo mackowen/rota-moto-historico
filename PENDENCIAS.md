@@ -87,6 +87,13 @@ Detalhes em [Registro 0065](REGISTROS/0065.md).
 
 # Pendências
 
+## Atualização — Registro 0080 (2026-10-06)
+
+- [x] Impressão por browser no Restaurante implementada: configuração local, modo manual e fila automática com preview/confirmação, deduplicação, layout isolado e QR seguro opcional. Nenhuma migration.
+- [ ] Validar impressão em impressora/browser físico e confirmar variações do diálogo e cópias no deployment alvo. O provider browser não promete silent print; bridge/ESC-POS segue futuro e fora desta campanha.
+- [ ] Browser offline real ficou NOT_TESTABLE porque CDP reportou `navigator.onLine=true`; manter evidência automatizada de cache do shell e exclusão das APIs.
+- Gates de deployment on-prem continuam conforme Registro 0069; esta campanha não altera `ON_PREM_PRODUCTION_READY`.
+
 ## PostgreSQL oficial — Registro 0079
 
 - [x] Migration 0019 aplicada pelo runner oficial após recovery set prévio cifrado/verificado.
