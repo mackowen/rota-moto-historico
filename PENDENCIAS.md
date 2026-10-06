@@ -1,3 +1,12 @@
+## Atualização — Registro 0076 (2026-10-06)
+
+- [x] Fundação tenant-scoped de provider/fulfillment/dispatch manual, RLS/FORCE, isolamento e fallback testados em PostgreSQL E2E transacional; commit local Restaurante `4b943b1`, sem push.
+- [ ] **OPEN — rollout do schema:** aplicar migrations 0016 e 0017 no deployment oficial pelo fluxo autorizado e confirmar health/readiness. Nenhuma migration oficial foi executada nesta campanha.
+- [ ] **OPEN — alocações legadas:** revisar entregas já atribuídas antes da 0017; não existe backfill automático de fulfillment histórico. Operação/reatribuição suportada cria projeção interna.
+- [ ] **OPEN — automação logística:** integrar protocolos reais e fluxos de quote/dispatch/cancel/tracking/reconciliação somente após documentação, credenciais e homologação dos providers; acrescentar guardas/autorizações de eventos externos.
+- [ ] Continuam separados os gates on-prem dos Registros 0068/0069: paths/chaves duráveis e cópia offline, scheduler/monitoramento, smoke real TLS/CA/proxy/SMTP/URL/keystore/filesystem/readiness e medição/decisão RPO/RTO/retenção.
+- [ ] Browser E2E autenticado da tela de providers/fulfillment ficou NOT_TESTABLE nesta sessão; executar no próximo harness com sessão autorizada.
+
 ## Atualização — Registro 0073 (2026-10-05)
 
 - OCR multi-layout local/offline implementado e verificado com corpus sintético e Chromium offline. Não há bloqueio interno de código identificado nesta campanha.

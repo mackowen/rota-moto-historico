@@ -1,3 +1,11 @@
+## Atualização — Registro 0076 / fundação de fulfillment híbrido (2026-10-06)
+
+- Restaurante `codex/setup-workflow` @ `4b943b1160d68b2fcab127efb37608aa09268519` (commits `672ba8f`, `4b943b1`); Motoboy inalterado @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Sem push; branches protegidas, tags e baselines preservadas.
+- Migration aditiva 0017 adiciona providers, allocations e dispatch attempts tenant-scoped com RLS/FORCE, FKs, constraints e grants de coluna mínimos. Aplicada/testada somente em `rotamoto_e2e`; banco oficial permanece sem escrita e ainda requer migrations 0016/0017 antes de readiness.
+- Operação manual híbrida disponível no Restaurante: frota própria com Driver canônico, partner/marketplace externo sem Driver, solicitação manual idempotente, referência/status/custos conhecidos e fallback versionado/auditado. `Order.source` e `Route` mantêm semântica atual. Motoboy e contrato v1 não mudaram; Delivery externa conserva `driverId=null`.
+- `npm test` ambos apps, PostgreSQL E2E service/tenant transaction com rollback, guards, `npm audit --omit=dev` (zero), `node --check` e `git diff --check`: PASS. Browser E2E UI NOT_TESTABLE sem sessão/CDP autenticado. APIs logísticas reais de marketplace seguem fora de escopo.
+- Ver [Registro 0076](REGISTROS/0076.md). ON_PREM_PRODUCTION_READY não foi fechado: ainda depende do rollout de migrations e dos gates de deployment dos Registros 0068/0069.
+
 ## Atualização — Registro 0075 / timezone e dinheiro do Order (2026-10-06)
 
 - Restaurante `codex/setup-workflow` @ `90f7a03c3ab42674dbe663d6ff87b205428b703e`; Motoboy @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Commits locais separados; main, tags e baselines preservadas; sem push.

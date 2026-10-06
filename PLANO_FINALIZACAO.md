@@ -1,5 +1,14 @@
 # Plano mestre de finalização do RotaMoto
 
+## Atualização Registro 0076 — fulfillment híbrido manual implementado; rollout permanece aberto
+
+- Base de domínio/API/UI para provider interno, partner e marketplace manual foi implementada em Restaurante com migration aditiva 0017. PostgreSQL E2E transacional passou com isolamento tenant, RLS/FORCE e fluxo real do service; Motoboy/contrato v1 não foram alterados.
+- Antes de ativar no deployment, aplicar migrations 0016 e 0017 pelo procedimento autorizado e confirmar health/readiness; revisar alocações existentes sem projeção de fulfillment.
+- Integrações logísticas reais, auto-dispatch e comparação preço/ETA não estão implementados. Exigem protocolos/credenciais/homologação e desenho de reconciliação/idempotência por provider.
+- Os gates on-prem do Registro 0068 permanecem independentes. `ON_PREM_PRODUCTION_READY = NO` até deployment real, volumes/chaves/offline, scheduler/monitoramento, smoke TLS/CA/proxy/SMTP/URL/keystore/filesystem/readiness e decisão/medição RPO/RTO.
+
+Ver [Registro 0076](REGISTROS/0076.md).
+
 ## Atualização Registro 0068 — recovery não vazio encerrado; deployment continua aberto
 
 - Recovery coordenado PostgreSQL + mídia foi ensaiado de ponta a ponta com fixture canônica em origem descartável exclusiva; restore completo passou em DB/filesystem descartáveis; metadata, storageRef e blob foram comparados. Ambos DBs e diretórios temporários foram destruídos/removidos, grants temporários revogados. Ver [Registro 0068](REGISTROS/0068.md).
