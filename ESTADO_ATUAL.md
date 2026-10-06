@@ -1,3 +1,11 @@
+## Atualização — Registro 0074 / analytics baseline Restaurante (2026-10-06)
+
+- Restaurante `codex/setup-workflow` @ `8a2b5907260cd9501f91fc79694016fd2ecb1b02`; Motoboy @ `bc3d9ced58694606d1252ca97e4dcf54562505ec` sem alteração. Main/tags/baselines preservadas; sem push.
+- Semântica de relatórios centralizada e coberta por testes. Taxa de entrega não é ticket/faturamento de produtos; Earning é repasse; distâncias estimada/real e duração por etapa distinguíveis; denominadores/coberturas indicados; CSV protegido contra formula injection.
+- Timezone de Company ausente, portanto volume horário/diário não é exibido; ticket comercial genérico só pode usar `amountMinor` por moeda e não é chamado de faturamento de produtos. Heatmap, SLA e rentabilidade seguem sem dados/modelos suficientes. Nenhuma migration/DB/API ou Motoboy alterados.
+- `npm test`, analytics específico, `node --check` e `git diff --check` passaram. Browser/CDP carregou app/módulos sem exceções, porém E2E interativo ficou NOT_TESTABLE porque o perfil temporário não tem sessão autenticada e o painel permanece inert; auth/RBAC não foram contornados.
+- ON_PREM_PRODUCTION_READY não reavaliado nesta campanha; estado anterior de deployment dos Registros 0068/0069 não foi reaberto. Ver [Registro 0074](REGISTROS/0074.md).
+
 ## Atualização — Registro 0073 / OCR Motoboy local e offline (2026-10-05)
 
 - Motoboy `codex/setup-workflow` @ `bc3d9ced58694606d1252ca97e4dcf54562505ec`; Restaurante `codex/setup-workflow` @ `a48ab2532ca3bc9a31ccaaffdc482be0c84906b6` sem alteração. Baselines e `main` preservadas; sem push.

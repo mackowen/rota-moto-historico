@@ -440,3 +440,15 @@ OPEN para ON_PREM_PRODUCTION_READY: (1) rehearsal com ao menos uma DeliveryProof
 - **Sem código impeditivo identificado no inventário.** PHP-FPM não se aplica à API Node; cloud providers não são requisitos on-prem; iFood/99Food/Keeta e hardware físico não bloqueiam o core.
 
 ## Atualização Registro 0067 (2026-10-05)
+# Pendências funcionais — Registro 0074 (2026-10-06)
+
+- [x] Definir e testar a semântica dos relatórios existentes, cobertura e export CSV; remover o uso de “Ticket geral” baseado na taxa de entrega.
+- [ ] Configurar timezone IANA canônico por Company antes de publicar distribuição por hora/dia.
+- [ ] Definir composição semântica de `Order.amountMinor` (produtos, taxa, descontos/impostos) e garantir cobertura por origem antes de publicar faturamento/ticket de produtos.
+- [ ] Heatmap aguarda coordenadas históricas/proveniência, dimensão região/célula, política de retenção e agregação com privacidade.
+- [ ] SLA aguarda `promisedAt`/deadline e política versionada de serviço; não inferir atraso sem promessa.
+- [ ] Rentabilidade/custo/km aguarda receita comercial desagregada e custos atribuíveis de frota própria e fornecedores; Earning isolado é somente repasse.
+- [ ] Frota híbrida aguarda LogisticsProvider, allocation/attempts, quote/ETA/custo e política de reconciliação; providers reais seguem campanhas futuras.
+- [ ] E2E visual autenticado dos relatórios aguarda uma sessão de teste autorizada disponível ao Browser harness; nenhuma credencial foi usada nesta campanha.
+
+## Self-hosted readiness — Registro 0059 (estado histórico; recovery atualizado em 0068/0069)
