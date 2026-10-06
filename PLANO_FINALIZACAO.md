@@ -1,3 +1,9 @@
+## Atualização Registro 0078 — schema 0018 aplicado; bloqueio least-privilege
+
+- Backup pré-migration `rotamoto-recovery-set-v1` verificado e preservado. Migrations oficiais 0016–0018 estão no ledger; Companies/Orders/Deliveries/Drivers/Routes/Eventos/Earnings e demais contagens preexistentes não apresentaram alteração, novas tabelas ficaram vazias.
+- **Não liberar/considerar pronto:** catálogo confirma `rotamoto_app` pode selecionar `logistics_providers.secret_ref` devido ao grant SELECT de tabela na 0017. A campanha parou sem tentativa de revogar ou corrigir. É necessária migration aditiva corretiva, validação no E2E antes de nova aplicação e revisão do checkpoint de segurança.
+- Readiness e testes finais da campanha 0078 não foram executados. Ver [Registro 0078](REGISTROS/0078.md).
+
 ## Atualização Registro 0077 — analytics territorial implementado; deployment segue aberto
 
 - Heatmap e resumo por região usam snapshots canônicos manuais, geohash5 aproximado, agregação server-side tenant-scoped e supressão de células/subgrupos abaixo de k=5. GPS individual e endereço bruto não são fonte de destino; sem coordenada permanece no denominador de cobertura.

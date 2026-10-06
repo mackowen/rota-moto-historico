@@ -1,3 +1,11 @@
+## Atualização — Registro 0078 (2026-10-06) — BLOQUEIO DE SEGURANÇA
+
+- [ ] **CRITICAL/BLOCKED:** `rotamoto_app` tem SELECT efetivo na coluna `logistics_providers.secret_ref` pela permissão de tabela concedida na 0017. Não fazer grant/revoke manual nem rollback improvisado. Projetar migration aditiva corretiva e testar grants/RLS antes de liberar providers.
+- [x] Backup coordenado pré-migration foi cifrado/verificado e preservado; ledger oficial está em 0018. A 0018 foi aplicada antes de o defeito do checkpoint 0017 ser percebido; não há correção automática aplicada.
+- [ ] Depois da correção aprovada: validar catálogo completo 0018, readiness, `npm test` dos dois apps, testes PostgreSQL E2E, guards, audit, sintaxe/diff. Nenhuma dessas suítes finais foi executada nesta campanha após o gate falhar.
+
+Ver [Registro 0078](REGISTROS/0078.md). Em qualquer continuação, começar por estado read-only; não reaplicar migrations nem tocar no backup/chave.
+
 ## Atualização — Registro 0077 (2026-10-06)
 
 - [x] Heatmap histórico territorial implementado com snapshot de destino manual, RLS/FORCE, agregação por célula, limiar k=5, cobertura e filtros tenant-scoped. Não promove GPS/endereços/coords locais e não usa geocoding durante renderização.

@@ -1,3 +1,10 @@
+## Atualização — Registro 0078 / migration oficial bloqueada por grant de secret_ref (2026-10-06)
+
+- PostgreSQL oficial `rotamoto` em 127.0.0.1:5432/18.6, ledger 15→18. `0016_company_timezone`, `0017_logistics_fulfillment` e `0018_delivery_geo_snapshots` aplicadas pelo runner oficial, após backup pré-migration cifrado/verificado. 0016 checkpoint passou; contagens preexistentes não mudaram; novas tabelas vazias.
+- Pós-condição encontrou `rotamoto_app` com SELECT efetivo em `logistics_providers.secret_ref` devido ao grant table-level da 0017. Contraria o least privilege do Registro 0076. Não foi feito REVOKE, migration corretiva, rollback nem readiness/teste final. Não implantar/liberar antes de correção aditiva aprovada e validação.
+- Backup ID `85c11e6c-8aaf-4e5b-b91c-8925a064359b`, 99.977 bytes, SHA-256 `5afe2e7e904fdcf914f7eb50d9cdecdfdd12d90866f5c95b230bf85e3a7aed84`; zero blobs, conforme zero referências canônicas. Chave protegida não foi lida/exibida.
+- Restaurante @ `14cad0d55508c5f197a87ef3a00fb85177ac7064` (runner checkpoint local); Motoboy inalterado @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Sem push. Ver [Registro 0078](REGISTROS/0078.md).
+
 ## Atualização — Registro 0077 / analytics territorial (2026-10-06)
 
 - Restaurante `codex/setup-workflow` @ `17014f60fed7f4912c55de0ac3a95a8eb2de5443`; Motoboy inalterado @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Sem push; `main`, tags e baselines preservadas.
