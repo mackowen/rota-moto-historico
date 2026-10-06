@@ -1,3 +1,10 @@
+## Atualização — Registro 0075 / timezone e dinheiro do Order (2026-10-06)
+
+- Restaurante `codex/setup-workflow` @ `ace7912ccd59bfe4c782257ee4013316a1e3a147`; Motoboy @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Commits locais separados; main, tags e baselines preservadas; sem push.
+- Contrato v1 agora define `Company.timeZone` IANA opcional/anulável e `Order.money` aditivo em minor units, moeda, proveniência e completude. Migration 0016 cria a coluna `companies.time_zone`, mas não foi aplicada; nenhum banco/dado/ACL foi alterado.
+- Configuração Company protegida por sessão, MFA/RBAC/CSRF/auditoria; analytics usa datas civis do timezone e trata DST, ou oculta hora/dia se não configurado. Dados legados permanecem sem reinterpretação; total ambíguo não entra em ticket/faturamento e moeda ausente não vira BRL fora de canais locais comprovados.
+- `npm test` de ambos apps, testes dirigidos, node check e diff check passaram. Browser E2E visual NOT_TESTABLE: servidor/CDP e sessão autorizada ausentes. ON_PREM_PRODUCTION_READY não reavaliado. Ver [Registro 0075](REGISTROS/0075.md).
+
 ## Atualização — Registro 0074 / analytics baseline Restaurante (2026-10-06)
 
 - Restaurante `codex/setup-workflow` @ `8a2b5907260cd9501f91fc79694016fd2ecb1b02`; Motoboy @ `bc3d9ced58694606d1252ca97e4dcf54562505ec` sem alteração. Main/tags/baselines preservadas; sem push.

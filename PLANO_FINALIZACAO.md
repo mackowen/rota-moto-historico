@@ -346,3 +346,8 @@ A etapa de implementação coordenada está concluída; não reabrir o rehearsal
 - `ON_PREM_PRODUCTION_READY = NO`. Não repetir recovery 0068 sem nova evidência. Ver matriz e ações exatas no [Registro 0069](REGISTROS/0069.md).
 
 ## Atualização Registro 0068 — recovery não vazio encerrado; deployment continua aberto
+
+
+## Atualização Registro 0075 — baseline funcional de timezone e dinheiro
+
+Contrato v1 aditivo, migration 0016 e APIs/UI de timezone da Company estão implementados; relatórios de hora/dia usam datas civis e timezone IANA quando configurado. `Order.money` agora carrega componentes comprovados em minor units e analytics expõe cobertura sem inferir faturamento legado. Próximas campanhas: (1) aplicar 0016/configurar timezone no deployment; (2) mapear componentes nas fontes reais; (3) planejar geografia/privacidade para heatmap; (4) definir prazo/regra para SLA; (5) obter custos completos para rentabilidade; (6) modelar provider/allocation/quotes para frota híbrida. Não reabrir recovery 0068 nem gates de deployment 0069 nesta etapa funcional. Ver [Registro 0075](REGISTROS/0075.md).

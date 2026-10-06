@@ -452,3 +452,17 @@ OPEN para ON_PREM_PRODUCTION_READY: (1) rehearsal com ao menos uma DeliveryProof
 - [ ] E2E visual autenticado dos relatórios aguarda uma sessão de teste autorizada disponível ao Browser harness; nenhuma credencial foi usada nesta campanha.
 
 ## Self-hosted readiness — Registro 0059 (estado histórico; recovery atualizado em 0068/0069)
+
+
+## Atualização — Pendências após Registro 0075
+
+- [x] Implementar modelo opcional/anulável `Company.timeZone` IANA e usar timezone civil em agregações horárias/diárias. **Ação do operador:** aplicar migration aditiva 0016 pelo processo de deployment e configurar um timezone válido por Company; sem valor, as séries ficam indisponíveis.
+- [x] Definir `Order.money` com componentes comprovados, minor units, moeda, proveniência e completude; não converter registros antigos.
+- [ ] Mapear e validar componentes monetários canônicos por origem real à medida que adapters forem habilitados. Até então, total/ticket cobre somente Orders com total e moeda explícitos; não publicar faturamento para conjunto parcial/legado.
+- [ ] Heatmap: adicionar coordenadas/proveniência e agregação espacial com regras de privacidade.
+- [ ] SLA: adicionar prazo prometido/regra versionada e política de estados.
+- [ ] Rentabilidade: obter receita completa e custos integrais atribuíveis; repasse Earning é insuficiente.
+- [ ] Frota híbrida: modelar providers, attempts/alocações, quote/ETA/custo e reconciliação antes das integrações.
+- Browser E2E autenticado de timezone/relatórios permanece NOT_TESTABLE até existir sessão de QA autorizada e CDP ativo.
+
+Ver [Registro 0075](REGISTROS/0075.md).
