@@ -87,6 +87,13 @@ Detalhes em [Registro 0065](REGISTROS/0065.md).
 
 # Pendências
 
+## PostgreSQL oficial — Registro 0079
+
+- [ ] **CRITICAL:** `rotamoto_app` ainda possui SELECT efetivo em `rotamoto.logistics_providers.secret_ref` no oficial em 0018. Migration 0019 está implementada e validada no clean-install/upgrade E2E por catálogo, mas não foi aplicada ao oficial.
+- [ ] Operador deve acrescentar no pgpass local, modo 0600, o mapeamento `127.0.0.1:5432:rotamoto_e2e:rotamoto_app` usando a credencial runtime já provisionada. Não compartilhar a senha. Reexecutar o teste `npm run test:logistics-secret-privileges`, que exige query permitida e negação real de SELECT/UPDATE(secret_ref) como runtime em contexto E2E.
+- [ ] Após PASS nesse gate: criar e verificar novo recovery set sem sobrescrever `85c11e6c-8aaf-4e5b-b91c-8925a064359b`; aplicar 0019 via runner oficial; provar SELECT/UPDATE(secret_ref)=false por catálogo e tentativa real runtime; concluir comparação catalogal 0016–0019, contagens, security parity, readiness e testes finais.
+- [ ] Não considerar readiness 200 em 0018 como aprovação de segurança. `ON_PREM_PRODUCTION_READY = NO`; ver [Registro 0079](REGISTROS/0079.md).
+
 ## Self-hosted readiness — Registro 0059 (2026-10-05)
 
 - [ ] **P1 — Storage:** implementar coleta tenant-safe de arquivos sem prova canônica referenciando-os, com período de graça; cobrir resposta HTTP perdida e falha de sync. Upload/read e persistência canônica já operam; storage segue PARTIAL até cleanup seguro.

@@ -1,3 +1,12 @@
+## Atualização — Registro 0079 / correção 0019 bloqueada antes do oficial (2026-10-06)
+
+- Restaurante `codex/setup-workflow` @ `63476a759cb47cb82673d4632313264a83fb407a`; commits locais `b2a5d08` (migration + testes) e `63476a7` (readiness regression). Motoboy inalterado @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Sem push, main/tags/baselines preservadas.
+- 0019 revoga SELECT amplo de `logistics_providers` e oferece somente SELECT de 11 colunas não secretas; `secret_ref` fora da allowlist. `rotamoto_e2e` recebeu 0018–0019 pelo runner; clean install 0001→0019, upgrade 0018→0019 e testes logísticos/territoriais/guards passaram.
+- Pré-condição de teste SQL como runtime ficou bloqueada: `rotamoto_app` autentica com `-w` em `rotamoto`, mas não há entrada pgpass correspondente para `rotamoto_e2e`; `psql -w` retorna `fe_sendauth: no password supplied`. Catálogo E2E confirma secret_ref SELECT/UPDATE=false; tentativa SQL real não foi executada.
+- Oficial continua em 0018, sem escrita nesta campanha: ledger 18; 25 tabelas, 17 RLS/FORCE, 17 policies; runtime `secret_ref SELECT=true`, UPDATE=false. Nenhum novo backup pré-0019 foi criado. Readiness schema respondeu 200 em 0018, mas não cobre least privilege.
+- Restaurante e Motoboy `npm test`, `npm audit --omit=dev` (zero em ambos), testes logistics/territorial/E2E guards, syntax e diff-check: PASS. Teste real de privilege E2E, backup pré-0019, migration oficial, security parity final: BLOCKED/NOT_TESTABLE.
+- **CRITICAL:** oficial ainda permite leitura de `secret_ref`. Operador deve provisionar no pgpass local (0600) a entrada `127.0.0.1:5432:rotamoto_e2e:rotamoto_app`, usando a credencial runtime já existente; não enviar senha. Depois retomar a campanha antes do backup e da migration oficial. `ON_PREM_PRODUCTION_READY = NO`.
+
 ## Atualização — Registro 0078 / migration oficial bloqueada por grant de secret_ref (2026-10-06)
 
 - PostgreSQL oficial `rotamoto` em 127.0.0.1:5432/18.6, ledger 15→18. `0016_company_timezone`, `0017_logistics_fulfillment` e `0018_delivery_geo_snapshots` aplicadas pelo runner oficial, após backup pré-migration cifrado/verificado. 0016 checkpoint passou; contagens preexistentes não mudaram; novas tabelas vazias.
