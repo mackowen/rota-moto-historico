@@ -89,10 +89,10 @@ Detalhes em [Registro 0065](REGISTROS/0065.md).
 
 ## PostgreSQL oficial — Registro 0079
 
-- [ ] **CRITICAL:** `rotamoto_app` ainda possui SELECT efetivo em `rotamoto.logistics_providers.secret_ref` no oficial em 0018. Migration 0019 está implementada e validada no clean-install/upgrade E2E por catálogo, mas não foi aplicada ao oficial.
-- [ ] Operador deve acrescentar no pgpass local, modo 0600, o mapeamento `127.0.0.1:5432:rotamoto_e2e:rotamoto_app` usando a credencial runtime já provisionada. Não compartilhar a senha. Reexecutar o teste `npm run test:logistics-secret-privileges`, que exige query permitida e negação real de SELECT/UPDATE(secret_ref) como runtime em contexto E2E.
-- [ ] Após PASS nesse gate: criar e verificar novo recovery set sem sobrescrever `85c11e6c-8aaf-4e5b-b91c-8925a064359b`; aplicar 0019 via runner oficial; provar SELECT/UPDATE(secret_ref)=false por catálogo e tentativa real runtime; concluir comparação catalogal 0016–0019, contagens, security parity, readiness e testes finais.
-- [ ] Não considerar readiness 200 em 0018 como aprovação de segurança. `ON_PREM_PRODUCTION_READY = NO`; ver [Registro 0079](REGISTROS/0079.md).
+- [x] Migration 0019 aplicada pelo runner oficial após recovery set prévio cifrado/verificado.
+- [x] `rotamoto_app` não possui SELECT amplo em `logistics_providers`, nem SELECT/UPDATE de `secret_ref`; tentativa SQL real no oficial negada com SQLSTATE 42501. Projection das colunas operacionais permitida.
+- [x] Paridade catalogal de segurança, 19 checksums, contagens e readiness passaram; nenhuma contagem de tabela preexistente mudou. Suites, audits, guards, node checks e diff-check passaram.
+- [ ] **OPEN — deployment 0069:** configurar volumes e permissões permanentes, keystore e chave de backup duráveis/offline, SMTP/base URL, serviço Node/runit, domínio/TLS/proxy/CA, scheduler/alertas e smoke no host alvo; decidir retenção, cópia offsite, RPO/RTO. `ON_PREM_PRODUCTION_READY = NO`.
 
 ## Self-hosted readiness — Registro 0059 (2026-10-05)
 
