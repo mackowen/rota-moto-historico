@@ -1,3 +1,13 @@
+## Atualização — Registro 0077 / analytics territorial (2026-10-06)
+
+- Restaurante `codex/setup-workflow` @ `17014f60fed7f4912c55de0ac3a95a8eb2de5443`; Motoboy inalterado @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Sem push; `main`, tags e baselines preservadas.
+- Migration aditiva 0018 cria snapshot canônico tenant-scoped de destino; apenas coordenadas confirmadas manualmente têm fluxo ativo. GPS individual, endereço textual e coordenadas locais sem proveniência não viram destino nem alimentam geocoding implícito.
+- Relatório territorial usa geohash5 (~5 km), supressão mínima k=5, bandas/subgrupos limitados, agregação server-side e ausência de PII/pontos individuais no payload ao browser. Inclui cobertura, status, fonte comercial, tipo, Driver e dimensões internal/external/provider.
+- `npm test`, `test:territorial-postgres` e `test:logistics-postgres` em `rotamoto_e2e` com rollback, guards E2E, `npm audit --omit=dev` (zero), sintaxe e diff-check: PASS. Browser autenticado NOT_TESTABLE sem sessão/CDP disponível.
+- `rotamoto` não recebeu escrita; a 0018 permanece pendente de deployment autorizado e readiness continua fail-closed. `ON_PREM_PRODUCTION_READY = NO`; gates de deployment 0068/0069 seguem separados. Rentabilidade/SLA/geocoding completo e comparação automática provider seguem abertos por falta de dados/modelos.
+
+Ver [Registro 0077](REGISTROS/0077.md).
+
 ## Atualização — Registro 0076 / fundação de fulfillment híbrido (2026-10-06)
 
 - Restaurante `codex/setup-workflow` @ `4b943b1160d68b2fcab127efb37608aa09268519` (commits `672ba8f`, `4b943b1`); Motoboy inalterado @ `2709d6e0bde3f28056eaf0cd7781fd081fd52c3f`. Sem push; branches protegidas, tags e baselines preservadas.

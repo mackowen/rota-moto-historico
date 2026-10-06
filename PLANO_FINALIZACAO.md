@@ -1,3 +1,11 @@
+## Atualização Registro 0077 — analytics territorial implementado; deployment segue aberto
+
+- Heatmap e resumo por região usam snapshots canônicos manuais, geohash5 aproximado, agregação server-side tenant-scoped e supressão de células/subgrupos abaixo de k=5. GPS individual e endereço bruto não são fonte de destino; sem coordenada permanece no denominador de cobertura.
+- Migration aditiva 0018 e regressões de RLS/FORCE foram testadas somente em `rotamoto_e2e` com rollback. O banco operacional não foi alterado; rollout autorizado 0016–0018 e readiness continuam pendentes.
+- Não fechar `ON_PREM_PRODUCTION_READY`: permanecem os gates de deployment dos Registros 0068/0069. Além disso, faltam cobertura geográfica real, validação Browser autenticada, eventual fluxo controlado de geocoding, dados suficientes para SLA/rentabilidade e integração de comparação de providers.
+
+Ver [Registro 0077](REGISTROS/0077.md).
+
 # Plano mestre de finalização do RotaMoto
 
 ## Atualização Registro 0076 — fulfillment híbrido manual implementado; rollout permanece aberto

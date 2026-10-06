@@ -1,3 +1,13 @@
+## Atualização — Registro 0077 (2026-10-06)
+
+- [x] Heatmap histórico territorial implementado com snapshot de destino manual, RLS/FORCE, agregação por célula, limiar k=5, cobertura e filtros tenant-scoped. Não promove GPS/endereços/coords locais e não usa geocoding durante renderização.
+- [ ] **OPEN — rollout:** aplicar migrations autorizadas 0016–0018 no deployment pretendido e confirmar readiness; o banco oficial não foi alterado nesta campanha.
+- [ ] Coletar snapshots canônicos de destino por fluxo controlado para criar cobertura real; não inventar coordenadas. Geocoding gerenciado e mapa administrativo de bairros não foram implementados.
+- [ ] Browser E2E autenticado do relatório: NOT_TESTABLE sem sessão/CDP disponível.
+- [ ] Rentabilidade territorial requer receita e custos completos; SLA territorial requer deadline/promisedAt confiável; comparação provider preço/ETA requer dados/adapters comprovados.
+
+Ver [Registro 0077](REGISTROS/0077.md). Os gates gerais de deployment on-prem dos Registros 0068/0069 permanecem pendentes e não foram reabertos.
+
 ## Atualização — Registro 0076 (2026-10-06)
 
 - [x] Fundação tenant-scoped de provider/fulfillment/dispatch manual, RLS/FORCE, isolamento e fallback testados em PostgreSQL E2E transacional; commit local Restaurante `4b943b1`, sem push.
