@@ -507,3 +507,11 @@ OPEN para ON_PREM_PRODUCTION_READY: (1) rehearsal com ao menos uma DeliveryProof
 - Browser E2E autenticado de timezone/relatórios permanece NOT_TESTABLE até existir sessão de QA autorizada e CDP ativo.
 
 Ver [Registro 0075](REGISTROS/0075.md).
+
+## Campanha 0121 — gates parciais
+
+- [ ] Política de negócio para cancelamento após coleta: definir retorno/custódia e eventual reentrega; nenhuma regra financeira foi presumida.
+- [ ] Fechar cancelamento offline: definir/revisar conflitos explícitos dos fatos rejeitados; testar cenário sem ações locais e interleavings independentes (aceite, coleta, saída, conclusão, reentrega).
+- [ ] Browser E2E FIFO com dois motoboys e Browser proof offline/recovery, inclusive comportamento para Delivery cancelada.
+- [ ] Testar consumo simultâneo HTTP de identity token/provisioning por sessões independentes, e conflitos de packetId/revisões base em sessões PostgreSQL independentes.
+- [ ] Concluir publicação do histórico após revisão do diff e verificação de ancestralidade/segredos.

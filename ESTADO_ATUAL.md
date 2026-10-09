@@ -608,3 +608,8 @@ Recovery coordenado PostgreSQL+DeliveryProof/filesystem implementado. Rehearsal 
 - **ON_PREM_PRODUCTION_READY = NO.** Gates e ações do operador estão detalhados em [Registro 0069](REGISTROS/0069.md); recuperação 0068 continua encerrada e não foi repetida.
 
 ## Atualização — Registro 0068 / recovery PostgreSQL + mídia não vazio encerrado (2026-10-05)
+
+
+## Atualização — Campanha 0121 (2026-10-09)
+
+Cancelamento offline validado em Browser E2E com PostgreSQL E2E: estado canônico CANCELLED prevaleceu sobre três eventos atrasados, rejeitados como INVALID_TRANSITION e retidos para auditoria; sem pendências de retry, mas três conflitos seguem para revisão. Regressão 0120 Browser e `npm test` de ambos os apps passaram. Gates FIFO Browser multi-motoboy, concorrência completa de cancelamento, prova Browser e consumo pré-tenant simultâneo permanecem parciais; ver [Registro 0121](REGISTROS/0121.md). Oficial `rotamoto` permaneceu read-only. Política pós-coleta requer decisão operacional explícita.
