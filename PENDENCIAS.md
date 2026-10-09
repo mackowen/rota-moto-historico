@@ -515,3 +515,15 @@ Ver [Registro 0075](REGISTROS/0075.md).
 - [ ] Browser E2E FIFO com dois motoboys e Browser proof offline/recovery, inclusive comportamento para Delivery cancelada.
 - [ ] Testar consumo simultâneo HTTP de identity token/provisioning por sessões independentes, e conflitos de packetId/revisões base em sessões PostgreSQL independentes.
 - [ ] Concluir publicação do histórico após revisão do diff e verificação de ancestralidade/segredos.
+
+## Campanha 0122 — gates parciais
+
+- [ ] Implementar contrato e ações Motoboy para chegada e entrega física da mercadoria RETURN; transicionar custódia no servidor somente por evento autenticado do Driver atribuído.
+- [ ] Testar no PG/Browser decisões RETURN/RELEASE/INCIDENT, idempotência concorrente, autorização, estado e receipt por dois operadores; completar sincronização offline dos cenários C–G.
+- [ ] Testar criação única de RETURN, vínculo à Order original sem duplicação financeira, fim de rota, reordenação manual concorrente e convergência enquanto Motoboy está offline.
+- [ ] Validar cancelamento independente antes da coleta e política operacional de divergência quando coleta offline chega após cancelamento; definir critérios de resolução de conflitos.
+- [ ] Rodar Browser E2E das regressões 0120/0121 e dois Motoboys FIFO na campanha de encerramento; integração externa permanece limitada ao contrato existente.
+- [ ] Revisar e autorizar separadamente a aplicação da migration 0041 em `rotamoto`; não aplicar sem autorização. Repetir security parity após alinhamento de ledger.
+- [ ] Fast-forward e publicar apenas o histórico 0122 na branch `codex/f9-browser-e2e-0057` após fetch, ancestry, fast-forward e scan de segredos.
+
+Ver [Registro 0122](REGISTROS/0122.md).
