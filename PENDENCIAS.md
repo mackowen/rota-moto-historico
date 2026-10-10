@@ -546,3 +546,10 @@ Ver [Registro 0075](REGISTROS/0075.md).
 - [ ] Fast-forward e publicar apenas o histórico 0122 na branch `codex/f9-browser-e2e-0057` após fetch, ancestry, fast-forward e scan de segredos.
 
 Ver [Registro 0122](REGISTROS/0122.md).
+## Atualização — Registro 0125 (2026-10-10)
+
+- [ ] **BLOCKED — sync da reorganização RETURN no Browser:** após submit válido, `routes` local ficou dirty e `buildPacket()` produziu a Route alterada (tentativa 015), mas POSTs observados em seguida enviaram `routes: []`, ACKs vazios e `pendingKinds.Route=1`; chamadas automáticas rápidas culminaram em `/api/sync/pull` 429. Evidências: `browser-tests/evidencias/campanhas/0125/return-flow/attempt-15/trace.jsonl`, `failure-report.json`. Próxima ação: instrumentar seleção/reuso do `queued.packet` em `performServerSync`, correlacionar packetId, snapshot e ACK, corrigir a camada identificada e repetir em perfil/porta exclusivos.
+- [ ] Executar Browser regressões 0120, 0121 e 0122 com evidências exclusivas 0125; relatórios 0124 não substituem reexecução.
+- [ ] Completar ciclo Browser RETURN até execução, chegada, handover, confirmação pelo Restaurante, encerramento da custódia e refresh/reabertura nos dois apps.
+- [ ] Exercitar operações offline RETURN, idempotência/revisão e concorrência com sessões PostgreSQL/HTTP independentes: criação RETURN, reorganização e confirmação de recebimento; validar RELEASE/INCIDENT, permissões e isolamento específico RETURN.
+- [ ] Avaliar sync após HTTP 429 sem retry rápido/infinito; manter autoritativo o estado PostgreSQL e não declarar convergência até ACK canônico.
