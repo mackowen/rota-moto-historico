@@ -1,3 +1,10 @@
+## Atualização — Registro 0129 — gate de ACK/restart fechado
+
+- [x] A lacuna de ACK parcial HTTP + IndexedDB real e reinício que deixara o Registro 0128 PARTIAL foi fechada nos dois apps com Chromium real, perfil persistente e PostgreSQL `rotamoto_e2e`.
+- [x] ACK inválidos preservam pacote/operações; ACK completo permite replay idempotente. Route concorrente converge; evento concorrente Motoboy foi provado persistido localmente após reload.
+- [x] Corrigida ordenação de ACCEPTED/PICKED_UP offline via `expectedVersion`; Browser/PG confirmou sequência canônica.
+- Nenhuma alteração no banco oficial (0040 read-only); E2E em 0041. Limites de ambiente e cobertura estão descritos no [Registro 0129](REGISTROS/0129.md).
+
 ## Atualização — Registro 0126 (2026-10-10)
 
 - [x] **Campanha 0126 — Browser RETURN completo:** attempt-38 completou fluxo offline, reconexão, handover e recebimento bilateral com PostgreSQL e Motoboy convergidos.
@@ -15,7 +22,7 @@ Ver [Registro 0126](REGISTROS/0126.md). A auditoria solicitada 0127 está regist
 - [x] **BAIXO — tela RETURN:** RETURN recebido não exibe espera de sync nem valor financeiro inventado.
 - [x] **BAIXO — migrations test:** inventário 0039–0041, 46 tabelas, RLS/grants/constraints conferidos no E2E.
 
-Ver [Registro 0127](REGISTROS/0127.md) e [Registro 0128](REGISTROS/0128.md). Cobertura de ACK parcial por HTTP com IndexedDB real e reinicialização durante a resposta permanece pendente; o gate 0128 é PARTIAL. Não iniciar Campanha 0129.
+Ver [Registro 0127](REGISTROS/0127.md) e [Registro 0128](REGISTROS/0128.md). A lacuna de ACK parcial HTTP com IndexedDB e reinício real foi fechada pela 0129; ver [REGISTRO 0129](REGISTROS/0129.md).
 
 ## Atualização — Registro 0124 (2026-10-10)
 

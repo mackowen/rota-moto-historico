@@ -1,3 +1,11 @@
+## Atualização — Registro 0129 — outbox durável validada (2026-10-10)
+
+- ACKs inválidos via HTTP real mantiveram operações e pacote na IndexedDB dos dois apps; Chromium foi encerrado/reaberto com o mesmo perfil e pacote reenvia com o mesmo packetId.
+- ACK completo permitiu recuperação idempotente sem inbox/eventos duplicados. Route reordenada e edição concorrente convergiram; Motoboy passou a serializar eventos offline com expectedVersion.
+- Browser RETURN bilateral, regressões 0120/0121/0122, npm test dos dois apps, contracts/domain sync, logistics/lifecycle/identity, concorrência (3 repetições), RLS e parity passaram. Ver matriz e limites em [REGISTROS/0129.md](REGISTROS/0129.md).
+- Migration oficial permanece 0040 e foi consultada somente em read-only; E2E permanece 0041. Nenhuma migration, deploy ou publicação de app.
+- Commits locais: Motoboy `1f66ae0`, Browser QA `a2862f8`; Restaurante sem mudança em `95b85ae`. Histórico publicado apenas na branch autorizada por fast-forward.
+
 ## Atualização — Registro 0124 (2026-10-10)
 
 - Campanha 0124 PARTIAL: correção de revisão obsoleta no cancelamento do Restaurante; Browser 0120/0121/0122 passou em evidências exclusivas.
