@@ -1,3 +1,11 @@
+## Atualização — Registro 0132 — comprovantes e media storage (2026-10-10)
+
+- Corrigida persistência de `DeliveryProof` no comando do Motoboy e dependência entre ACK dos metadados e persistência do binário; mídia só vira canônica após `storageRef` confirmado.
+- Browser Chromium/IndexedDB real comprovou 429, restart no mesmo perfil, retomada HTTP 201, GET autenticado no Restaurante, hash idêntico e reenvio idempotente; 503, malformado, desconexão, timeout, offline e limites de mídia preservaram a cópia local.
+- `npm test` ambos, lifecycle/media PostgreSQL E2E, domain sync, tenant RLS, Browser offline/cancelamento e verificações de sintaxe passaram.
+- Oficial `rotamoto` não acessado; migration 0040 preservada. E2E `rotamoto_e2e` usa 0041. Nenhuma migration/deploy/publicação.
+- Paridade que exige URL read-only oficial BLOCKED; cross-login Browser tenant e storage no ambiente de produção continuam pendentes. Estado geral PARTIAL; ver [Registro 0132](REGISTROS/0132.md).
+
 ## Atualização — Registro 0131 — painel de presença responsivo (2026-10-10)
 
 - Corrigida a causa do texto comprimido no Motoboy: painel passou a separar status/ajuda das ações e a ocupar a largura do dashboard desktop.

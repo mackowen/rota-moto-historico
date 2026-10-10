@@ -1,3 +1,13 @@
+## Atualização — Registro 0132 — comprovantes de entrega
+
+- [x] **MÉDIO — persistência local de comprovante:** Motoboy corrigido para passar `DeliveryProof` pela transação local e testar regressão.
+- [x] **MÉDIO — ACK de mídia separado do ACK dos metadados:** upload precede inclusão canônica; falha mantém a prova na outbox local; retry idempotente validado por Browser/PG.
+- [ ] **BLOCKED — tenant cross-login no Browser:** RLS de dois tenants passou no E2E; falta repetir GET da mídia com uma sessão autenticada de empresa distinta.
+- [ ] **BLOCKED — paridade de segurança oficial:** `test:e2e-security` requer URL oficial read-only, indisponível; não acessar/configurar sem requisito fornecido.
+- [ ] **BLOCKED — storage operacional:** confirmar configuração/autorização do provider `filesystem-v1` em homologação/produção; campanha provou somente `rotamoto_e2e`.
+
+Ver [Registro 0132](REGISTROS/0132.md). Nenhuma prontidão de produção foi declarada.
+
 ## Atualização — Registro 0131 — correção visual concluída
 
 - [x] **MÉDIO — painel de presença Motoboy:** causa corrigida no CSS; status legível em 360/390/768/1366 px, sem overflow, controles contidos e não sobrepostos. Browser autenticado cobriu Online, Offline, presença pendente/confirmada, teclado, check-in, confirmação Restaurante, QR scanner e saída.
