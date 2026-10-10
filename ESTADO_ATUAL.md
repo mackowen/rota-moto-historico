@@ -723,3 +723,12 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - Restaurante `95b85ae`; Motoboy `f12886a`/`fc145d6`; runners Browser `11c5b49`. Banco oficial read-only 0040; E2E 0041; nenhum deploy/publicação de app.
 - Branch autorizada `codex/f9-browser-e2e-0057`; baselines/main/tags preservadas. Não iniciar 0129.
 - Ver [Registro 0128](REGISTROS/0128.md) e [Resumo 0128](RESUMOS/0128.md).
+
+## Atualização — Campanha 0136 — despacho multimotoboy (2026-10-10)
+
+- Resultado **PARTIAL**: Browser autenticado comprovou cadastro, presença confirmada, modo manual padrão, opt-in automático, uma atribuição canônica idempotente e convergência nos dois apps para um Driver.
+- FIFO, concorrência PostgreSQL entre Drivers distintos, lease/revisão, offline/ocupado/expirado, retry/RLS passaram em 3 execuções isoladas. Os testes não substituem três sessões Browser.
+- RETURN bilateral terminou; Chromium saiu com código 0 após segunda chamada CDP `Browser.close`. Teardown autônomo do runner é PARTIAL.
+- DeliveryProof com HTTP 503/resposta inválida/desconexão/timeout e recuperação após restart passou. `npm test` em ambos apps e suites PostgreSQL/RLS/lifecycle passaram.
+- Aplicativos e Browser QA sem alterações de código. Banco oficial não acessado; comparação read-only BLOCKED. Oficial 0040, E2E 0041, sem nova migration.
+- Falta Browser com três motoboys autenticados e pedidos paralelos, incluindo restart/offline/retry no dispatch. Ver [REGISTROS/0136.md](REGISTROS/0136.md); não iniciar 0137.

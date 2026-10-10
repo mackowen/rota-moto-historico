@@ -641,3 +641,13 @@ Ver [Registro 0122](REGISTROS/0122.md).
 - [x] Histórico 0126 publicado somente em `codex/f9-browser-e2e-0057`, por fast-forward após fetch, ancestralidade, revisão final e scan de segredos. [Relatório publicado](https://github.com/mackowen/rota-moto-historico/blob/codex/f9-browser-e2e-0057/REGISTROS/0126.md).
 
 0127 e 0128 encerradas e registradas. Não iniciar a Campanha 0129 sem nova solicitação.
+
+## Atualização — Campanha 0136
+
+- [ ] **PARTIAL — multimotoboy Browser:** ainda falta provar no Chromium três sessões autenticadas no mesmo tenant, três Drivers confirmados, pedidos simultâneos e distribuição FIFO distinta; confirmar aceite/coleta/conclusão e Driver ocupado/liberado nas duas apps.
+- [ ] **PARTIAL — recuperação de dispatch:** injetar 429/503/timeout/desconexão com outbox IndexedDB persistente, restart real e comprovação de replay/ACK sem perda ou duplicidade.
+- [ ] **PARTIAL — teardown RETURN:** após relatório e assertions, runner precisou de segunda chamada CDP `Browser.close` para Chromium sair (exit 0); corrigir cleanup do harness e repetir sem assistência externa.
+- [ ] **BLOCKED — paridade de segurança do oficial:** falta URL/autorização de conexão estritamente read-only; nenhuma tentativa de acesso foi feita.
+- [x] Concorrência PostgreSQL/FIFO/revisão/lease/idempotência repetida três vezes em schema isolado `rotamoto_e2e`; sem lock residual ou duplicidade observada.
+
+Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não declarar aprovação integral nem iniciar 0137.
