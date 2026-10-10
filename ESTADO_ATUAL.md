@@ -1,3 +1,11 @@
+## Atualização — Registro 0134 — divergência RLS resolvida (2026-10-10)
+
+- Causa da divergência: a asserção de 0133 filtrava somente `record_id`, embora a chave canônica de `domain_records` seja `(company_id, record_id)`, e interpretava qualquer `rowCount=1` como vazamento. O E2E reproduziu ID compartilhado tenant-scoped: B viu seu próprio `Driver`, não o `DeliveryProof` de A; a query exata de A sob B retornou zero.
+- Três execuções independentes com `rotamoto_app` e `rotamoto_provider_worker` passaram; B não lê, altera, insere nem apaga dados de A. `rotamoto_provider_resolver` não tem grants de leitura dessas tabelas. Troca A→B, pool, Browser HTTP e `proof_media_upload_intents` passaram.
+- RLS/ FORCE ativos em `domain_records` e `proof_media_upload_intents`; role operacional sem superuser/BYPASSRLS. Sem alteração de política ou código de produção.
+- `npm test` ambos, tenant isolation, lifecycle, domain sync e contract parity: PASS. Oficial não conectado; paridade bloqueada sem URL read-only. E2E permanece em 0040/0041, sem migrations.
+- Commits: Browser `0e0a164`, `1ce5657`; apps sem alteração. Ver [REGISTROS/0134.md](REGISTROS/0134.md).
+
 ## Atualização — Registro 0133 — segurança de mídia e regressões (2026-10-10)
 
 - Browser/CDP comprovou mídia autenticada em `rotamoto_e2e`: hash idêntico, retry após falhas, reinício persistente, leitura do Restaurante e reenvio idempotente. Tenant A teve HTTP 200; visitante anônimo, Tenant B, IDs manipulados e usuário sem permissão tiveram 401/404/403 sem bytes.

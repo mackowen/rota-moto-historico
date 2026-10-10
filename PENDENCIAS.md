@@ -1,6 +1,14 @@
+## Atualização — Registro 0134 — RLS multi-tenant
+
+- [x] **RLS `domain_records`/DeliveryProof:** oracle diagnóstico corrigido em 0134 para avaliar chave composta e identidade de entidade; três execuções por roles operacionais, Browser HTTP e testes cross-tenant passaram.
+- [ ] **BLOCKED — paridade oficial:** `MIGRATOR_DATABASE_URL` read-only autorizada não estava disponível; fornecer somente a URL aprovada para comparação. Banco oficial não foi acessado.
+- [ ] **BLOCKED — storage operacional:** permissões, persistência e backup de `filesystem-v1` em host real ainda não foram validados; evidência é E2E isolada.
+
+Ver [Registro 0134](REGISTROS/0134.md). Não iniciar Campanha 0135.
+
 ## Atualização — Registro 0133 — pendências de mídia e RLS
 
-- [ ] **ALTO — RLS específico de `DeliveryProof`:** tentativa Browser/fixture mais recente encontrou linha em consulta `domain_records` sob tenant B, enquanto tentativa anterior e suite geral RLS passaram. Reproduzir registrando `company_id`, `current_tenant_id()` e role na mesma transação; não declarar isolamento fechado até o resultado ser consistente.
+- [x] **RLS específico de `DeliveryProof`:** causa do alerta esclarecida no Registro 0134; asserção antiga ignorava chave composta/tenant. O conteúdo exato da linha da tentativa b8 não foi gravado e permanece impossível de identificar retrospectivamente.
 - [ ] **BLOCKED — paridade oficial:** fornecer URL autorizada estritamente read-only; esta campanha não conectou ao banco oficial.
 - [ ] **BLOCKED — storage operacional:** confirmar permissões, persistência e backup de `filesystem-v1` no host de homologação/produção. Evidência atual cobre somente diretório isolado E2E.
 - [x] RETURN bilateral e teardown normal do Chromium (exit 0) comprovados em Browser novo. Regressões críticas 0120/0121/0122 passaram.
