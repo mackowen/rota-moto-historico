@@ -640,3 +640,11 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - Route dirty e `buildPacket()` continham a edição, mas os POSTs `/sync/push` observados após submit tinham `routes: []`; pendência permaneceu e pull recebeu 429. Próxima ação: rastrear a seleção/reutilização de `queued.packet` no `performServerSync`, correlacionar packetId/snapshot/ACK e corrigir a divergência antes de repetir Browser.
 - `npm test` dos dois apps, domain/logistics/lifecycle/tenant/availability/identity E2E e security parity READ ONLY passaram. Regressões Browser 0120/0121/0122 e concorrência RETURN específica não foram reexecutadas.
 - Oficial `rotamoto` read-only em 0040; E2E `rotamoto_e2e` em 0041. Restaurante `c01b056`, Browser QA `435d615`/`96086de`, Motoboy sem alteração; apps não publicados.
+
+## Atualização — Registro 0126 (2026-10-10)
+
+- Campanha retomada dos diffs locais e evidências existentes, sem reiniciar do zero. A divergência Route dirty→pacote→payload foi corrigida; attempt-38 comprovou payload com ordem RETURN, ACKs aceitos nas revisões canônicas 4–6 e convergência PostgreSQL/Motoboy.
+- Browser RETURN chegou à confirmação bilateral após execução offline; custódia original/RETURN terminou `RECEIVED`, uma RETURN vinculada, Motoboy sem pendências/conflitos. Regressões Browser 0120/0121/0122 passaram em tentativas isoladas.
+- `npm test` em ambos apps, PostgreSQL sync/RETURN (incluindo HTTP 429), concorrência E2E independente, security parity read-only e checks JavaScript passaram.
+- Banco oficial ficou read-only em migration 0040; `rotamoto_e2e` em 0041. Sem migration nova, deploy ou publicação de app. Corrida simultânea RETURN específica permanece parcial; histórico publicado após fast-forward conforme o gate.
+- Ver [Registro 0126](REGISTROS/0126.md) e [Resumo 0126](RESUMOS/0126.md).

@@ -548,8 +548,15 @@ Ver [Registro 0075](REGISTROS/0075.md).
 Ver [Registro 0122](REGISTROS/0122.md).
 ## Atualização — Registro 0125 (2026-10-10)
 
-- [ ] **BLOCKED — sync da reorganização RETURN no Browser:** após submit válido, `routes` local ficou dirty e `buildPacket()` produziu a Route alterada (tentativa 015), mas POSTs observados em seguida enviaram `routes: []`, ACKs vazios e `pendingKinds.Route=1`; chamadas automáticas rápidas culminaram em `/api/sync/pull` 429. Evidências: `browser-tests/evidencias/campanhas/0125/return-flow/attempt-15/trace.jsonl`, `failure-report.json`. Próxima ação: instrumentar seleção/reuso do `queued.packet` em `performServerSync`, correlacionar packetId, snapshot e ACK, corrigir a camada identificada e repetir em perfil/porta exclusivos.
-- [ ] Executar Browser regressões 0120, 0121 e 0122 com evidências exclusivas 0125; relatórios 0124 não substituem reexecução.
-- [ ] Completar ciclo Browser RETURN até execução, chegada, handover, confirmação pelo Restaurante, encerramento da custódia e refresh/reabertura nos dois apps.
-- [ ] Exercitar operações offline RETURN, idempotência/revisão e concorrência com sessões PostgreSQL/HTTP independentes: criação RETURN, reorganização e confirmação de recebimento; validar RELEASE/INCIDENT, permissões e isolamento específico RETURN.
-- [ ] Avaliar sync após HTTP 429 sem retry rápido/infinito; manter autoritativo o estado PostgreSQL e não declarar convergência até ACK canônico.
+- [x] Divergência Route dirty/pacote/payload corrigida e confirmada por ACKs canônicos; evidência em `browser-tests/evidencias/campanhas/0126/return-flow/attempt-38/`.
+- [x] Regressões Browser 0120, 0121 e 0122 reexecutadas com evidências 0126 isoladas.
+- [x] Ciclo RETURN Browser chegou ao recebimento bilateral e à convergência no PostgreSQL e no Motoboy.
+- [x] Offline RETURN, rate limit HTTP 429, retry/backoff e concorrência independente de sync/disponibilidade exercitados com resultados registrados.
+- [ ] Exercitar corrida específica de duas decisões/confirmações RETURN em sessões PostgreSQL/HTTP independentes; verificar permissões e isolamento RETURN em interleavings concorrentes.
+
+## Atualização — Registro 0126 (2026-10-10)
+
+- [ ] **PARTIAL — concorrência específica RETURN:** fluxos e idempotência sequencial passaram, mas duas decisões/confirmações RETURN concorrentes em sessões independentes não foram executadas. Evidência e escopo em [Registro 0126](REGISTROS/0126.md).
+- [ ] Fast-forward e publicar somente o histórico 0126 em `codex/f9-browser-e2e-0057`, após fetch, ancestralidade, revisão final e scan de segredos.
+
+Não iniciar a Campanha 0127 antes de nova solicitação.
