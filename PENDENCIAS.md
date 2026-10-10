@@ -557,6 +557,6 @@ Ver [Registro 0122](REGISTROS/0122.md).
 ## Atualização — Registro 0126 (2026-10-10)
 
 - [ ] **PARTIAL — concorrência específica RETURN:** fluxos e idempotência sequencial passaram, mas duas decisões/confirmações RETURN concorrentes em sessões independentes não foram executadas. Evidência e escopo em [Registro 0126](REGISTROS/0126.md).
-- [ ] Fast-forward e publicar somente o histórico 0126 em `codex/f9-browser-e2e-0057`, após fetch, ancestralidade, revisão final e scan de segredos.
+- [x] Histórico 0126 publicado somente em `codex/f9-browser-e2e-0057`, por fast-forward após fetch, ancestralidade, revisão final e scan de segredos. [Relatório publicado](https://github.com/mackowen/rota-moto-historico/blob/codex/f9-browser-e2e-0057/REGISTROS/0126.md).
 
 Não iniciar a Campanha 0127 antes de nova solicitação.
