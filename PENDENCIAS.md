@@ -38,7 +38,7 @@ Ver [Registro 0131](REGISTROS/0131.md). Correção responsiva encerrada; não in
 
 - [x] **MÉDIO — visual Motoboy:** painel de presença corrigido e revalidado em Browser nos quatro viewports pela Campanha 0131; ver [REGISTROS/0131.md](REGISTROS/0131.md).
 - [ ] **MÉDIO — prova de entrega:** comprovante da regressão permanece pendente de media storage; validar storage/upload/consulta autenticados em ambiente configurado.
-- [ ] **MÉDIO — dispatch Browser:** CRUD de Driver e fluxo completo de auto-dispatch opt-in/FIFO não percorridos ponta a ponta na UI; suites PostgreSQL cobrem serviços e concorrência.
+- [x] **MÉDIO — dispatch Browser:** Campanha 0135 comprovou cadastro/vínculo, presença confirmada, manual padrão, opt-in automático, atribuição única, replay idempotente e convergência cross-app. Browser com um Driver elegível; FIFO/múltiplos candidatos e interleavings cobertos em sessões PostgreSQL independentes. Ver [REGISTROS/0135.md](REGISTROS/0135.md).
 - [ ] Homologar iFood/99Food/Keeta com sandbox/credenciais autorizados; testes desta campanha foram sintéticos. Verificar QR/câmera/GPS físicos em Android.
 - [ ] Rodar contraste WCAG/teclado integral e deployment smoke em ambiente operacional autorizado. Nenhuma prontidão para produção foi declarada.
 - Earning é cálculo canônico, não liquidação; settlement permanece fora da funcionalidade implementada. Oficial 0040 read-only; E2E 0041.

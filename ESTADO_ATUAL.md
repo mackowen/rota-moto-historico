@@ -1,3 +1,11 @@
+## Atualização — Campanha 0135 — despacho e convergência (2026-10-10)
+
+- Browser autenticado comprovou cadastro/edição/vínculo de Driver, presença com confirmação, modo manual padrão e opt-in automático. Repetição idempotente criou uma só Delivery; Tenant B recebeu 404 ao buscar Driver de A.
+- Achado corrigido: evento de Delivery `ASSIGNED` na revisão 1 era descartado pela IndexedDB Restaurante como mesma revisão, embora o ACK atual confirmasse essa entidade. Reconciliador aplica tal evento apenas com ACK canônico correspondente; browser agora converge Restaurante, PostgreSQL e Motoboy.
+- PostgreSQL E2E comprovou FIFO, elegibilidade, lease, interleavings offline, alocação concorrente distinta, retry e isolamento. RETURN offline com receipt bilateral encerrou Chromium exit 0. DeliveryProof/restart/retry passou.
+- `npm test` dos dois apps e logistics/tenant-RLS/lifecycle passaram. Oficial `rotamoto` não foi conectado; migration oficial 0040 preservada. E2E 0040/0041, nenhuma migration nova. Security parity contra oficial BLOCKED sem URL read-only autorizada.
+- Commits locais Restaurante `fbbb392`, Browser QA `d83d117`, Motoboy sem alteração. Nenhum app foi enviado. Ver [Registro 0135](REGISTROS/0135.md).
+
 ## Atualização — Registro 0134 — divergência RLS resolvida (2026-10-10)
 
 - Causa da divergência: a asserção de 0133 filtrava somente `record_id`, embora a chave canônica de `domain_records` seja `(company_id, record_id)`, e interpretava qualquer `rowCount=1` como vazamento. O E2E reproduziu ID compartilhado tenant-scoped: B viu seu próprio `Driver`, não o `DeliveryProof` de A; a query exata de A sob B retornou zero.
