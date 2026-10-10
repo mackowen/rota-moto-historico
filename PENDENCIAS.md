@@ -15,7 +15,7 @@ Ver [Registro 0126](REGISTROS/0126.md). A auditoria solicitada 0127 está regist
 - [x] **BAIXO — tela RETURN:** RETURN recebido não exibe espera de sync nem valor financeiro inventado.
 - [x] **BAIXO — migrations test:** inventário 0039–0041, 46 tabelas, RLS/grants/constraints conferidos no E2E.
 
-Ver [Registro 0127](REGISTROS/0127.md) e [Registro 0128](REGISTROS/0128.md). ACK parcial foi testado em helper/contrato e modelo de recuperação; não foi injetado em Browser/IndexedDB real. Não iniciar Campanha 0129.
+Ver [Registro 0127](REGISTROS/0127.md) e [Registro 0128](REGISTROS/0128.md). Cobertura de ACK parcial por HTTP com IndexedDB real e reinicialização durante a resposta permanece pendente; o gate 0128 é PARTIAL. Não iniciar Campanha 0129.
 
 ## Atualização — Registro 0124 (2026-10-10)
 

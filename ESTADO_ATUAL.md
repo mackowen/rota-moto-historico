@@ -662,7 +662,7 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - Correções dos achados 0127 registradas em [Registro 0128](REGISTROS/0128.md): ACK completo/identidade nos dois apps, versionamento local, Retry-After, concorrência determinística, inventário/RLS de migrations, proveniência dos runners e texto de ganho RETURN.
 - `npm test` nos dois apps e suites PostgreSQL domain/identity/migrations, logistics, lifecycle, tenant RLS, security parity e privilégios passaram. Concurrency E2E passou em três execuções independentes.
 - Browser RETURN attempt-03: 16 etapas, offline/reconexão, reorganização e receipt bilateral; 0120/0121/0122 passaram em novas execuções. Uma tentativa intermediária detectou `syncRetryAttempt` sem declaração; correção Motoboy `fc145d6` e repetição Browser passaram.
-- Gate global: PASS, com limite de teste documentado: ACK parcial coberto em helper/contrato e modelo de retomada, sem fault injection Browser em IndexedDB real.
+- Gate global: PARTIAL; ACK parcial coberto em helper/contrato e modelo de retomada, mas falta fault injection HTTP com IndexedDB real e reinício durante a resposta.
 - Restaurante `95b85ae`; Motoboy `f12886a`/`fc145d6`; runners Browser `11c5b49`. Banco oficial read-only 0040; E2E 0041; nenhum deploy/publicação de app.
 - Branch autorizada `codex/f9-browser-e2e-0057`; baselines/main/tags preservadas. Não iniciar 0129.
 - Ver [Registro 0128](REGISTROS/0128.md) e [Resumo 0128](RESUMOS/0128.md).
