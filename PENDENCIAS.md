@@ -1,10 +1,18 @@
+## Atualização — Campanha 0135
+
+- [x] **Dispatch Browser:** cadastro/vínculo, presença confirmada, manual padrão, opt-in, atribuição única, replay idempotente e convergência dos dois apps comprovados; FIFO e concorrência comprovadas em PostgreSQL E2E. Ver [REGISTROS/0135.md](REGISTROS/0135.md).
+- [ ] **BLOCKED — paridade com oficial:** não existe URL read-only autorizada disponível; banco oficial não foi acessado.
+- [ ] **Ambiente operacional:** storage de mídia, câmera/QR físico, homologação de integrações e deployment smoke continuam fora da prova E2E; sem declaração de prontidão para produção.
+
+Ver [Registro 0135](REGISTROS/0135.md). Não iniciar Campanha 0136.
+
 ## Atualização — Registro 0134 — RLS multi-tenant
 
 - [x] **RLS `domain_records`/DeliveryProof:** oracle diagnóstico corrigido em 0134 para avaliar chave composta e identidade de entidade; três execuções por roles operacionais, Browser HTTP e testes cross-tenant passaram.
 - [ ] **BLOCKED — paridade oficial:** `MIGRATOR_DATABASE_URL` read-only autorizada não estava disponível; fornecer somente a URL aprovada para comparação. Banco oficial não foi acessado.
 - [ ] **BLOCKED — storage operacional:** permissões, persistência e backup de `filesystem-v1` em host real ainda não foram validados; evidência é E2E isolada.
 
-Ver [Registro 0134](REGISTROS/0134.md). Não iniciar Campanha 0135.
+Ver [Registro 0134](REGISTROS/0134.md). Campanha 0135 está registrada; não iniciar Campanha 0136.
 
 ## Atualização — Registro 0133 — pendências de mídia e RLS
 
@@ -37,7 +45,7 @@ Ver [Registro 0131](REGISTROS/0131.md). Correção responsiva encerrada; não in
 ## Atualização — Registro 0130 — riscos e cobertura restantes
 
 - [x] **MÉDIO — visual Motoboy:** painel de presença corrigido e revalidado em Browser nos quatro viewports pela Campanha 0131; ver [REGISTROS/0131.md](REGISTROS/0131.md).
-- [ ] **MÉDIO — prova de entrega:** comprovante da regressão permanece pendente de media storage; validar storage/upload/consulta autenticados em ambiente configurado.
+- [x] **MÉDIO — prova de entrega E2E:** upload/consulta autenticados, persistência IndexedDB, restart e recuperação por falhas passaram nas campanhas 0132/0135; storage operacional/backup ainda precisa de validação no host alvo.
 - [x] **MÉDIO — dispatch Browser:** Campanha 0135 comprovou cadastro/vínculo, presença confirmada, manual padrão, opt-in automático, atribuição única, replay idempotente e convergência cross-app. Browser com um Driver elegível; FIFO/múltiplos candidatos e interleavings cobertos em sessões PostgreSQL independentes. Ver [REGISTROS/0135.md](REGISTROS/0135.md).
 - [ ] Homologar iFood/99Food/Keeta com sandbox/credenciais autorizados; testes desta campanha foram sintéticos. Verificar QR/câmera/GPS físicos em Android.
 - [ ] Rodar contraste WCAG/teclado integral e deployment smoke em ambiente operacional autorizado. Nenhuma prontidão para produção foi declarada.
