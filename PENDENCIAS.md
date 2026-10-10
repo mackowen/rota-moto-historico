@@ -1,3 +1,12 @@
+## Atualização — Registro 0124 (2026-10-10)
+
+- [ ] **OPEN — Browser RETURN completo:** runner autenticado confirmou criação/apêndice no PostgreSQL, mas trava ao abrir/validar reorganização da rota; diagnosticar CDP, console, rede e navegação com perfil novo, então completar execução, arrival, handover e recebimento bilateral Browser.
+- [ ] **OPEN — concorrência RETURN independente:** criar testes com sessões PostgreSQL independentes para criação idempotente/concorrente, reorganização, confirmação simultânea, replay e payload divergente. O harness atual do teste de domínio serializa em um único cliente.
+- [ ] **OPEN — offline RETURN e decisões:** testar RETURN/RELEASE/INCIDENT e divergências de custódia ponta a ponta online/offline, preservando fatos não confirmados.
+- [ ] **OPEN — migration oficial:** `rotamoto` permanece 0040; 0041/0042 somente com autorização. E2E permanece 0041; nenhuma 0042 preparada.
+
+Ver [Registro 0124](REGISTROS/0124.md). Não iniciar Campanha 0125 sem solicitação.
+
 ## Atualização — Registro 0123 (2026-10-10)
 
 - [ ] **OPEN — Browser RETURN completo:** executar com novo fixture autenticado o fluxo criar/atribuir, aceitar/coletar, cancelar após coleta, decidir RETURN, criar na rota, reordenar na UI, registrar start/arrival/handover no Motoboy e confirmar recebimento no Restaurante; validar refresh/reabertura, IndexedDB/outbox/inbox e PostgreSQL. O teste transacional HTTP/PG não substitui Browser.

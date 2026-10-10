@@ -1,3 +1,10 @@
+## Atualização — Registro 0124 (2026-10-10)
+
+- Campanha 0124 PARTIAL: correção de revisão obsoleta no cancelamento do Restaurante; Browser 0120/0121/0122 passou em evidências exclusivas.
+- Browser RETURN comprovou criação vinculada e append PostgreSQL, mas travou na UI de reordenação; receipt bilateral Browser e concorrência RETURN independente não comprovados.
+- PostgreSQL oficial preservado read-only em 0040; `rotamoto_e2e` em 0041; nenhuma 0042.
+- Restaurante `0f2710f`, Browser QA `10dd943`, Motoboy sem alteração; apps não publicados. Histórico 0124 requer publicação fast-forward na branch autorizada.
+
 ## Atualização — Registro 0123 / estabilização do fluxo RETURN (2026-10-10)
 
 - Contratos de Restaurante/Motoboy agora definem os fatos da RETURN e o estado `AWAITING_RESTAURANT_RECEIPT`; receipt só é final com confirmação autorizada do Restaurante.

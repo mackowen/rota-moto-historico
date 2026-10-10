@@ -235,3 +235,24 @@ Contrato e serviços foram adicionados nos dois apps. PostgreSQL E2E cobriu o ca
 
 ### Status
 ATIVA — aplicação integral ainda PARTIAL.
+
+
+## DEC-0124 — Cancelamento usa revisão canônica atualizada
+
+### Data
+2026-10-10
+
+### Projeto
+RotaMoto Restaurante / Sincronização
+
+### Decisão
+Antes de enviar cancelamento de Delivery, a UI sincroniza com o servidor e obtém novamente a revisão canônica da Delivery. Se a entidade já estiver cancelada por outra sessão, apresenta o estado canônico sem reenviar a transição. O backend mantém suas validações de estado, permissão e revisão.
+
+### Motivo
+A reprodução retornou `REVISION_CONFLICT` porque uma tela aberta conservava revisão anterior às ações do Motoboy. Atualizar a projeção antes do comando evita conflitos evitáveis sem usar relógio local ou enfraquecer autoridade do servidor.
+
+### Limites
+Não resolve o travamento Browser na reorganização RETURN nem comprova concorrência independente de criação/receipt; ver Registro 0124.
+
+### Status
+ATIVA
