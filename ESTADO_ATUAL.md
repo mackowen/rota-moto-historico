@@ -648,3 +648,11 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - `npm test` em ambos apps, PostgreSQL sync/RETURN (incluindo HTTP 429), concorrência E2E independente, security parity read-only e checks JavaScript passaram. Na retomada, duas sessões HTTP/PostgreSQL confirmaram RETURN em corrida com chave igual e distinta; persistiu um único fato e o perdedor recebeu 409 por revisão antiga ou convergiu como duplicata.
 - Banco oficial ficou read-only em migration 0040; `rotamoto_e2e` em 0041. Sem migration nova, deploy ou publicação de app. Todos os gates 0126 PASS; histórico publicado por fast-forward após inspeção.
 - Ver [Registro 0126](REGISTROS/0126.md) e [Resumo 0126](RESUMOS/0126.md).
+
+## Atualização — Auditoria 0127 (2026-10-10)
+
+- Auditoria independente concluiu PARTIAL. Os apps seguem nos HEADs Restaurante `823b6d5` e Motoboy `290b044`; nenhum código de app foi alterado.
+- RETURN bilateral, Route com ACK canônico, regressão 0120, npm test dos dois apps, segurança/RLS e paridade PostgreSQL 0040/0041 foram confirmados com evidências novas/execuções independentes.
+- Não atribuir PASS irrestrito à concorrência: primeira execução falhou numa asserção dependente da ordem, segunda passou. Relatórios novos 0121/0122 carregam campanha 0124; teste de inventário de migrations tem baseline obsoleta (40 vs 46 tabelas).
+- Revisão encontrou risco MÉDIO: ACK parcial/incompleto pode ser aceito e a outbox removida. Código permanece intacto; ver propostas e matriz em [Registro 0127](REGISTROS/0127.md).
+- Banco oficial `rotamoto` verificado somente leitura em migration 0040; `rotamoto_e2e` em 0041. Não houve deploy nem publicação de aplicativos.

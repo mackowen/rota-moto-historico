@@ -5,7 +5,17 @@
 - [x] **Campanha 0126 — concorrência do recibo RETURN:** duas sessões autenticadas e transações PostgreSQL independentes; chave igual produziu replay idempotente e um fato; chaves distintas produziram uma confirmação e conflito de revisão ou duplicata convergente, também com um fato.
 - Escopo mais amplo ainda não coberto por esses gates: payload divergente/replay de criação RETURN, reorganização concorrente e todas as combinações RELEASE/INCIDENT offline. Banco oficial permaneceu read-only em 0040; E2E 0041.
 
-Ver [Registro 0126](REGISTROS/0126.md). Não iniciar Campanha 0127 sem solicitação.
+Ver [Registro 0126](REGISTROS/0126.md). A auditoria solicitada 0127 está registrada abaixo.
+
+## Atualização — Registro 0127 — achados a acompanhar
+
+- [ ] **MÉDIO — ACK completo:** validar packetId e cobertura integral/única de `operationResults` antes de persistir ACK e retirar pacote da outbox.
+- [ ] **MÉDIO — concorrência:** corrigir a expectativa order-sensitive do cenário E e repetir a suite com sessões independentes.
+- [ ] **BAIXO — proveniência:** corrigir o harness das regressões 0121/0122 para gravar campaign/orderNo da execução atual, sem editar evidências antigas.
+- [ ] **BAIXO — tela RETURN:** trocar “Aguardando sincronização” por estado de ganho aplicável após recebimento RETURN.
+- [ ] **BAIXO — migrations test:** atualizar inventário esperado para o schema 0041 (46 tabelas) e repetir em E2E.
+
+Ver [Registro 0127](REGISTROS/0127.md). Não iniciar Campanha 0128 sem solicitação.
 
 ## Atualização — Registro 0124 (2026-10-10)
 
