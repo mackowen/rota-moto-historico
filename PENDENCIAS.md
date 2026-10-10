@@ -1,3 +1,14 @@
+## Atualização — Registro 0130 — riscos e cobertura restantes
+
+- [ ] **MÉDIO — visual Motoboy:** corrigir a composição do painel de presença para 768 px e desktop; texto de status/ajuda fica estreito apesar de não haver overflow. Preservar design e repetir Browser nos quatro viewports.
+- [ ] **MÉDIO — prova de entrega:** comprovante da regressão permanece pendente de media storage; validar storage/upload/consulta autenticados em ambiente configurado.
+- [ ] **MÉDIO — dispatch Browser:** CRUD de Driver e fluxo completo de auto-dispatch opt-in/FIFO não percorridos ponta a ponta na UI; suites PostgreSQL cobrem serviços e concorrência.
+- [ ] Homologar iFood/99Food/Keeta com sandbox/credenciais autorizados; testes desta campanha foram sintéticos. Verificar QR/câmera/GPS físicos em Android.
+- [ ] Rodar contraste WCAG/teclado integral e deployment smoke em ambiente operacional autorizado. Nenhuma prontidão para produção foi declarada.
+- Earning é cálculo canônico, não liquidação; settlement permanece fora da funcionalidade implementada. Oficial 0040 read-only; E2E 0041.
+
+Ver [Registro 0130](REGISTROS/0130.md).
+
 ## Atualização — Registro 0129 — gate de ACK/restart fechado
 
 - [x] A lacuna de ACK parcial HTTP + IndexedDB real e reinício que deixara o Registro 0128 PARTIAL foi fechada nos dois apps com Chromium real, perfil persistente e PostgreSQL `rotamoto_e2e`.

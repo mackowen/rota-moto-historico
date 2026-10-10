@@ -1,3 +1,11 @@
+## Atualização — Registro 0130 — auditoria funcional e integração (2026-10-10)
+
+- Resultado global PARTIAL. Fluxos Order/Delivery/Route/RETURN, sync, identidade/tenant e RLS passaram na cobertura nova; apps tecnicamente consistentes nos fluxos testados.
+- Achado visual MÉDIO reproduzido no Motoboy: painel de presença comprime texto de status/ajuda em 768 px e desktop. Sem alteração automática de código; causa e screenshots em [REGISTROS/0130.md](REGISTROS/0130.md).
+- Evidências Browser 0130: outbox/viewport, RETURN bilateral e regressões 0120/0121/0122. `npm test` nos dois apps e PostgreSQL E2E/RLS/security passaram.
+- Oficial `rotamoto` somente leitura em 0040; `rotamoto_e2e` em 0041. Sem migration, deploy ou publicação de app; não declarado production-ready.
+- Commits: Browser QA `eb12fea`; Restaurante `95b85ae` e Motoboy `1f66ae0` sem alteração. Histórico será publicado apenas por fast-forward na branch autorizada.
+
 ## Atualização — Registro 0129 — outbox durável validada (2026-10-10)
 
 - ACKs inválidos via HTTP real mantiveram operações e pacote na IndexedDB dos dois apps; Chromium foi encerrado/reaberto com o mesmo perfil e pacote reenvia com o mesmo packetId.
