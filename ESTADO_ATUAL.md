@@ -1,3 +1,11 @@
+## Atualização — Registro 0133 — segurança de mídia e regressões (2026-10-10)
+
+- Browser/CDP comprovou mídia autenticada em `rotamoto_e2e`: hash idêntico, retry após falhas, reinício persistente, leitura do Restaurante e reenvio idempotente. Tenant A teve HTTP 200; visitante anônimo, Tenant B, IDs manipulados e usuário sem permissão tiveram 401/404/403 sem bytes.
+- RETURN offline, handover e recebimento bilateral convergiram; `attempt-clean-02` registrou Chromium exit 0. O runner agora fecha página/targets via CDP e aguarda o processo.
+- Uma nova asserção direta de RLS do registro de mídia divergiu e viu uma linha em contexto B; a tentativa anterior e a suite independente geral RLS passaram. Gate específico PARTIAL/ALTO até reprodução diagnóstica.
+- `npm test` ambos, Browser 0120/0121/0122, tenant RLS, lifecycle, domain sync e guards passaram. Oficial `rotamoto` não conectado por falta de URL read-only; E2E 0040/0041 sem migrations.
+- Commits locais Restaurante `18f4511`, Browser `f5700d0`, Motoboy sem mudança. Sem código de produção, deploy ou alteração de baseline. Ver [REGISTROS/0133.md](REGISTROS/0133.md).
+
 ## Atualização — Registro 0132 — comprovantes e media storage (2026-10-10)
 
 - Corrigida persistência de `DeliveryProof` no comando do Motoboy e dependência entre ACK dos metadados e persistência do binário; mídia só vira canônica após `storageRef` confirmado.

@@ -1,3 +1,12 @@
+## Atualização — Registro 0133 — pendências de mídia e RLS
+
+- [ ] **ALTO — RLS específico de `DeliveryProof`:** tentativa Browser/fixture mais recente encontrou linha em consulta `domain_records` sob tenant B, enquanto tentativa anterior e suite geral RLS passaram. Reproduzir registrando `company_id`, `current_tenant_id()` e role na mesma transação; não declarar isolamento fechado até o resultado ser consistente.
+- [ ] **BLOCKED — paridade oficial:** fornecer URL autorizada estritamente read-only; esta campanha não conectou ao banco oficial.
+- [ ] **BLOCKED — storage operacional:** confirmar permissões, persistência e backup de `filesystem-v1` no host de homologação/produção. Evidência atual cobre somente diretório isolado E2E.
+- [x] RETURN bilateral e teardown normal do Chromium (exit 0) comprovados em Browser novo. Regressões críticas 0120/0121/0122 passaram.
+
+Ver [Registro 0133](REGISTROS/0133.md). Sem readiness de produção e sem iniciar outra campanha.
+
 ## Atualização — Registro 0132 — comprovantes de entrega
 
 - [x] **MÉDIO — persistência local de comprovante:** Motoboy corrigido para passar `DeliveryProof` pela transação local e testar regressão.
