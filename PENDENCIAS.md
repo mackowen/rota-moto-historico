@@ -1,3 +1,13 @@
+## Atualização — Registro 0123 (2026-10-10)
+
+- [ ] **OPEN — Browser RETURN completo:** executar com novo fixture autenticado o fluxo criar/atribuir, aceitar/coletar, cancelar após coleta, decidir RETURN, criar na rota, reordenar na UI, registrar start/arrival/handover no Motoboy e confirmar recebimento no Restaurante; validar refresh/reabertura, IndexedDB/outbox/inbox e PostgreSQL. O teste transacional HTTP/PG não substitui Browser.
+- [ ] **OPEN — regressão 0121:** investigar travamento CDP após a confirmação da presença e antes da criação/sync de Order/Delivery. A tentativa parcial e capturas estão em `browser-tests/evidencias/campanhas/0123/regressao-0121/`; repetir em perfil/porta novos.
+- [ ] **OPEN — concorrência RETURN:** usar sessões PostgreSQL independentes para dois operadores criarem RETURN/confirmarem receipt e para reorganização concorrente; cobrir payload divergente, replay e revisão antiga.
+- [ ] **OPEN — offline RETURN e divergência:** Browser C–J, release/incident, chegada e handover offline, receipt por outra sessão e convergência após revisões da rota; não aplicar eventos rejeitados retroativamente.
+- [ ] **OPEN — migration oficial:** `rotamoto` permanece em 0040. Não aplicar 0041/0042 sem autorização expressa. `rotamoto_e2e` permanece em 0041; não há 0042 preparada.
+
+Ver [Registro 0123](REGISTROS/0123.md). Não iniciar Campanha 0124 sem solicitação.
+
 ## Atualização — Registro 0078 (2026-10-06) — BLOQUEIO DE SEGURANÇA
 
 - [ ] **CRITICAL/BLOCKED:** `rotamoto_app` tem SELECT efetivo na coluna `logistics_providers.secret_ref` pela permissão de tabela concedida na 0017. Não fazer grant/revoke manual nem rollback improvisado. Projetar migration aditiva corretiva e testar grants/RLS antes de liberar providers.

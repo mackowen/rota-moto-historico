@@ -207,3 +207,31 @@ Implementada em `tests/e2e-support/` e documentada em `backend/postgres/README.m
 
 ### Status
 ATIVA
+
+
+## DEC-0123 — Handover RETURN não encerra custódia
+
+### Data
+2026-10-10
+
+### Projeto
+RotaMoto Restaurante / Motoboy / PostgreSQL
+
+### Contexto
+O protocolo anterior não tinha uma distinção implementada entre o Motoboy declarar entrega física no restaurante e o Restaurante confirmar que recebeu a mercadoria.
+
+### Decisão
+1. `DELIVERY_RETURN_STARTED`, `DELIVERY_RETURN_ARRIVED` e `DELIVERY_RETURN_HANDED_OVER` são fatos operacionais exclusivos de Delivery `RETURN`, validados por tenant, atribuição e revisão canônica.
+2. O handover mantém o status em `ARRIVED` e muda custódia para `AWAITING_RESTAURANT_RECEIPT`; nunca equivale a `DELIVERED`, `RETURNED` ou recebimento definitivo.
+3. Somente o operador autorizado do Restaurante confirma recebimento e fecha a custódia. Eventos offline rejeitados são evidência operacional, não eventos executados retroativamente.
+4. Reorganização de rota usa revisão canônica do backend, preserva a posição da entrega em execução e mantém RETURN com custódia aberta na sua rota responsável.
+5. Nenhuma regra financeira ou semântica de plataforma externa é inferida. Migration 0041 permanece exclusiva do E2E enquanto a oficial estiver em 0040; aplicação oficial requer autorização própria.
+
+### Motivo
+Separa declaração física do Motoboy e confirmação do recebedor, mantém a autoridade no servidor e deixa as decisões auditáveis/idempotentes.
+
+### Impacto e limites
+Contrato e serviços foram adicionados nos dois apps. PostgreSQL E2E cobriu o caminho HTTP e revisão/idempotência; Browser do ciclo completo, teste novo em sessões concorrentes independentes e operação offline completa continuam pendentes conforme Registro 0123.
+
+### Status
+ATIVA — aplicação integral ainda PARTIAL.

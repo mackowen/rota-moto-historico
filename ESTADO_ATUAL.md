@@ -1,3 +1,12 @@
+## Atualização — Registro 0123 / estabilização do fluxo RETURN (2026-10-10)
+
+- Contratos de Restaurante/Motoboy agora definem os fatos da RETURN e o estado `AWAITING_RESTAURANT_RECEIPT`; receipt só é final com confirmação autorizada do Restaurante.
+- API/PG E2E cobre criação única e idempotente, apêndice de rota, reordenação sem mover parada em execução, revisão antiga, eventos próprios e receipt final. Corrigido INSERT de `delivery_fulfillments` incompatível com grants por coluna, sem alterar grants.
+- Divergência offline preserva evento não confirmado e aceita resolução operacional explícita. Apps têm ações RETURN dedicadas; retorno normal de cliente segue bloqueado.
+- `npm test` dos dois apps, domain/logistics/lifecycle/tenant/availability/identity E2E e security parity version-aware passaram. Oficial `rotamoto` somente leitura em 0040; E2E `rotamoto_e2e` em 0041; nenhuma 0042 criada.
+- Browser 0120 e 0122 passaram em evidência isolada. Regressão 0121 parou antes da criação da Delivery; Browser do ciclo completo de RETURN não foi concluído. Ver gates/causa em [REGISTROS/0123.md](REGISTROS/0123.md).
+- Commits locais: Restaurante `cb89c9f`, Motoboy `891e7ef`, Browser QA `b6551b6`; apps não publicados. Preservação das evidências prévias passou.
+
 ## Atualização — Registro 0080 / impressão de comandas (2026-10-06)
 
 - Impressão browser-native no Restaurante: configurações locais por dispositivo, manual e modo automático com fila deduplicada e confirmação humana, preview, layout térmico/normal e QR `rm-delivery.v1` opcional autenticado. Sem print silencioso, cópia configurável ou adapter físico.
