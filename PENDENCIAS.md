@@ -5,6 +5,7 @@
 - [ ] **BLOCKED — tenant cross-login no Browser:** RLS de dois tenants passou no E2E; falta repetir GET da mídia com uma sessão autenticada de empresa distinta.
 - [ ] **BLOCKED — paridade de segurança oficial:** `test:e2e-security` requer URL oficial read-only, indisponível; não acessar/configurar sem requisito fornecido.
 - [ ] **BLOCKED — storage operacional:** confirmar configuração/autorização do provider `filesystem-v1` em homologação/produção; campanha provou somente `rotamoto_e2e`.
+- [ ] **PARTIAL — teardown Browser RETURN:** cenário completo registrou handover e recebimento bilateral no E2E, mas o runner não encerrou após gravar o relatório; repetir verificação de teardown/rollback limpo.
 
 Ver [Registro 0132](REGISTROS/0132.md). Nenhuma prontidão de produção foi declarada.
 
