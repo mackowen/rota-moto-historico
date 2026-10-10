@@ -9,13 +9,13 @@ Ver [Registro 0126](REGISTROS/0126.md). A auditoria solicitada 0127 está regist
 
 ## Atualização — Registro 0127 — achados a acompanhar
 
-- [ ] **MÉDIO — ACK completo:** validar packetId e cobertura integral/única de `operationResults` antes de persistir ACK e retirar pacote da outbox.
-- [ ] **MÉDIO — concorrência:** corrigir a expectativa order-sensitive do cenário E e repetir a suite com sessões independentes.
-- [ ] **BAIXO — proveniência:** corrigir o harness das regressões 0121/0122 para gravar campaign/orderNo da execução atual, sem editar evidências antigas.
-- [ ] **BAIXO — tela RETURN:** trocar “Aguardando sincronização” por estado de ganho aplicável após recebimento RETURN.
-- [ ] **BAIXO — migrations test:** atualizar inventário esperado para o schema 0041 (46 tabelas) e repetir em E2E.
+- [x] **MÉDIO — ACK completo:** validação bijetiva de packetId/tenant/device/operação/entidade/ID antes de persistir ACK; remoção do pacote após commit.
+- [x] **MÉDIO — concorrência:** semântica de no-op/revisão assertada; três repetições com sessões independentes passaram.
+- [x] **BAIXO — proveniência:** runners gravam campaign/runId/orderNo atuais; nenhuma evidência antiga editada.
+- [x] **BAIXO — tela RETURN:** RETURN recebido não exibe espera de sync nem valor financeiro inventado.
+- [x] **BAIXO — migrations test:** inventário 0039–0041, 46 tabelas, RLS/grants/constraints conferidos no E2E.
 
-Ver [Registro 0127](REGISTROS/0127.md). Não iniciar Campanha 0128 sem solicitação.
+Ver [Registro 0127](REGISTROS/0127.md) e [Registro 0128](REGISTROS/0128.md). ACK parcial foi testado em helper/contrato e modelo de recuperação; não foi injetado em Browser/IndexedDB real. Não iniciar Campanha 0129.
 
 ## Atualização — Registro 0124 (2026-10-10)
 
@@ -571,11 +571,11 @@ Ver [Registro 0122](REGISTROS/0122.md).
 - [x] Regressões Browser 0120, 0121 e 0122 reexecutadas com evidências 0126 isoladas.
 - [x] Ciclo RETURN Browser chegou ao recebimento bilateral e à convergência no PostgreSQL e no Motoboy.
 - [x] Offline RETURN, rate limit HTTP 429, retry/backoff e concorrência independente de sync/disponibilidade exercitados com resultados registrados.
-- [ ] Exercitar corrida específica de duas decisões/confirmações RETURN em sessões PostgreSQL/HTTP independentes; verificar permissões e isolamento RETURN em interleavings concorrentes.
+- [x] Corrida específica de duas confirmações RETURN executada em sessões PostgreSQL/HTTP independentes em 0126; chave igual/distinta preservou uma confirmação/fato por delivery e isolamento tenant. Ver [Registro 0126](REGISTROS/0126.md).
 
 ## Atualização — Registro 0126 (2026-10-10)
 
-- [ ] **PARTIAL — concorrência específica RETURN:** fluxos e idempotência sequencial passaram, mas duas decisões/confirmações RETURN concorrentes em sessões independentes não foram executadas. Evidência e escopo em [Registro 0126](REGISTROS/0126.md).
+- [x] **PASS — concorrência específica RETURN:** duas sessões independentes testaram chaves iguais e distintas; replay idempotente, uma confirmação/fato e conflito por revisão ou duplicata convergente. Evidência em [Registro 0126](REGISTROS/0126.md).
 - [x] Histórico 0126 publicado somente em `codex/f9-browser-e2e-0057`, por fast-forward após fetch, ancestralidade, revisão final e scan de segredos. [Relatório publicado](https://github.com/mackowen/rota-moto-historico/blob/codex/f9-browser-e2e-0057/REGISTROS/0126.md).
 
-Não iniciar a Campanha 0127 antes de nova solicitação.
+0127 e 0128 encerradas e registradas. Não iniciar a Campanha 0129 sem nova solicitação.
