@@ -645,6 +645,6 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 
 - Campanha retomada dos diffs locais e evidências existentes, sem reiniciar do zero. A divergência Route dirty→pacote→payload foi corrigida; attempt-38 comprovou payload com ordem RETURN, ACKs aceitos nas revisões canônicas 4–6 e convergência PostgreSQL/Motoboy.
 - Browser RETURN chegou à confirmação bilateral após execução offline; custódia original/RETURN terminou `RECEIVED`, uma RETURN vinculada, Motoboy sem pendências/conflitos. Regressões Browser 0120/0121/0122 passaram em tentativas isoladas.
-- `npm test` em ambos apps, PostgreSQL sync/RETURN (incluindo HTTP 429), concorrência E2E independente, security parity read-only e checks JavaScript passaram.
-- Banco oficial ficou read-only em migration 0040; `rotamoto_e2e` em 0041. Sem migration nova, deploy ou publicação de app. Corrida simultânea RETURN específica permanece parcial; histórico publicado após fast-forward conforme o gate.
+- `npm test` em ambos apps, PostgreSQL sync/RETURN (incluindo HTTP 429), concorrência E2E independente, security parity read-only e checks JavaScript passaram. Na retomada, duas sessões HTTP/PostgreSQL confirmaram RETURN em corrida com chave igual e distinta; persistiu um único fato e o perdedor recebeu 409 por revisão antiga ou convergiu como duplicata.
+- Banco oficial ficou read-only em migration 0040; `rotamoto_e2e` em 0041. Sem migration nova, deploy ou publicação de app. Todos os gates 0126 PASS; histórico publicado por fast-forward após inspeção.
 - Ver [Registro 0126](REGISTROS/0126.md) e [Resumo 0126](RESUMOS/0126.md).

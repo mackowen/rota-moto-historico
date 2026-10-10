@@ -1,3 +1,12 @@
+## Atualização — Registro 0126 (2026-10-10)
+
+- [x] **Campanha 0126 — Browser RETURN completo:** attempt-38 completou fluxo offline, reconexão, handover e recebimento bilateral com PostgreSQL e Motoboy convergidos.
+- [x] **Campanha 0126 — regressões 0120/0121/0122:** passaram em tentativas isoladas attempt-02.
+- [x] **Campanha 0126 — concorrência do recibo RETURN:** duas sessões autenticadas e transações PostgreSQL independentes; chave igual produziu replay idempotente e um fato; chaves distintas produziram uma confirmação e conflito de revisão ou duplicata convergente, também com um fato.
+- Escopo mais amplo ainda não coberto por esses gates: payload divergente/replay de criação RETURN, reorganização concorrente e todas as combinações RELEASE/INCIDENT offline. Banco oficial permaneceu read-only em 0040; E2E 0041.
+
+Ver [Registro 0126](REGISTROS/0126.md). Não iniciar Campanha 0127 sem solicitação.
+
 ## Atualização — Registro 0124 (2026-10-10)
 
 - [ ] **OPEN — Browser RETURN completo:** runner autenticado confirmou criação/apêndice no PostgreSQL, mas trava ao abrir/validar reorganização da rota; diagnosticar CDP, console, rede e navegação com perfil novo, então completar execução, arrival, handover e recebimento bilateral Browser.
