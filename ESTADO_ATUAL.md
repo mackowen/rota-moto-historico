@@ -1,3 +1,11 @@
+## Atualização — Registro 0131 — painel de presença responsivo (2026-10-10)
+
+- Corrigida a causa do texto comprimido no Motoboy: painel passou a separar status/ajuda das ações e a ocupar a largura do dashboard desktop.
+- Browser autenticado verificou 360/390/768/1366 px em quatro estados, check-in → confirmação Restaurante/PG → saída, QR scanner e foco por teclado; sem overflow, overlap ou erro JS.
+- `npm test`, guards de apresentação, cross-app parity e concorrência/presença PostgreSQL E2E passaram. Scanner abriu; câmera/leitura física não testada.
+- Motoboy `53eb436`; sem alteração Restaurante, `main`, tag ou baseline. Oficial read-only 0040; E2E 0041; sem migration ou deploy.
+- Ver matriz, imagens e limitações em [REGISTROS/0131.md](REGISTROS/0131.md).
+
 ## Atualização — Registro 0130 — auditoria funcional e integração (2026-10-10)
 
 - Resultado global PARTIAL. Fluxos Order/Delivery/Route/RETURN, sync, identidade/tenant e RLS passaram na cobertura nova; apps tecnicamente consistentes nos fluxos testados.

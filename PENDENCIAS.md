@@ -1,6 +1,14 @@
+## Atualização — Registro 0131 — correção visual concluída
+
+- [x] **MÉDIO — painel de presença Motoboy:** causa corrigida no CSS; status legível em 360/390/768/1366 px, sem overflow, controles contidos e não sobrepostos. Browser autenticado cobriu Online, Offline, presença pendente/confirmada, teclado, check-in, confirmação Restaurante, QR scanner e saída.
+- [ ] **BLOCKED — leitura QR por câmera física:** o botão abre o scanner; Chromium headless não tem câmera física. Validar leitura real em dispositivo com permissão de câmera quando disponível.
+- [ ] Permanecem os riscos de 0130 sem relação com a correção visual: media storage real, homologação de iFood/99Food/Keeta, GPS/câmera física, WCAG integral e deployment smoke. Não representam regressão desta campanha.
+
+Ver [Registro 0131](REGISTROS/0131.md). Correção responsiva encerrada; não iniciar campanha seguinte sem solicitação.
+
 ## Atualização — Registro 0130 — riscos e cobertura restantes
 
-- [ ] **MÉDIO — visual Motoboy:** corrigir a composição do painel de presença para 768 px e desktop; texto de status/ajuda fica estreito apesar de não haver overflow. Preservar design e repetir Browser nos quatro viewports.
+- [x] **MÉDIO — visual Motoboy:** painel de presença corrigido e revalidado em Browser nos quatro viewports pela Campanha 0131; ver [REGISTROS/0131.md](REGISTROS/0131.md).
 - [ ] **MÉDIO — prova de entrega:** comprovante da regressão permanece pendente de media storage; validar storage/upload/consulta autenticados em ambiente configurado.
 - [ ] **MÉDIO — dispatch Browser:** CRUD de Driver e fluxo completo de auto-dispatch opt-in/FIFO não percorridos ponta a ponta na UI; suites PostgreSQL cobrem serviços e concorrência.
 - [ ] Homologar iFood/99Food/Keeta com sandbox/credenciais autorizados; testes desta campanha foram sintéticos. Verificar QR/câmera/GPS físicos em Android.
