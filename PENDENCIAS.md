@@ -725,6 +725,7 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
 ## Campanha 0140
 
 - [ ] **PARTIAL — mapa vetorial escuro:** testar com WebGL2 habilitado; Chromium Termux usou tiles raster claros.
+- [ ] **PARTIAL — pins reais no mapa:** repetir com sessão/rota autorizada e coordenadas E2E; na matriz visual o contador de marcadores foi zero.
 - [ ] **BLOCKED — GPS físico e câmera/QR ao vivo:** precisa de dispositivo/emulador com sensores e permissões reais.
 - [ ] **PARTIAL — toque no link da Ajuda:** menu/tela Ajuda abriram por toque; link foi comprovado por clique nativo DOM porque eventos CDP não alcançaram o link de modo confiável.
 - [ ] Revisão estética final pelo operador; capturas representativas em `browser-tests/evidencias/campanhas/0140/revisao/`.
