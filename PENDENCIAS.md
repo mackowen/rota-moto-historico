@@ -657,7 +657,7 @@ Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não iniciar 0137.
 
 ## Campanha 0137 — pendências abertas
 
-- [ ] **PARTIAL:** corrigir/isolar o harness Browser que deixou a attempt 14 em ciclo de HTTP 429/503 e não concluiu teardown. Reexecutar o fluxo completo com assertions de ACK, FIFO/replay, convergência e exit normal; as tentativas atuais não sustentam PASS integral.
+- [x] **PASS:** Browser attempt 17 fechou o fluxo transacional com sessões Restaurante independentes, PIDs/XIDs distintos, waits reais, ACK/FIFO/replay, convergência após reinício e teardown normal. O hang attempt 14 ficou isolado ao pós-fluxo do harness; a await exata não foi registrada. Ver `REGISTROS/0137.md`.
 - [x] **PASS:** comparar PostgreSQL oficial × E2E sob READ ONLY; ledger 0040 confirmado pela role auditora e estrutura/RLS aditiva E2E 0041 conferida.
 
 Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138 sem solicitação.

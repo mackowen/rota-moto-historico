@@ -740,7 +740,7 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - [x] Browser Chromium comprovou três Drivers, FIFO, atribuições distintas, falhas HTTP e recuperação do mesmo packet após fechamento/reabertura real do perfil.
 - [x] RETURN bilateral/teardown, DeliveryProof E2E, npm apps, PostgreSQL domain/lifecycle/RLS e concorrência independente 3/3 passaram em `rotamoto_e2e`.
 - [x] **PASS — concorrência PostgreSQL independente:** requests de attempts Browser 10–13 correlacionados a PIDs/XIDs distintos; suite E2E independente 65 checkpoints, cinco transações bloqueadas, FIFO/idempotência/RLS, exit 0 e sem lock residual.
-- [ ] **PARTIAL — Browser transacional completo:** attempts 10–13 provaram sessões PostgreSQL independentes, mas falharam em assertions posteriores; attempt 14 repetiu 429/503, não produziu relatório/teardown normal e foi encerrada após registrar evidências. Não declarar jornada Browser completa PASS.
+- [x] **PASS — Browser transacional completo:** attempt 17 comprovou duas sessões Restaurante, PIDs/XIDs independentes com waits de lock, ACK 200, FIFO por ordem canônica, replay/inbox idempotente, outbox após falhas/reinício real e convergência; cinco Chromiums encerraram com exit 0. Attempts 10–16 preservadas e classificadas no registro.
 - [x] **PASS — paridade oficial:** nova comparação sob `BEGIN READ ONLY`; auditor confirmou `0040_restaurant_driver_queue`, catálogos/RLS base equivalentes e estrutura aditiva E2E 0041. Sem DDL/DML/migration ou alteração administrativa no oficial.
 
 Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138.
