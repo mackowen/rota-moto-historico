@@ -666,7 +666,7 @@ Ver [Registro 0137](REGISTROS/0137.md). A 0138 foi iniciada por solicitação; n
 
 - [x] Browser transacional 0138: duas sessões Restaurante, transações PostgreSQL independentes, FIFO, ACK/replay, recuperação offline/reinício real e teardown normal comprovados em attempt 02.
 - [x] Auditoria read-only oficial repetida com `rotamoto_auditor`; ledger 0040 e paridade de metadados comuns/checksums comparados ao E2E 0041.
-- [ ] **BLOCKED — promoção de 0041:** oficial permanece em 0040 e `rotamoto_e2e` em 0041. Há autorização condicional, mas faltam chave/diretórios/log de backup, credencial pgpass de restore e alvo descartável novo. Não iniciar backup/restore nem aplicar a migration até provisionamento e gates PASS. Não usar a role auditora para escrita.
+- [ ] **BLOCKED — promoção de 0041:** oficial permanece em 0040 e `rotamoto_e2e` em 0041. Backup criptografado novo foi criado/verificado, mas raiz operacional de mídia e cópia offline da chave não estão comprovadas; não há pgpass de `rotamoto_restore` para alvo novo. Restore/ensaio não ocorreram. Provisionar autenticação restrita e database descartável novo sem alterar a senha existente; preservar o rehearsal preexistente. Aplicar somente após todos os gates PASS. Não usar auditor ou superuser para contornar.
 - [ ] Cobrir isoladamente o helper de limpeza da fixture independente antes de depender dele em teardown com tenants persistidos.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139 automaticamente.
