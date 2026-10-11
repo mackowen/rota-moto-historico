@@ -739,7 +739,8 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 
 - [x] Browser Chromium comprovou três Drivers, FIFO, atribuições distintas, falhas HTTP e recuperação do mesmo packet após fechamento/reabertura real do perfil.
 - [x] RETURN bilateral/teardown, DeliveryProof E2E, npm apps, PostgreSQL domain/lifecycle/RLS e concorrência independente 3/3 passaram em `rotamoto_e2e`.
-- [ ] **PARTIAL — corrida de criação Browser:** duas sessões sobrepuseram requests HTTP, mas fixture serializou transações do banco; demonstrar submissões concorrentes com sessões PG independentes.
-- [ ] **BLOCKED — banco oficial:** comparação security parity sem endpoint read-only autorizado. Nenhuma conexão oficial; 0040 intacta, E2E 0041.
+- [x] **PASS — concorrência PostgreSQL independente:** requests de attempts Browser 10–13 correlacionados a PIDs/XIDs distintos; suite E2E independente 65 checkpoints, cinco transações bloqueadas, FIFO/idempotência/RLS, exit 0 e sem lock residual.
+- [ ] **PARTIAL — Browser attempt 14:** não emitiu relatório/exit normal; não contabilizada como prova nova, preservar trace e diagnosticar harness/429-503.
+- [ ] **PARTIAL — paridade oficial:** conexão `rotamoto_auditor` comprovadamente `transaction_read_only=on`; catálogos/RLS comparados com E2E. `USAGE` ausente em schema `rotamoto` impede ler ledger 0040; nenhuma escrita ou alteração de permissão no oficial.
 
 Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138.

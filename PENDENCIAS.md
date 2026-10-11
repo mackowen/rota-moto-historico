@@ -657,7 +657,7 @@ Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não iniciar 0137.
 
 ## Campanha 0137 — pendências abertas
 
-- [ ] **PARTIAL:** executar duas submissões de pedidos em sessões Restaurante independentes que cheguem a transações PostgreSQL independentes e sobrepostas; validar FIFO pela ordem canônica, atribuição única e eventos/ACKs após recovery. Evidência atual prova sobreposição HTTP, mas a fixture serializa transações.
-- [ ] **BLOCKED:** obter endpoint read-only autorizado para comparar security parity do PostgreSQL oficial. Não conectar por credenciais alternativas.
+- [ ] **PARTIAL:** concluir/diagnosticar Browser attempt 14, que segue sem relatório/exit normal e registrou 429/503; preservar o trace e não promover a tentativa a PASS. As transações independentes foram comprovadas separadamente nas attempts 10–13 e na repetição PG de 65 checkpoints.
+- [ ] **PARTIAL:** DBA avaliar concessão mínima `USAGE ON SCHEMA rotamoto` + SELECT somente em `schema_migrations(migration_id, checksum_sha256, applied_at)` para `rotamoto_auditor`; repetir comparação read-only para confirmar ledger 0040. Não aplicar sem autorização administrativa.
 
 Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138 sem solicitação.
