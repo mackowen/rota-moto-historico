@@ -724,11 +724,12 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - Branch autorizada `codex/f9-browser-e2e-0057`; baselines/main/tags preservadas. Não iniciar 0129.
 - Ver [Registro 0128](REGISTROS/0128.md) e [Resumo 0128](RESUMOS/0128.md).
 
-## Atualização — Campanha 0136 — despacho multimotoboy (2026-10-10)
+## Atualização — Campanha 0136 — continuação multimotoboy (2026-10-10)
 
-- Resultado **PARTIAL**: Browser autenticado comprovou cadastro, presença confirmada, modo manual padrão, opt-in automático, uma atribuição canônica idempotente e convergência nos dois apps para um Driver.
-- FIFO, concorrência PostgreSQL entre Drivers distintos, lease/revisão, offline/ocupado/expirado, retry/RLS passaram em 3 execuções isoladas. Os testes não substituem três sessões Browser.
-- RETURN bilateral terminou; Chromium saiu com código 0 após segunda chamada CDP `Browser.close`. Teardown autônomo do runner é PARTIAL.
-- DeliveryProof com HTTP 503/resposta inválida/desconexão/timeout e recuperação após restart passou. `npm test` em ambos apps e suites PostgreSQL/RLS/lifecycle passaram.
-- Aplicativos e Browser QA sem alterações de código. Banco oficial não acessado; comparação read-only BLOCKED. Oficial 0040, E2E 0041, sem nova migration.
-- Falta Browser com três motoboys autenticados e pedidos paralelos, incluindo restart/offline/retry no dispatch. Ver [REGISTROS/0136.md](REGISTROS/0136.md); não iniciar 0137.
+- Resultado **PASS para o critério da continuação**: três sessões Motoboy autenticadas em perfis independentes; três atribuições distintas FIFO via packet de pedidos da UI; aceite, coleta, saída, chegada, conclusão e retorno à fila comprovados em IndexedDB/PostgreSQL.
+- Dispatch 429/503/timeout/desconexão manteve o mesmo packetId durável e convergiu após recuperação sem perda/duplicação. Reenvio foi idempotente; Tenant B recebeu 404 para Driver de Tenant A.
+- RETURN bilateral concluiu e teardown autônomo encerrou Chromium por CDP com exit 0. DeliveryProof local preservado em falhas e retry confirmou prova única.
+- `npm test` dos dois apps, PostgreSQL concurrency 3/3, tenant RLS E2E, `node --check` e `git diff --check`: PASS.
+- Limite declarado: pedidos foram enviados juntos em um packet; criação e progressão das ações foram sequenciadas na UI. Não foi feito restart real do Chromium com packet pendente. Concurrency de alocação tem provas PG independentes.
+- Apps sem mudanças; nenhum acesso ao oficial, migration nova ou deploy. Oficial 0040; E2E 0041. Comparação read-only oficial permanece BLOCKED sem URL autorizada.
+- Evidências novas em `browser-tests/evidencias/campanhas/0136/continuacao/`. Ver [REGISTROS/0136.md](REGISTROS/0136.md) e [RESUMOS/0136.md](RESUMOS/0136.md); não iniciar 0137.

@@ -644,10 +644,12 @@ Ver [Registro 0122](REGISTROS/0122.md).
 
 ## Atualização — Campanha 0136
 
-- [ ] **PARTIAL — multimotoboy Browser:** ainda falta provar no Chromium três sessões autenticadas no mesmo tenant, três Drivers confirmados, pedidos simultâneos e distribuição FIFO distinta; confirmar aceite/coleta/conclusão e Driver ocupado/liberado nas duas apps.
-- [ ] **PARTIAL — recuperação de dispatch:** injetar 429/503/timeout/desconexão com outbox IndexedDB persistente, restart real e comprovação de replay/ACK sem perda ou duplicidade.
-- [ ] **PARTIAL — teardown RETURN:** após relatório e assertions, runner precisou de segunda chamada CDP `Browser.close` para Chromium sair (exit 0); corrigir cleanup do harness e repetir sem assistência externa.
+- [x] **PASS — multimotoboy Browser:** três sessões autenticadas/perfis independentes; pedidos sincronizados juntos em packet único, três Drivers distintos FIFO, ciclo até DELIVERED e retorno à fila após lease/check-in. Evidência em `multidriver-attempt-18/`.
+- [x] **PASS — recuperação de dispatch:** 429/503/timeout/desconexão mantiveram o mesmo packetId na outbox IndexedDB; ACK após recuperação convergiu sem duplicação. Nenhum reinício real do Browser foi necessário para este critério de reconexão.
+- [x] **PASS — teardown RETURN:** runner repetido em `return-attempt-01/`; recebimento bilateral e exit code 0/signal null via CDP graceful close, sem kill manual.
+- [x] **PASS — DeliveryProof e RLS E2E:** regressão nova em `deliveryproof-attempt-01/` e `npm run test:e2e-tenant-isolation` concluíram com PASS.
+- [ ] **PARTIAL — escopo não exercitado:** corrida de criação por três sessões Restaurante simultâneas e reinício do Chromium enquanto o packet de despacho ainda está pendente não foram testados nesta continuação; não são alegados como prova.
 - [ ] **BLOCKED — paridade de segurança do oficial:** falta URL/autorização de conexão estritamente read-only; nenhuma tentativa de acesso foi feita.
 - [x] Concorrência PostgreSQL/FIFO/revisão/lease/idempotência repetida três vezes em schema isolado `rotamoto_e2e`; sem lock residual ou duplicidade observada.
 
-Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não declarar aprovação integral nem iniciar 0137.
+Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não iniciar 0137.
