@@ -692,3 +692,11 @@ Ver [Registro 0138](REGISTROS/0138.md). Não iniciar Campanha 0139.
 - [ ] Decisão final da auditoria: **NOT READY**; oficial permanece read-only em 0040, E2E em 0041. Não executar promoção sem fechar todos os gates e autorização/janela específicas.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139.
+
+## Continuação — chave de recuperação e cópia Drive 0138
+
+- [x] Localizada a chave existente (32 bytes, 0600) sem exibir conteúdo; Node/OpenSSL bundled fornece AES-256-GCM e Downloads está acessível.
+- [ ] **BLOCKED — cifragem local:** prompt de senha mascarado aguarda interação do operador; não houve entrada nesta execução. Envelope não criado; nenhum hash/tamanho ainda.
+- [ ] **PENDENTE — Google Drive:** operador deve cifrar usando `node ~/rotamoto-data/key-export-0138.cjs`, conferir o hash reportado, enviar manualmente, baixar para local independente e testar recuperação. Não declarar cópia externa antes desse teste.
+
+Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139.
