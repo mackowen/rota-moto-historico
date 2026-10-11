@@ -660,4 +660,13 @@ Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não iniciar 0137.
 - [x] **PASS:** Browser attempt 17 fechou o fluxo transacional com sessões Restaurante independentes, PIDs/XIDs distintos, waits reais, ACK/FIFO/replay, convergência após reinício e teardown normal. O hang attempt 14 ficou isolado ao pós-fluxo do harness; a await exata não foi registrada. Ver `REGISTROS/0137.md`.
 - [x] **PASS:** comparar PostgreSQL oficial × E2E sob READ ONLY; ledger 0040 confirmado pela role auditora e estrutura/RLS aditiva E2E 0041 conferida.
 
-Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138 sem solicitação.
+Ver [Registro 0137](REGISTROS/0137.md). A 0138 foi iniciada por solicitação; não iniciar 0139 automaticamente.
+
+## Campanha 0138 — pendência operacional
+
+- [x] Browser transacional 0138: duas sessões Restaurante, transações PostgreSQL independentes, FIFO, ACK/replay, recuperação offline/reinício real e teardown normal comprovados em attempt 02.
+- [x] Auditoria read-only oficial repetida com `rotamoto_auditor`; ledger 0040 e paridade de metadados comuns/checksums comparados ao E2E 0041.
+- [ ] **PARTIAL — promoção de 0041:** oficial permanece em 0040 e `rotamoto_e2e` em 0041. Requer backup/restore rehearsal e autorização explícita antes de aplicar a migration 0041 no oficial. Não usar a role auditora para escrita.
+- [ ] Cobrir isoladamente o helper de limpeza da fixture independente antes de depender dele em teardown com tenants persistidos.
+
+Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139 automaticamente.
