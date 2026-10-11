@@ -667,8 +667,8 @@ Ver [Registro 0137](REGISTROS/0137.md). A 0138 foi iniciada por solicitação; n
 - [x] Browser transacional 0138: duas sessões Restaurante, transações PostgreSQL independentes, FIFO, ACK/replay, recuperação offline/reinício real e teardown normal comprovados em attempt 02.
 - [x] Auditoria read-only oficial repetida com `rotamoto_auditor`; ledger 0040 e paridade de metadados comuns/checksums comparados ao E2E 0041.
 - [x] **PASS — restore local e ensaio 0041 no clone:** recovery set existente verificado, restore completado no `rotamoto_disposable_0138_20261011_41770017`, contagens/catálogos comparados e migration exata ensaiada; RETURN/idempotência e tenant RLS passaram no DB/role. Clone limpo após fixtures.
-- [ ] **PARTIAL — cobertura de mídia:** `~/rotamoto-data/media` é diretório privado real, porém vazio. Foi usado apenas como limite do ensaio; não prova ser raiz histórica nem inventaria blobs órfãos. Cópia externa da chave também não foi demonstrada, risco aceito só para a recuperação local.
-- [ ] **PARTIAL — paridade integral:** restore muda owners/ACL por `--no-owner --no-acl`; 16 checks diferem textualmente apenas por parênteses redundantes em AND. Catálogos/counts principais correspondem, mas não se declara identidade byte a byte.
+- [ ] **PARTIAL — cobertura de mídia histórica:** `~/rotamoto-data/media` está vazio e não identifica a raiz operacional. A nova raiz de desenvolvimento foi validada separadamente; cobertura fora dela permanece sem prova. Recuperação técnica da cópia Drive passou depois, mas custódia independente da frase segue pendente.
+- [ ] **PARTIAL — paridade integral:** restore aplica `--no-owner --no-acl`; grants runtime precisam ser provisionados no alvo antes de tráfego. Na comparação final, um CHECK diferiu apenas por parênteses redundantes no deparse; não se declara identidade byte a byte.
 - [ ] **BLOCKED / não executado — jornada RETURN HTTP/Browser e promoção:** 0041 não foi aplicada ao oficial por instrução desta execução; oficial segue 0040, E2E 0041. Nenhuma escrita oficial.
 - [ ] Cobrir isoladamente o helper de limpeza da fixture independente antes de depender dele em teardown com tenants persistidos.
 
@@ -696,7 +696,19 @@ Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139.
 ## Continuação — chave de recuperação e cópia Drive 0138
 
 - [x] Localizada a chave existente (32 bytes, 0600) sem exibir conteúdo; Node/OpenSSL bundled fornece AES-256-GCM e Downloads está acessível.
-- [ ] **BLOCKED — cifragem local:** prompt de senha mascarado aguarda interação do operador; não houve entrada nesta execução. Envelope não criado; nenhum hash/tamanho ainda.
-- [ ] **PENDENTE — Google Drive:** operador deve cifrar usando `node ~/rotamoto-data/key-export-0138.cjs`, conferir o hash reportado, enviar manualmente, baixar para local independente e testar recuperação. Não declarar cópia externa antes desse teste.
+- [x] **PASS reportado pelo operador — recovery Drive:** cópia baixada conferida por SHA-256 e execução reportou autenticação AES-GCM, igualdade com a chave original e remoção do plaintext.
+- [ ] **PARTIAL — custódia da frase-senha:** guarda independente da frase ainda depende de comprovação do operador; não presumida.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139.
+
+
+## Fechamento de desenvolvimento — Campanha 0138 — 2026-10-11
+
+- [x] **COMPLETE — desenvolvimento local:** runtime filesystem-v1 isolado, HTTP/tenant, persistência após reinício, recovery set DB+mídia restaurado em cluster descartável e ensaio rollback-only 0041 comprovados.
+- [x] **PASS reportado — recuperação criptográfica:** operador confirmou recovery da cópia baixada; SHA/GCM/igualdade/remoção de plaintext.
+- [ ] **PARTIAL — custódia independente da frase-senha:** depende do operador; não presumida.
+- [ ] **BLOCKED — raiz/cobertura de mídia fora do desenvolvimento:** sem API operacional/configuração ou leitura autorizada das referências atuais; não classificar o diretório local vazio como storage completo.
+- [ ] **NOT READY — promoção oficial:** proibida nesta execução; oficial segue 0040 read-only. Clone restaurado usa `--no-acl` e requer grants explicitamente provisionados antes de tráfego.
+- [x] Nenhuma migration oficial, deploy, alteração de baselines ou push de aplicativos; não iniciar 0139.
+
+Ver [REGISTROS/0138.md](REGISTROS/0138.md) e [RESUMOS/0138.md](RESUMOS/0138.md).
