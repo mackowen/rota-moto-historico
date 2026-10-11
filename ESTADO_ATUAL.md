@@ -756,3 +756,11 @@ Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138.
 - PostgreSQL, migrations, Nginx, deploy, baselines, tags e `main` não foram alterados.
 
 Ver [REGISTROS/0139.md](REGISTROS/0139.md) e [RESUMOS/0139.md](RESUMOS/0139.md). Não iniciar Campanha 0140.
+
+## Campanha 0140 — estado final
+
+- Aplicações e Browser QA receberam commits locais na branch de trabalho; sem push desses três repositórios.
+- Suítes completas dos dois apps e Browser QA aprovadas. Matriz visual controlada e RETURN E2E registrados; operação autenticada só foi afirmada no runner RETURN usando `rotamoto_e2e`.
+- Gates globais técnicos PARTIAL por WebGL2 indisponível no Chromium, ausência de GPS/câmera físicos e link Ajuda avaliado por clique DOM, não toque físico. Revisão estética ainda depende do operador.
+- PostgreSQL oficial não conectado; E2E não modificado; nenhuma migration/deploy.
+- Ver [REGISTROS/0140.md](REGISTROS/0140.md) e [RESUMOS/0140.md](RESUMOS/0140.md). Não iniciar 0141.

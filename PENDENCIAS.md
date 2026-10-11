@@ -721,3 +721,12 @@ Ver [REGISTROS/0138.md](REGISTROS/0138.md) e [RESUMOS/0138.md](RESUMOS/0138.md).
 - [ ] Aceite estético final depende do operador; capturas antes/depois e matrizes estão em `browser-tests/evidencias/campanhas/0139/controlled-harness/`.
 
 Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
+
+## Campanha 0140
+
+- [ ] **PARTIAL — mapa vetorial escuro:** testar com WebGL2 habilitado; Chromium Termux usou tiles raster claros.
+- [ ] **BLOCKED — GPS físico e câmera/QR ao vivo:** precisa de dispositivo/emulador com sensores e permissões reais.
+- [ ] **PARTIAL — toque no link da Ajuda:** menu/tela Ajuda abriram por toque; link foi comprovado por clique nativo DOM porque eventos CDP não alcançaram o link de modo confiável.
+- [ ] Revisão estética final pelo operador; capturas representativas em `browser-tests/evidencias/campanhas/0140/revisao/`.
+
+Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
