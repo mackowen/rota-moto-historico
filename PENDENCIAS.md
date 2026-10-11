@@ -673,3 +673,12 @@ Ver [Registro 0137](REGISTROS/0137.md). A 0138 foi iniciada por solicitação; n
 - [ ] Cobrir isoladamente o helper de limpeza da fixture independente antes de depender dele em teardown com tenants persistidos.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139 automaticamente.
+
+## Atualização — Continuação RETURN 0138
+
+- [x] **PASS — E2E retorno:** cancelamento após pickup, RETURN único e vinculado, route reordenada/restaurada ao fim, offline/reconexão, ACK/replay, receipt bilateral e isolamento tenant demonstrados em Browser/HTTP/PostgreSQL em attempt-05.
+- [x] Corrigida reconciliação do Motoboy para fatos de Delivery versionados que seguem a revisão canônica; scheduler volta a verificar eventos pendentes depois de cada sync concluído. `npm test` ambos apps passou.
+- [ ] **PARTIAL — recovery global:** raiz histórica completa de mídia e cópia independente da chave continuam sem prova; divergências de ownership/ACL e textual schema do restore seguem registradas.
+- [ ] **OPEN — promoção 0041:** oficial `rotamoto` permanece read-only na 0040; não promover sem gates de recuperação/paridade, janela e execução autorizada. E2E continua na 0041.
+
+Ver [Registro 0138](REGISTROS/0138.md). Não iniciar Campanha 0139.
