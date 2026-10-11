@@ -744,3 +744,15 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - [x] **PASS — paridade oficial:** nova comparação sob `BEGIN READ ONLY`; auditor confirmou `0040_restaurant_driver_queue`, catálogos/RLS base equivalentes e estrutura aditiva E2E 0041. Sem DDL/DML/migration ou alteração administrativa no oficial.
 
 Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138.
+
+## Atualização — Campanha 0139 (2026-10-11)
+
+- [x] **PASS — auditoria visual controlada:** baseline dos HEADs `bc5b380`/`1c9463a`; depois 16 estados (360/390/768/1366, claro/escuro), sem overflow, com alternância dinâmica, zoom e atribuição cartográfica.
+- [x] **PASS — navegação:** destinos testados por touch/click Browser em mobile e desktop; “Mais” abriu/fechou no mobile e selecionou seus destinos.
+- [x] **PASS — GPS sem vínculo:** permissão negada, permissão permitida sem posição física, ausência de conta e rede offline testadas; nenhuma localização simulada e ações oficiais bloqueadas.
+- [ ] **PARTIAL — cartografia escura:** Chromium não suportou WebGL2; o fallback OpenStreetMap raster permaneceu claro. Revalidar em runtime de teste WebGL2 compatível.
+- [ ] **BLOCKED — sessão/vínculo positivo, GPS físico e rota/pins canônicos:** API autenticada e dados operacionais não foram fornecidos; não houve simulação.
+- Resultado global **PARTIAL**; aceite estético final depende do operador. Commits: Restaurante `3dac86b`, Motoboy `122208d`, Browser QA `2828555`/`0acb957`.
+- PostgreSQL, migrations, Nginx, deploy, baselines, tags e `main` não foram alterados.
+
+Ver [REGISTROS/0139.md](REGISTROS/0139.md) e [RESUMOS/0139.md](RESUMOS/0139.md). Não iniciar Campanha 0140.

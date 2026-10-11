@@ -712,3 +712,12 @@ Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139.
 - [x] Nenhuma migration oficial, deploy, alteração de baselines ou push de aplicativos; não iniciar 0139.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md) e [RESUMOS/0138.md](RESUMOS/0138.md).
+
+## Campanha 0139 — pendências remanescentes
+
+- [ ] **PARTIAL — mapa vetorial escuro:** validar em Chromium de teste com WebGL2 funcional; manter atribuições do provedor. O ambiente atual ficou no fallback OSM raster claro.
+- [ ] **BLOCKED — sessão autenticada e vínculo:** fornecer API de teste com identidade real autorizada e fixture tenant-safe; nenhum vínculo foi simulado.
+- [ ] **BLOCKED — GPS físico e rota/pins canônicos:** validar em dispositivo/emulador autorizado com rota E2E; o harness não injeta coordenadas nem dados operacionais.
+- [ ] Aceite estético final depende do operador; capturas antes/depois e matrizes estão em `browser-tests/evidencias/campanhas/0139/controlled-harness/`.
+
+Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
