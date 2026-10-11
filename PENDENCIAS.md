@@ -666,7 +666,7 @@ Ver [Registro 0137](REGISTROS/0137.md). A 0138 foi iniciada por solicitação; n
 
 - [x] Browser transacional 0138: duas sessões Restaurante, transações PostgreSQL independentes, FIFO, ACK/replay, recuperação offline/reinício real e teardown normal comprovados em attempt 02.
 - [x] Auditoria read-only oficial repetida com `rotamoto_auditor`; ledger 0040 e paridade de metadados comuns/checksums comparados ao E2E 0041.
-- [ ] **BLOCKED — promoção de 0041:** oficial permanece em 0040 e `rotamoto_e2e` em 0041. Backup criptografado novo foi criado/verificado, mas raiz operacional de mídia e cópia offline da chave não estão comprovadas; não há pgpass de `rotamoto_restore` para alvo novo. Restore/ensaio não ocorreram. Provisionar autenticação restrita e database descartável novo sem alterar a senha existente; preservar o rehearsal preexistente. Aplicar somente após todos os gates PASS. Não usar auditor ou superuser para contornar.
+- [ ] **BLOCKED — promoção de 0041:** oficial permanece em 0040 e `rotamoto_e2e` em 0041. Dump criptografado foi verificado e um novo `rotamoto_disposable_0138_20261011_41770017` foi provisionado, owner `rotamoto_restore`; continua vazio. Credencial pgpass restore indisponível; autorização explícita para rotação da senha existente foi solicitada. Raiz operacional de mídia e cópia offline da chave não estão comprovadas. Restore/ensaio não ocorreram. Preservar `rotamoto_disposable_rehearsal`; aplicar só após todos os gates PASS. Não usar auditor ou superuser para contornar.
 - [ ] Cobrir isoladamente o helper de limpeza da fixture independente antes de depender dele em teardown com tenants persistidos.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139 automaticamente.
