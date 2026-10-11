@@ -682,3 +682,13 @@ Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139 automatic
 - [ ] **OPEN — promoção 0041:** oficial `rotamoto` permanece read-only na 0040; não promover sem gates de recuperação/paridade, janela e execução autorizada. E2E continua na 0041.
 
 Ver [Registro 0138](REGISTROS/0138.md). Não iniciar Campanha 0139.
+
+## Auditoria final de prontidão 0138 — 2026-10-11
+
+- [x] **PASS — núcleo técnico 0041:** checksum, ensaio no clone restaurado, constraints, índice único, RLS/FORCE, grants runtime e RETURN/idempotência verificados; Browser attempt-05 permanece válido.
+- [ ] **BLOCKED — prontidão de promoção:** raiz histórica de mídia operacional não identificada/cobertura incompleta; cópia protegida independente da chave não comprovada. A chave local não é recovery independente.
+- [ ] **PARTIAL — janela/risco operacional:** `ALTER TABLE`/índice exigem lock; snapshot sem waits não reserva janela; duração da migration no clone não foi registrada. Confirmar timeout, duração representativa, janela e abort criteria.
+- [ ] **PARTIAL — rollback após uso:** `0041.down.sql` elimina recibos e não é seguro se houver RETURN persistido; definir forward-fix ou restore coordenado antes de operação.
+- [ ] Decisão final da auditoria: **NOT READY**; oficial permanece read-only em 0040, E2E em 0041. Não executar promoção sem fechar todos os gates e autorização/janela específicas.
+
+Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139.
