@@ -666,7 +666,10 @@ Ver [Registro 0137](REGISTROS/0137.md). A 0138 foi iniciada por solicitação; n
 
 - [x] Browser transacional 0138: duas sessões Restaurante, transações PostgreSQL independentes, FIFO, ACK/replay, recuperação offline/reinício real e teardown normal comprovados em attempt 02.
 - [x] Auditoria read-only oficial repetida com `rotamoto_auditor`; ledger 0040 e paridade de metadados comuns/checksums comparados ao E2E 0041.
-- [ ] **BLOCKED — promoção de 0041:** oficial permanece em 0040 e `rotamoto_e2e` em 0041. Dump verificado; autenticação pgpass de `rotamoto_restore` confirmada; alvo novo `rotamoto_disposable_0138_20261011_41770017` pertence a essa role, sem grants públicos e continua vazio. Raiz operacional de mídia não localizada e cópia offline protegida da chave não comprovada; runner falha fechado sem a raiz. Restore/ensaio não ocorreram. Preservar `rotamoto_disposable_rehearsal`; aplicar só após todos os gates PASS. Não usar auditor ou superuser para contornar.
+- [x] **PASS — restore local e ensaio 0041 no clone:** recovery set existente verificado, restore completado no `rotamoto_disposable_0138_20261011_41770017`, contagens/catálogos comparados e migration exata ensaiada; RETURN/idempotência e tenant RLS passaram no DB/role. Clone limpo após fixtures.
+- [ ] **PARTIAL — cobertura de mídia:** `~/rotamoto-data/media` é diretório privado real, porém vazio. Foi usado apenas como limite do ensaio; não prova ser raiz histórica nem inventaria blobs órfãos. Cópia externa da chave também não foi demonstrada, risco aceito só para a recuperação local.
+- [ ] **PARTIAL — paridade integral:** restore muda owners/ACL por `--no-owner --no-acl`; 16 checks diferem textualmente apenas por parênteses redundantes em AND. Catálogos/counts principais correspondem, mas não se declara identidade byte a byte.
+- [ ] **BLOCKED / não executado — jornada RETURN HTTP/Browser e promoção:** 0041 não foi aplicada ao oficial por instrução desta execução; oficial segue 0040, E2E 0041. Nenhuma escrita oficial.
 - [ ] Cobrir isoladamente o helper de limpeza da fixture independente antes de depender dele em teardown com tenants persistidos.
 
 Ver [REGISTROS/0138.md](REGISTROS/0138.md). Não iniciar Campanha 0139 automaticamente.
