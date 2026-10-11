@@ -653,3 +653,11 @@ Ver [Registro 0122](REGISTROS/0122.md).
 - [x] Concorrência PostgreSQL/FIFO/revisão/lease/idempotência repetida três vezes em schema isolado `rotamoto_e2e`; sem lock residual ou duplicidade observada.
 
 Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não iniciar 0137.
+
+
+## Campanha 0137 — pendências abertas
+
+- [ ] **PARTIAL:** executar duas submissões de pedidos em sessões Restaurante independentes que cheguem a transações PostgreSQL independentes e sobrepostas; validar FIFO pela ordem canônica, atribuição única e eventos/ACKs após recovery. Evidência atual prova sobreposição HTTP, mas a fixture serializa transações.
+- [ ] **BLOCKED:** obter endpoint read-only autorizado para comparar security parity do PostgreSQL oficial. Não conectar por credenciais alternativas.
+
+Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138 sem solicitação.

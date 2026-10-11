@@ -733,3 +733,13 @@ Implementação parcial de custódia/cancelamento/RETURN. Browser E2E autenticad
 - Limite declarado: pedidos foram enviados juntos em um packet; criação e progressão das ações foram sequenciadas na UI. Não foi feito restart real do Chromium com packet pendente. Concurrency de alocação tem provas PG independentes.
 - Apps sem mudanças; nenhum acesso ao oficial, migration nova ou deploy. Oficial 0040; E2E 0041. Comparação read-only oficial permanece BLOCKED sem URL autorizada.
 - Evidências novas em `browser-tests/evidencias/campanhas/0136/continuacao/`. Ver [REGISTROS/0136.md](REGISTROS/0136.md) e [RESUMOS/0136.md](RESUMOS/0136.md); não iniciar 0137.
+
+
+## Atualização — Campanha 0137 (2026-10-11)
+
+- [x] Browser Chromium comprovou três Drivers, FIFO, atribuições distintas, falhas HTTP e recuperação do mesmo packet após fechamento/reabertura real do perfil.
+- [x] RETURN bilateral/teardown, DeliveryProof E2E, npm apps, PostgreSQL domain/lifecycle/RLS e concorrência independente 3/3 passaram em `rotamoto_e2e`.
+- [ ] **PARTIAL — corrida de criação Browser:** duas sessões sobrepuseram requests HTTP, mas fixture serializou transações do banco; demonstrar submissões concorrentes com sessões PG independentes.
+- [ ] **BLOCKED — banco oficial:** comparação security parity sem endpoint read-only autorizado. Nenhuma conexão oficial; 0040 intacta, E2E 0041.
+
+Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138.
