@@ -657,7 +657,7 @@ Ver [REGISTROS/0136.md](REGISTROS/0136.md). Não iniciar 0137.
 
 ## Campanha 0137 — pendências abertas
 
-- [ ] **PARTIAL:** concluir/diagnosticar Browser attempt 14, que segue sem relatório/exit normal e registrou 429/503; preservar o trace e não promover a tentativa a PASS. As transações independentes foram comprovadas separadamente nas attempts 10–13 e na repetição PG de 65 checkpoints.
-- [ ] **PARTIAL:** DBA avaliar concessão mínima `USAGE ON SCHEMA rotamoto` + SELECT somente em `schema_migrations(migration_id, checksum_sha256, applied_at)` para `rotamoto_auditor`; repetir comparação read-only para confirmar ledger 0040. Não aplicar sem autorização administrativa.
+- [ ] **PARTIAL:** corrigir/isolar o harness Browser que deixou a attempt 14 em ciclo de HTTP 429/503 e não concluiu teardown. Reexecutar o fluxo completo com assertions de ACK, FIFO/replay, convergência e exit normal; as tentativas atuais não sustentam PASS integral.
+- [x] **PASS:** comparar PostgreSQL oficial × E2E sob READ ONLY; ledger 0040 confirmado pela role auditora e estrutura/RLS aditiva E2E 0041 conferida.
 
 Ver [Registro 0137](REGISTROS/0137.md). Não iniciar Campanha 0138 sem solicitação.
