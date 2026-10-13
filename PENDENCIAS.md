@@ -1,3 +1,21 @@
+## Consolidação vigente — Campanha 0146 (2026-10-13)
+
+Esta seção atualiza os itens de worker, concorrência, restart e outbox reexaminados em 0146. As matrizes anteriores permanecem preservadas; status antigo só é supersedido nos itens identificados abaixo.
+
+**Contagem 0146 (7 itens): RESOLVED 3 · PARTIAL 2 · OPEN 1 · BLOCKED 1.**
+
+| ID | Status / prioridade | Item e evidência | Dependência / próximo passo |
+|---|---|---|---|
+| 0146-R1 | **RESOLVED / P1** | Bootstrap do Restaurante não deve converter dados canônicos em mutações locais. Browser reproduziu republicação após reload; escrita de normalização IndexedDB foi corrigida e `serverOrderReplayCount=0` na evidência final. | Preservar teste de restart em futuras mudanças de normalização e migração IndexedDB. |
+| 0146-R2 | **RESOLVED / P1** | Concorrência worker: dois backends PostgreSQL distintos disputaram a mesma operação; um claim/efeito sintético, sem duplicação. | Manter corrida determinística como regressão com roles E2E dedicadas. |
+| 0146-R3 | **RESOLVED / P1** | Interrupção após início do efeito sintético: `SIGKILL`, lease expirado, `unknown_outcome`, `attempts=1`; recuperação não retransmitiu efeito incerto. Replay/eventos concorrentes preservaram inbox e projeção mais nova. | Continuar exigindo chave idempotente/consulta de resultado antes de qualquer repetição externa incerta. |
+| 0146-P1 | **PARTIAL / P1** | Outbox local sobreviveu a offline simulado, 503 e reload; ACK deixou uma Order. Evidência cobre IndexedDB/Chromium e endpoints controlados, não rádio ou processo Android. | Testar em dispositivo Android a queda/restauração de rede, suspensão/força-parada e retomada com perfil persistente. |
+| 0146-P2 | **PARTIAL / P2** | RETURN/custódia e separação Order/Delivery passaram nas suítes existentes; Browser final confirmou que Order externo desconhecido não ganha Delivery/QR. Não foi repetido fluxo bilateral completo nem matriz provider de cancelamento pré/pós-coleta nesta campanha. | Acrescentar cenários sintéticos somente para transições documentadas, preservando entregador custodiante, RETURN explícito e fulfillment plataforma. |
+| 0146-O1 | **OPEN / P1** | Recuperação foi testada com worker Node morto e adapter sintético, mas não com interrupção do host/app Android durante atividade real; rede foi simulada por `navigator.onLine`/503. | Completar validação física em aparelho e registrar limites; não deduzir sucesso físico da simulação. |
+| 0146-B1 | **BLOCKED / P1 externo** | Homologação de iFood/Keeta/99Food e efeitos remotos reais não executados. O worker exercitou estado incerto sem contatar provider; 99Food permanece sem contrato/onboarding registrado. | Usar sandbox e contratos/credenciais oficiais autorizados quando disponíveis. Nenhum endpoint ou regra foi presumido. |
+
+**Segurança de dados:** somente `rotamoto_e2e` foi usado nos testes PostgreSQL; `rotamoto` não foi acessado, nenhuma migration foi executada e não houve deploy. A migration 0041 permanece documentada como **APPLIED** em [REGISTROS/0140.md](REGISTROS/0140.md), sem nova verificação nesta campanha. Detalhes em [REGISTROS/0146.md](REGISTROS/0146.md). Não iniciar Campanha 0147.
+
 ## Consolidação vigente — Campanha 0145 (2026-10-13)
 
 Esta atualização supersede somente as evidências/itens de Orders externos, sua projeção de Delivery/QR e sync que foram reexaminados em 0145. As demais matrizes e registros permanecem preservados.

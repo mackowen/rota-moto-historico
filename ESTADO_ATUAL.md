@@ -1,3 +1,19 @@
+## Estado vigente — Campanha 0146: resiliência e concorrência (2026-10-13)
+
+**Resultado geral: PARTIAL.** Foi corrigido um defeito de sync no restart: a normalização inicial do Restaurante usava `put()` e podia transformar registros canônicos do servidor em alterações locais, reabrindo a publicação de Orders já sincronizadas. O bootstrap agora preserva origem, versão e estado canônico. Browser comprovou zero replay de Orders canônicas após reload.
+
+- **PASS — workers concorrentes:** dois pools/sessões PostgreSQL independentes no E2E disputaram um comando; somente um worker obteve claim e invocou o adapter sintético. Resultado processado uma vez.
+- **PASS — queda e resultado incerto:** worker filho foi encerrado com `SIGKILL` durante efeito sintético; após lease expirar, comando continuou `unknown_outcome`, `attempts=1`, sem retry cego. Fencing de worker obsoleto foi exercitado.
+- **PASS — eventos concorrentes:** replay concorrente manteve uma linha inbox e uma consulta de detalhe; evento atrasado concorrente não substituiu o estado mais recente protegido por lock por Order.
+- **PASS — outbox/restart:** Browser/CDP em `rotamoto_e2e` manteve packet local após offline simulado, dois 503 e reload; ACK removeu a fila e permaneceu uma Order local. Order externa continuou única, sem Delivery/QR indevidos.
+- **PASS — regressões e isolamento:** `npm test` Restaurante/Motoboy; testes worker/runtime/logística PostgreSQL, concorrência/RETURN e tenant RLS passaram usando somente `rotamoto_e2e`.
+- **PARTIAL — rede física:** offline do Browser, HTTP 503 e `SIGKILL` de processo Node são falhas controladas; rádio Android, suspensão/força-parada do app e reconexão física não foram testados.
+- **BLOCKED — homologação externa:** nenhum iFood, Keeta ou 99Food comercial foi chamado. Suítes usam adapter sintético e não demonstram comportamento do provider.
+- **Banco:** `rotamoto` não foi acessado nem modificado; nenhuma migration foi executada. 0041 segue **APPLIED** pela evidência de [REGISTROS/0140.md](REGISTROS/0140.md), sem revalidar ledger nesta campanha.
+- **Versionamento:** Restaurante `580016e63dea151d8ec52a8e38e12a545c69a48d`, commit local sem push; Motoboy sem alterações (`6cce24d71fb7bcfb8777cbc6c89c4a76278eb2e2`); Browser QA branch/HEAD preservados, runner e evidências locais sem push. Histórico será publicado somente na branch autorizada.
+
+Evidência Browser: `browser-tests/evidencias/campanhas/0146/worker-outbox-recovery-6c2871cc-98f0-4a97-8597-5326390e73d7/`. Ver [REGISTROS/0146.md](REGISTROS/0146.md). Próximas prioridades: Android com rede/suspensão reais; matriz documentada de cancelamento antes/depois da coleta; homologação provider quando autorizada. Não iniciar Campanha 0147.
+
 ## Estado vigente — Campanha 0145: robustez dos pedidos externos (2026-10-13)
 
 **Resultado: PARTIAL.** Corrigidos dois defeitos comprovados: eventos externos empatados no timestamp não substituem arbitrariamente a projeção; Orders externos com fulfillment desconhecido não geram Delivery/QR local. A auditoria corrige uma lacuna na evidência da 0144: seu runner consultava QR sem escopar a linha e não detectou o botão de QR indevido.
