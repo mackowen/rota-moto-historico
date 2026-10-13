@@ -1,3 +1,14 @@
+## Estado consolidado — Campanha 0141 (2026-10-13)
+
+- **Banco oficial `rotamoto`:** migration `0041_delivery_custody_return` está **APPLIED**, ledger 0001–0041, checksum `c75063f833da16a8efdd2e8d448bf1c7c3aee7e360be8d9e1f12397d15251a9c`. Esta campanha apenas conferiu os registros existentes; não conectou nem alterou PostgreSQL.
+- **Aplicativos:** fluxos RETURN/sync/dispatch e isolamento tenant têm evidências E2E posteriores válidas. A exposição histórica de `secret_ref` foi corrigida na 0019 e checada em 0079. Não foi comprovado defeito crítico atual, mas esta auditoria documental não é pentest.
+- **Prontidão operacional:** produção permanece NÃO APROVADA. Integrações reais (iFood/99Food/Keeta), deployment smoke, backup+restore recorrente de banco e mídia, política/custódia de chave e RPO/RTO aguardam ambiente e responsáveis. Bootstrap de operador/email/MFA também carece de prova operacional.
+- **UI e hardware:** componentes corrigidos em 0140 passaram nos escopos capturados; revisão global de UI/WCAG continua parcial. GPS/mapa básico foi confirmado, mas localização real ligada a sessão/rota/pins não foi completamente validada. QR por câmera física continua sem prova em Android.
+- **Funcionalidade:** settlement/liquidação financeira segue fora da capacidade implementada e exige decisão de produto; Earning não significa pagamento.
+- Matriz vigente e classificação com evidências/dependências: [PENDENCIAS.md](PENDENCIAS.md). Resultado: 4 RESOLVED, 4 PARTIAL, 1 OPEN, 5 BLOCKED (14 itens consolidados).
+- Nenhum teste foi executado nesta campanha; somente documentos, código/testes existentes e evidências registradas foram examinados. Apps, contratos, Browser QA, PostgreSQL, `main`, tags e baselines permaneceram intocados.
+- Próxima sequência recomendada: 0142 deployment/backup/identidade operacional (gates de ambiente), 0143 homologação das integrações externas, 0144 validação física Android (GPS/QR) e acessibilidade/UI completa, 0145 decisão de settlement se priorizada. A ordem é proposta, não campanha iniciada.
+
 ## Atualização — reconciliação da Campanha 0140 / migration oficial 0041 (2026-10-13)
 
 - O estado BLOCKED descrito no preflight de 0140 era válido naquele instante e permanece no registro como evidência histórica. Depois, os gates foram satisfeitos e a migration `0041_delivery_custody_return` foi aplicada ao oficial `rotamoto` via runner transacional; checksum `c75063f833da16a8efdd2e8d448bf1c7c3aee7e360be8d9e1f12397d15251a9c`, ledger final 0001–0041.
