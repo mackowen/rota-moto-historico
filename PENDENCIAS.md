@@ -724,6 +724,8 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
 
 ## Campanha 0140
 
+- [x] **PASS — migration oficial 0041:** aplicada em `rotamoto` após gates de identidade, checksum, ausência de dados com auditor `BYPASSRLS`, recovery e mídia; runner transacional. Ledger final 0001–0041, checksum `c75063f833da16a8efdd2e8d448bf1c7c3aee7e360be8d9e1f12397d15251a9c`. Ver atualização posterior em [REGISTROS/0140.md](REGISTROS/0140.md).
+
 - [ ] **PARTIAL — mapa vetorial escuro:** testar com WebGL2 habilitado; Chromium Termux usou tiles raster claros.
 - [ ] **PARTIAL — pins reais no mapa:** repetir com sessão/rota autorizada e coordenadas E2E; na matriz visual o contador de marcadores foi zero.
 - [ ] **BLOCKED — GPS físico e câmera/QR ao vivo:** precisa de dispositivo/emulador com sensores e permissões reais.

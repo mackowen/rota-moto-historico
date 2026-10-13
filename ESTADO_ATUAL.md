@@ -1,3 +1,11 @@
+## Atualização — reconciliação da Campanha 0140 / migration oficial 0041 (2026-10-13)
+
+- O estado BLOCKED descrito no preflight de 0140 era válido naquele instante e permanece no registro como evidência histórica. Depois, os gates foram satisfeitos e a migration `0041_delivery_custody_return` foi aplicada ao oficial `rotamoto` via runner transacional; checksum `c75063f833da16a8efdd2e8d448bf1c7c3aee7e360be8d9e1f12397d15251a9c`, ledger final 0001–0041.
+- `dfff2a7c41ec53024463a14dc365b193af807619` foi criado e publicado em `rota-moto-restaurante`/`codex/setup-workflow`, onde adicionou dois arquivos homônimos. O histórico já possuía ambos; a correção integrou os fatos à branch autorizada `codex/f9-browser-e2e-0057` sem substituir o conteúdo anterior nem alterar o commit do aplicativo.
+- Contagens pré-migração foram feitas por role com `BYPASSRLS`; zero dados operacionais, proofs, upload intents e mídia. Recovery set atual verificado; validação de constraints, índice, RLS/FORCE e grants passou. Testes pertinentes passaram com E2E em `rotamoto_e2e`.
+- Nesta atualização documental não houve operação PostgreSQL, alteração em apps, `main`, tags, baselines, Browser QA ou Campanha 0141. O parecer geral 0140 continua PARCIAL pelas pendências visuais/funcionais.
+- Fonte de detalhe: [REGISTROS/0140.md](REGISTROS/0140.md) e [RESUMOS/0140.md](RESUMOS/0140.md).
+
 ## Atualização — Campanha 0135 — despacho e convergência (2026-10-10)
 
 - Browser autenticado comprovou cadastro/edição/vínculo de Driver, presença com confirmação, modo manual padrão e opt-in automático. Repetição idempotente criou uma só Delivery; Tenant B recebeu 404 ao buscar Driver de A.
