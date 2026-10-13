@@ -760,3 +760,23 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
 - [ ] Revisão estética final pelo operador; capturas representativas em `browser-tests/evidencias/campanhas/0140/revisao/`.
 
 Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
+## Atualização vigente — Campanha 0142 (2026-10-13)
+
+**Auditoria funcional integrada: PARTIAL; defeitos de produto confirmados: 0.** Os fluxos testados passaram em suítes automatizadas e Browser E2E no banco isolado. Os limites de hardware e de homologação externa permanecem, sem serem classificados como falhas de aplicação. Esta atualização complementa a matriz 0141 abaixo, que permanece intacta como fotografia anterior.
+
+### Desenvolvimento e cobertura
+
+- **RESOLVED no escopo testado:** identidade/MFA/tenant; isolamento RLS de duas empresas; criação/sync de Order/Delivery pela UI; despacho, rota/reordenação, transições do Motoboy, cancelamento após coleta, RETURN offline com 503 injetado, recuperação/outbox, handover e recibo bilateral. Ver [REGISTROS/0142.md](REGISTROS/0142.md).
+- **RESOLVED no escopo testado:** `DeliveryProof`/filesystem-v1 autenticado; tenant proprietário lê os bytes e tenant distinto recebe 404 sem alteração do objeto. QR assinado/contrato passou na suíte unitária, mas leitura de câmera não foi testada.
+- **OPEN / P2 — cobertura Browser de integrações:** o fixture `campaign-0140-return-e2e.cjs` não registra `createMarketplaceAdminHandler`; por isso a inicialização da UI recebe 404 em `/api/admin/marketplace/orders`. O servidor real registra o handler (`server.js`); não é defeito do produto demonstrado. Completar o fixture com adapter fake para testar estados do painel sem credenciais/serviços comerciais.
+- **PARTIAL / P2 — experiência física:** nenhum aparelho Android foi usado. GPS real, permissões/sinal e leitura QR por câmera continuam sem validação física. A interface no Browser exibiu endereço/localização indisponível porque o fixture não tinha coordenadas reais; isso não é classificado como defeito.
+- **PARTIAL / P2 — modo offline:** teste Browser injeta HTTP 503 no POST de sync; a outbox foi preservada e convergiu após retry. Isso valida falha/retry de transporte, não perda real de rede por rádio nem suspensão do Android.
+- **OPEN / P3 — settlement:** liquidação financeira continua funcionalidade não implementada e requer decisão de produto; não é regressão nem requisito para validar os fluxos testados.
+
+### Ambiente e produção
+
+- Integrações iFood/99Food/Keeta foram exercitadas por testes de contrato/adapters locais; chamadas reais/sandbox continuam pendentes. Isso não impede evolução de código com adapters fake em ambiente de desenvolvimento.
+- TLS público, SMTP comercial, RPO/RTO, deployment definitivo e rotina de backup de produção não foram avaliados nesta campanha e **não bloqueiam correções/desenvolvimento local**. São gates para implantação/uso operacional futuro.
+- Pós-testes foi visto no `rotamoto_e2e` o schema `campaign0112_6017eee712694ccc98084ce3da5da803`. A suíte de disponibilidade informou que seu schema temporário foi removido; como não foi feito inventário de schemas antes da campanha, a origem do schema 0112 não pode ser atribuída. Não foi lido, alterado nem removido. Investigar somente por leitura antes de qualquer limpeza futura.
+
+## Atualização — Campanha 0135
