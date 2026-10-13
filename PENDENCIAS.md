@@ -1,3 +1,19 @@
+## Consolidação vigente — Campanha 0143 (2026-10-13)
+
+Esta consolidação atualiza somente pedidos/integrations com evidência da Campanha 0143. A matriz 0141 abaixo permanece como fotografia íntegra dos demais grupos e só é supersedida onde esta seção cita o mesmo assunto.
+
+**Contagem 0143 (5 itens): RESOLVED 2 · PARTIAL 0 · OPEN 1 · BLOCKED 2.**
+
+| ID | Status / prioridade | Item e evidência | Dependência / próximo passo |
+|---|---|---|---|
+| 0143-R1 | **RESOLVED / P2** | Significado de “marketplace” confirmado no código: subsistema técnico para plataformas externas; não existe checkout, catálogo comercial ou marketplace próprio. `CONTRACT.md`, `backend/integrations/*`, `server.js` e UI confirmam fronteiras. | Manter nome e fronteira documentados; não criar produto próprio por inferência. |
+| 0143-R2 | **RESOLVED / P2** | Integração iFood/Keeta atual: webhook/poll → inbox idempotente → `Order` em `domain_records`/`marketplace_order_versions` → comandos autenticados por tenant/permissão/CSRF. Testes unitários, PG E2E e Browser autenticado exercitaram listagem, adapter simulado e comando. 0041 continua documentada como APPLIED pelos registros anteriores; esta campanha não acessou o banco oficial. | Manter regressões, RLS e idempotência em mudanças futuras. |
+| 0143-O1 | **OPEN / P1 de desenvolvimento** | A gestão externa é apresentada em “Pedidos de marketplace” dentro de Integrações, enquanto a lista principal usa IndexedDB/sync. O runtime cria o Order canônico mas não emite evento correspondente em `sync_outbox`, que abastece o sync. A chegada também não cria `Delivery`; por si só isso é correto para fulfillment da plataforma, mas deixa o fluxo de entrega própria sem decisão/projeção integrada. Não é um checkout ausente: é lacuna da unificação solicitada. | Adicionar publicação canônica idempotente e UI sem duplicações; definir payload mínimo/privacy e autoridade do estado; especificar como fulfillment `self-delivery` habilita Delivery do fluxo existente sem interferir em `platform delivery`. Cobrir replay, ordem, RLS, navegador e PG E2E antes de concluir. |
+| 0143-B1 | **BLOCKED / P1 externo** | Homologação real não ocorreu: adapters usam fixtures. iFood/Keeta dependem de sandbox/credenciais autorizados; 99Food não tem contrato/API/onboarding oficial disponível nos registros/código. | Homologar cada provider separadamente quando houver acesso/documentação oficiais. Não bloquear implementação local de outbox/visualização por TLS, SMTP ou infraestrutura de produção. |
+| 0143-B2 | **BLOCKED / P2 de teste** | `test:marketplace-worker-postgres` recusou antes de conectar, faltando URLs autenticadas de roles dedicados do worker/resolver. | Disponibilizar as credenciais/roles já aprovadas de E2E ou registrar que o teste não é viável; não relaxar guard/role. |
+
+**Riscos prioritários:** a lista operacional do Restaurante ainda não agrega o Order externo e não há prova de transição externa→fluxo canônico de entrega própria. Não atribuir automaticamente driver; manter fulfillment pela plataforma separado. A homologação comercial segue sem evidência. Resultado desta campanha: **PARTIAL**; ver [REGISTROS/0143.md](REGISTROS/0143.md). A campanha posterior não foi iniciada.
+
 ## Consolidação vigente — Campanha 0141 (2026-10-13)
 
 Esta matriz consolida o estado atual comprovável. Checkboxes antigos abaixo são fotografias das campanhas que os produziram; não devem ser lidos como estado atual quando registros posteriores os supersedem. Código e suítes foram inspecionados estaticamente nesta campanha; não foram executados testes que pudessem escrever em banco/dados.
