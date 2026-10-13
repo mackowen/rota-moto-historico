@@ -1,3 +1,22 @@
+## Consolidação vigente — Campanha 0145 (2026-10-13)
+
+Esta atualização supersede somente as evidências/itens de Orders externos, sua projeção de Delivery/QR e sync que foram reexaminados em 0145. As demais matrizes e registros permanecem preservados.
+
+**Contagem 0145 (8 itens): RESOLVED 3 · PARTIAL 1 · OPEN 2 · BLOCKED 2.**
+
+| ID | Status / prioridade | Item e evidência | Dependência / próximo passo |
+|---|---|---|---|
+| 0145-R1 | **RESOLVED / P1** | `marketplace-runtime` só aceita atualizar Order/cursor quando `occurredAt` é estritamente posterior; teste PostgreSQL comprovou que evento iFood CANCELLED empatado/antigo não reverte `PLACED`, enquanto evento posterior atualiza e publica uma vez. | Manter testes de precedência; validar sequências/timestamps específicos se contratos oficiais documentarem outro sinal confiável. Empate sem sequência permanece sem avanço até evento/reconciliação posterior. |
+| 0145-R2 | **RESOLVED / P1** | Inicialização do Restaurante não sintetiza Delivery para Order externo desconhecido; sync não cria Delivery nessa condição e QR exige Delivery local + `fulfillment: merchant`. Browser verificou IndexedDB com zero Delivery associada e nenhum QR na linha iFood. Corrige a alegação não demonstrada do runner 0144. | Preservar Deliveries preexistentes; se houver resíduos locais históricos, não apagá-los sem decisão/migração segura. |
+| 0145-R3 | **RESOLVED / P2 (sintético)** | Browser manteve duas Orders locais na lista durante offline simulado, reconectou sem multiplicar e recuperou um 503 deliberado no pull/retry. | Validar interrupção de rádio/suspensão Android e reenvio de uma nova operação local pendente com perfil persistente. |
+| 0145-P1 | **PARTIAL / P1** | Sync/cache da lista remota passa Browser; a retransmissão de uma alteração local ainda pendente após offline/503 e reinício do navegador não foi executada neste E2E. | Adicionar alteração sintética permitida no fixture, verificar IndexedDB/outbox, ACK, retry e reinício sem resíduo no banco. |
+| 0145-O1 | **OPEN / P1** | Ordenação igual/antiga foi testada sequencialmente; nenhum E2E fez duas sessões/worker processarem eventos do mesmo Order em paralelo ou caiu/reiniciou worker no ponto de concorrência. A query bloqueia a linha de `marketplace_order_versions` com `FOR UPDATE`. | E2E com dois workers dedicados, timestamps invertidos, atraso de adapter, timeout e crash/restart; validar uma projeção/cursor/outbox final. |
+| 0145-O2 | **OPEN / P1** | A projeção de CANCELLED mais recente foi testada sinteticamente. Matriz de cancelamento de Order por iFood/Keeta antes/depois da coleta e interação com custódia/RETURN não foi comprovada por sandbox nesta campanha. | Testar apenas transições e comandos documentados em adapters fake determinísticos; homologar separadamente quando houver sandbox autorizado; nunca converter plataforma-delivery em Delivery própria automaticamente. |
+| 0145-B1 | **BLOCKED / P2 (infra de teste)** | `npm run test:marketplace-worker-postgres` falhou no guard antes da conexão: `E2E_PROVIDER_WORKER_DATABASE_URL` não fornecida como role dedicada. | Disponibilizar URL/role E2E dedicada já autorizada; não substituir por `rotamoto_app` nem relaxar o guard. |
+| 0145-B2 | **BLOCKED / P1 (externo)** | Nenhum provider comercial foi contatado. iFood/Keeta requerem sandbox/credenciais autorizados; 99Food continua sem contrato/API completa e onboarding registrado em 0144. | Obter contrato e credenciais oficiais e homologar por provider. Não inventar endpoint/evento nem bloquear o desenvolvimento local. |
+
+**Resultado:** PARTIAL, sem defeito crítico restante reproduzido após correções. A campanha não acessou `rotamoto` e não executou migration; 0041 continua APPLIED conforme [REGISTROS/0140.md](REGISTROS/0140.md), sem revalidação do ledger oficial. Ver [REGISTROS/0145.md](REGISTROS/0145.md). Não iniciar Campanha 0146.
+
 ## Consolidação vigente — Campanha 0143 (2026-10-13)
 
 Esta consolidação atualiza somente pedidos/integrations com evidência da Campanha 0143. A matriz 0141 abaixo permanece como fotografia íntegra dos demais grupos e só é supersedida onde esta seção cita o mesmo assunto.

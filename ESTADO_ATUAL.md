@@ -1,3 +1,21 @@
+## Estado vigente — Campanha 0145: robustez dos pedidos externos (2026-10-13)
+
+**Resultado: PARTIAL.** Corrigidos dois defeitos comprovados: eventos externos empatados no timestamp não substituem arbitrariamente a projeção; Orders externos com fulfillment desconhecido não geram Delivery/QR local. A auditoria corrige uma lacuna na evidência da 0144: seu runner consultava QR sem escopar a linha e não detectou o botão de QR indevido.
+
+- **PASS — ordenação testada:** evento sintético mais antigo ou empatado não reverte `PLACED`; cancelamento iFood estritamente mais novo é projetado e publicado uma vez na outbox. Não existe sequência monotônica provider-neutral comprovada para desempate; empate permanece sem promoção automática.
+- **PASS — separação comercial/operacional:** canonicalização e sync deixam Order externo separado de Delivery enquanto o fulfillment for desconhecido; QR exige Delivery local e `fulfillment: merchant`. Orders próprios continuam com a projeção habitual. Browser confirmou zero Delivery associada no IndexedDB, nenhuma ação de QR no Order externo e duas Orders (própria + iFood) na lista.
+- **PASS — recuperação sintética:** Browser/CDP manteve a lista offline; reconexão/replay preservou duas linhas; 503 único injetado em `/api/sync/pull` foi recuperado sem duplicação. Mobile 390 px: overflow 0. Isso não representa rádio/suspensão Android nem reenvio Browser de uma nova mutação local pendente.
+- **PASS — suites:** `npm test` nos dois apps; Marketplace runtime PostgreSQL em `rotamoto_e2e`; logística PostgreSQL rollback; tenant RLS; Browser E2E final. RETURN/custódia permaneceu coberto pelas regressões unitárias existentes, sem repetir o fluxo bilateral completo nesta campanha.
+- **BLOCKED — worker PostgreSQL:** `test:marketplace-worker-postgres` recusado antes da conexão por falta de `E2E_PROVIDER_WORKER_DATABASE_URL` dedicada. Nenhum fallback foi usado.
+- **OPEN / P1 — concorrência:** dois workers/sessões com eventos fora de ordem e crash/restart durante processamento precisam de E2E concorrente; o teste de ordenação 0145 foi sequencial. A projeção segue protegida por `FOR UPDATE`.
+- **OPEN / P1 — cancelamento externo:** testar cancelamentos iFood/Keeta antes e depois da coleta com estados e transições documentados, distinguindo fulfillment da plataforma e entrega própria; não houve homologação comercial.
+- **PARTIAL / P1 — sync offline:** retry e retenção da lista remota passaram; retransmissão Browser de uma alteração local pendente após offline/503 e reinício continua sem prova nesta campanha.
+- **Limite externo:** iFood/Keeta não foram chamados em sandbox comercial; 99Food permanece bloqueada por contrato/onboarding/credenciais, conforme 0144.
+- **Banco:** `rotamoto` não foi acessado/modificado; nenhuma migration foi executada. Migration 0041 continua **APPLIED** segundo evidência documentada em [REGISTROS/0140.md](REGISTROS/0140.md), não reconferida em 0145. Escritas E2E foram restritas a fixtures transacionais em `rotamoto_e2e`.
+- **Versionamento:** Restaurante branch `codex/setup-workflow`, commit local `7cb1d8a94ee2258185060b75479d2da109ab620b`, sem push; Motoboy sem alteração; Browser QA somente runner/evidência local, sem commit/push. Histórico publica esta consolidação somente na `codex/f9-browser-e2e-0057`.
+
+Evidência Browser: `browser-tests/evidencias/campanhas/0145/external-order-resilience-3267787e-e63a-4dee-9e76-b775476a127e/`. Detalhes, limitações e sequência em [REGISTROS/0145.md](REGISTROS/0145.md) e [RESUMOS/0145.md](RESUMOS/0145.md). Não iniciar Campanha 0146.
+
 ## Estado vigente — Campanha 0144: pedidos unificados e integrações (2026-10-13)
 
 **Resultado geral: PARTIAL.** A lacuna funcional da Campanha 0143 foi corrigida: Orders externos iFood/Keeta são publicados na outbox canônica e sincronizados à lista principal do Restaurante. Browser E2E autenticado em `rotamoto_e2e` confirmou um pedido próprio e um externo na mesma lista, origem/status visíveis e replay sem duplicação. Fulfillment desconhecido não cria Delivery/QR nem atribui motoboy. Ajustes passaram em 390 px sem overflow.
