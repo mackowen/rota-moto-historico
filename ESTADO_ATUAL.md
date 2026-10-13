@@ -1,4 +1,18 @@
-## Gestão unificada de pedidos — Campanha 0143 (2026-10-13)
+## Estado vigente — Campanha 0144: pedidos unificados e integrações (2026-10-13)
+
+**Resultado geral: PARTIAL.** A lacuna funcional da Campanha 0143 foi corrigida: Orders externos iFood/Keeta são publicados na outbox canônica e sincronizados à lista principal do Restaurante. Browser E2E autenticado em `rotamoto_e2e` confirmou um pedido próprio e um externo na mesma lista, origem/status visíveis e replay sem duplicação. Fulfillment desconhecido não cria Delivery/QR nem atribui motoboy. Ajustes passaram em 390 px sem overflow.
+
+- **RESOLVED no escopo:** publicação transacional/idempotente da Order; reconciliação local por ID canônico ou identidade provider + externalId; proteção tenant/PII; estado externo e interno exibidos separadamente.
+- **RESOLVED no escopo:** interface distingue origem local, conexões/diagnóstico, parceiros logísticos/entrega própria e simulações do Laboratório.
+- **BLOCKED / P1 — 99Food real:** o portal público documenta capacidades gerais de pedidos, webhooks e sandbox, mas contrato técnico e credenciais dependem de onboarding/certificação; nenhum endpoint ou payload foi presumido.
+- **OPEN / P2 — homologação iFood/Keeta:** validar cancelamentos, eventos fora de ordem e fulfillment real em sandboxes autorizados.
+- **Testes:** `npm test` Restaurante; runtime/worker PostgreSQL Marketplace com roles configuradas; tenant RLS E2E; Browser Chromium/CDP; `git diff --check`: PASS. Motoboy permaneceu limpo.
+- **Ambiente:** somente `rotamoto_e2e` recebeu fixtures transacionais. PostgreSQL oficial `rotamoto`, migrations e deploy não foram usados.
+- **Versionamento:** Restaurante commit local `fe67448f5f92ac5bffaed2158a30c5e966b3cb67`, sem push; Motoboy sem alterações; Browser QA com runner/evidências locais sem commit; histórico limitado aos documentos desta campanha e push autorizado.
+
+Ver [REGISTROS/0144.md](REGISTROS/0144.md) e [RESUMOS/0144.md](RESUMOS/0144.md). Próximo trabalho sugerido: onboarding/homologação 99Food quando houver acesso oficial, sem iniciar 0145.
+
+## Histórico — Gestão unificada de pedidos — Campanha 0143 (2026-10-13)
 
 - **Resultado PARTIAL.** RotaMoto não é um marketplace comercial: Order próprio é local-first; iFood/Keeta usam adapters, inbox/outbox de comandos, canonical Order e a área Integrações; 99Food segue bloqueada sem contrato/API e onboarding oficial.
 - **Lacuna aberta P1:** `marketplace-runtime` grava e projeta Orders externos e a UI admin os mostra em “Pedidos de marketplace”, mas o runtime não publica evento na `sync_outbox`; a lista local principal depende de sync e não foi integrada. Não há criação de Delivery na ingestão. A próxima correção precisa preservar decisão/estado da plataforma e separar fulfillment próprio de fulfillment da plataforma, evitando persistir PII desnecessária ou atribuir motorista automaticamente.

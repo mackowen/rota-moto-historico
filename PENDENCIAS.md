@@ -776,6 +776,7 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
 - [ ] Revisão estética final pelo operador; capturas representativas em `browser-tests/evidencias/campanhas/0140/revisao/`.
 
 Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
+
 ## Atualização vigente — Campanha 0142 (2026-10-13)
 
 **Auditoria funcional integrada: PARTIAL; defeitos de produto confirmados: 0.** Os fluxos testados passaram em suítes automatizadas e Browser E2E no banco isolado. Os limites de hardware e de homologação externa permanecem, sem serem classificados como falhas de aplicação. Esta atualização complementa a matriz 0141 abaixo, que permanece intacta como fotografia anterior.
@@ -794,5 +795,16 @@ Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
 - Integrações iFood/99Food/Keeta foram exercitadas por testes de contrato/adapters locais; chamadas reais/sandbox continuam pendentes. Isso não impede evolução de código com adapters fake em ambiente de desenvolvimento.
 - TLS público, SMTP comercial, RPO/RTO, deployment definitivo e rotina de backup de produção não foram avaliados nesta campanha e **não bloqueiam correções/desenvolvimento local**. São gates para implantação/uso operacional futuro.
 - Pós-testes foi visto no `rotamoto_e2e` o schema `campaign0112_6017eee712694ccc98084ce3da5da803`. A suíte de disponibilidade informou que seu schema temporário foi removido; como não foi feito inventário de schemas antes da campanha, a origem do schema 0112 não pode ser atribuída. Não foi lido, alterado nem removido. Investigar somente por leitura antes de qualquer limpeza futura.
+
+## Campanha 0144 — pedidos unificados e integrações (2026-10-13)
+
+- [x] **RESOLVED — publicação de Orders externos:** iFood/Keeta publicam `CANONICAL_RECORD_UPSERTED` na outbox na mesma transação da projeção; Restaurante puxa e exibe Order na lista principal. Browser comprovou um pedido próprio e um externo juntos; replay manteve duas linhas sem duplicar. Origem e estado do provider estão visíveis.
+- [x] **RESOLVED — fulfillment sem atribuição automática:** pedido externo com modo desconhecido não cria `Delivery`, QR ou atribuição de motoboy; detalhe exige confirmação do modo. Entrega própria segue o fluxo de Logistics e comandos externos seguem em Integrações.
+- [x] **RESOLVED — fronteiras da interface:** origem local em Ajustes; configuração/conexão/diagnóstico em Integrações; parceiros na seção Logística; dados sintéticos no Laboratório. Browser mobile 390 px sem overflow.
+- [ ] **BLOCKED / P1 — adapter 99Food:** o portal público descreve API de pedidos, webhooks e sandbox, mas contrato técnico, credenciais e certificação requerem onboarding. Não inventar endpoints/payloads. Dependência: acesso autorizado do parceiro e homologação externa. [Portal 99Food](https://developer-food.99app.com/).
+- [ ] **OPEN / P2 — homologação externa iFood/Keeta:** confirmar efeitos reais de cancelamento, estados fora de ordem e fulfillment em sandboxes autorizados; esta campanha usa adapters/fakes determinísticos, sem chamadas comerciais.
+- [x] **RESOLVED — regressão de teste documental:** `test-ifood.js` passou a verificar as mensagens atuais de capability pública e isolamento do Laboratório.
+
+Ver [REGISTROS/0144.md](REGISTROS/0144.md) e [RESUMOS/0144.md](RESUMOS/0144.md). Nenhuma migration, alteração no banco oficial ou deployment.
 
 ## Atualização — Campanha 0135
