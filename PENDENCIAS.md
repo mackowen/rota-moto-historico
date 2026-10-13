@@ -1,3 +1,20 @@
+## Atualização — Campanha 0147 (2026-10-13)
+
+Esta seção atualiza cancelamentos e devoluções com os testes locais da 0147; os registros e itens anteriores permanecem preservados.
+
+**Contagem 0147 (6 itens): RESOLVED 4 · PARTIAL 1 · OPEN 0 · BLOCKED 1.**
+
+| ID | Status / prioridade | Item e evidência | Dependência / próximo passo |
+|---|---|---|---|
+| 0147-R1 | **RESOLVED / P1** | Delivery própria com coleta e motorista confirmados é cancelada e ligada a uma única Delivery `RETURN` na mesma transação; replay e nova solicitação reutilizam a tarefa. PostgreSQL e Browser passaram. | Preservar idempotência; confirmar recebimento no Restaurante por comando autorizado ao concluir o fluxo. |
+| 0147-R2 | **RESOLVED / P1** | Cancelamento antes da atribuição/coleta não cria retorno; após atribuição remove somente sua parada. Duas entregas pares mantêm sequência, e RETURN fica por último. | Manter matriz como regressão nos testes de logística. |
+| 0147-R3 | **RESOLVED / P1** | Cancelamento comercial de Order externo sem Delivery não inventa Delivery/QR/motorista; ação operacional só aparece para `fulfillment=merchant` e Delivery própria existente, com permissão. | Preservar separação Order/Delivery e `assertInternal()` para fulfillment da plataforma. |
+| 0147-R4 | **RESOLVED / P2** | Browser mostrou/executou RETURN no Motoboy e sincronizou eventos; projeção agora conserva `Order.number` externo no cartão. | Manter teste de projeção e Browser bilateral. |
+| 0147-P1 | **PARTIAL / P2** | Cancelamento pós-coleta foi exercitado com Order iFood sintético já `CANCELLED`; não cobre webhook/comando de cancelamento em sandbox, corrida de usuários reais nem comprovação física no aparelho. | Homologar somente com documentação e sandbox oficial autorizados; validar em aparelho quando disponível. Não inferir regra oficial de provider. |
+| 0147-B1 | **BLOCKED / P1 externo** | Credenciais/sandbox comercial de iFood/Keeta e chamadas externas autorizadas não estavam disponíveis no escopo; nenhum provider real foi contatado. | Obter ambiente e credenciais oficiais; não presumir endpoint, regra ou homologação. |
+
+Detalhes e evidências: [REGISTROS/0147.md](REGISTROS/0147.md). Migration 0041 permanece APPLIED conforme documentação da 0140; esta campanha não acessou `rotamoto` nem executou migrations. Não iniciar Campanha 0148.
+
 ## Consolidação vigente — Campanha 0146 (2026-10-13)
 
 Esta seção atualiza os itens de worker, concorrência, restart e outbox reexaminados em 0146. As matrizes anteriores permanecem preservadas; status antigo só é supersedido nos itens identificados abaixo.

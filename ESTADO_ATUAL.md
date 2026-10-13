@@ -1,3 +1,9 @@
+## Estado vigente — Campanha 0147: cancelamentos e devoluções (2026-10-13)
+
+**Resultado: PARTIAL.** Os cenários locais de cancelamento, custódia, rota e sincronização passaram em testes unitários, PostgreSQL E2E e Chromium/CDP. Cancelar Delivery própria após coleta cria um único RETURN na mesma transação, mantém o motorista custodiante e acrescenta a devolução depois das demais paradas; cancelamentos antes da coleta não criam RETURN. Cancelamento comercial externo sem Delivery própria não fabrica Delivery, QR, atribuição ou devolução. Restaurante e Motoboy apresentam estados distintos; Motoboy executou o ciclo e ficou `ARRIVED`/`AWAITING_RESTAURANT_RECEIPT`, sem comprovante fictício.
+
+Browser injetou um HTTP 503 no sync e observou retry com resposta 200; mobile 390×844 não teve overflow horizontal. Adapters/credenciais de iFood e Keeta reais, offline físico e confirmação física pelo Restaurante não foram exercitados. Não houve acesso ao banco `rotamoto`, migration, DDL ou deploy; 0041 continua documentada como **APPLIED** em [REGISTROS/0140.md](REGISTROS/0140.md). Ver [REGISTROS/0147.md](REGISTROS/0147.md). Não iniciar Campanha 0148.
+
 ## Estado vigente — Campanha 0146: resiliência e concorrência (2026-10-13)
 
 **Resultado geral: PARTIAL.** Foi corrigido um defeito de sync no restart: a normalização inicial do Restaurante usava `put()` e podia transformar registros canônicos do servidor em alterações locais, reabrindo a publicação de Orders já sincronizadas. O bootstrap agora preserva origem, versão e estado canônico. Browser comprovou zero replay de Orders canônicas após reload.
