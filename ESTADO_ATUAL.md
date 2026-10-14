@@ -1,4 +1,18 @@
-## Estado atual — Campanha 0163: Android, PWA e acessibilidade (2026-10-14)
+## Estado atual — Campanha 0164: performance, concorrência e PostgreSQL (2026-10-14)
+
+**Resultado: PARTIAL.** Benchmarks sintéticos autenticados até dez clientes e regressões PostgreSQL/worker passaram em seus escopos. Não houve ganho de produto atribuível a uma alteração funcional; portanto, nenhuma otimização de aplicação/schema foi aplicada. O PostgreSQL oficial `rotamoto` não foi acessado.
+
+- API E2E em `rotamoto_e2e`: duas fases de 57 requisições, dez sessões independentes em dois tenants e tiers 1/3/5/10; zero erros. No tier 10, p95 179,09 ms e 160,81 ms na repetição aquecida. Perfil, dataset e percentis em [REGISTROS/0164.md](REGISTROS/0164.md) e `../browser-tests/evidencias/campanhas/0164/a092c819-438d-4455-8088-e22d85698205/postgres-api-benchmark.json`. Rodadas curtas não provam carga sustentada.
+- Plano PostgreSQL usou `domain_records_tenant_entity_updated_idx`, execução ~1 ms e estimativa 1/125 para tenant recém-criado; possível efeito de estatística pré-fixture permanece hipótese. Sem `ANALYZE`, DDL, migrations ou alteração de parâmetros.
+- Worker/limiter concorrentes, tenant/RLS e suites completas dos dois apps passaram. Fixtures sintéticas manifestadas ficaram `RETAINED`, incluindo auditoria append-only; nenhum resíduo ou schema foi removido.
+- Chromium/CDP: quatro viewports nos dois apps, sem overflow; sem erros de console ou HTTP inesperados. O bloqueio de Service Worker da 0163 foi reproduzido como falha de cabeçalho do runner (`no-store` em assets) e corrigido no Browser QA. Upgrade de ambos os workers preservou entrada sintética pendente em IndexedDB após reabertura. Não representa reconexão real com backend.
+- IndexedDB bruto: 1.000 registros×5 em database novo no perfil Chromium isolado; leituras/escritas mensuradas, sem equivalência à lógica de outbox. UI com lista longa autenticada, estabilidade de memória, locks sob carga sustentada e offline real permanecem sem comprovação.
+- Restaurante `codex/setup-workflow`: commit local `f3165f1cd113de10a10fb4817e728ae84fbabc1c` (benchmark/manifestos), sem push. Motoboy sem alteração, HEAD `baf00f788edf08bf7f555fc155068a4c5b24ba4f`. Browser QA sem commit/push. Histórico autorizado será publicado somente com os cinco documentos.
+- Gates: `CONCURRENCY_10_CLIENTS`, `TENANT_ISOLATION`, `SYNC_IDEMPOTENCY` (cenários executados), `PWA_WORKER_ACTIVATION` e `PWA_UPGRADE_RECOVERY` (fixture sintética) PASS; API/PostgreSQL performance, reconexão offline, IndexedDB, UI, memória, regressão cross-app e integridade global PARTIAL.
+
+Não declarar capacidade de produção. Próximas medições devem ampliar duração/rodadas e incluir locks, operações de escrita, sync/reconexão e interface autenticada com dados sintéticos. A Campanha 0165 não foi iniciada.
+
+## Snapshot anterior — Campanha 0163: Android, PWA e acessibilidade (2026-10-14)
 
 **Resultado: PARTIAL.** Corrigida a ausência de manifesto PWA no Restaurante; suites completas Restaurante/Motoboy e isolamento PostgreSQL E2E passaram. Chromium/CDP percorreu quatro viewports e navegação local; o pedido foi criado pela UI e ficou apenas no IndexedDB local. A atualização persistente dos Service Workers ficou BLOCKED, o ciclo bilateral completo não foi alcançado e não havia dispositivo Android conectado. Não há declaração WCAG integral nem prontidão de produção.
 

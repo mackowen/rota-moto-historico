@@ -1,6 +1,24 @@
-## Pendências vigentes — consolidação da Campanha 0163 (2026-10-14)
+## Pendências vigentes — consolidação da Campanha 0164 (2026-10-14)
 
-Esta seção representa o estado atual mobile/PWA/acessibilidade. As consolidações 0162 e anteriores permanecem preservadas abaixo como snapshots históricos.
+Esta seção substitui apenas a fotografia vigente de performance; os snapshots e registros anteriores permanecem abaixo. Resultados de carga são sintéticos e curtos, restritos ao Termux e `rotamoto_e2e`.
+
+| ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
+|---|---|---|---|
+| 0164-API / campanhas 0155–0156 | API autenticada, pool e SQL; P1; **PARTIAL** | 1/3/5/10 clientes, 10 sessões em dois tenants, 114/114 respostas; tier 10 p95 179,09/160,81 ms (segunda fase aquecida). Só três ondas por tier e mesmo processo local. | Executar duração/rodadas maiores em condições controladas; medir SLOs aprovados e separar custo do servidor do cliente. Não declarar capacidade sustentada. |
+| 0164-PG-PLAN / campanhas 0155–0156 | Planejamento `domain_records`; P2; **PARTIAL** | Índice existente usado; 1 linha estimada/125 reais para tenants recém-criados; execução ~1 ms. Estatística `last_analyze` antecede a fixture; causalidade provável, sem comprovação isolada. | Comparar tenant estabilizado e fixture recém-criada, com método seguro e aprovado em E2E; registrar estatísticas/planos e locks sem `ANALYZE` indiscriminado ou DDL. |
+| 0164-PG-LOCKS / 0164 | Locks/deadlocks durante carga; P2; **OPEN** | Workers concorrentes, leases/fencing e recuperação passaram; o benchmark API não mediu waits/deadlocks durante as ondas. | Instrumentar amostra read-only correlacionada por PID/application_name em benchmark de duração maior; preservar RLS e não tocar banco oficial. |
+| 0164-WORKER / 0146, 0154, 0164 | Claims, interrupção e resultado incerto; P1; **RESOLVED no cenário E2E** | Dois workers/sessões, corrida de claim, fencing, processo interrompido, `UNKNOWN_OUTCOME` sem replay perigoso e limiter 99Food compartilhado passaram. Manifestos ficam retidos. | Repetir quando runtime/limiter mudar; não extrapolar teste sintético à homologação comercial. |
+| 0164-SYNC / apps | Outbox, replay e reconexão real; P1; **PARTIAL** | Suites de sync/idempotência e testes worker passaram; não houve rádio/rede desconectada e reconciliação end-to-end dos dois apps nesta campanha. | Exercitar offline/503/reabertura e ACK perdido com sessão autenticada cross-app, sem pré-semeadura da operação e com fixture manifestada. |
+| 0164-IDB / apps e Browser | Leitura/escrita IndexedDB; P2; **PARTIAL** | Microbenchmark Chromium isolado: 1.000×5 objetos genéricos de 256 bytes; escrita p50 1,38–1,49 s e leitura `getAll` p50 92–108 ms. Não executou caminho da outbox da aplicação. | Medir wrappers reais, lotes, outbox e custo de renderização com dataset sintético autenticado; comparar navegador/dispositivo antes de otimizar. |
+| 0164-UI / apps | Lista, filtro, mapa e memória; P2; **PARTIAL** | CDP confirmou navegação e quatro viewports sem overflow; carga inicial única Restaurante ~2,06 s, Motoboy ~1,91 s. Backend respondeu 401/503 de fixture; sem lista longa autenticada/mapa com rota. RSS/heap cresceram no curto harness; sem inferir leak. | Medir sessão local autorizada, listas extensas, mapas com dados e memória em duração maior; separar custo Chromium/Termux de regressão de aplicação. |
+| 0164-PWA / 0163–0164 | Ativação/upgrade e outbox; P2; **RESOLVED no teste isolado** | Com harness estático `no-cache`, workers v42→v43 e v43.44→v43.45 ativaram; outbox sintética sobreviveu a reabertura. Causa antiga foi `no-store` em resposta estática do runner. | Manter teste de cache isolado; validar reconexão/ACK do backend e operação pendente real antes de afirmar recuperação offline completa. |
+| 0164-FIXTURE / 0150–0164 | Auditoria e retenção de fixtures; P2; **RESOLVED no escopo** | Novos fixtures E2E 0164 possuem manifests `RETAINED`; rótulo herdado de um manifesto desta execução foi corrigido sem alterar linhas. Todos os resíduos anteriores foram preservados. | Inventariar por manifestos e escopo autorizado; nenhuma elegibilidade de limpeza foi inferida. |
+
+**Contagem desta seção:** 9 itens — RESOLVED 3 (limitados a cenários executados) · PARTIAL 5 · OPEN 1 · BLOCKED 0 · DEFERRED 0. Resultado global PARTIAL; sem prontidão de produção. Evidências: [REGISTROS/0164.md](REGISTROS/0164.md), [RESUMOS/0164.md](RESUMOS/0164.md). Não iniciar Campanha 0165.
+
+## Snapshot anterior — pendências vigentes da Campanha 0163 (2026-10-14)
+
+Este snapshot representa a fotografia mobile/PWA/acessibilidade da Campanha 0163. O estado vigente é a seção 0164 acima; as consolidações anteriores permanecem preservadas abaixo.
 
 | ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
 |---|---|---|---|
