@@ -1,4 +1,8 @@
-## Estado atual — Campanha 0168: backup e disaster recovery (2026-10-14)
+## Estado atual — Campanha 0169: observabilidade (2026-10-14)
+
+**Resultado PARTIAL.** A API compartilhada adicionou métricas agregadas em memória para API/sync, sanitização de logs e máscara de IDs em caminhos. Liveness/readiness e correlação permanecem; readiness verifica o pool usado pelo servidor. Suites completas dos apps e testes HTTP/unidade passaram. Falha PostgreSQL real, filas/workers e alertas duráveis não foram exercitados. Ver [REGISTROS/0169.md](REGISTROS/0169.md).
+
+## Estado anterior — Campanha 0168: backup e disaster recovery (2026-10-14)
 
 **Resultado PARTIAL.** O backup versionado passou a incluir IDs/checksums do ledger no manifesto autenticado; inventário identifica cobertura antiga/divergente e ledger alterado durante captura bloqueia a publicação do conjunto. Testes usam fake dump/cliente e chave temporária. O recovery set real conhecido até 0041 não foi aberto; 0044 é a versão atual versionada. Sem chave/artefato autorizado não houve restore real, cópia independente, retenção/agendamento ou prova RPO/RTO. Banco oficial não acessado. Ver [REGISTROS/0168.md](REGISTROS/0168.md).
 

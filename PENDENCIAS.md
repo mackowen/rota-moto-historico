@@ -1,4 +1,13 @@
-## Atualização vigente — Campanha 0168 (2026-10-14)
+## Atualização vigente — Campanha 0169 (2026-10-14)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
+|---|---|---|---|
+| 0169-WORKER / 0150, 0153–0169 | Observabilidade de workers/filas; P1 operação; **OPEN** | Logs agregados e endpoint de API não exibem profundidade/lease de fila; nenhum evento de tenant exposto. | Projetar contadores agregados mínimos e teste de worker ocupado/parado, sem IDs ou payloads tenant-scoped. |
+| 0169-ALERTS / 0158–0169 | Alertas duráveis e PostgreSQL outage; P1 operação; **PARTIAL** | Runbook local documentado; readiness reporta 503, mas sem injeção de outage e sem destino de alerta autorizado. | Definir destino/limiares com operador e testar indisponibilidade em E2E isolado. |
+
+Estado anterior preservado abaixo; evidências em [REGISTROS/0169.md](REGISTROS/0169.md).
+
+## Atualização histórica — Campanha 0168 (2026-10-14)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
 |---|---|---|---|
