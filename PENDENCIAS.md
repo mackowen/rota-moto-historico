@@ -1,3 +1,36 @@
+## Consolidação vigente — Campanha 0151 (2026-10-14)
+
+Esta é a matriz autoritativa das pendências ainda relevantes após a auditoria Full Stack. As entradas cronológicas abaixo permanecem preservadas como evidência da campanha que as produziu; estados explicitamente supersedidos nesta matriz não devem ser tratados como pendência atual.
+
+**Contagem: 20 itens — RESOLVED 8 · PARTIAL 5 · BLOCKED 3 · DEFERRED 4 · OPEN 0.** Severidade/prioridade indica consequência e ordem de trabalho; `DEFERRED` identifica dependência de produto ou prontidão de produção, sem bloquear desenvolvimento local.
+
+| ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / campanha sugerida |
+|---|---|---|---|
+| 0151-R1 / Registro 0078, migration 0019 | PostgreSQL `logistics_providers.secret_ref`; P1; **RESOLVED** | Teste `test:logistics-secret-privileges` em `rotamoto_e2e`: runtime sem SELECT/UPDATE na coluna; worker com ACL restrita. | Preservar teste em futuras migrations; revalidar em campanha de grants. |
+| 0151-R2 / Registros 0134, 0149, 0151 | Auth, sessão, CSRF, RBAC e tenant RLS; P1; **RESOLVED no escopo** | `npm test`, `test:e2e-tenant-isolation` e Browser negativos: 401/403/404; 46 tabelas e 37 policies FORCE. | Manter regressões ao adicionar handlers/permissions. |
+| 0151-R3 / Registros 0147–0149, 0151 | IDOR e operação RETURN cross-tenant; P1; **RESOLVED no escopo** | ID conhecido de A usado por B não revelou dados nem mudou rota/eventos; confirmação válida A teve evento único. | Adicionar testes para endpoints novos e novos tipos de operação. |
+| 0151-R4 / Registros 0126–0148 | Sync, replay, outbox, cancelamento e custódia; P1; **RESOLVED nos cenários cobertos** | Suites adversariais e Browser com concorrência/503/retry, RETURN `RETURNED/RECEIVED`, um evento. Rádio e suspensão Android não cobertos. | Regressões por mudança; considerar teste físico separado. |
+| 0151-R5 / Registros 0145–0146 | Workers, leases e idempotência; P1; **RESOLVED nos cenários E2E registrados** | Duas sessões/workers, lease/recovery/replay aparecem aprovados em 0146; a indisponibilidade anterior da 0145 foi superada. | Manter worker PostgreSQL E2E com role dedicada. |
+| 0151-R6 / Registro 0150 | Fixtures E2E conhecidas; P1; **RESOLVED quanto ao lifecycle** | Manifestos atômicos, IDs antes do commit, rollback single-session e retenção de sessões independentes; auditoria append-only preservada. | Continuar integração obrigatória dos runners; nunca inferir remoção de status terminal. |
+| 0151-R7 / Registro 0140 e histórico 0141–0150 | Migration 0041; P1; **RESOLVED documental** | 0140 documenta APPLIED com checksum e ledger 0001–0041; 0151 não acessou o oficial. | Não reaplicar; reconfirmar somente sob escopo read-only autorizado futuro. |
+| 0151-R8 / Campanha 0151 | Dependências npm; P1; **RESOLVED no snapshot** | `npm audit` reportou zero advisories nos dois lockfiles. | Repetir em atualização de dependências. |
+| 0151-P1 / Registros 0144–0147 | Integrações iFood/Keeta; P1; **PARTIAL** | Contratos/adapters sintéticos e testes locais existem; nenhuma homologação comercial/sandbox foi executada. | Credenciais, documentação e sandbox oficiais; campanha específica de provider. |
+| 0151-B1 / Registro 0144 | Integração 99Food; P1; **BLOCKED** | Contrato técnico/onboarding/credenciais autorizadas não aparecem nas evidências. | Acesso oficial do parceiro; não inventar APIs. |
+| 0151-B2 / Registros 0149–0150 | Inventário global de fixtures; P1; **BLOCKED** | `rotamoto_auditor` sem CONNECT/SELECT em `rotamoto_e2e`; migrator não tem BYPASSRLS. Inventário tenant-scoped não prova global. | Aprovação de mecanismo read-only tenant-aware; não conceder privilégios nesta matriz. |
+| 0151-P2 / Registros 0148–0150 | Resíduos legados sem IDs; P1; **PARTIAL** | Artefatos de 0148 e algumas tentativas interrompidas não preservaram identificadores completos; não foram apagados. | Procurar IDs nos artefatos existentes; manter não verificável se não houver prova de ownership. |
+| 0151-P3 / Registros 0132–0138 | Provas/mídia órfã e retenção; P1; **PARTIAL** | Leitura/upload tenant-aware e integridade foram testados; GC seguro exige referências canônicas, grace period e prova de propriedade. | Fazer dry-run/allowlist e análise de dependências antes de propor limpeza. |
+| 0151-P4 / CONTRACT.md, Registros 0075 e 0130 | IndexedDB e backup local; P2; **PARTIAL** | Persistência local funciona; backup v1 é explicitamente `plaintext-sensitive`, sem cifra aprovada; nenhum exfil foi reproduzido. | Decisão de produto/UX e modelo de proteção de dispositivo/export. |
+| 0151-D1 / Registros 0068–0078, 0138 | Deployment local/on-prem; P1 produção; **DEFERRED** | TLS/domínio/proxy/CA, SMTP, supervisão, secrets duráveis, alertas e smoke do host não fazem parte deste ambiente; readiness histórica é NO. | Planejamento de implantação autorizado; não bloqueia desenvolvimento local. |
+| 0151-D2 / Registros 0058–0069, 0138 | Backup/restore operacional; P1 produção; **DEFERRED** | Restore isolado histórico foi ensaiado, mas rotina corrente, cópia independente de chave, retenção e RPO/RTO medidos não foram validados nesta campanha. | Política e responsáveis aprovados; rehearsal em destino descartável. |
+| 0151-D3 / Registro 0057 e config runtime | Rate limit em múltiplas instâncias/proxy; P1 antes de escala; **DEFERRED** | Implementação por processo é suficiente para o harness local testado; coordenação multi-instância depende de arquitetura/topologia futura. | Definir IP confiável/storage distribuído ao planejar escala. |
+| 0151-B3 / Registros 0130–0142 | GPS, câmera/QR, OCR e impressão físicas; P2; **BLOCKED** | Chromium/CDP e corpus sintético não comprovam sensores/permissões/impressora física. | Aparelho Android e hardware disponíveis; campanha de validação física. |
+| 0151-P5 / Registros 0130–0141 | Acessibilidade WCAG integral; P2; **PARTIAL** | Responsive e fluxos selecionados passaram; não há auditoria completa de teclado, leitor de tela e contraste nos dois apps. | Campanha dedicada de acessibilidade assistiva. |
+| 0151-D4 / Registros 0074–0075 e 0141 | Settlement, analytics territorial completos e logística híbrida; P3; **DEFERRED** | Dependem de política financeira, dados de receita/custo/proveniência, SLA e contratos de providers. São capacidades futuras, não vulnerabilidades atuais. | Decisão de produto e contrato antes de implementação. |
+
+**Contagem conferida:** IDs R1–R8 (8), P1–P5 (5), B1–B3 (3), D1–D4 (4), total 20. Status: 8 RESOLVED, 5 PARTIAL, 3 BLOCKED, 4 DEFERRED.
+
+Ver evidências completas e limitações em [REGISTROS/0151.md](REGISTROS/0151.md). Não iniciar Campanha 0152.
+
 ## Atualização vigente — Campanha 0150 (2026-10-14)
 
 Esta consolidação atualiza exclusivamente lifecycle, identificação e auditoria de fixtures PostgreSQL E2E. As matrizes históricas permanecem preservadas.

@@ -1,3 +1,20 @@
+## Estado vigente — Campanha 0151: auditoria de segurança Full Stack (2026-10-14)
+
+**Resultado: PARTIAL.** Nenhuma vulnerabilidade atual foi confirmada nos cenários exercitados. Testes unitários completos, SCA, PostgreSQL E2E e Browser E2E passaram nos escopos declarados; SAST dedicado não está instalado e inventário global de fixtures antigas permanece bloqueado por ACL.
+
+- **PASS — unitários/regressões:** `npm test` completo em Restaurante e Motoboy; ambos exit code 0.
+- **PASS — SCA:** `npm audit` Restaurante e Motoboy reportaram zero advisories conhecidos para os lockfiles consultados.
+- **PASS — PostgreSQL E2E:** somente `rotamoto_e2e`: tenant isolation 46 tabelas/37 FORCE policies; isolamento de mídia; lifecycle rollback; guards e fixture manifest; least privilege de `secret_ref` e ACL do worker.
+- **PASS — Browser/CDP:** E2E bilateral autenticado em 390×844; sessão inválida/anônima 401, CSRF 403, tentativa de B em RETURN conhecida de A 404 sem dados/mutação, confirmação concorrente/replay com evento único e recuperação após 503. Manifesto final `c5bffbe9-e749-45d3-969b-6ebb273e6436` (`campaign=0151`, `RETAINED`); evidência `browser-tests/evidencias/campanhas/0151/security-fullstack-04/`. Uma execução aprovada anterior ficou `unassigned` e também foi retida.
+- **RESOLVED histórico — privilégio de segredo:** o alerta antigo `logistics_providers.secret_ref` foi mitigado pela migration 0019; o teste atual no E2E confirmou que runtime não lê nem altera `secret_ref`. Banco oficial não consultado.
+- **PARTIAL — SAST e inventário:** revisão de padrões manual; sem semgrep/trivy/eslint. Inventário global e resíduos antigos sem IDs não verificáveis; nenhuma limpeza ocorreu e fixtures independentes permanecem retidas.
+- **PARTIAL/BLOCKED de capacidade:** iFood/Keeta aguardam homologação oficial; 99Food aguarda contrato/onboarding; hardware físico e auditoria WCAG completa não foram exercitados.
+- **DEFERRED para prontidão:** mídia/backup operacional, TLS/SMTP/host, RPO/RTO, multi-instância e settlement/analytics dependem de decisões/infraestrutura futuras e não bloqueiam desenvolvimento local.
+- **Pendências:** [PENDENCIAS.md](PENDENCIAS.md), seção 0151, 20 itens: RESOLVED 8, PARTIAL 5, BLOCKED 3, DEFERRED 4.
+- **Versões:** Restaurante `7c13ba5b2d0de745b486cd274770862bf6962488`; Motoboy `ded20e37dfc9c96b472bd4e1e5d5bd2ba5b037f0`; Browser QA HEAD `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`, sem commit/push. Histórico será publicado somente em `codex/f9-browser-e2e-0057`.
+
+O banco oficial `rotamoto` não foi acessado; migration 0041 continua **APPLIED conforme documentação da Campanha 0140**, sem revalidação nesta campanha. Nenhuma migration, DDL, deploy, chamada comercial ou limpeza de fixture foi executada. Detalhes: [REGISTROS/0151.md](REGISTROS/0151.md). Não iniciar Campanha 0152.
+
 ## Estado vigente — Campanha 0150: gerenciamento seguro de fixtures E2E (2026-10-14)
 
 **Resultado: PARTIAL.** O lifecycle PostgreSQL E2E do Restaurante agora cria manifestos atômicos antes da conexão, registra tenants/usuários/sessões e entidades conhecidas sem segredos, separa IDs registrados de snapshots de banco, e inventaria somente tenants conhecidos com consultas `READ ONLY` sob RLS. `COMPLETED` só ocorre depois da verificação de rollback; commits de sessões independentes ficam `RETAINED`. O helper não apaga fixture commitada nem `audit_log`.
