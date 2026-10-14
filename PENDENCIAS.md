@@ -1274,7 +1274,7 @@ Evidências 0177: [REGISTROS/0177.md](REGISTROS/0177.md). Fixture mantida no `ro
 
 Ver [REGISTROS/0178.md](REGISTROS/0178.md). Fixtures, audit log e evidências retidos.
 
-## Atualização vigente — Campanha 0179
+## Fotografia da Campanha 0179 (histórica)
 
 - [x] **RESOLVED no cenário E2E / P1 — RETURN bilateral:** cancelamento pós-coleta com frota própria gerou RETURN no fim da rota; Motoboy registrou entrega física; Restaurante confirmou; custody `RECEIVED`; retry após 503 manteve exatamente um evento e nenhum comprovante foi inventado.
 - [ ] **OPEN / P1 — financeiro canônico:** concluir Browser/PostgreSQL com Order de valor não nulo e conferir valor, regra, taxa e Earning reconciliados nos dois apps. Regra unitária 8,40 BRL → 840 centavos passou; Orders 0177/0178 tinham amount zero.
@@ -1284,3 +1284,15 @@ Ver [REGISTROS/0178.md](REGISTROS/0178.md). Fixtures, audit log e evidências re
 - [ ] **OPEN / P1 — 0180 backup/DR:** recuperação oficial real continua fora do escopo sem acesso autorizado a artefato/chave; trabalhar apenas com fixture sintética descartável.
 
 Ver [REGISTROS/0179.md](REGISTROS/0179.md). Nenhuma fixture ou trilha de auditoria foi limpa.
+
+## Atualização vigente — Campanha 0180
+
+- [ ] **BLOCKED / P0 — recuperação atual:** recovery set validado historicamente até 0041, schema registrado em 0044; gerar/validar um conjunto vigente e restaurá-lo em PostgreSQL descartável exige acesso autorizado ao artefato/chave e ambiente descartável.
+- [ ] **OPEN / P1 — proteção externa:** confirmar cópia independente do backup e custódia separada da chave; informação de chave no Drive segue declaração não verificada e não prova cópia do conjunto.
+- [ ] **OPEN / P1 — operação de backup:** frequência/agendamento, monitoramento, retenção aprovada, RPO/RTO e runbook de acionamento não estão comprovados.
+- [ ] **OPEN / P1 — observabilidade operacional:** runtime local comprovou health/readiness e logs correlacionados; alertas persistentes, métricas de fila/worker em operação e teste de indisponibilidade DB permanecem pendentes.
+- [ ] **OPEN / P1 — integridade financeira/concorrência:** valores não nulos em fluxo Browser/PostgreSQL e disputa simultânea de aceite/atribuição.
+- [ ] **OPEN / P2 — Browser:** investigar exceção `appendChild` MapLibre/Leaflet e 403 `CSRF_INVALID` transitório no registro de instalação.
+- [ ] **OPEN / P1 — PWA:** timeout, crash/restart e upgrade do Service Worker mantendo operação offline ainda sem comprovação completa.
+
+Ver [REGISTROS/0180.md](REGISTROS/0180.md). As campanhas 0176–0180 estão registradas sem afirmar cenários não executados; próximo ciclo exige autorização separada.

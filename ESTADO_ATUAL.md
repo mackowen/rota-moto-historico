@@ -1173,3 +1173,8 @@ Ver [REGISTROS/0178.md](REGISTROS/0178.md). Próximo bloco: valores financeiros 
 **0179 PARTIAL.** RETURN bilateral pós-coleta passou no Browser autenticado: cancelamento comercial, retorno operacional ao final da rota, handover físico, confirmação pelo Restaurante, retry após 503 e custódia `RECEIVED`, com evento único e sem proof fictício. O teste utilizou fixture logística preparada. Ganho positivo foi validado apenas por unidade (840 centavos a partir de 8,40 BRL); disputa concorrente de aceite e reconciliação monetária Browser/PostgreSQL não foram demonstradas.
 
 Ver [REGISTROS/0179.md](REGISTROS/0179.md). A consolidação 0180 permanece limitada a testes sintéticos de backup e aos mecanismos de observabilidade exercitados no runtime E2E; sem acesso ao recovery set real ou banco oficial.
+## Estado vigente — Campanha 0180
+
+**0180 PARTIAL; prontidão de produção BLOCKED.** Aplicativos, suites PG de logística/tenant, testes sanitizados de métricas/lifecycle e Browser de jornada/RETURN passaram no escopo documentado. O teste de recovery set foi sintético e mockado. A última restauração real registrada é da 0158 e cobre ledger até 0041, enquanto a 0154 documenta schema 0044. Nenhum artefato/chave de backup ou banco oficial foi acessado nesta campanha. Backup atual/offsite, agendamento, retenção operacional, RPO/RTO, alertas e restore vigente seguem sem validação.
+
+Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chamada de instalação de sync recebeu 403 `CSRF_INVALID` transitório durante reautenticação; a reabertura do PWA não manteve rede offline. Ver [REGISTROS/0180.md](REGISTROS/0180.md).
