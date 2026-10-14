@@ -1201,3 +1201,13 @@ Evidências, método e commits em [REGISTROS/0155.md](REGISTROS/0155.md). Nenhum
 - [ ] **OPEN / offline e PWA:** interrupção, ACK perdido, outbox persistente e atualização de Service Worker no perfil autenticado ainda exigem ensaio.
 
 Evidências em [REGISTROS/0171.md](REGISTROS/0171.md).
+
+
+## Atualização — Campanha 0172
+
+- [x] **RESOLVED no escopo executado:** Order/Delivery criados pela UI e ciclo Motoboy até `DELIVERED`; um evento por transição executada no tenant sintético E2E.
+- [ ] **OPEN / P1:** provar que a lista/detalhe do Restaurante mostra o estado final atualizado após recarga/sync, com evidência DOM/screenshot. Investigar a falha de observação sem presumir defeito de produto.
+- [ ] **OPEN / P1:** criar/executar e comprovar uma Route canônica ou delimitar a semântica de “rota” existente.
+- [ ] **OPEN / P1:** reconciliar Earning/valores e testar recusa, cancelamento pré/pós-coleta e RETURN no browser autenticado.
+
+Evidência e limitações em [REGISTROS/0172.md](REGISTROS/0172.md).

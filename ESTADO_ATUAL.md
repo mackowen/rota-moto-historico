@@ -1134,3 +1134,8 @@ Commits locais: Motoboy `b2d2233`, Restaurante `4aa0a7c`; sem push. Browser QA r
 ## Campanha 0171 — infraestrutura Browser autenticada
 
 Estado atual: **PASS no gate de infraestrutura autenticada**. O runtime real, login UI, chamadas autorizadas e leitura cross-app do mesmo Driver foram comprovados com sessões persistidas exclusivamente em `rotamoto_e2e`. O harness anterior foi ajustado após 404 de handler de fixture. A jornada de entrega continua por executar e não foi declarada PASS. Ver [REGISTROS/0171.md](REGISTROS/0171.md).
+
+
+## Campanha 0172 — jornada autenticada
+
+Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceitação, coleta, saída, chegada e confirmação. A entrega e os cinco eventos estão canônicos; a finalização não foi localizada na lista do Restaurante e não há Route canônica. Detalhes: [REGISTROS/0172.md](REGISTROS/0172.md).
