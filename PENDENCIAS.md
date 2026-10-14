@@ -1,24 +1,26 @@
-## Pendências vigentes — consolidação da Campanha 0159 (2026-10-14)
+## Pendências vigentes — consolidação da Campanha 0160 (2026-10-14)
 
 A matriz diferencia o plano original 0151–0160 das campanhas realmente executadas. Registros anteriores seguem intactos; esta seção atualiza apenas o estado vigente.
 
 | ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
 |---|---|---|---|
-| 0159-COV / 0159 | Cobertura Browser por tela, formulário e role; P2; **PARTIAL** | Suites completas e fluxos críticos Browser passaram, mas nem todas as telas/configurações/roles foram percorridas. | 0160 fechar matriz de navegação/estados vazios/teclado e permissões sem reutilizar conclusões antigas como PASS. |
-| 0159-FLOW / 0159 | Fluxo próprio completo até entrega; P1; **PARTIAL** | Order unificada e RETURN bilateral foram exercitados; criação→despacho→aceitação→coleta→entrega em um único Browser E2E não foi executado. | 0160 completar cenário autenticado sintético no E2E. |
-| 0159-CONC / 0159 | Regressão de concorrência com retenção de evidência; P1; **BLOCKED** | `test:availability-concurrency-e2e` passou, mas seu teardown executou `DROP SCHEMA ... CASCADE` no sandbox que o próprio teste criou e limpou dados sintéticos/audit desse sandbox, contrariando o gate da 0159. | Não repetir esse runner. Preparar alternativa rollback-scoped ou descartável fora dos bancos protegidos e sem apagar trilha auditável. |
-| 0159-RESID / E2E | Schema `campaign0112_6017…` e conteúdo/propriedade não verificados; P1; **BLOCKED / RETAINED** | Consulta de catálogo read-only encontrou um schema owner `rotamoto_migrator`; origem e conteúdo não comprovados. Não foi alterado nem limpo. | Investigar somente metadados/propriedade com autorização e manter retido; não consultar conteúdo cross-tenant nem excluir sem prova/autorização. |
-| 0159-PHYSICAL / Motoboy/Android | GPS, câmera, QR físico e tecnologias assistivas; P2; **BLOCKED por ambiente** | Browser/CDP e tiles locais sintéticos não representam hardware real. | Android e periféricos disponíveis em campanha autorizada; 0160 mantém esses cenários explícitos como não testados. |
-| 0159-PWA / ambos os apps | Atualização de instalação PWA preexistente; P2; **PARTIAL** | Contratos unitários do Service Worker passaram; Browser usou perfil isolado/fresco. | 0160 validar upgrade e cache antigo em perfil persistente controlado. |
+| 0159-COV / 0160 | Cobertura Browser por tela, formulário e role; P2; **PARTIAL** | Smoke de listas/mapa passou em desktop/mobile; configuração, relatórios, todos formulários, roles e teclado não foram percorridos. | 0163 fechar matriz de acessibilidade e telas com ambiente/browser autorizado. |
+| 0159-FLOW / 0160 | Fluxo próprio completo até entrega; P1; **PARTIAL** | RETURN bilateral foi exercitado, mas criação→despacho→aceitação→coleta→rota→entrega por UI em um único Browser E2E não foi concluído. | Reexecutar em campanha futura com percurso autenticado contínuo, sem pré-semeadura que mascare UI; preservar eventos reais do fluxo. |
+| 0159-CONC / 0160 | Segurança de runners e fixtures; P1; **PARTIAL** | `test:availability-concurrency-e2e` foi corrigido para schema UUID, manifesto pré-gravação e retenção; 65 checks passaram. `test:postgres-migrations` foi protegido por guard, não executado. | Disponibilizar banco descartável separado e rever runners destrutivos antes de habilitar rollback tests. |
+| 0159-RESID / 0160 | Schema `campaign0112_6017…`; P1; **BLOCKED / RETAINED** | Catálogo apenas: 41 tabelas, 108 índices, 741 constraints; 33 RLS/FORCE. Owner `rotamoto_migrator`; manifesto/proveniência não encontrados. Conteúdo intacto e não consultado. | Manter retido; qualquer investigação além de metadados ou remoção exige propriedade/autorização comprovada. |
+| 0159-PHYSICAL / 0163 | GPS, câmera, QR físico, impressora e tecnologias assistivas; P2; **BLOCKED por ambiente** | Browser usa Chromium e tiles locais sintéticos, não representa hardware real. | Validar em Android e periféricos autorizados, com evidência por dispositivo. |
+| 0159-PWA / 0160 | Atualização PWA com cache antigo/perfil persistente; P2; **PARTIAL** | Contratos SW passam; o upgrade real de instalação anterior não foi executado. | Criar prova CDP de perfil persistente e cache legado; validar recuperação sem perda de IndexedDB. |
 | 0158-DR-1 / 0154–0159 | Atualidade do backup; P1 operação; **OPEN** | Recovery set íntegro da 0154 restaura isoladamente, porém contém ledger até 0041; o registro 0154 menciona schema 0044. | Criar/validar snapshot atual em campanha que autorize a operação e confirme previamente o estado do banco; nesta campanha `rotamoto` não foi acessado. |
 | 0158-DR-2 / operador | Cópia externa/custódia; P1; **OPEN / UNVERIFIED** | Operador declarou manter uma cópia da chave no Google Drive. Não foi verificada. Não há evidência de que o recovery set esteja no Drive. | Confirmar existência/integridade/custódia do artefato sem acessar ou expor a chave; destino independente e procedimento de restore aprovados. |
 | 0158-DR-3 / operação | Agendamento, retenção, alertas e RPO/RTO; P1; **OPEN** | Não há job instalado nem objetivos aprovados. Tempo do restore isolado não é RTO. | Decisão do operador e ensaio mensurável em alvo descartável. |
-| 0150-FIXTURE / 0150–0159 | Fixtures e resíduos de auditoria global; P2; **PARTIAL** | Fixtures Browser 0159 foram manifestadas/retidas e não removidas; o sandbox 0112 da execução de concorrência foi descartado pelo próprio teste. Inventário global continua limitado por RLS. | Corrigir/retirar teardown destrutivo do runner antes de nova execução; inventariar residual sem enfraquecer RLS ou apagar audit. |
+| 0150-FIXTURE / 0150–0160 | Fixtures e resíduos de auditoria global; P2; **PARTIAL** | Execução 0160 manifestada e retida; runner de concorrência não remove mais sandbox. Inventário global continua limitado por RLS; resíduo 0112 sem manifesto permanece. | Manter retenção e manifestos; provar propriedade antes de qualquer limpeza, sem enfraquecer RLS ou apagar audit. |
 | 0157-A1 / apps | Modularização incremental; P2; **OPEN** | `app.js` permanece extenso; testes passam, sem falha funcional provada. | 0161 mapear dependências e extrair por caso de uso com testes de caracterização. |
 | 0157-A2 / backend | Separar responsabilidades de `sync-service.js`; P2; **OPEN** | Módulo grande concentra validação/autoridade/transação. | 0161 decomposição controlada sem quebra de contrato. |
 | 0151-SAST / apps | SAST/SCA dedicada; P1; **PARTIAL** | Regressões atuais passaram; scanner dedicado não foi executado nesta campanha. | 0162 selecionar ferramentas suportadas, executar e tratar alertas confirmados. |
 | 0156-PERF / API | Desempenho sustentado; P2; **PARTIAL** | Medições anteriores no Termux oscilaram; não foi realizado benchmark prolongado nesta regressão. | 0164 repetir com condições e perfis controlados. |
 | 0152-EXT / providers | Homologação iFood/Keeta/99Food; P1 externo; **BLOCKED_EXTERNAL** | Testes locais sintéticos passaram; nenhuma chamada comercial/sandbox real. | Onboarding, credenciais e autorização formal; sem homologação fictícia. |
+| 0158-DR / operação | Backup e continuidade; P1; **OPEN** | Recovery set restaurável conhecido até migration 0041; não foi atualizado nem copiado externamente. A declaração de cópia da chave no Drive é não verificada e não prova cópia do artefato. | 0165 definir destino, custódia, retenção, agendamento/alertas, snapshot vigente e RPO/RTO; validar restore isolado. |
+| 0160-PWA / apps | Upgrade PWA persistente; P2; **PARTIAL** | Browser validou shell/listas atuais, não cache antigo em perfil persistente. | Reproduzir upgrade em 0163 sem afetar perfil/instalação real. |
 
 ### Matriz do planejamento original 0151–0160
 
@@ -33,11 +35,11 @@ A matriz diferencia o plano original 0151–0160 das campanhas realmente executa
 | 0157 | Arquitetura e manutenção | Auditoria e plano de modularização concluídos; dívida estrutural segue aberta. | **PARTIAL** |
 | 0158 | Backup, restauração e continuidade | Restore isolado de snapshot até 0041; cópia/custódia/RPO/RTO ainda sem prova. | **PARTIAL** |
 | 0159 | Regressão consolidada | Regressões amplas e dois defeitos corrigidos; cobertura total e preservação do runner de concorrência não plenamente aprovadas. | **PARTIAL** |
-| 0160 | Revisão final e próximo ciclo | Campanha futura, não iniciada; objetivo foi explicitamente fornecido. | **OPEN** |
+| 0160 | Revisão final e próximo ciclo | Regressões prioritárias e matriz executadas; runner de concorrência protegido e backlog 0161–0165 definido. Fluxo próprio Browser integral e upgrade PWA com cache antigo ausentes. | **PARTIAL** |
 
-**Contagem da matriz original:** RESOLVED 1; PARTIAL 8; OPEN 1. Campanhas complementares permanecem: 0161 modularização; 0162 SAST/SCA; 0163 hardware/acessibilidade; 0164 performance sustentada; 0165 operação/homologação. Elas não substituem 0159/0160. Não declarar produção pronta enquanto persistirem dependências críticas e o desvio de preservação não for endereçado.
+**Contagem da matriz original:** RESOLVED 1; PARTIAL 9; OPEN 0. Campanhas complementares permanecem: 0161 modularização; 0162 SAST/SCA; 0163 hardware/acessibilidade; 0164 performance sustentada; 0165 operação/homologação. Elas não substituem evidências pendentes da 0160. `PRODUCTION_READINESS` permanece BLOCKED por continuidade/backup, cobertura de fluxo e validações físicas/externas. Não iniciar automaticamente 0161.
 
-Não acessar a chave ou presumir que o backup esteja no Google Drive. Não iniciar Campanha 0160 automaticamente.
+Não acessar a chave ou presumir que o backup esteja no Google Drive. Não iniciar Campanha 0161 automaticamente.
 
 ## Registro histórico — Campanha 0154 (2026-10-14)
 

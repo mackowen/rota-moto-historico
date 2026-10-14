@@ -1,3 +1,17 @@
+## Estado atual — Campanha 0160: revisão final e próximo ciclo (2026-10-14)
+
+**Resultado: PARTIAL; prontidão para produção BLOCKED.** A suíte completa dos dois aplicativos passou. PostgreSQL E2E, runner de concorrência protegido e Browser cobriram segurança tenant, workers, providers sintéticos, RETURN bilateral, IndexedDB crash/restart e mapa local em desktop/mobile. O runner de concorrência que removia seu sandbox foi corrigido para manifestar e reter; o runner legado de rollback de migrations agora é bloqueado antes de conectar ao banco compartilhado.
+
+- **Branches/HEAD iniciais:** Restaurante `codex/setup-workflow` `a3fb1131ce9e1a9c548d16974cb3a509e5d89bd5`; Motoboy `codex/setup-workflow` `baf00f788edf08bf7f555fc155068a4c5b24ba4f`; Histórico autorizado `8ba1ac8905db59aa4432b2d765eb54173cbb85f5`; Browser QA `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`. Nenhum banco oficial foi acessado.
+- **Runners:** disponibilidade/concorrência agora usa schema `campaign0160_<UUID>`, manifesto atômico antes da primeira gravação e retenção sem DROP; 65 checks passaram em duas sessões. Manifesto `13875be8-74ac-4573-8b47-5c0b6761d9f4`. `test:postgres-migrations` contém rollback/DELETE e foi bloqueado por guard antes de abrir conexão; requer banco descartável independente.
+- **Fixtures e resíduo:** somente catálogos do schema `campaign0112_6017…` foram lidos em `rotamoto_e2e` read-only: 41 tabelas, 108 índices, 741 constraints, 33 tabelas RLS/FORCE, trigger append-only de auditoria habilitada. Origem não provada, conteúdo não consultado, schema preservado.
+- **Browser:** retorno bilateral com HTTP 503/replay terminou RETURNED/RECEIVED, um evento de confirmação e zero provas fictícias. Outbox local sobreviveu reload/SIGKILL; mapa usou 9 tiles locais interceptados. O ciclo próprio de pedido completo por Browser e upgrade PWA com cache antigo não foram executados, portanto gates PARTIAL.
+- **Cobertura:** matriz 0151–0160 mantém 1 RESOLVED, 9 PARTIAL, 0 OPEN no status de objetivo; riscos específicos continuam abertos. Backlog 0161–0165 está priorizado em [PENDENCIAS.md](PENDENCIAS.md).
+- **Backup/continuidade:** conjunto conhecido é antigo (snapshot até 0041, apesar do schema 0044 descrito no registro 0154). Cópia externa, snapshot atual, custódia independente, agenda, retenção e RPO/RTO sem comprovação. A declaração de chave no Google Drive não foi verificada; não se presume que o backup esteja nesse destino.
+- **Commits:** Restaurante tem alterações locais nos cinco runners de teste, sem push; Motoboy sem alterações; Browser QA com evidências locais preservadas, sem push. O histórico publica exclusivamente os cinco documentos autorizados desta campanha.
+
+Gates completos, evidências reproduzíveis e limites em [REGISTROS/0160.md](REGISTROS/0160.md) e [RESUMOS/0160.md](RESUMOS/0160.md). Não iniciar automaticamente Campanha 0161.
+
 ## Estado atual — Campanha 0159: auditoria consolidada de regressão (2026-10-14)
 
 **Resultado: PARTIAL; prontidão para produção não aprovada.** As suites completas dos dois aplicativos passaram. Os testes de PostgreSQL, Browser e adapters exercitaram isolamento, providers, 99Food e o ciclo bilateral de RETURN. Foram corrigidos um detalhe visual ilegível e um atalho de teste PostgreSQL sem URLs E2E.
