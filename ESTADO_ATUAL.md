@@ -1,4 +1,8 @@
-## Estado atual — Campanha 0169: observabilidade (2026-10-14)
+## Estado atual — Campanha 0170: consolidação (2026-10-14)
+
+**Resultado PARTIAL; PRODUCTION_READINESS=BLOCKED.** npm test passou nos dois apps; PostgreSQL logística e paridade cross-app passaram. A jornada Browser autenticada não chegou ao estado final; PWA upgrade não alcançou waiting. Inventário de backup agora compara o ledger, mas restore real/offsite/RPO/RTO seguem pendentes. Veja matriz completa e próximos critérios em [REGISTROS/0170.md](REGISTROS/0170.md) e [RESUMOS/0170.md](RESUMOS/0170.md). Nenhuma 0171 iniciada.
+
+## Estado anterior — Campanha 0169: observabilidade (2026-10-14)
 
 **Resultado PARTIAL.** A API compartilhada adicionou métricas agregadas em memória para API/sync, sanitização de logs e máscara de IDs em caminhos. Liveness/readiness e correlação permanecem; readiness verifica o pool usado pelo servidor. Suites completas dos apps e testes HTTP/unidade passaram. Falha PostgreSQL real, filas/workers e alertas duráveis não foram exercitados. Ver [REGISTROS/0169.md](REGISTROS/0169.md).
 

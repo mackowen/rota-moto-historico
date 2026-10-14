@@ -1,4 +1,16 @@
-## Atualização vigente — Campanha 0169 (2026-10-14)
+## Atualização vigente — Campanha 0170 (2026-10-14)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próximo critério de aceite |
+|---|---|---|---|
+| 0170-DR / 0154, 0158, 0165-P, 0168–0170 | Backup/restore/continuidade; P0; **BLOCKED** | Recovery conhecido até 0041 vs schema versionado 0044; metadados de cobertura agora existem, mas sem artifact/restore real. | Rehearsal autorizado até 0044, cópia independente, retenção/agendamento/alertas e RPO/RTO definidos. |
+| 0170-LIFECYCLE / 0159, 0165–0170 | Pedido próprio completo cross-app; P1; **PARTIAL** | CDP cria pedido local na UI; PostgreSQL não recebeu o pedido nesse runner. | Jornada autenticada sem pré-semeadura comercial com estados e contagens iguais nos dois apps e no E2E. |
+| 0170-PWA / 0163–0170 | Atualização PWA/offline; P1; **FAIL no runner / PARTIAL no produto** | Worker antigo não chegou a waiting; não alegar perda de outbox nem preservação pós-update sem teste. | Reproduzir causa; passar update/reopen com outbox pendente e ACK posterior. |
+| 0170-OBS / 0169–0170 | Observabilidade de workers e alertas; P1; **PARTIAL** | Métricas API/sync em memória; sem fila, alerta ou outage PG real. | Adicionar agregados worker/queue e validar falha/recovery sem payload/tenant labels. |
+| 0170-EXT / 0152–0170 | Homologação iFood/Keeta/99Food; P1 externo; **BLOCKED_EXTERNAL** | Nenhuma credencial/chamada comercial. | Sandbox/onboarding e aceite autorizados. |
+
+Matriz e gates finais: [REGISTROS/0170.md](REGISTROS/0170.md). Snapshots históricos preservados abaixo.
+
+## Atualização histórica — Campanha 0169 (2026-10-14)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
 |---|---|---|---|
