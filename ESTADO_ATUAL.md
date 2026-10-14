@@ -1,4 +1,16 @@
-## Estado vigente — Campanha 0154: backup e finalização 99Food (2026-10-14)
+## Estado atual — Campanha 0156: API e mapa Motoboy (2026-10-14)
+
+**Resultado: PARTIAL.** A causa do p95, a divergência do plano e o mapa vazio foram investigados. A API eliminou duas consultas redundantes e mostrou uma redução em uma rodada comparável, mas a latência variou muito entre fases no Termux. O mapa agora renderiza com Leaflet, tiles locais controlados e marcador nos viewports testados.
+
+- **API:** 10 sessões independentes em dois tenants; pool 5. Comparação pré/pós-correção, 125 Orders/tenant: p95 497,31→352,45 ms; p99 504,63→362,03 ms; 24,40→33,50 req/s; 11→9 consultas/solicitação. Outro ensaio chegou a p95 567,68 ms; não há prova de desempenho sustentado. Elevar o pool a 10 removeu a espera pelo pool, mas não melhorou o p95 em relação ao pool 5 depois do aquecimento; limite de produção manteve-se 5.
+- **Plano PostgreSQL:** com 250 Orders por tenant, estimativa 1/250 antes de ANALYZE e 209/250 depois. O índice tenant/entity existente executou em ~1,3 ms. Evidência aponta estatísticas atrasadas da fixture; nenhum índice ou schema foi modificado. Operações limitadas a rotamoto_e2e.
+- **Mapa:** causa era vendor/leaflet/leaflet.js ausente do HTML, embora app.js exigisse window.L. Leaflet foi incluído e o cache offline avançado para v43.45. Chromium/CDP exibiu 9 tiles SVG locais, atribuição explicitamente marcada como sintética e marcador em 1365×900 e 390×844; sem overflow ou erros JS/HTTP. GPS físico e tiles do provider real não foram testados.
+- **Regressões:** npm test Restaurante e Motoboy passaram; identidade HTTP/PG, sync/RETURN, isolamento RLS (47 tabelas, 38 políticas FORCE), Browser E2E de lista/filtro/mapa desktop/mobile passaram. Fixtures rotamoto_e2e foram identificadas e retidas, sem limpeza. Banco oficial não acessado.
+- **Gates:** API_PROFILING PASS; API_CONCURRENCY PARTIAL; POSTGRES_QUERY_PLAN PASS; MOTOBOY_MAP_RENDER PASS; BROWSER_E2E PASS; SECURITY_REGRESSION PASS; PERFORMANCE_COMPARISON PARTIAL.
+
+HEAD inicial: Restaurante 4aa0a7c; Motoboy b2d2233. HEAD final local: Restaurante cc0008f6479454aa82992f9ae5587de93262c7a8; Motoboy baf00f788edf08bf7f555fc155068a4c5b24ba4f. Ambos sem push. Histórico será publicado somente na branch autorizada; Browser QA permanece local. Consulte REGISTROS/0156.md, RESUMOS/0156.md e evidências em ../browser-tests/evidencias/campanhas/0156/. Não iniciar Campanha 0157.
+
+## Registro histórico — Campanha 0154: backup e finalização 99Food (2026-10-14)
 
 **Resultado geral: PASS. Schema oficial de desenvolvimento `rotamoto`: 0044. `READY_FOR_EXTERNAL_HOMOLOGATION = YES` para iniciar homologação técnica externa; aceite comercial não executado.** A fotografia da 0153 foi atualizada sem apagar seu diagnóstico original.
 
@@ -11,7 +23,7 @@
 
 Evidências, IDs de fixtures, comandos, checksums, limitations e classificação por gate: [REGISTROS/0154.md](REGISTROS/0154.md). Matriz atualizada: [PENDENCIAS.md](PENDENCIAS.md), seção 0154. Não iniciar Campanha 0155.
 
-## Estado vigente — Campanha 0152: contrato e integração 99Food (2026-10-14)
+## Registro histórico — Campanha 0152: contrato e integração 99Food (2026-10-14)
 
 **Resultado: PARTIAL.** O portal oficial foi pesquisado; um adapter local do 99Food Protocol (Recommended) valida assinatura webhook, IDs Long, envelope, subconjunto dos estados/fulfillment e operações de pedido com transporte fake. A UI descreve precisamente o estado. Runtime/persistência 99Food permanece desabilitado; não declarar homologação nem prontidão externa.
 
@@ -26,7 +38,7 @@ Evidências, IDs de fixtures, comandos, checksums, limitations e classificação
 
 `rotamoto` não foi acessado; nenhuma migration, DDL, deploy ou chamada comercial foi realizada. **READY_FOR_EXTERNAL_HOMOLOGATION: NO.** Pendências da trilha estão em [PENDENCIAS.md](PENDENCIAS.md), seção 0152; não iniciar Campanha 0153.
 
-## Estado vigente — Campanha 0151: auditoria de segurança Full Stack (2026-10-14)
+## Registro histórico — Campanha 0151: auditoria de segurança Full Stack (2026-10-14)
 
 **Resultado: PARTIAL.** Nenhuma vulnerabilidade atual foi confirmada nos cenários exercitados. Testes unitários completos, SCA, PostgreSQL E2E e Browser E2E passaram nos escopos declarados; SAST dedicado não está instalado e inventário global de fixtures antigas permanece bloqueado por ACL.
 
@@ -43,7 +55,7 @@ Evidências, IDs de fixtures, comandos, checksums, limitations e classificação
 
 O banco oficial `rotamoto` não foi acessado; migration 0041 continua **APPLIED conforme documentação da Campanha 0140**, sem revalidação nesta campanha. Nenhuma migration, DDL, deploy, chamada comercial ou limpeza de fixture foi executada. Detalhes: [REGISTROS/0151.md](REGISTROS/0151.md). Não iniciar Campanha 0152.
 
-## Estado vigente — Campanha 0150: gerenciamento seguro de fixtures E2E (2026-10-14)
+## Registro histórico — Campanha 0150: gerenciamento seguro de fixtures E2E (2026-10-14)
 
 **Resultado: PARTIAL.** O lifecycle PostgreSQL E2E do Restaurante agora cria manifestos atômicos antes da conexão, registra tenants/usuários/sessões e entidades conhecidas sem segredos, separa IDs registrados de snapshots de banco, e inventaria somente tenants conhecidos com consultas `READ ONLY` sob RLS. `COMPLETED` só ocorre depois da verificação de rollback; commits de sessões independentes ficam `RETAINED`. O helper não apaga fixture commitada nem `audit_log`.
 
@@ -56,7 +68,7 @@ O banco oficial `rotamoto` não foi acessado; migration 0041 continua **APPLIED 
 
 `rotamoto` não foi acessado; não houve migration, DDL, deploy ou cleanup. O detalhe e os IDs de execução estão em [REGISTROS/0150.md](REGISTROS/0150.md) e [RESUMOS/0150.md](RESUMOS/0150.md). Próximo foco sugerido: obter processo de leitura tenant-aware aprovado e avaliar resíduos antigos por dry-run. Não iniciar Campanha 0151.
 
-## Estado vigente — Campanha 0149: segurança multiempresa e fixtures E2E (2026-10-14)
+## Registro histórico — Campanha 0149: segurança multiempresa e fixtures E2E (2026-10-14)
 
 **Resultado: PARTIAL.** Nos caminhos exercitados, não foi encontrada falha de isolamento. Testes HTTP com A/B e Browser/CDP negaram leitura, confirmação e replay de RETURN por tenant B com UUID conhecido de A; retorno 404 sem dados, e estado/rota/eventos de A não mudaram. Uma corrida com sessões PostgreSQL independentes confirmou o 404 de B enquanto A executava recebimento autorizado. CSRF ausente/inválido: 403; sessão inválida/anônima: 401; ausência de `orders.manage`: 403. RLS/FORCE (46 tabelas/37 políticas) passou.
 
@@ -68,7 +80,7 @@ O banco oficial `rotamoto` não foi acessado; migration 0041 continua **APPLIED 
 
 Ver [REGISTROS/0149.md](REGISTROS/0149.md) e [RESUMOS/0149.md](RESUMOS/0149.md). Próximo passo: auditoria global somente após credencial/consulta de leitura tenant-aware autorizada e identificação da tentativa parcial. Não iniciar Campanha 0150.
 
-## Estado vigente — Campanha 0148: recebimento de devoluções (2026-10-14)
+## Registro histórico — Campanha 0148: recebimento de devoluções (2026-10-14)
 
 **Resultado: PARTIAL.** O Motoboy registra entrega física sem encerrar custódia; a RETURN permanece `ARRIVED/AWAITING_RESTAURANT_RECEIPT`. O Restaurante agora identifica devoluções externas pendentes e mostra a ação autorizada de recebimento. Após confirmação, RETURN fica `RETURNED/RECEIVED`, custódia da entrega original fecha, a rota remove somente a RETURN e o Motoboy sincroniza “Devolução confirmada”.
 
@@ -82,13 +94,13 @@ Ver [REGISTROS/0149.md](REGISTROS/0149.md) e [RESUMOS/0149.md](RESUMOS/0149.md).
 
 Evidência final: `browser-tests/evidencias/campanhas/0148/return-receipt-ddb0af0d-98ad-447e-821e-f74da10b46c0/`. Ver [REGISTROS/0148.md](REGISTROS/0148.md). Próximo item: teste HTTP explícito de tenant incorreto; validação física fica condicionada a aparelho/processo assistido. Não iniciar Campanha 0149.
 
-## Estado vigente — Campanha 0147: cancelamentos e devoluções (2026-10-13)
+## Registro histórico — Campanha 0147: cancelamentos e devoluções (2026-10-13)
 
 **Resultado: PARTIAL.** Os cenários locais de cancelamento, custódia, rota e sincronização passaram em testes unitários, PostgreSQL E2E e Chromium/CDP. Cancelar Delivery própria após coleta cria um único RETURN na mesma transação, mantém o motorista custodiante e acrescenta a devolução depois das demais paradas; cancelamentos antes da coleta não criam RETURN. Cancelamento comercial externo sem Delivery própria não fabrica Delivery, QR, atribuição ou devolução. Restaurante e Motoboy apresentam estados distintos; Motoboy executou o ciclo e ficou `ARRIVED`/`AWAITING_RESTAURANT_RECEIPT`, sem comprovante fictício.
 
 Browser injetou um HTTP 503 no sync e observou retry com resposta 200; mobile 390×844 não teve overflow horizontal. Adapters/credenciais de iFood e Keeta reais, offline físico e confirmação física pelo Restaurante não foram exercitados. Não houve acesso ao banco `rotamoto`, migration, DDL ou deploy; 0041 continua documentada como **APPLIED** em [REGISTROS/0140.md](REGISTROS/0140.md). Ver [REGISTROS/0147.md](REGISTROS/0147.md). Não iniciar Campanha 0148.
 
-## Estado vigente — Campanha 0146: resiliência e concorrência (2026-10-13)
+## Registro histórico — Campanha 0146: resiliência e concorrência (2026-10-13)
 
 **Resultado geral: PARTIAL.** Foi corrigido um defeito de sync no restart: a normalização inicial do Restaurante usava `put()` e podia transformar registros canônicos do servidor em alterações locais, reabrindo a publicação de Orders já sincronizadas. O bootstrap agora preserva origem, versão e estado canônico. Browser comprovou zero replay de Orders canônicas após reload.
 
@@ -104,7 +116,7 @@ Browser injetou um HTTP 503 no sync e observou retry com resposta 200; mobile 39
 
 Evidência Browser: `browser-tests/evidencias/campanhas/0146/worker-outbox-recovery-6c2871cc-98f0-4a97-8597-5326390e73d7/`. Ver [REGISTROS/0146.md](REGISTROS/0146.md). Próximas prioridades: Android com rede/suspensão reais; matriz documentada de cancelamento antes/depois da coleta; homologação provider quando autorizada. Não iniciar Campanha 0147.
 
-## Estado vigente — Campanha 0145: robustez dos pedidos externos (2026-10-13)
+## Registro histórico — Campanha 0145: robustez dos pedidos externos (2026-10-13)
 
 **Resultado: PARTIAL.** Corrigidos dois defeitos comprovados: eventos externos empatados no timestamp não substituem arbitrariamente a projeção; Orders externos com fulfillment desconhecido não geram Delivery/QR local. A auditoria corrige uma lacuna na evidência da 0144: seu runner consultava QR sem escopar a linha e não detectou o botão de QR indevido.
 
@@ -122,7 +134,7 @@ Evidência Browser: `browser-tests/evidencias/campanhas/0146/worker-outbox-recov
 
 Evidência Browser: `browser-tests/evidencias/campanhas/0145/external-order-resilience-3267787e-e63a-4dee-9e76-b775476a127e/`. Detalhes, limitações e sequência em [REGISTROS/0145.md](REGISTROS/0145.md) e [RESUMOS/0145.md](RESUMOS/0145.md). Não iniciar Campanha 0146.
 
-## Estado vigente — Campanha 0144: pedidos unificados e integrações (2026-10-13)
+## Registro histórico — Campanha 0144: pedidos unificados e integrações (2026-10-13)
 
 **Resultado geral: PARTIAL.** A lacuna funcional da Campanha 0143 foi corrigida: Orders externos iFood/Keeta são publicados na outbox canônica e sincronizados à lista principal do Restaurante. Browser E2E autenticado em `rotamoto_e2e` confirmou um pedido próprio e um externo na mesma lista, origem/status visíveis e replay sem duplicação. Fulfillment desconhecido não cria Delivery/QR nem atribui motoboy. Ajustes passaram em 390 px sem overflow.
 
@@ -941,7 +953,7 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md) e [RESUMOS/0139.md](RESUMOS/0139.md).
 - Gates globais técnicos PARTIAL por WebGL2 indisponível no Chromium, ausência de GPS/câmera físicos e link Ajuda avaliado por clique DOM, não toque físico. Revisão estética ainda depende do operador.
 - PostgreSQL oficial não conectado; E2E não modificado; nenhuma migration/deploy.
 - Ver [REGISTROS/0140.md](REGISTROS/0140.md) e [RESUMOS/0140.md](RESUMOS/0140.md). Não iniciar 0141.
-## Estado vigente — Campanha 0153: runtime 99Food e migration oficial (2026-10-14)
+## Registro histórico — Campanha 0153: runtime 99Food e migration oficial (2026-10-14)
 
 **Resultado geral: PARTIAL. `OFFICIAL_DEV_DB_MIGRATION = BLOCKED`; `READY_FOR_EXTERNAL_HOMOLOGATION = NO`.** A integração técnica foi ligada e aprovada em `rotamoto_e2e` com migrations 0042–0043. O banco oficial não foi consultado nem alterado: o backup prévio falhou em `audit_log` sob FORCE RLS com a role migradora. O estado/versão oficial é desconhecido nesta execução.
 
@@ -954,7 +966,7 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md) e [RESUMOS/0139.md](RESUMOS/0139.md).
 
 Ver [REGISTROS/0153.md](REGISTROS/0153.md) e [RESUMOS/0153.md](RESUMOS/0153.md). Não iniciar Campanha 0154.
 
-## Atualização vigente — Campanha 0155: performance e concorrência (2026-10-14)
+## Registro histórico — Campanha 0155: performance e concorrência (2026-10-14)
 
 Esta atualização registra as medições atuais sem remover fotografias históricas. Estado geral **PARTIAL**: ganho local no cálculo de sync comprovado; API curta até dez clientes concluiu sem erros, mas p95/p99 requerem perfilamento; mapa não renderizou no browser offline.
 

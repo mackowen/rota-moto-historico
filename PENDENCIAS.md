@@ -1,4 +1,17 @@
-## Atualização vigente — Campanha 0154 (2026-10-14)
+## Pendências atuais — consolidação da Campanha 0156 (2026-10-14)
+
+| ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / próximo passo |
+|---|---|---|---|
+| 0156-API-1 / 0155–0156 | Latência concorrente e repetibilidade; P2; **PARTIAL** | 10 sessões distintas, 2 tenants, sem erro; redução observada de p95 497,31→352,45 ms e 11→9 consultas. Outra fase elevou p95 a 567,68 ms no Termux. Pool 10 não trouxe ganho consistente e não foi mantido. | Repetir mais ondas com janela de resfriamento e monitor de CPU/temperatura; avaliar em aparelho/infra com recursos controlados antes de fixar SLO. |
+| 0156-MAP-1 / 0155 | Leaflet no mapa da tela inicial Motoboy; P2; **RESOLVED no escopo local** | Script Leaflet global não era carregado; renderer retornava antes de criar o mapa. Corrigido HTML e cache Service Worker v43.45; CDP comprovou tiles locais e marcador desktop/mobile. | Validar GPS físico, tiles do provedor real e cache offline persistente em aparelho conectado, quando disponível. |
+| 0156-PG-1 / 0155 | Estimativa do plano de Orders; P2; **RESOLVED no diagnóstico E2E** | Reprodução 250 linhas: estimate 1/actual 250; após ANALYZE em rotamoto_e2e, 209/250, índice atual, ~1,3 ms. | Em cargas reais futuras, manter estatísticas atualizadas e reavaliar somente com EXPLAIN de dados autorizados; sem migration/índice justificado hoje. |
+| 0156-BROWSER-1 / 0156 | Runner/serviços locais e estados do mapa; P2; **PARTIAL** | Chromium/CDP 1365×900 e 390×844, 250 pedidos locais, filtro, navegação, tiles com atribuição local sintética/marcador; sem overflow, erro JS/HTTP. Tiles foram SVG locais; GPS negado pelo runner. | Testar fluxo offline persistente com Service Worker ativo e telemetria de GPS em dispositivo de teste, sem confundir tile sintético com provider real. |
+| 0156-SEC-1 / 0156 | Segurança e isolamento; P1; **RESOLVED no escopo executado** | Suites apps e PostgreSQL passaram; 47 tabelas/38 políticas FORCE, RBAC/CSRF/tenant e sync/RETURN mantidos; nenhum privilégio ou policy alterado. | Repetir regressões de segurança em campanhas que alterem auth/RLS/contratos. |
+| 0156-PERF-1 / 0155–0156 | Capacidade sustentada e variação Termux; P2; **DEFERRED** | Amostras curtas, event loop ~90% ocupado; free -m indicou 2.166 MiB disponíveis e 3.697 MiB swap usada no momento, sem controle de temperatura. Processo do runner chegou a ~110 MiB RSS. | Campanha futura de carga longa com perfis separados e condições térmicas controladas; não afirmar capacidade de produção a partir do Termux. |
+
+As evidências da Campanha 0155 foram preservadas em seus registros. Esta tabela é o estado consolidado vigente após 0156: mapa e diagnóstico do plano foram encerrados no escopo local; latência estável, provedor de tiles/GPS físico e capacidade sustentada continuam pendentes. Nenhum dado de rotamoto foi acessado; fixtures de rotamoto_e2e foram retidas e não houve limpeza. Ver REGISTROS/0156.md. Não iniciar Campanha 0157.
+
+## Registro histórico — Campanha 0154 (2026-10-14)
 
 Esta matriz supersede somente os estados das trilhas de backup PostgreSQL e integração interna 99Food que constavam em 0152–0153. Os registros anteriores foram preservados como fotografias históricas. Campanha 0151 e demais pendências sem evidência nova continuam vigentes.
 
@@ -17,7 +30,7 @@ Esta matriz supersede somente os estados das trilhas de backup PostgreSQL e inte
 
 O erro relatado em 0153 ocorreu porque `rotamoto_migrator` sob FORCE RLS não podia ler integralmente `audit_log`. Nesta campanha, o processo dedicado de backup utilizou a role de leitura `rotamoto_backup`, sem desabilitar RLS/FORCE, triggers ou alterar grants operacionais. A tabela `marketplace_account_routes` continua intencionalmente sem RLS conforme migration 0035, mas seus grants permanecem restritos ao resolver privilegiado; app e worker não têm SELECT.
 
-## Atualização vigente — Campanha 0152: integração 99Food (2026-10-14)
+## Registro histórico — Campanha 0152: integração 99Food (2026-10-14)
 
 Esta seção atualiza somente a trilha de integração externa 99Food. As matrizes cronológicas anteriores, inclusive a consolidação 0151, continuam preservadas como evidência do que era conhecido naquela data.
 
@@ -33,7 +46,7 @@ Esta seção atualiza somente a trilha de integração externa 99Food. As matriz
 
 **Paridade 99Food nesta campanha:** validações/adapter base foram testados localmente, mas continuam **PARTIAL** como capacidade operacional; runtime/lista/outbox incompletos (**PARTIAL**); onboarding/sandbox/certificação **BLOCKED_EXTERNAL**; polling **NOT_APPLICABLE** ao protocolo próprio escolhido; APIs logísticas externas **NOT_APPLICABLE** conforme evidência atual. **READY_FOR_EXTERNAL_HOMOLOGATION = NO.** A próxima campanha especializada deve fechar schema/runtime persistente e E2E por tenant antes de solicitar homologação. Nenhum item da matriz 0151 foi removido; essa nova evidência substitui apenas o motivo antigo “contrato desconhecido” da integração 99Food, não seus bloqueios de runtime/onboarding.
 
-## Consolidação vigente — Campanha 0151 (2026-10-14)
+## Registro histórico — Campanha 0151 (2026-10-14)
 
 Esta é a matriz autoritativa das pendências ainda relevantes após a auditoria Full Stack. As entradas cronológicas abaixo permanecem preservadas como evidência da campanha que as produziu; estados explicitamente supersedidos nesta matriz não devem ser tratados como pendência atual.
 
@@ -66,7 +79,7 @@ Esta é a matriz autoritativa das pendências ainda relevantes após a auditoria
 
 Ver evidências completas e limitações em [REGISTROS/0151.md](REGISTROS/0151.md). Não iniciar Campanha 0152.
 
-## Atualização vigente — Campanha 0150 (2026-10-14)
+## Registro histórico — Campanha 0150 (2026-10-14)
 
 Esta consolidação atualiza exclusivamente lifecycle, identificação e auditoria de fixtures PostgreSQL E2E. As matrizes históricas permanecem preservadas.
 
@@ -82,7 +95,7 @@ Esta consolidação atualiza exclusivamente lifecycle, identificação e auditor
 
 Evidências detalhadas: [REGISTROS/0150.md](REGISTROS/0150.md). A documentação da migration 0041 continua **APPLIED conforme 0140**; nenhum banco oficial foi acessado nesta campanha. Não iniciar Campanha 0151.
 
-## Atualização vigente — Campanha 0149 (2026-10-14)
+## Registro histórico — Campanha 0149 (2026-10-14)
 
 Esta consolidação atualiza apenas os itens de segurança multiempresa e lifecycle das fixtures reexaminados nesta campanha. Matrizes anteriores permanecem preservadas.
 
@@ -131,7 +144,7 @@ Esta seção atualiza cancelamentos e devoluções com os testes locais da 0147;
 
 Detalhes e evidências: [REGISTROS/0147.md](REGISTROS/0147.md). Migration 0041 permanece APPLIED conforme documentação da 0140; esta campanha não acessou `rotamoto` nem executou migrations. Não iniciar Campanha 0148.
 
-## Consolidação vigente — Campanha 0146 (2026-10-13)
+## Registro histórico — Campanha 0146 (2026-10-13)
 
 Esta seção atualiza os itens de worker, concorrência, restart e outbox reexaminados em 0146. As matrizes anteriores permanecem preservadas; status antigo só é supersedido nos itens identificados abaixo.
 
@@ -149,7 +162,7 @@ Esta seção atualiza os itens de worker, concorrência, restart e outbox reexam
 
 **Segurança de dados:** somente `rotamoto_e2e` foi usado nos testes PostgreSQL; `rotamoto` não foi acessado, nenhuma migration foi executada e não houve deploy. A migration 0041 permanece documentada como **APPLIED** em [REGISTROS/0140.md](REGISTROS/0140.md), sem nova verificação nesta campanha. Detalhes em [REGISTROS/0146.md](REGISTROS/0146.md). Não iniciar Campanha 0147.
 
-## Consolidação vigente — Campanha 0145 (2026-10-13)
+## Registro histórico — Campanha 0145 (2026-10-13)
 
 Esta atualização supersede somente as evidências/itens de Orders externos, sua projeção de Delivery/QR e sync que foram reexaminados em 0145. As demais matrizes e registros permanecem preservados.
 
@@ -168,7 +181,7 @@ Esta atualização supersede somente as evidências/itens de Orders externos, su
 
 **Resultado:** PARTIAL, sem defeito crítico restante reproduzido após correções. A campanha não acessou `rotamoto` e não executou migration; 0041 continua APPLIED conforme [REGISTROS/0140.md](REGISTROS/0140.md), sem revalidação do ledger oficial. Ver [REGISTROS/0145.md](REGISTROS/0145.md). Não iniciar Campanha 0146.
 
-## Consolidação vigente — Campanha 0143 (2026-10-13)
+## Registro histórico — Campanha 0143 (2026-10-13)
 
 Esta consolidação atualiza somente pedidos/integrations com evidência da Campanha 0143. A matriz 0141 abaixo permanece como fotografia íntegra dos demais grupos e só é supersedida onde esta seção cita o mesmo assunto.
 
@@ -184,7 +197,7 @@ Esta consolidação atualiza somente pedidos/integrations com evidência da Camp
 
 **Riscos prioritários:** a lista operacional do Restaurante ainda não agrega o Order externo e não há prova de transição externa→fluxo canônico de entrega própria. Não atribuir automaticamente driver; manter fulfillment pela plataforma separado. A homologação comercial segue sem evidência. Resultado desta campanha: **PARTIAL**; ver [REGISTROS/0143.md](REGISTROS/0143.md). A campanha posterior não foi iniciada.
 
-## Consolidação vigente — Campanha 0141 (2026-10-13)
+## Registro histórico — Campanha 0141 (2026-10-13)
 
 Esta matriz consolida o estado atual comprovável. Checkboxes antigos abaixo são fotografias das campanhas que os produziram; não devem ser lidos como estado atual quando registros posteriores os supersedem. Código e suítes foram inspecionados estaticamente nesta campanha; não foram executados testes que pudessem escrever em banco/dados.
 
@@ -947,7 +960,7 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md). Não iniciar Campanha 0140.
 
 Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
 
-## Atualização vigente — Campanha 0142 (2026-10-13)
+## Registro histórico — Campanha 0142 (2026-10-13)
 
 **Auditoria funcional integrada: PARTIAL; defeitos de produto confirmados: 0.** Os fluxos testados passaram em suítes automatizadas e Browser E2E no banco isolado. Os limites de hardware e de homologação externa permanecem, sem serem classificados como falhas de aplicação. Esta atualização complementa a matriz 0141 abaixo, que permanece intacta como fotografia anterior.
 
@@ -978,7 +991,7 @@ Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
 Ver [REGISTROS/0144.md](REGISTROS/0144.md) e [RESUMOS/0144.md](RESUMOS/0144.md). Nenhuma migration, alteração no banco oficial ou deployment.
 
 ## Atualização — Campanha 0135
-## Atualização vigente — Campanha 0153: integração operacional 99Food (2026-10-14)
+## Registro histórico — Campanha 0153: integração operacional 99Food (2026-10-14)
 
 Esta atualização supersede somente estados de implementação documentados como anteriores à 0153. A trilha histórica abaixo permanece íntegra.
 
@@ -993,7 +1006,7 @@ Esta atualização supersede somente estados de implementação documentados com
 
 Referências oficiais, hashes, testes e evidência do bloqueio estão em [REGISTROS/0153.md](REGISTROS/0153.md). Não iniciar Campanha 0154.
 
-## Campanha 0155 — pendências atuais de desempenho
+## Campanha 0155 — fotografia histórica de pendências de desempenho
 
 - [ ] **OPEN / P2 — API p95 com 10 clientes:** benchmark curto em `rotamoto_e2e` teve 22,13 req/s, p95 510,43 ms e p99 541,69 ms; 48/48 requests sem erro. Repetir com múltiplas sessões/tenants, mais ondas e perfilamento de autenticação/pool/consulta/serialização antes de otimizar. A consulta observada usou índice atual e executou em 1,446 ms, então a causa da latência HTTP ainda não foi isolada.
 - [ ] **OPEN / P2 — mapa ausente no Browser:** painel do Motoboy ficou visível, mas sem container Leaflet/canvas na execução offline. Investigar dependências/runtime local e repetir CDP; não inferir falha com GPS ou mapa físico.
