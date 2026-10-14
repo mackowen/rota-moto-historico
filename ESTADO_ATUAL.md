@@ -953,3 +953,18 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md) e [RESUMOS/0139.md](RESUMOS/0139.md).
 - **Oficial:** nenhuma consulta de ledger, migration ou smoke test após a falha do backup. Aplicativos sem push; Restaurante apenas commit local; histórico publicado somente na branch autorizada.
 
 Ver [REGISTROS/0153.md](REGISTROS/0153.md) e [RESUMOS/0153.md](RESUMOS/0153.md). Não iniciar Campanha 0154.
+
+## Atualização vigente — Campanha 0155: performance e concorrência (2026-10-14)
+
+Esta atualização registra as medições atuais sem remover fotografias históricas. Estado geral **PARTIAL**: ganho local no cálculo de sync comprovado; API curta até dez clientes concluiu sem erros, mas p95/p99 requerem perfilamento; mapa não renderizou no browser offline.
+
+- **RESOLVED — busca de status de sync Motoboy:** substituída busca linear repetida por índice Map e leituras IndexedDB paralelas. Em dez conjuntos virtuais × 500 fatos/statuses, p50 foi 36,058→15,448 ms (2,33×), cinco rodadas; teste unitário e suites passaram.
+- **PARTIAL — API/PostgreSQL:** somente `rotamoto_e2e`, 250 Orders sintéticos retidos por manifesto, 48/48 respostas sem erro e 22,13 req/s agregadas a 10 clientes. p95 510,43 ms/p99 541,69 ms. Plano usou o índice tenant existente, 250 linhas e 1,446 ms; sem justificativa para novo índice ou schema.
+- **PARTIAL — Browser listas/mobile:** Restaurante com 250 Orders: lista 240 ms, filtro 59 ms; sem overflow desktop/mobile ou erros inesperados. Motoboy sem overflow, mas sem Leaflet container/canvas no painel do mapa. Capturas/traces/manifests em `browser-tests/evidencias/campanhas/0155/performance-run-05/`.
+- **PASS no escopo executado — regressões:** `npm test` dos dois apps e suites PostgreSQL runtime/worker/99Food, tenant isolation (47 tabelas/38 policies), disponibilidade concorrente e logística passaram exclusivamente no E2E.
+- **OPEN / P2 — API p95:** perfilar autenticação, pool, consulta e serialização com execuções repetidas e sessões/tenants distintos. Ensaio curto local não define SLO/capacidade de produção.
+- **OPEN / P2 — mapa Browser:** investigar a ausência de container/canvas sem correção especulativa e repetir CDP.
+- **OPEN / P2 — estimativa do plano:** a estimativa foi 1 linha contra 250 reais; apurar se estatísticas da fixture nova explicam a diferença, sem `ANALYZE`/DDL nesta campanha.
+- **PARTIAL — escala física:** hardware/rede móvel sustentados, suspensão Android, GPS/câmera e integrações comerciais não foram testados.
+
+Commits locais: Motoboy `b2d2233`, Restaurante `4aa0a7c`; sem push. Browser QA recebeu runner/evidências locais. O oficial `rotamoto` não foi acessado. Detalhes em [REGISTROS/0155.md](REGISTROS/0155.md) e [RESUMOS/0155.md](RESUMOS/0155.md). Nenhuma Campanha 0156 iniciada.

@@ -992,3 +992,13 @@ Esta atualização supersede somente estados de implementação documentados com
 | 0153-99-5 / pedidos e logística | Order vs Delivery/fulfillment; P1; **RESOLVED no escopo sintético** | Testes confirmaram Order canônico/outbox uma vez, sync unificada e ausência de Delivery/QR para fulfillment da plataforma; entrega da loja exige Delivery própria concluída. | Validar com credenciais/sandbox externos somente após o rate limiter e migration oficial, sem criar Delivery fora do contrato. |
 
 Referências oficiais, hashes, testes e evidência do bloqueio estão em [REGISTROS/0153.md](REGISTROS/0153.md). Não iniciar Campanha 0154.
+
+## Campanha 0155 — pendências atuais de desempenho
+
+- [ ] **OPEN / P2 — API p95 com 10 clientes:** benchmark curto em `rotamoto_e2e` teve 22,13 req/s, p95 510,43 ms e p99 541,69 ms; 48/48 requests sem erro. Repetir com múltiplas sessões/tenants, mais ondas e perfilamento de autenticação/pool/consulta/serialização antes de otimizar. A consulta observada usou índice atual e executou em 1,446 ms, então a causa da latência HTTP ainda não foi isolada.
+- [ ] **OPEN / P2 — mapa ausente no Browser:** painel do Motoboy ficou visível, mas sem container Leaflet/canvas na execução offline. Investigar dependências/runtime local e repetir CDP; não inferir falha com GPS ou mapa físico.
+- [ ] **OPEN / P2 — estimativa do plano:** `EXPLAIN ANALYZE` estimou 1 registro e encontrou 250 na fixture nova; confirmar se estatísticas/camada de dados explicam o erro de cardinalidade. Nenhum `ANALYZE` ou DDL realizado.
+- [ ] **PARTIAL — validação operacional sustentada:** Termux mediu apenas carga curta; testar bateria/memória, rede móvel, suspensão/reinício e dispositivo físico em campanha própria antes de declarar capacidade sustentada.
+- [x] **RESOLVED no escopo medido — cálculo de sync Motoboy:** status das operações agora é indexado em Map e leituras IndexedDB são concorrentes; 10×500 fatos/statuses caiu de p50 36,058 para 15,448 ms (2,33×). Não extrapolar para latência de API/produção.
+
+Evidências, método e commits em [REGISTROS/0155.md](REGISTROS/0155.md). Nenhuma mudança de schema e nenhum acesso ao banco oficial nesta campanha.
