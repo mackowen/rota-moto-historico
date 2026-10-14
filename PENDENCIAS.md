@@ -1,4 +1,12 @@
-## Atualização vigente — Preparatória 0165-P (2026-10-14)
+## Atualização vigente — Campanha 0167 (2026-10-14)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
+|---|---|---|---|
+| 0167-OFFLINE / 0158, 0164–0167 | PWA, IndexedDB outbox e reconexão; P1; **PARTIAL** | Suites unitárias passam; Browser upgrade expirou esperando Service Worker em `waiting`; nenhum replay autenticado ocorreu sobre o Order 0166. | Diagnosticar ativação do worker; depois validar perfil persistente, 503/ACK perdido, restart, replay único e convergência bilateral no fluxo 0166. |
+
+Estado e fotografia anterior preservados abaixo; detalhe em [REGISTROS/0167.md](REGISTROS/0167.md).
+
+## Atualização histórica — Preparatória 0165-P (2026-10-14)
 
 Esta atualização registra o diagnóstico estrutural do banco oficial e a publicação Git. Ela não apaga snapshots de pendências da Campanha 0165 nem muda seu estado de continuidade/produção.
 

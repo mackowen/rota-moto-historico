@@ -1,4 +1,8 @@
-## Estado atual — Campanha 0166: ciclo completo de entrega (2026-10-14)
+## Estado atual — Campanha 0167: offline e recuperação (2026-10-14)
+
+**Resultado PARTIAL.** Suites automatizadas dos dois apps passaram para persistência, replay e reconciliação. A falha PWA CDP ocorreu antes de a versão anterior do Service Worker alcançar `waiting`; nenhuma operação comercial autenticada foi recuperada após 503/ACK perdido. Assim, recuperação end-to-end e convergência bilateral seguem sem comprovação. O teste de sync autenticado depende do ciclo 0166. Ver [REGISTROS/0167.md](REGISTROS/0167.md) e [RESUMOS/0167.md](RESUMOS/0167.md).
+
+## Estado anterior — Campanha 0166: ciclo completo de entrega (2026-10-14)
 
 **Resultado PARTIAL.** `npm test` passou no Restaurante e Motoboy; PostgreSQL E2E de logística passou com rollback em `rotamoto_e2e`. Chromium/CDP em perfil descartável comprovou criação de pedido próprio pela UI apenas em IndexedDB local. A sessão era offline/anônima; não há prova de envio ao PostgreSQL, despacho, aceite, coleta, rota, chegada, conclusão ou convergência bilateral. Nenhum Order/Delivery/status foi pré-semeado. Nenhum acesso ao banco oficial ou alteração no Motoboy/Browser QA ocorreu.
 
