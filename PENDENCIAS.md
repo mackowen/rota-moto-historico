@@ -1242,7 +1242,7 @@ Manifesto E2E correto e limites em [REGISTROS/0174.md](REGISTROS/0174.md).
 `npm test` dos dois apps, suites PG logística/territorial e runner de concorrência foram aprovados no escopo registrado; evidências, commits e limitações em [REGISTROS/0175.md](REGISTROS/0175.md).
 
 
-## Atualização vigente — Campanha 0176
+## Fotografia da Campanha 0176 (histórica)
 
 - [x] **RESOLVED / P1 — convergência visual Order/Delivery (0172):** runner autenticado corrigido; reload, sync no Dashboard e navegação após handler pronto. DOM Restaurante mostra pedido `Finalizada`; IndexedDB conserva `Order.canonicalStatus=DELIVERED`/`deliveryStatus=DELIVERED` e `Delivery.status=DELIVERED` v6. Sem alteração funcional no produto.
 - [ ] **OPEN / P1 — Route (0177):** validar Route persistida via formulário legítimo e sequência de duas paradas; `CONTRACT.md` define `Route.deliveryIds` ordenado e autoridade de escrita do Restaurante.
@@ -1251,3 +1251,13 @@ Manifesto E2E correto e limites em [REGISTROS/0174.md](REGISTROS/0174.md).
 - [ ] **OPEN / P1 — DR (0180):** recovery set oficial atualizado e restore real permanecem proibidos sem autorização; somente fixture sintética/descarte autorizada.
 
 Evidência 0176: [REGISTROS/0176.md](REGISTROS/0176.md). Fixture sintética ficou retida em `rotamoto_e2e`; nenhum cleanup foi realizado.
+
+## Atualização vigente — Campanha 0177
+
+- [x] **RESOLVED / P1 — Route e execução de duas paradas:** Route criada pela UI com duas `deliveryIds` na ordem planejada; ambas executadas no Motoboy e sincronizadas ao Restaurante. PostgreSQL E2E confirmou 2 Deliveries `DELIVERED` v6, 10 eventos e 2 comprovantes.
+- [ ] **OPEN / P1 — financeiro com valores:** Earnings foram projetados, mas pedidos desta execução valiam zero; provar cálculo, taxa e repasse com Order não nula sem confundir valor comercial e logística.
+- [ ] **OPEN / P2 — exceção de mapa Restaurante:** Browser registrou `appendChild` no runtime Leaflet/MapLibre durante inicialização; reproduzir e corrigir a origem sem mascarar erros.
+- [ ] **OPEN / P1 — offline/PWA:** executar 503, timeout, ACK perdido, persistência IndexedDB e reconexão autenticada; dependente da jornada 0177 aprovada.
+- [ ] **OPEN / P1 — cancelamento/RETURN e concorrência:** exercitar depois da coleta, devolução ao fim da rota, recebimento do Restaurante e disputa de aceite.
+
+Evidências 0177: [REGISTROS/0177.md](REGISTROS/0177.md). Fixture mantida no `rotamoto_e2e`; nenhuma limpeza realizada.

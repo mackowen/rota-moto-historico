@@ -1156,3 +1156,10 @@ Estado **PARTIAL**. Duas sessões e dois tenants foram usados no teste PostgreSQ
 ## Campanha 0175 — estado vigente do lote 0171–0175
 
 Resultado **PARTIAL**. Infraestrutura autenticada 0171 PASS; 0172 chegou a `DELIVERED` no E2E mas a verificação de tela final Restaurante e Route ficaram pendentes; fault injection Browser 0173 ficou bloqueada; 0174 aprovou concorrência/RLS em disponibilidade e RETURN, com limites. `npm test` de ambos e testes PG logística/territorial/concorrência passaram. Banco oficial intocado. Ver [REGISTROS/0175.md](REGISTROS/0175.md).
+## Estado vigente — Campanha 0177
+
+**0177 PASS no planejamento e execução de duas entregas próprias.** A Route foi criada pela UI do Restaurante com duas paradas ordenadas; Motoboy concluiu ambas; PostgreSQL E2E confirmou eventos, comprovantes e Earnings relacionados; lista do Restaurante mostrou estado final sincronizado.
+
+Pendências que seguem vigentes: 0178 fault injection/offline e outbox após reabertura; 0179 valores financeiros não nulos, concorrência e RETURN; 0180 restauração isolada somente com artefato sintético autorizado. Earnings do 0177 tinham valor zero. A exceção de mapa MapLibre/Leaflet observada no Browser precisa ser diagnosticada. Nenhum acesso ao banco oficial.
+
+Detalhes em [REGISTROS/0177.md](REGISTROS/0177.md).
