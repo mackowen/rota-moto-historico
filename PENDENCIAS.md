@@ -1,6 +1,21 @@
-## Pendências vigentes — consolidação da Campanha 0162 (2026-10-14)
+## Pendências vigentes — consolidação da Campanha 0163 (2026-10-14)
 
-Esta seção passa a representar o estado atual de segurança. Os registros e matrizes anteriores permanecem preservados abaixo.
+Esta seção representa o estado atual mobile/PWA/acessibilidade. As consolidações 0162 e anteriores permanecem preservadas abaixo como snapshots históricos.
+
+| ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
+|---|---|---|---|
+| 0163-PWA-UPGRADE / ambos | Service Worker/cache/IndexedDB; P1; **BLOCKED** | Perfil Chromium persistente isolado deixou worker v42/v43.44 em `installing`, sem controlador; nenhum outbox foi escrito neste teste. | Diagnosticar install/activate com CDP/servidor compatível; repetir com versão anterior controlada, outbox pendente, fechamento/reabertura e reconexão. |
+| 0163-DELIVERY-E2E / ambos | UI, auth, despacho e sync; P1; **PARTIAL** | Formulário Restaurante criou Order local por UI (`AGUARDANDO/CREATED`); sessão 401/backend indisponível, sem atribuição ou operação no Motoboy. | Disponibilizar runtime/identidades sintéticas e completar cada etapa visual sem pré-semear Order/Delivery/status. |
+| 0163-ANDROID / Motoboy | GPS, câmera/QR, impressão e retomada; P1; **BLOCKED** | `adb devices -l` vazio; nenhum periférico físico; não foram solicitadas permissões. | Executar roteiro manual reproduzível em aparelho autorizado, com GPS, câmera, QR e impressora disponíveis. |
+| 0163-WCAG / ambos | Acessibilidade WCAG 2.2 AA; P2; **PARTIAL** | Heurística Chromium: botões com nomes e campos visíveis com labels; foco por Tab incompleto no Motoboy. Sem axe/scanner, leitor de tela, análise de contraste ou teclado integral. | Instalar/usar auditoria local aprovada e validar teclado/foco/contraste/leitor de tela manualmente em telas e roles completas. |
+| 0163-MOBILE / ambos | Responsividade e UX; P2; **PARTIAL** | 4 viewports portrait/desktop sem overflow; navegação principal passou. Paisagem, teclado virtual e safe areas físicas não testadas. | Repetir com orientação landscape, teclado virtual/safe areas e device real, incluindo formulários e modais. |
+| 0163-POSTGRES / E2E | Tenant isolation e RLS/FORCE; P1; **RESOLVED no teste** | `test:e2e-tenant-isolation` PASS em `rotamoto_e2e`; 47 relações, 38 protegidas com RLS/FORCE; manifesto retido `a724e2f6-baad-40d1-a517-0354b530ff98` tem rótulo legado `campaign=0160`. | Manter fixtures retidas; corrigir em campanha apropriada o rótulo do runner legado. Não acessar `rotamoto`. |
+
+O registro 0163 está em [REGISTROS/0163.md](REGISTROS/0163.md) e [RESUMOS/0163.md](RESUMOS/0163.md). A tabela da Campanha 0162 e o backlog histórico abaixo não foram removidos.
+
+## Snapshot anterior — pendências vigentes da Campanha 0162 (2026-10-14)
+
+Esta seção é o snapshot histórico da segurança na Campanha 0162. O estado vigente está na seção 0163 acima; registros e matrizes anteriores permanecem preservados abaixo.
 
 | ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
 |---|---|---|---|

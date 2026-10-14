@@ -1,4 +1,20 @@
-## Estado atual — Campanha 0162: auditoria SAST/SCA e segurança Full Stack (2026-10-14)
+## Estado atual — Campanha 0163: Android, PWA e acessibilidade (2026-10-14)
+
+**Resultado: PARTIAL.** Corrigida a ausência de manifesto PWA no Restaurante; suites completas Restaurante/Motoboy e isolamento PostgreSQL E2E passaram. Chromium/CDP percorreu quatro viewports e navegação local; o pedido foi criado pela UI e ficou apenas no IndexedDB local. A atualização persistente dos Service Workers ficou BLOCKED, o ciclo bilateral completo não foi alcançado e não havia dispositivo Android conectado. Não há declaração WCAG integral nem prontidão de produção.
+
+- Browser/CDP isolado: 360×800, 390×844, 412×915 e 1365×900, sem overflow; 10 destinos do Restaurante e seis abas do Motoboy ativos; nenhum erro de console ou HTTP inesperado. Capturas e runner em `../browser-tests/evidencias/campanhas/0163/9f73bda6-d3d0-4a29-9d9b-61702c3d9c18/` e `../browser-tests/campaign-0163-mobile-pwa.cjs`.
+- Pedido local de UI `QA0163-2e1c6e83` salvo como `AGUARDANDO/CREATED`, `sync=local`. Stub de sessão respondeu 401; APIs indisponíveis responderam 503. Nenhuma etapa de atribuição, aceitação ou entrega foi iniciada no Motoboy.
+- Restaurante agora declara manifesto PWA com ícones 192×192/512×512 e inclui os recursos no shell cache v43. Chromium leu manifesto/ícones (200); os workers antigos v42/v43.44 ficaram em `installing`, sem controlar a página. Não houve teste de outbox durante upgrade, instalação via prompt ou recuperação offline real.
+- `npm test` completo passou nos dois apps; `test:e2e-tenant-isolation` passou em `rotamoto_e2e`, sem acesso a `rotamoto`. Manifesto fixture retida `a724e2f6-baad-40d1-a517-0354b530ff98` permanece intacta e tem metadado legado `campaign=0160`.
+- Restaurante `codex/setup-workflow`: commit local `5667fc71cd523d93c9ca651ba709b28ed682d021`; Motoboy sem alteração, HEAD `baf00f788edf08bf7f555fc155068a4c5b24ba4f`; nenhum push nos aplicativos. Browser QA somente local.
+- A checagem de controles foi heurística: zero botões sem nome e zero campos visíveis sem label; Tab moveu foco no Restaurante, mas permaneceu no `body` ao final da rota de Ajuda do Motoboy. Sem axe, contraste/leitor de tela, orientação landscape ou teclado virtual.
+- `adb devices -l` sem dispositivos; nenhum teste físico GPS, câmera/QR, impressão, suspensão ou PWA Android. Sem alterações no Android.
+- Gates: `NAVIGATION_UX` PASS no escopo; `POSTGRES_SECURITY` PASS em E2E; `MOBILE_RESPONSIVENESS`, `ACCESSIBILITY_WCAG`, `PWA_INSTALLATION`, `OFFLINE_RECOVERY`, `FULL_DELIVERY_BROWSER_E2E` e `CROSS_APP_REGRESSION` PARTIAL; `PWA_UPGRADE`, `ANDROID_GPS`, `ANDROID_CAMERA_QR`, `ANDROID_PRINTING`, `PHYSICAL_DEVICE_VALIDATION` BLOCKED.
+- Restaurante: correção PWA/testes em commit local; Motoboy sem alterações/commit; Browser QA apenas runner/evidências sem push. Histórico publica somente os cinco documentos permitidos na branch autorizada.
+
+Registro: [REGISTROS/0163.md](REGISTROS/0163.md); resumo: [RESUMOS/0163.md](RESUMOS/0163.md). Próxima campanha indicada: 0164; não iniciada.
+
+## Registro anterior — Campanha 0162: auditoria SAST/SCA e segurança Full Stack (2026-10-14)
 
 **Resultado: PARTIAL; nenhuma vulnerabilidade explorável foi confirmada nos cenários revisados.** `npm audit` reportou zero advisories nos dois lockfiles; as suites completas dos apps, PostgreSQL E2E autenticado e Browser/CDP bilateral passaram no escopo executado. SAST dedicado não estava instalado; o scanner manual foi direcionado e não substitui análise semântica integral. A prontidão de produção não foi aprovada.
 
