@@ -1144,3 +1144,8 @@ Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceita
 ## Campanha 0173 — offline e recuperação
 
 Estado **BLOCKED** para fault injection Browser sobre a jornada autenticada, devido à confirmação cross-app pendente da 0172. Testes locais de outbox, storage, sync e Service Worker passaram como parte de `npm test`, sem equivaler aos cenários de falha solicitados. Nenhum perfil PWA persistente ou fixture foi limpo. Ver [REGISTROS/0173.md](REGISTROS/0173.md).
+
+
+## Campanha 0174 — concorrência E2E
+
+Estado **PARTIAL**. Duas sessões e dois tenants foram usados no teste PostgreSQL; locks, leases, RLS/FORCE, idempotência, RETURN e isolamento passaram no escopo do suite. Manifesto/schema sandbox 0174 retido. Testes concorrentes de Orders/Routes e reconciliação financeira permanecem pendentes. Ver [REGISTROS/0174.md](REGISTROS/0174.md).

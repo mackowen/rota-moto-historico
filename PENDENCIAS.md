@@ -1220,3 +1220,12 @@ Evidência e limitações em [REGISTROS/0172.md](REGISTROS/0172.md).
 - [x] **PARTIAL:** contratos e testes unitários de storage/sync/PWA aprovados na regressão, sem evidência de fault injection autenticada.
 
 Ver [REGISTROS/0173.md](REGISTROS/0173.md).
+
+
+## Atualização — Campanha 0174
+
+- [x] **RESOLVED no escopo do suite:** concorrência PostgreSQL de disponibilidade, fila/dispatch, RETURN, idempotência, leases e isolamento tenant com sessões distintas.
+- [ ] **OPEN / P1:** adicionar cenários concorrentes de criação/atribuição de Order/Delivery/Route e confirmar projeções no ciclo 0172.
+- [ ] **OPEN / P1:** validar reconciliação de Earning/valores sob concorrência e recuperação de worker com resultado desconhecido.
+
+Manifesto E2E correto e limites em [REGISTROS/0174.md](REGISTROS/0174.md).
