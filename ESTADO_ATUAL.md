@@ -1,4 +1,10 @@
-## Estado atual — Preparatória 0165-P: PostgreSQL oficial e publicação Git (2026-10-14)
+## Estado atual — Campanha 0166: ciclo completo de entrega (2026-10-14)
+
+**Resultado PARTIAL.** `npm test` passou no Restaurante e Motoboy; PostgreSQL E2E de logística passou com rollback em `rotamoto_e2e`. Chromium/CDP em perfil descartável comprovou criação de pedido próprio pela UI apenas em IndexedDB local. A sessão era offline/anônima; não há prova de envio ao PostgreSQL, despacho, aceite, coleta, rota, chegada, conclusão ou convergência bilateral. Nenhum Order/Delivery/status foi pré-semeado. Nenhum acesso ao banco oficial ou alteração no Motoboy/Browser QA ocorreu.
+
+Registro: [REGISTROS/0166.md](REGISTROS/0166.md); resumo: [RESUMOS/0166.md](RESUMOS/0166.md). Próxima campanha sequencial: 0167.
+
+## Estado anterior — Preparatória 0165-P: PostgreSQL oficial e publicação Git (2026-10-14)
 
 **Resultado: PASS para diagnóstico estrutural e publicação das branches; banco sem alterações.** A conexão read-only ao PostgreSQL 18.6 confirmou `rotamoto` com ledger consistente de 0001 a 0044 e checksums iguais às migrations versionadas. Não há migrations pendentes nem divergentes.
 

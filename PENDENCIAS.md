@@ -11,7 +11,16 @@ Esta atualização registra o diagnóstico estrutural do banco oficial e a publi
 
 **Estado:** migrations oficiais sem pendências até 0044; nenhuma atualização do banco executada. Isso não implica prontidão de produção. Gates, comandos, fingerprints e limites estão em [REGISTROS/0165-P.md](REGISTROS/0165-P.md). A fotografia da Campanha 0165 permanece abaixo; `PRODUCTION_READINESS=BLOCKED`. Não iniciar 0166.
 
-## Pendências vigentes — consolidação da Campanha 0165 (2026-10-14)
+## Atualização vigente — Campanha 0166 (2026-10-14)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
+|---|---|---|---|
+| 0166-LIFECYCLE / 0159, 0165–0166 | Order→Delivery→Route Restaurante/Motoboy; P1; **PARTIAL** | UI criou pedido próprio somente em IndexedDB offline; suites unitárias e logística PostgreSQL transacional passaram. | Browser CDP autenticado sem semeadura comercial; provar persistência, despacho, ciclo Motoboy, ACKs e convergência nos dois apps e PostgreSQL. |
+| 0166-REFUSAL-RETURN / 0147, 0165–0166 | Recusa/cancelamento/devolução; P1; **PARTIAL** | Regressões unitárias e de contrato passaram; jornada integral pela UI não repetida. | Cobrir via UI após runner autenticado e preservar estados/auditoria idempotentes. |
+
+Evidências detalhadas em [REGISTROS/0166.md](REGISTROS/0166.md). A fotografia anterior permanece abaixo sem remoção.
+
+## Pendências históricas — consolidação da Campanha 0165 (2026-10-14)
 
 Esta fotografia atualiza estados conforme evidências novas; snapshots anteriores permanecem preservados. Testes sintéticos não equivalem a homologação comercial, validação física ou operação sustentada.
 
