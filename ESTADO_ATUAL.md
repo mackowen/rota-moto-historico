@@ -1,3 +1,18 @@
+## Estado atual — Campanha 0161: modularização incremental (2026-10-14)
+
+**Resultado: PARTIAL.** O módulo de sync do Restaurante recebeu uma extração pequena e testada: a validação de envelope/protocolo foi separada da coordenação transacional de `sync-service.js`. Exportações, protocolo v1, autoridade de escrita, RLS, transações, eventos e IndexedDB foram mantidos.
+
+- **Antes/depois:** `sync-service.js` 1.021→962 linhas; novo `sync-validation.js` 72 linhas. O total de linhas cresceu 13 e não se afirma benefício por redução de tamanho. Um gráfico estático de 70 arquivos backend encontrou zero ciclos; `sync-validation.js` não tem imports e é usado apenas pelo serviço.
+- **Caracterização:** teste isolado passou antes e depois da extração: limite/forma do envelope, IDs, device, coleções permitidas, credenciais, contagem, eventos e erros v1. Exportações públicas (`SyncError`, `validatePacket`, `ENTITY_ARRAYS`) continuam em `sync-service.js`.
+- **Regressões:** `npm test` completo dos dois apps, `npm run test:sync`, paridade cross-app, guards, PostgreSQL tenant/RLS, domínio/sync e logística passaram. PostgreSQL somente `rotamoto_e2e`; `test-domain-sync-postgres` e logistics usaram transação revertida; fixtures comprometidas ficaram manifestadas/retidas.
+- **Browser:** Chromium/CDP bilateral em 390×844 percorreu sync de eventos, RETURN e recebimento após HTTP 503. OperationResults confirmaram eventos `DeliveryEvent` como aceitos. Evidências locais em `../browser-tests/evidencias/campanhas/0161/sync-validation-browser/`; manifesto `eed0d20e-c4ee-4a0a-821a-4ce6d22a5d3f` retido.
+- **Desempenho:** microbenchmark da função pura (3.000 chamadas, mediana de cinco) 95,60 ms antes e 96,26 ms depois. Sem ganho demonstrado; não representa latência da API.
+- **Motoboy:** sem alterações. Seus módulos de execução, navegação, armazenamento e reconciliação existentes passaram. Extração do estado global/DOM de `app.js` foi adiada por falta de fronteira segura caracterizada.
+- **Commits:** Restaurante local `8e944f9011aa91f333da6e0bfdfea0082e29e76d`, sem push. Motoboy sem commit, HEAD `baf00f788edf08bf7f555fc155068a4c5b24ba4f`. Browser QA sem publicação; preservou runners/evidências anteriores.
+- **Gates:** arquitetura PARTIAL, contrato PASS, cross-app sync PASS, PostgreSQL security PASS, Browser PASS no fluxo exercitado, persistência offline PASS no escopo das suites, manutenção PARTIAL.
+
+Riscos arquiteturais remanescentes: `app.js` de ambos os aplicativos continua grande; `sync-service.js` ainda combina autorização, validação de entidades, transações, eventos e projeções. A divisão desses fluxos foi adiada até haver testes de caracterização por responsabilidade. Registro completo em [REGISTROS/0161.md](REGISTROS/0161.md); resumo em [RESUMOS/0161.md](RESUMOS/0161.md). Não iniciar automaticamente Campanha 0162.
+
 ## Estado atual — Campanha 0160: revisão final e próximo ciclo (2026-10-14)
 
 **Resultado: PARTIAL; prontidão para produção BLOCKED.** A suíte completa dos dois aplicativos passou. PostgreSQL E2E, runner de concorrência protegido e Browser cobriram segurança tenant, workers, providers sintéticos, RETURN bilateral, IndexedDB crash/restart e mapa local em desktop/mobile. O runner de concorrência que removia seu sandbox foi corrigido para manifestar e reter; o runner legado de rollback de migrations agora é bloqueado antes de conectar ao banco compartilhado.

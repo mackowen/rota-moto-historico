@@ -1,3 +1,17 @@
+## Pendências vigentes — consolidação da Campanha 0161 (2026-10-14)
+
+Este bloco registra o estado mais recente. A matriz original 0151–0160 e as fotografias anteriores permanecem abaixo, sem reescrita.
+
+| ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
+|---|---|---|---|
+| 0161-SYNC-VAL / Restaurante | Fronteira de validação sync; P2; **RESOLVED** | Envelope e validações puras extraídas para `backend/domain/sync-validation.js`; testes pré/pós, suites, PG e Browser passaram; exports v1 preservados. | Manter caracterização em toda mudança do protocolo. |
+| 0157-A1 / Restaurante e Motoboy | Modularização de `app.js`; P2; **OPEN** | Medidas atuais: 1.262 e 1.003 linhas. Ambos contêm acoplamento entre UI/estado/coordenação; módulos adjacentes existentes foram testados. | Planejar caracterização de efeitos e fronteiras pequenas em campanha futura; evitar reescrita ampla. |
+| 0157-A2 / backend Restaurante | Separação de `sync-service.js`; P2; **PARTIAL** | Validação de envelope foi separada e importação não cria ciclo; autorização, validação de entidade, transação, aplicação de evento e projeção continuam no serviço. | Mapear responsabilidades restantes e testar uma fronteira por vez antes de extraí-las. |
+| 0161-MOTO / Motoboy | Estado global de `app.js`; P2; **DEFERRED** | Módulos de workflow, navegação, IndexedDB, confirmação e reconciliação já são separados e passaram; ações remanescentes dependem de estado global/DOM/locks. | Só extrair com seam caracterizada e testes do ciclo local/offline; Motoboy permaneceu sem alterações nesta campanha. |
+| 0161-PERF / backend sync | Custo da validação de pacote; P3; **PARTIAL** | Microbenchmark sintético de 3.000 chamadas: 95,60 ms antes, 96,26 ms depois; não demonstra ganho nem regressão de API. | Não otimizar sem benchmark de endpoint controlado e perfil de carga representativo. |
+
+Não iniciar automaticamente Campanha 0162. A seção anterior da Campanha 0160 permanece como registro histórico.
+
 ## Pendências vigentes — consolidação da Campanha 0160 (2026-10-14)
 
 A matriz diferencia o plano original 0151–0160 das campanhas realmente executadas. Registros anteriores seguem intactos; esta seção atualiza apenas o estado vigente.
