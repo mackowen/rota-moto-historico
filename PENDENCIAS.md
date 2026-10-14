@@ -1,3 +1,21 @@
+## Pendências vigentes — consolidação da Campanha 0162 (2026-10-14)
+
+Esta seção passa a representar o estado atual de segurança. Os registros e matrizes anteriores permanecem preservados abaixo.
+
+| ID/origem | Componente; prioridade; estado | Evidência | Próxima ação/dependência |
+|---|---|---|---|
+| 0162-SAST / apps | SAST local; P1; **PARTIAL** | Revisão manual e buscas locais não confirmaram vulnerabilidade. Sem `semgrep`, `njsscan`, `trivy`, `eslint`, `retire` ou scanner equivalente instalado no Termux ARM64. | Selecionar ferramenta local compatível, fixar versão e executar sem upload de código; revisar alertas manualmente. |
+| 0162-SCA / dependências | Dependências diretas/transitivas; P1; **RESOLVED no snapshot** | `npm audit --json` nos lockfiles Restaurante/Motoboy: zero advisories em todas as severidades em 2026-10-14. | Repetir em cada release; advisory feed é temporal. |
+| 0162-AUTH / identidade | Sessão, MFA, CSRF, RBAC e tenant; P1; **RESOLVED no escopo testado** | Suites completas, PostgreSQL transacional e Browser A/B validaram sessão/CSRF negativos e negação cross-tenant sem mutação. | Ampliar a matriz DAST a todos endpoints e combinações de roles. |
+| 0162-RLS / PostgreSQL | RLS/FORCE e privilégios; P1; **RESOLVED em `rotamoto_e2e`** | Catálogo read-only: 47 tabelas; 38 RLS, 38 FORCE e uma policy por relação protegida; quatro roles sem bypass/flags administrativos. | Revalidar após mudanças de schema; oficial não foi acessado nesta campanha. |
+| 0162-WEBHOOK / providers | iFood, Keeta, 99Food; P1; **PARTIAL** | Testes sintéticos locais de assinatura/raw body e replay passaram; Browser focou cancelamento/RETURN iFood. Runtime completo e sandbox dos três providers não executados. | Executar cobertura runtime por provider em E2E manifestado; homologação externa requer onboarding/credenciais autorizadas. |
+| 0162-SECRETS / repositórios | Secrets e logs; P1; **RESOLVED no conjunto examinado** | Nenhum arquivo privado de credencial versionado foi encontrado; saídas de teste não expuseram segredos. | Repetir scan de conteúdo versionado e CI em cada release; a chave de backup não foi acessada. |
+| 0162-DAST / APIs | Cobertura autenticada completa; P2; **PARTIAL** | Browser 390×844 e PG E2E cobriram sessão, CSRF, autorização A/B, replay e recebimento; não houve fuzzing nem exercício de cada endpoint/role. O runner não capturou console errors. | Ampliar casos negativos de forma controlada; adicionar captura de console e falhas de rede no runner futuro, sem alterar evidências anteriores. |
+| 0158-DR / continuidade | Backup externo, snapshot, retenção e RPO/RTO; P1; **OPEN** | Pendência anterior preservada; não acessada ou alterada nesta campanha. | Seguir planejamento de continuidade; sem acesso à chave nesta auditoria. |
+| 0152-EXT / homologação | Providers externos; P1 externo; **BLOCKED_EXTERNAL** | Sem chamadas comerciais ou credenciais externas nesta campanha. | Onboarding/sandbox, autorização formal e homologação pelo provider. |
+
+**Contagem desta seção:** 9 itens — RESOLVED 4 (inclui estados limitados por escopo) · PARTIAL 3 · OPEN 1 · BLOCKED_EXTERNAL 1. Os qualificadores de escopo fazem parte do estado e não significam cobertura universal. Não iniciar Campanha 0163 automaticamente.
+
 ## Pendências vigentes — consolidação da Campanha 0161 (2026-10-14)
 
 Este bloco registra o estado mais recente. A matriz original 0151–0160 e as fotografias anteriores permanecem abaixo, sem reescrita.

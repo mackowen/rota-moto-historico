@@ -1,3 +1,16 @@
+## Estado atual — Campanha 0162: auditoria SAST/SCA e segurança Full Stack (2026-10-14)
+
+**Resultado: PARTIAL; nenhuma vulnerabilidade explorável foi confirmada nos cenários revisados.** `npm audit` reportou zero advisories nos dois lockfiles; as suites completas dos apps, PostgreSQL E2E autenticado e Browser/CDP bilateral passaram no escopo executado. SAST dedicado não estava instalado; o scanner manual foi direcionado e não substitui análise semântica integral. A prontidão de produção não foi aprovada.
+
+- Restaurante `codex/setup-workflow`: SHA `8e944f9011aa91f333da6e0bfdfea0082e29e76d`, sem alterações nesta campanha. Motoboy `codex/setup-workflow`: SHA `baf00f788edf08bf7f555fc155068a4c5b24ba4f`, sem alterações. Histórico será publicado somente com os cinco documentos autorizados.
+- Segurança PostgreSQL somente em `rotamoto_e2e`: consulta `BEGIN READ ONLY` mostrou 47 tabelas, 38 com RLS/FORCE e policy única; roles consultadas sem flags privilegiadas. O teste `test-domain-sync-postgres.js` concluiu tenant A/B, CSRF, sessão e RETURN com transação revertida. `rotamoto` não foi acessado.
+- Browser/CDP `campaign-0149-tenant-security.cjs`, campanha etiquetada 0162, terminou PASS em viewport 390×844 nos dois apps: negativas de sessão/CSRF, race cross-tenant negada, recebimento autorizado e retry após 503 com um único evento. Manifesto `e472b65c-e906-4506-afed-057329f06f8a` está `RETAINED`; evidências locais em `../browser-tests/evidencias/campanhas/0162/security-fullstack-01/`. O runner não instrumentou erros de console; esse item não foi medido.
+- Webhooks: verificações de assinatura/raw body e identificador de replay passaram em testes sintéticos locais. A paridade de runtime completa por provider e homologação externa não foram exercitadas. Nenhum segredo comercial, chave de backup ou dado do banco oficial foi acessado.
+- Gates: SAST PARTIAL; SCA PASS; auth/session PASS; RBAC/tenant PASS; PostgreSQL RLS PASS em E2E; webhook provider PARTIAL; sync replay PASS; segredos PASS no conjunto examinado; regressões cross-app PASS; Browser security PASS no cenário; `SECURITY_READINESS` PARTIAL.
+- Pendências P1: SAST local suportado/fixado em ARM64; ampliar DAST por endpoint/role; completar runtime de webhooks dos três providers com fixtures e manifestos. Permanecem onboarding/homologação externa, testes físicos Android/GPS/câmera e pendências de continuidade/backup.
+
+Registro detalhado: [REGISTROS/0162.md](REGISTROS/0162.md); resumo: [RESUMOS/0162.md](RESUMOS/0162.md). Não iniciar automaticamente Campanha 0163.
+
 ## Estado atual — Campanha 0161: modularização incremental (2026-10-14)
 
 **Resultado: PARTIAL.** O módulo de sync do Restaurante recebeu uma extração pequena e testada: a validação de envelope/protocolo foi separada da coordenação transacional de `sync-service.js`. Exportações, protocolo v1, autoridade de escrita, RLS, transações, eventos e IndexedDB foram mantidos.
