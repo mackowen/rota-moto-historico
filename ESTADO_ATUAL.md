@@ -1163,3 +1163,8 @@ Resultado **PARTIAL**. Infraestrutura autenticada 0171 PASS; 0172 chegou a `DELI
 Pendências que seguem vigentes: 0178 fault injection/offline e outbox após reabertura; 0179 valores financeiros não nulos, concorrência e RETURN; 0180 restauração isolada somente com artefato sintético autorizado. Earnings do 0177 tinham valor zero. A exceção de mapa MapLibre/Leaflet observada no Browser precisa ser diagnosticada. Nenhum acesso ao banco oficial.
 
 Detalhes em [REGISTROS/0177.md](REGISTROS/0177.md).
+## Estado vigente — Campanha 0178
+
+**0178 PARTIAL.** ACK perdido depois de commit foi idempotente; operação `ARRIVED` permaneceu no IndexedDB/outbox durante offline e recarga; após reconectar/reautenticar, os dois apps convergiram. Chromium reportou online após reload, portanto reabertura ainda offline não passou; timeout, encerramento do processo e atualização do SW não foram exercitados. Um erro transitório `CSRF_INVALID` foi rejeitado, seguido por sync bem-sucedido. Mapa do Restaurante continua com exceção Browser sem correção nesta execução.
+
+Ver [REGISTROS/0178.md](REGISTROS/0178.md). Próximo bloco: valores financeiros não nulos, concorrência e RETURN; recuperação e observabilidade para 0180.

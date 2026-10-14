@@ -1252,7 +1252,7 @@ Manifesto E2E correto e limites em [REGISTROS/0174.md](REGISTROS/0174.md).
 
 Evidência 0176: [REGISTROS/0176.md](REGISTROS/0176.md). Fixture sintética ficou retida em `rotamoto_e2e`; nenhum cleanup foi realizado.
 
-## Atualização vigente — Campanha 0177
+## Fotografia da Campanha 0177 (histórica)
 
 - [x] **RESOLVED / P1 — Route e execução de duas paradas:** Route criada pela UI com duas `deliveryIds` na ordem planejada; ambas executadas no Motoboy e sincronizadas ao Restaurante. PostgreSQL E2E confirmou 2 Deliveries `DELIVERED` v6, 10 eventos e 2 comprovantes.
 - [ ] **OPEN / P1 — financeiro com valores:** Earnings foram projetados, mas pedidos desta execução valiam zero; provar cálculo, taxa e repasse com Order não nula sem confundir valor comercial e logística.
@@ -1261,3 +1261,15 @@ Evidência 0176: [REGISTROS/0176.md](REGISTROS/0176.md). Fixture sintética fico
 - [ ] **OPEN / P1 — cancelamento/RETURN e concorrência:** exercitar depois da coleta, devolução ao fim da rota, recebimento do Restaurante e disputa de aceite.
 
 Evidências 0177: [REGISTROS/0177.md](REGISTROS/0177.md). Fixture mantida no `rotamoto_e2e`; nenhuma limpeza realizada.
+
+## Atualização vigente — Campanha 0178
+
+- [x] **RESOLVED / P1 — replay após ACK perdido:** upstream confirmou push com HTTP 200, resposta ao Browser foi 503 e o retry deixou cinco DeliveryEvents canônicos distintos.
+- [x] **RESOLVED no escopo do browser — outbox após operação offline e reload:** `DELIVERY_ARRIVED` sobreviveu no IndexedDB/outbox com Service Worker controlador e convergiu após reconexão.
+- [ ] **OPEN / P1 — operação contínua offline após reabrir:** Chromium reportou `navigator.onLine=true` após reload; sessão visual precisou autenticar novamente após reconexão. Testar timeout e encerramento/reabertura do processo em perfil persistente isolado.
+- [ ] **OPEN / P2 — erro transitório de instalação sync:** uma tentativa após reautenticação recebeu 403 `CSRF_INVALID`; sync operacional posterior passou. Investigar a corrida de atualização do token/instalação sem relaxar CSRF.
+- [ ] **OPEN / P2 — mapa Restaurante:** exceção MapLibre/Leaflet `appendChild` registrada em 0177–0178.
+- [ ] **OPEN / P1 — 0179 financeiro e logística:** valor de Earning não nulo, concorrência de aceite/atribuição e jornada RETURN integrada.
+- [ ] **OPEN / P1 — 0180 DR:** restore isolado de artefato autorizado atualizado; esta campanha não acessou backup real/chave nem banco oficial.
+
+Ver [REGISTROS/0178.md](REGISTROS/0178.md). Fixtures, audit log e evidências retidos.
