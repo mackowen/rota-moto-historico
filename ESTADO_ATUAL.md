@@ -8,7 +8,7 @@
 - **Regressões:** npm test Restaurante e Motoboy passaram; identidade HTTP/PG, sync/RETURN, isolamento RLS (47 tabelas, 38 políticas FORCE), Browser E2E de lista/filtro/mapa desktop/mobile passaram. Fixtures rotamoto_e2e foram identificadas e retidas, sem limpeza. Banco oficial não acessado.
 - **Gates:** API_PROFILING PASS; API_CONCURRENCY PARTIAL; POSTGRES_QUERY_PLAN PASS; MOTOBOY_MAP_RENDER PASS; BROWSER_E2E PASS; SECURITY_REGRESSION PASS; PERFORMANCE_COMPARISON PARTIAL.
 
-HEAD inicial: Restaurante 4aa0a7c; Motoboy b2d2233. HEAD final local: Restaurante cc0008f6479454aa82992f9ae5587de93262c7a8; Motoboy baf00f788edf08bf7f555fc155068a4c5b24ba4f. Ambos sem push. Histórico será publicado somente na branch autorizada; Browser QA permanece local. Consulte REGISTROS/0156.md, RESUMOS/0156.md e evidências em ../browser-tests/evidencias/campanhas/0156/. Não iniciar Campanha 0157.
+HEAD inicial: Restaurante 4aa0a7c; Motoboy b2d2233. HEAD final local: Restaurante cc0008f6479454aa82992f9ae5587de93262c7a8; Motoboy baf00f788edf08bf7f555fc155068a4c5b24ba4f. Ambos sem push. Histórico publicado por fast-forward em origin/codex/f9-browser-e2e-0057; Browser QA permanece local. Consulte REGISTROS/0156.md, RESUMOS/0156.md e evidências em ../browser-tests/evidencias/campanhas/0156/. Não iniciar Campanha 0157.
 
 ## Registro histórico — Campanha 0154: backup e finalização 99Food (2026-10-14)
 
