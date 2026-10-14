@@ -1,3 +1,18 @@
+## Estado vigente — Campanha 0152: contrato e integração 99Food (2026-10-14)
+
+**Resultado: PARTIAL.** O portal oficial foi pesquisado; um adapter local do 99Food Protocol (Recommended) valida assinatura webhook, IDs Long, envelope, subconjunto dos estados/fulfillment e operações de pedido com transporte fake. A UI descreve precisamente o estado. Runtime/persistência 99Food permanece desabilitado; não declarar homologação nem prontidão externa.
+
+- **Fontes oficiais:** páginas próprias do portal 99Food (webhook 1981, order detail 1983, assinatura 1925, token 1929/1931, limits 1923, requirements 1889/1891), perfil 99Food no Open Delivery e docs Open Delivery V1.7.0 estável/V2.0.0-rc; URLs e diferenças em [REGISTROS/0152.md](REGISTROS/0152.md) e `repos/rota-moto-restaurante/docs/integrations/99FOOD.md`.
+- **Implementado local:** parser lossless Long, assinatura de requests/webhooks, normalização inicial de Order/status/fulfillment, detalhe, confirm/ready/delivered self-delivery/cancelamento/cancel-request/refund-request. `canonicalOrder` só recebeu branch 99Food. Nenhuma Delivery/QR/motoboy é gerada.
+- **Runtime bloqueado internamente:** migration 0035, runtime e worker limitam provider a iFood/Keeta; handler 99Food permanece 503. 99Food não tem config de secret/app store, route, inbox/outbox, processamento, projeção ou comandos persistentes. Não fizemos migration/DDL.
+- **Protocolos:** 99Food Protocol é escolhido para o adapter. Open Delivery é outra família, com OAuth e polling/ack; não foi misturada ou ativada sem confirmar qual foi provisionada à aplicação. Perfil de aderente lista Logistics “in development”; sem quote/dispatch/tracking público comprovado.
+- **Testes:** `npm test` completo Restaurante e Motoboy PASS; teste novo de protocolo, integração/adapters existentes PASS. PostgreSQL runtime e worker E2E PASS em `rotamoto_e2e` para regressões atuais; não exercitam provider 99Food. Browser Chromium/CDP PASS para lista unificada + configurações mobile 390 px, Pedido externo sem Delivery/QR.
+- **Fixtures:** manifests do runtime `12e9cbc0-4c5b-414d-aedb-0087fda9a25b` e worker `77bb502c-1df0-4499-a9e5-e73e0f837c32` são `RETAINED`: há fixtures sintéticas ainda no E2E, com inventário scoped e `audit_log=0`; IDs/contagens registrados. Não houve limpeza adicional. Manifest `57cc3737-8de4-4c88-8854-0cd293d5dd51` ficou `FAILED` sem conectar/escrever após guard por falta de `NODE_ENV=test`. Browser final rollback manifest `ae7331ef-22c2-4b57-b1dc-23b234720160` `COMPLETED`; falhas intermediárias preservadas.
+- **Gates externos:** app credentials, store binding, seleção de protocolo, sandbox, whitelist/certificação e homologação 99Food permanecem **BLOCKED_EXTERNAL**. Nenhuma chamada real foi feita. iFood/Keeta também não foram homologados nesta campanha.
+- **Publicação:** Restaurante `3be7e4940a79374fe19166216ec747626cbe1dbc` local, sem push; Motoboy sem commit; Browser QA HEAD `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`, sem commit/push. Histórico publicado somente em `codex/f9-browser-e2e-0057`; SHA final registrado no resumo/índice.
+
+`rotamoto` não foi acessado; nenhuma migration, DDL, deploy ou chamada comercial foi realizada. **READY_FOR_EXTERNAL_HOMOLOGATION: NO.** Pendências da trilha estão em [PENDENCIAS.md](PENDENCIAS.md), seção 0152; não iniciar Campanha 0153.
+
 ## Estado vigente — Campanha 0151: auditoria de segurança Full Stack (2026-10-14)
 
 **Resultado: PARTIAL.** Nenhuma vulnerabilidade atual foi confirmada nos cenários exercitados. Testes unitários completos, SCA, PostgreSQL E2E e Browser E2E passaram nos escopos declarados; SAST dedicado não está instalado e inventário global de fixtures antigas permanece bloqueado por ACL.
