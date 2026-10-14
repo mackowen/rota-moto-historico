@@ -1262,7 +1262,7 @@ Evidência 0176: [REGISTROS/0176.md](REGISTROS/0176.md). Fixture sintética fico
 
 Evidências 0177: [REGISTROS/0177.md](REGISTROS/0177.md). Fixture mantida no `rotamoto_e2e`; nenhuma limpeza realizada.
 
-## Atualização vigente — Campanha 0178
+## Fotografia da Campanha 0178 (histórica)
 
 - [x] **RESOLVED / P1 — replay após ACK perdido:** upstream confirmou push com HTTP 200, resposta ao Browser foi 503 e o retry deixou cinco DeliveryEvents canônicos distintos.
 - [x] **RESOLVED no escopo do browser — outbox após operação offline e reload:** `DELIVERY_ARRIVED` sobreviveu no IndexedDB/outbox com Service Worker controlador e convergiu após reconexão.
@@ -1273,3 +1273,14 @@ Evidências 0177: [REGISTROS/0177.md](REGISTROS/0177.md). Fixture mantida no `ro
 - [ ] **OPEN / P1 — 0180 DR:** restore isolado de artefato autorizado atualizado; esta campanha não acessou backup real/chave nem banco oficial.
 
 Ver [REGISTROS/0178.md](REGISTROS/0178.md). Fixtures, audit log e evidências retidos.
+
+## Atualização vigente — Campanha 0179
+
+- [x] **RESOLVED no cenário E2E / P1 — RETURN bilateral:** cancelamento pós-coleta com frota própria gerou RETURN no fim da rota; Motoboy registrou entrega física; Restaurante confirmou; custody `RECEIVED`; retry após 503 manteve exatamente um evento e nenhum comprovante foi inventado.
+- [ ] **OPEN / P1 — financeiro canônico:** concluir Browser/PostgreSQL com Order de valor não nulo e conferir valor, regra, taxa e Earning reconciliados nos dois apps. Regra unitária 8,40 BRL → 840 centavos passou; Orders 0177/0178 tinham amount zero.
+- [ ] **OPEN / P1 — concorrência de aceite:** duas sessões tentando aceitar/atribuir simultaneamente, com resultado único e isolamento multiempresa.
+- [ ] **OPEN / P1 — jornada independente de fixture preparada:** o subfluxo de cancelamento/RETURN da 0179 usa fixture de domínio; manter separada da jornada comercial por UI já aprovada na 0177.
+- [ ] **OPEN / P2 — erro de mapa e 403 CSRF transitório** observados durante Browser 0177/0178.
+- [ ] **OPEN / P1 — 0180 backup/DR:** recuperação oficial real continua fora do escopo sem acesso autorizado a artefato/chave; trabalhar apenas com fixture sintética descartável.
+
+Ver [REGISTROS/0179.md](REGISTROS/0179.md). Nenhuma fixture ou trilha de auditoria foi limpa.

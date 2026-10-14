@@ -1168,3 +1168,8 @@ Detalhes em [REGISTROS/0177.md](REGISTROS/0177.md).
 **0178 PARTIAL.** ACK perdido depois de commit foi idempotente; operação `ARRIVED` permaneceu no IndexedDB/outbox durante offline e recarga; após reconectar/reautenticar, os dois apps convergiram. Chromium reportou online após reload, portanto reabertura ainda offline não passou; timeout, encerramento do processo e atualização do SW não foram exercitados. Um erro transitório `CSRF_INVALID` foi rejeitado, seguido por sync bem-sucedido. Mapa do Restaurante continua com exceção Browser sem correção nesta execução.
 
 Ver [REGISTROS/0178.md](REGISTROS/0178.md). Próximo bloco: valores financeiros não nulos, concorrência e RETURN; recuperação e observabilidade para 0180.
+## Estado vigente — Campanha 0179
+
+**0179 PARTIAL.** RETURN bilateral pós-coleta passou no Browser autenticado: cancelamento comercial, retorno operacional ao final da rota, handover físico, confirmação pelo Restaurante, retry após 503 e custódia `RECEIVED`, com evento único e sem proof fictício. O teste utilizou fixture logística preparada. Ganho positivo foi validado apenas por unidade (840 centavos a partir de 8,40 BRL); disputa concorrente de aceite e reconciliação monetária Browser/PostgreSQL não foram demonstradas.
+
+Ver [REGISTROS/0179.md](REGISTROS/0179.md). A consolidação 0180 permanece limitada a testes sintéticos de backup e aos mecanismos de observabilidade exercitados no runtime E2E; sem acesso ao recovery set real ou banco oficial.
