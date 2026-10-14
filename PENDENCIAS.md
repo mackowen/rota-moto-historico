@@ -1,51 +1,44 @@
-## Pendências vigentes — consolidação da Campanha 0157 (2026-10-14)
+## Pendências vigentes — consolidação da Campanha 0158 (2026-10-14)
+
+A matriz abaixo separa o planejamento original 0151–0160 dos trabalhos executados nas campanhas reais. Os registros anteriores permanecem preservados como fotografias históricas; objetivos 0158–0160 foram informados pelo operador e não são BLOCKED por falta de documentação local.
 
 | ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / próxima ação |
 |---|---|---|---|
-| 0157-A1 / apps Restaurante e Motoboy | Modularização gradual de UI, estado, IndexedDB e sync; P2; **OPEN** | `app.js`: 1.262 linhas no Restaurante e 1.003 no Motoboy. Testes completos passam; não foi provado defeito de execução. | Campanha 0161: mapear dependências e extrair funções puras/domínios em passos pequenos com caracterização de offline/sync. |
-| 0157-A2 / backend Restaurante | Separação de regras e transações em `sync-service.js`; P2; **OPEN** | Arquivo com 1.021 linhas concentrando validação, autoridade, idempotência e projeções; E2E de sync/tenant passou. | Campanha 0161: plano de decomposição por caso de uso, sem alterar contrato nem fronteira transacional sem teste. |
-| 0157-A3 / integração de módulos | Dependência de utilitário UUID de Identity por logística/domínio; P3; **PARTIAL** | Import pequeno e atualmente coberto; não houve falha funcional. | Considerar utilitário comum somente durante a decomposição 0161 e após medir impacto. |
-| 0157-A4 / contrato compartilhado | Evitar drift entre cópias de contrato; P2; **PARTIAL** | `test-cross-app-contract-parity.js` passa nos dois projetos. | Manter teste como gate; avaliar versão/geração do contrato sem pacote compartilhado prematuro. |
-| 0151-SAST / Campanha 0151 | Cobertura automatizada SAST/SCA full stack; P1; **PARTIAL** | Nesta campanha, `npm test` e regressões passaram; scanner dedicado não foi executado. | Campanha 0162: selecionar ferramenta instalada/suportada, executar sobre ambos e resolver alertas confirmados. |
-| 0150-FIXTURE-AUDIT / 0150–0151 | Inventário global de fixtures antigas e resíduos sem identificação completa; P2; **BLOCKED** | RLS/roles restritas impedem visão global comprovada; fixtures e `audit_log` preservados. Nenhuma limpeza tentada. | Processo auditor read-only autorizado e IDs/propriedade verificáveis; não enfraquecer RLS nem apagar audit. |
-| 0156-API / 0155–0156 | Desempenho de API sustentado; P2; **PARTIAL** | Amostras de 10 sessões em Termux oscilaram: p95 melhorou numa rodada e alcançou ~568 ms noutra. | Campanha 0164: repetição controlada, resfriamento e métricas de CPU/memória/event loop; não extrapolar capacidade produtiva. |
-| 0156-MAP-PHYSICAL / 0155–0156 | GPS real, tiles do provedor e funcionamento offline persistente; P2; **PARTIAL** | Leaflet/tiles locais/marcador validados em CDP; GPS negado e tile foi sintético. | Campanha 0163: Android controlado, rede, permissões, suspensão e cache real. |
-| 0151-PHYSICAL / 0130–0151 | Câmera/QR/OCR/impressão, acessibilidade assistiva; P2; **BLOCKED** | Browser e corpus sintético não validam hardware, leitor de tela ou impressora física. | Campanha 0163: dispositivo e periféricos disponíveis; cobrir teclado, leitor, contraste e fluxos físicos. |
-| 0154-OPS / 0154 | Backup offsite, retenção recorrente e RPO/RTO; P1 operação; **DEFERRED** | Recovery set e restore isolado foram aprovados em 0154; destino offsite, rotina e custódia independente não definidos. | Campanha 0165: decisão de operador, destino e procedimento de recuperação; sem tocar banco oficial nesta campanha. |
-| 0152-EXT / 0152–0154 | Homologação comercial 99Food/iFood/Keeta; P1 externo; **BLOCKED** | Prontidão técnica local não equivale a autorização, sandbox, credenciais, whitelist ou aceite comercial. | Campanha 0165, após onboarding autorizado; nenhuma chamada real sem autorização. |
-| 0158-PLAN / planejamento 0151–0160 | Escopo original não encontrado; **BLOCKED** | Nenhuma especificação de 0158 foi localizada em documentos versionados do histórico disponível. | Recuperar a fonte original antes de definir trabalho ou critérios. |
-| 0159-PLAN / planejamento 0151–0160 | Escopo original não encontrado; **BLOCKED** | Nenhuma especificação de 0159 foi localizada em documentos versionados do histórico disponível. | Recuperar a fonte original antes de definir trabalho ou critérios. |
-| 0160-PLAN / planejamento 0151–0160 | Escopo original não encontrado; **BLOCKED** | Nenhuma especificação de 0160 foi localizada em documentos versionados do histórico disponível. | Recuperar a fonte original antes de definir trabalho ou critérios. |
+| 0158-DR-1 / 0154, 0158 | Atualidade do backup; P1 operação; **OPEN** | Recovery set íntegro da 0154 restaura isoladamente, porém contém ledger 0001–0041; a documentação registra schema 0044 ao fim de 0154. Banco oficial não foi consultado nesta campanha. | Gerar e validar backup atual em campanha autorizada, com preflight e sem substituir cópias existentes. |
+| 0158-DR-2 / 0158 | Cópia externa e custódia da chave; P1 operação; **OPEN** | Único set completo e sua chave estão no mesmo dispositivo Termux; nenhum destino externo configurado ou envio realizado. | Operador definir destino independente, custódia separada, acesso e procedimento de restauração. |
+| 0158-DR-3 / 0158 | RPO/RTO, agendamento, retenção e alertas; P1 operação; **OPEN** | Não há crond/crontab nem serviço runit de backup; restore medido em 3,448 s cobre apenas a chamada de restore. | Definir objetivos e frequência com o operador; implementar monitoramento e ensaio periódico após aprovação. |
+| 0158-DR-4 / dump 0153 | Dump avulso sem manifesto; P2; **RETAINED / INCOMPLETE** | `rotamoto-20261014.dump` está preservado; não foi verificado/restaurado como conjunto autenticado. | Manter retido; decidir em procedimento separado após comprovar propriedade e dependências. Não apagar automaticamente. |
+| 0158-APP-1 / 0158 | Continuidade de serviços/aplicativos; P2; **PARTIAL** | PostgreSQL, nginx e PHP-FPM estavam ativos; restore isolado e recuperação da outbox Chromium aprovados. Não houve restart de serviços oficiais nem reconstrução completa de host. | Exercitar recuperação de host/serviços em ambiente descartável; validar configuração sem interromper Termux ativo. |
+| 0158-IDB-1 / 0158 | Outbox local e Android físico; P2; **PARTIAL** | Chromium/CDP 390×844: uma operação pendente por app sobrevive reload e SIGKILL/restart; sem erros JS e sem requests externos. | Testar force-stop, perda de energia, armazenamento cheio e reconexão em Android físico controlado. |
+| 0157-A1 / apps Restaurante e Motoboy | Modularização de UI, estado, IndexedDB e sync; P2; **OPEN** | `app.js`: 1.262 linhas Restaurante/1.003 Motoboy; não foi provado defeito funcional. | 0161: decomposição incremental com testes de caracterização. |
+| 0157-A2 / backend Restaurante | Separação de casos de uso/transações em `sync-service.js`; P2; **OPEN** | Arquivo com 1.021 linhas; E2E sync/tenant passou. | 0161: plano por caso de uso sem alterar contratos/fronteiras sem prova. |
+| 0157-A3 / integração de módulos | Utilitário UUID cruzando módulos; P3; **PARTIAL** | Import pequeno e coberto, sem falha funcional. | Reavaliar em 0161 somente se simplificar dependências. |
+| 0157-A4 / contrato compartilhado | Evitar drift entre apps; P2; **PARTIAL** | Testes de paridade passam; estratégia de versionamento/geração ainda não definida. | Manter gate e avaliar geração compartilhada de baixo risco. |
+| 0151-SAST / Campanha planejada 0151 | SAST/SCA full stack; P1; **PARTIAL** | Regressões passaram; scanner dedicado não executado. | 0162: escolher scanner suportado, executar nos dois apps e tratar alertas comprovados. |
+| 0150-FIXTURE-AUDIT / 0150–0151 | Inventário global de fixtures antigas; P2; **BLOCKED** | RLS/roles limitadas não dão visão global comprovada; audit e fixtures preservados. | Credencial auditora autorizada e escopo verificável; não enfraquecer RLS nem remover trilha. |
+| 0156-API / 0155–0156 | Desempenho sustentado; P2; **PARTIAL** | Amostras Termux variaram; p95 melhorou em rodada e chegou a ~568 ms em outra. | 0164: repetição controlada com resfriamento e métricas; não extrapolar produção. |
+| 0156-MAP-PHYSICAL / 0155–0156 | GPS e tiles reais/offline; P2; **PARTIAL** | Leaflet/tiles sintéticos/CDP aprovados; GPS negado, hardware não testado. | 0163: dispositivo e rede/permissões reais. |
+| 0151-PHYSICAL / 0130–0151 | Câmera/QR/OCR/impressão e acessibilidade assistiva; P2; **BLOCKED** | Browser não substitui hardware/periféricos ou leitor de tela físico. | 0163: dispositivo, periféricos e tecnologias assistivas disponíveis. |
+| 0152-EXT / 0152–0154 | Homologação comercial iFood/Keeta/99Food; P1 externo; **BLOCKED_EXTERNAL** | Testes sintéticos locais não equivalem a sandbox, credenciais, whitelist ou aceite. | 0165 após onboarding/autorização do provider. |
 
-### Matriz de cobertura 0151–0160
+### Cobertura do planejamento original 0151–0160
 
-| Campanha | Estado vigente | Cobertura e ressalva |
-|---|---|---|
-| 0151 | **PARTIAL** | Segurança testada sem vulnerabilidade atual confirmada; SAST dedicado e inventário global permanecem limitados. |
-| 0152 | **RESOLVED** | Adapter inicialmente parcial foi integrado ao runtime nas campanhas 0153–0154; homologação externa continua dependente de acesso. |
-| 0153 | **RESOLVED** | Migrations e runtime local foram concluídos em 0154, que aplicou 0042–0044 após backup/restore validado. |
-| 0154 | **RESOLVED** | Backup/restore, schema 0044 e rate limiter distribuído passaram no escopo; política offsite/RPO/RTO é follow-up deferido. |
-| 0155 | **PARTIAL** | Mapa/plano tratados em 0156; API sustentada ainda sem resultado repetível. |
-| 0156 | **PARTIAL** | Correções locais do mapa e plano passaram; GPS/tile real/offline persistente e capacidade sustentada faltam. |
-| 0157 | **PARTIAL** | Auditoria e regressões concluídas; decomposição arquitetural maior planejada para 0161. |
-| 0158 | **BLOCKED** | Escopo original ausente no histórico versionado consultado. |
-| 0159 | **BLOCKED** | Escopo original ausente no histórico versionado consultado. |
-| 0160 | **BLOCKED** | Escopo original ausente no histórico versionado consultado. |
-
-**Contagem:** RESOLVED 3; PARTIAL 4; BLOCKED 3. Recuperação sugerida: 0161 modularização incremental; 0162 SAST/SCA; 0163 testes físicos/acessibilidade; 0164 performance sustentada; 0165 operação, homologação autorizada e obtenção dos escopos originais 0158–0160. Evidências e plano detalhado: [REGISTROS/0157.md](REGISTROS/0157.md). Esta consolidação não substitui nem apaga snapshots históricos abaixo.
-
-## Pendências atuais — consolidação da Campanha 0156 (2026-10-14)
-
-| ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / próximo passo |
+| Campanha originalmente planejada | Objetivo original | Campanha(s) executada(s) / evidência | Estado atual |
 |---|---|---|---|
-| 0156-API-1 / 0155–0156 | Latência concorrente e repetibilidade; P2; **PARTIAL** | 10 sessões distintas, 2 tenants, sem erro; redução observada de p95 497,31→352,45 ms e 11→9 consultas. Outra fase elevou p95 a 567,68 ms no Termux. Pool 10 não trouxe ganho consistente e não foi mantido. | Repetir mais ondas com janela de resfriamento e monitor de CPU/temperatura; avaliar em aparelho/infra com recursos controlados antes de fixar SLO. |
-| 0156-MAP-1 / 0155 | Leaflet no mapa da tela inicial Motoboy; P2; **RESOLVED no escopo local** | Script Leaflet global não era carregado; renderer retornava antes de criar o mapa. Corrigido HTML e cache Service Worker v43.45; CDP comprovou tiles locais e marcador desktop/mobile. | Validar GPS físico, tiles do provedor real e cache offline persistente em aparelho conectado, quando disponível. |
-| 0156-PG-1 / 0155 | Estimativa do plano de Orders; P2; **RESOLVED no diagnóstico E2E** | Reprodução 250 linhas: estimate 1/actual 250; após ANALYZE em rotamoto_e2e, 209/250, índice atual, ~1,3 ms. | Em cargas reais futuras, manter estatísticas atualizadas e reavaliar somente com EXPLAIN de dados autorizados; sem migration/índice justificado hoje. |
-| 0156-BROWSER-1 / 0156 | Runner/serviços locais e estados do mapa; P2; **PARTIAL** | Chromium/CDP 1365×900 e 390×844, 250 pedidos locais, filtro, navegação, tiles com atribuição local sintética/marcador; sem overflow, erro JS/HTTP. Tiles foram SVG locais; GPS negado pelo runner. | Testar fluxo offline persistente com Service Worker ativo e telemetria de GPS em dispositivo de teste, sem confundir tile sintético com provider real. |
-| 0156-SEC-1 / 0156 | Segurança e isolamento; P1; **RESOLVED no escopo executado** | Suites apps e PostgreSQL passaram; 47 tabelas/38 políticas FORCE, RBAC/CSRF/tenant e sync/RETURN mantidos; nenhum privilégio ou policy alterado. | Repetir regressões de segurança em campanhas que alterem auth/RLS/contratos. |
-| 0156-PERF-1 / 0155–0156 | Capacidade sustentada e variação Termux; P2; **DEFERRED** | Amostras curtas, event loop ~90% ocupado; free -m indicou 2.166 MiB disponíveis e 3.697 MiB swap usada no momento, sem controle de temperatura. Processo do runner chegou a ~110 MiB RSS. | Campanha futura de carga longa com perfis separados e condições térmicas controladas; não afirmar capacidade de produção a partir do Termux. |
+| 0151 | Segurança geral | Auditorias e regressões em 0151 e campanhas posteriores; SAST/SCA dedicado e inventário global incompletos. | **PARTIAL** |
+| 0152 | Performance e PostgreSQL | Benchmarks/planos executados principalmente em 0155–0156; resultados sustentados limitados pelo Termux. | **PARTIAL** |
+| 0153 | Resiliência e sincronização | Cobertura de concorrência/replay/offline nas campanhas 0145–0146 e 0153–0154; falhas físicas e ACK browser ainda limitadas. | **PARTIAL** |
+| 0154 | Integridade, contratos e idempotência | Migrations 0042–0044, runtime, rate limiter e regressões locais registrados PASS em 0154. | **RESOLVED** |
+| 0155 | Compatibilidade mobile, navegadores, PWA e Android | CDP responsivo/cache e mapa executados; dispositivos Android/navegadores físicos incompletos. | **PARTIAL** |
+| 0156 | Acessibilidade, usabilidade e auditoria visual | Auditorias visuais e viewports efetuadas; WCAG/assistivas completas não comprovadas. | **PARTIAL** |
+| 0157 | Arquitetura e manutenção | Auditoria realizada; refatorações estruturais foram registradas como dívida incremental. | **PARTIAL** |
+| 0158 | Backup, restauração e continuidade | Set 0154 verificado/restaurado isoladamente; snapshot desatualizado, sem offsite, custódia separada, agenda ou RPO/RTO. | **PARTIAL** |
+| 0159 | Regressão consolidada | Planejada, não iniciada nesta campanha. | **OPEN** |
+| 0160 | Revisão final e próximo ciclo | Planejada, não iniciada; escopo informado pelo operador. | **OPEN** |
 
-As evidências da Campanha 0155 foram preservadas em seus registros. Esta tabela é o estado consolidado vigente após 0156: mapa e diagnóstico do plano foram encerrados no escopo local; latência estável, provedor de tiles/GPS físico e capacidade sustentada continuam pendentes. Nenhum dado de rotamoto foi acessado; fixtures de rotamoto_e2e foram retidas e não houve limpeza. Ver REGISTROS/0156.md. Não iniciar Campanha 0157.
+**Contagem da matriz:** RESOLVED 1; PARTIAL 7; OPEN 2. Pendências externas e operacionais classificadas em separado. Próximas campanhas complementares mantidas: 0161 modularização; 0162 SAST/SCA; 0163 testes físicos/acessibilidade; 0164 desempenho sustentado; 0165 operação, homologação externa e prontidão. Elas complementam, não substituem, os objetivos originais 0159–0160.
+
+Não declarar disaster recovery completo enquanto uma cópia externa independente, custódia independente da chave e RPO/RTO não estiverem definidos e validados. Não iniciar Campanha 0159.
 
 ## Registro histórico — Campanha 0154 (2026-10-14)
 
