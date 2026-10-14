@@ -1,3 +1,17 @@
+## Estado atual — Campanha 0159: auditoria consolidada de regressão (2026-10-14)
+
+**Resultado: PARTIAL; prontidão para produção não aprovada.** As suites completas dos dois aplicativos passaram. Os testes de PostgreSQL, Browser e adapters exercitaram isolamento, providers, 99Food e o ciclo bilateral de RETURN. Foram corrigidos um detalhe visual ilegível e um atalho de teste PostgreSQL sem URLs E2E.
+
+- **Restaurante:** detalhe do pedido externo agora separa rótulos e valores; shell atualizou a folha offline (`styles.css?v=0159.1`, cache `v42`). `test:logistics-postgres` agora aponta somente para `rotamoto_e2e`. Commit local `a3fb1131ce9e1a9c548d16974cb3a509e5d89bd5`, sem push.
+- **Motoboy:** suite completa passou; branch sem alterações, HEAD `baf00f788edf08bf7f555fc155068a4c5b24ba4f`. Browser confirmou RETURN concluído e mapa Leaflet com tiles locais sintéticos, não GPS físico.
+- **PostgreSQL:** `rotamoto_e2e` read-only após testes: ledger 44/checksums 0001–0044 íntegros, latest 0044; 38/38 tabelas com RLS/FORCE; `audit_log` FORCE e trigger append-only ativos; roles consultadas sem atributos administrativos. Nenhum acesso ao `rotamoto`.
+- **Browser:** CDP desktop/mobile; tenant A/B, CSRF/anônimo, lista local/externa, 503/retry e recebimento de RETURN; a rota de devolução foi inserida depois das duas entregas existentes e houve um evento de recebimento. Testes de mapa e outbox browser passam com recursos locais sintéticos. GPS, câmera, Android físico, tiles reais e todos os formulários/telas não foram validados.
+- **Correção de preservação:** o runner `test:availability-concurrency-e2e` removeu por teardown seu schema sandbox recém-criado e dados sintéticos/audit desse sandbox, contra a restrição da campanha. Não repetimos. Uma consulta posterior encontrou um schema residual `campaign0112_6017…` de propriedade `rotamoto_migrator`, origem/conteúdo não verificados; ficou intacto. Este desvio impede declarar PASS total de preservação.
+- **0158:** operador declarou guardar uma cópia da chave no Google Drive; não verificamos, acessamos ou expusemos chave alguma, nem presumimos que o recovery set esteja lá. Backup externo do artefato, snapshot atualizado, custódia, agenda e RPO/RTO continuam pendentes.
+- **Matriz:** [PENDENCIAS.md](PENDENCIAS.md) mantém objetivos planejados e execução real separados. Matriz original: 1 RESOLVED, 8 PARTIAL, 1 OPEN. Campanhas complementares 0161–0165 preservadas. 0160 segue OPEN e não foi iniciada.
+
+Evidências, IDs de fixtures, comandos, limites, incidente de teardown e recomendação de 0160 em [REGISTROS/0159.md](REGISTROS/0159.md) e [RESUMOS/0159.md](RESUMOS/0159.md). Histórico 0158 preservado logo abaixo; não declarar prontidão de produção.
+
 ## Estado atual — Campanha 0158: backup, restauração e continuidade (2026-10-14)
 
 **Resultado: PARTIAL.** Um recovery set criptografado da Campanha 0154 foi autenticado e restaurado em cluster PostgreSQL 18.6 descartável. O snapshot contém migrations 0001–0041; a documentação 0154 registra avanço do schema até 0044. O banco oficial `rotamoto` não foi acessado nesta campanha e não se afirma sua versão atual. A recuperação isolada do snapshot foi comprovada; a recuperação de desastre atual e independente ainda não.
