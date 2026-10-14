@@ -1,3 +1,15 @@
+## Estado vigente — Campanha 0149: segurança multiempresa e fixtures E2E (2026-10-14)
+
+**Resultado: PARTIAL.** Nos caminhos exercitados, não foi encontrada falha de isolamento. Testes HTTP com A/B e Browser/CDP negaram leitura, confirmação e replay de RETURN por tenant B com UUID conhecido de A; retorno 404 sem dados, e estado/rota/eventos de A não mudaram. Uma corrida com sessões PostgreSQL independentes confirmou o 404 de B enquanto A executava recebimento autorizado. CSRF ausente/inválido: 403; sessão inválida/anônima: 401; ausência de `orders.manage`: 403. RLS/FORCE (46 tabelas/37 políticas) passou.
+
+- **PASS — Browser bilateral:** Restaurante e Motoboy autenticados convergiram após recebimento; duplicação/retry pós-503 gerou um único evento, sem DeliveryProof fictício e sem overflow em 390 px.
+- **PASS — fixtures rollback:** lifecycle de transação/savepoint passou e não deixou os registros da execução.
+- **PARTIAL — inventário global:** Browser com sessões independentes requer commit e retenção para concorrência. Fixture identificada A: 17 registros, 29 outbox, 37 auditorias; B: 0 registros/outbox/audit. `audit_log` permanece append-only. Uma primeira tentativa interrompida pode ter deixado fixture adicional não enumerável; runtime/migrator aplicam RLS e não há credencial do role auditor. Nenhuma limpeza foi feita.
+- **Versionamento:** Restaurante `5836cce5a109aec6b4329ddab2bf6fb0ad531962` (teste, local sem push); Motoboy sem alteração; Browser QA só acrescentou runner/evidências locais. Histórico publica somente na branch autorizada.
+- `rotamoto` não foi consultado; 0041 permanece **APPLIED conforme documentação da 0140**. Nenhuma migration, DDL, deploy ou operação comercial.
+
+Ver [REGISTROS/0149.md](REGISTROS/0149.md) e [RESUMOS/0149.md](RESUMOS/0149.md). Próximo passo: auditoria global somente após credencial/consulta de leitura tenant-aware autorizada e identificação da tentativa parcial. Não iniciar Campanha 0150.
+
 ## Estado vigente — Campanha 0148: recebimento de devoluções (2026-10-14)
 
 **Resultado: PARTIAL.** O Motoboy registra entrega física sem encerrar custódia; a RETURN permanece `ARRIVED/AWAITING_RESTAURANT_RECEIPT`. O Restaurante agora identifica devoluções externas pendentes e mostra a ação autorizada de recebimento. Após confirmação, RETURN fica `RETURNED/RECEIVED`, custódia da entrega original fecha, a rota remove somente a RETURN e o Motoboy sincroniza “Devolução confirmada”.
