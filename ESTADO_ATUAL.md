@@ -1,3 +1,16 @@
+## Estado vigente — Campanha 0154: backup e finalização 99Food (2026-10-14)
+
+**Resultado geral: PASS. Schema oficial de desenvolvimento `rotamoto`: 0044. `READY_FOR_EXTERNAL_HOMOLOGATION = YES` para iniciar homologação técnica externa; aceite comercial não executado.** A fotografia da 0153 foi atualizada sem apagar seu diagnóstico original.
+
+- **Backup/restore:** `BACKUP_INTEGRITY PASS`, `ISOLATED_RESTORE PASS`. O dump incompleto da 0153 continua preservado e não foi restaurado. Novo recovery set `bcc5cb76-1c66-46db-911f-5a498967de65`, SHA-256 do payload PostgreSQL `a95b5321405104bef36046c7bfbdef58e032a0d43068c74b7dcddd76f353068a`, verificação HMAC/SHA e restore isolado aprovados. A role `rotamoto_backup` não alterou privilégios operacionais. Cópia offsite/agendamento e RPO/RTO ainda não definidos.
+- **Migrations oficiais:** a role migradora confirmou ledger/checksums 0001–0041, incluindo 0041 `c75063f833da16a8efdd2e8d448bf1c7c3aee7e360be8d9e1f12397d15251a9c`; aplicou somente 0042 (`ad036400035b8c03cbb92d9254d07fd8681ced0c06fcf325cb1678c06cdac160`), 0043 (`35a9f9d297d6010c0704b487d85fb735ab96db0a0c8517385c4b31936be1b189`) e 0044 (`ac5f82463dd933657f4c4d921dc4dab2684437fe5e9163bf90c8750e55c28a95`). Resultado pós-migração: 0044, sem pendências; constraints/indexes validados; RLS/FORCE e grants mínimos conferidos; `audit_log` FORCE RLS e append-only preservados.
+- **99Food:** rate limiter PostgreSQL app/loja/operação validado com dois workers/sessões, concorrência entre tenants, Retry-After e recuperação pelo estado persistido. Runtime, tokens protegidos/lease, webhook, inbox/outbox, lista unificada e comandos passaram nos testes sintéticos locais. Nenhum pedido comercial ou requisição externa foi executado.
+- **Evidência:** `npm test` completo Restaurante e Motoboy; `npm run test:postgres` exclusivamente em `rotamoto_e2e`; testes 99Food protocol/runtime/rate-limit; Browser Chromium/CDP desktop e 390×844 mobile. `pg_amcheck` suplementar foi bloqueado por autenticação do CLI, mas backup autenticado e restauração real passaram.
+- **Pendências:** onboarding 99Food (credencial, sandbox, whitelist, certificação e aceite comercial), homologação comercial iFood/Keeta, cópia offsite/custódia separada da chave e agendamento/RPO/RTO. Nenhuma delas invalida a recuperação isolada comprovada ou prontidão técnica interna.
+- **Versionamento:** Restaurante local `df82a4f724ce5566a21203464f525ad61242a5ec`; Motoboy inalterado em `ded20e37dfc9c96b472bd4e1e5d5bd2ba5b037f0`; Browser QA sem commit/push em `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`. SHA do histórico será anotado após publicação.
+
+Evidências, IDs de fixtures, comandos, checksums, limitations e classificação por gate: [REGISTROS/0154.md](REGISTROS/0154.md). Matriz atualizada: [PENDENCIAS.md](PENDENCIAS.md), seção 0154. Não iniciar Campanha 0155.
+
 ## Estado vigente — Campanha 0152: contrato e integração 99Food (2026-10-14)
 
 **Resultado: PARTIAL.** O portal oficial foi pesquisado; um adapter local do 99Food Protocol (Recommended) valida assinatura webhook, IDs Long, envelope, subconjunto dos estados/fulfillment e operações de pedido com transporte fake. A UI descreve precisamente o estado. Runtime/persistência 99Food permanece desabilitado; não declarar homologação nem prontidão externa.
