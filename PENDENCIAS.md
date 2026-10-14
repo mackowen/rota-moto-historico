@@ -1192,3 +1192,12 @@ Referências oficiais, hashes, testes e evidência do bloqueio estão em [REGIST
 - [x] **RESOLVED no escopo medido — cálculo de sync Motoboy:** status das operações agora é indexado em Map e leituras IndexedDB são concorrentes; 10×500 fatos/statuses caiu de p50 36,058 para 15,448 ms (2,33×). Não extrapolar para latência de API/produção.
 
 Evidências, método e commits em [REGISTROS/0155.md](REGISTROS/0155.md). Nenhuma mudança de schema e nenhum acesso ao banco oficial nesta campanha.
+
+
+## Atualização de estado — Campanha 0171
+
+- [x] **RESOLVED / infraestrutura Browser autenticada:** runtime real, dois logins UI, sessão/autorização, Driver canônico comum e instalações sync persistidas em `rotamoto_e2e`; fixture retida sem Order/Delivery/Route.
+- [ ] **OPEN / ciclo completo:** criação de Order pela UI com ACK PostgreSQL, despacho, execução pelo Motoboy e convergência final seguem sem comprovação após a 0171.
+- [ ] **OPEN / offline e PWA:** interrupção, ACK perdido, outbox persistente e atualização de Service Worker no perfil autenticado ainda exigem ensaio.
+
+Evidências em [REGISTROS/0171.md](REGISTROS/0171.md).

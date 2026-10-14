@@ -1129,3 +1129,8 @@ Esta atualização registra as medições atuais sem remover fotografias histór
 - **PARTIAL — escala física:** hardware/rede móvel sustentados, suspensão Android, GPS/câmera e integrações comerciais não foram testados.
 
 Commits locais: Motoboy `b2d2233`, Restaurante `4aa0a7c`; sem push. Browser QA recebeu runner/evidências locais. O oficial `rotamoto` não foi acessado. Detalhes em [REGISTROS/0155.md](REGISTROS/0155.md) e [RESUMOS/0155.md](RESUMOS/0155.md). Nenhuma Campanha 0156 iniciada.
+
+
+## Campanha 0171 — infraestrutura Browser autenticada
+
+Estado atual: **PASS no gate de infraestrutura autenticada**. O runtime real, login UI, chamadas autorizadas e leitura cross-app do mesmo Driver foram comprovados com sessões persistidas exclusivamente em `rotamoto_e2e`. O harness anterior foi ajustado após 404 de handler de fixture. A jornada de entrega continua por executar e não foi declarada PASS. Ver [REGISTROS/0171.md](REGISTROS/0171.md).
