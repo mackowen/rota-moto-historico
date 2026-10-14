@@ -1,3 +1,15 @@
+## Estado atual — Preparatória 0165-P: PostgreSQL oficial e publicação Git (2026-10-14)
+
+**Resultado: PASS para diagnóstico estrutural e publicação das branches; banco sem alterações.** A conexão read-only ao PostgreSQL 18.6 confirmou `rotamoto` com ledger consistente de 0001 a 0044 e checksums iguais às migrations versionadas. Não há migrations pendentes nem divergentes.
+
+- Estrutura consultada: 47 tabelas, 118 índices válidos, zero constraints não validadas; 38 tabelas com RLS e FORCE, 38 policies. As roles verificadas não têm SUPERUSER, CREATEDB, CREATEROLE ou BYPASSRLS. `rotamoto_app` conectou em read-only. Não foram lidos registros de domínio nem alterados grants.
+- `npm test` passou nos dois aplicativos; contrato cross-app e sintaxe dos JS alterados passaram. PostgreSQL E2E de logística, tenant/RLS e limiter 99Food passaram somente em `rotamoto_e2e`; fixtures com escrita ficaram manifestadas e retidas.
+- Restaurante remoto `codex/setup-workflow`: `dfff2a7c41ec53024463a14dc365b193af807619` → `f3165f1cd113de10a10fb4817e728ae84fbabc1c`. Motoboy remoto `codex/setup-workflow`: `6cce24d71fb7bcfb8777cbc6c89c4a76278eb2e2` → `baf00f788edf08bf7f555fc155068a4c5b24ba4f`. Pushes normais, sem divergência ou force. Browser QA não foi alterado.
+- RLS tem nove tabelas sem ativação no baseline, além das 38 com RLS/FORCE; não se alterou a política. A role `rotamoto_auditor` não conseguiu inventariar o schema, então catálogo/ledger foram lidos com `rotamoto_migrator` já configurada, sem ampliar privilégios.
+- **Readiness é estrutural, não operacional/produção.** A confirmação de 0044 não atualiza a evidência do recovery set conhecido, que cobre somente até 0041. Backup/restore atual, cópia independente, retenção/agendamento, RPO/RTO, hardware e homologação continuam conforme pendências da Campanha 0165.
+
+Registro: [REGISTROS/0165-P.md](REGISTROS/0165-P.md); resumo: [RESUMOS/0165-P.md](RESUMOS/0165-P.md). Resultado de continuidade da campanha principal 0165 permanece PARTIAL e `PRODUCTION_READINESS=BLOCKED`. Não iniciar 0166 automaticamente.
+
 ## Estado atual — Campanha 0165: estabilidade operacional e readiness (2026-10-14)
 
 **Resultado: PARTIAL; `PRODUCTION_READINESS = BLOCKED`.** `npm test` completo passou no Restaurante e Motoboy. Browser/CDP autenticado comprovou cancelamento pós-coleta, RETURN ao fim da rota, handover do Motoboy, recebimento autorizado no Restaurante e retry após resposta 503 perdida. O runner preparou Order/Delivery/paradas antes da UI; ciclo próprio completo começando pela interface sem pré-semeadura não foi executado.

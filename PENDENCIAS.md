@@ -1,3 +1,16 @@
+## Atualização vigente — Preparatória 0165-P (2026-10-14)
+
+Esta atualização registra o diagnóstico estrutural do banco oficial e a publicação Git. Ela não apaga snapshots de pendências da Campanha 0165 nem muda seu estado de continuidade/produção.
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / critério de aceite |
+|---|---|---|---|
+| 0165-P-DB / 0153–0154, 0165-P | PostgreSQL oficial `rotamoto`; P1 operacional; **RESOLVED no estado estrutural** | Read-only em PostgreSQL 18.6: 44/44 migrations 0001–0044, checksums sem divergência, 47 tabelas, 118 índices válidos, constraints validadas e 38/38 tabelas RLS com FORCE. | Repetir diagnóstico após migrations futuras autorizadas; manter a regra de backup/restore antes de alterações estruturais oficiais. |
+| 0165-P-PUBLISH / histórico Git | Restaurante/Motoboy; P2; **RESOLVED** | Push normal confirmou os remotos em `f3165f1c` e `baf00f78`; working trees limpos; sem arquivos locais não rastreados publicados. | Nenhuma ação, exceto publicar os cinco documentos desta campanha no branch autorizado do histórico. |
+| 0165-P-DR / 0154, 0158–0165 | Backup/DR; P0 produção; **BLOCKED** | O schema 0044 está confirmado, mas recovery set conhecido cobre até 0041; nenhum backup/restore novo foi validado nesta campanha. | Produzir e verificar set atualizado em ambiente autorizado, restaurar isoladamente até 0044, comprovar cópia independente, retenção/agendamento e RPO/RTO. |
+| 0165-P-AUDITOR / 0150, 0165-P | Inventário read-only por role auditora; P2; **PARTIAL** | `rotamoto_auditor` conectou sem visibilidade do schema; a consulta foi completada com `rotamoto_migrator` já existente, sem mudar privilégio. | Se necessário inventário independente, definir credencial auditora aprovada e mínima; validar leitura de catálogos/ledger sem acesso desnecessário a dados de tenant. |
+
+**Estado:** migrations oficiais sem pendências até 0044; nenhuma atualização do banco executada. Isso não implica prontidão de produção. Gates, comandos, fingerprints e limites estão em [REGISTROS/0165-P.md](REGISTROS/0165-P.md). A fotografia da Campanha 0165 permanece abaixo; `PRODUCTION_READINESS=BLOCKED`. Não iniciar 0166.
+
 ## Pendências vigentes — consolidação da Campanha 0165 (2026-10-14)
 
 Esta fotografia atualiza estados conforme evidências novas; snapshots anteriores permanecem preservados. Testes sintéticos não equivalem a homologação comercial, validação física ou operação sustentada.
