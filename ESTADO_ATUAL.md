@@ -1,3 +1,18 @@
+## Estado atual — Campanha 0165: estabilidade operacional e readiness (2026-10-14)
+
+**Resultado: PARTIAL; `PRODUCTION_READINESS = BLOCKED`.** `npm test` completo passou no Restaurante e Motoboy. Browser/CDP autenticado comprovou cancelamento pós-coleta, RETURN ao fim da rota, handover do Motoboy, recebimento autorizado no Restaurante e retry após resposta 503 perdida. O runner preparou Order/Delivery/paradas antes da UI; ciclo próprio completo começando pela interface sem pré-semeadura não foi executado.
+
+- PostgreSQL E2E exclusivamente em `rotamoto_e2e`: guardas, logística transacional, tenant/RLS, workers, rate limit 99Food e runtimes marketplace passaram. `status --e2e` confirmou 44 migrations, 0001–0044, checksums válidos; PostgreSQL 18.6 e 38 tabelas com RLS+FORCE. `rotamoto` não acessado.
+- Browser: `../browser-tests/evidencias/campanhas/0165/return-receipt-01/`; seis screenshots 390×844, `summary.json` e `trace.jsonl`. `RETURNED/RECEIVED`, uma confirmação e nenhum comprovante fictício. Quatro 404 são rotas não registradas no harness, sem defeito do produto confirmado.
+- Manifests desta execução ficaram retidos. Dois runners de provider geraram labels fixos antigos (`0160`/`0153`); manifests `e9b18d07-8c71-4954-8301-b2a5b3783958` e `ed52d3d1-26f2-4d15-adc8-5e2e4ec9593a` preservados sem edição.
+- Suites financeiras de Order money/Earning passaram, mas reconciliação financeira cross-app integral não foi medida. iFood/Keeta/99Food foram somente sintéticos; sem credenciais, sandbox ou chamadas comerciais.
+- Upgrade SW/outbox sintética 0164 é evidência anterior para os mesmos arquivos; em 0165 não se executou sync autenticado após reabertura. `adb devices` vazio; GPS/câmera/QR/impressão físicos sem teste.
+- Recovery set 0154 de 317.563 bytes e dump incompleto 0153 de 313.236 bytes continuam presentes. Restore/verificação histórica cobre 0041; E2E atual em 0044. Nenhuma chave acessada, backup atual ou restore realizado. Cópia externa, custódia, retenção/agendamento e RPO/RTO sem prova.
+- Processos PostgreSQL/nginx/PHP-FPM visíveis; alertas, health monitorado e suporte não exercitados. Telemetria térmica não respondeu e `/proc/loadavg` estava inacessível; não foi executada carga prolongada acima de 0164.
+- Apps sem alterações/commits: Restaurante `f3165f1cd113de10a10fb4817e728ae84fbabc1c`, Motoboy `baf00f788edf08bf7f555fc155068a4c5b24ba4f`. Browser QA só evidências locais; histórico atualiza cinco documentos.
+
+Gates: `RETURN_CANCELLATION`, `ACK_REPLAY_IDEMPOTENCY`, `TENANT_RLS_SECURITY` e `WORKER_RESILIENCE` PASS nos cenários executados; ciclo integral, offline, finanças, concorrência sustentada, PWA operacional, monitoramento e regressão cross-app PARTIAL; hardware Android, homologação provider, DR e produção BLOCKED. Detalhes em [REGISTROS/0165.md](REGISTROS/0165.md) e [PENDENCIAS.md](PENDENCIAS.md). Não iniciar 0166 automaticamente.
+
 ## Estado atual — Campanha 0164: performance, concorrência e PostgreSQL (2026-10-14)
 
 **Resultado: PARTIAL.** Benchmarks sintéticos autenticados até dez clientes e regressões PostgreSQL/worker passaram em seus escopos. Não houve ganho de produto atribuível a uma alteração funcional; portanto, nenhuma otimização de aplicação/schema foi aplicada. O PostgreSQL oficial `rotamoto` não foi acessado.

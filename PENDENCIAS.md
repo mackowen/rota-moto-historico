@@ -1,3 +1,24 @@
+## Pendências vigentes — consolidação da Campanha 0165 (2026-10-14)
+
+Esta fotografia atualiza estados conforme evidências novas; snapshots anteriores permanecem preservados. Testes sintéticos não equivalem a homologação comercial, validação física ou operação sustentada.
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / critério de aceite |
+|---|---|---|---|
+| 0165-LIFECYCLE / 0159, 0163–0165 | Order próprio Restaurante→Motoboy; P1; **PARTIAL** | Suites passaram; Browser cobriu RETURN, mas o runner pré-configura Order/Delivery. Ciclo completo sem pré-semeadura pela UI não executado. | E2E autenticado criado na UI; trace de ações/ACK; uma Order/Delivery convergente nos dois apps e E2E PostgreSQL; teste cross-tenant negativo. |
+| 0165-OFFLINE / 0158–0165 | Outbox/reconexão/ACK; P1; **PARTIAL** | Falha/retry 503 do receipt passou; IndexedDB crash/reopen sintético consta em 0158/0164. Jornada autenticada completa reaberta e reconciliada não executada. | Outbox de Order próprio persiste em offline/503/restart/replay até ACK inequívoco; convergência e contagens sem duplicação. |
+| 0165-RETURN / 0147–0165 | Cancelamento/custódia; P1; **RESOLVED no cenário pós-coleta** | RETURN após duas paradas, handover, receipt autorizado; `RETURNED/RECEIVED`, um evento e nenhum DeliveryProof fictício; retry 503 idempotente. | Manter regressões e ampliar cenários somente se o código mudar. |
+| 0165-RLS / 0149–0165 | Tenant, RLS/FORCE, RBAC; P1; **RESOLVED nos cenários E2E** | 47 relações; 38 tabelas com RLS+FORCE; positivas/negativas, guards e roles worker aprovados. | Preservar testes; revisão integral de produção ainda depende de release auditado. |
+| 0165-PROVIDER / 0152–0165 | iFood, Keeta, 99Food; P1; **PARTIAL** | Adapter/runtime sintético, assinatura, inbox/outbox, worker/limiter e fulfillment passaram. Dois manifests novos têm labels hard-coded `0160`/`0153`; IDs e evidências registrados. | Parametrizar campaign label e testar proveniência; onboarding/sandbox/credenciais/whitelist/aceite por provider são externos. |
+| 0165-CONCURRENCY / 0155–0165 | Carga sustentada; P1; **PARTIAL** | Dois workers passaram; 0164 cobriu até dez clientes apenas em ondas curtas. Telemetria térmica não respondeu e `/proc/loadavg` foi negado, então carga longa foi evitada por segurança. | Acordar duração/SLO/limites, obter telemetria confiável; medir 1–10 sessões, locks/CPU/memória/temperatura e integridade sem exceder limites. |
+| 0165-PWA / 0163–0165 | Service Worker e recuperação; P2; **PARTIAL** | Upgrade/outbox sintética passou em 0164; sync autenticado após reopen não foi exercitado em 0165. | Repetir com operação E2E pendente, sessão válida, upgrade/reopen e ACK backend. |
+| 0165-HARDWARE / 0163–0165 | Android/GPS/câmera/QR/impressão; P1; **BLOCKED** | `adb devices -l` sem aparelho; nenhum periférico ou permissão física testado. | Roteiro físico em aparelho autorizado, incluindo sensores, impressão, rede e retomada. |
+| 0165-BACKUP-DR / 0154, 0158–0165 | Backup/restore; P0 para produção; **BLOCKED** | Recovery set 0154 conhecido e evidência de restore histórica somente até 0041; E2E atual em 0044. Dump 0153 permanece incompleto. Nenhuma validação de backup atual/offsite nesta campanha. | Definir destino/custódia/retention; set autenticado atualizado e restore descartável até schema vigente; verificar RLS/checksum/audit/mídia e aprovar RPO/RTO. |
+| 0165-MONITOR / 0158–0165 | Alertas/logs/suporte; P2; **PARTIAL** | PostgreSQL/nginx/PHP-FPM visíveis; alertas, health monitorado, retenção de logs e plantão não verificados. | Definir operador/runbook; testar health, alerta, logs sanitizados e escalação. |
+| 0165-FINANCIAL / 0159–0165 | Order money/Earning; P1; **PARTIAL** | Suites de valores e Earning passaram; reconciliação financeira bilateral em ciclo integral ausente. | Testar valores sintéticos no ciclo completo, total/ganho canônicos e idempotência sem duplicação. |
+| 0165-PRODUCTION / 0158–0165 | Prontidão para produção; P0; **BLOCKED** | DR/backup atual, homologação externa, hardware e operação monitorada ainda sem prova. | Fechar bloqueios P0/P1 e obter evidências de operação antes de qualquer release. |
+
+**Contagem vigente:** 12 itens — RESOLVED 2 (somente nos cenários descritos), PARTIAL 7, OPEN 0, BLOCKED 3, DEFERRED 0. Evidências: [REGISTROS/0165.md](REGISTROS/0165.md) e [RESUMOS/0165.md](RESUMOS/0165.md). `PRODUCTION_READINESS=BLOCKED`. Não iniciar 0166.
+
 ## Pendências vigentes — consolidação da Campanha 0164 (2026-10-14)
 
 Esta seção substitui apenas a fotografia vigente de performance; os snapshots e registros anteriores permanecem abaixo. Resultados de carga são sintéticos e curtos, restritos ao Termux e `rotamoto_e2e`.
