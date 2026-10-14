@@ -1,3 +1,39 @@
+## Pendências vigentes — consolidação da Campanha 0157 (2026-10-14)
+
+| ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / próxima ação |
+|---|---|---|---|
+| 0157-A1 / apps Restaurante e Motoboy | Modularização gradual de UI, estado, IndexedDB e sync; P2; **OPEN** | `app.js`: 1.262 linhas no Restaurante e 1.003 no Motoboy. Testes completos passam; não foi provado defeito de execução. | Campanha 0161: mapear dependências e extrair funções puras/domínios em passos pequenos com caracterização de offline/sync. |
+| 0157-A2 / backend Restaurante | Separação de regras e transações em `sync-service.js`; P2; **OPEN** | Arquivo com 1.021 linhas concentrando validação, autoridade, idempotência e projeções; E2E de sync/tenant passou. | Campanha 0161: plano de decomposição por caso de uso, sem alterar contrato nem fronteira transacional sem teste. |
+| 0157-A3 / integração de módulos | Dependência de utilitário UUID de Identity por logística/domínio; P3; **PARTIAL** | Import pequeno e atualmente coberto; não houve falha funcional. | Considerar utilitário comum somente durante a decomposição 0161 e após medir impacto. |
+| 0157-A4 / contrato compartilhado | Evitar drift entre cópias de contrato; P2; **PARTIAL** | `test-cross-app-contract-parity.js` passa nos dois projetos. | Manter teste como gate; avaliar versão/geração do contrato sem pacote compartilhado prematuro. |
+| 0151-SAST / Campanha 0151 | Cobertura automatizada SAST/SCA full stack; P1; **PARTIAL** | Nesta campanha, `npm test` e regressões passaram; scanner dedicado não foi executado. | Campanha 0162: selecionar ferramenta instalada/suportada, executar sobre ambos e resolver alertas confirmados. |
+| 0150-FIXTURE-AUDIT / 0150–0151 | Inventário global de fixtures antigas e resíduos sem identificação completa; P2; **BLOCKED** | RLS/roles restritas impedem visão global comprovada; fixtures e `audit_log` preservados. Nenhuma limpeza tentada. | Processo auditor read-only autorizado e IDs/propriedade verificáveis; não enfraquecer RLS nem apagar audit. |
+| 0156-API / 0155–0156 | Desempenho de API sustentado; P2; **PARTIAL** | Amostras de 10 sessões em Termux oscilaram: p95 melhorou numa rodada e alcançou ~568 ms noutra. | Campanha 0164: repetição controlada, resfriamento e métricas de CPU/memória/event loop; não extrapolar capacidade produtiva. |
+| 0156-MAP-PHYSICAL / 0155–0156 | GPS real, tiles do provedor e funcionamento offline persistente; P2; **PARTIAL** | Leaflet/tiles locais/marcador validados em CDP; GPS negado e tile foi sintético. | Campanha 0163: Android controlado, rede, permissões, suspensão e cache real. |
+| 0151-PHYSICAL / 0130–0151 | Câmera/QR/OCR/impressão, acessibilidade assistiva; P2; **BLOCKED** | Browser e corpus sintético não validam hardware, leitor de tela ou impressora física. | Campanha 0163: dispositivo e periféricos disponíveis; cobrir teclado, leitor, contraste e fluxos físicos. |
+| 0154-OPS / 0154 | Backup offsite, retenção recorrente e RPO/RTO; P1 operação; **DEFERRED** | Recovery set e restore isolado foram aprovados em 0154; destino offsite, rotina e custódia independente não definidos. | Campanha 0165: decisão de operador, destino e procedimento de recuperação; sem tocar banco oficial nesta campanha. |
+| 0152-EXT / 0152–0154 | Homologação comercial 99Food/iFood/Keeta; P1 externo; **BLOCKED** | Prontidão técnica local não equivale a autorização, sandbox, credenciais, whitelist ou aceite comercial. | Campanha 0165, após onboarding autorizado; nenhuma chamada real sem autorização. |
+| 0158-PLAN / planejamento 0151–0160 | Escopo original não encontrado; **BLOCKED** | Nenhuma especificação de 0158 foi localizada em documentos versionados do histórico disponível. | Recuperar a fonte original antes de definir trabalho ou critérios. |
+| 0159-PLAN / planejamento 0151–0160 | Escopo original não encontrado; **BLOCKED** | Nenhuma especificação de 0159 foi localizada em documentos versionados do histórico disponível. | Recuperar a fonte original antes de definir trabalho ou critérios. |
+| 0160-PLAN / planejamento 0151–0160 | Escopo original não encontrado; **BLOCKED** | Nenhuma especificação de 0160 foi localizada em documentos versionados do histórico disponível. | Recuperar a fonte original antes de definir trabalho ou critérios. |
+
+### Matriz de cobertura 0151–0160
+
+| Campanha | Estado vigente | Cobertura e ressalva |
+|---|---|---|
+| 0151 | **PARTIAL** | Segurança testada sem vulnerabilidade atual confirmada; SAST dedicado e inventário global permanecem limitados. |
+| 0152 | **RESOLVED** | Adapter inicialmente parcial foi integrado ao runtime nas campanhas 0153–0154; homologação externa continua dependente de acesso. |
+| 0153 | **RESOLVED** | Migrations e runtime local foram concluídos em 0154, que aplicou 0042–0044 após backup/restore validado. |
+| 0154 | **RESOLVED** | Backup/restore, schema 0044 e rate limiter distribuído passaram no escopo; política offsite/RPO/RTO é follow-up deferido. |
+| 0155 | **PARTIAL** | Mapa/plano tratados em 0156; API sustentada ainda sem resultado repetível. |
+| 0156 | **PARTIAL** | Correções locais do mapa e plano passaram; GPS/tile real/offline persistente e capacidade sustentada faltam. |
+| 0157 | **PARTIAL** | Auditoria e regressões concluídas; decomposição arquitetural maior planejada para 0161. |
+| 0158 | **BLOCKED** | Escopo original ausente no histórico versionado consultado. |
+| 0159 | **BLOCKED** | Escopo original ausente no histórico versionado consultado. |
+| 0160 | **BLOCKED** | Escopo original ausente no histórico versionado consultado. |
+
+**Contagem:** RESOLVED 3; PARTIAL 4; BLOCKED 3. Recuperação sugerida: 0161 modularização incremental; 0162 SAST/SCA; 0163 testes físicos/acessibilidade; 0164 performance sustentada; 0165 operação, homologação autorizada e obtenção dos escopos originais 0158–0160. Evidências e plano detalhado: [REGISTROS/0157.md](REGISTROS/0157.md). Esta consolidação não substitui nem apaga snapshots históricos abaixo.
+
 ## Pendências atuais — consolidação da Campanha 0156 (2026-10-14)
 
 | ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / próximo passo |

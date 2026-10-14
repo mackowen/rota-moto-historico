@@ -1,3 +1,14 @@
+## Estado atual — Campanha 0157: arquitetura, qualidade e manutenção (2026-10-14)
+
+**Resultado: PARTIAL.** Auditoria e regressões passaram nos escopos executados; nenhum defeito arquitetural de baixo risco foi confirmado para correção isolada. A arquitetura backend está separada em módulos de identity, domain, logistics, integrations, analytics, admin, PostgreSQL e runtime; há composição explícita de handlers/workers, adapters substituíveis e teste de paridade de contrato entre apps. Persistência canônica usa PostgreSQL e RLS/FORCE; os apps mantêm IndexedDB local-first e outbox/reconciliação.
+
+- **Riscos de manutenção:** `app.js` Restaurante tem 1.262 linhas e combina tela, estado, IndexedDB e sync; `app.js` Motoboy tem 1.003 linhas com responsabilidades semelhantes; `backend/domain/sync-service.js` tem 1.021 linhas e concentra validação, política e atualização transacional. São riscos de acoplamento/testabilidade, não falhas funcionais provadas. A extração deve ocorrer em passos caracterizados por testes.
+- **Testes:** `npm test` completo passou em ambos; passaram E2E PostgreSQL de tenant/RLS, lifecycle rollback, marketplace runtime, 99Food runtime, rate limiter com duas workers e marketplace worker, exclusivamente em `rotamoto_e2e`. Browser não foi executado por não haver mudança visual; SAST/SCA dedicado não foi executado.
+- **Preservação:** nenhum código, contrato, banco oficial, privilégio, fixture ou audit log foi alterado/limpo. HEADs locais sem mudança: Restaurante `cc0008f6479454aa82992f9ae5587de93262c7a8`; Motoboy `baf00f788edf08bf7f555fc155068a4c5b24ba4f`; Browser QA `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`.
+- **Cronograma:** matriz 0151–0160 atualizada em [PENDENCIAS.md](PENDENCIAS.md). Objetivos internos 0152–0154 resolvidos; 0151 e 0155–0157 parciais. Nenhum escopo original versionado foi localizado para 0158–0160: BLOCKED até recuperar a fonte. Próxima sequência de recuperação proposta: 0161 modularização, 0162 SAST/SCA, 0163 testes físicos/acessibilidade, 0164 desempenho sustentado, 0165 operação/homologação e recuperação dos escopos 0158–0160.
+
+Detalhes, evidências e limites em [REGISTROS/0157.md](REGISTROS/0157.md) e [RESUMOS/0157.md](RESUMOS/0157.md). Não iniciar automaticamente a Campanha 0158.
+
 ## Estado atual — Campanha 0156: API e mapa Motoboy (2026-10-14)
 
 **Resultado: PARTIAL.** A causa do p95, a divergência do plano e o mapa vazio foram investigados. A API eliminou duas consultas redundantes e mostrou uma redução em uma rodada comparável, mas a latência variou muito entre fases no Termux. O mapa agora renderiza com Leaflet, tiles locais controlados e marcador nos viewports testados.
