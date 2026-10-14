@@ -1,4 +1,14 @@
-## Atualização vigente — Campanha 0167 (2026-10-14)
+## Atualização vigente — Campanha 0168 (2026-10-14)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
+|---|---|---|---|
+| 0168-LEDGER / 0158, 0165-P, 0168 | Recovery manifest/inventory; P1 DR; **RESOLVED no código** | Novos sets incluem IDs/checksums do ledger; drift de ledger durante captura falha fechado. Testes sintéticos detectam 0041→0044 e divergência de checksum. | Exercitar num conjunto autorizado não oficial e verificar cobertura sem expor chaves. |
+| 0168-REAL-RESTORE / 0154, 0158–0168 | Recovery set real, restore isolado; P0 produção; **BLOCKED** | Nenhum artefato/chave autorizado foi aberto; suíte usa fake dump. | Operador disponibilizar artifact/key de forma autorizada e ambiente descartável isolado; provar restore íntegro até schema 0044. |
+| 0168-DR-OPS / 0158–0168 | Offsite, retenção, agendamento, RPO/RTO; P0 produção; **BLOCKED** | Nenhum destino/política operacional aprovada ou comprovada. | Definir custodiante/destino, retenção, frequência, alertas e objetivos RPO/RTO; executar rehearsal. |
+
+Snapshots anteriores permanecem abaixo. Detalhes: [REGISTROS/0168.md](REGISTROS/0168.md).
+
+## Atualização histórica — Campanha 0167 (2026-10-14)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Critério de aceite / dependência |
 |---|---|---|---|

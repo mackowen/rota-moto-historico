@@ -1,4 +1,8 @@
-## Estado atual — Campanha 0167: offline e recuperação (2026-10-14)
+## Estado atual — Campanha 0168: backup e disaster recovery (2026-10-14)
+
+**Resultado PARTIAL.** O backup versionado passou a incluir IDs/checksums do ledger no manifesto autenticado; inventário identifica cobertura antiga/divergente e ledger alterado durante captura bloqueia a publicação do conjunto. Testes usam fake dump/cliente e chave temporária. O recovery set real conhecido até 0041 não foi aberto; 0044 é a versão atual versionada. Sem chave/artefato autorizado não houve restore real, cópia independente, retenção/agendamento ou prova RPO/RTO. Banco oficial não acessado. Ver [REGISTROS/0168.md](REGISTROS/0168.md).
+
+## Estado anterior — Campanha 0167: offline e recuperação (2026-10-14)
 
 **Resultado PARTIAL.** Suites automatizadas dos dois apps passaram para persistência, replay e reconciliação. A falha PWA CDP ocorreu antes de a versão anterior do Service Worker alcançar `waiting`; nenhuma operação comercial autenticada foi recuperada após 503/ACK perdido. Assim, recuperação end-to-end e convergência bilateral seguem sem comprovação. O teste de sync autenticado depende do ciclo 0166. Ver [REGISTROS/0167.md](REGISTROS/0167.md) e [RESUMOS/0167.md](RESUMOS/0167.md).
 
