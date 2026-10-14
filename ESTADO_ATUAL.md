@@ -1,3 +1,17 @@
+## Estado vigente — Campanha 0148: recebimento de devoluções (2026-10-14)
+
+**Resultado: PARTIAL.** O Motoboy registra entrega física sem encerrar custódia; a RETURN permanece `ARRIVED/AWAITING_RESTAURANT_RECEIPT`. O Restaurante agora identifica devoluções externas pendentes e mostra a ação autorizada de recebimento. Após confirmação, RETURN fica `RETURNED/RECEIVED`, custódia da entrega original fecha, a rota remove somente a RETURN e o Motoboy sincroniza “Devolução confirmada”.
+
+- **PASS — ciclo e rota:** Browser/CDP e PostgreSQL E2E preservaram as duas paradas existentes, colocaram RETURN por último e encerraram apenas essa tarefa após confirmação Restaurante.
+- **PASS — concorrência e resposta incerta:** duas sessões PostgreSQL concorrentes produziram uma mutação + um ACK idempotente. O proxy devolveu HTTP 503 após upstream commit; retry do Restaurante respondeu 200 sem novo `DELIVERY_RETURN_RECEIPT_CONFIRMED`.
+- **PASS — autorização e regressões:** usuário sem `orders.manage` foi negado com 403; suites de tenant RLS geral e regressões dos dois aplicativos passaram. Não foi executado teste HTTP de confirmação por tenant diferente.
+- **PASS — UI mobile:** Browser validou os dois aplicativos em 390×844, botão pendente do Restaurante, estado pendente do Motoboy e confirmação sincronizada; sem overflow horizontal. Não há assinatura/DeliveryProof inventada.
+- **PARTIAL — retenção E2E:** o modo de sessões independentes commita fixture sintética no isolado `rotamoto_e2e`; seus audit entries são append-only e não são apagados. Uma tentativa anterior à correção da UI terminou sem confirmação e o teardown foi bloqueado pelo mesmo guard append-only; as evidências foram preservadas.
+- **NOT RUN — físico/produção:** entrega real, rádio/suspensão Android e provider comercial não foram testados. `rotamoto` não foi acessado, migration/deploy não ocorreram; 0041 continua **APPLIED conforme documentação da 0140**, sem reconferência do ledger.
+- **Versionamento:** Restaurante `d7f5609eb53521b24b565dd2143a15b95d34e91d`, local sem push; Motoboy sem alteração (`ded20e37dfc9c96b472bd4e1e5d5bd2ba5b037f0`); Browser QA branch/HEAD preservados com runner/evidência local; histórico publicará somente a branch autorizada.
+
+Evidência final: `browser-tests/evidencias/campanhas/0148/return-receipt-ddb0af0d-98ad-447e-821e-f74da10b46c0/`. Ver [REGISTROS/0148.md](REGISTROS/0148.md). Próximo item: teste HTTP explícito de tenant incorreto; validação física fica condicionada a aparelho/processo assistido. Não iniciar Campanha 0149.
+
 ## Estado vigente — Campanha 0147: cancelamentos e devoluções (2026-10-13)
 
 **Resultado: PARTIAL.** Os cenários locais de cancelamento, custódia, rota e sincronização passaram em testes unitários, PostgreSQL E2E e Chromium/CDP. Cancelar Delivery própria após coleta cria um único RETURN na mesma transação, mantém o motorista custodiante e acrescenta a devolução depois das demais paradas; cancelamentos antes da coleta não criam RETURN. Cancelamento comercial externo sem Delivery própria não fabrica Delivery, QR, atribuição ou devolução. Restaurante e Motoboy apresentam estados distintos; Motoboy executou o ciclo e ficou `ARRIVED`/`AWAITING_RESTAURANT_RECEIPT`, sem comprovante fictício.

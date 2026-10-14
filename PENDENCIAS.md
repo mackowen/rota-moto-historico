@@ -1,3 +1,19 @@
+## Atualização — Campanha 0148 (2026-10-14)
+
+Esta consolidação atualiza RETURN/custódia com a confirmação bilateral e suas regressões. As seções históricas permanecem preservadas.
+
+**Contagem 0148 (5 itens): RESOLVED 3 · PARTIAL 1 · OPEN 0 · BLOCKED 1.**
+
+| ID | Status / prioridade | Item e evidência | Dependência / próximo passo |
+|---|---|---|---|
+| 0148-R1 | **RESOLVED / P1** | Motoboy registra entrega física e deixa RETURN `ARRIVED/AWAITING_RESTAURANT_RECEIPT`; só Restaurante autorizado fecha RETURN e custódia original em transação, preservando eventos e vínculo com a Delivery original. Browser bilateral em `rotamoto_e2e` confirmou sync de volta ao Motoboy. | Manter regressões do ciclo e da relação Order/Delivery. |
+| 0148-R2 | **RESOLVED / P1** | Duas sessões concorrentes confirmaram com a mesma chave; uma mutação + um ACK duplicado, exatamente um evento de recebimento. Falha HTTP 503 após commit e retry resultaram em ACK sem segundo evento. Chave diferente em estado terminal também é reconhecida sem mutação adicional. | Preservar cenário concorrente e recuperação de resultado remoto incerto. |
+| 0148-R3 | **RESOLVED / P2** | Detalhe de pedido externo mostrava RETURN pendente mas não oferecia recebimento. UI agora exibe estado/custódia e botão autorizado. Captura Browser 390×844 mostrou pendência e conclusão nos dois apps sem overflow; não inventa comprovante. | Manter a ação separada do cancelamento comercial e da criação de novo pedido. |
+| 0148-P1 | **PARTIAL / P1** | Usuário sem `orders.manage` recebeu 403; suite RLS geral passou (46 tabelas, 37 políticas FORCE, dois tenants). Não houve tentativa HTTP direta de confirmar RETURN de outro tenant. | Acrescentar teste endpoint de ID cross-tenant, que deve responder fail-closed sem revelar dado nem criar evento. |
+| 0148-B1 | **BLOCKED / P2 físico** | Entrega física real/Android, radio offline e suspensão do processo não foram executados; Browser usa eventos e HTTP sintéticos. A fixture independente em `rotamoto_e2e` pode reter audit entries append-only; não foi feita limpeza destrutiva nem alteração de guard. | Validar em aparelho/processo assistido quando disponível; revisar retenção de fixtures E2E sem apagar audit log. |
+
+Nenhuma migration ou deploy. `rotamoto` não foi acessado; 0041 permanece **APPLIED conforme a documentação da 0140**. Detalhes/evidências: [REGISTROS/0148.md](REGISTROS/0148.md). Não iniciar Campanha 0149.
+
 ## Atualização — Campanha 0147 (2026-10-13)
 
 Esta seção atualiza cancelamentos e devoluções com os testes locais da 0147; os registros e itens anteriores permanecem preservados.
