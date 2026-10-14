@@ -1240,3 +1240,14 @@ Manifesto E2E correto e limites em [REGISTROS/0174.md](REGISTROS/0174.md).
 - [ ] **P1 — transições adicionais:** recusa, cancelamentos antes/depois da coleta e RETURN na jornada Browser.
 
 `npm test` dos dois apps, suites PG logística/territorial e runner de concorrência foram aprovados no escopo registrado; evidências, commits e limitações em [REGISTROS/0175.md](REGISTROS/0175.md).
+
+
+## Atualização vigente — Campanha 0176
+
+- [x] **RESOLVED / P1 — convergência visual Order/Delivery (0172):** runner autenticado corrigido; reload, sync no Dashboard e navegação após handler pronto. DOM Restaurante mostra pedido `Finalizada`; IndexedDB conserva `Order.canonicalStatus=DELIVERED`/`deliveryStatus=DELIVERED` e `Delivery.status=DELIVERED` v6. Sem alteração funcional no produto.
+- [ ] **OPEN / P1 — Route (0177):** validar Route persistida via formulário legítimo e sequência de duas paradas; `CONTRACT.md` define `Route.deliveryIds` ordenado e autoridade de escrita do Restaurante.
+- [ ] **OPEN / P1 — offline/PWA (0178):** fault injection autenticada com 503, timeout/ACK perdido, replay, SW e outbox persistente; depende da jornada/Route aprovada.
+- [ ] **OPEN / P1 — financeiro e RETURN (0179):** valor Order, taxa, Earning/repasse, concorrência e ciclo de cancelamento/devolução com recebimento.
+- [ ] **OPEN / P1 — DR (0180):** recovery set oficial atualizado e restore real permanecem proibidos sem autorização; somente fixture sintética/descarte autorizada.
+
+Evidência 0176: [REGISTROS/0176.md](REGISTROS/0176.md). Fixture sintética ficou retida em `rotamoto_e2e`; nenhum cleanup foi realizado.

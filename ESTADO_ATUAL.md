@@ -1,6 +1,8 @@
-## Estado atual — Campanha 0170: consolidação (2026-10-14)
+## Estado atual — Campanha 0176: convergência Restaurante (2026-10-14)
 
-**Resultado PARTIAL; PRODUCTION_READINESS=BLOCKED.** npm test passou nos dois apps; PostgreSQL logística e paridade cross-app passaram. A jornada Browser autenticada não chegou ao estado final; PWA upgrade não alcançou waiting. Inventário de backup agora compara o ledger, mas restore real/offsite/RPO/RTO seguem pendentes. Veja matriz completa e próximos critérios em [REGISTROS/0170.md](REGISTROS/0170.md) e [RESUMOS/0170.md](RESUMOS/0170.md). Nenhuma 0171 iniciada.
+**Resultado PASS para a convergência visual da jornada coberta; produção segue BLOCKED.** Uma Order foi criada na UI Restaurante, executada pelo Motoboy até Delivery `DELIVERED` v6 e, após reload + sync autenticado, apareceu na lista do Restaurante como `Finalizada`. IDs canônicos de Order/Delivery e projeções IndexedDB/PostgreSQL foram coerentes. A falha da 0172 era corrida e condição indevida do runner; nenhuma correção de produto foi necessária. Evidência: [REGISTROS/0176.md](REGISTROS/0176.md), [RESUMOS/0176.md](RESUMOS/0176.md), sumário local de fixture 0176.
+
+A próxima dependência aberta é a 0177: Route canônica e duas paradas ordenadas pela interface. Offline/PWA, reconciliação financeira, concorrência das operações e RETURN ainda não foram aprovados. Backup/DR, validação física e homologação comercial continuam bloqueios independentes para produção.
 
 ## Estado anterior — Campanha 0169: observabilidade (2026-10-14)
 
