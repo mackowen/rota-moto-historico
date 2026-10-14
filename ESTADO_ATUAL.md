@@ -7,7 +7,7 @@
 - **99Food:** rate limiter PostgreSQL app/loja/operação validado com dois workers/sessões, concorrência entre tenants, Retry-After e recuperação pelo estado persistido. Runtime, tokens protegidos/lease, webhook, inbox/outbox, lista unificada e comandos passaram nos testes sintéticos locais. Nenhum pedido comercial ou requisição externa foi executado.
 - **Evidência:** `npm test` completo Restaurante e Motoboy; `npm run test:postgres` exclusivamente em `rotamoto_e2e`; testes 99Food protocol/runtime/rate-limit; Browser Chromium/CDP desktop e 390×844 mobile. `pg_amcheck` suplementar foi bloqueado por autenticação do CLI, mas backup autenticado e restauração real passaram.
 - **Pendências:** onboarding 99Food (credencial, sandbox, whitelist, certificação e aceite comercial), homologação comercial iFood/Keeta, cópia offsite/custódia separada da chave e agendamento/RPO/RTO. Nenhuma delas invalida a recuperação isolada comprovada ou prontidão técnica interna.
-- **Versionamento:** Restaurante local `df82a4f724ce5566a21203464f525ad61242a5ec`; Motoboy inalterado em `ded20e37dfc9c96b472bd4e1e5d5bd2ba5b037f0`; Browser QA sem commit/push em `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`. SHA do histórico será anotado após publicação.
+- **Versionamento:** Restaurante local `df82a4f724ce5566a21203464f525ad61242a5ec`; Motoboy inalterado em `ded20e37dfc9c96b472bd4e1e5d5bd2ba5b037f0`; Browser QA sem commit/push em `eb5d082e2f1aa44fe5f56a79a80c82eac1179362`. Histórico publicado em `475e49037fd053bec16588ffaf51d112651b6596` na branch autorizada.
 
 Evidências, IDs de fixtures, comandos, checksums, limitations e classificação por gate: [REGISTROS/0154.md](REGISTROS/0154.md). Matriz atualizada: [PENDENCIAS.md](PENDENCIAS.md), seção 0154. Não iniciar Campanha 0155.
 
