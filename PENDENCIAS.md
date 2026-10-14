@@ -1211,3 +1211,12 @@ Evidências em [REGISTROS/0171.md](REGISTROS/0171.md).
 - [ ] **OPEN / P1:** reconciliar Earning/valores e testar recusa, cancelamento pré/pós-coleta e RETURN no browser autenticado.
 
 Evidência e limitações em [REGISTROS/0172.md](REGISTROS/0172.md).
+
+
+## Atualização — Campanha 0173
+
+- [ ] **OPEN / P1:** retomar HTTP 503, timeout, ACK perdido, replay concorrente e reconnect somente após a verificação final cross-app da 0172.
+- [ ] **OPEN / P1:** perfil Chromium persistente isolado com outbox pendente antes/depois da atualização do Service Worker; confirmar integridade IndexedDB.
+- [x] **PARTIAL:** contratos e testes unitários de storage/sync/PWA aprovados na regressão, sem evidência de fault injection autenticada.
+
+Ver [REGISTROS/0173.md](REGISTROS/0173.md).

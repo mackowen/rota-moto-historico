@@ -1139,3 +1139,8 @@ Estado atual: **PASS no gate de infraestrutura autenticada**. O runtime real, lo
 ## Campanha 0172 — jornada autenticada
 
 Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceitação, coleta, saída, chegada e confirmação. A entrega e os cinco eventos estão canônicos; a finalização não foi localizada na lista do Restaurante e não há Route canônica. Detalhes: [REGISTROS/0172.md](REGISTROS/0172.md).
+
+
+## Campanha 0173 — offline e recuperação
+
+Estado **BLOCKED** para fault injection Browser sobre a jornada autenticada, devido à confirmação cross-app pendente da 0172. Testes locais de outbox, storage, sync e Service Worker passaram como parte de `npm test`, sem equivaler aos cenários de falha solicitados. Nenhum perfil PWA persistente ou fixture foi limpo. Ver [REGISTROS/0173.md](REGISTROS/0173.md).
