@@ -1,3 +1,19 @@
+## Atualização vigente — Campanha 0150 (2026-10-14)
+
+Esta consolidação atualiza exclusivamente lifecycle, identificação e auditoria de fixtures PostgreSQL E2E. As matrizes históricas permanecem preservadas.
+
+**Contagem 0150 (5 itens): RESOLVED 3 · PARTIAL 1 · BLOCKED 1 · OPEN 0.**
+
+| ID | Status / prioridade | Item e evidência | Dependência / próximo passo |
+|---|---|---|---|
+| 0150-R1 | **RESOLVED / P1** | Manifesto UUID criado antes de conexão; gravação atômica, modo privado, ambiente fechado em `rotamoto_e2e`, status/history e IDs de fixture sem segredos. Teste unitário cobre campos sensíveis e execuções concorrentes. | Manter obrigatório nos runners PostgreSQL; definir `ROTAMOTO_E2E_CAMPAIGN` em cada execução. |
+| 0150-R2 | **RESOLVED / P1** | Single-session fixture rollback validou zero linhas com consulta scoped; independent-session exige retenção explícita e não há DELETE automático. `audit_log` e referências preservadas. | Preservar o fail-closed; qualquer limpeza exige autorização, dry-run, allowlist e análise de FK. |
+| 0150-R3 | **RESOLVED / P1** | Crash real pós-commit: `RUNNING → INTERRUPTED → RUNNING(inventory-only) → RETAINED`; replay não repetiu operações. Browser A/B foi registrado antes do commit e recebeu snapshots RLS por tenant. | Continuar registrando tenants externos antes da primeira gravação confirmada. |
+| 0150-P1 | **PARTIAL / P1** | Resíduos 0149 conhecidos foram enumerados por tenant e sem escrita. Evidências 0148 e algumas tentativas antigas não conservam IDs suficientes para identificação inequívoca; não foram removidas. | Recuperar IDs em artefatos locais se disponíveis; até então classificar como não verificáveis e reter. |
+| 0150-B1 | **BLOCKED / P1** | Inventário global depende de auditor autorizado; `rotamoto_auditor` tem entrada pgpass, mas `CONNECT=false` e nenhum `SELECT` em `rotamoto_e2e`. Migrator segue com RLS/sem BYPASS. | Processo responsável deve aprovar uma visão tenant-aware/read-only ou capacidade de inventário equivalente; não criar grants nesta campanha. |
+
+Evidências detalhadas: [REGISTROS/0150.md](REGISTROS/0150.md). A documentação da migration 0041 continua **APPLIED conforme 0140**; nenhum banco oficial foi acessado nesta campanha. Não iniciar Campanha 0151.
+
 ## Atualização vigente — Campanha 0149 (2026-10-14)
 
 Esta consolidação atualiza apenas os itens de segurança multiempresa e lifecycle das fixtures reexaminados nesta campanha. Matrizes anteriores permanecem preservadas.
@@ -10,7 +26,7 @@ Esta consolidação atualiza apenas os itens de segurança multiempresa e lifecy
 | 0149-R2 | **RESOLVED / P1** | `orders.manage`, CSRF e sessão: membro sem permissão 403, CSRF ausente/inválido 403, sessão inválida/anônima 401. Cabeçalho de empresa adulterado não muda o tenant derivado da sessão. | Preservar guards HTTP e revisão de contexto tenant em cada endpoint de mutação. |
 | 0149-R3 | **RESOLVED / P1** | RLS/FORCE e ACL runtime passaram; 46 relações, 37 políticas forced; fixture unitária/lifecycle em rollback terminou sem resíduo. Trigger `audit_log_no_update_or_delete` e FKs RESTRICT conferidos sem alteração. | Continuar usando `rotamoto_e2e`; não relaxar RLS, grants ou append-only. |
 | 0149-P1 | **PARTIAL / P1** | Global residual inventory não comprovado. Fixture Browser concluída tem A: 17 domain records, 29 outbox, 37 audit; B: 1 membership/sessão e 0 domain/outbox/audit. Uma tentativa interrompida pode ter fixture extra sem IDs recuperáveis. Contagens sem contexto RLS não são prova de vazio. | Disponibilizar credencial auditor read-only autorizada ou consulta tenant-aware que descubra IDs sem expor dados; então inventariar sem apagar. Preservar a tentativa/evidências existentes. |
-| 0149-O1 | **OPEN / P2** | Cleanup de fixture independente não pode apagar `audit_log` nem pais referenciados; o caminho padrão retém fixtures para preservar auditoria. O harness atual não tem manifesto completo garantido para todo teste interrompido. | Tornar obrigatório manifesto tenant/user antes do commit e no `finally`; projetar eventual limpeza allowlist de registros exclusivamente pertencentes ao run, retendo company/user/tombstones referenciados. Testar isso antes de habilitar teardown independente; sem limpeza de resíduos antigos. |
+| 0149-O1 | **RESOLVED em 0150 / P2** | O manifesto pré-commit e recuperação foram integrados ao lifecycle; testes multi-sessão retêm fixtures e o helper não executa cleanup destrutivo. Isso não torna resíduos antigos elegíveis para remoção. | Qualquer proposta de cleanup permanece separada, exige dry-run e comprovação de ownership/dependências; ver `0150-P1` e `0150-B1`. |
 
 Detalhes: [REGISTROS/0149.md](REGISTROS/0149.md). Migration 0041 permanece **APPLIED conforme a evidência documental da 0140**; esta campanha não conectou a `rotamoto`. Não iniciar Campanha 0150.
 

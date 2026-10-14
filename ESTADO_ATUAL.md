@@ -1,3 +1,16 @@
+## Estado vigente — Campanha 0150: gerenciamento seguro de fixtures E2E (2026-10-14)
+
+**Resultado: PARTIAL.** O lifecycle PostgreSQL E2E do Restaurante agora cria manifestos atômicos antes da conexão, registra tenants/usuários/sessões e entidades conhecidas sem segredos, separa IDs registrados de snapshots de banco, e inventaria somente tenants conhecidos com consultas `READ ONLY` sob RLS. `COMPLETED` só ocorre depois da verificação de rollback; commits de sessões independentes ficam `RETAINED`. O helper não apaga fixture commitada nem `audit_log`.
+
+- **PASS — rollback/atomicidade:** suíte unitária e E2E de sessão única comprovaram fechamento normal e zero resíduo no tenant exclusivo. Guard de banco/role/host permaneceu ativo.
+- **PASS — falha e recuperação:** falha pré-commit confirmou contagens zero. Processo filho encerrado abruptamente pós-commit foi marcado `INTERRUPTED`; uma retomada `inventory-only` consultou o tenant explicitamente e terminou `RETAINED`, com audit rows preservadas. Replay de recuperação não reaplica operações.
+- **PASS — execução Browser multiempresa:** manifestou dois tenants antes do commit independente. A consulta scoped encontrou no tenant A 17 domain, 16 inbox, 29 outbox e 38 audit; B tinha zero nesses conjuntos. Evidência: `browser-tests/evidencias/campanhas/0149/tenant-security-f65424d5-f588-4046-8c80-0fd2bba8f0f8/` e run `bb8e0b27-2fe2-48c9-9817-1b17bb014498`.
+- **PARTIAL — resíduos 0148–0149:** IDs preservados do Browser 0149 foram consultados; registros 0148 sem company ID e tentativas antigas sem IDs completos seguem não verificáveis. Nenhuma limpeza foi feita.
+- **BLOCKED — inventário global:** `rotamoto_auditor` tem pgpass local, mas o catálogo em `rotamoto_e2e` mostra `CONNECT=false` e nenhuma permissão `SELECT`; `rotamoto_migrator` não tem `BYPASSRLS`. Não ampliamos privilégios nem inferimos banco vazio.
+- **Versionamento:** Restaurante `7c13ba5b2d0de745b486cd274770862bf6962488` (commits locais `2d01894` e `7c13ba5`), sem push; Motoboy sem alteração; Browser QA sem push, artefatos anteriores preservados; histórico publica somente nesta branch autorizada.
+
+`rotamoto` não foi acessado; não houve migration, DDL, deploy ou cleanup. O detalhe e os IDs de execução estão em [REGISTROS/0150.md](REGISTROS/0150.md) e [RESUMOS/0150.md](RESUMOS/0150.md). Próximo foco sugerido: obter processo de leitura tenant-aware aprovado e avaliar resíduos antigos por dry-run. Não iniciar Campanha 0151.
+
 ## Estado vigente — Campanha 0149: segurança multiempresa e fixtures E2E (2026-10-14)
 
 **Resultado: PARTIAL.** Nos caminhos exercitados, não foi encontrada falha de isolamento. Testes HTTP com A/B e Browser/CDP negaram leitura, confirmação e replay de RETURN por tenant B com UUID conhecido de A; retorno 404 sem dados, e estado/rota/eventos de A não mudaram. Uma corrida com sessões PostgreSQL independentes confirmou o 404 de B enquanto A executava recebimento autorizado. CSRF ausente/inválido: 403; sessão inválida/anônima: 401; ausência de `orders.manage`: 403. RLS/FORCE (46 tabelas/37 políticas) passou.
