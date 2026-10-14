@@ -1149,3 +1149,8 @@ Estado **BLOCKED** para fault injection Browser sobre a jornada autenticada, dev
 ## Campanha 0174 — concorrência E2E
 
 Estado **PARTIAL**. Duas sessões e dois tenants foram usados no teste PostgreSQL; locks, leases, RLS/FORCE, idempotência, RETURN e isolamento passaram no escopo do suite. Manifesto/schema sandbox 0174 retido. Testes concorrentes de Orders/Routes e reconciliação financeira permanecem pendentes. Ver [REGISTROS/0174.md](REGISTROS/0174.md).
+
+
+## Campanha 0175 — estado vigente do lote 0171–0175
+
+Resultado **PARTIAL**. Infraestrutura autenticada 0171 PASS; 0172 chegou a `DELIVERED` no E2E mas a verificação de tela final Restaurante e Route ficaram pendentes; fault injection Browser 0173 ficou bloqueada; 0174 aprovou concorrência/RLS em disponibilidade e RETURN, com limites. `npm test` de ambos e testes PG logística/territorial/concorrência passaram. Banco oficial intocado. Ver [REGISTROS/0175.md](REGISTROS/0175.md).

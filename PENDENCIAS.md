@@ -1229,3 +1229,14 @@ Ver [REGISTROS/0173.md](REGISTROS/0173.md).
 - [ ] **OPEN / P1:** validar reconciliação de Earning/valores sob concorrência e recuperação de worker com resultado desconhecido.
 
 Manifesto E2E correto e limites em [REGISTROS/0174.md](REGISTROS/0174.md).
+
+
+## Backlog vigente após 0175
+
+- [ ] **P1 — sync visual cross-app:** comprovar a linha/detalhe do Restaurante após Delivery `DELIVERED`, com captura DOM e leitura autorizada do mesmo estado canônico.
+- [ ] **P1 — Route:** provar entidade/planejamento operacional da rota ou esclarecer critério de aceite; não inferir uma Route da transição de Delivery.
+- [ ] **P1 — offline/PWA:** após convergência, executar perfil Chromium autenticado persistente com 503, timeout, ACK perdido, replay e atualização/reabertura mantendo outbox IndexedDB.
+- [ ] **P1 — financeiro/concorrência:** validar Earning e valores; concorrer atribuições e operações Order/Delivery/Route sob RLS/tenant.
+- [ ] **P1 — transições adicionais:** recusa, cancelamentos antes/depois da coleta e RETURN na jornada Browser.
+
+`npm test` dos dois apps, suites PG logística/territorial e runner de concorrência foram aprovados no escopo registrado; evidências, commits e limitações em [REGISTROS/0175.md](REGISTROS/0175.md).
