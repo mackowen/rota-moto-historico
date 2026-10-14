@@ -928,3 +928,15 @@ Ver [REGISTROS/0139.md](REGISTROS/0139.md) e [RESUMOS/0139.md](RESUMOS/0139.md).
 - Gates globais técnicos PARTIAL por WebGL2 indisponível no Chromium, ausência de GPS/câmera físicos e link Ajuda avaliado por clique DOM, não toque físico. Revisão estética ainda depende do operador.
 - PostgreSQL oficial não conectado; E2E não modificado; nenhuma migration/deploy.
 - Ver [REGISTROS/0140.md](REGISTROS/0140.md) e [RESUMOS/0140.md](RESUMOS/0140.md). Não iniciar 0141.
+## Estado vigente — Campanha 0153: runtime 99Food e migration oficial (2026-10-14)
+
+**Resultado geral: PARTIAL. `OFFICIAL_DEV_DB_MIGRATION = BLOCKED`; `READY_FOR_EXTERNAL_HOMOLOGATION = NO`.** A integração técnica foi ligada e aprovada em `rotamoto_e2e` com migrations 0042–0043. O banco oficial não foi consultado nem alterado: o backup prévio falhou em `audit_log` sob FORCE RLS com a role migradora. O estado/versão oficial é desconhecido nesta execução.
+
+- **E2E:** ledger 0001–0043 íntegro; 0041 checksum preservado; 0042 checksum `ad036400035b8c03cbb92d9254d07fd8681ced0c06fcf325cb1678c06cdac160`; 0043 checksum `35a9f9d297d6010c0704b487d85fb735ab96db0a0c8517385c4b31936be1b189`. RLS/FORCE e grants mínimos validados.
+- **Aplicativos:** runtime 99Food server-side com assinatura/raw-body, inbox/outbox, Order canônico, worker/comandos e UX unificada. Pedidos da plataforma não criam Delivery/QR/atribuição local.
+- **Testes:** suites completas Restaurante/Motoboy, PostgreSQL migrations/identity/sync/RETURN, runtime/worker e 99Food PG E2E passaram; Chromium/CDP confirmou pedido local + 99Food, ação CONFIRM enfileirada, configurações e mobile 390 px sem overflow.
+- **Pendência interna:** rate limit oficial de chamadas comuns ainda não é distribuído por conta/app entre processos; manter o tráfego externo desabilitado até implementação/teste.
+- **Backup falho:** `/data/data/com.termux/files/home/projetos/backups/campanha-0153/rotamoto-20261014.dump`, 313236 bytes, modo 0600; cópia interrompida ao ler `audit_log`, não verificada e imprópria para restore. Nenhuma policy, trigger ou role foi alterada. Requer backup consistente autorizado com leitura de todas as tabelas auditáveis sob os controles existentes.
+- **Oficial:** nenhuma consulta de ledger, migration ou smoke test após a falha do backup. Aplicativos sem push; Restaurante apenas commit local; histórico publicado somente na branch autorizada.
+
+Ver [REGISTROS/0153.md](REGISTROS/0153.md) e [RESUMOS/0153.md](RESUMOS/0153.md). Não iniciar Campanha 0154.

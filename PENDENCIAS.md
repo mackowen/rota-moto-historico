@@ -959,3 +959,17 @@ Ver [REGISTROS/0140.md](REGISTROS/0140.md). Não iniciar Campanha 0141.
 Ver [REGISTROS/0144.md](REGISTROS/0144.md) e [RESUMOS/0144.md](RESUMOS/0144.md). Nenhuma migration, alteração no banco oficial ou deployment.
 
 ## Atualização — Campanha 0135
+## Atualização vigente — Campanha 0153: integração operacional 99Food (2026-10-14)
+
+Esta atualização supersede somente estados de implementação documentados como anteriores à 0153. A trilha histórica abaixo permanece íntegra.
+
+| ID / origem | Componente; prioridade; estado | Evidência atual | Dependência / próximo passo |
+|---|---|---|---|
+| 0153-99-1 / 0144–0153; contrato oficial | Runtime 99Food Protocol: conta, token, webhook, Order/outbox, worker/comandos; P1 desenvolvimento; **PARTIAL** | Adapter e runtime ligados; migrations 0042/0043, inbox/outbox, tenant resolver, worker, ações e Browser testados em `rotamoto_e2e`. | Completar limitador distribuído conforme quotas oficiais e testar concorrência de múltiplas instâncias antes de qualquer tráfego externo. |
+| 0153-99-2 / auth e onboarding 99Food | Credenciais/sandbox/whitelist/certificação; P1 externo; **BLOCKED_EXTERNAL** | Nenhuma chamada comercial ou sandbox; credenciais não estão configuradas no ambiente. | Acesso aprovado, credenciais em secret store, whitelist e aceite/homologação do provider. |
+| 0153-DB-1 / adendo 0153 | Aplicar migrations no `rotamoto` oficial de desenvolvimento; P1 integridade; **BLOCKED** | Gate exigiu backup antes de ler ledger. `pg_dump` falhou em `audit_log` por FORCE RLS para `rotamoto_migrator`; dump parcial não verificável em `/data/data/com.termux/files/home/projetos/backups/campanha-0153/rotamoto-20261014.dump`. Nenhuma consulta ledger ou DDL oficial aconteceu. | Configurar mecanismo de backup consistente que preserve RLS/FORCE e consiga incluir auditoria; validar cópia; então repetir identificação, ledger/checksums, análise de lock/impacto e aplicar somente migrations novas se ainda pendentes. Não restaurar o dump parcial. |
+| 0153-99-3 / recursos 1923 e 1929–1931 | Quotas 99Food; P1 desenvolvimento; **OPEN** | Tratamento de 429/Retry-After e cooldown de token 10103/120s presentes; não há pacing distribuído para detalhe 10/10s e comandos 5/s entre workers. | Implementar coordenação por app/loja e provar limites sob workers concorrentes em `rotamoto_e2e`, sem chamadas externas. |
+| 0153-99-4 / Registros 0150–0153 | Fixtures 99Food PostgreSQL; P2; **RETAINED** | E2E usou manifestos da Campanha 0150, dois tenants sintéticos e estado retido; Browser usa runner sintético separado. Sem limpeza de audit ou fixtures. | Manter inventário read-only e preservar linhas auditáveis; eventual limpeza exige propriedade e dependências comprovadas. |
+| 0153-99-5 / pedidos e logística | Order vs Delivery/fulfillment; P1; **RESOLVED no escopo sintético** | Testes confirmaram Order canônico/outbox uma vez, sync unificada e ausência de Delivery/QR para fulfillment da plataforma; entrega da loja exige Delivery própria concluída. | Validar com credenciais/sandbox externos somente após o rate limiter e migration oficial, sem criar Delivery fora do contrato. |
+
+Referências oficiais, hashes, testes e evidência do bloqueio estão em [REGISTROS/0153.md](REGISTROS/0153.md). Não iniciar Campanha 0154.
