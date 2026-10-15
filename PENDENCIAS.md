@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0218 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0218-RETURN-UI / 0212, 0215, 0207 | Cancelamento/custódia/rotas; P1; **OPEN** | Unit RETURN e logistics PG passaram; nenhum Browser novo criou três pedidos pela UI e concluiu recebimento bilateral. O run 0207 é histórico e iniciou de fixture. | Completar Browser por checkpoints: três Orders/Deliveries e Route via UI, cancelamento próprio pós-coleta, retorno após entregas restantes, confirmação Restaurante; validar pré-coleta sem retorno físico. |
+
+Ver [REGISTROS/0218.md](REGISTROS/0218.md).
+
 ## Atualização vigente — Campanha 0217 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

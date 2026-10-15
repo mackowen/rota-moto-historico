@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0218
+
+**0218 PARTIAL.** `npm test`, testes unitários de RETURN e `npm run test:logistics-postgres` passaram. Não foi executado novo Browser E2E com três pedidos criados pela UI, cancelamento após coleta, RETURN no fim de rota e recebimento bilateral. A evidência 0207 permanece histórica e não fecha esse gate. Banco oficial intocado. Ver [REGISTROS/0218.md](REGISTROS/0218.md).
+
 ## Estado vigente — Campanha 0217
 
 **0217 PARTIAL na jornada integrada; disputa autenticada e execução canônica passaram.** Um run Chromium com três perfis criou Driver B e Order/Delivery pela UI Restaurante; leases válidos foram conferidos no PostgreSQL E2E antes de duas requisições concorrentes autenticadas. Um Driver venceu, o outro recebeu `REVISION_CONFLICT`, o replay foi `duplicate` sem nova versão e o perdedor recebeu `DRIVER_NOT_ASSIGNED`. O vencedor concluiu a mesma Delivery pela UI; PostgreSQL terminou em `DELIVERED`, versão 7, com cinco eventos únicos; a Order permaneceu visível no Restaurante. Earning positivo não foi configurado e não houve prova de disputa acionada pelos controles visuais do Restaurante ou de estado logístico explícito na projeção. Corridas de atribuição intermediárias falharam devido a bootstrap de handlers, leases expirados e interação do slider; artefatos e fixtures foram retidos. `npm run test:logistics-postgres`, `npm run test:e2e-orchestrator` e as suítes `npm test` passaram; oficial intocado. Ver [REGISTROS/0217.md](REGISTROS/0217.md).
