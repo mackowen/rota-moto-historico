@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0213 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0213-FINANCE-TWO-EARNINGS / 0209, 0213 | Order/Earning/Route; P1; **PARTIAL** | Uma de duas Deliveries novas concluiu com valores BRL em centavos corretos e um Earning de 725 com snapshot; a segunda permaneceu `ARRIVED` após falha offline. | Retomar a segunda operação e provar duas conclusões, dois Earnings pertencentes às duas novas Deliveries e soma 1.450 centavos, com conferência em UI e PostgreSQL. |
+
+Ver [REGISTROS/0213.md](REGISTROS/0213.md).
+
 ## Atualização vigente — Campanha 0212 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

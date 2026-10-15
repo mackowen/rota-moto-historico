@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0213
+
+**0213 PARTIAL.** O Browser criou duas Orders/Deliveries e Route pela UI; uma concluiu com subtotal 12.345, taxa 725, total 13.070 e Earning 725 centavos com snapshot. ACK perdido/replay não duplicou eventos. A segunda ficou `ARRIVED` offline, logo os dois Earnings e total 1.450 não foram comprovados. Ver [REGISTROS/0213.md](REGISTROS/0213.md).
+
 ## Estado vigente — Campanha 0212
 
 **0212 PARTIAL.** Browser repetiu cancelamento, atribuição de RETURN e entrega física, mas o runner 0148 usa Order/Route de fixture e parou antes do recebimento pelo Restaurante; o manifesto ficou retido em `RUNNING`. Não houve criação dos três pedidos pela UI nem validação pré-coleta neste run. Ver [REGISTROS/0212.md](REGISTROS/0212.md).
