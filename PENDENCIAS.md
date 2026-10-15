@@ -1683,3 +1683,13 @@ Ver [REGISTROS/0210.md](REGISTROS/0210.md).
 | 0216-LEGACY-RUNNER-MIGRATION / 0211–0216 | Runners Browser; P1; **OPEN** | `campaign-0206` e runners anteriores continuam com gerência própria de Chrome/timeout e não usam o novo ciclo resumível. | Migrar/substituir somente depois de identificar setup de sessão/fixture; manter tratamento de `UNKNOWN_OUTCOME` e não apagar manifestos antigos. |
 
 Ver [REGISTROS/0216.md](REGISTROS/0216.md).
+
+## Atualização vigente — Campanha 0222 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0209-FINANCE-ROUTE / 0213, 0219, 0222 | Order/Delivery/Route/Earning; P1; **RESOLVED** | Run `a13826a4-25e6-43d0-b519-5094daf488b7`: duas Orders e Deliveries novas criadas por UI, Route de duas paradas, ambas `DELIVERED`; cada Order 12.345 + 725 = 13.070 centavos BRL; Earnings exclusivos por `deliveryId`, 725 cada e soma 1.450. Snapshots `payout-snapshot-v1`; replay após ACK 503 não duplicou. | Critério de conciliação financeira de duas entregas satisfeito. |
+| 0209-FINANCE-NEGATIVE / 0213, 0222 | Validação de valores monetários; P2; **RESOLVED** | Subtotal negativo foi rejeitado pelo `min=0`/validity nativa na UI e não persistiu Order; `node tests/test-order-money.js` passou. | Critério de entrada negativa satisfeito. |
+| 0222-ACK-REPLAY / 0213, 0222 | Sync/outbox/Earning; P1; **RESOLVED** | Primeira conclusão recebeu 503 após commit. Estado convergiu; por Delivery houve cinco eventos canônicos com cinco IDs de origem distintos e permaneceu um Earning por Delivery. | Critério de idempotência do gate financeiro satisfeito. |
+
+Ver [REGISTROS/0222.md](REGISTROS/0222.md). Permanecem independentes os gates de worker/outage, RETURN e regressão consolidados das campanhas seguintes; a aprovação financeira não os presume.

@@ -1334,3 +1334,9 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0216
 
 **0216 PARTIAL.** O Browser QA agora tem orquestrador reutilizável: manifest atômico, checkpoints, timeout global/por etapa, dois perfis Chromium, esperas por estado, clique estável, captura de falhas sanitizada e recuperação de crash com `UNKNOWN_OUTCOME`. `npm run test:e2e-orchestrator` passou em Chromium/CDP; run `b0ca97ef-30a2-4dde-bdf1-bd762fcbc586`. Browser QA commit local `2502dd7`, sem push. As jornadas autenticadas dos aplicativos e a integração dos runners antigos ainda não foram executadas. `rotamoto` intocado. Ver [REGISTROS/0216.md](REGISTROS/0216.md); campanha seguinte deve usar o harness, sem declarar o gate integrado aprovado.
+
+## Estado vigente — Campanha 0222
+
+**0222 PASS.** Browser autenticado criou pela UI duas Orders de R$ 123,45, duas Deliveries e uma Route de duas paradas; ambas concluíram como `DELIVERED`. Cada Order persistiu subtotal 12.345, taxa 725 e total 13.070 centavos BRL. Dois Earnings novos e vinculados às respectivas Deliveries têm 725 centavos cada, snapshot `payout-snapshot-v1` e total incremental R$ 14,50. Restaurante exibiu taxa/total nas duas linhas e Motoboy exibiu total e duas entregas. Subtotal negativo foi barrado sem persistência; ACK perdido após commit não duplicou eventos nem Earnings. Run `a13826a4-25e6-43d0-b519-5094daf488b7`; capturas em [evidências Browser 0222](../browser-tests/evidencias/campanhas/0222/a7461a65-8e2c-4a62-81bd-7adca7c8fb38/). Sem alterações nos aplicativos. Ver [REGISTROS/0222.md](REGISTROS/0222.md).
+
+A campanha seguinte 0223 inicia separadamente para outage PostgreSQL, workers reais e métricas; esses gates não são implicados pelo PASS financeiro. Prontidão de produção continua bloqueada pelas dependências independentes de DR oficial, infraestrutura e homologação física/comercial.
