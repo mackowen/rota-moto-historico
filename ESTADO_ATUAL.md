@@ -1222,3 +1222,6 @@ Ver [REGISTROS/0179.md](REGISTROS/0179.md). A consolidação 0180 permanece limi
 **0180 PARTIAL; prontidão de produção BLOCKED.** Aplicativos, suites PG de logística/tenant, testes sanitizados de métricas/lifecycle e Browser de jornada/RETURN passaram no escopo documentado. O teste de recovery set foi sintético e mockado. A última restauração real registrada é da 0158 e cobre ledger até 0041, enquanto a 0154 documenta schema 0044. Nenhum artefato/chave de backup ou banco oficial foi acessado nesta campanha. Backup atual/offsite, agendamento, retenção operacional, RPO/RTO, alertas e restore vigente seguem sem validação.
 
 Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chamada de instalação de sync recebeu 403 `CSRF_INVALID` transitório durante reautenticação; a reabertura do PWA não manteve rede offline. Ver [REGISTROS/0180.md](REGISTROS/0180.md).
+## Estado vigente — Campanha 0192
+
+**0192 PARTIAL.** Browser autenticado confirmou Route de duas paradas criada pela UI e lifecycle Leaflet em 1280×900 e 390×844, sem erros JS/CSRF. Os dois mapas tinham zero marcadores porque a jornada não confirmou coordenadas de destino; geometria viária e tiles externos não foram comprovados. Sem alterações de app. Run `6895ee89-5a62-4804-8cc8-d31f95d41ad8`; ver [REGISTROS/0192.md](REGISTROS/0192.md).

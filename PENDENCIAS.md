@@ -1404,3 +1404,11 @@ Ver [REGISTROS/0179.md](REGISTROS/0179.md). Nenhuma fixture ou trilha de auditor
 - [ ] **OPEN / P1 — PWA:** timeout, crash/restart e upgrade do Service Worker mantendo operação offline ainda sem comprovação completa.
 
 Ver [REGISTROS/0180.md](REGISTROS/0180.md). As campanhas 0176–0180 estão registradas sem afirmar cenários não executados; próximo ciclo exige autorização separada.
+## Atualização vigente — Campanha 0192 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0192-GEO-DESTINATIONS / 0192 | Mapa/territorial; P1; **OPEN** | Route de duas paradas existe, porém screenshots/DOM reportam zero marcadores; destinos não têm snapshot geográfico confirmado. | Exercitar confirmação autenticada de coordenadas sintéticas para cada Delivery (proveniência e precisão válidas) e confirmar marcadores sem alterar dados por fora do serviço. |
+| 0192-ROUTE-GEOMETRY / 0192 | Rota; P2; **PARTIAL** | Serviço retorna estado indisponível sem origem/destinos/provider. Nenhuma geometria ou tile foi inventada. | Com coordenadas válidas e provider local determinístico, testar sequência visual/geometry, resize, zoom e atualização; declarar limites de tiles externos. |
+
+Ver [REGISTROS/0192.md](REGISTROS/0192.md).
