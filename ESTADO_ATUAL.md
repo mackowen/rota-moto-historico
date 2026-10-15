@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0200
+
+**0200 PARTIAL; prontidão para produção BLOCKED.** Regressões npm, contratos cross-app, PG logística, isolamento tenant, concorrência e métricas por role worker passaram. As UIs criaram Orders/Deliveries/Route com geodados; o Browser não comprovou cartografia visível nem avanço ao segundo stop. Offline com SW upgrade, negócio durante outage, financeiro e RETURN Browser não foram repetidos. Restore 0184 é apenas evidência histórica nesta campanha. Banco oficial intocado. Ver [REGISTROS/0200.md](REGISTROS/0200.md).
+
 ## Estado vigente — Campanha 0199
 
 **0199 PARTIAL.** Foi implementada leitura agregada tenant-scoped das outboxes duráveis para os workers de marketplace e logística, em transação READ ONLY e sem IDs como labels. A consulta foi validada com roles PostgreSQL worker; `npm test` nos dois apps passou. Sem endpoint/exporter, alertas e métricas próprias de retry/lease/latência, o gate operacional continua parcial. Restaurante commit local `1f19237`. Ver [REGISTROS/0199.md](REGISTROS/0199.md).

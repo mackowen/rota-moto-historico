@@ -1,3 +1,17 @@
+## Atualização vigente — Campanha 0200 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0200-MAP-VISIBLE / 0192–0200 | Motoboy mapa; P1; **OPEN** | Route/coordinates/geometry HTTP 200 e markers no DOM; screenshot mostra tiles/markers não aparentes; foco mobile stop 2 não avançou. | Corrigir/confirmar framing e camada do mapa por hit-testing/screenshot, depois avançar stops em CDP mobile e desktop. |
+| 0200-INTEGRATED-RACE / 0191–0200 | atribuição/execução; P1; **PARTIAL** | PostgreSQL provou winner/conflict/aceite autorizado, mas a disputa e execução não ocorreram em uma mesma sessão Browser. | Vincular corrida concorrente às sessões autenticadas da jornada criada pela UI e verificar conclusão nos dois apps. |
+| 0200-OUTBOX-OUTAGE / 0194–0200 | sincronização; P1; **OPEN** | Health/readiness falha/recupera via proxy; sem operação pendente durante o outage. | Testar antes/depois do commit, ACK perdido, replay idempotente e convergência com outbox mantida. |
+| 0200-QUEUE-EXPORT / 0199–0200 | workers/observabilidade; P1; **PARTIAL** | Leitura PG agregada por tenant implementada e testada; exportador/alertas e séries de retry/lease faltam. | Conectar coletor autorizado e calibrar limites em carga mensurada, sem IDs em labels. |
+| 0200-DR / 0184–0200 | continuidade; P0; **BLOCKED operacional** | Restore sintético até 0044 permanece evidência histórica; sem restore atual/offsite/RPO-RTO. | Validar recovery set atualizado, cópia independente e procedimentos com autorização e ambiente descartável. |
+| 0200-EXTERNAL / 0152–0200 | integrações; P0; **BLOCKED_EXTERNAL** | Sem chamadas comerciais ou credenciais sandbox. | Obter onboarding e executar homologação externa autorizada. |
+| 0200-HARDWARE / 0163–0200 | Android; P1; **BLOCKED** | Sem testes físicos de GPS/câmera/QR/impressora. | Executar checklist em dispositivo autorizado. |
+
+Ver [REGISTROS/0200.md](REGISTROS/0200.md).
+
 ## Atualização vigente — Campanha 0199 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
