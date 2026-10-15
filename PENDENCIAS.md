@@ -1546,3 +1546,11 @@ Ver [REGISTROS/0205.md](REGISTROS/0205.md).
 | 0206-SECOND-STOP / 0201 | Motoboy Browser runner; P2; **RESOLVED no cenário** | `secondStopConfirmed=true` após ajuste de espera de layout/hit-test; Browser sem erros JS. | Manter a asserção explícita nas regressões de Route. |
 
 Ver [REGISTROS/0206.md](REGISTROS/0206.md).
+
+## Atualização vigente — Campanha 0207
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0207-RETURN-UI-SETUP / 0147–0207 | Pedidos/Route/RETURN; P1; **PARTIAL** | Retorno pós-coleta, fim da rota, execução Motoboy, confirmação Restaurante concorrente e recuperação 503 passaram em Browser/PostgreSQL. Contexto comercial e rota foram preparados pelo fixture. | Repetir criando Orders, Deliveries e Route pela UI no mesmo run e validar antes da coleta, permissões/tenant e efeitos financeiros. |
+
+Ver [REGISTROS/0207.md](REGISTROS/0207.md).

@@ -1218,6 +1218,10 @@ Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceita
 
 **PARTIAL.** A disputa de atribuição/aceite passou com duas sessões PostgreSQL e o Browser autenticado confirmou a segunda parada e execução de duas entregas em Route. O problema anterior da segunda parada era uma corrida de layout no helper de clique e foi corrigido no runner. A disputa e a execução pelo vencedor ainda não estão no mesmo Browser run com dois perfis independentes. Banco oficial não acessado. Detalhes: [REGISTROS/0206.md](REGISTROS/0206.md).
 
+## Estado vigente — Campanha 0207
+
+**PARTIAL no escopo integral.** RETURN bilateral real passou: cancelamento após coleta, tarefa ao final de rota com as duas entregas preservadas, entrega física, confirmação autorizada concorrente, estado `RETURNED/RECEIVED`, evento único e retry idempotente após 503. O runner reutilizado prepara a Order/Route por fixture; ainda falta fazê-las nascer pela UI no mesmo fluxo. Nenhuma alteração de produto foi necessária. Detalhes: [REGISTROS/0207.md](REGISTROS/0207.md).
+
 
 ## Campanha 0173 — offline e recuperação
 
