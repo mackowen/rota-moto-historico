@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0181
+
+**0181 PARTIAL.** E2E autenticado criou Orders/Deliveries/Route pela UI, concluiu uma entrega, perdeu conexão na outra, encerrou/reabriu o Chromium com o mesmo perfil e preservou outbox no IndexedDB. O backend ficou inalcançável embora navigator.onLine fosse true; após reconexão/reautenticação o estado convergiu. ACK perdido após commit não duplicou eventos. Upgrade real do Service Worker com outbox pendente ainda não foi testado. Ver [REGISTROS/0181.md](REGISTROS/0181.md).
+
 ## Estado atual — Campanha 0176: convergência Restaurante (2026-10-14)
 
 **Resultado PASS para a convergência visual da jornada coberta; produção segue BLOCKED.** Uma Order foi criada na UI Restaurante, executada pelo Motoboy até Delivery `DELIVERED` v6 e, após reload + sync autenticado, apareceu na lista do Restaurante como `Finalizada`. IDs canônicos de Order/Delivery e projeções IndexedDB/PostgreSQL foram coerentes. A falha da 0172 era corrida e condição indevida do runner; nenhuma correção de produto foi necessária. Evidência: [REGISTROS/0176.md](REGISTROS/0176.md), [RESUMOS/0176.md](RESUMOS/0176.md), sumário local de fixture 0176.

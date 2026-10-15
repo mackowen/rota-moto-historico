@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0181 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0181-OFFLINE / 0167–0181 | PWA, IndexedDB e reconexão; P1; **PARTIAL** | Chromium autenticado encerrado/reaberto offline; SW controlador, outbox persistida, backend fetch falhou apesar de navigator.onLine=true; reconexão convergiu sem duplicação. | Exercitar atualização real de Service Worker com outbox pendente e repetir convergência. |
+| 0181-ACK / 0167–0181 | ACK perdido/replay; P1; **RESOLVED no cenário E2E** | Upstream 200/cliente 503; cinco eventos canônicos distintos e estado final entregue. | Manter regressão do proxy de falha. |
+
+Detalhes e limites em [REGISTROS/0181.md](REGISTROS/0181.md).
+
 ## Atualização vigente — Campanha 0170 (2026-10-14)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próximo critério de aceite |
