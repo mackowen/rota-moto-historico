@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0215
+
+**0215 PARTIAL; produção BLOCKED.** `npm test` nos dois apps e disputa PostgreSQL com tenant/RLS passaram. Browser atual validou origem, dois stops, markers, polyline/tile local e `secondStopConfirmed=true` em mobile; duas entregas concluíram no mapa run. Outage/outbox/ACK replay também passou em runner separado. Corrida Browser dois perfis, RETURN UI integral, dois Earnings próprios e métricas de worker durante outage permanecem parciais. Oficial `rotamoto` intocado. Ver [REGISTROS/0215.md](REGISTROS/0215.md).
+
 ## Estado vigente — Campanha 0214
 
 **0214 PARTIAL.** Proxy isolado provou outage antes do commit, outbox preservada, readiness 200 após restauração, convergência com um evento e replay após ACK perdido sem duplicação. Liveness/503 durante a janela e workers/métricas de fila no mesmo cenário não foram exercitados. Ver [REGISTROS/0214.md](REGISTROS/0214.md).

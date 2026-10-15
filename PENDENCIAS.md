@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0215 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0215-BROWSER-RACE / 0202, 0211 | Dispatch; P1; **OPEN** | Uma execução PostgreSQL passou disputa; um Browser run criou Route e concluiu entregas, mas não unificou a corrida de dois perfis com a mesma Delivery. | Integrar dois perfis Moto à jornada Browser do Restaurante, executar atribuição concorrente, aceitar/executar pelo vencedor, e conferir eventos/projeções no mesmo run. |
+| 0215-RETURN-UI / 0212 | RETURN/custódia; P1; **OPEN** | Runner atual parou antes da confirmação do Restaurante; fixture prévia impediu comprovar criação de três pedidos pela UI. | Retomada por checkpoint desde três pedidos UI até RETURN ao fim da rota, entrega física e confirmação autorizada; também cancelar antes da coleta. |
+| 0215-FINANCE-TWO-EARNINGS / 0213 | Financeiro; P1; **PARTIAL** | Uma nova Delivery produziu Earning BRL 725 com snapshot; outra ficou incompleta. | Concluir duas novas entregas e provar Earning distinto por `deliveryId`, ambos 725 centavos e total 1450 em UI e PostgreSQL. |
+| 0215-WORKERS-OUTAGE / 0214 | Workers/filas; P1; **OPEN** | Client sync convergiu após outage; workers reais e `/api/ops/queues` com gestor/sem permissão não integrados ao cenário de falha. | Testar worker PostgreSQL real, queue depth/idade/retry/lease/unknown outcome, autorização, liveness e readiness durante outage e recuperação. |
+| 0215-PRODUCTION-READINESS / 0158–0215 | Continuidade/produção; P0; **BLOCKED** | Sem prova de DR oficial/offsite, RPO/RTO, homologações comerciais e testes físicos. | Não elevar gate até cobertura, custódia independente, RPO/RTO aprovados, sandbox/homologação e validações físicas exigidas. |
+
+Ver [REGISTROS/0215.md](REGISTROS/0215.md).
+
 ## Atualização vigente — Campanha 0214 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
