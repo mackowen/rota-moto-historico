@@ -1571,3 +1571,15 @@ Ver [REGISTROS/0208.md](REGISTROS/0208.md).
 | 0209-FINANCE-NEGATIVE / 0209 | Validação financeira; P2; **PARTIAL** | Suites de money/earning passam; casos de limite/arredondamento inválido não foram explorados pela UI nesta campanha. | Exercitar limites e entradas inválidas em UI/API com valores BRL e confirmar rejeição sem persistência de Earning. |
 
 Ver [REGISTROS/0209.md](REGISTROS/0209.md).
+
+## Atualização vigente — Campanha 0210
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0210-BROWSER-ASSIGNMENT | Despacho; P1; **OPEN** | Corrida PG passa com duas sessões; Browser prova UI e execução separadas, não mesma Delivery/run/perfis. | Integrar dois perfis autenticados à corrida e conclusão do vencedor no mesmo manifesto. |
+| 0210-FINANCE-ROUTE | Financeiro; P1; **PARTIAL** | Uma Order positiva, Earning e snapshot reconciliados; segunda entrega ficou pendente. | Concluir duas novas Deliveries e conciliar Order/fee/Earning por ID nas duas UIs e PostgreSQL. |
+| 0210-POSTGRES-OUTAGE | Runtime/workers; P1; **OPEN** | Nenhum outage PostgreSQL executado agora; testes antigos são históricos. | Fault injection por proxy/cluster E2E e validar liveness/readiness, outbox, backoff, recovery e replay. |
+| 0210-WORKER-QUEUE | Operação; P2; **PARTIAL** | Unitários de métricas passaram, sem worker real concorrente medido nesta campanha. | Expor/validar métricas agregadas durante worker PostgreSQL E2E e indisponibilidade. |
+| 0210-PRODUCTION-READINESS | DR/externos/hardware; P0; **BLOCKED** | Sem evidência atual de DR oficial/offsite/RPO-RTO, homologação comercial ou validação física. | Resolver sob autorização específica e obter evidências independentes antes de qualquer readiness de produção. |
+
+Ver [REGISTROS/0210.md](REGISTROS/0210.md).

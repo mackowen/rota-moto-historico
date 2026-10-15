@@ -1230,6 +1230,10 @@ Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceita
 
 **PARTIAL.** Conciliação de uma Order própria positiva passou em Browser/PostgreSQL: BRL 123,45 subtotal, BRL 7,25 taxa, BRL 130,70 total, Earning BRL 7,25 e snapshot versionado. Restaurante e Motoboy refletiram os dados. A segunda entrega do run permaneceu pendente, então o cenário de duas novas conclusões e conciliação completa ainda está aberto. Detalhes: [REGISTROS/0209.md](REGISTROS/0209.md).
 
+## Estado vigente — Campanha 0210
+
+**PARTIAL.** As suítes `npm test` completas e os E2E de isolamento e concorrência PostgreSQL passaram. Em Browser, segunda parada/two deliveries, RETURN bilateral, upgrade SW com outbox e uma conciliação positiva passaram em runs separados. Permanecem sem prova integrada no mesmo run: corrida com dois perfis Chromium e execução do vencedor; duas novas entregas financeiras concluídas; outage PostgreSQL com workers/métricas. Produção segue BLOCKED por dependências de DR, comerciais e físicas. Detalhes: [REGISTROS/0210.md](REGISTROS/0210.md).
+
 
 ## Campanha 0173 — offline e recuperação
 
