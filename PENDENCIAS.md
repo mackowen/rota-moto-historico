@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0187 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0187-FIN / 0182–0187 | Order Money / Delivery / Earning; P1; **RESOLVED no cenário positivo** | Total, fee, snapshot e Earning positivos conciliados por UI e PostgreSQL; replay idempotente. | Manter testes; campos fora do contrato continuam fora de escopo. |
+| 0187-PROJ / 0176–0187 | Projeção da lista Restaurante; P1; **RESOLVED** | A Order agora projeta Delivery canônica `DELIVERED` em vez de alias local antigo; Browser confirma ambos os pedidos finalizados. | Manter regressão cross-app. |
+| 0187-NEG / 0187 | Validação negativa de formulário; P2; **PARTIAL** | Unitário cobre subtotal negativo/unsafe; não houve tentativa de duplicidade/payload inválido pela UI neste runner. | Adicionar casos de interface se a jornada de criação financeira for alterada. |
+
+Ver [REGISTROS/0187.md](REGISTROS/0187.md).
+
 ## Atualização vigente — Campanha 0186 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

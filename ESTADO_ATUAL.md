@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0187
+
+**0187 PASS para o cenário financeiro positivo pela UI.** Order 13.070 centavos, taxa 725, Earning 725 por Delivery e snapshot `payout-snapshot-v1` conciliados entre PostgreSQL E2E, Restaurante e Motoboy. Corrigida a seleção de estado canônico em pedidos. Testes de entrada inválida pela interface não foram exauridos. Restaurante HEAD local `9597087`; sem push. Ver [REGISTROS/0187.md](REGISTROS/0187.md).
+
 ## Estado vigente — Campanha 0186
 
 **0186 PASS no upgrade PWA autenticado.** SW v43.44/v43.45 real atravessou `waiting`, fechamento e reabertura; outbox IndexedDB permaneceu e convergiu em PostgreSQL sem duplicação. Sem mudanças de produto. A análise detectou que `navigator.onLine=true` não significou backend acessível; a probe autenticada falhou até reconexão. Ver [REGISTROS/0186.md](REGISTROS/0186.md).
