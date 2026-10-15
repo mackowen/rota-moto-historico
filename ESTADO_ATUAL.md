@@ -1226,6 +1226,10 @@ Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceita
 
 **PASS no cenário PWA exercitado.** Upgrade real do arquivo Service Worker em Chromium, waiting/activate, encerramento e reabertura do mesmo perfil com backend indisponível, IndexedDB/outbox preservada e reconvergência posterior passaram. `navigator.onLine` foi verdadeiro apesar da API offline; sessão foi reautenticada via UI. Compatibilidade física Android segue bloqueada por falta de teste em dispositivo. Detalhes: [REGISTROS/0208.md](REGISTROS/0208.md).
 
+## Estado vigente — Campanha 0209
+
+**PARTIAL.** Conciliação de uma Order própria positiva passou em Browser/PostgreSQL: BRL 123,45 subtotal, BRL 7,25 taxa, BRL 130,70 total, Earning BRL 7,25 e snapshot versionado. Restaurante e Motoboy refletiram os dados. A segunda entrega do run permaneceu pendente, então o cenário de duas novas conclusões e conciliação completa ainda está aberto. Detalhes: [REGISTROS/0209.md](REGISTROS/0209.md).
+
 
 ## Campanha 0173 — offline e recuperação
 

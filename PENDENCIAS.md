@@ -1562,3 +1562,12 @@ Ver [REGISTROS/0207.md](REGISTROS/0207.md).
 | 0208-ANDROID-PWA / 0163, 0186, 0181 | PWA/hardware; P2; **BLOCKED** | Upgrade de duas versões com outbox sobreviveu a fechar/reabrir Chromium e reconvergiu; não houve validação de instalação/suspensão em aparelho físico Android. | Executar matriz física autorizada em dispositivo Android real, incluindo instalação, suspensão/retomada e rede. |
 
 Ver [REGISTROS/0208.md](REGISTROS/0208.md).
+
+## Atualização vigente — Campanha 0209
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0209-FINANCE-TWO-DELIVERIES / 0187–0209 | Order/Earning/Route; P1; **PARTIAL** | Uma entrega Browser concluída com Order 12.345 + taxa 725 = total 13.070 centavos BRL; um Earning de 725 centavos com snapshot. A segunda entrega ficou offline/pendente. | Completar duas Deliveries legítimas na mesma Route e conciliar cada Order/Earning no DB e nas duas UIs; incluir ACK replay sem duplicação. |
+| 0209-FINANCE-NEGATIVE / 0209 | Validação financeira; P2; **PARTIAL** | Suites de money/earning passam; casos de limite/arredondamento inválido não foram explorados pela UI nesta campanha. | Exercitar limites e entradas inválidas em UI/API com valores BRL e confirmar rejeição sem persistência de Earning. |
+
+Ver [REGISTROS/0209.md](REGISTROS/0209.md).
