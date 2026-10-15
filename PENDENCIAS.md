@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0188 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0188-LOCKS / 0174–0188 | Atribuição, disponibilidade, leases, RETURN; P1; **RESOLVED nos interleavings testados** | Lock waits determinísticos, idempotência, FIFO, lease fencing, RETURN receipt e RLS passaram; sem lock residual. | Manter teste de concorrência e isolamento. |
+| 0188-RIDER-RACE / 0179–0188 | Dois motoboys disputam a mesma Delivery; P1; **PARTIAL** | Modelo só permite dispatch/atribuição pelo Restaurante; o runner testou duas sessões com mesmo Driver e dois re-deliveries distintos. | Preparar dois memberships/Drivers sintéticos e testar operação legítima de atribuição concorrente; se nenhuma disputa same-Delivery for permitida pelo domínio, documentar resposta/conflict no endpoint autorizado. |
+
+Ver [REGISTROS/0188.md](REGISTROS/0188.md).
+
 ## Atualização vigente — Campanha 0187 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0188
+
+**0188 PARTIAL.** Duas sessões PostgreSQL passaram atribuição/Offline, FIFO, retries/leases, RETURN receipt, rollback e RLS tenant. Não houve disputa same-Delivery por dois perfis Rider independentes; modelo atribui pelo Restaurante. Fixture E2E retida, sem limpeza. Sem alterações de app. Ver [REGISTROS/0188.md](REGISTROS/0188.md).
+
 ## Estado vigente — Campanha 0187
 
 **0187 PASS para o cenário financeiro positivo pela UI.** Order 13.070 centavos, taxa 725, Earning 725 por Delivery e snapshot `payout-snapshot-v1` conciliados entre PostgreSQL E2E, Restaurante e Motoboy. Corrigida a seleção de estado canônico em pedidos. Testes de entrada inválida pela interface não foram exauridos. Restaurante HEAD local `9597087`; sem push. Ver [REGISTROS/0187.md](REGISTROS/0187.md).
