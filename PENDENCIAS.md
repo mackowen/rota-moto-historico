@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0190 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0190-WORKER-METRICS / 0169–0190 | API/filas/workers; P1; **OPEN** | Métricas API/sync limitadas; ausência de métricas agregadas worker/queue confirmada. | Expor contagens/durações agregadas sem labels com tenant/order IDs; testar cardinalidade, sanitização e alertas. |
+| 0190-PG-OUTAGE / 0180–0190 | Readiness/runtime; P1; **PARTIAL** | Transição readiness 503→200 testada com dependência injetada; falha real de conexão não injetada. | Usar proxy ou banco descartável E2E para erro e recuperação sem interromper PostgreSQL global; provar requests e readiness. |
+| 0190-RETRY / 0185–0190 | Retry/backoff; P2; **PARTIAL** | 429/503/timeout e leases testados, sem ensaio sustentado de tempestade/backoff. | Medir retries sob falha controlada e comprovar limites/cooldown sem provider real. |
+| 0190-DR / 0184–0190 | Backup/continuidade; P0; **PARTIAL/BLOCKED operacional** | Restore sintético PostgreSQL 18.6 até 0044 consta em 0184; não repetido aqui. Recovery oficial/offsite não validado. | Atualizar recovery set, validar cópia independente, custódia, retenção e RPO/RTO em procedimento autorizado. |
+| 0190-PRODUCTION / 0186–0190 | Readiness; P0; **BLOCKED** | Dependências externas e físicas continuam abertas. | Homologação comercial, Android físico, DR e operação/monitoramento comprovados antes de qualquer decisão de produção. |
+
+Ver [REGISTROS/0190.md](REGISTROS/0190.md).
+
 ## Atualização vigente — Campanha 0189 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

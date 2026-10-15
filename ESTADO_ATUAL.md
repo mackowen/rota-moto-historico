@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0190
+
+**0190 PARTIAL.** Suítes npm dos dois apps, segurança/logística PostgreSQL e workers 99Food passaram nos cenários listados; Browser usa evidências 0186–0189. Sanitização de logs e teste de readiness foram fortalecidos. Métricas agregadas de workers, outage real no runtime e regressão Browser integral permanecem sem prova. Produção BLOCKED por DR, homologação e validações físicas/operacionais. Ver [REGISTROS/0190.md](REGISTROS/0190.md).
+
 ## Estado vigente — Campanha 0189
 
 **0189 PASS** para lifecycle Leaflet, sessão/logout/reauth e CSRF em desktop e mobile; **PARTIAL** para tiles/markers, pois o dataset não contém coordenadas válidas. Corrigido timeout/500 no logout reutilizando a transação autenticada. Run `39112770-f6f6-4a36-b63c-8786bff54f22`; ver [REGISTROS/0189.md](REGISTROS/0189.md).
