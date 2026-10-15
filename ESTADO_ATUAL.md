@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0189
+
+**0189 PASS** para lifecycle Leaflet, sessão/logout/reauth e CSRF em desktop e mobile; **PARTIAL** para tiles/markers, pois o dataset não contém coordenadas válidas. Corrigido timeout/500 no logout reutilizando a transação autenticada. Run `39112770-f6f6-4a36-b63c-8786bff54f22`; ver [REGISTROS/0189.md](REGISTROS/0189.md).
+
 ## Estado vigente — Campanha 0188
 
 **0188 PARTIAL.** Duas sessões PostgreSQL passaram atribuição/Offline, FIFO, retries/leases, RETURN receipt, rollback e RLS tenant. Não houve disputa same-Delivery por dois perfis Rider independentes; modelo atribui pelo Restaurante. Fixture E2E retida, sem limpeza. Sem alterações de app. Ver [REGISTROS/0188.md](REGISTROS/0188.md).

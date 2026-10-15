@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0189 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0189-MAP-TILES / 0183–0189 | Mapa cartográfico; P2; **PARTIAL** | Lifecycle passou em 390×844 e desktop; rota de teste não tinha coordenadas e não produziu tiles/markers. | Repetir com rota geográfica sintética criada pela UI e tiles locais controlados; confirmar markers e navegação sem rede comercial. |
+| 0189-ANDROID / 0163–0189 | GPS/câmera/hardware; P2; **BLOCKED** | Nenhum dispositivo físico foi validado. | Executar procedimento manual em Android autorizado, com permissões reais e evidência física. |
+
+Logout 500 e reautenticação/CSRF indevida foram corrigidos e cobertos; ver [REGISTROS/0189.md](REGISTROS/0189.md).
+
 ## Atualização vigente — Campanha 0188 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
