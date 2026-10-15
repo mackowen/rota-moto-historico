@@ -1,3 +1,9 @@
+## Atualização vigente — Campanha 0221 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0221-RETURN-UI / 0212, 0207, 0218 | Cancelamento/custódia/rota; P1; **RESOLVED** | Run `f3478e88-6f98-4d67-9baa-675651d7ba79`: três pedidos/entregas e Route via UI; cancelamento após coleta criou uma única devolução ao fim; duas entregas concluídas antes do retorno; recebimento Restaurante via UI; retry 503 com um evento; pré-coleta sem RETURN. PostgreSQL E2E e capturas confirmam estados. | Critério desta pendência satisfeito. Continuar para a campanha 0222, que permanece gate separada para conciliação financeira positiva. |
+
 ## Atualização vigente — Campanha 0220 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

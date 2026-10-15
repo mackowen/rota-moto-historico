@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0221
+
+**0221 PASS.** Browser autenticado criou três Orders, três Deliveries e Route pela UI; cancelamento pós-coleta produziu um RETURN ao fim da rota; duas entregas pendentes foram concluídas; o Motoboy entregou fisicamente a devolução e o Restaurante confirmou o recebimento. PostgreSQL E2E confirmou `CANCELLED`, duas `DELIVERED`, RETURN `RETURNED`, custódia `RECEIVED`, uma devolução vinculada, um evento de recebimento após ACK perdido e nenhum RETURN no cancelamento antes da coleta. Run `f3478e88-6f98-4d67-9baa-675651d7ba79`; screenshots e manifesto em `browser-tests/evidencias/campanhas/0221/8968dca0-ed29-4cca-a95e-0e136d859048/`. Falhas reproduzidas eram expectativas/seletores do runner, corrigidos sem mudança de produto. Oficial `rotamoto` intocado. Ver [REGISTROS/0221.md](REGISTROS/0221.md). Próxima campanha autorizada pela sequência: 0222.
+
 ## Estado vigente — Campanha 0220
 
 **0220 PARTIAL; produção BLOCKED.** `npm test` passou nos dois apps; logistics PostgreSQL/RLS, money/Earning, RETURN unitário, worker metrics e harness CDP passaram. O Browser 0217 confirmou, no mesmo run, dois perfis Motoboy, disputa autenticada e execução da mesma Delivery com cinco eventos únicos. A tentativa de atribuição foi HTTP autenticado, não clique nos controles Restaurante. RETURN integral de três pedidos, dois Earnings novos, outage com worker real e upgrade SW/offline não foram comprovados agora. Oficial intocado. Ver [REGISTROS/0220.md](REGISTROS/0220.md).
