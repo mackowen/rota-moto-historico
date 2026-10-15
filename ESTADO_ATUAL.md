@@ -1256,3 +1256,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0193
 
 **0193 PARTIAL.** Workers agora agregam ciclos work/idle/error e duração com dimensões fixas e sem IDs de negócio; testes unitários e E2E Marketplace/99Food passaram. O log do worker publica snapshot periódico local. Métricas de profundidade/estado/retries/lease, coleta entre processos e alertas seguem pendentes. Commits Restaurante locais `3ae8918`, `21fba39`; ver [REGISTROS/0193.md](REGISTROS/0193.md).
+## Estado vigente — Campanha 0201
+
+**0201 PASS para renderização cartográfica desktop/mobile; PARTIAL para interação explicitamente verificada com a segunda parada.** Corrigido SVG Leaflet reduzido por CSS global e estabilizado o enquadramento após carregar geometria. Browser autenticado criou duas Orders/Deliveries e Route pela UI, concluiu as entregas e confirmou estado no Restaurante. Fixtures raster/rota eram loopback sintéticas; sem validação de provedor externo. Evidência e SHAs em [REGISTROS/0201.md](REGISTROS/0201.md). Banco oficial não acessado.

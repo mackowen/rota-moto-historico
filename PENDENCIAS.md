@@ -1493,3 +1493,11 @@ Ver [REGISTROS/0192.md](REGISTROS/0192.md).
 | 0193-METRICS-SCRAPE / 0169–0193 | Processos/observabilidade; P2; **OPEN** | Snapshot é em memória e cada processo independente; não há collector compartilhado ou endpoint worker. | Definir coleta interna segura para workers sem elevar privilégios nem introduzir cardinalidade por tenant. |
 
 Ver [REGISTROS/0193.md](REGISTROS/0193.md).
+## Atualização vigente — Campanha 0201 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0201-SECOND-STOP / 0196–0201 | Motoboy route focus; P2; **PARTIAL** | O run autenticado criou Route de duas paradas e mostrou foco inicial; o summary final não reteve a asserção após clique na segunda parada. O runner corrigiu rolagem/hit-testing, mas falta persistir a prova do estado final. | Reexecutar somente a interação no runner autenticado e registrar `ENTREGA 2 DE 2` após clique CDP visível, sem acionar navegação inferior. |
+| 0201-EXTERNAL-TILES / 0192–0201 | Cartografia; P2; **DEFERRED** | Cartografia e linha renderizadas com fixtures loopback; não houve chamada a tiles/roteador externo. | Validar provedor somente em homologação autorizada; manter a cobertura determinística local. |
+
+Ver [REGISTROS/0201.md](REGISTROS/0201.md).
