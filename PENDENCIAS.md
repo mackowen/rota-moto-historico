@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0220 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0220-RACE-UI / 0217 | Despacho/Browser; P1; **PARTIAL** | Run 0217: dois perfis autenticados, HTTP concorrente `accepted` + `REVISION_CONFLICT`, replay duplicate, perdedor `DRIVER_NOT_ASSIGNED`; vencedor completou Delivery. | Acionar a disputa pelos controles autorizados da UI Restaurante na mesma jornada e verificar projeção logística nomeada no Restaurante. |
+| 0220-RETURN-UI / 0218 | RETURN/custódia; P1; **OPEN** | Nenhum Browser novo de três pedidos UI até recebimento bilateral; unit e PG não substituem fluxo visual. | Criar três Orders/Deliveries/Route pela UI, cancelar após coleta, completar pendentes, devolver e confirmar recebimento; validar cancelamento pré-coleta. |
+| 0220-FINANCE-TWO / 0219 | Financeiro/Earning; P1; **OPEN** | Money e Earning unitários passam; nenhum run novo com dois Earnings atribuídos às duas Deliveries. | Comprovar deliveryId/earningId, snapshot, 725 + 725 = 1.450 centavos e valores nas duas UIs/PG. |
+| 0220-OUTAGE-WORKER / 0219 | Workers/resiliência; P1; **OPEN** | Testes de métricas e endpoint passam; worker real e `/api/ops/queues` durante indisponibilidade não observados. | Executar proxy isolado com operação pendente e worker real; medir fila, idade, retry, lease, UNKNOWN_OUTCOME, permissões e reconvergência. |
+| 0220-PWA-MAP / 0215, 0216 | PWA/cartografia; P2; **PARTIAL** | Contratos/unitários passam; sem upgrade com outbox pendente ou screenshots cartográficos atuais nesta campanha. | Executar upgrade de SW real com storage persistente e screenshots desktop/mobile com coordenadas, markers, polyline e segunda parada. |
+
+Ver [REGISTROS/0220.md](REGISTROS/0220.md).
+
 ## Atualização vigente — Campanha 0219 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0220
+
+**0220 PARTIAL; produção BLOCKED.** `npm test` passou nos dois apps; logistics PostgreSQL/RLS, money/Earning, RETURN unitário, worker metrics e harness CDP passaram. O Browser 0217 confirmou, no mesmo run, dois perfis Motoboy, disputa autenticada e execução da mesma Delivery com cinco eventos únicos. A tentativa de atribuição foi HTTP autenticado, não clique nos controles Restaurante. RETURN integral de três pedidos, dois Earnings novos, outage com worker real e upgrade SW/offline não foram comprovados agora. Oficial intocado. Ver [REGISTROS/0220.md](REGISTROS/0220.md).
+
 ## Estado vigente — Campanha 0219
 
 **0219 PARTIAL.** `test-order-money`, `test-earning-lifecycle`, `npm run test:worker-metrics` e `npm run test:logistics-postgres` passaram. Não houve conciliação Browser de duas novas Deliveries com dois Earnings de 725 centavos nem outage com worker PostgreSQL real, fila durável e endpoint de operações no mesmo run. Banco oficial intocado. Ver [REGISTROS/0219.md](REGISTROS/0219.md).
