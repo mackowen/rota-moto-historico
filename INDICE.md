@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0196 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | GELOCALIZAÇÃO / CARTOGRAFIA | Coordenadas territoriais, Route de duas paradas e mapa | PARTIAL: Orders/Deliveries/Route e coordenadas persistidas; markers e geometria solicitada; captura cartográfica e avanço mobile pendentes. | [REGISTROS/0196.md](REGISTROS/0196.md) · [RESUMOS/0196.md](RESUMOS/0196.md) |
 | 0195 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | REGRESSÃO / READINESS | Ciclo duplo, financeiro, sync, segurança e recuperação | PARTIAL; ciclo financeiro/operacional e PG/RLS passaram; mapas geo, RETURN UI, outbox sob outage, métricas e prontidão produção permanecem parciais/bloqueados. | [REGISTROS/0195.md](REGISTROS/0195.md) · [RESUMOS/0195.md](RESUMOS/0195.md) |
 | 0194 | 2026-10-15 | Restaurante / `rotamoto_e2e` / Browser QA | POSTGRESQL / RECUPERAÇÃO | Outage real via proxy isolado e health/readiness | PARTIAL: liveness 200, readiness 200→503→200; outbox/replay sob a mesma falha ainda não executados. | [REGISTROS/0194.md](REGISTROS/0194.md) · [RESUMOS/0194.md](RESUMOS/0194.md) |
 | 0193 | 2026-10-15 | Restaurante / `rotamoto_e2e` | OBSERVABILIDADE / WORKERS | Métricas agregadas de ciclo com cardinalidade fixa | PARTIAL: ciclo/duração e logs sanitizados implementados; queue depth/outcomes/retries e scraping compartilhado faltam. | [REGISTROS/0193.md](REGISTROS/0193.md) · [RESUMOS/0193.md](RESUMOS/0193.md) |

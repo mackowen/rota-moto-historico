@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0196 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0196-MAP-VISUAL / 0192–0196 | Motoboy mapa; P1; **PARTIAL** | Route com duas coordenadas confirmadas e markers/linha atestados no DOM; API geometry HTTP 200. Screenshot ainda não enquadra cartografia e avanço para stop 2 falhou no Browser runner. | Capturar o mapa visível em desktop/mobile e validar avanço de parada com interação CDP confiável; corrigir produto somente se reproduzir. |
+| 0196-GEOMETRY / 0196 | Backend geometry; P2; **RESOLVED no cenário** | Resposta agora inclui stops ordenados/origem sem exigir provider; unidade e PG logística PASS. | Manter proteção tenant e proveniência em regressões. |
+
+Ver [REGISTROS/0196.md](REGISTROS/0196.md).
+
 ## Atualização vigente — Campanha 0195 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

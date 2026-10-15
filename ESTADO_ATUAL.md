@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0196
+
+**0196 PARTIAL.** A interface autenticada criou duas Orders, Deliveries e Route de duas paradas, com origem/destinos sintéticos e sem escrita direta em coordenadas. Correção expõe stops ordenados para marker hydration; unit, suites npm e logística PG passaram. Browser confirmou markers e request de geometria, mas captura visual enquadrada e avanço ao segundo stop mobile seguem pendentes. Commits locais Restaurante `543b9c1`, Motoboy `20ad846`. Produção permanece BLOCKED por dependências anteriores. Ver [REGISTROS/0196.md](REGISTROS/0196.md).
+
 ## Estado vigente — Campanha 0195
 
 **0195 PARTIAL; prontidão para produção BLOCKED.** Duas entregas e Route passaram pela UI autenticada, financeiro reconciliado (13070 centavos Order, 725 Earning), ACK perdido/replay idempotente, suites dos apps e PG/RLS/worker passaram. Foi corrigida cotação worker sem `commandId`. Limites: mapa sem coordenadas, reload ainda online sem sessão, RETURN UI não reexecutado, outbox sob outage não coberto e métricas incompletas. Restore sintético 0184 até 0044 verificado por metadados; DR oficial, offsite, RPO/RTO, homologação externa e hardware pendentes. Ver [REGISTROS/0195.md](REGISTROS/0195.md).
