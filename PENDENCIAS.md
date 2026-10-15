@@ -1508,3 +1508,12 @@ Ver [REGISTROS/0201.md](REGISTROS/0201.md).
 | 0202-BROWSER-RACE / 0191–0202 | Harness Browser de atribuição; P1; **OPEN** | Duas sessões API reais passaram disputa, autorização e replay no E2E; o fluxo Browser UI e a corrida não ocorreram no mesmo run. | Estender o harness para duas sessões Chromium autenticadas, criar a Delivery pela UI do Restaurante, disputar a atribuição e concluir pelo vencedor; conferir as duas projeções e o PostgreSQL no mesmo manifesto. |
 
 Ver [REGISTROS/0202.md](REGISTROS/0202.md).
+## Atualização vigente — Campanha 0203 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0203-ACK-UNKNOWN / 0194–0203 | Sync/runtime; P1; **PARTIAL** | Outage antes do commit preservou operação IndexedDB; readiness recuperou e evento convergiu uma vez. O proxy não interrompeu especificamente depois do commit e antes do ACK. | Injetar ACK perdido após confirmação canônica no mesmo run e provar replay pela mesma chave sem novo evento/earning. |
+| 0203-WORKER-CLIENT-ERROR / 0203 | Pool PostgreSQL; P1; **RESOLVED no cenário** | Erro controlado de socket em cliente emprestado não derrubou processo após correção; query falha ao chamador e readiness se recupera. | Manter teste em `test-pg-connection.js` e repetir em atualizações do driver `pg`. |
+| 0203-MAP-STALE-CALLBACK / 0183–0203 | Motoboy MapLibre; P2; **RESOLVED no cenário** | Callback pós-removal protegido no bundle e teste lifecycle; Browser final sem erros JS. | Reexecutar navegação/reload em regressão visual de mapas. |
+
+Ver [REGISTROS/0203.md](REGISTROS/0203.md).

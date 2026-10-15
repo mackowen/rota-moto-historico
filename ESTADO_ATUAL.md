@@ -1262,3 +1262,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0202
 
 **0202 PARTIAL.** PostgreSQL E2E comprovou disputa concorrente, um único Driver atribuído, conflito no perdedor, aceite restrito, um evento canônico e replay idempotente. A disputa de duas sessões e a execução do vencedor não foram integradas a um mesmo Browser run autenticado. Ver [REGISTROS/0202.md](REGISTROS/0202.md). Banco oficial não acessado.
+## Estado vigente — Campanha 0203
+
+**0203 PASS no outage integrado executado; PARTIAL para ACK perdido exatamente após commit.** Proxy isolado deixou o browser online e runtime sem PostgreSQL; outbox persistiu, estado não avançou durante a falha e convergiu a `ARRIVED` com um evento após recuperar. Corrigido encerramento Node ao perder socket PostgreSQL emprestado e callback MapLibre em mapa removido. Ver [REGISTROS/0203.md](REGISTROS/0203.md). Banco oficial intocado.
