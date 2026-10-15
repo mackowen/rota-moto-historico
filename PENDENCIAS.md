@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0217 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0217-BROWSER-RACE / 0202, 0211, 0215 | Dispatch cross-app; P1; **PARTIAL** | Run Browser 0217 criou Order/Delivery pela UI, usou dois perfis Moto independentes, obteve `accepted` + `REVISION_CONFLICT`, replay `duplicate`, perdedor `DRIVER_NOT_ASSIGNED`, execução `DELIVERED` pelo vencedor e cinco eventos únicos. A disputa de atribuição usou HTTP autenticado/CSRF, sem clicar controles de atribuição da UI. | Executar a disputa a partir dos controles de atribuição do Restaurante e conferir estado logístico nomeado na projeção Restaurante; manter a mesma Delivery no run. |
+| 0217-EARNING / 0213, 0217 | Financeiro; P1; **OPEN** | Delivery concorrente terminou sem Earning (`earningCount=0`), pois a campanha não configurou regra financeira positiva; nenhum Earning duplicado foi encontrado. | Na 0219, criar duas entregas com regra BRL 725 e comprovar IDs próprios, snapshots e total 1450 centavos nas duas UIs e no PostgreSQL. |
+| 0217-HARNESS / 0216, 0217 | Browser QA; P2; **PARTIAL** | Orquestrador CDP passou crash/resume. O runner integrado usa checkpoints por etapa concluída, mas negócios mutáveis não são retomados automaticamente após resultado incerto. Foram retidos os runs interrompidos e os manifests de fixtures. | Continuar checkpoints por operação idempotente e preservar `UNKNOWN_OUTCOME` onde não houver chave/reconciliação segura. |
+
+Ver [REGISTROS/0217.md](REGISTROS/0217.md).
+
 ## Atualização vigente — Campanha 0215 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
