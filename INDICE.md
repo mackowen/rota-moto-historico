@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0193 | 2026-10-15 | Restaurante / `rotamoto_e2e` | OBSERVABILIDADE / WORKERS | Métricas agregadas de ciclo com cardinalidade fixa | PARTIAL: ciclo/duração e logs sanitizados implementados; queue depth/outcomes/retries e scraping compartilhado faltam. | [REGISTROS/0193.md](REGISTROS/0193.md) · [RESUMOS/0193.md](RESUMOS/0193.md) |
 | 0192 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | CARTOGRAFIA / ROUTE | Leaflet desktop/mobile e rota de duas paradas | PARTIAL: ciclo e lifecycle passaram, sem marcadores por falta de destino geo confirmado; geometria e tiles externos não comprovados. | [REGISTROS/0192.md](REGISTROS/0192.md) · [RESUMOS/0192.md](RESUMOS/0192.md) |
 | 0191 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | CONCORRÊNCIA / ATRIBUIÇÃO | Disputa por Delivery e aceite autenticado | PARTIAL integrado: concorrência PG e ciclo UI passaram separadamente; falta disputarem a mesma Delivery. | [REGISTROS/0191.md](REGISTROS/0191.md) · [RESUMOS/0191.md](RESUMOS/0191.md) |
 | 0190 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | OBSERVABILIDADE / REGRESSÃO | Sanitização, readiness e testes integrados | PARTIAL: npm, PG security/logistics/providers e gates Browser 0186–0189 passaram; métricas agregadas de workers, outage real e regressão Browser integral faltam; produção BLOCKED. | [REGISTROS/0190.md](REGISTROS/0190.md) · [RESUMOS/0190.md](RESUMOS/0190.md) |

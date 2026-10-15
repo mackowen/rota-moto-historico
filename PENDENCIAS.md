@@ -1412,3 +1412,12 @@ Ver [REGISTROS/0180.md](REGISTROS/0180.md). As campanhas 0176–0180 estão regi
 | 0192-ROUTE-GEOMETRY / 0192 | Rota; P2; **PARTIAL** | Serviço retorna estado indisponível sem origem/destinos/provider. Nenhuma geometria ou tile foi inventada. | Com coordenadas válidas e provider local determinístico, testar sequência visual/geometry, resize, zoom e atualização; declarar limites de tiles externos. |
 
 Ver [REGISTROS/0192.md](REGISTROS/0192.md).
+## Atualização vigente — Campanha 0193 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0193-QUEUE-DEPTH / 0169–0193 | Workers/outbox; P1; **OPEN** | Snapshots contam ciclos do processo, sem backlog ou estado de comandos. | Instrumentar consultas agregadas de fila com baixa frequência e labels fixos; validar carga/RLS e contagens por estado. |
+| 0193-WORKER-OUTCOMES / 0193 | Worker; P2; **PARTIAL** | `work/idle/error` mede ciclo; falhas internas tratadas podem contar como work. | Agregar sucesso, rejeição, retry, unknown outcome e lease expirado por classe fixa e reproduzir casos E2E. |
+| 0193-METRICS-SCRAPE / 0169–0193 | Processos/observabilidade; P2; **OPEN** | Snapshot é em memória e cada processo independente; não há collector compartilhado ou endpoint worker. | Definir coleta interna segura para workers sem elevar privilégios nem introduzir cardinalidade por tenant. |
+
+Ver [REGISTROS/0193.md](REGISTROS/0193.md).

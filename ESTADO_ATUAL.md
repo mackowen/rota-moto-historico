@@ -1225,3 +1225,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0192
 
 **0192 PARTIAL.** Browser autenticado confirmou Route de duas paradas criada pela UI e lifecycle Leaflet em 1280×900 e 390×844, sem erros JS/CSRF. Os dois mapas tinham zero marcadores porque a jornada não confirmou coordenadas de destino; geometria viária e tiles externos não foram comprovados. Sem alterações de app. Run `6895ee89-5a62-4804-8cc8-d31f95d41ad8`; ver [REGISTROS/0192.md](REGISTROS/0192.md).
+## Estado vigente — Campanha 0193
+
+**0193 PARTIAL.** Workers agora agregam ciclos work/idle/error e duração com dimensões fixas e sem IDs de negócio; testes unitários e E2E Marketplace/99Food passaram. O log do worker publica snapshot periódico local. Métricas de profundidade/estado/retries/lease, coleta entre processos e alertas seguem pendentes. Commits Restaurante locais `3ae8918`, `21fba39`; ver [REGISTROS/0193.md](REGISTROS/0193.md).
