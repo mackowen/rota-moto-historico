@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0191 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0191-INTEGRATED-RACE / 0188–0191 | Browser UI + atribuição; P1; **PARTIAL** | API E2E provou uma atribuição vencedora e aceite restrito ao Driver alocado; Browser criou e concluiu duas entregas pela UI, mas em runs distintos. | Integrar corrida autenticada no runner Browser após criação UI da Delivery; persistir mesmo ID canônico, um winner, conflito claro e projeção nos dois apps. |
+| 0191-PASSWORD-LOGIN / 0191 | Sessões Motoboy; P2; **PARTIAL** | Duas sessões Driver distintas foram preparadas como fixtures e chamadas autenticadas; login por senha isolado de cada um não foi exercitado. | Acrescentar dois perfis Chromium e logins reais no runner integrado. |
+
+Ver [REGISTROS/0191.md](REGISTROS/0191.md).
+
 ## Atualização vigente — Campanha 0190 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
