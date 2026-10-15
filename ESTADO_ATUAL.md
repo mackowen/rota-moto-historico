@@ -1347,3 +1347,8 @@ Na atualização de 0222, a campanha 0223 foi planejada para validar outage Post
 # Estado vigente — Campanha 0224
 
 0224 **PASS** no cenário de atribuição iniciada por controles reais do Restaurante, dois perfis autenticados de Motoboy, conflito do perdedor, aceite pelo Driver atribuído, execução da mesma Delivery e convergência visual/logística. Run `25ffac6c-9e43-4c65-ba5f-13ff8bf25050`; evidências e limites em [REGISTROS/0224.md](REGISTROS/0224.md). Browser QA local `9443f8d`; nenhum push de aplicativos. Financeiro positivo não foi exercitado nesse run e permanece coberto pela evidência própria da 0222. Próxima etapa: regressão 0225; produção continua condicionada a DR, homologações e validações físicas.
+
+
+## Estado vigente — Campanha 0225
+
+**0225 PASS nos gates técnicos executados; produção BLOCKED.** Regressão atual executou as suites dos dois aplicativos, guards, PostgreSQL logística/RLS/tenant/worker e jornadas Browser de RETURN bilateral, duas conciliações positivas, outage/worker, concorrência UI em perfis separados, upgrade real de Service Worker com outbox durante fechamento/reabertura offline e cartografia com duas paradas. Evidências e limites em [REGISTROS/0225.md](REGISTROS/0225.md). Correções locais no Browser QA estabilizaram a condição offline após reinício e o despacho/enquadramento do mapa; commit `1f03b7b02d2e01fde9f6df7ef580dea8ce9bfce4`, sem push. Aplicativos sem alterações nesta campanha. `rotamoto` não acessado. Produção segue bloqueada por DR/offsite/RPO-RTO, homologações comerciais e validação física Android; tiles/roteamento externo não foram validados.

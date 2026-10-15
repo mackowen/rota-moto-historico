@@ -1710,3 +1710,18 @@ Ver [REGISTROS/0223.md](REGISTROS/0223.md). A regressão consolidada e os gates 
 | 0224-UI-DISPATCH-RACE / 0217, 0220 | Atribuição cross-app; P1; **RESOLVED no cenário** | Run Browser `25ffac6c-9e43-4c65-ba5f-13ff8bf25050`: UI iniciou corrida sobre a mesma Delivery; um vencedor, `REVISION_CONFLICT`, perdedor `DRIVER_NOT_ASSIGNED`, vencedor concluiu e Restaurante convergiu. | Manter runner na regressão; não inferir prontidão de produção. |
 | 0224-RUNNER-SYNC / 0224 | Browser QA; P2; **RESOLVED** | Seletor de distribuição e espera por sync corrigidos; evidências em `evidencias/campanhas/0224/1018bb23-76e6-4eb7-8851-2e6541f1f26e/`. | Reexecutar na regressão 0225. |
 | 0224-FINANCE-POSITIVE / 0222 | Earning da corrida concorrente; P2; **DEFERRED** | Run 0224 usou taxa zero (`earningCount=0`); a conciliação positiva de duas entregas está documentada separadamente como PASS na 0222. | Não usar o run 0224 como prova financeira; preservar a evidência dedicada 0222. |
+
+
+## Atualização vigente — Campanha 0225 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0225-RETURN / 0221 | Custódia/RETURN; P1; **RESOLVED no cenário** | Run `63d52dfb-9b3e-4a4d-a865-b279779284bf`: criação pela UI, RETURN único ao final, recebimento bilateral, pré-coleta sem retorno e replay sem duplicação. | Preservar runner como regressão. |
+| 0225-FINANCE / 0222 | Order/Earning; P1; **RESOLVED no cenário** | Run `1aa83cc3-5661-4971-be28-80a4173caadb`: dois Earnings novos de 725 centavos; total 1.450; replay idempotente. | Manter conciliação por IDs nas regressões. |
+| 0225-WORKER / 0223 | Worker/PostgreSQL; P1; **RESOLVED no cenário** | Run `b347c35d-0774-45ea-92d5-db4cc272e54a`: outage isolado, worker e recovery verificados. | Heartbeat durável entre instâncias ainda não comprovado (0223). |
+| 0225-RACE / 0224 | Despacho; P1; **RESOLVED no cenário** | Run `9d7d7fa2-540d-425f-a591-a590417d6628`: corrida UI, dois perfis, um vencedor, perdedor bloqueado e conclusão. | Preservar runner na regressão. |
+| 0225-PWA / 0208 | PWA/IndexedDB; P1; **RESOLVED no cenário** | Run `022b7fab-57fc-4b8f-bf60-df32c184bf2e`: SW duas versões, reabertura offline, outbox preservada e reconvergência. | Validação Android físico permanece pendente. |
+| 0225-MAP / 0196, 0201 | Cartografia; P2; **RESOLVED no cenário, limite externo** | Run `a62eb939-dc75-42cd-ace6-4b94d5ea2dd3`: coordenadas confirmadas, markers 1/2, polyline e segunda parada em desktop/mobile; geometria local. | Validar tiles/roteamento de provedor autorizado se necessário. |
+| 0225-PRODUCTION / 0158–0225 | DR/hardware/integrações; P0; **BLOCKED_EXTERNAL** | DR oficial/offsite atualizado, RPO/RTO aprovado, homologação comercial e hardware físico sem evidência. | Obter autorização/ambiente e validar antes de prontidão de produção. |
+
+Ver [REGISTROS/0225.md](REGISTROS/0225.md) e [RESUMOS/0225.md](RESUMOS/0225.md). Esta fotografia vigente atualiza estados somente quando há evidência direta nova; registros anteriores permanecem intactos.
