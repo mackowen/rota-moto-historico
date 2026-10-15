@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0182
+
+**0182 PARTIAL.** PostgreSQL E2E confirmou Earning positivo de 1.250 centavos, regra `fees-v1`, referenciação da Delivery, cancelamento pré/pós-coleta, RETURN ao fim da rota e recebimento autorizado. Concorrência com duas sessões passou para claim/atribuição/receipt, sem duplicações. Falta disputa autenticada de dois motoboys pela mesma entrega e conciliação financeira ponta a ponta pela UI (Order total, fee, repasse e Earning). Ver [REGISTROS/0182.md](REGISTROS/0182.md).
+
 ## Estado vigente — Campanha 0181
 
 **0181 PARTIAL.** E2E autenticado criou Orders/Deliveries/Route pela UI, concluiu uma entrega, perdeu conexão na outra, encerrou/reabriu o Chromium com o mesmo perfil e preservou outbox no IndexedDB. O backend ficou inalcançável embora navigator.onLine fosse true; após reconexão/reautenticação o estado convergiu. ACK perdido após commit não duplicou eventos. Upgrade real do Service Worker com outbox pendente ainda não foi testado. Ver [REGISTROS/0181.md](REGISTROS/0181.md).

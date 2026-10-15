@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0182 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0182-FIN / 0179–0182 | Order, taxa e Earning; P1; **PARTIAL** | PostgreSQL confirmou Earning de 1.250 centavos BRL e snapshot fees-v1 ligado à Delivery; suite de dinheiro passou. | Jornada Browser autenticada concilia Order total, fee, repasse e Earning positivos em cents. |
+| 0182-RACE / 0174, 0179–0182 | Aceite/atribuição concorrente; P1; **PARTIAL** | Duas sessões passaram concorrência de claim/atribuição/RETURN/receipt sem duplicação. | Duas sessões de motoboys disputam a mesma Delivery por HTTP autenticado; provar um vencedor, sem segundo Earning/evento. |
+| 0182-RETURN / 0147–0182 | Cancelamento/RETURN/recebimento; P1; **RESOLVED nos testes PostgreSQL** | Pré-coleta, pós-coleta, RETURN no final da rota, receipt autorizado e replay idempotente aprovados. | Manter regressão. |
+
+Ver [REGISTROS/0182.md](REGISTROS/0182.md).
+
 ## Atualização vigente — Campanha 0181 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
