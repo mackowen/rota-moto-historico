@@ -1222,6 +1222,10 @@ Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceita
 
 **PARTIAL no escopo integral.** RETURN bilateral real passou: cancelamento após coleta, tarefa ao final de rota com as duas entregas preservadas, entrega física, confirmação autorizada concorrente, estado `RETURNED/RECEIVED`, evento único e retry idempotente após 503. O runner reutilizado prepara a Order/Route por fixture; ainda falta fazê-las nascer pela UI no mesmo fluxo. Nenhuma alteração de produto foi necessária. Detalhes: [REGISTROS/0207.md](REGISTROS/0207.md).
 
+## Estado vigente — Campanha 0208
+
+**PASS no cenário PWA exercitado.** Upgrade real do arquivo Service Worker em Chromium, waiting/activate, encerramento e reabertura do mesmo perfil com backend indisponível, IndexedDB/outbox preservada e reconvergência posterior passaram. `navigator.onLine` foi verdadeiro apesar da API offline; sessão foi reautenticada via UI. Compatibilidade física Android segue bloqueada por falta de teste em dispositivo. Detalhes: [REGISTROS/0208.md](REGISTROS/0208.md).
+
 
 ## Campanha 0173 — offline e recuperação
 

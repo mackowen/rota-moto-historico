@@ -1554,3 +1554,11 @@ Ver [REGISTROS/0206.md](REGISTROS/0206.md).
 | 0207-RETURN-UI-SETUP / 0147–0207 | Pedidos/Route/RETURN; P1; **PARTIAL** | Retorno pós-coleta, fim da rota, execução Motoboy, confirmação Restaurante concorrente e recuperação 503 passaram em Browser/PostgreSQL. Contexto comercial e rota foram preparados pelo fixture. | Repetir criando Orders, Deliveries e Route pela UI no mesmo run e validar antes da coleta, permissões/tenant e efeitos financeiros. |
 
 Ver [REGISTROS/0207.md](REGISTROS/0207.md).
+
+## Atualização vigente — Campanha 0208
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0208-ANDROID-PWA / 0163, 0186, 0181 | PWA/hardware; P2; **BLOCKED** | Upgrade de duas versões com outbox sobreviveu a fechar/reabrir Chromium e reconvergiu; não houve validação de instalação/suspensão em aparelho físico Android. | Executar matriz física autorizada em dispositivo Android real, incluindo instalação, suspensão/retomada e rede. |
+
+Ver [REGISTROS/0208.md](REGISTROS/0208.md).
