@@ -1,3 +1,16 @@
+## Atualização vigente — Campanha 0185 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0185-PWA / 0167–0185 | Outbox, offline e upgrade SW; P1; **PARTIAL** | Processo Browser fechado/reaberto offline, IndexedDB persistiu, reconvergiu; ACK perdido não duplicou. | Upgrade real de versão SW com outbox pendente e reteste. |
+| 0185-FIN-RACE / 0179–0185 | Financeiro e disputa same Delivery; P1; **PARTIAL** | Earning 1.250 centavos/snapshot passou no PG; worker concurrency passou. | UI concilia Order/fee/repasse/Earning e dois motoboys disputam a mesma entrega; apenas um vence. |
+| 0185-MAP-CSRF / 0178–0185 | Mapa e registro de instalação; P1; **PARTIAL** | Lifecycle fixado; Browser sem exceções/403 na execução; suites CSRF passam. | CDP desktop/390×844 repetindo mapa e logout/reautenticação sem exceção nem falso 403. |
+| 0185-DR / 0158–0185 | Backup oficial/DR; P0; **BLOCKED** | Restore sintético PostgreSQL 18.6 até 0044 passou; banco/artefatos oficiais não acessados. | Autorização para recovery set atual, cópia independente, custódia, política/RPO/RTO e restore oficial isolado. |
+| 0185-OBS / 0169–0185 | Outage, fila e alerta; P1; **PARTIAL** | Métricas/lifecycle/runbook unitários e readiness 200; sem outage PG ou alerta operacional. | Simular outage só em ambiente E2E e validar métricas agregadas/runbook e alertas aprovados. |
+| 0185-EXT-HW / 0165–0185 | Providers/hardware; P1; **BLOCKED_EXTERNAL** | Sem chamadas/credenciais comerciais nem testes físicos nesta execução. | Onboarding/sandbox comercial autorizado e sessão física Android com recursos disponíveis. |
+
+Ver [REGISTROS/0185.md](REGISTROS/0185.md).
+
 ## Atualização vigente — Campanha 0184 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

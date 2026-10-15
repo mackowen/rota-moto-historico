@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0185
+
+**0185 PARTIAL; produção BLOCKED.** Suites completas `npm test` dos dois apps, PostgreSQL E2E de tenant/domínio/RETURN/concurrency e Browser autenticado de duas entregas passaram nos cenários executados. Restore real sintético PostgreSQL 18.6 até migration 0044 passou. Permanecem sem prova: update SW com outbox, conciliação financeira completa via UI, corrida de dois aceites pela mesma entrega, mapa/logout-CSRF em ciclos mobile e desktop, outage PostgreSQL, hardware e DR oficial. Ver [REGISTROS/0185.md](REGISTROS/0185.md).
+
 ## Estado vigente — Campanha 0184
 
 **0184 PASS somente para restore sintético isolado; DR oficial BLOCKED.** Cluster PostgreSQL 18.6 descartável restaurou backup criptografado real até migration 0044, com ledger/checksums íntegros, linha sintética recuperada, 118 índices, 803 constraints e 38/38 tabelas com RLS/FORCE. Nenhum banco/backup/chave oficial foi acessado. Mídia canônica não compôs o set; offsite, custódia independente e RPO/RTO continuam pendentes. Restaurante commit local `1938f9c`. Ver [REGISTROS/0184.md](REGISTROS/0184.md).
