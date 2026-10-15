@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0194 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0194-DB-OUTAGE-OUTBOX / 0190–0194 | Runtime sync/outbox; P1; **OPEN** | Readiness real 200→503→200 via proxy de teste; nenhum comando foi enviado durante outage. | Com sessão autenticada, manter comando sintético pendente, injetar falha no proxy, reconectar e conferir retry com mesma chave, uma mutação/evento e convergência. |
+| 0194-DB-UNKNOWN-COMMIT / 0191–0194 | Sync/replay; P1; **PARTIAL** | ACK perdido após commit/replay passou em Browser separado; não coincidiu com outage PostgreSQL. | Integrar fault injection no mesmo runner e demonstrar antes/depois do commit com resultados canônicos. |
+| 0194-RETRY-STORM / 0194 | Pool/recovery; P2; **PARTIAL** | Readiness recobrou; não houve medição de tentativas concorrentes ou backoff após recuperação. | Medir retries, conexões e fila sob outage curto, com limite e sem tempestade após retorno. |
+
+Ver [REGISTROS/0194.md](REGISTROS/0194.md).
+
 ## Atualização vigente — Campanha 0191 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

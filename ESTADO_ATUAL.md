@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0194
+
+**0194 PARTIAL.** Proxy loopback no caminho do runtime para `rotamoto_e2e` comprovou liveness 200 e readiness 200→503→200 durante falha/restauração de conexão. Não foram testados outbox pendente, replay ou operação com resultado incerto sob a mesma interrupção. Evidência local `browser-tests/evidencias/campanhas/0194/pg-outage.jsonl`; ver [REGISTROS/0194.md](REGISTROS/0194.md).
+
 ## Estado vigente — Campanha 0191
 
 **0191 PARTIAL** no gate UI+concorrência: corrida de atribuição e de aceite passou com dois Drivers/sessões no PostgreSQL E2E; Browser separado criou pedidos, entregas e Route pela UI e convergiu nos dois apps. Os dois runners ainda não compartilharam a mesma Delivery. Restaurante commit local `e67d6dd`; ver [REGISTROS/0191.md](REGISTROS/0191.md).
