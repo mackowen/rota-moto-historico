@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0198
+
+**0198 PARTIAL.** Proxy isolado confirmou liveness 200 e readiness 200→503→200 sob indisponibilidade/recuperação do PostgreSQL E2E. Não houve Order/Delivery pendente nem replay transacional durante o outage; sincronização e outbox sob falha continuam sem comprovação. Evidência local em `browser-tests/evidencias/campanhas/0198/pg-health-recovery.json`. Ver [REGISTROS/0198.md](REGISTROS/0198.md).
+
 ## Estado vigente — Campanha 0197
 
 **0197 PARTIAL.** A disputa real em `rotamoto_e2e` resultou em um único Driver atribuído; perdedor recebeu `REVISION_CONFLICT`, aceite não autorizado foi rejeitado e replay não duplicou o evento. Manifesto/schema ficaram retidos. A criação pela UI, disputa e execução/convergência no mesmo Browser run ainda não foram provadas. Ver [REGISTROS/0197.md](REGISTROS/0197.md).

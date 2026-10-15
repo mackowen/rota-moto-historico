@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0198 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0198-OUTBOX-DB-OUTAGE / 0194–0198 | Sync/PostgreSQL; P1; **OPEN** | Liveness/readiness passou 200→503→200 via proxy; o cenário não manteve operação pendente durante outage. | Injetar falha antes do commit e após commit/ACK via proxy; comprovar outbox persistida, retry limitado, replay único e convergência bilateral. |
+
+Ver [REGISTROS/0198.md](REGISTROS/0198.md).
+
 ## Atualização vigente — Campanha 0197 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
