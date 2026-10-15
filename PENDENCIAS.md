@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0214 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0214-WORKER-OUTAGE-METRICS / 0193, 0204, 0214 | Workers/filas/observabilidade; P1; **OPEN** | Runtime Browser recuperou operação E2E pelo proxy PostgreSQL; suites unitárias de métricas passam. Não houve worker real no mesmo outage, métricas duráveis de fila, `/api/ops/queues` autorizado/negado, liveness durante falha ou readiness 503 observado nessa execução. | Rodar worker PostgreSQL E2E junto ao proxy de fault injection; coletar fila/idade/retry/lease/resultado incerto, testar gestor e usuário sem permissão, medir liveness e readiness durante e após a falha. |
+
+Ver [REGISTROS/0214.md](REGISTROS/0214.md).
+
 ## Atualização vigente — Campanha 0213 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

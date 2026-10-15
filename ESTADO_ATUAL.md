@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0214
+
+**0214 PARTIAL.** Proxy isolado provou outage antes do commit, outbox preservada, readiness 200 após restauração, convergência com um evento e replay após ACK perdido sem duplicação. Liveness/503 durante a janela e workers/métricas de fila no mesmo cenário não foram exercitados. Ver [REGISTROS/0214.md](REGISTROS/0214.md).
+
 ## Estado vigente — Campanha 0213
 
 **0213 PARTIAL.** O Browser criou duas Orders/Deliveries e Route pela UI; uma concluiu com subtotal 12.345, taxa 725, total 13.070 e Earning 725 centavos com snapshot. ACK perdido/replay não duplicou eventos. A segunda ficou `ARRIVED` offline, logo os dois Earnings e total 1.450 não foram comprovados. Ver [REGISTROS/0213.md](REGISTROS/0213.md).
