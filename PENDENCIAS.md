@@ -1580,6 +1580,7 @@ Ver [REGISTROS/0209.md](REGISTROS/0209.md).
 | 0210-FINANCE-ROUTE | Financeiro; P1; **PARTIAL** | Uma Order positiva, Earning e snapshot reconciliados; segunda entrega ficou pendente. | Concluir duas novas Deliveries e conciliar Order/fee/Earning por ID nas duas UIs e PostgreSQL. |
 | 0210-POSTGRES-OUTAGE | Runtime/workers; P1; **OPEN** | Nenhum outage PostgreSQL executado agora; testes antigos são históricos. | Fault injection por proxy/cluster E2E e validar liveness/readiness, outbox, backoff, recovery e replay. |
 | 0210-WORKER-QUEUE | Operação; P2; **PARTIAL** | Unitários de métricas passaram, sem worker real concorrente medido nesta campanha. | Expor/validar métricas agregadas durante worker PostgreSQL E2E e indisponibilidade. |
+| 0210-CARTOGRAPHY | Mapa/geo; P2; **PARTIAL** | Screenshot mobile exibe mapa vazio por ausência de entregas geolocalizadas; sem prova visual de marcadores/geometria desktop/mobile. | Criar Order/Delivery e confirmar coordenadas pelo fluxo territorial autenticado; verificar visualmente marcadores e rota em 390×844 e 1280×900. |
 | 0210-PRODUCTION-READINESS | DR/externos/hardware; P0; **BLOCKED** | Sem evidência atual de DR oficial/offsite/RPO-RTO, homologação comercial ou validação física. | Resolver sob autorização específica e obter evidências independentes antes de qualquer readiness de produção. |
 
 Ver [REGISTROS/0210.md](REGISTROS/0210.md).
