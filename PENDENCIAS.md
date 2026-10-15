@@ -1693,3 +1693,13 @@ Ver [REGISTROS/0216.md](REGISTROS/0216.md).
 | 0222-ACK-REPLAY / 0213, 0222 | Sync/outbox/Earning; P1; **RESOLVED** | Primeira conclusão recebeu 503 após commit. Estado convergiu; por Delivery houve cinco eventos canônicos com cinco IDs de origem distintos e permaneceu um Earning por Delivery. | Critério de idempotência do gate financeiro satisfeito. |
 
 Ver [REGISTROS/0222.md](REGISTROS/0222.md). Permanecem independentes os gates de worker/outage, RETURN e regressão consolidados das campanhas seguintes; a aprovação financeira não os presume.
+
+## Atualização vigente — Campanha 0223 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0219-WORKER-OUTAGE / 0220-OUTAGE-WORKER / 0223 | Pool PostgreSQL, worker e filas; P1; **RESOLVED no cenário** | Run `5d8a2e6c-a506-470d-9ec7-157d358a49ab`: worker real reclamou comando; proxy isolado produziu liveness 200/readiness 503; `UNKNOWN_OUTCOME` sobreviveu crash, tentativa permaneceu 1 e não houve replay do adapter. `/api/ops/queues` retornou 401/200/403, 503 durante outage e 200 após retorno. | Gate de recuperação deste cenário atendido. Revalidar em mudanças do driver `pg` ou do worker. |
+| 0204-WORKER-HEARTBEAT / 0223 | Observabilidade; P2; **PARTIAL** | Worker foi observado em execução pelo processo e pela fila `leased`; após recuperação métrica durável mostra `unknown=1`. `workerAvailability` continua `unknown`, pois não existe heartbeat compartilhado. | Planejar heartbeat somente se o monitoramento operacional exigir disponibilidade de processo entre instâncias; manter cardinalidade fixa e testar fencing antes de migration. |
+| 0223-PROVIDER-HOMOLOGATION | Integração externa; P2; **BLOCKED_EXTERNAL** | Adapter determinístico local; nenhuma credencial nem chamada comercial usada. | Homologar em sandbox/provider autorizado; fora do gate sintético de resiliência. |
+
+Ver [REGISTROS/0223.md](REGISTROS/0223.md). A regressão consolidada e os gates independentes de RETURN, corrida visual, PWA e produção continuam separados.
