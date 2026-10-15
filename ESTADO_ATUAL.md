@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0197
+
+**0197 PARTIAL.** A disputa real em `rotamoto_e2e` resultou em um único Driver atribuído; perdedor recebeu `REVISION_CONFLICT`, aceite não autorizado foi rejeitado e replay não duplicou o evento. Manifesto/schema ficaram retidos. A criação pela UI, disputa e execução/convergência no mesmo Browser run ainda não foram provadas. Ver [REGISTROS/0197.md](REGISTROS/0197.md).
+
 ## Estado vigente — Campanha 0196
 
 **0196 PARTIAL.** A interface autenticada criou duas Orders, Deliveries e Route de duas paradas, com origem/destinos sintéticos e sem escrita direta em coordenadas. Correção expõe stops ordenados para marker hydration; unit, suites npm e logística PG passaram. Browser confirmou markers e request de geometria, mas captura visual enquadrada e avanço ao segundo stop mobile seguem pendentes. Commits locais Restaurante `543b9c1`, Motoboy `20ad846`. Produção permanece BLOCKED por dependências anteriores. Ver [REGISTROS/0196.md](REGISTROS/0196.md).

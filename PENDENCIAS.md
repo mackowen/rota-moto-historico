@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0197 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0197-UI-CONCURRENCY / 0188–0197 | Restaurante/Motoboy; P1; **PARTIAL** | PostgreSQL provou uma atribuição vencedora, `REVISION_CONFLICT` no perdedor, aceite restrito e um único evento; sem disputa integrada na mesma jornada Browser. | Conectar a disputa PG às sessões Browser criadas pela UI e concluir entrega pela sessão vencedora, validando ambas as projeções. |
+
+Ver [REGISTROS/0197.md](REGISTROS/0197.md).
+
 ## Atualização vigente — Campanha 0196 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
