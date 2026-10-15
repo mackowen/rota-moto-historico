@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0186 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0186-SW / 0167–0186 | Upgrade, outbox e recuperação PWA; P1; **RESOLVED no cenário validado** | Versões Git v43.44→v43.45; lifecycle `waiting`/ativação, Chromium reaberto, outbox persistente e duas Deliveries convergiram sem duplicação. | Manter runner como regressão; não inferir cobertura de rádio físico/Android. |
+| 0186-NET / 0178–0186 | Estado de rede versus backend; P2; **RESOLVED na distinção** | Após reload `navigator.onLine=true`, probe HTTP autenticada ainda falhou; recovery ocorreu após disponibilidade do backend. | Preservar health/probe de serviço separado do indicador da interface. |
+
+Ver [REGISTROS/0186.md](REGISTROS/0186.md).
+
 ## Atualização vigente — Campanha 0185 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

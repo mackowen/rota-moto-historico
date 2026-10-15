@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0186
+
+**0186 PASS no upgrade PWA autenticado.** SW v43.44/v43.45 real atravessou `waiting`, fechamento e reabertura; outbox IndexedDB permaneceu e convergiu em PostgreSQL sem duplicação. Sem mudanças de produto. A análise detectou que `navigator.onLine=true` não significou backend acessível; a probe autenticada falhou até reconexão. Ver [REGISTROS/0186.md](REGISTROS/0186.md).
+
 ## Estado vigente — Campanha 0185
 
 **0185 PARTIAL; produção BLOCKED.** Suites completas `npm test` dos dois apps, PostgreSQL E2E de tenant/domínio/RETURN/concurrency e Browser autenticado de duas entregas passaram nos cenários executados. Restore real sintético PostgreSQL 18.6 até migration 0044 passou. Permanecem sem prova: update SW com outbox, conciliação financeira completa via UI, corrida de dois aceites pela mesma entrega, mapa/logout-CSRF em ciclos mobile e desktop, outage PostgreSQL, hardware e DR oficial. Ver [REGISTROS/0185.md](REGISTROS/0185.md).
