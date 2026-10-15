@@ -1268,3 +1268,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0204
 
 **0204 PARTIAL.** Endpoint de filas tenant-scoped autenticado mede status, idade, retries, lease expirada e p95; Browser comprovou 401/200/403 e payload sem IDs. Worker E2E e testes completos passaram. Snapshot PostgreSQL Browser mostrou filas vazias. Sem heartbeat durável, disponibilidade é `unknown`; recovery counters e alertas sustentados permanecem pendentes. Ver [REGISTROS/0204.md](REGISTROS/0204.md).
+## Estado vigente — Campanha 0205
+
+**0205 PARTIAL; prontidão para produção BLOCKED.** `npm test` dos dois apps, contratos, logística PostgreSQL, tenant RLS, workers e Browser de duas entregas/outage/metrics passaram nos cenários executados. Mapa raster sintético visível em desktop/mobile e runtime sem erros JS no run final. Disputa integrada no Browser, RETURN bilateral UI, upgrade SW real e financeiro positivo via UI continuam sem prova atual; heartbeat, DR, hardware e homologação também pendentes. Ver [REGISTROS/0205.md](REGISTROS/0205.md). Banco oficial não acessado.

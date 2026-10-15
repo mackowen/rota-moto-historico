@@ -1526,3 +1526,14 @@ Ver [REGISTROS/0203.md](REGISTROS/0203.md).
 | 0204-ALERT-CALIBRATION / 0193–0204 | Runbook/alertas; P2; **PARTIAL** | Polling 1 s e lease 45 s fundamentam critérios preliminares; não houve período de carga sustentada nem monitor externo. | Calibrar a idade de fila em execução longa controlada e aprovar limites antes de produção. |
 
 Ver [REGISTROS/0204.md](REGISTROS/0204.md).
+## Atualização vigente — Campanha 0205 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0205-BROWSER-RACE / 0202 | Dispatch Browser; P1; **OPEN** | PostgreSQL duas sessões passou; mesma corrida não foi integrada a UI e execução do vencedor. | Fechar cenário com dois perfis Chromium autenticados no mesmo run. |
+| 0205-RETURN-UI / 0147–0205 | Custódia/RETURN; P1; **PARTIAL** | Unitários/PG anteriores passam; recebimento bilateral UI não foi repetido no fechamento. | Executar cancelamento após coleta, tarefa RETURN no fim da rota e confirmação autorizada pelo Restaurante no mesmo Browser run. |
+| 0205-PWA-UPGRADE / 0186–0205 | PWA/outbox; P1; **PARTIAL** | Reload/outage preservou e convergiu outbox; versão diferente do SW em `waiting`/activate não foi exercitada nesta consolidação. | Instalar SW novo com operação pendente e provar reconexão sem perda/duplicação. |
+| 0205-FINANCE-UI / 0187–0205 | Financeiro; P1; **PARTIAL** | Suites de domínio passaram; valor positivo bilateral não foi conferido no Browser/PG neste run. | Conciliar Order, taxa, responsabilidade e Earning em centavos nas duas UIs e no banco. |
+| 0205-READINESS / 0158–0205 | DR/produção; P0; **BLOCKED** | Sem backup/restore oficial atualizado, cópia independente, RPO/RTO ou validações comerciais/físicas. | Tratar somente em ciclo autorizado de continuidade e homologação. |
+
+Ver [REGISTROS/0205.md](REGISTROS/0205.md).
