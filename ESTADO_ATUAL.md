@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0184
+
+**0184 PASS somente para restore sintético isolado; DR oficial BLOCKED.** Cluster PostgreSQL 18.6 descartável restaurou backup criptografado real até migration 0044, com ledger/checksums íntegros, linha sintética recuperada, 118 índices, 803 constraints e 38/38 tabelas com RLS/FORCE. Nenhum banco/backup/chave oficial foi acessado. Mídia canônica não compôs o set; offsite, custódia independente e RPO/RTO continuam pendentes. Restaurante commit local `1938f9c`. Ver [REGISTROS/0184.md](REGISTROS/0184.md).
+
 ## Estado vigente — Campanha 0183
 
 **0183 PARTIAL.** O lifecycle Leaflet/MapLibre foi corrigido com descarte idempotente no unload e proteção contra callbacks/timers tardios; testes unitários e suite Restaurante passaram. A exceção não apareceu no Browser autenticado posterior, e o 403 CSRF não foi reproduzido nos registros de instalação. A matriz explícita de navegação repetida, sessão e viewports 390×844/desktop não foi executada integralmente. Restaurante commit `e083d52`. Ver [REGISTROS/0183.md](REGISTROS/0183.md).

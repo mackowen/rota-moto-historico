@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0184 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0184-SYNTH-RESTORE / 0158, 0168–0184 | PostgreSQL recovery set sintético; P0 DR; **RESOLVED no teste isolado** | PostgreSQL 18.6 descartável; AES-256-GCM, pg_dump/pg_restore reais, ledger/checksums 0044; RLS/FORCE, constraints e índices verificados. | Manter script reproduzível; adicionar caso de mídia/proof sintética em recovery set. |
+| 0184-OFFICIAL-DR / 0154, 0158–0184 | Backup oficial/continuidade; P0; **BLOCKED** | Banco, artefato e chave oficiais não acessados; sem offsite/custódia/RPO/RTO aprovados. | Autorização e processo operacional para snapshot atual, custódia, cópia externa e ensaio oficial. |
+
+Ver [REGISTROS/0184.md](REGISTROS/0184.md).
+
 ## Atualização vigente — Campanha 0183 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
