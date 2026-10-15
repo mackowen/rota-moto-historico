@@ -1,3 +1,16 @@
+## Atualização vigente — Campanha 0227 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0227-BACKUP-ADMIN / 0154, 0168, 0184, 0226 | Painel Restaurante/API backup PostgreSQL; P1; **OPEN** | Ação `backup` atual exporta apenas IndexedDB Local-First; `backend/admin/http.js` não tem rota PostgreSQL de backup/restore. Pipeline existe somente em CLI. | Definir RBAC/MFA, workflow de aprovação e superfície de metadados; adicionar API e UI sem expor segredo/path/URL. Passa quando administrador autorizado opera jobs auditados sem Termux e usuário sem permissão é negado. |
+| 0227-BACKUP-SCHEDULER / 0154, 0158, 0227 | Executor/agendamento; P1; **OPEN** | Código informa scheduler externo; cron consta somente como exemplo no runbook. Observação sem scheduler em Termux é histórica da 0158, não revalidada agora. | Implementar executor independente com agenda persistente, exclusão mútua, retomada segura e alerta de atraso; provar execução mesmo com painel fechado. |
+| 0227-BACKUP-OFFSITE / 0154, 0168, 0184, 0226 | Storage/custódia/DR; P0; **BLOCKED por decisões operacionais** | Adapter remoto ausente; cópia independente e custódia separada não comprovadas. Chave e destino não foram acessados. | Operador aprova destino, custódia e política; implementar adapter cifrado, verificar upload e restore sintético externo autorizado antes de declarar DR. |
+| 0227-BACKUP-POLICY / 0154, 0184, 0227 | Retenção/RPO/RTO/alertas; P1; **OPEN** | Retenção configurável apenas por ambiente CLI (default 30 dias); runbook pede decisões do operador; sem metas/alertas web. | Aprovar frequência, retenção, RPO/RTO e limites; exibir idade/cobertura do backup e alertar violações com critérios objetivos. |
+| 0227-RESTORE-APPROVAL / 0154, 0184, 0227 | Restore/administração; P0; **PARTIAL** | CLI restaura somente em destino `rotamoto_disposable_*`; sem interface, preview de conjunto ou aprovação separada. Restore real sintético até 0044 é histórico (0184). | Criar pedido/preview, reautenticação e aprovação independente; manter targets oficial/E2E bloqueados no servidor e validar restore isolado end-to-end. |
+| 0227-LOCAL-BACKUP-LABEL / 0227 | UX/segurança Local-First; P2; **OPEN** | UI chama export/import de “backup completo”, embora seja JSON plaintext local-first potencialmente sensível. | Diferenciar claramente cópia local de dados sincronizados e recovery PostgreSQL; comunicar conteúdo, proteção e limite de recuperação. |
+
+Ver [REGISTROS/0227.md](REGISTROS/0227.md).
+
 ## Atualização vigente — Campanha 0221 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
