@@ -1265,3 +1265,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0203
 
 **0203 PASS no outage integrado executado; PARTIAL para ACK perdido exatamente após commit.** Proxy isolado deixou o browser online e runtime sem PostgreSQL; outbox persistiu, estado não avançou durante a falha e convergiu a `ARRIVED` com um evento após recuperar. Corrigido encerramento Node ao perder socket PostgreSQL emprestado e callback MapLibre em mapa removido. Ver [REGISTROS/0203.md](REGISTROS/0203.md). Banco oficial intocado.
+## Estado vigente — Campanha 0204
+
+**0204 PARTIAL.** Endpoint de filas tenant-scoped autenticado mede status, idade, retries, lease expirada e p95; Browser comprovou 401/200/403 e payload sem IDs. Worker E2E e testes completos passaram. Snapshot PostgreSQL Browser mostrou filas vazias. Sem heartbeat durável, disponibilidade é `unknown`; recovery counters e alertas sustentados permanecem pendentes. Ver [REGISTROS/0204.md](REGISTROS/0204.md).

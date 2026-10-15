@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0204 | 2026-10-15 | Restaurante / `rotamoto_e2e` / Browser QA | OBSERVABILIDADE / FILAS | Endpoint protegido de métricas agregadas | PARTIAL: depth, idade, retries, lease, falhas, incertos e p95 foram testados; heartbeat e recovery counters duráveis faltam. | [REGISTROS/0204.md](REGISTROS/0204.md) · [RESUMOS/0204.md](RESUMOS/0204.md) |
 | 0203 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | RESILIÊNCIA / OUTAGE | Outage PostgreSQL via proxy isolado, outbox e recovery | PASS para falha antes do commit: estado preservado, processo vivo e um evento convergiu; instante ACK perdido após commit segue parcial. Correções pool e lifecycle MapLibre. | [REGISTROS/0203.md](REGISTROS/0203.md) · [RESUMOS/0203.md](RESUMOS/0203.md) |
 | 0202 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` | CONCORRÊNCIA / ATRIBUIÇÃO | Disputa de atribuição e aceite autorizado | PASS PostgreSQL de duas sessões; PARTIAL Browser integrado da disputa e execução no mesmo run. | [REGISTROS/0202.md](REGISTROS/0202.md) · [RESUMOS/0202.md](RESUMOS/0202.md) |
 | 0201 | 2026-10-15 | Motoboy / Restaurante / `rotamoto_e2e` / Browser QA | CARTOGRAFIA / CORREÇÃO | SVG Leaflet, bounds e mapa em dois viewports | PASS visual desktop/mobile; PARTIAL no clique explícito da segunda parada. Ciclo UI concluiu e convergiu duas entregas. | [REGISTROS/0201.md](REGISTROS/0201.md) · [RESUMOS/0201.md](RESUMOS/0201.md) |

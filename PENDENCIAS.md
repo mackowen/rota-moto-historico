@@ -1517,3 +1517,12 @@ Ver [REGISTROS/0202.md](REGISTROS/0202.md).
 | 0203-MAP-STALE-CALLBACK / 0183–0203 | Motoboy MapLibre; P2; **RESOLVED no cenário** | Callback pós-removal protegido no bundle e teste lifecycle; Browser final sem erros JS. | Reexecutar navegação/reload em regressão visual de mapas. |
 
 Ver [REGISTROS/0203.md](REGISTROS/0203.md).
+## Atualização vigente — Campanha 0204 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0204-WORKER-HEARTBEAT / 0193–0204 | Workers/observabilidade; P1; **PARTIAL** | Endpoint mostra leases e filas reais, mas disponibilidade do processo permanece `unknown`; não há heartbeat persistente compartilhado. | Projetar heartbeat com identidade e lease/fencing seguros, migration aditiva revisada, teste de dois processos e exportação cardinalidade fixa. |
+| 0204-RECOVERY-METRICS / 0193–0204 | Filas/recovery; P2; **PARTIAL** | Retry, expired lease e unknown outcome são contados no snapshot; não há histórico de recuperação, categoria de erro e latência por período. | Acrescentar histórico/contadores duráveis somente após desenho de retenção e compatibilidade; provar com worker real e falhas. |
+| 0204-ALERT-CALIBRATION / 0193–0204 | Runbook/alertas; P2; **PARTIAL** | Polling 1 s e lease 45 s fundamentam critérios preliminares; não houve período de carga sustentada nem monitor externo. | Calibrar a idade de fila em execução longa controlada e aprovar limites antes de produção. |
+
+Ver [REGISTROS/0204.md](REGISTROS/0204.md).
