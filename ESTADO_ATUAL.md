@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0219
+
+**0219 PARTIAL.** `test-order-money`, `test-earning-lifecycle`, `npm run test:worker-metrics` e `npm run test:logistics-postgres` passaram. Não houve conciliação Browser de duas novas Deliveries com dois Earnings de 725 centavos nem outage com worker PostgreSQL real, fila durável e endpoint de operações no mesmo run. Banco oficial intocado. Ver [REGISTROS/0219.md](REGISTROS/0219.md).
+
 ## Estado vigente — Campanha 0218
 
 **0218 PARTIAL.** `npm test`, testes unitários de RETURN e `npm run test:logistics-postgres` passaram. Não foi executado novo Browser E2E com três pedidos criados pela UI, cancelamento após coleta, RETURN no fim de rota e recebimento bilateral. A evidência 0207 permanece histórica e não fecha esse gate. Banco oficial intocado. Ver [REGISTROS/0218.md](REGISTROS/0218.md).

@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0219 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0219-FINANCE-TWO / 0213, 0217 | Order/Earning/financeiro; P1; **OPEN** | Testes unitários de money/Earning passaram; não houve Browser com duas novas Deliveries concluídas e dois Earnings de 725 centavos cada. | Concluir duas entregas novas, associar cada `earningId` a seu `deliveryId`, provar snapshot e soma 1.450 centavos nas duas UIs e PG. |
+| 0219-WORKER-OUTAGE / 0214, 0199 | Workers/filas/resiliência; P1; **OPEN** | Métricas, endpoint e lifecycle sintético passam; não houve worker PostgreSQL real durante outage/proxy com fila durável, `UNKNOWN_OUTCOME`, autorização 401/200/403 e recuperação no mesmo run. | Integrar fault injection com worker real em `rotamoto_e2e`; medir backlog/idade/retry/lease, readiness e convergência sem duplicação. |
+
+Ver [REGISTROS/0219.md](REGISTROS/0219.md).
+
 ## Atualização vigente — Campanha 0218 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
