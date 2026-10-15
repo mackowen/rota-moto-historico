@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0228 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0228-BACKUP-EXECUTOR / 0154, 0227, 0228 | Executor PostgreSQL; P0; **BLOCKED** | API e executor recusam execução no mesmo UID; Termux atual não tem UID/grupo dedicado configurado (UID/GID observado 10436). Job UI persiste em `QUEUED`; não foi executado como worker operacional. | Provisionar identidade/grupo dedicados por procedimento aprovado do host; executar backup agendado e manual com dados sintéticos, reinício e alertas sem reduzir guardas. |
+| 0228-BACKUP-OFFSITE / 0154, 0184, 0227, 0228 | Storage externo/custódia; P0; **PARTIAL** | Adapter HTTP loopback PUT/HEAD/hash/manifeste testado; nenhum destino externo ou credencial real foi configurado/acessado. | Administrador autoriza destino; executor recebe segredo fora do painel; validar upload, checksum, confirmação e restore do conjunto sintético externo. |
+| 0228-RESTORE-UI / 0154, 0227, 0228 | Painel de restore; P1; **PARTIAL** | API testa solicitante/aprovador distinto, MFA e target guards; restore PostgreSQL sintético passou em cluster isolado. Browser não percorreu inventário, pedido, aprovação e execução por UI. | Disponibilizar recovery set sintético isolado ao runner e completar Browser dual-admin do inventário/verificação até restore descartável, sem expor paths. |
+| 0228-SCHEDULE-RETENTION / 0158, 0227, 0228 | Scheduler/retention/alertas; P1; **PARTIAL** | Persistência e próxima execução calculada testadas; executor e ciclo de agendamento operacional não foram iniciados. Retenção só ocorre após verificação/publicação segundo teste unitário. | Com executor segregado, demonstrar execução automática real, atraso/falha/restart, retenção e alerta no painel/runbook. |
+| 0228-PRODUCTION-READINESS / 0158, 0227, 0228 | Backup/DR; P0; **BLOCKED** | Restore sintético em cluster descartável passou, mas faltam identidade operacional, offsite independente, custódia, agendamento monitorado, recuperação aprovada pela UI e RPO/RTO operacionais. | Fechar dependências acima, aprovar política/custódia e validar recovery set externo atualizado antes de elevar prontidão. |
+
+Ver [REGISTROS/0228.md](REGISTROS/0228.md).
+
 ## Atualização vigente — Campanha 0227 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
