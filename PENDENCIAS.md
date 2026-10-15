@@ -1,3 +1,18 @@
+## Atualização vigente — Campanha 0195 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0195-OFFLINE-REOPEN / 0181–0195 | PWA/outbox; P1; **PARTIAL** | Outbox preservou operações e convergiu após reload/reconexão; `navigator.onLine=true`, backend inacessível e sessão ausente no reload. | Manter perfil Chromium autenticado sob offline controlado através de encerramento/reabertura e upgrade SW; provar convergência com mesmo ID e uma vez. |
+| 0195-RETURN-UI / 0179–0195 | Delivery/RETURN; P1; **PARTIAL** | PG testou recebimentos concorrentes; ciclo autenticado completo de cancelamento, RETURN final e receipt não foi repetido. | Executar pelo Browser nas duas interfaces, conciliando custódia e confirmação sem nova corrida comercial. |
+| 0195-MAP-GEO / 0192–0195 | Mapa/route; P1; **OPEN** | Leaflet responde em desktop/mobile, mas zero markers sem snapshots de destino; geometria não comprovada. | Confirmar origem/destinos por fluxo territorial autorizado, testar markers e geometria determinística. |
+| 0195-METRICS / 0193–0195 | Workers/outbox; P1; **PARTIAL** | Métricas de ciclos/duração sem profundidade, estados, retries/leases ou coleta compartilhada. | Medir e expor contagens agregadas bounded; definir runbooks/alertas com carga observada. |
+| 0195-OUTBOX-OUTAGE / 0194–0195 | Sync/PostgreSQL; P1; **OPEN** | Readiness falhou/recuperou com proxy; operação pendente não foi atravessada pela falha. | Fault inject antes/depois do commit com operação autorizada pendente e replay único após reconexão. |
+| 0195-DR / 0184–0195 | Backup/continuidade; P0; **BLOCKED operacional** | Metadados do restore sintético 18.6/44 migrations confirmados; sem restore novo ou verificação externa. | Atualizar recovery set aprovado, cópia independente, custódia, retenção e RPO/RTO em execução autorizada. |
+| 0195-EXTERNAL-HOMOLOGATION / 0152–0195 | Providers; P0; **BLOCKED_EXTERNAL** | Apenas mocks/fixtures locais; nenhuma credencial, sandbox ou chamada real. | Obter onboarding/documentação restrita e homologar separadamente por provider. |
+| 0195-PHYSICAL-VALIDATION / 0163–0195 | Android/GPS/câmera/QR/impressão; P1; **BLOCKED** | Nenhum dispositivo físico controlado neste ambiente. | Executar checklist com hardware Android e impressora autorizados, guardar evidências. |
+
+Ver [REGISTROS/0195.md](REGISTROS/0195.md).
+
 ## Atualização vigente — Campanha 0194 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

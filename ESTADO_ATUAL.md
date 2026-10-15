@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0195
+
+**0195 PARTIAL; prontidão para produção BLOCKED.** Duas entregas e Route passaram pela UI autenticada, financeiro reconciliado (13070 centavos Order, 725 Earning), ACK perdido/replay idempotente, suites dos apps e PG/RLS/worker passaram. Foi corrigida cotação worker sem `commandId`. Limites: mapa sem coordenadas, reload ainda online sem sessão, RETURN UI não reexecutado, outbox sob outage não coberto e métricas incompletas. Restore sintético 0184 até 0044 verificado por metadados; DR oficial, offsite, RPO/RTO, homologação externa e hardware pendentes. Ver [REGISTROS/0195.md](REGISTROS/0195.md).
+
 ## Estado vigente — Campanha 0194
 
 **0194 PARTIAL.** Proxy loopback no caminho do runtime para `rotamoto_e2e` comprovou liveness 200 e readiness 200→503→200 durante falha/restauração de conexão. Não foram testados outbox pendente, replay ou operação com resultado incerto sob a mesma interrupção. Evidência local `browser-tests/evidencias/campanhas/0194/pg-outage.jsonl`; ver [REGISTROS/0194.md](REGISTROS/0194.md).
