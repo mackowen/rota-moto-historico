@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0212
+
+**0212 PARTIAL.** Browser repetiu cancelamento, atribuição de RETURN e entrega física, mas o runner 0148 usa Order/Route de fixture e parou antes do recebimento pelo Restaurante; o manifesto ficou retido em `RUNNING`. Não houve criação dos três pedidos pela UI nem validação pré-coleta neste run. Ver [REGISTROS/0212.md](REGISTROS/0212.md).
+
 ## Estado vigente — Campanha 0211
 
 **0211 PARTIAL.** Auditoria confirmou sequência documental legítima da 0210: `ab677d7` publicou cinco arquivos e `a621dba` corrigiu quatro; o resumo não precisava de alteração. A disputa de atribuição/aceite no PostgreSQL E2E passou com dois Drivers e replay idempotente. O Browser autenticado criou Orders/Deliveries/Route, mas o runner expirou após `ARRIVED`, antes da corrida integrada/conclusão. Banco oficial intocado. Ver [REGISTROS/0211.md](REGISTROS/0211.md).

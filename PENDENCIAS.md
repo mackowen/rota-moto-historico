@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0212 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0212-RETURN-UI / 0147, 0207 | Cancelamento/custódia/rota; P1; **OPEN** | Runner autenticado repetiu etapas visuais de cancelamento, RETURN atribuído e handover; fixture de contexto foi prévia e processo não chegou ao recebimento. Manifesto `8bf2bcb2-6ffd-47f8-91b0-c5f77b56854b` permaneceu `RUNNING`, sem limpeza. | Reestruturar runner em checkpoints, criar três pedidos e Route pela UI, cancelar após coleta, verificar RETURN no fim da fila, concluir duas paradas e confirmar recebimento autorizado no Restaurante; incluir cancelamento antes da coleta. |
+
+Ver [REGISTROS/0212.md](REGISTROS/0212.md).
+
 ## Atualização vigente — Campanha 0211 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
