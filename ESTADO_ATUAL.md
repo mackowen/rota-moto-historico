@@ -1311,3 +1311,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0205
 
 **0205 PARTIAL; prontidão para produção BLOCKED.** `npm test` dos dois apps, contratos, logística PostgreSQL, tenant RLS, workers e Browser de duas entregas/outage/metrics passaram nos cenários executados. Mapa raster sintético visível em desktop/mobile e runtime sem erros JS no run final. Disputa integrada no Browser, RETURN bilateral UI, upgrade SW real e financeiro positivo via UI continuam sem prova atual; heartbeat, DR, hardware e homologação também pendentes. Ver [REGISTROS/0205.md](REGISTROS/0205.md). Banco oficial não acessado.
+## Estado vigente — Campanha 0216
+
+**0216 PARTIAL.** O Browser QA agora tem orquestrador reutilizável: manifest atômico, checkpoints, timeout global/por etapa, dois perfis Chromium, esperas por estado, clique estável, captura de falhas sanitizada e recuperação de crash com `UNKNOWN_OUTCOME`. `npm run test:e2e-orchestrator` passou em Chromium/CDP; run `b0ca97ef-30a2-4dde-bdf1-bd762fcbc586`. Browser QA commit local `2502dd7`, sem push. As jornadas autenticadas dos aplicativos e a integração dos runners antigos ainda não foram executadas. `rotamoto` intocado. Ver [REGISTROS/0216.md](REGISTROS/0216.md); campanha seguinte deve usar o harness, sem declarar o gate integrado aprovado.

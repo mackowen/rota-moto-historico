@@ -1629,3 +1629,12 @@ Ver [REGISTROS/0209.md](REGISTROS/0209.md).
 | 0210-PRODUCTION-READINESS | DR/externos/hardware; P0; **BLOCKED** | Sem evidência atual de DR oficial/offsite/RPO-RTO, homologação comercial ou validação física. | Resolver sob autorização específica e obter evidências independentes antes de qualquer readiness de produção. |
 
 Ver [REGISTROS/0210.md](REGISTROS/0210.md).
+
+## Atualização vigente — Campanha 0216
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0216-AUTHENTICATED-HARNESS / 0211–0216 | Browser QA; P1; **OPEN** | Orquestrador reutilizável passou Chromium real com dois perfis isolados, checkpoints, captura diagnóstica e retomada idempotente após `SIGKILL`. Não autenticou os aplicativos nem completou operações PostgreSQL. | Integrar o harness a login real Restaurante + dois Motoboys e fazer checkpoint após cada operação comercial; validar a mesma Delivery durante a disputa. |
+| 0216-LEGACY-RUNNER-MIGRATION / 0211–0216 | Runners Browser; P1; **OPEN** | `campaign-0206` e runners anteriores continuam com gerência própria de Chrome/timeout e não usam o novo ciclo resumível. | Migrar/substituir somente depois de identificar setup de sessão/fixture; manter tratamento de `UNKNOWN_OUTCOME` e não apagar manifestos antigos. |
+
+Ver [REGISTROS/0216.md](REGISTROS/0216.md).
