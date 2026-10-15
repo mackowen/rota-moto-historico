@@ -1703,3 +1703,10 @@ Ver [REGISTROS/0222.md](REGISTROS/0222.md). Permanecem independentes os gates de
 | 0223-PROVIDER-HOMOLOGATION | Integração externa; P2; **BLOCKED_EXTERNAL** | Adapter determinístico local; nenhuma credencial nem chamada comercial usada. | Homologar em sandbox/provider autorizado; fora do gate sintético de resiliência. |
 
 Ver [REGISTROS/0223.md](REGISTROS/0223.md). A regressão consolidada e os gates independentes de RETURN, corrida visual, PWA e produção continuam separados.
+# Atualização vigente — Campanha 0224
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0224-UI-DISPATCH-RACE / 0217, 0220 | Atribuição cross-app; P1; **RESOLVED no cenário** | Run Browser `25ffac6c-9e43-4c65-ba5f-13ff8bf25050`: UI iniciou corrida sobre a mesma Delivery; um vencedor, `REVISION_CONFLICT`, perdedor `DRIVER_NOT_ASSIGNED`, vencedor concluiu e Restaurante convergiu. | Manter runner na regressão; não inferir prontidão de produção. |
+| 0224-RUNNER-SYNC / 0224 | Browser QA; P2; **RESOLVED** | Seletor de distribuição e espera por sync corrigidos; evidências em `evidencias/campanhas/0224/1018bb23-76e6-4eb7-8851-2e6541f1f26e/`. | Reexecutar na regressão 0225. |
+| 0224-FINANCE-POSITIVE / 0222 | Earning da corrida concorrente; P2; **DEFERRED** | Run 0224 usou taxa zero (`earningCount=0`); a conciliação positiva de duas entregas está documentada separadamente como PASS na 0222. | Não usar o run 0224 como prova financeira; preservar a evidência dedicada 0222. |
