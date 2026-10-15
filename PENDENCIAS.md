@@ -1725,3 +1725,15 @@ Ver [REGISTROS/0223.md](REGISTROS/0223.md). A regressão consolidada e os gates 
 | 0225-PRODUCTION / 0158–0225 | DR/hardware/integrações; P0; **BLOCKED_EXTERNAL** | DR oficial/offsite atualizado, RPO/RTO aprovado, homologação comercial e hardware físico sem evidência. | Obter autorização/ambiente e validar antes de prontidão de produção. |
 
 Ver [REGISTROS/0225.md](REGISTROS/0225.md) e [RESUMOS/0225.md](RESUMOS/0225.md). Esta fotografia vigente atualiza estados somente quando há evidência direta nova; registros anteriores permanecem intactos.
+
+
+## Atualização vigente — Campanha 0226 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0226-SCHEMA-COMPAT / 0001–0044 | PostgreSQL/schema; P1; **RESOLVED para snapshot auditado** | Dois bancos em 18.6, ledger 0044 e 44/44 checksums; inventário estrutural igual. | Repetir preflight após migration futura. |
+| 0226-ACL-ENV / 0226 | Grants backup/auditoria; P2; **EXPECTED** | Grants extras oficiais documentados; ausentes no E2E. | Preservar separação; custodiar role BYPASSRLS de acordo com procedimento. |
+| 0226-RECOVERY / 0158–0226 | Backup/DR; P0; **BLOCKED_BY_SCOPE** | Campanha read-only proibiu backup/restore; recovery atual não foi testado. | Antes de futura alteração oficial, comprovar restore isolado de recovery set compatível com 0044. |
+| 0226-PRODUCTION | Produção; P0; **BLOCKED_EXTERNAL** | Homologação, hardware e DR/RPO-RTO continuam sem evidência nesta auditoria. | Resolver sob autorização própria; schema atualizado não implica prontidão. |
+
+Ver [REGISTROS/0226.md](REGISTROS/0226.md) e [RESUMOS/0226.md](RESUMOS/0226.md). Nenhuma atualização foi executada.

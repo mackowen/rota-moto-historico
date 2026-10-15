@@ -1352,3 +1352,8 @@ Na atualização de 0222, a campanha 0223 foi planejada para validar outage Post
 ## Estado vigente — Campanha 0225
 
 **0225 PASS nos gates técnicos executados; produção BLOCKED.** Regressão atual executou as suites dos dois aplicativos, guards, PostgreSQL logística/RLS/tenant/worker e jornadas Browser de RETURN bilateral, duas conciliações positivas, outage/worker, concorrência UI em perfis separados, upgrade real de Service Worker com outbox durante fechamento/reabertura offline e cartografia com duas paradas. Evidências e limites em [REGISTROS/0225.md](REGISTROS/0225.md). Correções locais no Browser QA estabilizaram a condição offline após reinício e o despacho/enquadramento do mapa; commit `1f03b7b02d2e01fde9f6df7ef580dea8ce9bfce4`, sem push. Aplicativos sem alterações nesta campanha. `rotamoto` não acessado. Produção segue bloqueada por DR/offsite/RPO-RTO, homologações comerciais e validação física Android; tiles/roteamento externo não foram validados.
+
+
+## Estado vigente — Campanha 0226
+
+**Auditoria read-only PASS: schema oficial e E2E alinhados ao código até 0044.** PostgreSQL 18.6 nos dois, ledger completo com 44/44 checksums exatos e catálogos estruturais sem divergências. ACLs adicionais de backup/auditoria no oficial são específicas e documentadas. Nenhuma migration/DDL/DML, backup ou restore executado; o oficial foi consultado somente em transação read-only para metadados e ledger. Não há migration a aplicar. Recovery para mudanças futuras exige backup/restauração validados; produção permanece dependente de DR, RPO/RTO, homologações e validações físicas. Detalhes: [REGISTROS/0226.md](REGISTROS/0226.md).
