@@ -160,3 +160,5 @@
 | 0181 | 2026-10-15 | Restaurante e Motoboy | OFFLINE / PWA / RECUPERAÇÃO | Encerramento e reabertura offline autenticada | PARTIAL: Chromium reaberto com SW, IndexedDB pendente, backend offline medido por fetch e reconvergência; ACK perdido não duplicou. Upgrade real do SW com outbox segue sem prova. | [REGISTROS/0181.md](REGISTROS/0181.md) · [RESUMOS/0181.md](RESUMOS/0181.md) |
 
 | 0182 | 2026-10-15 | Restaurante e Motoboy | FINANCEIRO / CONCORRÊNCIA / RETURN | Valores canônicos e disputas operacionais | PARTIAL: PostgreSQL confirmou Earning 1.250 centavos, snapshot e referência; cancelamento/RETURN/receipt e concorrência de duas sessões passaram. UI financeira completa e mesma-Delivery accept race seguem pendentes. | [REGISTROS/0182.md](REGISTROS/0182.md) · [RESUMOS/0182.md](RESUMOS/0182.md) |
+
+| 0183 | 2026-10-15 | Restaurante e Motoboy | MAPA / SESSÃO / SYNC | Lifecycle do mapa e CSRF após reautenticação | PARTIAL: renderer lifecycle corrigido e unit/browser smoke sem exceção; CSRF não reproduzido; CDP repetido desktop/mobile segue necessário. Restaurante commit `e083d52`. | [REGISTROS/0183.md](REGISTROS/0183.md) · [RESUMOS/0183.md](RESUMOS/0183.md) |

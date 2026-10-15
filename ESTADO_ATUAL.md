@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0183
+
+**0183 PARTIAL.** O lifecycle Leaflet/MapLibre foi corrigido com descarte idempotente no unload e proteção contra callbacks/timers tardios; testes unitários e suite Restaurante passaram. A exceção não apareceu no Browser autenticado posterior, e o 403 CSRF não foi reproduzido nos registros de instalação. A matriz explícita de navegação repetida, sessão e viewports 390×844/desktop não foi executada integralmente. Restaurante commit `e083d52`. Ver [REGISTROS/0183.md](REGISTROS/0183.md).
+
 ## Estado vigente — Campanha 0182
 
 **0182 PARTIAL.** PostgreSQL E2E confirmou Earning positivo de 1.250 centavos, regra `fees-v1`, referenciação da Delivery, cancelamento pré/pós-coleta, RETURN ao fim da rota e recebimento autorizado. Concorrência com duas sessões passou para claim/atribuição/receipt, sem duplicações. Falta disputa autenticada de dois motoboys pela mesma entrega e conciliação financeira ponta a ponta pela UI (Order total, fee, repasse e Earning). Ver [REGISTROS/0182.md](REGISTROS/0182.md).

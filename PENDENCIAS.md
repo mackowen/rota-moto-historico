@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0183 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0183-MAP / 0177–0183 | Lifecycle do mapa Restaurante; P1; **PARTIAL** | AppendChild reproduzido no baseline; disposal/idempotência corrigidos e unit test passa; Browser posterior sem JS exceptions. | CDP 390×844 e desktop alterna repetidamente mapa/abas, login/logout e reload sem renderer errors. |
+| 0183-CSRF / 0178–0183 | Sessão/registro da instalação; P1; **PARTIAL** | CSRF/session race unit tests e sync autenticado passaram; antigo 403 não foi reproduzido. | Executar teste Browser específico de logout/reautenticação concorrente e confirmar POST installation sem falso 403. |
+
+Ver [REGISTROS/0183.md](REGISTROS/0183.md).
+
 ## Atualização vigente — Campanha 0182 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
