@@ -1537,3 +1537,12 @@ Ver [REGISTROS/0204.md](REGISTROS/0204.md).
 | 0205-READINESS / 0158–0205 | DR/produção; P0; **BLOCKED** | Sem backup/restore oficial atualizado, cópia independente, RPO/RTO ou validações comerciais/físicas. | Tratar somente em ciclo autorizado de continuidade e homologação. |
 
 Ver [REGISTROS/0205.md](REGISTROS/0205.md).
+
+## Atualização vigente — Campanha 0206
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0206-BROWSER-RACE / 0202, 0205 | Despacho cross-app; P1; **OPEN** | PostgreSQL com duas sessões comprovou vencedor único, `REVISION_CONFLICT`, `DRIVER_NOT_ASSIGNED` e retry idempotente. Browser autenticado concluiu duas entregas/Route, mas a corrida não ocorreu com dois perfis Chromium no mesmo run. | Criar Delivery pela UI, disputar entre duas sessões Browser autenticadas e concluir pelo vencedor no mesmo manifesto, conferindo projeções e evento no PostgreSQL. |
+| 0206-SECOND-STOP / 0201 | Motoboy Browser runner; P2; **RESOLVED no cenário** | `secondStopConfirmed=true` após ajuste de espera de layout/hit-test; Browser sem erros JS. | Manter a asserção explícita nas regressões de Route. |
+
+Ver [REGISTROS/0206.md](REGISTROS/0206.md).

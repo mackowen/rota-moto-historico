@@ -1214,6 +1214,10 @@ Estado atual: **PASS no gate de infraestrutura autenticada**. O runtime real, lo
 
 Estado **PARTIAL**. A jornada UI criou Order e Delivery no E2E, percorreu aceitação, coleta, saída, chegada e confirmação. A entrega e os cinco eventos estão canônicos; a finalização não foi localizada na lista do Restaurante e não há Route canônica. Detalhes: [REGISTROS/0172.md](REGISTROS/0172.md).
 
+## Estado vigente — Campanha 0206
+
+**PARTIAL.** A disputa de atribuição/aceite passou com duas sessões PostgreSQL e o Browser autenticado confirmou a segunda parada e execução de duas entregas em Route. O problema anterior da segunda parada era uma corrida de layout no helper de clique e foi corrigido no runner. A disputa e a execução pelo vencedor ainda não estão no mesmo Browser run com dois perfis independentes. Banco oficial não acessado. Detalhes: [REGISTROS/0206.md](REGISTROS/0206.md).
+
 
 ## Campanha 0173 — offline e recuperação
 
