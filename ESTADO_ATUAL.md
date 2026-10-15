@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0211
+
+**0211 PARTIAL.** Auditoria confirmou sequência documental legítima da 0210: `ab677d7` publicou cinco arquivos e `a621dba` corrigiu quatro; o resumo não precisava de alteração. A disputa de atribuição/aceite no PostgreSQL E2E passou com dois Drivers e replay idempotente. O Browser autenticado criou Orders/Deliveries/Route, mas o runner expirou após `ARRIVED`, antes da corrida integrada/conclusão. Banco oficial intocado. Ver [REGISTROS/0211.md](REGISTROS/0211.md).
+
 ## Estado vigente — Campanha 0200
 
 **0200 PARTIAL; prontidão para produção BLOCKED.** Regressões npm, contratos cross-app, PG logística, isolamento tenant, concorrência e métricas por role worker passaram. As UIs criaram Orders/Deliveries/Route com geodados; o Browser não comprovou cartografia visível nem avanço ao segundo stop. Offline com SW upgrade, negócio durante outage, financeiro e RETURN Browser não foram repetidos. Restore 0184 é apenas evidência histórica nesta campanha. Banco oficial intocado. Ver [REGISTROS/0200.md](REGISTROS/0200.md).

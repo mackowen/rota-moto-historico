@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0211 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0211-BROWSER-RACE / 0202, 0206 | Dispatch cross-app; P1; **OPEN** | PostgreSQL E2E atual passou corrida de atribuição e aceite, com um vencedor, `REVISION_CONFLICT`, `DRIVER_NOT_ASSIGNED` e replay idempotente. Browser atual autenticou apps e criou Route, mas terminou em timeout após `ARRIVED`; dois perfis independentes não disputaram a mesma Delivery. | Instrumentar/ajustar o runner sem ocultar falhas; executar criação pela UI, atribuição concorrente autorizada e execução pelo vencedor no mesmo run, com leitura canônica nas duas UIs e PostgreSQL. |
+| 0211-HISTORY-0210 / 0211 | Histórico; P3; **RESOLVED** | Commit principal `ab677d7` contém cinco documentos; suplemento `a621dba` contém quatro porque o resumo já estava correto. | Manter a correção complementar como commit separado; não reescrever histórico. |
+
+Ver [REGISTROS/0211.md](REGISTROS/0211.md).
+
 ## Atualização vigente — Campanha 0200 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
