@@ -1,3 +1,7 @@
+## Estado vigente — Campanha 0199
+
+**0199 PARTIAL.** Foi implementada leitura agregada tenant-scoped das outboxes duráveis para os workers de marketplace e logística, em transação READ ONLY e sem IDs como labels. A consulta foi validada com roles PostgreSQL worker; `npm test` nos dois apps passou. Sem endpoint/exporter, alertas e métricas próprias de retry/lease/latência, o gate operacional continua parcial. Restaurante commit local `1f19237`. Ver [REGISTROS/0199.md](REGISTROS/0199.md).
+
 ## Estado vigente — Campanha 0198
 
 **0198 PARTIAL.** Proxy isolado confirmou liveness 200 e readiness 200→503→200 sob indisponibilidade/recuperação do PostgreSQL E2E. Não houve Order/Delivery pendente nem replay transacional durante o outage; sincronização e outbox sob falha continuam sem comprovação. Evidência local em `browser-tests/evidencias/campanhas/0198/pg-health-recovery.json`. Ver [REGISTROS/0198.md](REGISTROS/0198.md).

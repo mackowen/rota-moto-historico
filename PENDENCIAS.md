@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0199 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0199-QUEUE-EXPORT / 0193–0199 | Workers/outboxes; P1; **PARTIAL** | `queueMetrics()` lê marketplace/provider outboxes no PG com role dedicada, RLS, tenant scope e estados/idade agregados sem IDs. Não há exporter/scraper/alertas. | Expor coleta somente a operador autorizado, contabilizar retry/lease/idade/latência com cardinalidade fixa e validar thresholds/runbook em carga controlada. |
+
+Ver [REGISTROS/0199.md](REGISTROS/0199.md).
+
 ## Atualização vigente — Campanha 0198 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

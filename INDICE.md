@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0199 | 2026-10-15 | Restaurante / `rotamoto_e2e` | OBSERVABILIDADE / FILAS | Snapshot tenant-scoped de outboxes duráveis | PARTIAL: leitura de fila e idade agregadas implementadas e testadas com role real; exporter, alertas, retries/leases e thresholds pendentes. | [REGISTROS/0199.md](REGISTROS/0199.md) · [RESUMOS/0199.md](RESUMOS/0199.md) |
 | 0198 | 2026-10-15 | Restaurante / `rotamoto_e2e` / Browser QA | RESILIÊNCIA / POSTGRESQL | Proxy isolado, liveness e readiness durante falha | PARTIAL: health/readiness 200→503→200 passou; operação pendente, outbox, replay e convergência não foram testados. | [REGISTROS/0198.md](REGISTROS/0198.md) · [RESUMOS/0198.md](RESUMOS/0198.md) |
 | 0197 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` | CONCORRÊNCIA / ATRIBUIÇÃO | Disputa concorrente e aceite autorizado | PARTIAL: concorrência PostgreSQL PASS (um vencedor, conflito e aceite restrito); Browser integrado e convergência após execução pendentes. | [REGISTROS/0197.md](REGISTROS/0197.md) · [RESUMOS/0197.md](RESUMOS/0197.md) |
 | 0196 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | GELOCALIZAÇÃO / CARTOGRAFIA | Coordenadas territoriais, Route de duas paradas e mapa | PARTIAL: Orders/Deliveries/Route e coordenadas persistidas; markers e geometria solicitada; captura cartográfica e avanço mobile pendentes. | [REGISTROS/0196.md](REGISTROS/0196.md) · [RESUMOS/0196.md](RESUMOS/0196.md) |
