@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0202 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` | CONCORRÊNCIA / ATRIBUIÇÃO | Disputa de atribuição e aceite autorizado | PASS PostgreSQL de duas sessões; PARTIAL Browser integrado da disputa e execução no mesmo run. | [REGISTROS/0202.md](REGISTROS/0202.md) · [RESUMOS/0202.md](RESUMOS/0202.md) |
 | 0201 | 2026-10-15 | Motoboy / Restaurante / `rotamoto_e2e` / Browser QA | CARTOGRAFIA / CORREÇÃO | SVG Leaflet, bounds e mapa em dois viewports | PASS visual desktop/mobile; PARTIAL no clique explícito da segunda parada. Ciclo UI concluiu e convergiu duas entregas. | [REGISTROS/0201.md](REGISTROS/0201.md) · [RESUMOS/0201.md](RESUMOS/0201.md) |
 | 0200 | 2026-10-15 | Restaurante / Motoboy / `rotamoto_e2e` / Browser QA | REGRESSÃO / CONSOLIDAÇÃO | Regressões funcionais, PostgreSQL, mapa e métricas | PARTIAL: npm/contratos/tenant/worker PG passaram; mapa visível, corrida+execução integrada, outage com outbox e requisitos operacionais continuam parciais ou bloqueados. | [REGISTROS/0200.md](REGISTROS/0200.md) · [RESUMOS/0200.md](RESUMOS/0200.md) |
 | 0199 | 2026-10-15 | Restaurante / `rotamoto_e2e` | OBSERVABILIDADE / FILAS | Snapshot tenant-scoped de outboxes duráveis | PARTIAL: leitura de fila e idade agregadas implementadas e testadas com role real; exporter, alertas, retries/leases e thresholds pendentes. | [REGISTROS/0199.md](REGISTROS/0199.md) · [RESUMOS/0199.md](RESUMOS/0199.md) |

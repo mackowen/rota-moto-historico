@@ -1501,3 +1501,10 @@ Ver [REGISTROS/0193.md](REGISTROS/0193.md).
 | 0201-EXTERNAL-TILES / 0192–0201 | Cartografia; P2; **DEFERRED** | Cartografia e linha renderizadas com fixtures loopback; não houve chamada a tiles/roteador externo. | Validar provedor somente em homologação autorizada; manter a cobertura determinística local. |
 
 Ver [REGISTROS/0201.md](REGISTROS/0201.md).
+## Atualização vigente — Campanha 0202 (2026-10-15)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0202-BROWSER-RACE / 0191–0202 | Harness Browser de atribuição; P1; **OPEN** | Duas sessões API reais passaram disputa, autorização e replay no E2E; o fluxo Browser UI e a corrida não ocorreram no mesmo run. | Estender o harness para duas sessões Chromium autenticadas, criar a Delivery pela UI do Restaurante, disputar a atribuição e concluir pelo vencedor; conferir as duas projeções e o PostgreSQL no mesmo manifesto. |
+
+Ver [REGISTROS/0202.md](REGISTROS/0202.md).

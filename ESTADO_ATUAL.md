@@ -1259,3 +1259,6 @@ Riscos atuais: mapa Restaurante ainda gera exceção MapLibre/Leaflet; uma chama
 ## Estado vigente — Campanha 0201
 
 **0201 PASS para renderização cartográfica desktop/mobile; PARTIAL para interação explicitamente verificada com a segunda parada.** Corrigido SVG Leaflet reduzido por CSS global e estabilizado o enquadramento após carregar geometria. Browser autenticado criou duas Orders/Deliveries e Route pela UI, concluiu as entregas e confirmou estado no Restaurante. Fixtures raster/rota eram loopback sintéticas; sem validação de provedor externo. Evidência e SHAs em [REGISTROS/0201.md](REGISTROS/0201.md). Banco oficial não acessado.
+## Estado vigente — Campanha 0202
+
+**0202 PARTIAL.** PostgreSQL E2E comprovou disputa concorrente, um único Driver atribuído, conflito no perdedor, aceite restrito, um evento canônico e replay idempotente. A disputa de duas sessões e a execução do vencedor não foram integradas a um mesmo Browser run autenticado. Ver [REGISTROS/0202.md](REGISTROS/0202.md). Banco oficial não acessado.
