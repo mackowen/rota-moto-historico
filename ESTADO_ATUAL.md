@@ -4,7 +4,7 @@
 
 O Browser não executou a mesma jornada selecionando um destino remoto e fazendo download/restore remoto aprovado; SFTP não teve restore PostgreSQL integrado. O run remoto+Postgres S3 separado é evidência protocolar, não substitui essa jornada Browser. Por isso a campanha não recebe PASS. Linux/systemd, Docker/Podman e provedores externos reais não existem no ambiente; nenhum teste externo foi alegado. `rotamoto` não foi acessado; restore usou cluster descartável e dados sintéticos. Termux compartilha UID; serviços globais e Termux:Boot permaneceram intocados. Não há RPO/RTO medido nem prontidão DR/produção.
 
-Restaurante: branch `codex/campaign-0233a-backup-completion`, commit `acb9cb5`, local somente. Motoboy sem alterações. Browser QA reutilizou runner existente sem commit. O push atual do histórico será registrado após confirmação por `git ls-remote`.
+Restaurante: branch `codex/campaign-0233a-backup-completion`, commit `acb9cb5`, local somente. Motoboy sem alterações. Browser QA reutilizou runner existente sem commit. Histórico: commit `e60c97ece6edf5282bd3b96ed157b94e7c3b88b0`, recebido e confirmado via `git ls-remote` no branch `codex/f9-browser-e2e-0057`.
 
 Evidências: Browser/CDP `bfd1f90e-597d-4380-a0c4-28ffe17b1224` e `6ead7c78-6c3e-44ae-a46b-0a25b928c4b2`, screenshots desktop/mobile, logs e manifestos; recuperação PostgreSQL S3 run `896ffa6b-d0cd-429c-bd86-365d62e93b91`. Ver [REGISTROS/0233-A.md](REGISTROS/0233-A.md) e [RESUMOS/0233-A.md](RESUMOS/0233-A.md).
 
