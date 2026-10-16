@@ -1838,10 +1838,10 @@ Ver [REGISTROS/0231.md](REGISTROS/0231.md).
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
 |---|---|---|---|
-| 0234-MFA-QR / 0234 | Enrollment TOTP UI; P1; **OPEN** | API devolve otpauth URI e chave manual; sem QR na tela. | Renderizar QR local offline sem persistir/expor segredo após enrollment; validar desktop/mobile. |
+| 0234-MFA-QR / 0234 | Enrollment TOTP UI; P1; **RESOLVED** | QR offline + chave manual; teste visual CDP 1280×900/390×844 com URI sintética, sem erros JS/overflow. Evidências em `browser-tests/evidencias/campanhas/0234/qr-enrollment/`. | Concluído para visual do componente. A jornada autenticada completa continua pendente em 0234-BROWSER-FIRST-OWNER. |
 | 0234-MFA-ADMIN-RECOVERY / 0234 | Recuperação administrativa MFA; P0; **OPEN** | Códigos próprios e recuperação de senha existem; reset privilegiado multiator não existe. | Criar pedido auditado, verificações independentes e aprovação MFA por segundo administrador, sem bypass ou reset automático. |
 | 0234-BOOTSTRAP-CONCURRENCY / 0234 | Bootstrap/retomada; P1; **PARTIAL** | Latch `FOR UPDATE`, autorização digest-only e replay passaram no PG E2E serial; concorrência real e fault injection não executadas. | Usar cluster descartável dedicado para duas inicializações concorrentes, falha intermediária, rollback, restart e retry. |
-| 0234-BROWSER-FIRST-OWNER / 0234 | Browser/CDP; P1; **OPEN** | Nenhuma jornada Browser nova; sem screenshots/evidências visuais 0234. | Rodar APIs reais: convite, senha, ativação, TOTP, recovery codes, login, painel e permissões em 1280×900/390×844. |
+| 0234-BROWSER-FIRST-OWNER / 0234 | Browser/CDP; P1; **OPEN** | Apenas fixture visual QR sintética; sem jornada Browser autenticada de identidade. | Rodar APIs reais: convite, senha, ativação, TOTP, recovery codes, login, painel e permissões em 1280×900/390×844. |
 | 0234-OFFICIAL-SCHEMA / complemento | Compatibilidade oficial; P0; **BLOCKED** | Gate 0234 não integral; banco oficial não acessado. Backup+restore pré-migração oficial ausentes. | Após PASS 0234, auditoria read-only, matriz oficial/E2E e backup criptografado + restore isolado antes de considerar migration. Até lá manter `rotamoto` intocado. |
 | 0234-EXTERNAL-DELIVERY / 0234 | SMTP/HTTPS externo; P2; **PENDING_EXTERNAL** | Testes usam fixture/dados sintéticos; sem provider/domínio externos. | Homologar SMTP/HTTPS reais após configuração, sem confundir entrega local com externa. |
 
