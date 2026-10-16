@@ -1,3 +1,15 @@
+## Estado vigente — Campanha 0233-A (2026-10-16)
+
+**0233-A PARTIAL para implementação/testes integrados; homologação externa PENDING_EXTERNAL; produção/DR não declarada.** Foram integrados S3 SigV4 e SFTP OpenSSH com listagem, download, integridade, retenção e restore remoto em alvo descartável. Backup E2E PostgreSQL foi publicado/baixado pelo protocolo S3 local e restaurado com 44 migrations, 39 tabelas RLS/policies e um registro sintético. SFTP loopback passou upload, replay, inventário, download, host key errada e retenção. Os dois `npm test`, suite backup e Browser/CDP autenticado passaram; Browser percorreu agenda, backup manual/agendado, MFA dual, restore local descartável e runit privado.
+
+O Browser não executou a mesma jornada selecionando um destino remoto e fazendo download/restore remoto aprovado; SFTP não teve restore PostgreSQL integrado. O run remoto+Postgres S3 separado é evidência protocolar, não substitui essa jornada Browser. Por isso a campanha não recebe PASS. Linux/systemd, Docker/Podman e provedores externos reais não existem no ambiente; nenhum teste externo foi alegado. `rotamoto` não foi acessado; restore usou cluster descartável e dados sintéticos. Termux compartilha UID; serviços globais e Termux:Boot permaneceram intocados. Não há RPO/RTO medido nem prontidão DR/produção.
+
+Restaurante: branch `codex/campaign-0233a-backup-completion`, commit `acb9cb5`, local somente. Motoboy sem alterações. Browser QA reutilizou runner existente sem commit. O push atual do histórico será registrado após confirmação por `git ls-remote`.
+
+Evidências: Browser/CDP `bfd1f90e-597d-4380-a0c4-28ffe17b1224` e `6ead7c78-6c3e-44ae-a46b-0a25b928c4b2`, screenshots desktop/mobile, logs e manifestos; recuperação PostgreSQL S3 run `896ffa6b-d0cd-429c-bd86-365d62e93b91`. Ver [REGISTROS/0233-A.md](REGISTROS/0233-A.md) e [RESUMOS/0233-A.md](RESUMOS/0233-A.md).
+
+0234 Bootstrap pode começar em branch própria usando exclusivamente `rotamoto_e2e`/clusters descartáveis. Isso não autoriza qualquer acesso ao banco oficial, nem remove as pendências de Browser E2E remoto ou homologação externa.
+
 ## Estado vigente — Campanha 0233 (2026-10-16)
 
 **0231–0233 PARTIAL; prontidão de produção/DR não declarada.** Suítes completas Restaurante/Motoboy, suite focada de backup, restore PostgreSQL descartável, sintaxe e deploy estático passaram. Auditoria confirmou vault privado, redaction, SigV4/TLS, pinagem de host key e guards. Providers seguem sem listagem/download/restore e retenção remota; o runner Browser 0231 é sintético. Linux/Docker/systemd não disponíveis; Termux compartilha UID. Nenhum destino externo ou banco oficial foi acessado.

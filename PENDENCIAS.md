@@ -1788,6 +1788,18 @@ Ver [REGISTROS/0229.md](REGISTROS/0229.md) e [RESUMOS/0229.md](RESUMOS/0229.md).
 | 0230-PRODUCTION-DR / 0158–0230 | Backup/DR; P0; **BLOCKED** | Restore sintético local passou, sem evidência de recovery set oficial, cópia offsite, RPO/RTO aprovado ou continuidade operacional. | Validar artefato/cópia autorizados, retenção, monitoramento e exercício de DR sob autorização específica. |
 
 O run e os templates estão detalhados em [REGISTROS/0230.md](REGISTROS/0230.md) e [RESUMOS/0230.md](RESUMOS/0230.md). O log `current` do svlogd é criado com modo `0744`, mas o E2E verificou diretórios pai `0700`; não mover logs para caminho compartilhado sem revisão. Nenhum serviço global ou banco oficial foi acessado.
+## Atualização vigente — Campanha 0233-A (2026-10-16)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0233A-REMOTE-PIPELINE / 0231–0233-A | Adapters e executor S3/SFTP; P0; **IMPLEMENTADO, gate E2E Browser PARTIAL** | S3 loopback SigV4 + transferência/autenticação/restauração em PostgreSQL descartável; SFTP OpenSSH real loopback com replay/listagem/download. Executor mantém destino no request de restore, verifica sets e guarda última cópia. | Fechar uma jornada Browser/CDP autenticada que cadastre/teste destino local, configure política, faça backup, inventário remoto, pedido/aprovação MFA e restore PG remoto descartável. Incluir download/restore PG por SFTP se a fixture local suportar. |
+| 0233A-SECURITY / 0233-A | Segredos, host key, RLS, MFA, alvo; P0; **PASS nos testes executados** | Cofre cifrado separado; resposta pública redigida; TLS e host key obrigatórios; database oficial recusado no test mode; opt-in de backup operacional por role dedicada sem uso nesta campanha. | Manter guards em mudanças futuras; sem banco oficial, credenciais ou artefatos reais nos testes. |
+| 0233A-TERMUX / 0230–0233-A | Supervisor no Android; P1; **PASS no E2E sintético; PLATFORM_LIMIT** | Browser E2E confirmou runit privado, job manual/agendado, crash/restart/health/shutdown; UID HTTP/executor segue compartilhado. | Não contornar UID Android; em Linux futuro validar UID/grupo dedicado operacionalmente. |
+| 0233A-EXTERNAL / 0232–0233-A | S3/SFTP externo, Linux/systemd, Docker/Podman; P1; **PENDING_EXTERNAL** | Não há servidor/provider real, Linux, systemd, Docker ou Podman neste ambiente. Compose YAML e scripts shell passaram validação estática; nenhum teste operacional foi alegado. | Homologar somente quando esses ambientes estiverem disponíveis e autorizados, com dados sintéticos. |
+| 0233A-PRODUCTION-DR / 0231–0233-A | Continuidade/produção; P0; **BLOCKED** | Sem cópia offsite comprovada, exercício externo, RPO/RTO aprovado ou prontidão de desastre. | Não declarar produção/DR até evidência real autorizada; manter a chave fora do destino remoto. |
+
+Ver [REGISTROS/0233-A.md](REGISTROS/0233-A.md). A Campanha 0234 pode usar somente bancos E2E/descartáveis; nenhum acesso ao oficial está autorizado.
+
 ## Atualização vigente — Campanha 0233 (2026-10-16)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
