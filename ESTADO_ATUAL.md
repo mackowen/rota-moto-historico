@@ -4,7 +4,7 @@
 
 Não há pendência de implementação conhecida. Linux/systemd, Docker/Podman e provedores S3/SFTP externos não existem neste ambiente; nenhum teste externo foi alegado. `rotamoto` não foi acessado; restore usou cluster descartável e dados sintéticos. Termux compartilha UID; serviços globais e Termux:Boot permaneceram intocados. Não há RPO/RTO medido nem prontidão DR/produção.
 
-Restaurante: branch `codex/campaign-0233a-backup-completion`, commits locais `acb9cb5`, `2f144ce`, `154d232`. Motoboy sem alterações. Browser QA branch `codex/auditoria-0140`, commit local `ac0ba18`; nenhum push de app/Browser. Histórico prévio `3d850813decbfb0dcfe4f042d1cab600651e9bdf` foi recebido e confirmado; esta atualização será publicada somente no branch `codex/f9-browser-e2e-0057` e verificada com `git ls-remote`.
+Restaurante: branch `codex/campaign-0233a-backup-completion`, commits locais `acb9cb5`, `2f144ce`, `154d232`. Motoboy sem alterações. Browser QA branch `codex/auditoria-0140`, commit local `ac0ba18`; nenhum push de app/Browser. Histórico commit `d3b1f507eb9d3b78c6d85c2576532d0fbe69078c` foi publicado e confirmado como HEAD remoto por `git ls-remote` no branch `codex/f9-browser-e2e-0057`.
 
 Evidências: SFTP Browser/CDP `52962229-7afd-40ab-b0da-70a2d496e30d` em `browser-tests/evidencias/campanhas/0233-A/remote-sftp-final-8/` (desktop/mobile, logs, audit, jobs e manifests); S3→PostgreSQL `896ffa6b-d0cd-429c-bd86-365d62e93b91`. Ver [REGISTROS/0233-A.md](REGISTROS/0233-A.md) e [RESUMOS/0233-A.md](RESUMOS/0233-A.md).
 
