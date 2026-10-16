@@ -1,3 +1,4 @@
+
 ## Atualização vigente — Campanha 0228 (2026-10-15)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
@@ -1787,3 +1788,13 @@ Ver [REGISTROS/0229.md](REGISTROS/0229.md) e [RESUMOS/0229.md](RESUMOS/0229.md).
 | 0230-PRODUCTION-DR / 0158–0230 | Backup/DR; P0; **BLOCKED** | Restore sintético local passou, sem evidência de recovery set oficial, cópia offsite, RPO/RTO aprovado ou continuidade operacional. | Validar artefato/cópia autorizados, retenção, monitoramento e exercício de DR sob autorização específica. |
 
 O run e os templates estão detalhados em [REGISTROS/0230.md](REGISTROS/0230.md) e [RESUMOS/0230.md](RESUMOS/0230.md). O log `current` do svlogd é criado com modo `0744`, mas o E2E verificou diretórios pai `0700`; não mover logs para caminho compartilhado sem revisão. Nenhum serviço global ou banco oficial foi acessado.
+## Atualização vigente — Campanha 0231 (2026-10-16)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0231-REMOTE-RECOVERY / 0228–0231 | S3/SFTP inventário e restore; P0; **OPEN** | Publicação de conjuntos testada; providers não oferecem listagem/download/restore. | Implementar operações remotas completas, validar manifest autenticado/hash, recuperar somente em PostgreSQL descartável e provar Browser autenticado. |
+| 0231-REMOTE-RETENTION / 0228–0231 | Retenção e última cópia; P0; **OPEN** | Retenção local existente; cópias remotas não são podadas nem reconciliadas. | Inventariar, calcular política por destino e provar que última cópia válida não é removida sob falha/concorrência. |
+| 0231-PROTOCOL-FAULTS / 0231 | S3/SFTP falhas/replay; P1; **PARTIAL** | `sshd` SFTP loopback passou; S3 usou fixture HTTP; sem corrupção, interrupção e retomada completa. | Exercitar protocolos locais com erro/falha de rede, credenciais inválidas, host key incorreta, corrupção, replay e concorrência. |
+| 0231-BROWSER-E2E / 0231 | Central administrativa; P1; **OPEN** | Runner 0231 substitui `fetch` por APIs sintéticas. | Testar APIs reais autenticadas em CDP, desktop/mobile, sem exibir segredos e cobrindo solicitação/aprovação/restore. |
+
+Ver [REGISTROS/0231.md](REGISTROS/0231.md).

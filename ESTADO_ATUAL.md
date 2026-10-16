@@ -1,3 +1,9 @@
+## Estado vigente — Campanha 0231 (2026-10-16)
+
+**PARTIAL.** `npm test`, `test:backup-center`, sintaxe e restore em PostgreSQL descartável passaram. `sshd` local comprovou transferência SFTP sintética; S3 foi exercitado por fixture HTTP e não por provedor externo. O código atual não implementa inventário/download/restore remoto nem retenção remota, e o Browser 0231 intercepta APIs. Não há comprovação de operação offsite ou prontidão de produção.
+
+Registro: [REGISTROS/0231.md](REGISTROS/0231.md); resumo: [RESUMOS/0231.md](RESUMOS/0231.md). Campanhas 0232 e 0233 ainda não auditadas.
+
 ## Estado vigente — Campanha 0228 (2026-10-15)
 
 **0228 PARTIAL; produção BLOCKED.** Central administrativa PostgreSQL implementada em Configurações → Sistema → Backup e Recuperação. Browser autenticado comprovou negação de usuário comum, configuração persistida, job manual durável `QUEUED`, replay idempotente, respostas sem segredo e layout mobile sem overflow (run `a2f31638-65fe-4166-b9cc-4fecf06a0667`). Teste real em cluster PostgreSQL temporário local comprovou recovery set criptografado e restore sintético com 44 migrations até 0044, 39 tabelas RLS/FORCE, 39 policies e linha sintética recuperada (run `c202244a-bae1-48be-9ddc-0e14127cfcc3`). `npm run test:backup-center`, `npm test` nos dois apps passaram. Banco oficial, recovery set/chave real e storage externo não foram acessados. Executor independente/agendamento operacional seguem BLOCKED por ausência de UID/grupo dedicado no Termux; offsite real e restore UI ponta a ponta seguem pendentes. Restaurante `1376462` e Browser QA `b4fa927` locais, sem push. Ver [REGISTROS/0228.md](REGISTROS/0228.md). Próxima campanha não iniciada.
