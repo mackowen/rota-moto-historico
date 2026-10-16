@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0233 (2026-10-16)
+
+**0231–0233 PARTIAL; prontidão de produção/DR não declarada.** Suítes completas Restaurante/Motoboy, suite focada de backup, restore PostgreSQL descartável, sintaxe e deploy estático passaram. Auditoria confirmou vault privado, redaction, SigV4/TLS, pinagem de host key e guards. Providers seguem sem listagem/download/restore e retenção remota; o runner Browser 0231 é sintético. Linux/Docker/systemd não disponíveis; Termux compartilha UID. Nenhum destino externo ou banco oficial foi acessado.
+
+Commits do histórico: `386c87b` (0231), `a6fc684` (0232), commit atual (0233); push de cada campanha conferido via `git ls-remote`. A Campanha 0234 pode começar em branch própria, usando somente `rotamoto_e2e` e bancos descartáveis. Sem autorização para tocar o banco oficial e sem readiness de produção.
+
+Registro: [REGISTROS/0233.md](REGISTROS/0233.md); resumo: [RESUMOS/0233.md](RESUMOS/0233.md).
+
 ## Estado vigente — Campanha 0232 (2026-10-16)
 
 **PARTIAL.** Templates e runbooks de runit/Termux:Boot, systemd dedicado e Docker não-root estão presentes. Suites, checks de configuração/health, scripts shell e documentação passaram. A supervisão Termux real em árvore privada foi demonstrada no run 0230; não foi repetida como novo E2E. `systemctl`, Docker e Podman não estão disponíveis no ambiente atual, e Termux:Boot não foi instalado. O processo HTTP e executor compartilham UID Android, sem isolamento equivalente ao Linux.

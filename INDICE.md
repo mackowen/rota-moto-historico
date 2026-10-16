@@ -2,6 +2,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0233 | 2026-10-16 | Restaurante / Motoboy / PostgreSQL descartável | AUDITORIA / BACKUP / RESTORE | Fechamento técnico 0231–0232 | PARTIAL: regressões locais passaram; integração remota de restore/retention, Browser autenticado e homologação Linux/Docker pendentes. 0234 apta a iniciar em E2E. | [REGISTROS/0233.md](REGISTROS/0233.md) · [RESUMOS/0233.md](RESUMOS/0233.md) |
 | 0232 | 2026-10-16 | Restaurante / Termux | DEPLOY / RUNIT / SYSTEMD / DOCKER | Supervisão e implantação multiplataforma | PARTIAL: runit Termux validado em evidência 0230; Linux, Docker/Podman e boot Android não executados. | [REGISTROS/0232.md](REGISTROS/0232.md) · [RESUMOS/0232.md](RESUMOS/0232.md) |
 | 0231 | 2026-10-16 | Restaurante / SFTP local / PostgreSQL descartável | BACKUP / S3 / SFTP | Destinos externos e publicação | PARTIAL: CRUD, vault e publicação inicial; falta inventário, download/restore, retenção remota, reconciliação e Browser autenticado real. | [REGISTROS/0231.md](REGISTROS/0231.md) · [RESUMOS/0231.md](RESUMOS/0231.md) |
 | 0230 | 2026-10-16 | Restaurante / Browser QA / PostgreSQL descartável | BACKUP / SUPERVISÃO / RUNIT / RECUPERAÇÃO | Executor supervisionado multiplataforma | PARTIAL: fluxo sintético Termux runit PASS; Linux/systemd, Docker e boot Android reais não testados; UID Termux compartilhado. | [REGISTROS/0230.md](REGISTROS/0230.md) · [RESUMOS/0230.md](RESUMOS/0230.md) |

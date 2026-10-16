@@ -1788,6 +1788,18 @@ Ver [REGISTROS/0229.md](REGISTROS/0229.md) e [RESUMOS/0229.md](RESUMOS/0229.md).
 | 0230-PRODUCTION-DR / 0158–0230 | Backup/DR; P0; **BLOCKED** | Restore sintético local passou, sem evidência de recovery set oficial, cópia offsite, RPO/RTO aprovado ou continuidade operacional. | Validar artefato/cópia autorizados, retenção, monitoramento e exercício de DR sob autorização específica. |
 
 O run e os templates estão detalhados em [REGISTROS/0230.md](REGISTROS/0230.md) e [RESUMOS/0230.md](RESUMOS/0230.md). O log `current` do svlogd é criado com modo `0744`, mas o E2E verificou diretórios pai `0700`; não mover logs para caminho compartilhado sem revisão. Nenhum serviço global ou banco oficial foi acessado.
+## Atualização vigente — Campanha 0233 (2026-10-16)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0233-REMOTE-RESTORE / 0231–0233 | Recovery S3/SFTP; P0; **OPEN** | Publicação existe, mas sem listagem/download/restore remoto nem Browser E2E. | Implementar provider contract de leitura/inventário/retention, testar corrupção/falha/replay e completar aprovação MFA + restore descartável pela UI. |
+| 0233-REMOTE-RECONCILIATION / 0231–0233 | Jobs remotos; P0; **OPEN** | Upload local é verificado antes de publicar manifest; retomada após corte/reconciliação durável não foi provada. | Persistir estado por objeto, identificar outcomes incertos e provar retry idempotente/concorrência sem publicar set incompleto. |
+| 0233-BROWSER-ADMIN / 0231–0233 | Central de backup; P1; **OPEN** | Runner 0231 intercepta APIs; nenhum E2E autenticado novo executado. | Executar CDP autenticado com APIs reais, permissões/MFA, progresso, falhas, inventário, aprovação independente, restore e viewports desktop/mobile. |
+| 0233-PLATFORM-HOMOLOGATION / 0232–0233 | Linux/Docker; P1; **BLOCKED_ENVIRONMENT** | `systemctl`, Docker e Podman ausentes no Termux. | Em ambientes futuros, verificar unit, build/run rootless, crash/restart e restore sintético. |
+| 0233-PRODUCTION-DR / 0228–0233 | Continuidade/produção; P0; **BLOCKED** | Sem cópia externa comprovada, restore remoto, RPO/RTO aprovado ou homologação de serviço externo. | Não declarar DR/produção até recuperação externa integral e monitoramento mensurados em procedimento autorizado. |
+
+Ver [REGISTROS/0233.md](REGISTROS/0233.md).
+
 ## Atualização vigente — Campanha 0232 (2026-10-16)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
