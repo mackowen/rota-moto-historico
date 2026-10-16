@@ -1762,3 +1762,15 @@ Ver [REGISTROS/0225.md](REGISTROS/0225.md) e [RESUMOS/0225.md](RESUMOS/0225.md).
 | 0226-PRODUCTION | Produção; P0; **BLOCKED_EXTERNAL** | Homologação, hardware e DR/RPO-RTO continuam sem evidência nesta auditoria. | Resolver sob autorização própria; schema atualizado não implica prontidão. |
 
 Ver [REGISTROS/0226.md](REGISTROS/0226.md) e [RESUMOS/0226.md](RESUMOS/0226.md). Nenhuma atualização foi executada.
+
+## Atualização vigente — Campanha 0229
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0229-TERMUX-SHARED-UID / 0228–0229 | Executor Termux; P1; **PARTIAL_BY_PLATFORM** | Run `239a5fd9-98ce-4ae8-b0a2-12b35e936f8a` executou worker separado, heartbeat e jobs reais sintéticos; HTTP e executor permanecem sob UID do mesmo app. A política é explícita e exige acknowledgement. | Manter dados operacionais desabilitados até decisão de risco/implantação; para boundary mais forte usar Linux dedicado ou aplicativo Android separado autorizado. |
+| 0229-LINUX-DEPLOYMENT / 0228–0229 | Serviço Linux; P1; **OPEN** | Política de UID/grupo e unit tests passam; não houve host Linux real nem systemd. | Provisionar UID/grupo dedicados e executar backup/restore sintético real antes de declarar suporte Linux operacional. |
+| 0229-CONTAINER / 0229 | Serviço em contêiner; P2; **OPEN** | Detecção/política comum existe; nenhum Docker/Podman foi iniciado nesta execução. | Validar usuário, grupo, IPC e ciclo de restart em contêiner descartável real. |
+| 0229-REMOTE-COPY / 0227–0229 | Storage externo e continuidade; P0; **BLOCKED_EXTERNAL** | Somente recovery sets locais sintéticos foram produzidos e verificados; nenhum endpoint/segredo externo foi configurado. | Autorizar destino/custódia e validar upload, confirmação, cópia independente e restore sintético fora do dispositivo. |
+| 0229-PRODUCTION-DR / 0158–0229 | Backup/DR; P0; **BLOCKED** | Restore real sintético PASS; recovery set oficial, cópia offsite independente, retenção monitorada e RPO/RTO aprovados não foram verificados. | Executar plano de continuidade sob autorização específica; não inferir prontidão a partir do cluster sintético. |
+
+Ver [REGISTROS/0229.md](REGISTROS/0229.md) e [RESUMOS/0229.md](RESUMOS/0229.md). Nenhum banco oficial foi acessado.

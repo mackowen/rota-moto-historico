@@ -1365,3 +1365,9 @@ Na atualização de 0222, a campanha 0223 foi planejada para validar outage Post
 ## Estado vigente — Campanha 0226
 
 **Auditoria read-only PASS: schema oficial e E2E alinhados ao código até 0044.** PostgreSQL 18.6 nos dois, ledger completo com 44/44 checksums exatos e catálogos estruturais sem divergências. ACLs adicionais de backup/auditoria no oficial são específicas e documentadas. Nenhuma migration/DDL/DML, backup ou restore executado; o oficial foi consultado somente em transação read-only para metadados e ledger. Não há migration a aplicar. Recovery para mudanças futuras exige backup/restauração validados; produção permanece dependente de DR, RPO/RTO, homologações e validações físicas. Detalhes: [REGISTROS/0226.md](REGISTROS/0226.md).
+
+## Estado vigente — Campanha 0229
+
+**PASS no Termux sem root para a jornada sintética da central; PARTIAL para portabilidade entre sistemas; prontidão de produção BLOCKED.** Browser autenticado comprovou jobs manuais e automáticos processados por executor Node independente, backup criptografado, verificação de integridade, replay idempotente, aprovação de restore por dois administradores MFA distintos e recuperação em PostgreSQL descartável até migration 0044. Corrigidos deadlock MFA, lock IPC transitório, compartilhamento de keystore E2E, margem do scheduler e `jobId` ausente na projeção de restore. Run `239a5fd9-98ce-4ae8-b0a2-12b35e936f8a`; evidências em [REGISTROS/0229.md](REGISTROS/0229.md).
+
+O Termux usa UID compartilhado e o painel informa essa limitação, exigindo acknowledgement explícito; não equivale a isolamento Linux. Linux com UID/grupo dedicados foi verificado somente por testes de política, sem implantação real; Docker também não foi executado. Destino externo, cópia independente e DR oficial não foram testados. Commits locais: Restaurante `7d267fd`, Browser QA `b0adfe6`; Motoboy sem alteração. `rotamoto` permaneceu intocado.
