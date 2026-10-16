@@ -1,3 +1,9 @@
+## Estado vigente — Campanha 0232 (2026-10-16)
+
+**PARTIAL.** Templates e runbooks de runit/Termux:Boot, systemd dedicado e Docker não-root estão presentes. Suites, checks de configuração/health, scripts shell e documentação passaram. A supervisão Termux real em árvore privada foi demonstrada no run 0230; não foi repetida como novo E2E. `systemctl`, Docker e Podman não estão disponíveis no ambiente atual, e Termux:Boot não foi instalado. O processo HTTP e executor compartilham UID Android, sem isolamento equivalente ao Linux.
+
+Registro: [REGISTROS/0232.md](REGISTROS/0232.md); resumo: [RESUMOS/0232.md](RESUMOS/0232.md). Próxima campanha: auditoria final 0233.
+
 ## Estado vigente — Campanha 0231 (2026-10-16)
 
 **PARTIAL.** `npm test`, `test:backup-center`, sintaxe e restore em PostgreSQL descartável passaram. `sshd` local comprovou transferência SFTP sintética; S3 foi exercitado por fixture HTTP e não por provedor externo. O código atual não implementa inventário/download/restore remoto nem retenção remota, e o Browser 0231 intercepta APIs. Não há comprovação de operação offsite ou prontidão de produção.

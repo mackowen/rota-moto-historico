@@ -1788,6 +1788,17 @@ Ver [REGISTROS/0229.md](REGISTROS/0229.md) e [RESUMOS/0229.md](RESUMOS/0229.md).
 | 0230-PRODUCTION-DR / 0158–0230 | Backup/DR; P0; **BLOCKED** | Restore sintético local passou, sem evidência de recovery set oficial, cópia offsite, RPO/RTO aprovado ou continuidade operacional. | Validar artefato/cópia autorizados, retenção, monitoramento e exercício de DR sob autorização específica. |
 
 O run e os templates estão detalhados em [REGISTROS/0230.md](REGISTROS/0230.md) e [RESUMOS/0230.md](RESUMOS/0230.md). O log `current` do svlogd é criado com modo `0744`, mas o E2E verificou diretórios pai `0700`; não mover logs para caminho compartilhado sem revisão. Nenhum serviço global ou banco oficial foi acessado.
+## Atualização vigente — Campanha 0232 (2026-10-16)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0232-LINUX-SYSTEMD / 0229–0232 | Serviço Linux; P1; **BLOCKED_ENVIRONMENT** | Unit com usuário/grupo dedicados e checks estáticos disponíveis; `systemctl` ausente neste Termux. | Executar `systemd-analyze verify` e teste real de start/restart/health/restore em Linux descartável. |
+| 0232-DOCKER / 0229–0232 | Compose rootless; P1; **BLOCKED_ENVIRONMENT** | Dockerfile/Compose não-root e checks estáticos disponíveis; Docker/Podman ausentes. | Build/run rootless, validar volumes, secrets, crash/restart e restore sintético em runtime contêiner. |
+| 0232-TERMUX-BOOT / 0230–0232 | Boot Android; P2; **NOT_TESTED** | Script exemplo passou `sh -n`; não foi instalado nem houve reboot. | Em dispositivo autorizado, instalar por ação explícita e validar reinício/health sem alterar serviços globais. |
+| 0232-UID-ISOLATION / 0229–0232 | Boundary executor Termux; P0; **PLATFORM_LIMIT** | UID do app compartilhado; runit supervisiona processo, sem isolamento UID. | Manter limite documentado; para boundary dedicado, usar identidade/grupo Linux sem contornar isolamento Android. |
+
+Ver [REGISTROS/0232.md](REGISTROS/0232.md).
+
 ## Atualização vigente — Campanha 0231 (2026-10-16)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
