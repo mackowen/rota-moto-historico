@@ -1411,3 +1411,9 @@ O Termux usa UID compartilhado e o painel informa essa limitação, exigindo ack
 `npm test` Restaurante e Motoboy, `npm run test:backup-center`, verificações JavaScript/shell e `git diff --check` passaram. Evidências e screenshots desktop/mobile: [REGISTROS/0230.md](REGISTROS/0230.md). Commits locais: Restaurante `142d972f180c0d5688190e4d49d85c915108588d`; Browser QA `f25b5b92a3873ccf46c22dd9f4a0c015e9459587`; Motoboy sem alterações. `rotamoto` não foi acessado.
 
 Limites: executor e servidor HTTP compartilham UID Android, sem isolamento equivalente ao Linux; Termux:Boot foi preparado, não instalado. Linux/systemd e Docker/Podman não estavam disponíveis e seguem sem prova operacional. Destino externo, cópia independente, DR oficial e RPO/RTO permanecem bloqueados. Nenhum segredo, backup real, serviço global ou destino externo foi acessado. Ver [RESUMOS/0230.md](RESUMOS/0230.md).
+
+## Estado vigente — Campanha 0234
+
+**0234 PARTIAL; complemento do PostgreSQL oficial BLOCKED.** Bootstrap local first-owner foi implementado com migrations 0045/0046, latch singleton transacional, autorização local expirada/digest-only, CLI interativo e retry idempotente. Migrations foram aplicadas somente em `rotamoto_e2e`; E2E identity HTTP, bootstrap guards, `npm test` de ambos e estáticos passaram.
+
+QR TOTP na UI, recuperação administrativa de MFA com verificações independentes, Browser/CDP da primeira instalação e teste concorrente/fault-injection completos ainda faltam. Portanto não há PASS integral da campanha, nem prontidão de produção/DR. SMTP/HTTPS externos pendentes. Banco oficial não foi conectado, consultado, respaldado ou alterado. Registro completo em [REGISTROS/0234.md](REGISTROS/0234.md).
