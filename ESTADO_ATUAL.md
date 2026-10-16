@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0234 (2026-10-16)
+
+**Implementação Bootstrap/identidade PASS; consolidação PostgreSQL oficial BLOCKED.** Recuperação MFA administrativa por email e aprovação independente com MFA implementada; owner único exige procedimento CLI local auditável. Bootstrap, concorrência, rollback/retry e recuperação passaram em PostgreSQL descartável. `npm test` nos dois apps e Browser/CDP autenticado com APIs reais passaram; evidências desktop 1280×900/mobile 390×844 estão no Browser QA.
+
+Auditoria estrutural somente leitura: PostgreSQL oficial 18.6 em migration 0044, ledger íntegro; `rotamoto_e2e` descartável em 0047. Diferenças de catálogo são os objetos 0045–0047 e grants de roles de teste. O gate parou porque a configuração exigida para backup criptografado pré-migração e restore validado não está disponível. Sem backup/restore, sem DDL/migration e sem provisionamento real; o oficial permaneceu inalterado.
+
+Restaurante commit `a416a8e`; Browser QA local `62bb684`; Motoboy sem alteração. Homologação externa PENDING_EXTERNAL; produção/DR não declarada. Próxima ação: configurar backup protegido e recuperação; reexecutar os gates antes de aplicar migrations. Ver [REGISTROS/0234.md](REGISTROS/0234.md) e [RESUMOS/0234.md](RESUMOS/0234.md).
+
 ## Estado vigente — Campanha 0233-A (2026-10-16)
 
 **0233-A PASS para implementação de software; homologação externa PENDING_EXTERNAL; produção/DR não declarada.** Foram integrados S3 SigV4 e SFTP OpenSSH com listagem, download, integridade, retenção e restore remoto em alvo descartável. Browser/CDP run `a36ea2b5-9190-49a1-ad50-62fc91973b1e` percorreu a jornada autenticada SFTP desde configuração/teste do destino pela UI até backup manual/agendado, inventário remoto, solicitação e aprovação MFA independente, download e restore remoto em PostgreSQL descartável; runit privado passou crash/restart/health/shutdown. O teste S3 HTTP separado transferiu e restaurou PostgreSQL com 44 migrations, 39 tabelas RLS/policies e um registro sintético (run `896ffa6b-d0cd-429c-bd86-365d62e93b91`). Restaurante e Motoboy `npm test`, suites backup e Browser/CDP passaram.

@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0234 (2026-10-16)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0234-BOOTSTRAP-IDENTITY | Bootstrap, identidade e MFA; P0; **RESOLVED** | Bootstrap, ativação, MFA, recuperação MFA independente, concorrência/falhas, `npm test` em ambos e Browser/CDP desktop/mobile passaram em E2E descartável. | Nenhuma pendência de implementação identificada; primeiro provisionamento real depende de autorização operacional própria. |
+| 0234-OFFICIAL-POSTGRES | Migrations oficiais 0045–0047; P0; **BLOCKED** | Auditoria read-only: `rotamoto` em 0044, checksums íntegros; backup criptografado e restore isolado não executáveis por falta de configuração protegida (role/URL, chave, diretórios, auditoria). Nenhuma migration aplicada. | Configurar mecanismo seguro; validar backup/restore descartável; repetir gates e avaliar migrations com plano recuperável. |
+| 0234-EXTERNAL-READINESS | SMTP externo/HTTPS público/DR; P1; **PENDING_EXTERNAL** | SMTP local e Browser com links sintéticos passaram; provedor externo e DR oficial não homologados. | Homologar após ambiente externo configurado; não declarar produção/DR sem evidências. |
+
+Ver [REGISTROS/0234.md](REGISTROS/0234.md).
+
 
 ## Atualização vigente — Campanha 0228 (2026-10-15)
 
