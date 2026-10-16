@@ -1774,3 +1774,16 @@ Ver [REGISTROS/0226.md](REGISTROS/0226.md) e [RESUMOS/0226.md](RESUMOS/0226.md).
 | 0229-PRODUCTION-DR / 0158–0229 | Backup/DR; P0; **BLOCKED** | Restore real sintético PASS; recovery set oficial, cópia offsite independente, retenção monitorada e RPO/RTO aprovados não foram verificados. | Executar plano de continuidade sob autorização específica; não inferir prontidão a partir do cluster sintético. |
 
 Ver [REGISTROS/0229.md](REGISTROS/0229.md) e [RESUMOS/0229.md](RESUMOS/0229.md). Nenhum banco oficial foi acessado.
+
+## Atualização vigente — Campanha 0230 (2026-10-16)
+
+| ID / origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0230-TERMUX-UID / 0229–0230 | Executor no Termux; P1; **PARTIAL_BY_PLATFORM** | Run Browser `3570bf8a-98af-450a-93bf-5a6c23141204` comprovou `runsv` privado, jobs manual/automático, crash/restart e restore sintético. UID do executor e servidor é compartilhado; Android não fornece boundary de identidade entre eles. | Manter operação com dados reais desabilitada até decisão explícita de risco; se necessário isolamento de UID, provisionar host Linux ou app executor separado e testá-lo. |
+| 0230-TERMUX-BOOT / 0230 | Inicialização após reboot; P2; **BLOCKED_OPERATIONAL** | Exemplo Termux:Boot preparado, mas não instalado; serviço global não foi alterado. Testes cobriram supervisão/restart de processo, não reboot do dispositivo. | Aprovar implantação local Termux:Boot e validar reboot/health sem acessar dados reais. |
+| 0230-LINUX-SYSTEMD / 0229–0230 | Executor Linux; P1; **BLOCKED_ENVIRONMENT** | Unit e instruções com UID/grupo dedicados preparados; `systemctl` indisponível no host Termux. Nenhuma execução Linux real. | Em host Linux autorizado, provisionar identidade/grupo, instalar em ambiente sintético e comprovar job, restart, health e restore. |
+| 0230-CONTAINER / 0229–0230 | Executor em contêiner; P2; **BLOCKED_ENVIRONMENT** | Dockerfile/Compose não-root preparados; Docker/Podman indisponíveis, sem build/run. | Em runtime descartável, validar build, volumes, chave somente leitura, health, restart e restore sintético. |
+| 0230-REMOTE-COPY / 0227–0230 | Destino externo; P0; **BLOCKED_EXTERNAL** | Não houve destino externo autorizado ou credencial disponível; nenhum upload executado. | Operador definir destino/custódia; provar publicação criptografada, confirmação independente e restore fora do dispositivo. |
+| 0230-PRODUCTION-DR / 0158–0230 | Backup/DR; P0; **BLOCKED** | Restore sintético local passou, sem evidência de recovery set oficial, cópia offsite, RPO/RTO aprovado ou continuidade operacional. | Validar artefato/cópia autorizados, retenção, monitoramento e exercício de DR sob autorização específica. |
+
+O run e os templates estão detalhados em [REGISTROS/0230.md](REGISTROS/0230.md) e [RESUMOS/0230.md](RESUMOS/0230.md). O log `current` do svlogd é criado com modo `0744`, mas o E2E verificou diretórios pai `0700`; não mover logs para caminho compartilhado sem revisão. Nenhum serviço global ou banco oficial foi acessado.
