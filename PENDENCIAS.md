@@ -1,3 +1,14 @@
+## Atualização vigente — Campanha 0243 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0243-BOOTSTRAP-E2E | Empresa/owner E2E; P0; **BLOCKED_PRIVATE_TTY** | CLI restrito pronto e testado; banco vazio/latch disponível. Keystore E2E ainda não existe; TTY criado pelo Codex não aceita entrada do proprietário pelo canal de ferramentas. | Operador executar initializer local e Bootstrap E2E conforme guia; digitar senha sem eco diretamente no Termux. |
+| 0243-OWNER-NAME | Nome pessoal; P2; **SCHEMA_LIMITATION** | `users` não contém campo de nome; `provisionInitialOwner` recebe empresa/email/chave idempotente. | Revisar contrato/schema em campanha separada antes de persistir nome pessoal; não alterar migration por atalho. |
+| 0243-MFA-LOGIN | MFA e login autenticado; P0; **BLOCKED_BOOTSTRAP** | Sem segredo TOTP persistente nem sessão autenticada. | Após Bootstrap local, habilitar keystore apenas em `rotamoto-api-e2e`, enroll MFA, logout e novo login via CDP. |
+| 0243-RESTAURANT-DRIVER | Onboarding e operação Restaurante↔Motoboy; P0; **BLOCKED_AUTH_SESSION** | Nenhum dado operacional foi gravado; smoke anônimo passou nos dois apps. | Com sessão autenticada, criar dados fictícios e executar o ciclo pedido/despacho/aceite/retirada/finalização sem marketplace externo. |
+
+Ver [REGISTROS/0243.md](REGISTROS/0243.md) e [GUIA_BOOTSTRAP_MANUAL.md](GUIA_BOOTSTRAP_MANUAL.md).
+
 ## Atualização vigente — Campanha 0242-A (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
