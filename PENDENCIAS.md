@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0245 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0245-OWNER-MFA | Conta persistente Chico Restaurante; P0; **PENDING_OWNER** | Código e fluxo sintético passaram em browser/CDP e integração E2E rollback; sessão real não foi usada nem resetada. | Proprietário abrir/recarregar `http://127.0.0.1:8083`, iniciar enrollment, configurar autenticador, confirmar TOTP e guardar códigos de recuperação em local privado. Registrar apenas confirmação/resultados, sem segredo/QR/códigos. |
+| 0245-CHROME-CACHE | Perfil Chrome do proprietário; P1; **OWNER_RELOAD_REQUIRED** | Asset/cache versionados e upgrade com cache antigo sintético verificado; perfil pessoal não inspecionado. | Recarregar página; se a versão antiga persistir, fechar e reabrir aba/PWA para ativar o worker atualizado. |
+| 0245-HISTORY-PUBLISH | Histórico GitHub; P1; **PENDING** | Registro e resumo criados localmente; commits dos apps locais e sem push. | Publicar somente histórico em `origin/main`; buscar remoto de novo e confirmar SHA/arquivos/URL antes de marcar PASS. |
+
+Ver [REGISTROS/0245.md](REGISTROS/0245.md) e [RESUMOS/0245.md](RESUMOS/0245.md).
+
 ## Atualização vigente — Campanha 0243 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

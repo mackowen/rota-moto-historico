@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0245 (2026-10-17)
+
+**Correção de enrollment MFA local PASS; confirmação do proprietário PENDING_OWNER.** A interface corrigida do Restaurante/Motoboy está servida em 8083/8084; JavaScript `identity-ui.js?v=0245.1`, caches PWA `v47`/`v43.46`. Erros de enrollment agora são visíveis fora do formulário oculto; QR local, chave manual e retry CSRF limitado foram testados. O Motoboy deixou de expor a URI `otpauth` no status.
+
+`npm test` completo dos dois apps e integração HTTP no PostgreSQL E2E com fixtures rollback passaram. Chromium/CDP 1280×900 e 390×844 nos dois apps passou, inclusive upgrade de cache preservando IndexedDB. Serviços PostgreSQL/Nginx/API E2E e APIs/portais 8081–8084/8787–8788 responderam; `nginx -t` passou. Não foi usada a sessão real do proprietário; banco oficial, dados persistentes E2E, keystore e serviços/configuração não foram modificados. Commits locais sem push: Restaurante `5d83fbd`, Motoboy `7d2cd5e`. Histórico precisa ser publicado/verificado em `origin/main`.
+
+Próxima ação: no Chrome Android recarregar `http://127.0.0.1:8083` (se necessário fechar/reabrir a aba/PWA), autenticar e concluir o enrollment no próprio autenticador; guardar recovery codes privadamente. Não resetar nem regenerar MFA. Ver [REGISTRO 0245](REGISTROS/0245.md).
+
 ## Estado vigente — Campanha 0243 (2026-10-17)
 
 **PARTIAL — implantação autenticada aguarda entrada privada do proprietário no TTY do Termux.** API E2E 8787, Nginx e frontends 8083/8084 estão ativos; API oficial 8788 e oficiais 8081/8082 continuam no encaminhamento existente. E2E estava vazio com latch disponível e migrations 0001–0047. Nenhuma escrita foi feita em `rotamoto` ou `rotamoto_e2e`. Não foi criado keystore nem executado Bootstrap, pois a confirmação do initializer e a senha só podem ser digitadas diretamente no Termux. CLI E2E restrito, guards, testes completos e smoke Chromium/CDP anônimo nos dois apps/viewports passaram. Login/MFA, onboarding, entrega real entre apps permanecem BLOCKED. Manual: [GUIA_BOOTSTRAP_MANUAL.md](GUIA_BOOTSTRAP_MANUAL.md); evidências em [REGISTRO 0243](REGISTROS/0243.md). Restaurante commit local `953d122`; nenhum push de app. Histórico em `origin/main`, publicação verificada até `c490569`.
