@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0242-A (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0242-A-REVIEW | Evidências Browser/logs/perfis/backups; P2; **PRESERVED** | Removidos somente caches Chromium não rastreados; 0234–0242, dados de perfil, scripts, logs históricos e backups mantidos. | Avaliar por referência e hash em lotes individuais; não remover evidência única sem confirmação. |
+| 0242-A-DF-BASELINE | Medição de disco; P3; **PARTIAL_PRECISION** | `df -h` reportou 53G antes (registro 0242) e depois; diferença de 46,3 MiB não aparece na unidade arredondada. | Em próxima limpeza, capturar `df -k` imediatamente antes e depois para delta exato do volume. |
+
+Ver [REGISTROS/0242-A.md](REGISTROS/0242-A.md) e [RESUMOS/0242-A.md](RESUMOS/0242-A.md).
+
 ## Atualização vigente — Campanha 0242 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

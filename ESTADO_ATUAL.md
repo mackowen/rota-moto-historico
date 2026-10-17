@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0242-A (2026-10-17)
+
+**PASS para limpeza segura dos caches verificados.** Removidos 79 arquivos regulares dos diretórios `Cache`, `Code Cache` e `GPUCache` de quatro perfis Chromium inativos; 48.541.696 bytes de blocos (46,3 MiB) recuperados, 49.320.117 bytes de payload. Manifesto privado mode 0600 em `~/projetos/.cleanup-manifests/0242-A.jsonl`. Perfis, cookies, evidências 0234–0242, scripts, backups, dependências, histórico Git, CondoOS e código preservados. `df -h` após informa 53G livres, mesmo valor arredondado reportado na Campanha 0242 antes; não há delta exato em KiB da medição inicial.
+
+Guards E2E passaram; quatro serviços ativos, readiness 200 em APIs/frontends 8787/8788/8081–8084 e `nginx -t` passou. Nenhum banco foi acessado ou alterado; a última comprovação de E2E vazio continua sendo a Campanha 0241. Nenhum Bootstrap executado. Histórico desta campanha será publicado somente em `origin/main`. Ver [REGISTROS/0242-A.md](REGISTROS/0242-A.md).
+
+Próxima ação: manter itens de revisão preservados; limpeza adicional requer prova individual de regenerabilidade e ausência de uso/referências.
+
 ## Estado vigente — Campanha 0242 (2026-10-17)
 
 **PARTIAL — auditoria limitada pelo tempo de varredura no armazenamento Android; nenhuma limpeza executada.** Volume: 221G total, 167G usados e 53G disponíveis; valor não exclusivo de `~/projetos`. Diretórios medidos: Restaurante 100M, Motoboy 88M, Histórico 45M, CondoOS Manager 513M (alteração preexistente em `.replit` preservada), CondoOS Histórico 1.2M, backups 136M e checkpoints 176K. `du` recursivo e busca dos 30 maiores não terminaram em até dois minutos. Nenhum candidato foi confirmado como descartável; 0 arquivos removidos / 0 bytes liberados. Evidências, backups, scripts, perfis Chromium com locks e `node_modules` permanecem preservados. Histórico publicado em `origin/main`, SHA `306f141803e4df914338fa33a923c772ed5e2a22`; [registro 0242](https://github.com/mackowen/rota-moto-historico/blob/main/REGISTROS/0242.md).
