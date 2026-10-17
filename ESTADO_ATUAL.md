@@ -2,7 +2,7 @@
 
 **Resultado PARTIAL.** Serviços Termux `postgres`, `nginx`, `rotamoto-api-e2e` e `rotamoto-api-official` ativos; API oficial em 8788/`rotamoto`, E2E em 8787/`rotamoto_e2e`, apps em 8081/8082 e loopback apenas. SMTP Gmail TLS 465 autenticou e foi auditado, sem envio. Ledger oficial e E2E em 0047, checksums iguais; somente migration E2E 0047 foi aplicada. Browser/CDP verificou Restaurante/Motoboy em seis combinações de viewport com readiness 200 e sem erros inesperados. `npm test` em ambos passou.
 
-G1, G2, G4, G5, G6 e G12 PASS; G3, G7, G8 e G11 PARTIAL; G9 e G10 BLOCKED. Sem proprietário ou convite real; oficial sem escrita nesta campanha. Restam restore do novo backup em clone descartável, validar recovery envelopes com passphrase local, domínio/DNS/HTTPS e VPN/túnel, autorização com empresa/email/operação para bootstrap e validação autenticada pós-bootstrap. Produção/DR não declaradas. Restaurante commit `050ec88`, sem push; Motoboy limpo; histórico publicado somente neste repositório. Ver [REGISTROS/0235.md](REGISTROS/0235.md).
+G1, G2, G4, G5, G6 e G12 PASS; G3, G7, G8 e G11 PARTIAL; G9 e G10 BLOCKED. Sem proprietário ou convite real; oficial sem escrita nesta campanha. O recovery set pós-0047 foi restaurado em cluster PostgreSQL 18 descartável, agora parado e privado. Restam validar recovery envelopes com passphrase local, domínio/DNS/HTTPS e VPN/túnel, autorização com empresa/email/operação para bootstrap e validação autenticada pós-bootstrap. Produção/DR não declaradas. Restaurante commit `050ec88`, sem push; Motoboy limpo; histórico publicado somente neste repositório. Ver [REGISTROS/0235.md](REGISTROS/0235.md).
 
 ## Estado vigente — Campanha 0234 (2026-10-16)
 
