@@ -1488,3 +1488,9 @@ Recuperação administrativa de MFA com verificações independentes, Browser/CD
 O GitHub mantém `main` como branch padrão. Antes desta campanha, os registros 0235/0236 estavam na branch publicada `codex/f9-browser-e2e-0057`; os commits da `main` local eram ancestrais daquela branch, e `origin/main` era ancestral da `main` local. A integração foi feita sem reescrita; após o push, `main` contém os registros 0235–0237. A configuração da branch padrão não foi alterada. O SHA final foi consultado de novo no remoto e corresponde à `main` local; veja o relatório da Campanha 0237.
 
 Nenhum banco ou serviço foi alterado. Inventário, verificações de ancestralidade, conteúdo, segurança do diff e validação remota estão no [Registro 0237](REGISTROS/0237.md). Próximas campanhas devem seguir [Política Git](POLITICA_GIT_CAMPANHAS.md).
+
+## Estado vigente — Campanha 0244 (2026-10-17)
+
+**Correção de segurança MFA aprovada em teste E2E; execução no proprietário persistente ainda pendente.** O backend bloqueia toda operação de tenant antes da confirmação MFA, inclusive chamadas sem chave explícita de permissão. UI Restaurante/Motoboy bloqueia a raiz operacional e apresenta enrollment em tela inteira em desktop e mobile. Suites completas dos dois aplicativos, integração HTTP PostgreSQL com fixture rollback e Chromium/CDP sintético nas duas resoluções passaram. Os serviços oficial e E2E foram reiniciados e estão prontos; o banco oficial não recebeu DDL/DML/migrations e não foi usado pelo teste.
+
+Commits de aplicação locais, sem push: Restaurante `2f597206460b583fa6e55384f58c85d8a7b5cafa`, Motoboy `8ebc9a05a7eba9b338a35695f318b0ba59e3bd02`. O proprietário precisa concluir seu enrollment TOTP pela interface Restaurante E2E e guardar os códigos de recuperação. Evidências e gates: [REGISTRO 0244](REGISTROS/0244.md).

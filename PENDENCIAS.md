@@ -1942,3 +1942,12 @@ Ver [REGISTROS/0234.md](REGISTROS/0234.md).
 | 0239-BOOTSTRAP-BROWSER / 0239 | Bootstrap, MFA e prova CDP; P1; **BLOCKED** | Nenhum fluxo executado; dependente de backup e reset seguros. | Rodar a jornada autenticada em DB descartável ou E2E limpo autorizado, com captura de email sintético e desktops/mobile. |
 
 Ver [REGISTROS/0239.md](REGISTROS/0239.md).
+
+## Atualização vigente — Campanha 0244 (2026-10-17)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0244-OWNER-MFA / 0243–0244 | Sessão persistente do proprietário E2E; P0; **PENDING_OPERATOR** | Backend e fixture HTTP confirmam gate e enrollment/TOTP; Chromium validou a UI com sessão sintética. Nenhuma credencial, keystore ou sessão persistente do proprietário foi usada. | Proprietário abrir `http://127.0.0.1:8083`, clicar “Configurar verificação em duas etapas”, cadastrar no autenticador, confirmar o código e guardar recuperação. Depois confirmar login autenticado. |
+| 0244-RECOVERY-MFA / 0234 | Recuperação administrativa de MFA; P0; **OPEN** | Fluxo de recuperação não foi alterado nesta auditoria; gates documentados em 0234 seguem pendentes. | Implementar/validar recuperação auditada conforme contrato 0234, sem bypass ou reset automático. |
+
+Ver [REGISTROS/0244.md](REGISTROS/0244.md).
