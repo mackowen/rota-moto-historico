@@ -4,7 +4,7 @@
 
 `npm test` completo nos dois apps passou; testes focados de identidade, navegação, sincronização, cache e Service Worker passaram. Chromium/CDP real visitou 8083/8084 em cinco larguras e desktop forçado em Android: 12 cenários anônimos, 0 exceções JS e 0 overflow. As páginas administrativas e a sessão pessoal não foram testadas com login. Permanecem PARTIAL teste externo de conexão (sem endpoint seguro), administração global, persistência de perfil autenticada e ACK PostgreSQL de sincronização.
 
-Banco oficial, conta persistente, MFA, keystore e dados foram preservados. Serviços ativos; sem reinício nesta retomada. Commits locais dos apps: Restaurante `9cf9f300b8094a50a7b0016ece2c8054470b677e`, `3c17c97`; Motoboy `0f01db04dcab93d7c725e0e7d6e9e1fcda470506`; sem push. Publicação mais recente do histórico verificada em `origin/main`, SHA `a5c3e98119b5e3216ccf79b023ad130db891eec9`; registro, resumo e matriz presentes. Ver [REGISTRO 0247](REGISTROS/0247.md) e [matriz backend/frontend](MATRIZ_BACKEND_FRONTEND_0247.md).
+Banco oficial, conta persistente, MFA, keystore e dados foram preservados. Serviços ativos; sem reinício nesta retomada. Commits locais dos apps: Restaurante `9cf9f300b8094a50a7b0016ece2c8054470b677e`, `3c17c97`; Motoboy `0f01db04dcab93d7c725e0e7d6e9e1fcda470506`; sem push. Publicação final verificada em `origin/main`, SHA `30d59a5905fbc52089fe5c55e596160422679d29`; registro, resumo e matriz presentes. Ver [REGISTRO 0247](REGISTROS/0247.md) e [matriz backend/frontend](MATRIZ_BACKEND_FRONTEND_0247.md).
 
 ## Estado vigente — Campanha 0246 (2026-10-17)
 
