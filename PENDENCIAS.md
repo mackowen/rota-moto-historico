@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0235 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0235-RECOVERY-ENVELOPES | Recuperação keystore; P0; **PARTIAL** | Keystore SMTP funcional; arquivos de recovery persistem, mas integridade/atualização exigem passphrase do operador. | Operador valida/renova localmente e atualiza cópia externa, sem transmitir passphrase. |
+| 0235-RESTORE-CURRENT | Recovery set pós-0047; P0; **PARTIAL** | Novo set criptografado e autenticado; restore de conjunto anterior registrado. | Restaurar novo set num cluster descartável e comparar ledger, sem tocar `rotamoto`. |
+| 0235-HTTPS-REMOTE | Acesso externo; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | Sem domínio/DNS/certificado ou VPN/túnel. Serviços seguem loopback. | Disponibilizar domínio e escolher túnel/VPN autorizado; configurar HTTPS válido e testar cookies/convites. |
+| 0235-FIRST-OWNER | Primeiro proprietário; P0; **BLOCKED_AUTHORIZATION** | Nenhum owner no oficial; SMTP de saída validado, sem envio. | Confirmar empresa, email do proprietário e autorização explícita de bootstrap/convite após HTTPS definitivo. |
+| 0235-DR-ANDROID | Recuperação em outro host/reboot; P1; **PARTIAL** | Serviços runit ativos após reparo de estado stale; DR em instalação externa e reboot não exercitados. | Ensaiar restauração em outro Termux/servidor e inicialização após reboot autorizado. |
+
+Ver [REGISTROS/0235.md](REGISTROS/0235.md).
+
 ## Atualização vigente — Campanha 0234 (2026-10-16)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
