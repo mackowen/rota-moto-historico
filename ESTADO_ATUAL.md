@@ -4,7 +4,7 @@
 
 `npm test` completo nos dois apps, testes de PostgreSQL E2E transacionais de autorização/tenant/status, proof media, convite/ativação e lifecycle Bootstrap/MFA passaram. Só `rotamoto-api-e2e` reiniciada; readiness 200, páginas E2E 8083/8084 200 e endpoint de rota sem sessão 401. Banco oficial, dados persistentes do proprietário, MFA e keystore não foram acessados/alterados. Smoke CDP foi anônimo e apresentou falha na limpeza do diretório temporário; teste autenticado do proprietário e confirmação de seu vínculo continuam `PENDING_OWNER`. A leitura pelo papel auditor segue bloqueada por autenticação.
 
-Commits locais, sem push dos apps: Restaurante `a23f3654d827eec5e0a25802f75a5ebae60aa421`; Motoboy `1349721d90854d9d143e0e173728bc2de113d753`. Histórico desta campanha ainda precisa ser publicado e verificado em `origin/main`. Ver [REGISTRO 0247](REGISTROS/0247.md).
+Commits locais, sem push dos apps: Restaurante `a23f3654d827eec5e0a25802f75a5ebae60aa421`; Motoboy `1349721d90854d9d143e0e173728bc2de113d753`. Histórico publicado/verificado em `origin/main`, SHA `db244f5ef39ef889c8969967ce3b2ffa1189ca59`, com registro e resumo presentes. A atualização final do status de publicação será novamente enviada e conferida. Ver [REGISTRO 0247](REGISTROS/0247.md).
 
 ## Estado vigente — Campanha 0246 (2026-10-17)
 
