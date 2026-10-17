@@ -1,3 +1,9 @@
+## Estado vigente — Campanha 0246 (2026-10-17)
+
+**Causa de `MFA_PROVIDER_UNAVAILABLE` corrigida; prova autenticada pelo browser permanece pendente.** `loadLocalSecretProvider()` resolve assincronamente e a identidade recebia a Promise como provider; agora o serviço resolve/valida `.put/.get/.remove` com falhas sanitizadas. `npm test` Restaurante, integração HTTP/PostgreSQL E2E com rollback e validação não invasiva do keystore passaram. Somente `rotamoto-api-e2e` foi reiniciado; readiness 200, apps locais 8081–8084 HTTP 200. O banco oficial não foi acessado; owner/keystore/dados E2E permaneceram sem alteração. Restaurante `2e32181` local, sem push; Motoboy intacto. Histórico publicado será verificado em [REGISTRO 0246](REGISTROS/0246.md).
+
+**Gates G1–G5, G7–G8 PASS; G6 BLOCKED; G9 depende da publicação.** Não foi criada sessão sintética persistente para browser nem usada a sessão/credencial do proprietário. Próxima ação: teste autenticado de enrollment no processo runit por fixture E2E isolada e confirmação pessoal do proprietário em `http://127.0.0.1:8083`; preservar `PENDING_OWNER` até confirmação.
+
 ## Estado vigente — Campanha 0245 (2026-10-17)
 
 **Correção de enrollment MFA local PASS; confirmação do proprietário PENDING_OWNER.** A interface corrigida do Restaurante/Motoboy está servida em 8083/8084; JavaScript `identity-ui.js?v=0245.1`, caches PWA `v47`/`v43.46`. Erros de enrollment agora são visíveis fora do formulário oculto; QR local, chave manual e retry CSRF limitado foram testados. O Motoboy deixou de expor a URI `otpauth` no status.
