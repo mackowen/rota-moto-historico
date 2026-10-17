@@ -9,7 +9,7 @@
 | 0247-PLATFORM-ADMIN | Administração global RotaMoto; P1; **PARTIAL** | Separação de papel identificada; UI global não demonstrada e nenhum privilégio concedido. | Definir fluxo/migração auditável e obter autorização antes de elevar qualquer identidade. |
 | 0247-COMPANY-PERSISTENCE | Carregamento e salvamento autenticados; P1; **PARTIAL** | Fonte canônica PostgreSQL e cache IndexedDB documentados; não foi acessado pelo proprietário nem provado reload autenticado nesta retomada. | Validar perfil com identidade sintética/fixtures, verificar PostgreSQL após salvar e reload, sem mexer no banco oficial. |
 | 0247-SYNC-ACK | Confirmação real no PostgreSQL; P1; **PARTIAL** | UI não reutiliza sucesso entre usuário/empresa/Driver e considera fila pendente; não foi obtido ACK autenticado nesta retomada. | Criar fixture transacional e demonstrar outbox→API→PostgreSQL→ACK, replay e desconexão/reconvergência. |
-| 0247-HISTORY-PUBLISH | Histórico `origin/main`; P1; **PENDING** | Matriz adicionada localmente; registro/resumo e estado ainda não foram atualizados/publicados nesta retomada. | Commit, push normal de `main`, fetch e verificação SHA/arquivos. |
+| 0247-HISTORY-PUBLISH | Histórico `origin/main`; P1; **PASS_VERIFIED** | `fetch` confirmou SHA local/remoto `4019e5c333030c6f71c856565a4f567b83a56f85`; registro, resumo e matriz presentes em `origin/main`. | Concluído. |
 
 Ver [REGISTRO 0247](REGISTROS/0247.md) e [RESUMO 0247](RESUMOS/0247.md).
 

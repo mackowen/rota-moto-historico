@@ -4,7 +4,7 @@
 
 `npm test` completo nos dois apps passou; testes focados de identidade, navegação, sincronização, cache e Service Worker passaram. Chromium/CDP real visitou 8083/8084 em cinco larguras e desktop forçado em Android: 12 cenários, 0 exceções JS e 0 overflow. O teste foi anônimo; uma segunda tentativa sob concorrência expirou no carregamento. A navegação autenticada da administração/Motoboy e a sessão pessoal continuam não verificadas. O registro inclui matriz backend/frontend; ela classifica como PARTIAL páginas específicas de iFood/99Food/Keeta, administração global, persistência de perfil autenticada e sincronização confirmada em PostgreSQL.
 
-Banco oficial, conta persistente, MFA, keystore e dados foram preservados. Serviços ativos; sem reinício nesta retomada. Commits locais dos apps serão anotados após commit, sem push. Publicação do histórico pendente nesta atualização. Ver [REGISTRO 0247](REGISTROS/0247.md) e [matriz backend/frontend](MATRIZ_BACKEND_FRONTEND_0247.md).
+Banco oficial, conta persistente, MFA, keystore e dados foram preservados. Serviços ativos; sem reinício nesta retomada. Commits locais dos apps: Restaurante `9cf9f300b8094a50a7b0016ece2c8054470b677e`; Motoboy `0f01db04dcab93d7c725e0e7d6e9e1fcda470506`; sem push. Histórico publicado em `origin/main`, verificado após fetch, SHA `4019e5c333030c6f71c856565a4f567b83a56f85`; registro, resumo e matriz presentes. Ver [REGISTRO 0247](REGISTROS/0247.md) e [matriz backend/frontend](MATRIZ_BACKEND_FRONTEND_0247.md).
 
 ## Estado vigente — Campanha 0246 (2026-10-17)
 
