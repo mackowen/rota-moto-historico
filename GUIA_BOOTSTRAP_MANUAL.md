@@ -13,7 +13,7 @@ Este guia descreve a instalação local do Restaurante e Motoboy, com foco no Te
 
 ## 2. Serviços e portas
 
-No perfil desta implantação, runit administra `postgres`, `nginx`, `rotamoto-api-official` e `rotamoto-api-e2e`. O Nginx encaminha as aplicações oficiais `8081/8082` para a API oficial `8788`, e as aplicações E2E `8083/8084` para a API E2E `8787`. Os listeners devem permanecer em loopback; valide com `sv status`, `nginx -t`, `curl http://127.0.0.1:<porta>/health/ready` e `ss -ltn` antes de operar. Não exponha as portas diretamente à LAN ou à internet.
+No perfil desta implantação, runit administra `postgres`, `nginx`, `rotamoto-api-official` e `rotamoto-api-e2e`. O Nginx encaminha as aplicações oficiais `8081/8082` para a API oficial `8788`, e as aplicações E2E `8083/8084` para a API E2E `8787`. Os listeners devem permanecer em loopback; valide com `sv status`, `nginx -t`, `/health/ready` nas APIs 8787/8788, `/` nos frontends 8081–8084 e `ss -ltn` antes de operar. Não exponha as portas diretamente à LAN ou à internet.
 
 ## 3. Configuração e segredos
 
