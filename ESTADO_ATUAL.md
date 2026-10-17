@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0241 (2026-10-17)
+
+**PASS para reset isolado e preparação do Bootstrap E2E.** `rotamoto_e2e_app` conecta somente a `rotamoto_e2e`; sessão HTTP efetiva usa `rotamoto_app` sem herança e sem CONNECT oficial. API valida banco e identidades no startup. Backup PostgreSQL anterior autenticado e restaurado em alvo descartável; as 135 referências de mídia sem arquivos foram classificadas como fixtures sintéticas e descartadas sob autorização.
+
+Reset transacional concluiu: 47 migrations/checksums preservados; 48 tabelas operacionais sem linhas; 17 schemas de fixture removidos; zero empresas, usuários e provas de mídia; latch disponível; `permissions` mantém 8 registros; 39 tabelas continuam FORCE RLS. Serviços PostgreSQL/Nginx/APIs ativos, entradas oficiais 8081/8082→8788 e E2E 8083/8084→8787, todas locais; readiness 200. Browser/CDP desktop/mobile e `npm test` nos dois aplicativos passaram. Nenhum Bootstrap foi executado e o banco oficial não recebeu escritas/grants/migrations. Restaurante `3ed476a` local sem push; Motoboy sem alterações. Ver [REGISTROS/0241.md](REGISTROS/0241.md).
+
+Próxima ação: executar em 0242 a prova persistente de Bootstrap fictício e jornada autenticada no E2E vazio; proprietário real exige autorização explícita e HTTPS definitivo.
+
 ## Estado vigente — Campanha 0240 (2026-10-17)
 
 **PARTIAL; reset E2E e Bootstrap bloqueados.** Backend E2E em 8787, oficial em 8788; Nginx agora tem Restaurante/Motoboy E2E em 8083/8084→8787, mantendo 8081/8082→8788. Browser/CDP em desktop e mobile, readiness e regressões focadas passaram. Foi produzido backup PostgreSQL cifrado e autenticado, restaurado em `rotamoto_disposable_0240_restore` (47 migrations/51 tabelas), mas 135 referências de mídia não têm arquivos recuperáveis; não há backup integral. `rotamoto_app` continua com CONNECT nos dois bancos. Reset não executado; `rotamoto_e2e` não está vazio e latch permanece como antes. O readiness oficial consultou `rotamoto` somente em leitura; nenhuma alteração foi feita. G1 FAIL; G2 PARTIAL; G3 BLOCKED; G4 PASS; G5 BLOCKED; G6 PARTIAL; G7 PASS. Próxima ação: localizar mídia íntegra e provisionar papel runtime E2E sem acesso oficial, repetir recovery completo, depois reset guardado. Ver [REGISTROS/0240.md](REGISTROS/0240.md).

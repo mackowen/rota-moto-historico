@@ -1,13 +1,12 @@
-## Atualização vigente — Campanha 0240 (2026-10-17)
+## Atualização vigente — Campanha 0241 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
 |---|---|---|---|
-| 0240-E2E-RUNTIME-ISOLATION | Papel runtime E2E; P0; **BLOCKED** | `rotamoto_app` ainda pode conectar a `rotamoto` e `rotamoto_e2e`; serviço usa URL E2E correta, mas papel não é exclusivo. Nenhum grant oficial foi alterado. | Provisionar papel sem BYPASSRLS e sem CONNECT oficial, grants mínimos E2E; validar identidade do processo e negação de conexão oficial. |
-| 0240-E2E-MEDIA-RECOVERY | Backup integral E2E; P0; **BLOCKED** | Dump PostgreSQL cifrado/autenticado e restore descartável passaram. Recovery set combinado falhou: 135 referências de mídia sem objetos nos roots inventariados. | Localizar uma fonte confiável para os objetos e produzir/verificar/restaurar recovery set completo antes de reset. Não remover referências nem gerar mídia substituta. |
-| 0240-E2E-RESET | Instalação vazia e latch; P0; **BLOCKED** | Script guardado, one-shot e confirmação explícita criados; nenhuma limpeza aplicada. `rotamoto_e2e` conserva dados sintéticos e latch anterior. | Somente após isolamento G1 e backup integral G2 PASS, executar `NODE_ENV=test ROTAMOTO_DISPOSABLE_CAMPAIGN=0240 ROTAMOTO_E2E_RESET_CONFIRM=ROTAMOTO_E2E_RESET_0240_CONFIRMED E2E_MIGRATOR_DATABASE_URL=postgresql://rotamoto_migrator@127.0.0.1:5432/rotamoto_e2e node scripts/reset-e2e-installation.js`; confirmar ledger 0047, vazio e latch disponível. |
-| 0240-REGRESSION-SUITE | `npm test`; P1; **PARTIAL** | Regressões focadas e Browser smoke passaram. Runner completo ficou sem progresso por ~1m45 e foi encerrado. | Reexecutar a suíte integral em Termux quando o runner avançar normalmente; não executar suítes mutantes contra o E2E até o reset autorizado. |
+| 0241-BOOTSTRAP-PROVA | Prova E2E autenticada; P0; **READY_FOR_0242** | Banco vazio, latch disponível, 47 migrations, API E2E e frontends isolados prontos. Nenhuma identidade foi criada. | Na Campanha 0242, executar Bootstrap somente com fixtures fictícias, capturador local de email e Browser/CDP autenticado; manter a instalação oficial intocada. |
+| 0241-OWNER-REAL | Proprietário real/MFA; P0; **PENDING_AUTHORIZATION** | Zero usuários e empresas no E2E após reset; nenhum proprietário oficial foi criado nem convite enviado. | Proprietário confirmar empresa, email e operação real; usar HTTPS definitivo antes do convite e MFA. |
+| 0241-HTTPS-EXTERNO | Domínio/acesso remoto; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | Nenhum domínio, DNS, certificado, VPN/túnel ou endpoint público foi inventado/configurado; serviços seguem em loopback. | Proprietário fornecer domínio/conta DNS e escolher VPN/túnel/proxy autorizado; então provisionar TLS e validar cookies/origins. |
 
-Ver [REGISTROS/0240.md](REGISTROS/0240.md) e [RESUMOS/0240.md](RESUMOS/0240.md).
+Ver [REGISTROS/0241.md](REGISTROS/0241.md) e [RESUMOS/0241.md](RESUMOS/0241.md).
 
 ## Atualização vigente — Campanha 0236 (2026-10-17)
 
