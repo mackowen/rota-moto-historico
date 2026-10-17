@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0247 (2026-10-17)
+
+**PARTIAL; bloqueio de autorização corrigido no backend, vínculo persistente do proprietário aguarda leitura autorizada e confirmação pessoal.** O bootstrap de owner não cria Driver. A API Motoboy agora exige membership ativa, binding explícito ao Driver canônico ativo da mesma empresa e permissão no servidor para consulta, instalação, sync, mídia e geometria. Owner/admin sem Driver recebe 403; sessão de Driver desativado recebe 403; leituras ficam limitadas ao Driver e tenant. Fluxo de convite existente (convite, ativação, conta existente e vínculo explícito) foi documentado e tornado claro no painel.
+
+`npm test` completo nos dois apps, testes de PostgreSQL E2E transacionais de autorização/tenant/status, proof media, convite/ativação e lifecycle Bootstrap/MFA passaram. Só `rotamoto-api-e2e` reiniciada; readiness 200, páginas E2E 8083/8084 200 e endpoint de rota sem sessão 401. Banco oficial, dados persistentes do proprietário, MFA e keystore não foram acessados/alterados. Smoke CDP foi anônimo e apresentou falha na limpeza do diretório temporário; teste autenticado do proprietário e confirmação de seu vínculo continuam `PENDING_OWNER`. A leitura pelo papel auditor segue bloqueada por autenticação.
+
+Commits locais, sem push dos apps: Restaurante `a23f3654d827eec5e0a25802f75a5ebae60aa421`; Motoboy `1349721d90854d9d143e0e173728bc2de113d753`. Histórico desta campanha ainda precisa ser publicado e verificado em `origin/main`. Ver [REGISTRO 0247](REGISTROS/0247.md).
+
 ## Estado vigente — Campanha 0246 (2026-10-17)
 
 **Causa de `MFA_PROVIDER_UNAVAILABLE` corrigida; prova autenticada pelo browser permanece pendente.** `loadLocalSecretProvider()` resolve assincronamente e a identidade recebia a Promise como provider; agora o serviço resolve/valida `.put/.get/.remove` com falhas sanitizadas. `npm test` Restaurante, integração HTTP/PostgreSQL E2E com rollback e validação não invasiva do keystore passaram. Somente `rotamoto-api-e2e` foi reiniciado; readiness 200, apps locais 8081–8084 HTTP 200. O banco oficial não foi acessado; owner/keystore/dados E2E permaneceram sem alteração. Restaurante `2e32181` local, sem push; Motoboy intacto. Histórico publicado/verificado em `origin/main` SHA `90c8148`; ver [REGISTRO 0246](REGISTROS/0246.md).

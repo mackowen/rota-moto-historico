@@ -1,3 +1,14 @@
+## Atualização vigente — Campanha 0247 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0247-OWNER-DRIVER-LINK | Membership persistente do proprietário; P0; **BLOCKED_READ_ONLY_AUTH** | Bootstrap não cria Driver; integração sintética prova que owner sem vínculo é recusado. A role auditor não autenticou para a leitura read-only e dados persistentes não foram alterados. | Operador com leitura E2E autorizada confirmar apenas se a membership tem `driver_id` e se o Driver está ativo. Não alterar sem autorização. |
+| 0247-OWNER-BROWSER | Login do proprietário no Motoboy; P0; **PENDING_OWNER** | Testes sintéticos de API passam; smoke CDP foi anônimo. Não foram usadas credenciais nem sessão pessoal. | Proprietário recarregar `http://127.0.0.1:8084` e confirmar bloqueio se não houver cadastro/vínculo explícito; relatar somente resultado. |
+| 0247-DRIVER-INVITE-BROWSER | Fluxo visual de convite; P1; **PARTIAL** | Serviço de identidade cobre convite, ativação, usuário existente, revogação/reenvio e vínculo Driver. Teste HTTP E2E sintético passou; controles autenticados ainda sem Browser/CDP. | Rodar teste Browser com fixtures sintéticas isoladas após preparar sessão no lifecycle, cobrindo reenvio, revogação, ativação e vínculo; não enviar convite real. |
+| 0247-HISTORY-PUBLISH | Histórico `origin/main`; P1; **PENDING_PUBLICATION** | Registro/resumo preparados; SHAs dos apps locais registrados. | Commit/push apenas do histórico; refazer fetch, conferir SHA remoto e registro publicado. |
+
+Ver [REGISTRO 0247](REGISTROS/0247.md) e [RESUMO 0247](RESUMOS/0247.md).
+
 ## Atualização vigente — Campanha 0246 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
