@@ -1,6 +1,6 @@
 ## Estado vigente — Campanha 0239 (2026-10-17)
 
-**BLOCKED antes de qualquer reset.** E2E em `rotamoto_e2e`, 47 migrations até 0047; processos usam bancos distintos, mas o papel `rotamoto_app` tem CONNECT nos dois, então isolamento absoluto por ACL falha. Encontrados 17 schemas de fixture com 777 tabelas. `pg_dump` como migrator falha em FORCE RLS e `rotamoto_backup` não tem CONNECT no E2E. Latch está inicializado e não há procedimento suportado para reset persistente. Nenhum dado, grant, latch, serviço ou banco foi alterado; `rotamoto` não foi conectado. G1/G2 FAIL, G3–G8 BLOCKED, G9 PASS. Ver [REGISTROS/0239.md](REGISTROS/0239.md).
+**BLOCKED antes de qualquer reset.** E2E em `rotamoto_e2e`, 47 migrations até 0047. O papel `rotamoto_app` conecta em ambos os bancos e Nginx encaminha 8081/8082 para API oficial 8788. Encontrados 17 schemas de fixture com 777 tabelas. `pg_dump` como migrator falha em FORCE RLS e `rotamoto_backup` não tem CONNECT no E2E. Latch está inicializado e não há procedimento suportado para reset persistente. Nenhum dado, grant, latch, serviço ou banco foi alterado; `rotamoto` não foi conectado. G1/G2 FAIL, G3–G8 BLOCKED, G9 PASS. Ver [REGISTROS/0239.md](REGISTROS/0239.md).
 
 ## Estado vigente — Campanha 0238 (2026-10-17)
 
