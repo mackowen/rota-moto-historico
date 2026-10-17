@@ -1,3 +1,14 @@
+## Atualização vigente — Campanha 0240 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0240-E2E-RUNTIME-ISOLATION | Papel runtime E2E; P0; **BLOCKED** | `rotamoto_app` ainda pode conectar a `rotamoto` e `rotamoto_e2e`; serviço usa URL E2E correta, mas papel não é exclusivo. Nenhum grant oficial foi alterado. | Provisionar papel sem BYPASSRLS e sem CONNECT oficial, grants mínimos E2E; validar identidade do processo e negação de conexão oficial. |
+| 0240-E2E-MEDIA-RECOVERY | Backup integral E2E; P0; **BLOCKED** | Dump PostgreSQL cifrado/autenticado e restore descartável passaram. Recovery set combinado falhou: 135 referências de mídia sem objetos nos roots inventariados. | Localizar uma fonte confiável para os objetos e produzir/verificar/restaurar recovery set completo antes de reset. Não remover referências nem gerar mídia substituta. |
+| 0240-E2E-RESET | Instalação vazia e latch; P0; **BLOCKED** | Script guardado criado; nenhuma limpeza aplicada. `rotamoto_e2e` conserva dados sintéticos e latch anterior. | Somente após isolamento G1 e backup integral G2 PASS, executar `NODE_ENV=test ROTAMOTO_DISPOSABLE_CAMPAIGN=0240 E2E_MIGRATOR_DATABASE_URL=postgresql://rotamoto_migrator@127.0.0.1:5432/rotamoto_e2e node scripts/reset-e2e-installation.js`; confirmar ledger 0047, vazio e latch disponível. |
+| 0240-REGRESSION-SUITE | `npm test`; P1; **PARTIAL** | Regressões focadas e Browser smoke passaram. Runner completo ficou sem progresso por ~1m45 e foi encerrado. | Reexecutar a suíte integral em Termux quando o runner avançar normalmente; não executar suítes mutantes contra o E2E até o reset autorizado. |
+
+Ver [REGISTROS/0240.md](REGISTROS/0240.md) e [RESUMOS/0240.md](RESUMOS/0240.md).
+
 ## Atualização vigente — Campanha 0236 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
