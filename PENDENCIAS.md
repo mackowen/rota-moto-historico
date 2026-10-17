@@ -1891,3 +1891,13 @@ Ver [REGISTROS/0234.md](REGISTROS/0234.md).
 - **Resolvido no código:** recovery helper não depende mais de hardlink; valida o novo envelope legacy e publica por rename GNU sem substituição. Ver [REGISTRO 0238](REGISTROS/0238.md).
 - **Ação privada pendente do proprietário:** executar `cd "$HOME/projetos/repos/rota-moto-restaurante" && node scripts/verify-local-recovery-envelopes.js --refresh-stale` em TTY local sem eco. Não enviar frases-senha ao ChatGPT, nem remover/substituir envelopes existentes.
 - **Depois da validação:** confirmar auditoria `refresh_started`/`refreshed`, preservar envelope anterior, guardar a nova passphrase separadamente e realizar cópia externa autorizada.
+## Atualização vigente — Campanha 0239 (2026-10-17)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0239-DB-ISOLATION / 0239 | Papéis PostgreSQL oficial/E2E; P0; **FAIL** | `rotamoto_app` tem CONNECT em `rotamoto` e `rotamoto_e2e`; os serviços usam URLs fixas diferentes, mas o limite por papel não impede conexão cruzada. | Em campanha autorizada, estabelecer papel runtime E2E dedicado e ACL por database; validar sem permitir ao runtime E2E conectar ao oficial. |
+| 0239-E2E-BACKUP / 0239 | Backup/restore de `rotamoto_e2e`; P0; **BLOCKED** | `pg_dump` como migrator não lê todas as linhas com FORCE RLS; `rotamoto_backup` não tem CONNECT no E2E. Nenhum grant foi mudado. | Disponibilizar caminho aprovado para backup completo e restauração isolada sem enfraquecer as permissões do banco operacional. |
+| 0239-E2E-RESET-LATCH / 0239 | Limpeza de fixtures e latch Bootstrap; P0; **BLOCKED** | 17 schemas de fixture antigos; latch inicializado. Migrations 0045/0046 não permitem rollback/reset persistente contratual. | Após backup PASS, implementar/aprovar procedimento explícito, auditável e somente E2E para limpar fixtures e reinicializar latch; não improvisar SQL. |
+| 0239-BOOTSTRAP-BROWSER / 0239 | Bootstrap, MFA e prova CDP; P1; **BLOCKED** | Nenhum fluxo executado; dependente de backup e reset seguros. | Rodar a jornada autenticada em DB descartável ou E2E limpo autorizado, com captura de email sintético e desktops/mobile. |
+
+Ver [REGISTROS/0239.md](REGISTROS/0239.md).
