@@ -1886,3 +1886,8 @@ Ver [REGISTROS/0234.md](REGISTROS/0234.md).
 - **Concluído:** política permanente de inventário, preservação e publicação criada em `POLITICA_GIT_CAMPANHAS.md` e `~/projetos/AGENTS.md`.
 - **Preservado:** branches locais de aplicação mantêm commits próprios fora de seus upstreams; não foram apagadas nem publicadas. Revisar individualmente em campanhas autorizadas.
 - **Sem alteração:** nenhum banco, serviço ou configuração operacional foi tocado.
+## Atualização vigente — Campanha 0238 (2026-10-17)
+
+- **Resolvido no código:** recovery helper não depende mais de hardlink; valida o novo envelope legacy e publica por rename GNU sem substituição. Ver [REGISTRO 0238](REGISTROS/0238.md).
+- **Ação privada pendente do proprietário:** executar `cd "$HOME/projetos/repos/rota-moto-restaurante" && node scripts/verify-local-recovery-envelopes.js --refresh-stale` em TTY local sem eco. Não enviar frases-senha ao ChatGPT, nem remover/substituir envelopes existentes.
+- **Depois da validação:** confirmar auditoria `refresh_started`/`refreshed`, preservar envelope anterior, guardar a nova passphrase separadamente e realizar cópia externa autorizada.
