@@ -4,7 +4,7 @@
 |---|---|---|---|
 | 0246-LIVE-BROWSER-MFA | Browser autenticado via 8083→8787; P0; **BLOCKED_SYNTHETIC_FIXTURE** | Loader/provedor e teste HTTP PostgreSQL transacional passaram; processo runit reiniciado/readiness OK. Sem fixture autenticável segura no serviço live; não usado o owner persistente. | Preparar harness de fixture temporária transacional que use a rota real e keystore controlado, ou aguardar confirmação pessoal do proprietário; testar mobile/desktop, enrollment e TOTP sem gravar dados duráveis. |
 | 0246-OWNER-MFA | Conta persistente Chico; P0; **PENDING_OWNER** | Nenhuma sessão, senha ou fator real utilizado/modificado. | Proprietário recarregar `http://127.0.0.1:8083`, tentar enrollment e confirmar TOTP; compartilhar somente resultado, nunca segredos. |
-| 0246-HISTORY-PUBLISH | Histórico; P1; **PENDING_PUSH** | Registro e resumo preparados; verificação remota ainda não concluída. | Publicar somente Histórico em `origin/main`, confirmar SHA após `fetch` e presença do registro. |
+| 0246-HISTORY-PUBLISH | Histórico; P1; **PASS_VERIFIED** | `REGISTROS/0246.md` e resumo publicados; `fetch` confirmou `origin/main` SHA `90c8148badee0740ec446b5c09809a1a60de64cd`. | Sem ação pendente para esta publicação. |
 
 Ver [REGISTROS/0246.md](REGISTROS/0246.md) e [RESUMOS/0246.md](RESUMOS/0246.md).
 
