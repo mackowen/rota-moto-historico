@@ -1,3 +1,9 @@
+## Estado vigente — Campanha 0236 (2026-10-17)
+
+**Resultado PARTIAL.** Oficial e E2E em migration 0047; zero users no oficial; nenhum database alterado nesta campanha. Serviços postgres/Nginx/APIs ativos, apps 8081/8082 e API 8787/8788 com readiness 200. Recovery set pós-0047 verificado, 47 migrations e zero mídia; restore isolado foi comprovado em 0235 e não repetido. Pacote local cifrado preparado, sem upload.
+
+Envelopes master/keystore têm metadados, permissões e formato CBC estruturalmente válidos. Descriptografia/autenticidade depende de entrada privada no Termux; helper sem eco preparado e TTY testado sinteticamente. HTTPS/dominio e owner real pendentes. G1, G5, G7, G10 PASS; G2–G4 BLOCKED; G6, G8, G9 PARTIAL. Restaurante commit `f81fa99` local, sem push; Motoboy intacto; histórico será publicado apenas lá. Ver [REGISTROS/0236.md](REGISTROS/0236.md).
+
 ## Estado vigente — Campanha 0235 (2026-10-17)
 
 **Resultado PARTIAL.** Serviços Termux `postgres`, `nginx`, `rotamoto-api-e2e` e `rotamoto-api-official` ativos; API oficial em 8788/`rotamoto`, E2E em 8787/`rotamoto_e2e`, apps em 8081/8082 e loopback apenas. SMTP Gmail TLS 465 autenticou e foi auditado, sem envio. Ledger oficial e E2E em 0047, checksums iguais; somente migration E2E 0047 foi aplicada. Browser/CDP verificou Restaurante/Motoboy em seis combinações de viewport com readiness 200 e sem erros inesperados. `npm test` em ambos passou.

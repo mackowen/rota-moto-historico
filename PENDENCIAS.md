@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0236 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0236-IDENTITY-ENVELOPES | master key/keystore; P0; **BLOCKED_PRIVATE_INPUT** | Formato Salted CBC, tamanhos e mode 0600 verificados; descriptografia depende de passphrase. | Operador executar helper no Termux TTY sem eco; validar match e criar versão nova somente se stale. |
+| 0236-BACKUP-KEY-COPY | Cópia independente; P0; **PARTIAL** | Pacote local contém somente recovery set PostgreSQL cifrado; chave de backup separada. | Localizar/validar envelope independente da chave e transferir pacote manualmente para destino aprovado. |
+| 0236-HTTPS | Domínio/acesso externo; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | Exemplo HTTPS placeholder não instalado; sem DNS/certificado/VPN/túnel. | Proprietário definir domínio e topologia segura; emitir TLS e testar origens/proxy/cookies. |
+| 0236-FIRST-OWNER | Bootstrap/MFA real; P0; **BLOCKED_AUTHORIZATION** | Zero usuários oficial; checklist criado; nenhum email enviado. | Confirmar empresa, email e autorização explícita para bootstrap/convite após HTTPS válido. |
+| 0236-DR-HOST | Recovery fora do dispositivo; P1; **PARTIAL** | Restore local descartável aprovado em 0235; não há host externo autorizado nesta campanha. | Preparar host PostgreSQL 18/Termux compatível, chave por canal separado, restore/health e medições RPO/RTO. |
+
+Ver [REGISTROS/0236.md](REGISTROS/0236.md).
+
 ## Atualização vigente — Campanha 0235 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
