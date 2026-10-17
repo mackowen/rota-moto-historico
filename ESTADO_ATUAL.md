@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0242 (2026-10-17)
+
+**PARTIAL — auditoria limitada pelo tempo de varredura no armazenamento Android; nenhuma limpeza executada.** Volume: 221G total, 167G usados e 53G disponíveis; valor não exclusivo de `~/projetos`. Diretórios medidos: Restaurante 100M, Motoboy 88M, Histórico 45M, CondoOS Manager 513M (alteração preexistente em `.replit` preservada), CondoOS Histórico 1.2M, backups 136M e checkpoints 176K. `du` recursivo e busca dos 30 maiores não terminaram em até dois minutos. Nenhum candidato foi confirmado como descartável; 0 arquivos removidos / 0 bytes liberados. Evidências, backups, scripts, perfis Chromium com locks e `node_modules` permanecem preservados.
+
+Guards E2E passaram; `nginx -t`, serviços e readiness 8787/8788/8081–8084 passaram. `git fsck` sem erro fatal reportou objetos dangling em repositórios RotaMoto, CondoOS e Browser Tests; nenhum GC executado. A role E2E confirmou `rotamoto_e2e`, mas não permite contar tabelas operacionais; última confirmação de E2E vazio permanece no Registro 0241. Nenhum Bootstrap, teste Browser ou escrita de banco nesta campanha. Ver [REGISTROS/0242.md](REGISTROS/0242.md).
+
+Próxima ação: refazer a medição em lotes de diretórios, identificar somente caches/temporários comprovadamente descartáveis, produzir manifesto antes de remoção e obter uma leitura de contagens E2E autorizada. Não apagar candidatos da lista B sem autorização.
+
 ## Estado vigente — Campanha 0241 (2026-10-17)
 
 **PASS para reset isolado e preparação do Bootstrap E2E.** `rotamoto_e2e_app` conecta somente a `rotamoto_e2e`; sessão HTTP efetiva usa `rotamoto_app` sem herança e sem CONNECT oficial. API valida banco e identidades no startup. Backup PostgreSQL anterior autenticado e restaurado em alvo descartável; as 135 referências de mídia sem arquivos foram classificadas como fixtures sintéticas e descartadas sob autorização.

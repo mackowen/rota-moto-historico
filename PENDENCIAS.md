@@ -1,3 +1,14 @@
+## Atualização vigente — Campanha 0242 (2026-10-17)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0242-INVENTORY | Uso de `~/projetos`; P1; **PARTIAL** | `df` informa 53G livres no filesystem compartilhado; varredura recursiva não concluiu. Totais exclusivos e top 30 não comprovados. | Reexecutar em lotes por subdiretório com leitura não concorrente; documentar total e maiores itens. |
+| 0242-CLEANUP | Espaço temporário; P2; **NO_SAFE_CANDIDATE** | Nenhuma remoção; caches/evidências/scripts/perfis não foram comprovados sem dependências. | Rever categoria B por referências e atividade; criar manifesto antes de remoção autorizada. |
+| 0242-E2E-COUNTS | Estado vazio; P1; **NOT_RECHECKED_PRIVILEGED** | Identidade do banco E2E e readiness confirmadas; role app não expõe contagens de domínio. Registro 0241 confirma vazio. | Em campanha de Bootstrap/prova ou com consulta read-only de privilégio mínimo, validar latch e contagens antes de escrita. |
+| 0242-DANGLING-GIT | Objetos dangling; P2; **PRESERVED_FOR_REVIEW** | `git fsck --connectivity-only` não indicou erro fatal, mas encontrou objetos não alcançáveis em seis repositórios. | Mapear referências sem GC; decidir retenção só após relacionar a branches, reflogs ou trabalho histórico. |
+
+Ver [REGISTROS/0242.md](REGISTROS/0242.md) e [RESUMOS/0242.md](RESUMOS/0242.md).
+
 ## Atualização vigente — Campanha 0241 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
