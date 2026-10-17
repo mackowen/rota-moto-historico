@@ -1880,3 +1880,9 @@ Ver [REGISTROS/0231.md](REGISTROS/0231.md).
 | 0234-EXTERNAL-DELIVERY / 0234 | SMTP/HTTPS externo; P2; **PENDING_EXTERNAL** | Testes usam fixture/dados sintéticos; sem provider/domínio externos. | Homologar SMTP/HTTPS reais após configuração, sem confundir entrega local com externa. |
 
 Ver [REGISTROS/0234.md](REGISTROS/0234.md).
+## Atualização vigente — Campanha 0237 (2026-10-17)
+
+- **Concluído:** histórico 0235/0236 preservado e integrado à branch padrão `main`; SHA local/remoto conferido no Registro 0237.
+- **Concluído:** política permanente de inventário, preservação e publicação criada em `POLITICA_GIT_CAMPANHAS.md` e `~/projetos/AGENTS.md`.
+- **Preservado:** branches locais de aplicação mantêm commits próprios fora de seus upstreams; não foram apagadas nem publicadas. Revisar individualmente em campanhas autorizadas.
+- **Sem alteração:** nenhum banco, serviço ou configuração operacional foi tocado.

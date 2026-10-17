@@ -9,6 +9,7 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 - `DECISOES.md`: decisões técnicas e arquiteturais duráveis. Decisões substituídas permanecem no arquivo marcadas como `SUPERADA`.
 - `PENDENCIAS.md`: itens ainda por fazer, organizados por prioridade; itens resolvidos são marcados como concluídos e vinculados ao registro que os resolveu.
 - `REGISTROS/NNNN.md`: relato imutável de cada interação relevante. Nunca editar um registro anterior para representar uma nova interação; criar sempre o próximo número livre.
+- `POLITICA_GIT_CAMPANHAS.md`: inventário, preservação, commits e publicação obrigatória do histórico nas campanhas futuras.
 
 ## Histórico, estado, decisões e pendências
 
@@ -43,3 +44,5 @@ Registre branch, estado Git inicial/final, commits e push sempre que a interaç�
 ## Segurança
 
 Nunca grave senhas, tokens, API keys, secrets, cookies, credenciais, certificados privados ou dados pessoais desnecessários. Substitua qualquer informação sensível por `[REDACTED]`. Mantenha o histórico local e fora dos repositórios dos aplicativos. Não crie commits apenas para atualizar este histórico.
+
+Campanhas também devem seguir `POLITICA_GIT_CAMPANHAS.md`: publicar somente o histórico, integrar sem sobrescrita, verificar o SHA remoto e confirmar os registros na branch padrão antes de declarar publicação concluída.

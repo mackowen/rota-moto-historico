@@ -1437,3 +1437,10 @@ Limites: executor e servidor HTTP compartilham UID Android, sem isolamento equiv
 **0234 PARTIAL; complemento do PostgreSQL oficial BLOCKED.** Bootstrap local first-owner foi implementado com migrations 0045/0046, latch singleton transacional, autorização local expirada/digest-only, CLI interativo e retry idempotente. Enrollment TOTP agora exibe QR offline. Migrations foram aplicadas somente em `rotamoto_e2e`; E2E identity HTTP, bootstrap guards, `npm test` de ambos e estáticos passaram. CDP visual do componente QR passou com URI sintética em desktop/mobile.
 
 Recuperação administrativa de MFA com verificações independentes, Browser/CDP autenticado da primeira instalação e teste concorrente/fault-injection completos ainda faltam. O CDP feito é somente visual e não comprova integração com APIs. Portanto não há PASS integral da campanha, nem prontidão de produção/DR. SMTP/HTTPS externos pendentes. Banco oficial não foi conectado, consultado, respaldado ou alterado. Registro completo em [REGISTROS/0234.md](REGISTROS/0234.md).
+## Estado vigente — Campanha 0237 (2026-10-17)
+
+**PASS para normalização e publicação do histórico.** Remotos confirmados: Restaurante `mackowen/rota-moto-restaurante`, Motoboy `mackowen/rota-moto`, Histórico `mackowen/rota-moto-historico`. Repositórios de aplicação estavam limpos, sem untracked; tags protegidas presentes. Commits locais de aplicação permanecem sem push.
+
+O GitHub mantém `main` como branch padrão. Antes desta campanha, os registros 0235/0236 estavam na branch publicada `codex/f9-browser-e2e-0057`; os commits da `main` local eram ancestrais daquela branch, e `origin/main` era ancestral da `main` local. A integração foi feita sem reescrita; após o push, `main` contém os registros 0235–0237. A configuração da branch padrão não foi alterada. O SHA final foi consultado de novo no remoto e corresponde à `main` local; veja o relatório da Campanha 0237.
+
+Nenhum banco ou serviço foi alterado. Inventário, verificações de ancestralidade, conteúdo, segurança do diff e validação remota estão no [Registro 0237](REGISTROS/0237.md). Próximas campanhas devem seguir [Política Git](POLITICA_GIT_CAMPANHAS.md).
