@@ -8,7 +8,7 @@
 | 0251-MARKETPLACE | iFood/99Food/Keeta; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | As três páginas carregam status real de backend e não indicam conexão; nenhuma autorização comercial foi iniciada. | Obter onboarding, credenciais e autorização externa; testar loja/sincronismo após disponibilidade. |
 | 0251-PLATFORM-ADMIN | Administração geral; P1; **AUTHORIZATION_GATE** | Nenhum privilégio global concedido; não foi comprovada UI global. | Aprovar desenho de papéis e eventual migração reversível antes de conceder qualquer role global. |
 | 0251-INVITE-EDGE | Revogação/cancelamento/expiração e motorista desativado ou de outro tenant; P1; **PARTIAL** | Convite, ativação, vínculo ativo, unlink em sessão ativa e negação API foram exercitados; casos restantes não foram repetidos no Browser desta campanha. | Completar cenários adicionais com fixtures rollback; sem tocar nos dados do proprietário. |
-| 0251-HISTORY-PUBLISH | `origin/main`; P1; **PASS** | Commit `3ace996100616dfab986849a3a689d4535bb28a5` foi publicado; novo fetch confirmou SHA local/remoto e presença do registro/resumo. O commit de fechamento também será verificado. | Nenhuma ação para o conteúdo inicial; concluir e conferir o follow-up documental desta campanha. |
+| 0251-HISTORY-PUBLISH | `origin/main`; P1; **PASS** | Publicações documentais `3ace996` e `9096f81` foram verificadas por fetch; o registro e resumo existem na branch padrão. Esta versão final também é publicada e conferida antes da entrega. | Nenhuma pendência após confirmação do SHA final. |
 
 Ver [REGISTRO 0251](REGISTROS/0251.md), [resumo](RESUMOS/0251.md) e [matriz](MATRIZ_BACKEND_FRONTEND_0250.md).
 
