@@ -10,7 +10,7 @@
 | 0252-CROSS-TAB-SYNC | Atualização entre abas, dispositivos e outage; P1; **PARTIAL** | Após operações de Empresa, a UI atualiza por snapshot servidor; fluxo 0251/0252 provou ACK canônico em fixture. Não se provaram broadcast multipágina, offline/reconexão, conflito, ou indicador visual do ACK. | Implementar/validar mecanismo coerente sem polling excessivo; mostrar local/pending/ACK apenas com confirmação. |
 | 0252-OWNER-CHECK | Sessão/MFA persistente do proprietário; P0; **PENDING_OWNER** | Conta, senha, MFA, keystore e dados persistentes não foram usados nem alterados. | Proprietário validar pessoalmente em Chrome Android; não compartilhar senha, cookie, QR TOTP nem códigos. |
 | 0252-OFFICIAL-DB | Banco oficial `rotamoto`; P0; **PASS_PRESERVED** | Nenhuma conexão de escrita/migration/promoção foi realizada. | Continuar sem alterações oficiais até autorização explícita e plano de rollback aprovado. |
-| 0252-HISTORY | `origin/main`; P1; **PASS** | Commit `3c97a06ee7ee58d7b45aa57534af6a565e328a0f` fetch-verificado; registro, resumo e matriz confirmados. | Nenhuma ação; campanha publicada. |
+| 0252-HISTORY | `origin/main`; P1; **PASS** | Commits `3c97a06` e `10603dd` fetch-verificados; registro, resumo e matriz confirmados. | Nenhuma ação; campanha publicada. |
 
 Ver [REGISTRO 0252](REGISTROS/0252.md) e [matriz funcional](MATRIZ_BACKEND_FRONTEND_0252.md).
 
