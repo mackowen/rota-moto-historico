@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0251 (2026-10-18)
+
+**PARTIAL — experiência administrativa sintética autenticada e persistência E2E comprovadas; validação do runit operacional e dependências externas permanecem.** No Restaurante, a atualização de usuários/perfis está em Equipe, estados de erro vazios não ocupam cartão e ações administrativas/abas provider têm hierarquia visual. Service Worker avançado para v52 e assets de identidade `0251.1`, sem remover IndexedDB.
+
+Chromium/CDP autenticado com fixture sintética transacional: 11 fluxos, 17 verificações visuais, quatro negações esperadas (sem vínculo, usuário limitado e revogação), zero erros JS e zero HTTP 5xx. Convite/ativação/login, vínculo Driver, bloqueio/revogação, salvar/recarregar empresa e ACK `accepted` com registro canônico no PostgreSQL E2E passaram. As screenshots/report mode 0600 estão em `~/projetos/browser-tests/evidencias/campanhas/0251/`, fora do Git.
+
+Limite relevante: para garantir rollback, o teste suspendeu temporariamente `rotamoto-api-e2e` e ligou handlers reais na 8787 usando o harness com `rotamoto_app`/`rotamoto_migrator`; o processo foi restaurado e readiness 200. Isto não prova o processo runit com `rotamoto_e2e_app`. Banco oficial, identidade/MFA do proprietário, keystore e dados persistentes permaneceram intocados. Owner segue `PENDING_OWNER`; conectividade comercial aguarda credenciais/homologação; administração global aguarda desenho e autorização. Motoboy não precisou de alterações de código.
+
+Commits locais dos apps e Browser Tests, e SHA remoto do histórico, são registrados após commit/push neste registro e resumo. Ver [REGISTRO 0251](REGISTROS/0251.md), [resumo](RESUMOS/0251.md) e [matriz funcional](MATRIZ_BACKEND_FRONTEND_0250.md).
+
 ## Estado vigente — Campanha 0250 (2026-10-18)
 
 **PARTIAL — correções fail-closed e clareza de estados concluídas; experiência autenticada e conexão comercial ainda sem comprovação.** Restaurante e Motoboy começam com a raiz operacional `inert` até resolver identidade/sessão; caches PWA avançados para 51 e 43.49 sem limpar IndexedDB. Editor de permissões do Restaurante usa descrições em português agrupadas por finalidade. A mensagem iFood agora separa atualização de estado interno de conectividade externa.

@@ -1,3 +1,17 @@
+## Atualização vigente — Campanha 0251 (2026-10-18)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0251-RUNIT-AUTH-BROWSER | API E2E autenticada no processo runit; P0; **PARTIAL** | 11 jornadas Browser sintéticas passaram com handlers reais e PostgreSQL E2E em listener transacional temporário; o runit foi restaurado, readiness 200. Harness usa `rotamoto_app`/`rotamoto_migrator`, não `rotamoto_e2e_app`. | Preparar mecanismo isolado para emitir identidade/sessão temporária via runit sem persistir dados; preservar role e keystore existentes; repetir browser e limpar de modo comprovável. |
+| 0251-OWNER-CHECK | Conta persistente e MFA do proprietário; P0; **PENDING_OWNER** | Conta pessoal, senha, MFA e keystore não foram usados nem alterados. | Proprietário validar a sessão pessoal no Chrome Android; não enviar senha, QR, cookie ou código. |
+| 0251-SYNC-STATUS | Indicador e recuperação de rede; P1; **PARTIAL** | Browser-origin sync obteve ACK `accepted` e o registro canônico foi confirmado no PostgreSQL E2E. Não foi exercitado o indicador global nem falha de rede/reconvergência. | Testar status local/pendente/ACK/outage com UI e fixture, sem exibir “Sincronizado” sem confirmação canônica. |
+| 0251-MARKETPLACE | iFood/99Food/Keeta; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | As três páginas carregam status real de backend e não indicam conexão; nenhuma autorização comercial foi iniciada. | Obter onboarding, credenciais e autorização externa; testar loja/sincronismo após disponibilidade. |
+| 0251-PLATFORM-ADMIN | Administração geral; P1; **AUTHORIZATION_GATE** | Nenhum privilégio global concedido; não foi comprovada UI global. | Aprovar desenho de papéis e eventual migração reversível antes de conceder qualquer role global. |
+| 0251-INVITE-EDGE | Revogação/cancelamento/expiração e motorista desativado ou de outro tenant; P1; **PARTIAL** | Convite, ativação, vínculo ativo, unlink em sessão ativa e negação API foram exercitados; casos restantes não foram repetidos no Browser desta campanha. | Completar cenários adicionais com fixtures rollback; sem tocar nos dados do proprietário. |
+| 0251-HISTORY-PUBLISH | `origin/main`; P1; **PENDING** | Registro/resumo/matriz preparados; estado será atualizado após push e comparação remota de SHA. | Push apenas de `codex-historico`; confirmar SHA e presença dos arquivos publicados por novo fetch. |
+
+Ver [REGISTRO 0251](REGISTROS/0251.md), [resumo](RESUMOS/0251.md) e [matriz](MATRIZ_BACKEND_FRONTEND_0250.md).
+
 ## Atualização vigente — Campanha 0250 (2026-10-18)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

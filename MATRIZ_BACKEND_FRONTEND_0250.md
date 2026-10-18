@@ -26,3 +26,19 @@ Esta matriz registra o delta auditado na 0250. A matriz 0247 continua sendo a re
 - Os testes E2E PostgreSQL desta campanha apontaram para `rotamoto_e2e` e usaram fixtures com rollback. O harness atual usa `rotamoto_app`/`rotamoto_migrator`; não comprova o runtime `rotamoto_e2e_app`.
 - O navegador usou perfil novo e sem credenciais. Capturas em `~/projetos/browser-tests/evidencias/campanhas/0250/` não estão no Git.
 - Nenhum teste comercial foi feito contra iFood, 99Food ou Keeta. O catálogo backend identifica a conexão como não verificada/externa.
+
+## Revalidação autenticada — Campanha 0251
+
+| Funcionalidade | Backend/endpoint | Aplicativo e tela | Autorização | Persistência | Situação após 0251 | Teste/evidência |
+|---|---|---|---|---|---|---|
+| Perfil empresarial | `/api/admin/company` | Restaurante → Administração → Empresa | Proprietário sintético com MFA e `company.manage` | PostgreSQL E2E | Salvamento, reload e leitura canônica comprovados | Chromium/CDP autenticado; fixture rollback; registro sintético conferido por empresa |
+| Perfis e equipe | `/api/admin/roles`, `/permissions`, `/memberships` | Restaurante → Equipe | Dono sintético; funcionário limitado sem administração | PostgreSQL E2E | Criar/editar perfil e negação de leitura administrativa comprovados | UI real; `/api/admin/company` devolveu 403 à sessão limitada |
+| Convite e identidade de motorista | `/api/admin/invitations`, `/identity/membership-invitations/*`, `/:membershipId/driver` | Restaurante → Equipe/Motoboys; Motoboy → Conta/ativação | Convite autorizado, autenticação e vínculo Driver explícito | PostgreSQL E2E | Convite, ativação/login, vínculo e revogação verificados | UI/CDP; sem vínculo API 403, vinculado UI liberada, após revogação mesma sessão API 403 |
+| Integrações de delivery | `/api/admin/integrations` e operações específicas por provedor | Restaurante → Integrações → iFood/99Food/Keeta | `integrations.manage`, autorização do parceiro quando disponível | Estado consultado no backend E2E | Estado das três páginas carregado; sem conexão comercial confirmada | Browser autenticado consultou o endpoint real; nenhuma autorização externa iniciada |
+| Sincronização e ACK | `/api/sync/installations/restaurante`, `/api/sync/push`, `rotamoto.domain_records` | Restaurante; requisição originada do contexto Browser autenticado | Sessão sintética MFA, CSRF, instalação registrada e tenant da sessão | PostgreSQL E2E | ACK `accepted` e registro canônico provados; indicador visual geral/falha de rede ainda pendentes | Browser-origin HTTP e verificação PostgreSQL na mesma fixture revertida |
+| Apresentação administrativa | identidade UI, CSS e Service Worker | Restaurante → Empresa/Equipe/Motoboys/Integrações | Acesso de empresa conforme sessão e permissões | Cache shell versionado, IndexedDB preservado | Botão refresh movido para Equipe; erro vazio não gera cartão; ações e tabs diferenciadas | Capturas locais sanitizadas; 390/360/768/1024/1440 px e desktop forçado em 390, sem overflow |
+| Administração global | Nenhum endpoint global completo comprovado nesta campanha | Plataforma RotaMoto | Papel global separado, não concedido | Não alterado | Continua pendente de fluxo e autorização; proprietário não promovido | Sem migração ou concessão |
+
+### Limite de execução autenticada
+
+A sessão Browser foi sintética e autenticada com fator TOTP de fixture. O Chromium visitou as interfaces servidas em 8083/8084 e fez requisições de mesma origem aos handlers de produção do aplicativo na porta 8787; o runit E2E foi suspenso apenas durante a fixture e restaurado depois. O harness usou conexões E2E próprias (`rotamoto_app`/`rotamoto_migrator`) e rollback. Assim, esta evidência não equivale a uma validação do runit com `rotamoto_e2e_app` nem à sessão pessoal do proprietário.
