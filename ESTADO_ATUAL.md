@@ -1,4 +1,12 @@
-## Estado vigente — Campanha 0247 (2026-10-17)
+## Estado vigente — Campanha 0250 (2026-10-18)
+
+**PARTIAL — correções fail-closed e clareza de estados concluídas; experiência autenticada e conexão comercial ainda sem comprovação.** Restaurante e Motoboy começam com a raiz operacional `inert` até resolver identidade/sessão; caches PWA avançados para 51 e 43.49 sem limpar IndexedDB. Editor de permissões do Restaurante usa descrições em português agrupadas por finalidade. A mensagem iFood agora separa atualização de estado interno de conectividade externa.
+
+`npm test` completo passou nos dois apps. Testes PostgreSQL E2E de identidade e domínio/sincronização passaram com fixtures revertidas; o harness usa `rotamoto_app`/`rotamoto_migrator`, não a role do processo `rotamoto_e2e_app`. Chromium/CDP real, anônimo e perfil isolado: 10 combinações entre 8083/8084 em 360/390/768/1024/1440 px, sem overflow ou exceções, gate inicial ativo. 8787 readiness 200, sessão anônima 401, interfaces 200, proxies de identidade 401 e `nginx -t` válido; postgres/nginx/rotamoto-api-e2e ativos.
+
+Banco oficial, proprietário, MFA, keystore, IndexedDB e dados E2E persistentes não foram alterados. Admin browser autenticado, persistência visual/ACK, conexão externa e administração global permanecem parciais. Restaurante commit local `9b2e7562`; Motoboy `da373176`; sem push. Histórico 0250 publicado e verificado em `origin/main`; SHA final na entrega. Ver [REGISTRO 0250](REGISTROS/0250.md) e [matriz 0250](MATRIZ_BACKEND_FRONTEND_0250.md).
+
+## Estado anterior — Campanha 0247 (2026-10-17)
 
 **PARTIAL — retomada corretiva.** O backend continua exigindo membership ativa e vínculo explícito a Driver ativo por empresa. Nesta retomada, o modal Conta deixou de conter o controle de sincronização; a administração foi dividida em Empresa, Equipe, Motoboys e Integrações, com páginas próprias para iFood, 99Food e Keeta. A tela Motoboy sem vínculo oculta os módulos operacionais e explica que autenticação não habilita operação. “Sincronizado” é escopado por usuário/empresa/Driver e depende de sucesso remoto e fila sem pendências.
 

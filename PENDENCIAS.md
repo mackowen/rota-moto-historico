@@ -1,4 +1,18 @@
-## Atualização vigente — Campanha 0247 (2026-10-17)
+## Atualização vigente — Campanha 0250 (2026-10-18)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0250-AUTH-BROWSER | Administração/convites/Motoboy autenticados; P0; **PARTIAL** | Suítes HTTP PostgreSQL com fixture/rollback passam; CDP desta campanha foi anônimo. | Criar fixture browser autenticada isolada e validar as páginas Empresa/Equipe/Motoboys/Integrações e estado Motoboy sem vínculo. |
+| 0250-COMPANY-PERSISTENCE | Perfil da empresa/reload; P1; **PARTIAL** | Endpoints e testes existentes; não se observou formulário autenticado salvando, recarregando e consultando PostgreSQL via UI. | Demonstrar salvamento e reload com tenant sintético e rollback; nunca no oficial. |
+| 0250-SYNC-ACK | Outbox → API → PostgreSQL → ACK; P1; **PARTIAL** | Teste domain/sync PostgreSQL com rollback passou; não houve sessão Browser real emitindo ACK. | Completar prova observável via UI com fixture autenticada, retry e confirmação canônica. |
+| 0250-PROVIDERS | iFood/99Food/Keeta; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | Runtime indica conexão comercial não verificada/bloqueada; sem credenciais, homologação ou autorização externa. | Obter acesso de onboarding e autorização do provedor; depois validar conexão segura, lojas e sincronismo sem falsa confirmação. |
+| 0250-PLATFORM-ADMIN | Administração geral RotaMoto; P1; **PARTIAL / AUTHORIZATION_GATE** | Não foi comprovada UI global separada; nenhum privilégio foi promovido. | Projetar fluxo explícito com migration auditável/rollback e obter autorização antes de qualquer concessão. |
+| 0250-OWNER-CHECK | Sessão persistente do proprietário/MFA; P0; **PENDING_OWNER** | Nenhuma credencial/sessão pessoal foi usada; dados e MFA não foram alterados. | Proprietário validar pessoalmente as telas no navegador; não compartilhar senha, QR ou códigos. |
+| 0250-HISTORY-PUBLISH | Histórico em `origin/main`; P1; **PASS** | Registro, resumo e matriz publicados e confirmados após `fetch`. | Nenhuma ação pendente para publicação desta campanha. |
+
+Ver [REGISTRO 0250](REGISTROS/0250.md), [resumo](RESUMOS/0250.md) e [matriz](MATRIZ_BACKEND_FRONTEND_0250.md).
+
+## Atualização anterior — Campanha 0247 (2026-10-17)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
 |---|---|---|---|
