@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0255 (2026-10-18)
+
+**PARTIAL — separação global implementada e endpoints diagnosticados; prova positiva do painel global e operações globais completas pendentes.** Migrations 0048–0049 estão aplicadas somente em `rotamoto_e2e`, checksums conferidos, latch fundador vazio e nenhum grant global persistente. Marketplace 404 foi corrigido para carregamento por ação e 503 explícito quando runtime ausente; 403 de sync é legítimo sem `sync.push` e a chamada cliente agora é evitada.
+
+`npm test` completo passou na repetição; testes PostgreSQL de bootstrap sintético e isolamento RLS passaram. Browser/CDP autenticado sintético em 390×844/1280×900 comprovou marketplace 503/403/401, negação do endpoint global para tenant, sync 403 e zero erros JS. Limite: sem sessão global positiva Browser e sem painel de serviços/configurações. Runit E2E readiness 200; Restaurante/Motoboy 8083/8084 200. Banco oficial, conta/MFA/keystore/IndexedDB do proprietário intocados.
+
+Commits locais: Restaurante `ebd0cf7`, Browser Tests `c1a0604`; Motoboy sem alterações. Histórico será publicado e SHA confirmado neste registro. Ver [REGISTRO 0255](REGISTROS/0255.md), [resumo](RESUMOS/0255.md) e [matriz](MATRIZ_ADMIN_GLOBAL_0255.md).
+
 ## Estado vigente — Campanha 0254 (2026-10-18)
 
 **PASS no escopo dos relatórios.** Restaurante reconstruído em oito seções mobile-first, com filtros, estados vazios, dados canônicos de logística/território e exportação CSV. `analytics.js` e os cálculos canônicos permaneceram inalterados; Service Worker avançou para v55 e assets para 0254.1, sem limpar IndexedDB.

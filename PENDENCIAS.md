@@ -2053,3 +2053,11 @@ Ver [REGISTROS/0244.md](REGISTROS/0244.md).
 | 0253-HISTORY | `origin/main`; P1; **PASS** | `dee61b4c402ad73f135033a8bc1a33aecb4149a8` fetch-verificado; registro, resumo e matriz presentes no remoto. | Nenhuma ação; apps e Browser Tests permanecem apenas em commits locais. |
 
 Ver [REGISTRO 0253](REGISTROS/0253.md), [resumo](RESUMOS/0253.md) e [matriz](MATRIZ_BACKEND_FRONTEND_0253.md).
+
+
+## Campanha 0255
+
+- **PARTIAL:** criar sessão global sintética descartável e comprovar painel/ações globais positivas via Browser/CDP.
+- Implementar/verificar UI/API globais de serviços e configurações e fluxo visual de grants, sem promover contas persistentes.
+- Não promover a conta existente: registro 0234 a identifica como proprietária; falta evidência de papel fundador e autorização explícita. O CLI de bootstrap não foi executado.
+- Marketplace permanece `MARKETPLACE_RUNTIME_UNAVAILABLE` (503) até configuração real do runtime/provedor.
