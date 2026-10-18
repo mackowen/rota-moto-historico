@@ -1,3 +1,12 @@
+## Atualização vigente — Campanha 0254 (2026-10-18)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0254-REPORTS | Oito seções, responsividade, filtros e CSV; P0; **PASS** | `npm test` completo; CDP autenticado sintético no app 8083, 5 larguras × 2 temas, amostra/vazio, API E2E real via fixture transacional, CSV e 72 capturas antes/depois. | Nenhuma ação de código pendente para o escopo. Para inspeção física do Chrome Android, proprietário pode recarregar a aplicação e confirmar visualmente. |
+| 0254-RUNIT-BROWSER | Browser autenticado via processo runit/role operacional; P2; **PARTIAL** | Runit readiness 200 antes/depois; durante a fixture os handlers reais foram servidos por listener transacional na 8787 para rollback e não pela instância runit. | Se a prova via role `rotamoto_e2e_app` for necessária, preparar fixture segura não transacional ou harness runtime isolado sem mutação persistente do proprietário. |
+| 0254-LOGISTICS-SAMPLE | Gráficos de logística com eventos persistidos; P2; **EMPTY_STATE_VERIFIED** | Os endpoints do PostgreSQL E2E não tinham amostra logística; UI mostrou vazio. Amostra visual local foi sintética e efêmera. | Nenhum seed persistente foi feito. Se necessário, usar fixtures reversíveis em transação para exercitar dados não vazios da API. |
+| 0254-HISTORY-PUBLISH | `origin/main`; P1; **PENDING_PUBLICATION** | Documentação registrada localmente; publicação ainda não verificada nesta edição. | Fetch, commit/push exclusivo do histórico e confirmar SHA remoto e presença do registro/resumo/matriz. |
+
 ## Atualização vigente — Campanha 0252 (2026-10-18)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

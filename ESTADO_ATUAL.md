@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0254 (2026-10-18)
+
+**PASS no escopo dos relatórios.** Restaurante reconstruído em oito seções mobile-first, com filtros, estados vazios, dados canônicos de logística/território e exportação CSV. `analytics.js` e os cálculos canônicos permaneceram inalterados; Service Worker avançou para v55 e assets para 0254.1, sem limpar IndexedDB.
+
+`npm test` completo do Restaurante passou. Chromium/CDP autenticado sintético no site realmente servido em 8083 cobriu amostra e estado vazio em 360/390/768/1024/1440 px, tema claro/escuro, filtros, CSV e oito seções; 72 capturas antes/depois. Os cinco endpoints canônicos de relatórios responderam 200 e houve zero exceções JS. A fixture transacional usou handlers reais com PostgreSQL E2E e rollback; runit foi restaurado e readiness 200. Essa prova não afirma request Browser pelo processo runit/role runtime durante a captura.
+
+Nenhuma escrita no banco oficial nem alteração em dados do proprietário, identidade, MFA, keystore ou IndexedDB. Relatórios logísticos do banco continuam vazios quando não há registros; gráficos não foram fabricados. Restaurante commit local `ce69d2c`; Browser Tests `0f5134e`; sem push. A publicação exclusiva do histórico será confirmada por fetch antes da entrega. Ver [REGISTRO 0254](REGISTROS/0254.md), [resumo](RESUMOS/0254.md) e [matriz](MATRIZ_RELATORIOS_0254.md).
+
 ## Estado vigente — Campanha 0252 (2026-10-18)
 
 **PARTIAL — endereço empresarial sem coordenadas corrigido e comprovado por browser autenticado sintético; interface de contato de motorista e feedback de integração melhorados.** O PostgreSQL E2E retorna endereço salvo mesmo quando latitude/longitude ainda não existem. O formulário hidrata do servidor sem sobrescrever edição em curso e só confirma salvamento após respostas verificadas. Cadastro de motorista aceita email opcional sem criar conta/convite automaticamente. Ações de provedor usam área única substituível; shell Restaurante v53/assets 0252.1.
