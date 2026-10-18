@@ -2030,3 +2030,17 @@ Ver [REGISTROS/0239.md](REGISTROS/0239.md).
 | 0244-RECOVERY-MFA / 0234 | Recuperação administrativa de MFA; P0; **OPEN** | Fluxo de recuperação não foi alterado nesta auditoria; gates documentados em 0234 seguem pendentes. | Implementar/validar recuperação auditada conforme contrato 0234, sem bypass ou reset automático. |
 
 Ver [REGISTROS/0244.md](REGISTROS/0244.md).
+## Atualização vigente — Campanha 0253 (2026-10-18)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0253-PLATFORM-ADMIN | Administrador geral/fundador; P0; **AUTHORIZATION_GATE** | Não há evidência histórica suficiente para identificar o fundador; nenhum endpoint/painel global completo ou privilégio foi criado. | Aprovar modelo global e comprovar identidade fundadora; testar com fixture sintética antes de qualquer promoção persistente. |
+| 0253-AUTHENTICATED-E2E | Navegador autenticado + PostgreSQL E2E/runit; P0; **PARTIAL** | CDP anônimo bloqueou endpoints protegidos com 401; não foram usados owner, senhas, MFA nem fixtures persistentes nesta campanha. | Preparar identidade sintética isolada autenticada no processo runit e comprovar ACK e leitura de retorno no PostgreSQL. |
+| 0253-REPORTS | Relatórios/CSV; P1; **PARTIAL** | Testes canônicos de analytics passaram; sem revisão Browser autenticada nem capturas antes/depois comparáveis. | Revisar relatório e exportação com identidade sintética, temas/viewports e fontes canônicas; não fabricar métricas. |
+| 0253-DRIVER-INVITE | Convite→ativação→vínculo de motoboy; P1; **PARTIAL** | Rotas/UI existentes preservadas; jornada completa não executada no runit/PostgreSQL desta campanha. | Testar convite sintético e estados até vínculo ativo, sem email externo e com limpeza segura. |
+| 0253-COMMERCIAL | iFood/99Food/Keeta; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | Nenhuma credencial/homologação comercial disponível; não foi simulada conexão. | Obter credenciais/onboarding autorizados e então provar autorização, lojas e sincronismo real. |
+| 0253-TEAM-ADDRESS | `admin@local`, fonte de identidade e endereço; P1; **PARTIAL** | Backend autoritativo mantido e atualizações entre abas conectadas; registros não foram auditados nem houve nova escrita/readback do endereço. | Auditar registros sem mesclar/excluir e testar update/readback em E2E sintético autenticado. |
+| 0253-MULTI-DEVICE | Atualização entre dispositivos/offline/conflito; P1; **PARTIAL** | BroadcastChannel entre abas e unidade passou; sem mecanismo comprovado entre dispositivos ou cenários de conflito/desconexão. | Definir evento/sync incremental compatível e validar offline, reconexão e conflito com ACK canônico. |
+| 0253-HISTORY | `origin/main`; P1; **PASS** | `dee61b4c402ad73f135033a8bc1a33aecb4149a8` fetch-verificado; registro, resumo e matriz presentes no remoto. | Nenhuma ação; apps e Browser Tests permanecem apenas em commits locais. |
+
+Ver [REGISTRO 0253](REGISTROS/0253.md), [resumo](RESUMOS/0253.md) e [matriz](MATRIZ_BACKEND_FRONTEND_0253.md).
