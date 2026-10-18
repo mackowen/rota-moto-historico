@@ -4,7 +4,7 @@
 
 `npm test` completo do Restaurante passou. Chromium/CDP autenticado sintético no site realmente servido em 8083 cobriu amostra e estado vazio em 360/390/768/1024/1440 px, tema claro/escuro, filtros, CSV e oito seções; 72 capturas antes/depois. Os cinco endpoints canônicos de relatórios responderam 200 e houve zero exceções JS. A fixture transacional usou handlers reais com PostgreSQL E2E e rollback; runit foi restaurado e readiness 200. Essa prova não afirma request Browser pelo processo runit/role runtime durante a captura.
 
-Nenhuma escrita no banco oficial nem alteração em dados do proprietário, identidade, MFA, keystore ou IndexedDB. Relatórios logísticos do banco continuam vazios quando não há registros; gráficos não foram fabricados. Restaurante commit local `ce69d2c`; Browser Tests `0f5134e`; sem push. A publicação exclusiva do histórico será confirmada por fetch antes da entrega. Ver [REGISTRO 0254](REGISTROS/0254.md), [resumo](RESUMOS/0254.md) e [matriz](MATRIZ_RELATORIOS_0254.md).
+Nenhuma escrita no banco oficial nem alteração em dados do proprietário, identidade, MFA, keystore ou IndexedDB. Relatórios logísticos do banco continuam vazios quando não há registros; gráficos não foram fabricados. Restaurante commit local `ce69d2c`; Browser Tests `0f5134e`; sem push. Histórico publicado exclusivamente em `origin/main`, SHA confirmado `ae0f5078cc540ded4467ca015d39f9a340162f5f`; registro, resumo e matriz foram encontrados após fetch. Ver [REGISTRO 0254](REGISTROS/0254.md), [resumo](RESUMOS/0254.md) e [matriz](MATRIZ_RELATORIOS_0254.md).
 
 ## Estado vigente — Campanha 0252 (2026-10-18)
 
