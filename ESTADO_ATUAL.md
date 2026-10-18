@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0252 (2026-10-18)
+
+**PARTIAL — endereço empresarial sem coordenadas corrigido e comprovado por browser autenticado sintético; interface de contato de motorista e feedback de integração melhorados.** O PostgreSQL E2E retorna endereço salvo mesmo quando latitude/longitude ainda não existem. O formulário hidrata do servidor sem sobrescrever edição em curso e só confirma salvamento após respostas verificadas. Cadastro de motorista aceita email opcional sem criar conta/convite automaticamente. Ações de provedor usam área única substituível; shell Restaurante v53/assets 0252.1.
+
+`npm test` completo de Restaurante e Motoboy passou. Browser/CDP sintético autenticado: 12 fluxos, 17 viewports, quatro negações esperadas, zero JS/5xx; fixture transacional `rotamoto_e2e` validou endereço após reload, convite/ativação/vínculo/revogação, permissões e ACK canônico. O harness suspendeu o serviço runit durante a fixture; não comprova API sob role `rotamoto_e2e_app`. Após fixture, runit E2E ativo/readiness 200; frontends 8083/8084 HTTP 200.
+
+Nenhuma escrita em `rotamoto`; owner persistente/MFA, dados E2E, IndexedDB e keystore não foram modificados. Restaurante local `1ff65abc`; Browser Tests local `87616f2`; Motoboy sem alteração. Somente histórico será publicado. Administração global/fundador permanece com gate: histórico 0234 descreve primeiro proprietário e afirma que o CLI real não foi executado; não há evidência para promoção nem endpoints globais completos. Contas comerciais e homologação externas não existem. Atualização de sync entre abas/rede/ACK visual, nova jornada Browser do campo email, clique repetido provider e revisão visual autenticada de relatórios permanecem pendentes. Ver [REGISTRO 0252](REGISTROS/0252.md), [resumo](RESUMOS/0252.md) e [matriz 0252](MATRIZ_BACKEND_FRONTEND_0252.md).
+
 ## Estado vigente — Campanha 0251 (2026-10-18)
 
 **PARTIAL — experiência administrativa sintética autenticada e persistência E2E comprovadas; validação do runit operacional e dependências externas permanecem.** No Restaurante, a atualização de usuários/perfis está em Equipe, estados de erro vazios não ocupam cartão e ações administrativas/abas provider têm hierarquia visual. Service Worker avançado para v52 e assets de identidade `0251.1`, sem remover IndexedDB.

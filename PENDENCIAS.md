@@ -1,3 +1,18 @@
+## Atualização vigente — Campanha 0252 (2026-10-18)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0252-PLATFORM-FOUNDER | Administrador global/fundador; P0; **BLOCKED_AUTHORIZATION_GATE** | Registro 0234 especifica primeiro proprietário e diz que CLI real não foi executado; sem evidência verificável de fundadora global ou conjunto de endpoints de administração global. Nenhuma conta promovida/migration aplicada. | Proprietário aprovar desenho de papéis e comprovar identidade histórica antes de proposta de migration reversível; depois autorizar explicitamente qualquer concessão. |
+| 0252-RUNIT-BROWSER | Browser autenticado via runit/`rotamoto_e2e_app`; P0; **PARTIAL** | Fixture 0252 usa handlers reais e `rotamoto_e2e`, 12 fluxos/17 viewports, mas substitui temporariamente o listener runit e usa role do harness. Serviço restaurado/readiness 200. | Criar autenticação sintética via runit/runtime role, sem tocar no owner nem reter dados de teste; validar UI e limpar com rollback seguro. |
+| 0252-DRIVER-EMAIL | Cadastro email → convite → ativação; P1; **PARTIAL** | Campo de email opcional validado foi adicionado; UI avisa que não envia convite nem cria conta. Jornada de criação desse campo via browser não executada. | Testar registro operacional sintético, convite local, identidade já existente, aceitação, vínculo, cancelamento/expiração e revogação. |
+| 0252-PROVIDER-ACTIONS | Repetição/erros de iFood, 99Food, Keeta; P1; **PARTIAL / EXTERNAL** | Formulários/avisos usam região substituível; sem autorização comercial. Tentativa Browser do botão repetido não localizou o seletor e foi removida do harness; não foi afirmada como PASS. | Validar clique repetido e erros HTTP via Browser; obter credenciais/onboarding externo somente com autorização antes de conectar. |
+| 0252-REPORTS-VISUAL | Relatórios/CSV; P1; **PARTIAL** | Agregação canônica e renderer existentes; suíte analytics passou. Nenhuma inspeção autenticada de relatórios/CSV em todos os viewports/temas nesta campanha. | Fazer revisão Browser autenticada em 360/390/768/1024/1440 e validar filtros, regiões, vazios e CSV sem dados sintéticos em gráficos. |
+| 0252-CROSS-TAB-SYNC | Atualização entre abas, dispositivos e outage; P1; **PARTIAL** | Após operações de Empresa, a UI atualiza por snapshot servidor; fluxo 0251/0252 provou ACK canônico em fixture. Não se provaram broadcast multipágina, offline/reconexão, conflito, ou indicador visual do ACK. | Implementar/validar mecanismo coerente sem polling excessivo; mostrar local/pending/ACK apenas com confirmação. |
+| 0252-OWNER-CHECK | Sessão/MFA persistente do proprietário; P0; **PENDING_OWNER** | Conta, senha, MFA, keystore e dados persistentes não foram usados nem alterados. | Proprietário validar pessoalmente em Chrome Android; não compartilhar senha, cookie, QR TOTP nem códigos. |
+| 0252-OFFICIAL-DB | Banco oficial `rotamoto`; P0; **PASS_PRESERVED** | Nenhuma conexão de escrita/migration/promoção foi realizada. | Continuar sem alterações oficiais até autorização explícita e plano de rollback aprovado. |
+
+Ver [REGISTRO 0252](REGISTROS/0252.md) e [matriz funcional](MATRIZ_BACKEND_FRONTEND_0252.md).
+
 ## Atualização vigente — Campanha 0251 (2026-10-18)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

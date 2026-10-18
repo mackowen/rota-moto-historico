@@ -1,0 +1,23 @@
+# Matriz funcional — Campanha 0252
+
+Esta matriz registra o delta verificado na 0252. Endpoints, contratos e fluxos adicionais continuam descritos nas matrizes 0247/0250.
+
+| Funcionalidade | Backend/API | Interface | Autorização | Persistência | Estado 0252 | Evidência/limite |
+|---|---|---|---|---|---|---|
+| Perfil da empresa | `PUT /api/admin/company/profile` | Administração → Empresa | `company.manage`, MFA e CSRF | PostgreSQL | Funcional no fluxo sintético | Browser autenticado; reload dentro de fixture com rollback. |
+| Endereço operacional | `PUT /api/admin/company/location`, `GET /api/admin/company` | Administração → Empresa; localização/mapa usa estado separado | `company.manage`, versão otimista | PostgreSQL `operational_address` e coordenadas opcionais | Corrigido: endereço sem coordenadas retorna no snapshot | Teste unitário e Browser; endereço fictício retornou preenchido após reload. |
+| Fuso horário | `PUT /api/admin/company` | Administração → Empresa / Ajustes | `company.manage` | PostgreSQL | Funcional no fluxo sintético | Salvo e relido na fixture PostgreSQL E2E. |
+| Convites de identidade | `/api/admin/invitations`, `/api/identity/membership-invitations/*` | Equipe / Conta | `members.invite`, token expirável, sessão/CSRF | PostgreSQL + transporte de email | Implementado | Browser sintético anterior e 0252; capturador local, sem envio real. |
+| Cadastro operacional de motorista | `/api/domain/drivers` via sync/domain | Restaurante → Motoboys | Permissão empresarial; não cria identidade | IndexedDB/outbox → PostgreSQL após ACK | Email de contato adicionado; convite continua separado | Testes de contrato e suites passaram; nova submissão do campo por Browser pendente. |
+| Vínculo Motorista–Membership | `/api/admin/memberships/:id/driver` | Administração → Motoboys/Equipe | Administrador empresarial autorizado | PostgreSQL | Protegido e operacional | Browser cobriu vínculo, operação e revogação; API negou após desvinculação. |
+| Integrações iFood/99Food/Keeta | `/api/admin/integrations/*` e catálogo real | Administração → Integrações | `integrations.manage`; credenciais/consentimento externos | PostgreSQL/worker/secret provider | Estado interno consultável; conexão comercial não confirmada | Browser consultou backend; nenhuma autorização foi iniciada. Cliques repetidos/erros não tiveram prova visual final. |
+| Relatórios | Agregações canônicas e analytics HTTP | Relatórios, renderer `analytics-view.js` | Tenant e permissões existentes | Projeções canônicas locais/servidor | Código existente; delta não validado visualmente nesta campanha | `npm test` inclui analytics; nova inspeção autenticada de todos os viewports/CSV pendente. |
+| Equipe local vs identidade central | Usuários/perfis locais e `/api/admin/memberships`, `/roles` | Ajustes/equipe e Administração → Equipe | RBAC local não concede autorização do backend | IndexedDB vs PostgreSQL | Separação continua; `admin@local` sem promoção/mesclagem | Nenhuma leitura/escrita em conta real; investigação histórica global parcial. |
+| Administrador global/fundador | Nenhum conjunto de endpoints globais completo comprovado | Painel global não demonstrado | Papel global separado; gate explícito | Sem alteração | BLOCKED / autorização e desenho ausentes | Registro 0234 descreve bootstrap de proprietário e declara CLI real não executado; sem prova de fundadora persistente. |
+| Atualização entre telas/abas | Requests de administração recarregam snapshots; sincronização existente | Formulários administrativos | Permissão revalidada no backend | PostgreSQL + IndexedDB/outbox | Parcial | Salvar/recarregar validado; BroadcastChannel, reconexão, conflito entre abas e ACK visual ainda não validados. |
+| Shell/cache | assets estáticos e Service Worker | Restaurante PWA | Não aplicável | Cache shell; IndexedDB preservado | v53 / assets 0252.1 | Testes atom-install, cache e suíte completa passaram. |
+| Aplicativo Motoboy | `/api/motoboy/domain/*` | Interface Motoboy | Driver ativo e permissão server-side | PostgreSQL + IndexedDB | Sem alteração | Suíte integral passou; Browser 0252 exercitou estado autorizado/revogado em sessão sintética. |
+
+## Evidência Browser e limitações
+
+O harness 0252 utiliza uma sessão autenticada sintética com TOTP de fixture, visita 8083/8084 e conecta os handlers reais ao PostgreSQL `rotamoto_e2e` dentro de transação revertida. O runit é suspenso durante essa fixture. Portanto, a execução não comprova o serviço permanente sob `rotamoto_e2e_app`. O relatório sanitizado, mode 0600, e capturas privadas mode 0600 ficam em `~/projetos/browser-tests/evidencias/campanhas/0252/`.
