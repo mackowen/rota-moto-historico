@@ -6,7 +6,7 @@ Chromium/CDP autenticado com fixture sintética transacional: 11 fluxos, 17 veri
 
 Limite relevante: para garantir rollback, o teste suspendeu temporariamente `rotamoto-api-e2e` e ligou handlers reais na 8787 usando o harness com `rotamoto_app`/`rotamoto_migrator`; o processo foi restaurado e readiness 200. Isto não prova o processo runit com `rotamoto_e2e_app`. Banco oficial, identidade/MFA do proprietário, keystore e dados persistentes permaneceram intocados. Owner segue `PENDING_OWNER`; conectividade comercial aguarda credenciais/homologação; administração global aguarda desenho e autorização. Motoboy não precisou de alterações de código.
 
-Commits locais dos apps e Browser Tests, e SHA remoto do histórico, são registrados após commit/push neste registro e resumo. Ver [REGISTRO 0251](REGISTROS/0251.md), [resumo](RESUMOS/0251.md) e [matriz funcional](MATRIZ_BACKEND_FRONTEND_0250.md).
+Commits locais: Restaurante `15d061cc2c877371cf036997e815a7de6023ce13`; Browser Tests `7cfefd8d63f1922ecaf0b62ab92013075665e056`; Motoboy sem alteração. O primeiro commit de histórico `3ace996100616dfab986849a3a689d4535bb28a5` foi publicado em `origin/main` e confirmado por fetch; hash da atualização documental final será informado na entrega. Ver [REGISTRO 0251](REGISTROS/0251.md), [resumo](RESUMOS/0251.md) e [matriz funcional](MATRIZ_BACKEND_FRONTEND_0250.md).
 
 ## Estado vigente — Campanha 0250 (2026-10-18)
 
