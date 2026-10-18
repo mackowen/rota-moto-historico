@@ -4,7 +4,7 @@
 
 `npm test` completo passou na repetição; testes PostgreSQL de bootstrap sintético e isolamento RLS passaram. Browser/CDP autenticado sintético em 390×844/1280×900 comprovou marketplace 503/403/401, negação do endpoint global para tenant, sync 403 e zero erros JS. Limite: sem sessão global positiva Browser e sem painel de serviços/configurações. Runit E2E readiness 200; Restaurante/Motoboy 8083/8084 200. Banco oficial, conta/MFA/keystore/IndexedDB do proprietário intocados.
 
-Commits locais: Restaurante `ebd0cf7`, Browser Tests `c1a0604`; Motoboy sem alterações. Histórico será publicado e SHA confirmado neste registro. Ver [REGISTRO 0255](REGISTROS/0255.md), [resumo](RESUMOS/0255.md) e [matriz](MATRIZ_ADMIN_GLOBAL_0255.md).
+Commits locais: Restaurante `ebd0cf7`, Browser Tests `c1a0604`; Motoboy sem alterações. Histórico publicado exclusivamente em `origin/main`; SHA confirmado `6d11a616fecc72fb3a07cf630e3652d7c7902a80`. Ver [REGISTRO 0255](REGISTROS/0255.md), [resumo](RESUMOS/0255.md) e [matriz](MATRIZ_ADMIN_GLOBAL_0255.md).
 
 ## Estado vigente — Campanha 0254 (2026-10-18)
 
