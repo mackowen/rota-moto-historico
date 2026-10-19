@@ -1,3 +1,15 @@
+## Estado vigente — Reconciliação documental / próxima 0256-D2 (2026-10-19)
+
+Esta atualização é documental. O estado operacional mais recente continua sendo o **PARTIAL** da 0256-D1. Foi criado o [Inventário Único de Problemas](INVENTARIO_UNICO_PROBLEMAS.md), com rastreio por ID para itens recentes e históricos e regra de encerramento por evidência específica, e a [Ordem de Execução](ORDEM_EXECUCAO_CAMPANHAS.md) até 0268. A próxima implementação é a 0256-D2, conforme dependências; nenhuma alteração foi feita em código, banco, serviço, identidade, credencial ou configuração operacional.
+
+O pedido de auditoria Android informa 19 ocorrências, mas o registro D1 enumera 17 e não foi encontrada a fonte original das 19. Não declarar reconciliação 19/19; os 19 slots ainda aguardam associação ao conteúdo numerado original. Solicitar lista/capturas sanitizadas. D2 pode começar por temas identificados, respeitando o contrato e autorização.
+
+0257 deve comprovar painel global com identidade sintética e permissões limitadas no E2E; founder não identificado. 0258 é gate obrigatório antes de qualquer bootstrap, GRANT, migration ou promoção persistente: evidência histórica, desenho revisado, rollback, recovery, alvo validado e autorização explícita. Nenhum desses atos foi autorizado nesta revisão.
+
+Ver [REGISTRO 0256-D2-PLANEJAMENTO](REGISTROS/0256-D2-PLANEJAMENTO.md), [Inventário](INVENTARIO_UNICO_PROBLEMAS.md), [Ordem de execução](ORDEM_EXECUCAO_CAMPANHAS.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
+
+---
+
 ## Estado vigente — Campanha 0256-D1 (2026-10-19)
 
 **PARTIAL.** A auditoria física Android resultou em mudanças reais no estado inicial de autenticação, revalidação em foreground, estado de enrollment MFA, QR sintético de impressão, botão de salvar Aparência e ajustes visuais/CSS/cache. `npm test` passou integralmente; Browser/CDP autenticado em cinco viewports e dois temas comprovou salvamento do tema após reload e isolamento das simulações. O runtime E2E comprovou que `rotamoto_app` não pode ler `audit_log`; a consulta administrativa ficou BLOCKED e não houve grant/migration. O relato de sessão de seis minutos não foi reproduzido em Android físico: política backend permanece 30 minutos idle deslizante e 12 horas absolutas. Vários dos 17 itens ainda não têm prova completa.

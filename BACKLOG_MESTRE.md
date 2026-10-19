@@ -1,3 +1,13 @@
+## Reconciliação documental vigente — 0256-D2 planejamento (2026-10-19)
+
+O índice operacional e crosswalk de IDs é [INVENTARIO_UNICO_PROBLEMAS.md](INVENTARIO_UNICO_PROBLEMAS.md); a sequência e gates são [ORDEM_EXECUCAO_CAMPANHAS.md](ORDEM_EXECUCAO_CAMPANHAS.md), com registro em [REGISTROS/0256-D2-PLANEJAMENTO.md](REGISTROS/0256-D2-PLANEJAMENTO.md). As tabelas e IDs históricos abaixo permanecem preservados. Nenhuma pendência é fechada por esta atualização documental.
+
+**Divergência Android:** D1 contém 17 ocorrências enumeradas; esta solicitação informa 19. A fonte numerada das 19 não foi encontrada; os itens desconhecidos estão marcados `BLOCKED_SOURCE_DOCUMENT` no inventário. Pedir a lista/capturas sanitizadas para reconciliar, sem inferir que as 17 são as mesmas.
+
+**Regra de fechamento:** nenhuma linha passa a PASS por conclusão de campanha ou por `npm test` isolado. Exigir aceite e evidência específicos, registrar remanescentes/bloqueios/regressões/não testados e validação do proprietário para hardware Chrome Android quando aplicável.
+
+---
+
 ## Atualização vigente — Campanha 0256-D1 (2026-10-19)
 
 | ID estável | Descrição | Prioridade | Estado | Campanha responsável | Dependências | Evidência atual | Critério de aceite |
