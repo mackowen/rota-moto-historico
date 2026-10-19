@@ -1,4 +1,16 @@
-## Atualização vigente — Campanha 0256-B (2026-10-19)
+## Atualização vigente — Campanha 0256-B1 (2026-10-19)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação |
+|---|---|---|---|
+| RM-0256B1-PAGE-ISOLATION | Isolamento de Conta e segurança nas rotas operacionais; P0; **PASS técnico** | Raiz corrigida: página criada no host global não era desmontada ao trocar de aba. CDP autenticado verifica DOM completo pós-rolagem em Início, Entregas, Motoboys, Rotas, Relatórios, Eventos e Ajuda; 5 larguras × claro/escuro. | Proprietário confirmar no Chrome Android físico; runtime permanente fica para 0263. |
+| RM-0256B1-ACCOUNT-FORMS | Troca de empresa e aceitação de convite; P1; **PASS técnico** | Campos responsivos empilhados e largura integral em 360/390 px; sem overflow nas cinco larguras. | Confirmar teclado virtual Android no aparelho. |
+| RM-0256B1-HISTORY | Publicação do registro; P1; **PENDING_PUBLICATION** | Registro e índices preparados; remoto ainda precisa ser verificado após push. | Push apenas `rota-moto-historico`, fetch e validar SHA/registro em `origin/main`. |
+
+A validação física no Chrome Android segue com o proprietário. Os endpoints de logística/analytics não fazem parte da fixture temporária transacional e responderam 404; não houve 5xx ou exceções JS. O Chromium headless com GPU desativada gerou três falhas vetoriais tratadas pelo fallback raster; não houve outros erros de console. Nenhuma alteração no banco oficial, MFA, vínculos reais ou privilégios persistentes. Pendências e campanhas seguintes foram mantidas.
+
+---
+
+## Atualização anterior — Campanha 0256-B (2026-10-19)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
 |---|---|---|---|

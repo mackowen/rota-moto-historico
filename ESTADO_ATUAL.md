@@ -1,6 +1,18 @@
 # Estado vigente — Campanha 0256-B (2026-10-19)
 
-**PASS técnico na Campanha 0256-B.** Login passou a bloquear a montagem do painel até sessão válida e MFA; login válido direciona para Início; logout/expiração limpam a árvore operacional. Ajustes usa 18 cards responsivos e páginas próprias; Conta e segurança está dentro de Ajustes. `npm test`, CDP anônimo e autenticado sintético passaram em cinco larguras e dois temas. Troca não autorizada foi negada (403); acesso anônimo retorna 401. Fixture E2E revertida e runit restaurado com health 200. Ver [registro 0256-B](REGISTROS/0256-B.md) e [resumo](RESUMOS/0256-B.md).
+## Estado vigente — Correção emergencial 0256-B1 (2026-10-19)
+
+**PASS técnico após correção estrutural do vazamento de Conta e segurança.** A página era preservada no host global depois de sair de Ajustes; agora só monta dentro de `#main` na rota autorizada e é desmontada em qualquer outra rota. O teste CDP autenticado inspeciona o documento após rolagem completa em Início, Entregas, Motoboys, Rotas, Relatórios, Eventos e Ajuda, e alterna repetidamente Rotas para verificar o teardown do mapa. O espaço inferior em 1024 px também foi corrigido. `npm test`, MFA, expiração/relogin, logout, cards, retorno/histórico, autorização 200/403, cinco larguras e temas claro/escuro passaram. Não houve exceções JS, erros inesperados de console ou 5xx. Com GPU desativada no Chromium, três inicializações vetoriais foram capturadas pelo runtime e mudaram para mapa raster; 404 vieram dos endpoints ausentes no fixture reduzido. Fixture revertida e runtime E2E restaurado com health 200. Ver [registro 0256-B1](REGISTROS/0256-B1.md).
+
+Chrome Android físico e teclado virtual permanecem PENDING_OWNER; Browser autenticado pelo processo runit permanente permanece para 0263. Sem alteração no PostgreSQL oficial, MFA ou dados persistentes reais.
+
+**Nota de status da 0256-B:** o PASS anterior da campanha não cobria o vazamento observado posteriormente pelo proprietário; a aprovação funcional só é considerada restabelecida após as provas da 0256-B1. Ver [registro 0256-B](REGISTROS/0256-B.md).
+
+---
+
+# Estado anterior — Campanha 0256-B (2026-10-19)
+
+**PASS técnico na Campanha 0256-B, posteriormente corrigido pela 0256-B1.** Login passou a bloquear a montagem do painel até sessão válida e MFA; login válido direciona para Início; logout/expiração limpam a árvore operacional. Ajustes usa 18 cards responsivos e páginas próprias; Conta e segurança está dentro de Ajustes. `npm test`, CDP anônimo e autenticado sintético passaram em cinco larguras e dois temas. Troca não autorizada foi negada (403); acesso anônimo retorna 401. Fixture E2E revertida e runit restaurado com health 200. Ver [registro 0256-B](REGISTROS/0256-B.md) e [resumo](RESUMOS/0256-B.md).
 
 **PENDING_OWNER:** confirmação física no Chrome Android não foi realizada. Browser autenticado usou listener transacional temporário; execução via runtime permanente continua pendente. Nenhum banco oficial, credencial real, IndexedDB ou fator MFA do proprietário foi alterado. Motoboy sem mudanças. Registro publicado/verificado em `origin/main`, criação `f3899d9`; apps e Browser Tests não foram enviados.
 
