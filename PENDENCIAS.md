@@ -5,6 +5,7 @@
 | RM-0256-SETTINGS | Ajustes, navegação e páginas administrativas; P0; **PARTIAL** | Browser autenticado sintético/CDP: Início, sem overlay/atalho legado, páginas Empresa/Equipe/Motoboys/Integrações, cinco viewports e dois temas. | Provar CRUD/releitura autenticados em E2E pelo runit sem alterar dados do proprietário. |
 | RM-0256-PROVIDERS | iFood, 99Food e Keeta; P1; **PARTIAL / BLOCKED_EXTERNAL_DEPENDENCY** | Três páginas e leitura real do estado; clique de atualização testado; sem conexão comercial confirmada. | Configurar credenciais/onboarding e homologar com autorização do proprietário; não exibir conectado antes de confirmação real. |
 | RM-0256-RUNIT-BROWSER | Browser pelo runit/role runtime; P1; **PARTIAL** | Serviço readiness 200 após o teste; Browser usou listener isolado com fixture e rollback. | Preparar prova autenticada via processo permanente/role runtime com identidade sintética descartável. |
+| RM-0256-HISTORY | Publicação do registro/backlog; P1; **PASS** | Commit `bf93e967722a93cfe0572b7138c8dae9301708f3`, fetch e `ls-remote` iguais; registro presente em `origin/main`. | Publicado. |
 | RM-0256-OWNER-ANDROID | Validação física do Chrome Android; P2; **PENDING_OWNER** | CDP validou dimensões/temas, mas não o aparelho físico nem modo “Site para computador”. | Proprietário confirmar visualmente no aparelho sem compartilhar senha, MFA ou cookies. |
 
 Ver [REGISTRO 0256](REGISTROS/0256.md) e [Backlog Mestre](BACKLOG_MESTRE.md).

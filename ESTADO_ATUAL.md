@@ -4,7 +4,7 @@
 
 `npm test` completo final passou. Browser/CDP sintético autenticado/MFA em 360/390/768/1024/1440 px e claro/escuro, zero exceções JS; endpoint autorizado 200 e restrito 403. Fixture transacional foi revertida. Runit E2E e interfaces 8083/8084 retornaram HTTP 200 depois da restauração. A prova Browser não usou o processo runit durante a sessão. Nenhuma escrita no banco oficial ou alteração nos dados/identidade persistentes do proprietário.
 
-Commits locais: Restaurante `83a7251`; Browser Tests `ae4458b`; Motoboy sem alterações. Histórico será publicado somente em `origin/main`. Ver [REGISTRO 0256](REGISTROS/0256.md), [resumo](RESUMOS/0256.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
+Commits locais: Restaurante `83a7251`; Browser Tests `ae4458b`; Motoboy sem alterações. Histórico publicado somente em `origin/main`; commit inicial `bf93e967722a93cfe0572b7138c8dae9301708f3` fetch-verificado e registro presente. Ver [REGISTRO 0256](REGISTROS/0256.md), [resumo](RESUMOS/0256.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
 
 ## Estado vigente — Campanha 0255 (2026-10-18)
 
