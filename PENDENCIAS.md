@@ -1,3 +1,16 @@
+## Atualização vigente — Campanha 0256-C (2026-10-19)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação |
+|---|---|---|---|
+| RM-0256C-TEAM-RBAC | Equipe, convites, perfis e Sistema local; P0; **PARTIAL** | Browser autenticado sintético com 42 verificações; perfil sem chave manual/colisão, edição, perfil protegido, convite capturado, texto de Sistema local e regressões B1. HTTP PostgreSQL autenticado passou tenant/RLS, MFA, permissões e convite. | Provar pelo Browser o convite aceito ligado explicitamente a Driver da mesma empresa, com autorização negativa. |
+| RM-0256C-FULL-SUITE | `npm test` integral; P1; **PARTIAL** | Após corrigir contrato compartilhado, duas execuções pararam em `test-backup-control.js` com `BACKUP_CONTROL_LOCK_UNSAFE`/`BACKUP_CONTROL_BUSY`; o teste passou isoladamente. | Repetir e diagnosticar corrida no escopo 0256-E; sem mexer em backup nesta campanha. |
+| RM-0256C-ANDROID | Chrome Android físico e teclado; P2; **PENDING_OWNER** | Chromium/CDP 360, 390, 768, 1024 e 1440 px, claro/escuro. | Proprietário conferir no aparelho real, sem compartilhar credenciais ou fatores. |
+| RM-0256C-HISTORY | Registro histórico; P1; **PENDING_PUBLICATION** | Registro, estado, backlog, pendências e índice preparados. | Publicar somente `rota-moto-historico`, buscar e confirmar o commit remoto. |
+
+Ver [REGISTRO 0256-C](REGISTROS/0256-C.md) e [Backlog Mestre](BACKLOG_MESTRE.md). Integrações/origens/laboratório (0256-D), sistema/backup (0256-E), auditoria visual/E2E (0256-F) e administração global (0257) permanecem planejadas. Pendências anteriores de equipe/perfis, administradores locais, iFood/99Food/Keeta, laboratório duplicado, backup/recuperação e padronização continuam preservadas.
+
+---
+
 ## Atualização vigente — Campanha 0256-B1 (2026-10-19)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação |
