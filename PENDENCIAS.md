@@ -7,7 +7,7 @@
 | RM-0256B-ACCOUNT | Conta e segurança; P0; **PASS técnico** | Página própria; MFA, recuperação, convite e troca de empresa negada testados; backend 403. | Sessões/dispositivos só entram se suporte real for implementado. |
 | RM-0256B-ANDROID | Chrome Android físico; P2; **PENDING_OWNER** | CDP Chromium emulado; não comprova aparelho/teclado físico. | Proprietário confirmar visualização e teclado sem compartilhar credenciais. |
 | RM-0256B-RUNIT | Browser pelo runtime permanente; P1; **PARTIAL** | Fixture temporária e transacional; rollback, `sv up` e readiness 200. | Continuar a validação do runtime permanente na campanha 0263. |
-| RM-0256B-HISTORY | Publicação do registro; P1; **PENDING_PUBLICATION** | Registro preparado; verificar commit no `origin/main` após push somente do histórico. | Registrar SHA remoto e fechar publicação. |
+| RM-0256B-HISTORY | Publicação do registro; P1; **PASS** | Push somente do histórico; fetch confirmou `origin/main` em `f3899d9` e `git show origin/main:REGISTROS/0256-B.md` retornou o registro. | Concluído. |
 
 Issues 01, 02, 03 e 11 estão documentados e corrigidos no [registro 0256-B](REGISTROS/0256-B.md). As pendências de Equipe/perfis, sistema local/admins locais, integrações iFood/99Food/Keeta, laboratório duplicado, backup/recuperação, padronização de formulários e campanhas 0256-C/D/E/F e 0257 permanecem preservadas no backlog.
 
