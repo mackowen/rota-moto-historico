@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0256-D2 (2026-10-19)
+
+A lista de 19 ocorrências do proprietário foi conciliada individualmente como `RM-AUD19-01`…`RM-AUD19-19` em [INVENTARIO_UNICO_PROBLEMAS.md](INVENTARIO_UNICO_PROBLEMAS.md). **PARTIAL:** corrigida a sobreposição dos toasts com a barra inferior e a corrida de decode do QR antes da impressão; demais problemas permanecem em aberto, bloqueados ou dependem do proprietário, cada um com critério próprio. Registro e evidências: [REGISTROS/0256-D2.md](REGISTROS/0256-D2.md).
+
+Preservados 0256-E/F e 0257–0268. Em particular: auditoria administrativa requer modelo tenant-scoped e gate; edição de identidade/Driver precisa API/contrato apropriado; Chrome Android físico depende do proprietário; corrida de backup segue para 0256-E. `npm test` é somente regressão e não fecha itens individuais.
+
+---
+
 ## Reconciliação documental vigente — 0256-D2 planejamento (2026-10-19)
 
 O índice operacional e crosswalk de IDs é [INVENTARIO_UNICO_PROBLEMAS.md](INVENTARIO_UNICO_PROBLEMAS.md); a sequência e gates são [ORDEM_EXECUCAO_CAMPANHAS.md](ORDEM_EXECUCAO_CAMPANHAS.md), com registro em [REGISTROS/0256-D2-PLANEJAMENTO.md](REGISTROS/0256-D2-PLANEJAMENTO.md). As tabelas e IDs históricos abaixo permanecem preservados. Nenhuma pendência é fechada por esta atualização documental.

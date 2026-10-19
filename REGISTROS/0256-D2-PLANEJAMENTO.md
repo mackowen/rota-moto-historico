@@ -43,3 +43,7 @@ O registro 0255 confirma modelo/isolamento, migrations aplicadas no E2E, endpoin
 A 0256-D2 deve iniciar pelo crosswalk da auditoria-fonte de 19 itens e pelo mapa de configurações (dono: dispositivo/IndexedDB/servidor; tipo de save; confirmação e erro). Pode então implementar persistência/UI quando o contrato e backend dão suporte. Deve manter edições privilegiadas, sessão/MFA e dados operacionais atrás das autorizações já existentes. Não antecipar 0256-E ou F, não mudar banco oficial, não conceder permissões nem conectar marketplaces.
 
 Ver [Inventário único](../INVENTARIO_UNICO_PROBLEMAS.md), [Ordem de campanhas](../ORDEM_EXECUCAO_CAMPANHAS.md), [Backlog](../BACKLOG_MESTRE.md) e [Estado atual](../ESTADO_ATUAL.md).
+
+## Resultado da execução 0256-D2
+
+A execução foi aberta sem substituir este plano. Ver [REGISTROS/0256-D2.md](0256-D2.md): resultado PARTIAL, IDs RM-AUD19-01..19 reconciliados com a lista fornecida pelo proprietário; correções e limitações rastreadas item a item.
