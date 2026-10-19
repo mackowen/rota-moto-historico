@@ -1,12 +1,16 @@
-## Estado vigente — Reconciliação documental / próxima 0256-D2 (2026-10-19)
+## Estado vigente — Campanha 0256-D3 (2026-10-19)
 
-Esta atualização é documental. O estado operacional mais recente continua sendo o **PARTIAL** da 0256-D1. Foi criado o [Inventário Único de Problemas](INVENTARIO_UNICO_PROBLEMAS.md), com rastreio por ID para itens recentes e históricos e regra de encerramento por evidência específica, e a [Ordem de Execução](ORDEM_EXECUCAO_CAMPANHAS.md) até 0268. A próxima implementação é a 0256-D2, conforme dependências; nenhuma alteração foi feita em código, banco, serviço, identidade, credencial ou configuração operacional.
+**PARTIAL até a cobertura por origem terminar.** O código de preferências locais agora serializa snapshots, relê `meta.settings` antes da confirmação, sinaliza autosave, retém rascunhos em falha e impede perder alterações da empresa sem aviso. `npm test` Restaurante e Motoboy passou; Browser E2E autenticado foi interrompido após reload e não valida viewports. Matriz, campos alterados, resultados por ocorrência e dependências estão em [REGISTRO 0256-D3](REGISTROS/0256-D3.md).
 
-O pedido de auditoria Android informa 19 ocorrências, mas o registro D1 enumera 17 e não foi encontrada a fonte original das 19. Não declarar reconciliação 19/19; os 19 slots ainda aguardam associação ao conteúdo numerado original. Solicitar lista/capturas sanitizadas. D2 pode começar por temas identificados, respeitando o contrato e autorização.
+Escopo restrito a `RM-AUD19-02`, `RM-AUD19-10` e `RM-D1-SETTINGS-SAVE`. Os outros 17 IDs e pendências históricas não foram encerrados nem removidos. 0256-E, 0256-F e 0257–0268 permanecem na ordem; gates 0258 continuam obrigatórios para privilégios/schema oficial. Chrome Android físico permanece PENDING_OWNER. Commits locais: Restaurante `9a935130ee92bb89a127dfd044f47796eddc1b3d`; Browser Tests `9b543c0e01229c5a26698808a3f15f09848a768e`. Histórico aguardando commit/publicação.
 
-0257 deve comprovar painel global com identidade sintética e permissões limitadas no E2E; founder não identificado. 0258 é gate obrigatório antes de qualquer bootstrap, GRANT, migration ou promoção persistente: evidência histórica, desenho revisado, rollback, recovery, alvo validado e autorização explícita. Nenhum desses atos foi autorizado nesta revisão.
+Ver também [Inventário Único](INVENTARIO_UNICO_PROBLEMAS.md), [Ordem de execução](ORDEM_EXECUCAO_CAMPANHAS.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
 
-Ver [REGISTRO 0256-D2-PLANEJAMENTO](REGISTROS/0256-D2-PLANEJAMENTO.md), [Inventário](INVENTARIO_UNICO_PROBLEMAS.md), [Ordem de execução](ORDEM_EXECUCAO_CAMPANHAS.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
+---
+
+## Registro histórico — Reconciliação documental 0256-D2 (2026-10-19)
+
+Naquele planejamento, os slots da auditoria Android ainda aguardavam a fonte numerada. O pedido subsequente do proprietário em 0256-D2 forneceu os 19 enunciados originais e os vinculou individualmente a RM-AUD19-01..19 no inventário. O estado histórico da 0256-D2 é mantido em [REGISTRO 0256-D2-PLANEJAMENTO](REGISTROS/0256-D2-PLANEJAMENTO.md); a reconciliação atual é a matriz cumulativa, não os slots então desconhecidos.
 
 ---
 

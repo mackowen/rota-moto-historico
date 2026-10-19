@@ -1,6 +1,6 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-19 · Inventário cumulativo; campanha 0256-D2 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-19 · Inventário cumulativo; campanha 0256-D3 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
 
 ## Como usar
 
@@ -12,7 +12,7 @@ Estados: `OPEN` = trabalho não concluído; `PARTIAL` = evidência/capacidade pa
 
 | ID permanente | Origem / aliases preservados | Problema | Prioridade | Estado | Dependências / classe | Campanha | Critério de aceite e evidência exigida |
 |---|---|---|---:|---|---|---|---|
-| RM-D1-SETTINGS-SAVE | 0256-D1 #1–3; 0256-A-COMPANY-HYDRATION; 0256A-ASYNC-FORMS; 0256-SETTINGS | Ação de salvar inconsistente, persistência por escopo e saída com rascunho pendente. | P0 | PARTIAL | Local/IndexedDB/servidor; CDP autenticado e testes por categoria | 0256-D2 | Matriz de toda configuração (fonte, gravação, erro, reload); save explícito ou autosave claramente confirmado; teste navegar/recarregar/nova sessão e saída pendente. Aparência foi comprovada após reload em 0256-D1; não generalizar o resultado. |
+| RM-D1-SETTINGS-SAVE | 0256-D1 #1–3; 0256-A-COMPANY-HYDRATION; 0256A-ASYNC-FORMS; 0256-SETTINGS; RM-AUD19-02/10 | Ação de salvar inconsistente, persistência por escopo e saída com rascunho pendente. | P0 | PARTIAL | Local/IndexedDB/servidor; CDP autenticado e testes por categoria | 0256-D3 | Matriz campo/origem/gravação/validação/erro/confirm; readback após navegação/reload/nova sessão; negativos de rede/HTTP/RBAC. D3 serializa e relê meta.settings; cobertura por origem e fixture incompleta detalhada em REGISTROS/0256-D3.md. |
 | RM-D1-MOBILE-FEEDBACK | Auditoria Android 19, ocorrência descrita pelo proprietário; regressões safe-area 0140/0256-B1 | Toasts/avisos podem ficar sob barra inferior ou teclado; cobertura por página incompleta. | P1 | PASS_SCOPE; PHYSICAL_PENDING_OWNER | Viewport real/virtual keyboard; Android físico para fechar | 0256-D2 / 0256-F | Browser E2E autenticado 360/390/768/1024/1440, claro/escuro mediu aviso acima da barra e sem overflow; teclado/interação física seguem pendentes do proprietário. |
 | RM-D1-PRINT-QR | 0256-D1 #9; Android audit QR da comanda | QR da comanda de teste foi vazio; renderer agora usa identificador sintético. | P1 | PASS_SCOPE; PHYSICAL_PENDING_OWNER | Hardware/browser de impressão; CDP e impressora autorizada | 0256-D2 / 0256-F | Unitário e Browser/CDP confirmaram QR sintético decodificado no documento de impressão antes de `print()`; leitura/legibilidade na prévia/impressora Android ainda exige conferência do proprietário. |
 | RM-D1-MFA-STATE | 0256-D1 #4/#7; 0234-MFA-ADMIN-RECOVERY / 0244-RECOVERY-MFA | QR de enrollment sem comprovação visual integrada; instruções de cadastro não podem aparecer com fator ativo; recuperação/substituição requer fluxo autorizado. | P0 | PARTIAL | Fixture sintética; operação MFA real proibida sem autorização | 0256-D2 / 0256-F / 0257 | Comprovar estados ausente/pendente/ativo/recuperação em Browser sintético; QR decodificável; fator ativo nunca revela segredo; recovery requer autorizações previstas. Nenhum fator real alterado. |
@@ -56,7 +56,7 @@ A lista abaixo é a autoridade textual dos 19 problemas. Os IDs provisórios `RM
 | ID provisório permanente preservado | Ocorrência original | ID(s) histórico(s) relacionado(s) | Estado após execução D2 | Evidência/aceite específico ainda exigido |
 |---|---|---|---|---|
 | RM-AUD19-01 | Tema não persiste após recarga. | RM-D1-SETTINGS-SAVE; RM-0256D1-SETTINGS-PERSISTENCE | PARTIAL; D1 comprovou tema local em recarga, teste D2 de regressão pendente no Browser completo. | Claro/escuro após reload e reinício da interface em fixture sintética; fonte gravada confirmada. |
-| RM-AUD19-02 | Ausência de botão Salvar nas configurações editáveis. | RM-D1-SETTINGS-SAVE | PARTIAL | Matriz completa de páginas editáveis; cada campo deve declarar Salvar ou autosave confirmado. |
+| RM-AUD19-02 | Ausência de botão Salvar nas configurações editáveis. | RM-D1-SETTINGS-SAVE | PARTIAL — D3 adiciona autosave local indicado e ações explícitas para gravação que depende do servidor; rota/API e categorias sem Browser ficam por provar. | Matriz campo a campo e teste autenticado de persistência/erro por origem, conforme REGISTROS/0256-D3.md. |
 | RM-AUD19-03 | Latitude/longitude vazias ou pouco claras em Logística/Frota. | RM-D1-LOCATION-CONSISTENCY; RM-0252-COMPANY-PERSIST | PARTIAL | Company operacional sintética confirmada igual em Company/Logística/Frota; ausência segue desconhecida e origem custom distinta. |
 | RM-AUD19-04 | QR Code de cadastro MFA ausente. | RM-D1-MFA-STATE; RM-0256D1-MFA-QR | PARTIAL | Enrollment sintético pendente com QR decodificável; fator real intocado. |
 | RM-AUD19-05 | Botão Central de Ajuda fora do padrão visual. | RM-D1-UX-CLARITY; RM-0256D1-VISUAL | PARTIAL / RECHECK | Browser visual autenticado por viewport/tema, incluindo foco e toque. |
@@ -64,7 +64,7 @@ A lista abaixo é a autoridade textual dos 19 problemas. Os IDs provisórios `RM
 | RM-AUD19-07 | Tela de login aparece brevemente durante atualização. | RM-D1-AUTH-RESUME; RM-0256B-AUTH | PARTIAL | Reload com sessão sintética válida e rede lenta, medindo que painel/login não pisquem; CDP não encerra confirmação Android. |
 | RM-AUD19-08 | QR Code vazio na comanda de teste. | RM-D1-PRINT-QR; RM-0256D1-PRINT-QR | PASS_SCOPE; PENDING_OWNER físico | Unitário e Browser/CDP confirmaram QR sintético decodificado no documento de impressão antes do diálogo; proprietário confirma a prévia/impressão Android. |
 | RM-AUD19-09 | Explicações confusas em Origem dos pedidos. | RM-0256D-ORDER-SOURCES; RM-D1-UX-CLARITY | PARTIAL / RECHECK | Texto diferencia fonte local, estado/autorização da plataforma e responsável logístico sem alterar despacho. |
-| RM-AUD19-10 | Configurações alteradas não persistem. | RM-D1-SETTINGS-SAVE | PARTIAL | Teste por categoria da fonte local/IndexedDB/servidor, feedback e readback após reload. |
+| RM-AUD19-10 | Configurações alteradas não persistem. | RM-D1-SETTINGS-SAVE | PARTIAL — D3 corrige ordenação/readback de settings locais; APIs de Company e páginas não montadas no harness ainda exigem prova completa. | Teste campo a campo: load→edit→save→navigate→back→reload e readback da origem; negativos de rede/HTTP/RBAC; evidência em REGISTROS/0256-D3.md. |
 | RM-AUD19-11 | Auditoria administrativa incompleta. | RM-D1-ADMIN-AUDIT; RM-0255-GLOBAL-UI | BLOCKED_PERMISSION_MODEL | Papel/endpoint tenant-scoped, filtros/paginação/redação/exportação autorizada; sem GRANT/migration oficial nesta campanha. |
 | RM-AUD19-12 | Sessão encerrada prematuramente ao voltar ao aplicativo. | RM-D1-AUTH-RESUME; RM-0234-IDENTITY-EXTERNAL | PARTIAL; PENDING_OWNER_PHYSICAL | Background/foreground no Chrome Android após período reportado, rede e idle conforme política; nunca prolongar sessão por workaround. |
 | RM-AUD19-13 | Espaçamentos, cards e bordas inconsistentes. | RM-D1-UX-CLARITY; RM-D1-REPORTS-VISUAL; RM-D1-MOBILE-FEEDBACK | PARTIAL; toast PASS_SCOPE | Geometria do aviso sobre a barra passou em 5 viewports × 2 temas; Relatórios e demais páginas ainda requerem revisão visual específica. |
@@ -394,3 +394,8 @@ A seguir estão transcritas as linhas-fonte que na data desta reconciliação ai
 | 0253-TEAM-ADDRESS | `admin@local`, fonte de identidade e endereço; P1; **PARTIAL** | Backend autoritativo mantido e atualizações entre abas conectadas; registros não foram auditados nem houve nova escrita/readback do endereço. | Auditar registros sem mesclar/excluir e testar update/readback em E2E sintético autenticado. |
 | 0253-MULTI-DEVICE | Atualização entre dispositivos/offline/conflito; P1; **PARTIAL** | BroadcastChannel entre abas e unidade passou; sem mecanismo comprovado entre dispositivos ou cenários de conflito/desconexão. | Definir evento/sync incremental compatível e validar offline, reconexão e conflito com ACK canônico. |
 
+
+
+## Atualização 0256-D3 — salvamento (2026-10-19)
+
+`RM-AUD19-02`, `RM-AUD19-10` e `RM-D1-SETTINGS-SAVE` seguem **PARTIAL**. O Restaurante agora serializa snapshots locais, confirma IndexedDB por readback, identifica o autosave, protege rascunhos e valida valores numéricos. A matriz por área/campo, evidência E2E e bloqueios de APIs ausentes no harness constam em [REGISTROS/0256-D3.md](REGISTROS/0256-D3.md). Nenhum dos outros 17 IDs foi encerrado ou removido.

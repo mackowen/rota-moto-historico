@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0256-D3 (2026-10-19)
+
+**PARTIAL.** Correção do gravador local de preferências com fila, snapshots e readback no IndexedDB; autosave local passa a ser explícito, com retry e proteção a rascunhos. Campos canônicos de Company continuam gravados por endpoints autorizados e sem misturar drafts com cache. `npm test` dos dois apps passou. O Browser E2E autenticado não completou reload/navegação nem os cinco viewports, e os erros HTTP/RBAC de salvamento seguem pendentes. A matriz por origem está em [REGISTROS/0256-D3.md](REGISTROS/0256-D3.md). Commits locais Restaurante `9a935130`, Browser Tests `9b543c0`.
+
+Somente `RM-AUD19-02`, `RM-AUD19-10` e `RM-D1-SETTINGS-SAVE` foram trabalhados. Os outros 17 IDs e todas as pendências históricas permanecem. 0256-E/F e 0257–0268 preservadas; endpoints não montados no harness e validação física Android ficam explicitamente pendentes. `npm test` não fecha item individual.
+
+---
+
 ## Atualização vigente — Campanha 0256-D2 (2026-10-19)
 
 A lista de 19 ocorrências do proprietário foi conciliada individualmente como `RM-AUD19-01`…`RM-AUD19-19` em [INVENTARIO_UNICO_PROBLEMAS.md](INVENTARIO_UNICO_PROBLEMAS.md). **PARTIAL:** corrigida a sobreposição dos toasts com a barra inferior e a corrida de decode do QR antes da impressão; demais problemas permanecem em aberto, bloqueados ou dependem do proprietário, cada um com critério próprio. Registro e evidências: [REGISTROS/0256-D2.md](REGISTROS/0256-D2.md).
