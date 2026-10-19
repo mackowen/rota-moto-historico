@@ -2,7 +2,7 @@
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação |
 |---|---|---|---|
-| RM-0256C-TEAM-RBAC | Equipe, convites, perfis e Sistema local; P0; **PARTIAL** | Browser autenticado sintético com 42 verificações; perfil sem chave manual/colisão, edição, perfil protegido, convite capturado, texto de Sistema local e regressões B1. HTTP PostgreSQL autenticado passou tenant/RLS, MFA, permissões e convite. | Provar pelo Browser o convite aceito ligado explicitamente a Driver da mesma empresa, com autorização negativa. |
+| RM-0256C-TEAM-RBAC | Equipe, convites, perfis e Sistema local; P0; **PARTIAL** | Browser autenticado sintético com 43 verificações; perfil sem chave manual/colisão, edição, perfil protegido, convite capturado, texto de Sistema local e regressões B1. HTTP PostgreSQL autenticado passou tenant/RLS, MFA, permissões e convite. | Provar pelo Browser o convite aceito ligado explicitamente a Driver da mesma empresa, com autorização negativa. |
 | RM-0256C-FULL-SUITE | `npm test` integral; P1; **PARTIAL** | Após corrigir contrato compartilhado, duas execuções pararam em `test-backup-control.js` com `BACKUP_CONTROL_LOCK_UNSAFE`/`BACKUP_CONTROL_BUSY`; o teste passou isoladamente. | Repetir e diagnosticar corrida no escopo 0256-E; sem mexer em backup nesta campanha. |
 | RM-0256C-ANDROID | Chrome Android físico e teclado; P2; **PENDING_OWNER** | Chromium/CDP 360, 390, 768, 1024 e 1440 px, claro/escuro. | Proprietário conferir no aparelho real, sem compartilhar credenciais ou fatores. |
 | RM-0256C-HISTORY | Registro histórico; P1; **PASS** | `b71dda41492aad6a0ca0d83ca1efd9f2a373644d` em `origin/main`; fetch confirmou HEAD/remoto iguais e `git show` encontrou o registro. | Concluído. |
