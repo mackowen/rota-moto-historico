@@ -4,7 +4,7 @@
 |---|---|---|---|
 | RM-0256B-AUTH | Login, MFA, logout e expiração; P0; **PASS técnico** | CDP sintético: raiz operacional vazia antes de autenticar; MFA → Início; expiração/logout desmontam app; API anônima 401. | Proprietário confirmar no Chrome Android físico. |
 | RM-0256B-CARDS | Ajustes e navegação; P0; **PASS técnico** | 18 cards, páginas, retorno/histórico/reload; 5 larguras × 2 temas sem overflow. | Manter categorias e verificar em campanhas seguintes. |
-| RM-0256B-ACCOUNT | Conta e segurança; P0; **PASS técnico** | Página própria; MFA, recuperação, convite e troca de empresa negada testados; backend 403. | Sessões/dispositivos só entram se suporte real for implementado. |
+| RM-0256B-ACCOUNT | Conta e segurança; P0; **PASS técnico** | Página própria; MFA; troca autorizada 200 e não autorizada 403; recuperação/convite inválidos testados. | Sessões/dispositivos só entram se suporte real for implementado. |
 | RM-0256B-ANDROID | Chrome Android físico; P2; **PENDING_OWNER** | CDP Chromium emulado; não comprova aparelho/teclado físico. | Proprietário confirmar visualização e teclado sem compartilhar credenciais. |
 | RM-0256B-RUNIT | Browser pelo runtime permanente; P1; **PARTIAL** | Fixture temporária e transacional; rollback, `sv up` e readiness 200. | Continuar a validação do runtime permanente na campanha 0263. |
 | RM-0256B-HISTORY | Publicação do registro; P1; **PASS** | Push somente do histórico; fetch confirmou `origin/main` em `f3899d9` e `git show origin/main:REGISTROS/0256-B.md` retornou o registro. | Concluído. |
