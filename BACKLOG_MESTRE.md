@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0256-D4 (2026-10-19)
+
+**PARTIAL.** Causa do falso negativo D3 comprovada no runner: após reload, o CDP muda o target e o runner tentava usar a conexão antiga; a sessão sintética continuava válida (session 200) e Ajustes surgia após o bootstrap. D4 reconectou ao target atual e corrigiu a seleção entre Conta e segurança e Segurança e auditoria. Um run concluído comprovou 15 campos/grupos locais, três dados de Company, 18 categorias × 5 viewports × 2 temas (180 combinações), sem exceções JS nem HTTP inesperado. Run ampliado por campo não terminou após 37:42 e foi interrompido; campos restantes, negativos de autorização/rede e APIs não montadas seguem pendentes. Ver [REGISTROS/0256-D4.md](REGISTROS/0256-D4.md) e [inventário](INVENTARIO_UNICO_PROBLEMAS.md). IDs `RM-AUD19-02` e `RM-AUD19-10` permanecem PARTIAL; outros 17 intactos.
+
+O E2E usou transação sintética em `rotamoto_e2e`, revertida; API permanente restaurada com health 200. Nenhuma mudança em aplicações, banco oficial, credenciais, identidades, MFA ou privilégios. Browser Tests local em branch própria; nenhum push de app/testes. 0256-E/F e 0257–0268 preservadas; nenhuma campanha dependente foi antecipada. Chrome Android físico continua PENDING_OWNER.
+
+---
+
 ## Atualização vigente — Campanha 0256-D3 (2026-10-19)
 
 **PARTIAL.** Correção do gravador local de preferências com fila, snapshots e readback no IndexedDB; autosave local passa a ser explícito, com retry e proteção a rascunhos. Campos canônicos de Company continuam gravados por endpoints autorizados e sem misturar drafts com cache. `npm test` dos dois apps passou. O Browser E2E autenticado não completou reload/navegação nem os cinco viewports, e os erros HTTP/RBAC de salvamento seguem pendentes. A matriz por origem está em [REGISTROS/0256-D3.md](REGISTROS/0256-D3.md). Commits locais Restaurante `9a935130`, Browser Tests `9b543c0`.

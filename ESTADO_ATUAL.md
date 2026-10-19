@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0256-D4 (2026-10-19)
+
+**PARTIAL; RM-AUD19-02/10 permanecem abertos.** D4 provou que a falha D3 após reload não era expiração de sessão: `/api/identity/session` retornava 200 e a UI de Ajustes reaparecia depois do bootstrap. A causa era o runner usando a sessão CDP antiga depois da troca de target; o runner foi corrigido para reconectar. No relatório concluído, 15 campos/grupos locais e nome/telefone/fuso de Company passaram persistência/readback, e 18 categorias foram inspecionadas em 180 combinações de viewport/tema sem erro JS/HTTP inesperado. O ciclo expandido por campo não terminou após 37:42; campos não reportados e erros de rede/RBAC/revisão permanecem sem aprovação. APIs de logística e backup ausentes no fixture são bloqueios separados, sem mocks.
+
+Fixture usou identidade MFA sintética e transação em `rotamoto_e2e`; transação revertida e API E2E reiniciada, health 200. Nenhum aplicativo, banco oficial, identidade real, MFA, credencial ou privilégio foi alterado. Sem validação física Chrome Android. Registro: [0256-D4](REGISTROS/0256-D4.md); matriz cumulativa: [Inventário Único](INVENTARIO_UNICO_PROBLEMAS.md); sequência: [Ordem de execução](ORDEM_EXECUCAO_CAMPANHAS.md). Outros 17 IDs, campanhas 0256-E/F e 0257–0268 preservados.
+
+---
+
 ## Estado vigente — Campanha 0256-D3 (2026-10-19)
 
 **PARTIAL até a cobertura por origem terminar.** O código de preferências locais agora serializa snapshots, relê `meta.settings` antes da confirmação, sinaliza autosave, retém rascunhos em falha e impede perder alterações da empresa sem aviso. `npm test` Restaurante e Motoboy passou; Browser E2E autenticado foi interrompido após reload e não valida viewports. Matriz, campos alterados, resultados por ocorrência e dependências estão em [REGISTRO 0256-D3](REGISTROS/0256-D3.md).
