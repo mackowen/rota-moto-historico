@@ -1,3 +1,15 @@
+## Atualização vigente — Campanha 0256-D (2026-10-19)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação |
+|---|---|---|---|
+| RM-0256D-MARKETPLACE-EXTERNAL | iFood/99Food/Keeta e homologação; P1; **PARTIAL_EXTERNAL** | UI e catálogo backend mostram estados não verificados com sessão sintética; cards em cinco viewports e dois temas; sem credenciais/chamadas externas. | Obter onboarding/credenciais e autorização para sandbox por fornecedor antes de verificar conectividade. |
+| RM-0256D-LAB-ISOLATION | Laboratório sintético; P0; **PASS_LOCAL_SCOPE** | Browser autenticado provou stores operacionais intactas após criar pedido e transição; sem erros JS. | Manter teste automatizado e adicionar às regressões 0256-F. |
+| RM-0256D-ANDROID | Chrome Android físico; P2; **PENDING_OWNER** | CDP 360–1440, claro/escuro, apenas emulação. | Proprietário verificar tela e teclado no aparelho real. |
+
+A corrida de concorrência do módulo de backup da 0256-C permanece aberta e fora do escopo D; investigar em 0256-E. O vínculo Driver da equipe (0256-C), administradores locais, integração real e envio comercial permanecem pendentes. Campanhas 0256-E/F/0257 foram mantidas. Ver [REGISTRO 0256-D](REGISTROS/0256-D.md).
+
+---
+
 ## Atualização vigente — Campanha 0256-C (2026-10-19)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação |

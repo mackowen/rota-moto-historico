@@ -1,3 +1,17 @@
+## Atualização vigente — Campanha 0256-D (2026-10-19)
+
+| ID estável | Descrição | Prioridade | Estado | Campanha responsável | Dependências | Evidência atual | Critério de aceite |
+|---|---|---:|---|---|---|---|---|
+| RM-0256D-MARKETPLACE-ADMIN | Integrações iFood/99Food/Keeta, estados reais e ações autenticadas por empresa. | P1 | PARTIAL_EXTERNAL | 0256-D / 0256-F | Onboarding, credenciais e conectividade comercial autorizada; revisão visual completa do detalhe | Browser/MFA sintético leu os três provedores e mostrou “sem conexão confirmada”; API existente mantém sessão, tenant, permissões e CSRF; nenhum segredo ou ação externa foi usado. Registro 0256-D. | Verificar em sandbox autorizado por provedor, comprovar conexão/recebimento e executar autorização negativa multi-tenant sem vazar segredo. |
+| RM-0256D-ORDER-SOURCES | Separação entre origens operacionais, Integrações e despacho. | P1 | PASS_LOCAL_SCOPE | 0256-D | Regressão de navegação em 0256-F | Origem local preserva controles existentes; não altera propriedade, despacho nem sincronização. Browser confirmou que a página não contém laboratório duplicado. | Preservar contratos e comprovar roteamento E2E de pedidos por cada provider que tenha fixture suportada. |
+| RM-0256D-LAB-ISOLATION | Manter simulação técnica isolada da operação e das stores do IndexedDB. | P0 | PASS_LOCAL_SCOPE | 0256-D / 0256-F | Regressões futuras | Browser autenticado comparou `orders/events/outbox` antes/depois de simulação e transição; sem diferenças; sem exceções JS. | Manter teste de isolamento e cobertura de simulações nos três provedores em regressões. |
+| RM-0256D-EXTERNAL-HOMOLOGATION | Conectividade, sandbox e homologação comercial de marketplaces. | P1 | PENDING_OWNER_EXTERNAL | 0256-D / 0256-F | Credenciais e autorização externa de cada plataforma | Nenhuma chamada comercial, credencial ou conta real usada; não há prova de conexão/homologação. | Realizar somente após onboarding e autorização explícita do proprietário, em fixture/sandbox disponível. |
+| RM-0256D-ANDROID | Validar cards/layout/teclado no Chrome Android físico. | P2 | PENDING_OWNER | 0256-D / 0256-F | Proprietário e dispositivo | CDP validou viewports 360–1440 e temas; não certifica aparelho/teclado reais. | Proprietário confirmar no Chrome Android real. |
+
+Ver [REGISTRO 0256-D](REGISTROS/0256-D.md). Campanhas 0256-E (Sistema/backup/recuperação), 0256-F (auditoria visual/E2E final) e 0257 (administração global) permanecem planejadas. Pendências anteriores de equipe/perfis, Sistema local, backup e formulários continuam preservadas.
+
+---
+
 # Backlog mestre RotaMoto
 
 Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evidências de campanhas corretivas complementam as linhas sem remover itens anteriores. Um estado só muda com nova evidência. Pendências anteriores a 0247 continuam rastreáveis em `PENDENCIAS.md` e não são descartadas por esta consolidação.

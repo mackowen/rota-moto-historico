@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0256-D (2026-10-19)
+
+**PARTIAL.** Origem dos pedidos foi separada da administração de marketplaces, e a cópia do Laboratório avançado removida. Simuladores 99Food/Keeta agora mantêm pedidos/eventos/fila somente em memória; processamento e transição não alteram IndexedDB `orders/events/outbox`. A página autenticada de Integrações apresentou os três marketplaces sem alegar conexão. Catálogo e ações de conta continuam tenant-scoped; não houve chamada externa nem credencial real.
+
+`npm test` integral passou. Browser/CDP autenticado com MFA sintético e fixture transacional verificou estados dos provedores, três simuladores, pedido/transição 99Food, isolamento de stores e zero erros JS; 360/390/768/1024/1440 em claro/escuro para os cards do Laboratório, com capturas. Runit foi restaurado/readiness 200. Integrações reais/sandbox/homologação não foram exercitadas; Chromium não equivale ao Chrome Android físico, pendente do proprietário. Restaurante commit local `b5cf93f`; Motoboy sem alterações; Browser Tests commit local `c4fe337`; sem push. Apenas o histórico será publicado.
+
+Nenhum banco oficial, credencial, identidade, MFA, privilégio, vínculo persistente ou sistema de backup foi alterado. Ver [REGISTRO 0256-D](REGISTROS/0256-D.md). 0256-E, 0256-F e 0257 permanecem no planejamento.
+
+---
+
 # Estado vigente — Campanha 0256-C (2026-10-19)
 
 **PARTIAL — Equipe/RBAC e Sistema local reorganizados; vínculo operacional de motoboy pela UI e suíte completa ainda pendentes.** Ajustes → Equipe agora lista usuários/convites/perfis, usa formulários progressivos, descrição em português e chave técnica gerada no backend com resolução de colisões. A causa da tela administrativa vazia era uma escrita em elemento exclusivo da página Conta e segurança fora da árvore ativa. Perfil de sistema e permissões seguem protegidos. Sistema local foi confirmado como usuários/perfis no IndexedDB do aparelho, sem autoridade em endpoints ou RBAC do servidor.
