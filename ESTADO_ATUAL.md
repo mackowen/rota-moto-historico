@@ -1,3 +1,15 @@
+# Estado vigente — Campanha 0256-A (2026-10-19)
+
+**PARTIAL geral.** Navegação de Ajustes foi unificada e o formulário Empresa agora carrega nome, telefone, fuso e endereço da mesma leitura canônica em todos os viewports. Uma fixture sintética gravou via API PostgreSQL E2E, recebeu ACK e confirmou valores após reload; transação revertida com segurança. Resposta lenta mantém salvamentos bloqueados; erros 401, 403 e rede são diferenciados e recuperáveis. CDP autenticado em 360, 390 móvel, 390 modo computador, 768, 1024 e 1440 px, tema claro/escuro; 34 capturas e zero exceções JavaScript. `npm test` do Restaurante passou. Guards Leaflet/MapLibre e cache PWA corrigidos.
+
+API de teste usou listener transacional temporário, não processo runit permanente; após rollback o serviço `rotamoto-api-e2e` voltou a `run`, readiness 200. Não houve escrita no banco oficial nem alteração de conta/dados persistentes do proprietário. Commits locais Restaurante `c43d445`, `ce3c491`; Browser Tests `c97acfe`, `f96e291`; sem push dos aplicativos. Histórico será confirmado após publicação remota.
+
+**PENDING_OWNER:** validar no Chrome Android físico `http://127.0.0.1:8083`, mobile nativo e modo computador; não compartilhar senha, MFA ou cookies. As integrações comerciais continuam sem autorização/onboarding. A Campanha 0257 permanece no roadmap aprovado.
+
+Ver [REGISTRO 0256-A](REGISTROS/0256-A.md) e [resumo](RESUMOS/0256-A.md).
+
+---
+
 ## Estado vigente — Campanha 0256 (2026-10-19)
 
 **PARTIAL — navegação e páginas administrativas centralizadas em Ajustes; conexões comerciais, CRUD autenticado e Browser pelo runit pendentes.** Login autenticado sintético abre Início; administração antiga não abre automaticamente e o atalho administrativo superior foi removido. Empresa, Equipe, Motoboys, Integrações e páginas individuais iFood/99Food/Keeta foram navegadas pelo Browser/CDP. A seleção mobile até 800 px usa controle compacto; desktop mantém navegação por categorias. Atualização de plataforma consulta o endpoint, preserva seleção e mostra feedback.

@@ -1,4 +1,19 @@
-## Atualização vigente — Campanha 0256 (2026-10-19)
+## Atualização vigente — Campanha 0256-A (2026-10-19)
+
+| ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| RM-0256A-NAV | Navegação Ajustes; P0; **PASS** | CDP autenticado: página inicial Início; categorias Empresa/Equipe/Motoboys/Integrações únicas, sem overlay, atalho ou tabs internas duplicadas. | Nenhuma correção adicional no escopo. |
+| RM-0256A-COMPANY-HYDRATION | Dados canônicos Empresa; P0; **PASS** | PostgreSQL E2E sintético gravou/relê nome, telefone, fuso e endereço; mesmos valores em seis estados viewport e após reload. | Proprietário confirmar no Chrome Android físico. |
+| RM-0256A-FORM-ERRORS | Carregamento, rascunhos, erro e salvamento; P0; **PASS técnico** | Resposta lenta manteve gravações desabilitadas; 401/403/rede deram feedback e não habilitaram gravações; nova leitura recuperou estado canônico. | Validar experiência física e quaisquer particularidades do dispositivo. |
+| RM-0256A-SETTINGS-REGRESSION | Responsividade e páginas administrativas; P1; **PASS em Chromium** | 360/390/768/1024/1440, claro/escuro, 34 capturas, zero JS/overflow; `npm test` completo passou. | Confirmação física segue PENDING_OWNER. |
+| RM-0256A-RUNIT-BROWSER | Browser autenticado pelo runit/runtime; P1; **PARTIAL** | Fixture de browser usou listener temporário transacional; runit restaurado e `/health` 200. | Continuar em 0263 com harness seguro para processo permanente. |
+| RM-0256A-ANDROID-PHYSICAL | Chrome Android físico; P2; **PENDING_OWNER** | CDP emulado não comprova o aparelho físico nem interação real com teclado/Chrome. | Proprietário confirmar Ajustes móvel e modo computador, sem compartilhar credenciais. |
+| RM-0256A-COMMERCIAL | Conexão real iFood/99Food/Keeta; P1; **BLOCKED_EXTERNAL_DEPENDENCY** | Páginas e estados locais abrem pela API; nenhuma conta comercial autorizada ou conectada. | Fornecer onboarding/credenciais e autorização comercial quando disponíveis. |
+| RM-0256A-HISTORY | Publicação desta campanha; P1; **PENDING_PUBLICATION** | Registro e resumo preparados; sem afirmar publicação antes de verificar SHA remoto. | Commit/push somente `rota-moto-historico`, fetch e confirmação do registro em `origin/main`. |
+
+Ver [REGISTRO 0256-A](REGISTROS/0256-A.md), [resumo](RESUMOS/0256-A.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
+
+## Atualização anterior — Campanha 0256 (2026-10-19)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
 |---|---|---|---|
