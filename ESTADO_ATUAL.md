@@ -2,7 +2,7 @@
 
 **PARTIAL até a cobertura por origem terminar.** O código de preferências locais agora serializa snapshots, relê `meta.settings` antes da confirmação, sinaliza autosave, retém rascunhos em falha e impede perder alterações da empresa sem aviso. `npm test` Restaurante e Motoboy passou; Browser E2E autenticado foi interrompido após reload e não valida viewports. Matriz, campos alterados, resultados por ocorrência e dependências estão em [REGISTRO 0256-D3](REGISTROS/0256-D3.md).
 
-Escopo restrito a `RM-AUD19-02`, `RM-AUD19-10` e `RM-D1-SETTINGS-SAVE`. Os outros 17 IDs e pendências históricas não foram encerrados nem removidos. 0256-E, 0256-F e 0257–0268 permanecem na ordem; gates 0258 continuam obrigatórios para privilégios/schema oficial. Chrome Android físico permanece PENDING_OWNER. Commits locais: Restaurante `9a935130ee92bb89a127dfd044f47796eddc1b3d`; Browser Tests `9b543c0e01229c5a26698808a3f15f09848a768e`. Histórico aguardando commit/publicação.
+Escopo restrito a `RM-AUD19-02`, `RM-AUD19-10` e `RM-D1-SETTINGS-SAVE`. Os outros 17 IDs e pendências históricas não foram encerrados nem removidos. 0256-E, 0256-F e 0257–0268 permanecem na ordem; gates 0258 continuam obrigatórios para privilégios/schema oficial. Chrome Android físico permanece PENDING_OWNER. Commits locais: Restaurante `9a935130ee92bb89a127dfd044f47796eddc1b3d`; Browser Tests `9b543c0e01229c5a26698808a3f15f09848a768e`. Histórico publicado em `origin/main` no commit `03661dbc0bf432f38b00d5200563d5bbd26fe879`.
 
 Ver também [Inventário Único](INVENTARIO_UNICO_PROBLEMAS.md), [Ordem de execução](ORDEM_EXECUCAO_CAMPANHAS.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
 
