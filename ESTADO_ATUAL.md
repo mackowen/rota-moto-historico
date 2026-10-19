@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0256 (2026-10-19)
+
+**PARTIAL — navegação e páginas administrativas centralizadas em Ajustes; conexões comerciais, CRUD autenticado e Browser pelo runit pendentes.** Login autenticado sintético abre Início; administração antiga não abre automaticamente e o atalho administrativo superior foi removido. Empresa, Equipe, Motoboys, Integrações e páginas individuais iFood/99Food/Keeta foram navegadas pelo Browser/CDP. A seleção mobile até 800 px usa controle compacto; desktop mantém navegação por categorias. Atualização de plataforma consulta o endpoint, preserva seleção e mostra feedback.
+
+`npm test` completo final passou. Browser/CDP sintético autenticado/MFA em 360/390/768/1024/1440 px e claro/escuro, zero exceções JS; endpoint autorizado 200 e restrito 403. Fixture transacional foi revertida. Runit E2E e interfaces 8083/8084 retornaram HTTP 200 depois da restauração. A prova Browser não usou o processo runit durante a sessão. Nenhuma escrita no banco oficial ou alteração nos dados/identidade persistentes do proprietário.
+
+Commits locais: Restaurante `83a7251`; Browser Tests `ae4458b`; Motoboy sem alterações. Histórico será publicado somente em `origin/main`. Ver [REGISTRO 0256](REGISTROS/0256.md), [resumo](RESUMOS/0256.md) e [Backlog Mestre](BACKLOG_MESTRE.md).
+
 ## Estado vigente — Campanha 0255 (2026-10-18)
 
 **PARTIAL — separação global implementada e endpoints diagnosticados; prova positiva do painel global e operações globais completas pendentes.** Migrations 0048–0049 estão aplicadas somente em `rotamoto_e2e`, checksums conferidos, latch fundador vazio e nenhum grant global persistente. Marketplace 404 foi corrigido para carregamento por ação e 503 explícito quando runtime ausente; 403 de sync é legítimo sem `sync.push` e a chamada cliente agora é evitada.

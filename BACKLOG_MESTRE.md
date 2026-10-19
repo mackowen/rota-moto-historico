@@ -1,0 +1,45 @@
+# Backlog mestre RotaMoto
+
+Fonte consolidada para as pendências ainda abertas documentadas nos registros 0234–0255 e na Campanha 0256. Um estado só muda com nova evidência. Pendências anteriores a 0247 continuam rastreáveis em `PENDENCIAS.md` e não são descartadas por esta consolidação.
+
+## Itens em aberto
+
+| ID estável | Descrição | Prioridade | Estado | Campanha responsável | Dependências | Evidência atual | Critério de aceite |
+|---|---|---:|---|---|---|---|---|
+| RM-0255-GLOBAL-UI | Completar painel administrativo global: empresas, usuários/vínculos, serviços e configurações nas capacidades existentes. | P0 | PARTIAL | 0257 | Identidade global sintética; autorização por ação; sem promoção persistente | Registro 0255: modelo, endpoints e entrada visual existem; ações globais positivas no browser não foram comprovadas. | Browser autenticado sintético demonstra leitura e ações permitidas, negativas para tenant-admin e auditoria; sem grants reais. |
+| RM-0255-FOUNDER | Comprovar fundador e preparar promoção/migração global reversível para aprovação. | P0 | BLOCKED_AUTHORIZATION | 0258 | Evidência histórica verificável; autorização explícita para qualquer privilégio persistente | Registro 0234 descreve bootstrap como proprietário, não fundador global. Conta real não promovida. | Proposta com evidência, migration e rollback revisados; não aplicar até aprovação explícita. |
+| RM-0256-SETTINGS | Finalizar navegação em Ajustes e páginas Empresa, Equipe, Motoboys e Integrações sem modal administrativo legado. | P0 | PARTIAL | 0256 | CRUD autenticado e Browser via runit | CDP autenticado provou navegação, páginas, Início, ausência do atalho superior e cinco viewports/temas; gravação CRUD e processo runit ainda sem prova. | Login em Início; sem abertura/atalho vazio; páginas e retorno funcionam; operações persistem via endpoint autorizado em E2E autenticado pelo serviço runit. |
+| RM-0256-PROVIDERS | Comprovar estado e ações por página de iFood, 99Food e Keeta, sem simular conectividade comercial. | P1 | PARTIAL | 0265 | Resposta real do endpoint; runtime e credenciais comerciais | CDP autenticado selecionou as três páginas e atualizou estado via endpoint real (200 autorizado/403 restrito); sem contas comerciais. | Estado real por fornecedor; ações locais funcionais; conexão externa confirmada somente após autorização; negativas backend preservadas. |
+| RM-0254-COMMERCIAL | Conectar e homologar fornecedores comerciais e validar sincronização real de pedidos. | P1 | BLOCKED_EXTERNAL_DEPENDENCY | 0266 | Onboarding, credenciais, whitelist/certificação e autorização do proprietário | Sem credenciais externas ou homologação. | Sandbox/produção do fornecedor aprovada, lojas vinculadas, recebimento/ACK e reconexão auditados. |
+| RM-0252-TEAM-IDENTITY | Completar ciclo cadastro operacional, convite por email, ativação, conta existente e vínculo de motoboy. | P1 | PARTIAL | 0259/0260 | Entrega de email segura ou coletor sintético; MFA conforme contrato | Registros 0251–0253 cobrem partes em fixture; email externo e estados de expiração/tenant restam abertos. | Browser/HTTP comprova convite → ativação → vínculo → login; proprietário sem Driver continua bloqueado no servidor. |
+| RM-0247-DRIVER-AUTHZ | Provar negação server-side de operações Motoboy para vínculo ausente, revogado, desativado ou de outro tenant. | P0 | PARTIAL | 0260 | Identidades sintéticas multiempresa, sessão/MFA válida | Guards e testes prévios existem; validação pessoal do proprietário permanece pendente. | API nega todos os vínculos inválidos; motorista ativo opera somente no escopo autorizado. |
+| RM-0252-COMPANY-PERSIST | Provar endereço, contato e fuso por UI autenticada, PostgreSQL, recarga e nova sessão. | P1 | PARTIAL | 0261 | Fixture reversível e endpoint autorizado | Testes HTTP de versão/endereço existem; prova completa de reload autenticado não está nesta campanha. | Após ACK, os dados reaparecem iguais; campos vazios não sobrescrevem valores; tenant isolado. |
+| RM-0253-CROSS-TAB-SYNC | Completar atualização server-confirmed entre telas/abas, offline, reconexão e conflitos sem perder rascunhos. | P1 | PARTIAL | 0262 | Eventos seguros, outbox/inbox e fixture reversível | Coordenador e refresh existem; ACK/outage visual incompletos. | Múltiplas abas refletem ACK; estados local/pendente/erro separados; replay idempotente; revogação backend imediata. |
+| RM-0256-RUNIT-BROWSER | Validar browser autenticado pela API runit e role runtime dedicada sem persistir fixture. | P1 | PARTIAL | 0263 | Harness transacional compatível com role runtime | Campanha 0256 restaurou runit e health 200 após fixture; navegador usou listener transacional separado. | Browser em 8083/8084 contra runit com identidade sintética descartável e rollback comprovado. |
+| RM-0247-OPS-FLOW | Completar operação Restaurante ↔ Motoboy autenticada: despacho, entrega, cancelamento/retorno e comprovante. | P0 | PARTIAL | 0264 | Motorista sintético vinculado, API e browser real | Testes de domínio/contrato existem; fluxo completo por browser/run it não confirmado. | Ciclo completo em UI/API/PG E2E com ACK e isolamento, sem dados reais. |
+| RM-0254-REPORTS | Preservar relatórios, cálculo canônico, filtros e CSV em regressões de navegação. | P1 | PASS_SCOPE | 0267 | Regressões visuais | Registro 0254 comprova oito seções, filtros/CSV e cinco larguras × dois temas autenticados sintéticos. | Regressões passam; sem métricas inventadas; exportação segura. |
+| RM-0255-OWNER | Validação pessoal das telas, conta e MFA do proprietário. | P0 | PENDING_OWNER | 0268 | Ação do proprietário no navegador e confirmação | Nenhuma credencial, sessão, MFA ou keystore persistente foi usada nesta campanha. | Proprietário confirma no Chrome Android; senha, QR, cookies e recovery codes não são compartilhados. |
+| RM-0234-DR-EXTERNAL | Cópia externa independente, RPO/RTO e recuperação em outro Termux/servidor. | P0 | BLOCKED_EXTERNAL_DEPENDENCY | 0268 | Destino/custódia autorizados e host de recuperação | Recuperação externa foi deixada manual; sem upload autorizado ou DR independente atual. | Recovery set autenticado copiado sob autorização e restore isolado comprovado; RPO/RTO aprovados. |
+| RM-0242-ANDROID-PHYSICAL | Validar Chrome Android físico, GPS/câmera/impressora/QR e interrupção do Termux. | P2 | BLOCKED_DEVICE_VALIDATION | 0268 | Aparelho físico autorizado | CDP não comprova sensores nem browser móvel físico. | Checklist físico documentado com captura sanitizada e recuperação após reinício. |
+
+## Roadmap aprovado
+
+| Campanha | Objetivo inicial | Estado inicial | Dependências principais | Critério de conclusão |
+|---|---|---|---|---|
+| 0256 | Configurações e navegação | PARTIAL | CRUD autenticado pelo runit; credenciais comerciais; validação física Android | Ajustes centralizados; páginas próprias; sem modal/atalho legado; CRUD e ações externas comprovados conforme suas dependências. |
+| 0257 | Administração global | PARTIAL | Identidade global sintética; schema E2E | Painel positivo/negativo funcional e auditado, sem promoção persistente. |
+| 0258 | Fundador e privilégios | BLOCKED_AUTHORIZATION | Evidência histórica e aprovação explícita | Proposta reversível revisada; alteração persistente somente após gate. |
+| 0259 | Equipe e identidade | PARTIAL | Serviço de identidade/convites | Papéis, convite e identidade sem duplicação, com UI autenticada. |
+| 0260 | Motoboys e convites | PARTIAL | 0259, Driver e política MFA | Convite, ativação, vínculo, revogação e operação comprovados. |
+| 0261 | Persistência empresarial | PARTIAL | Fonte PostgreSQL e fixture rollback | Empresa/endereço/fuso sobrevivem ACK, reload e sessão nova. |
+| 0262 | Sincronização | PARTIAL | Outbox/inbox e protocolo canônico | Status baseado em ACK, atualização entre abas/reconexão sem perda nem duplicação. |
+| 0263 | E2E real e segurança | PARTIAL | Role/runtime dedicada e harness | Browser autenticado via runit, isolamento e regressões verificados. |
+| 0264 | Operação Restaurante/Motoboy | PARTIAL | 0260/0263 | Fluxo operacional completo com ownership e ACK. |
+| 0265 | Integrações locais | PARTIAL | Runtime/adaptadores existentes | Páginas e estados funcionais localmente para cada adaptador disponível. |
+| 0266 | Homologação comercial | BLOCKED_EXTERNAL_DEPENDENCY | Contas, credenciais e homologação externa | Conexões externas verificadas sem simulação como PASS. |
+| 0267 | Relatórios e UX | PASS_SCOPE | Regressões dos relatórios 0254 | UX responsiva, métricas canônicas e exportações seguras mantidas. |
+| 0268 | Auditoria de lançamento | BLOCKED | Gates, dependências externas, aparelho e aprovação | Revisão de segurança/operação com evidências e bloqueios explícitos. |
+
+## Regra de manutenção
+
+Não remover uma linha porque houve campanha relacionada. Atualizar estado somente após validar a evidência; conservar o ID e a origem. Cada campanha atualiza este backlog e liga itens ao registro numerado. A implantação não é globalmente concluída enquanto itens P0 estiverem `PARTIAL`, `BLOCKED` ou `PENDING_OWNER`.
