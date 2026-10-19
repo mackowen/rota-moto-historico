@@ -1,3 +1,18 @@
+## Atualização vigente — Campanha 0256-D1 (2026-10-19)
+
+| ID estável | Descrição | Prioridade | Estado | Campanha responsável | Dependências | Evidência atual | Critério de aceite |
+|---|---|---:|---|---|---|---|---|
+| RM-0256D1-SETTINGS-PERSISTENCE | Tema e demais configurações, confirmação de gravação e saída com alterações pendentes. | P0 | PARTIAL | 0256-D1 / 0256-F | Browser autenticado por todas as categorias; política unificada de autosave/save | Aparência tem ação de salvar e escrita local confirmável; demais configurações têm donos diferentes (IndexedDB/servidor) e não foram todas revalidadas após reload. Registro 0256-D1. | Testar persistência por página após navegação, reload e nova interface; incluir guarda contra saída em todos os formulários draft. |
+| RM-0256D1-AUTH-RESUME | Estado neutro, restauração em foreground e expiração de sessão no Chrome Android. | P0 | PARTIAL | 0256-D1 / 0263 | Reproduzir seis minutos em dispositivo real e validar sessão pela política do backend | Política server 30 min idle/12 h absolute; cliente preserva sessão em falha transitória e revalida ao voltar ao foreground; 401 revoga. Sem teste físico prolongado. | Browser/Android confirma ausência de flash e expiração só conforme política; nunca prolongar idle/absolute. |
+| RM-0256D1-MFA-QR | QR de enrollment MFA e estados de fator configurado/pendente. | P1 | PARTIAL | 0256-D1 / 0256-F | Fixture sintética de enrollment e captura do canvas; Chrome Android físico | Instrução de setup agora é condicionada a `mfaEnrollmentRequired`; enrollment visual não foi executado. | Validar QR em fixture sintética sem tocar fatores reais e revisar recuperação/substituição autorizada. |
+| RM-0256D1-PRINT-QR | QR sintético no teste de impressão e validação em hardware. | P1 | PARTIAL | 0256-D1 / 0256-F | Impressora/navegador real do proprietário | Renderer e teste unitário usam QR local com rótulo que não autoriza acesso. Não foi impresso em hardware real. | Confirmar leitura e legibilidade com configuração de impressão autorizada. |
+| RM-0256D1-ADMIN-AUDIT-READ | Consulta administrativa filtrada/exportável de `audit_log` por empresa. | P0 | BLOCKED_PERMISSION_MODEL | 0256-D1 / 0257 | Definir papel/função segura de leitura e migrar somente após autorização | Read-only em `rotamoto_e2e`: runtime `rotamoto_app` tem INSERT e não SELECT. Nenhum grant/função/migration foi criado; tentativa UI/API foi removida e indisponibilidade informada. | Implementar leitura tenant-scoped sem conceder leitura geral ao runtime; paginação, filtro, redaction, RBAC e exportação autorizada. |
+| RM-0256D1-VISUAL | Saiba mais, bordas de permissões, hierarquia de modais/integrações, espaçamentos e brace do laboratório. | P2 | PARTIAL | 0256-D1 / 0256-F | Revisão visual autenticada completa nos cinco viewports e dois temas | Botão Central de Ajuda padronizado; borda de fieldset reduzida; Integrações já recolhe detalhes técnicos desde 0256-D. | Inspecionar Ajustes, Rotas, Equipe, Integrações, Laboratório e Conta e Segurança após E2E final. |
+
+Ver [REGISTRO 0256-D1](REGISTROS/0256-D1.md). 0256-C, 0256-D, 0256-E, 0256-F, 0260 e 0263 continuam preservadas.
+
+---
+
 ## Atualização vigente — Campanha 0256-D (2026-10-19)
 
 | ID estável | Descrição | Prioridade | Estado | Campanha responsável | Dependências | Evidência atual | Critério de aceite |

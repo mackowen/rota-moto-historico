@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0256-D1 (2026-10-19)
+
+**PARTIAL.** A auditoria física Android resultou em mudanças reais no estado inicial de autenticação, revalidação em foreground, estado de enrollment MFA, QR sintético de impressão, botão de salvar Aparência e ajustes visuais/CSS/cache. `npm test` passou integralmente; Browser/CDP autenticado em cinco viewports e dois temas comprovou salvamento do tema após reload e isolamento das simulações. O runtime E2E comprovou que `rotamoto_app` não pode ler `audit_log`; a consulta administrativa ficou BLOCKED e não houve grant/migration. O relato de sessão de seis minutos não foi reproduzido em Android físico: política backend permanece 30 minutos idle deslizante e 12 horas absolutas. Vários dos 17 itens ainda não têm prova completa.
+
+Referências antigas de cache encontradas na suíte foram atualizadas para shell v73. A validação não é Chrome Android físico; fica PENDING_OWNER. Nenhum banco oficial, MFA real, identidade, segredo, vínculo empresarial ou privilégio persistente foi tocado.
+
+Ver [REGISTRO 0256-D1](REGISTROS/0256-D1.md) e [BACKLOG_MESTRE](BACKLOG_MESTRE.md). Permanecem planejadas 0256-C/D/E/F, 0260, 0263 e 0257; nenhuma pendência anterior foi encerrada por inferência.
+
+---
+
 ## Estado vigente — Campanha 0256-D (2026-10-19)
 
 **PARTIAL.** Origem dos pedidos foi separada da administração de marketplaces, e a cópia do Laboratório avançado removida. Simuladores 99Food/Keeta agora mantêm pedidos/eventos/fila somente em memória; processamento e transição não alteram IndexedDB `orders/events/outbox`. A página autenticada de Integrações apresentou os três marketplaces sem alegar conexão. Catálogo e ações de conta continuam tenant-scoped; não houve chamada externa nem credencial real.
