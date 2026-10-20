@@ -55,3 +55,9 @@ A campanha D3 trata somente `RM-AUD19-02`, `RM-AUD19-10` e `RM-D1-SETTINGS-SAVE`
 ## Atualização de execução — 0256-D4
 
 D4 segue PARTIAL: diagnóstico confirmou falha no lifecycle do CDP, correção de reconexão e prova Browser autenticada para o subset detalhado no registro. O runner ampliado foi interrompido sem relatório final; não fecha `RM-AUD19-02/10`. Próximo passo de salvamento é completar somente a matriz remanescente e negativos da D4, sem iniciar campanha dependente nem remover 0256-E/F e 0257–0268.
+
+## Atualização de execução — 0256-D5
+
+D5 completou ciclos autenticados e reversíveis para Operação (fixo/arredondamento/repasse), cor de destaque, impressão, atalhos, 12 valores de origens, localização Company e criação/readback de perfil e usuário locais. Testou erros Company 401/403/400/409 e perda de rede. A política de agrupamento de rotas não confirmou gravação pela UI; APIs de Logística responderam 200 sob handler real, mas não tiveram escrita/readback; portanto `RM-AUD19-02/10` permanecem PARTIAL. O backup continua desabilitado no runtime (503) e fixture (fallback 404), sem ser ativado. O ponto exato em que D4 parou não está registrado; evidência não autoriza atribuir causa ao aplicativo. Ver [REGISTROS/0256-D5.md](REGISTROS/0256-D5.md).
+
+Não iniciar automaticamente 0256-E nem outra campanha. Próxima decisão de sequência permanece no roadmap: antes de avançar os gates, completar a matriz de gravação de agrupamento/Logística e dirty state; preservar 0256-E/F e 0257–0268 com dependências existentes.
