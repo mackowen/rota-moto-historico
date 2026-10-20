@@ -1,4 +1,12 @@
-## Estado vigente — Campanha 0257 (2026-10-20)
+## Estado vigente — Campanha 0259 (2026-10-20)
+
+**PARTIAL.** A suíte HTTP/PostgreSQL cobriu login/sessão sintéticos, MFA/CSRF/RBAC, recuperação genérica, convite, reenvio com rotação, token vencido/revogado, aceite, conflito para membership ativa e negação de funcionário limitado. Browser/CDP passou 11 fluxos em 36 verificações de viewport nos dois apps, cinco larguras e temas claro/escuro: convite via sink local, aceite e login, 403 sem Driver, vínculo explícito same-tenant, acesso autorizado, unlink com 403 imediato e regressão de páginas de equipe. Zero exceções JS/5xx inesperadas.
+
+Manifesto `f02caef8-4df0-4175-af7d-9d28fc5776bc`: `COMPLETED`, `databaseCommitted=false`, resíduos tenant zero; runit restaurado e readiness HTTP 200. Limites: concorrência, identidade existente em outra empresa, link cross-tenant/Driver inativo, ações de reenvio/revogação pelo Browser e SMTP real seguem sem prova completa; esses critérios continuam na 0260. RM-AUD19-18/19 permanecem abertos e não foram confundidos com convite/vínculo. RM-AUD19-01…19 e pendências históricas permanecem. **0258 segue BLOCKED_AUTHORIZATION**. Chrome Android físico permanece PENDING_OWNER. Ver [REGISTRO 0259](REGISTROS/0259.md), [inventário](INVENTARIO_UNICO_PROBLEMAS.md), [backlog](BACKLOG_MESTRE.md) e [ordem](ORDEM_EXECUCAO_CAMPANHAS.md).
+
+---
+
+## Registro histórico — Campanha 0257 (2026-10-20)
 
 **PARTIAL — administração global separada e negativa tenant comprovadas; painel global positivo e auditoria runtime seguem incompletos.** `npm test` Restaurante e Motoboy passaram; testes `test:platform-admin`, `test:e2e-platform-admin` e `test:e2e-tenant-isolation` passaram. O teste PostgreSQL verificou, em transação revertida, bootstrap sintético, leitura global, disable/enable de outro usuário, negação de auto-suspensão e limites do role runtime. Browser/CDP autenticado confirmou tenant admin negado em `/api/platform-admin/companies`, sem card/página global, em 360/390/768/1024/1440 nos dois temas; zero JS exceptions/overflow. 401/403 foram observados, sem falso sucesso comercial.
 
