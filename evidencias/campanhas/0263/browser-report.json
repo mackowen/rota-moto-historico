@@ -1,0 +1,221 @@
+{
+  "scope": "permanent E2E runtime; anonymous browser session; no database writes",
+  "viewports": [
+    {
+      "app": "restaurante",
+      "width": 360,
+      "scrollWidth": 360,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "restaurante",
+      "width": 360,
+      "scrollWidth": 360,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "restaurante",
+      "width": 390,
+      "scrollWidth": 390,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "restaurante",
+      "width": 390,
+      "scrollWidth": 390,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "restaurante",
+      "width": 768,
+      "scrollWidth": 768,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "restaurante",
+      "width": 768,
+      "scrollWidth": 768,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "restaurante",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "restaurante",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "restaurante",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "restaurante",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "motoboy",
+      "width": 360,
+      "scrollWidth": 360,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "motoboy",
+      "width": 360,
+      "scrollWidth": 360,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "motoboy",
+      "width": 390,
+      "scrollWidth": 390,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "motoboy",
+      "width": 390,
+      "scrollWidth": 390,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "motoboy",
+      "width": 768,
+      "scrollWidth": 768,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "motoboy",
+      "width": 768,
+      "scrollWidth": 768,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "motoboy",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "motoboy",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    },
+    {
+      "app": "motoboy",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "light"
+    },
+    {
+      "app": "motoboy",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "rootHidden": true,
+      "rootAriaHidden": "true",
+      "panelVisible": true,
+      "loginVisible": true,
+      "theme": "dark"
+    }
+  ],
+  "networkRecovery": [
+    {
+      "app": "restaurante",
+      "offline": "request rejected; no success surfaced",
+      "recoveredHttp": 200,
+      "postgres": "ready"
+    },
+    {
+      "app": "motoboy",
+      "offline": "request rejected; no success surfaced",
+      "recoveredHttp": 200,
+      "postgres": "ready"
+    }
+  ],
+  "pageErrors": [],
+  "unexpected5xx": []
+}
