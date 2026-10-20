@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0261 (2026-10-20)
+
+**PARTIAL.** A auditoria encontrou que a hidratação Company atualizava o endereço e estado, mas não atualizava coordenadas exibidas e o mapa já montado. Corrigido em `app.js`: os readouts da página Empresa e o marcador/mapa agora seguem a leitura canônica sem substituir rascunho de endereço; publicação de coordenadas exige ACK e GET readback com mesmos endereço, latitude, longitude, provenance `operator_confirmed` e versão.
+
+Browser E2E autenticado em Chromium/CDP: Company Profile salvo via UI e confirmado por API; localização sintética Company, igualdade dos valores DOM Empresa/Logística, origem personalizada independente, reload e segunda sessão; 400/409 e negação 403 por perfil limitado. 10 checagens de viewport/tema sem overflow, zero erros JS/HTTP 5xx. `npm test` passou nos dois apps. Manifesto `f8621e7b-cfc6-40d2-8945-581f03f4d54a` COMPLETED, `databaseCommitted=false`, tenant residual zero; runit restaurado e `/health/ready` HTTP 200.
+
+**Limites:** o clique/confirmar do mapa passou com coordenadas sintéticas e readback canônico; a gravação Company foi exercitada sob sessão autenticada na fixture. A suíte não repetiu todos os campos D3–D6, falhas de rede/retry/drafts, nem leitura `/sync/pull` no Motoboy. Portanto `RM-D1-LOCATION-CONSISTENCY`, `RM-0252-COMPANY-PERSIST`, aliases 0250/0247 e RM-AUD19-02/03/10 permanecem PARTIAL. Os outros RM-AUD19-01..19 e pendências históricas seguem preservados. Não houve alteração oficial, identidade real, MFA, role, GRANT, RLS, credencial ou integração comercial. Chrome Android físico permanece PENDING_OWNER; CDP não é validação física. 0258 continua BLOCKED_AUTHORIZATION. 0262 não foi iniciada. Ver [REGISTRO 0261](REGISTROS/0261.md), [inventário](INVENTARIO_UNICO_PROBLEMAS.md), [backlog](BACKLOG_MESTRE.md) e [ordem](ORDEM_EXECUCAO_CAMPANHAS.md).
+
+---
+
 ## Estado vigente — Campanha 0260 (2026-10-20)
 
 **PARTIAL.** `npm test` passou nos dois aplicativos; `test:identity-http` e `test-domain-sync-postgres.js` passaram com fixtures sintéticas em `rotamoto_e2e`, e Browser/CDP autenticado completou 12 fluxos, 36 verificações de viewport e quatro negações esperadas, sem erros JS/HTTP 5xx. O Browser verificou edição de nome/telefone/email de contato do Driver, ACK/readback canônico, distinção de situação administrativa e disponibilidade, reload local, criação/edição de perfil, convite/aceite, vínculo explícito same-tenant, unlink e restrição de funcionário. PostgreSQL comprovou edição de role/situação da membership, sessão revogada, login bloqueado durante suspensão, reativação, conflito por revisão antiga e negação de vínculo cross-tenant/edição sem `sync.push`. Runtime E2E foi restaurado e readiness respondeu 200.

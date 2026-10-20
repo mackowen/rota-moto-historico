@@ -138,7 +138,7 @@ Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evi
 | 0258 | Fundador e privilégios | BLOCKED_AUTHORIZATION | Evidência histórica e aprovação explícita | Proposta reversível revisada; alteração persistente somente após gate. |
 | 0259 | Identidades, convites e vínculos empresariais | PARTIAL | E2E sintético; corridas transacionais e ações administrativas na UI | Fluxo principal e reuso sequencial de User em tenant adicional comprovados até 0260; fechar concorrência e reenvio/revogação Browser. Ver REGISTROS/0259.md e 0260.md. |
 | 0260 | Equipe, permissões, Motoboys e convites | PARTIAL | 0259; contrato Driver e política MFA | Perfil/membership editáveis e revogação de sessão; Driver por sync com RBAC/revisão/readback. User canônico sem API; concorrência e identidade existente em outro tenant seguem abertas. Não iniciar 0261. |
-| 0261 | Persistência empresarial | PARTIAL | Fonte PostgreSQL e fixture rollback | Empresa/endereço/fuso sobrevivem ACK, reload e sessão nova. |
+| 0261 | Persistência empresarial e consistência de localização | PARTIAL | Contrato Company, endpoints autorizados, fixture rollback e DOM de ambas as telas | Company Profile passou ACK/readback/reload/segunda sessão; coordenadas Company sintéticas foram iguais no DOM Empresa/Logística; origem custom ficou separada. Clique/confirmar do mapa passou com ACK/readback; todos os campos restantes, sync/pull Motoboy e negativos de retry/draft seguem pendentes. Ver REGISTROS/0261.md. |
 | 0262 | Sincronização | PARTIAL | Outbox/inbox e protocolo canônico | Status baseado em ACK, atualização entre abas/reconexão sem perda nem duplicação. |
 | 0263 | E2E real e segurança | PARTIAL | Role/runtime dedicada e harness | Browser autenticado via runit, isolamento e regressões verificados. |
 | 0264 | Operação Restaurante/Motoboy | PARTIAL | 0260/0263 | Fluxo operacional completo com ownership e ACK. |
@@ -150,3 +150,10 @@ Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evi
 ## Regra de manutenção
 
 Não remover uma linha porque houve campanha relacionada. Atualizar estado somente após validar a evidência; conservar o ID e a origem. Cada campanha atualiza este backlog e liga itens ao registro numerado. A implantação não é globalmente concluída enquanto itens P0 estiverem `PARTIAL`, `BLOCKED` ou `PENDING_OWNER`.
+
+
+## Atualização 0261 — persistência empresarial
+
+**PARTIAL.** Causa visual comprovada em `app.js`: hidratação canônica atualizava o estado/input do endereço, mas não os dois readouts de coordenadas nem o mapa já montado. A tela podia combinar endereço atual com coordenadas locais antigas. A hidratação agora sincroniza os readouts e marcador; a confirmação de localização exige ACK e GET canônico com endereço, par de coordenadas, proveniência e revisão coincidentes.
+
+Browser/CDP autenticado comprovou edição de nome/telefone pela UI, API Company readback, localização sintética em Empresa e Logística/Frota no DOM, custom origin independente, reload, segunda sessão, 400/409 e 403 para perfil limitado. Dez verificações viewport/tema, sem overflow, erro JS ou HTTP 5xx. `npm test` dos dois aplicativos passou. Erro de rede/retry/draft, todas as configurações e snapshot/pull do Motoboy não foram cobertos; RM-AUD19-02/03/10 e os aliases Company permanecem PARTIAL. Manifesto `f8621e7b-cfc6-40d2-8945-581f03f4d54a` COMPLETED, `databaseCommitted=false`, contagens finais tenant zero; API readiness 200 após restauração. Sem banco oficial/credenciais/MFA/roles/grants; sem Chrome Android físico. Registro: [0261](REGISTROS/0261.md), [Browser report](../browser-tests/evidencias/campanhas/0261/report.json). 0262 continua apenas planejada; não iniciada.
