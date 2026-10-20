@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0257 (2026-10-20)
+
+**PARTIAL — administração global separada e negativa tenant comprovadas; painel global positivo e auditoria runtime seguem incompletos.** `npm test` Restaurante e Motoboy passaram; testes `test:platform-admin`, `test:e2e-platform-admin` e `test:e2e-tenant-isolation` passaram. O teste PostgreSQL verificou, em transação revertida, bootstrap sintético, leitura global, disable/enable de outro usuário, negação de auto-suspensão e limites do role runtime. Browser/CDP autenticado confirmou tenant admin negado em `/api/platform-admin/companies`, sem card/página global, em 360/390/768/1024/1440 nos dois temas; zero JS exceptions/overflow. 401/403 foram observados, sem falso sucesso comercial.
+
+UI positiva de administrador global não foi exercitada; não existe caminho de fixture que conceda temporariamente o grant migrator no mesmo contexto transacional app com rollback. Não se criou grant persistente. `rotamoto_app` permanece sem SELECT em `rotamoto.audit_log`; não foi alterado grant/RLS. `platform_admin_audit_log` registra operações, mas não existe endpoint/UI de consulta. Detalhe/filtros/paginação, gestão global de grants, serviços/configurações e revisão 409 não estão implementados; endpoints de ação não aceitam revisão e rejeitam `expectedRevision` com 400. `RM-0255-GLOBAL-UI` e `RM-0257-GLOBAL-ADMIN-E2E` seguem PARTIAL; RM-D1-ADMIN-AUDIT e RM-AUD19-11 seguem BLOCKED_PERMISSION_MODEL. Ver [REGISTRO 0257](REGISTROS/0257.md).
+
+Manifesto da fixture: `COMPLETED`, `databaseCommitted=false`, resíduos tenant zero. Runtime E2E foi restaurado e health respondeu 200. Nenhum banco oficial, usuário real, MFA ou privilégio persistente foi alterado. RM-AUD19-01…19 e pendências 0256 permanecem. **0258 segue BLOCKED_AUTHORIZATION**; não iniciar sem evidência independente de fundador e aprovação explícita. Chrome Android físico permanece PENDING_OWNER.
+
+---
+
 ## Estado vigente — Campanha 0256-F (2026-10-20)
 
 **PARTIAL.** `npm test` passou nos dois aplicativos. Browser/CDP autenticado completou 250 renderizações: 70 visitas operacionais e 180 páginas de Ajustes, em cinco larguras e dois temas; zero exceções JavaScript/overflow. A fixture transacional confirmou rollback. Correção F: `identity-ui.js` mantinha consulta DOM a controles MFA depois que Conta e segurança era desmontada, causando TypeError e impedindo fechar o painel; referências estáveis corrigem a desmontagem. Nenhum MFA real foi alterado.

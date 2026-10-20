@@ -1,0 +1,22 @@
+{
+  "campaign": "0257",
+  "fixtureRunnerAuthorizationLabel": "0251 fixed-port guard",
+  "environment": "rotamoto_e2e",
+  "runId": "00494585-6249-4c9c-9266-c7080079c167",
+  "status": "COMPLETED",
+  "databaseCommitted": false,
+  "registeredTenantResidualCounts": {
+    "companies": 0,
+    "users": 0,
+    "authRecords": 0,
+    "memberships": 0,
+    "sessions": 0,
+    "domainRecords": 0,
+    "syncInbox": 0,
+    "syncOutbox": 0,
+    "auditLog": 0
+  },
+  "runtimeRestored": true,
+  "readinessHttp": 200,
+  "globalAdministratorPersistentGrantCreated": false
+}

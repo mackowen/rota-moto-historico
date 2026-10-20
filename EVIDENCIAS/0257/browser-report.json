@@ -1,0 +1,104 @@
+{
+  "desktopWidth": 1280,
+  "mobileWidth": 390,
+  "responsive": [
+    {
+      "width": 360,
+      "scheme": "light",
+      "scrollWidth": 360
+    },
+    {
+      "width": 360,
+      "scheme": "dark",
+      "scrollWidth": 360
+    },
+    {
+      "width": 390,
+      "scheme": "light",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "scheme": "dark",
+      "scrollWidth": 390
+    },
+    {
+      "width": 768,
+      "scheme": "light",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "scheme": "dark",
+      "scrollWidth": 768
+    },
+    {
+      "width": 1024,
+      "scheme": "light",
+      "scrollWidth": 1024
+    },
+    {
+      "width": 1024,
+      "scheme": "dark",
+      "scrollWidth": 1024
+    },
+    {
+      "width": 1440,
+      "scheme": "light",
+      "scrollWidth": 1440
+    },
+    {
+      "width": 1440,
+      "scheme": "dark",
+      "scrollWidth": 1440
+    }
+  ],
+  "readerMarketplace": 503,
+  "restrictedMarketplace": 403,
+  "globalForTenant": 403,
+  "syncInstall": 403,
+  "expiredMarketplace": 401,
+  "jsErrors": 0,
+  "http": [
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/marketplace/orders",
+      "status": 503
+    },
+    {
+      "path": "/api/platform-admin/companies",
+      "status": 403
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/marketplace/orders",
+      "status": 403
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/installations/restaurante",
+      "status": 403
+    },
+    {
+      "path": "/api/admin/marketplace/orders",
+      "status": 401
+    }
+  ]
+}
