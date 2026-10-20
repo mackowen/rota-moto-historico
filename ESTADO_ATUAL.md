@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0262 (2026-10-20)
+
+**PARTIAL.** Corrigida a ausência de reconciliação ao retomar o app: Restaurante e Motoboy revalidam sessão e agendam sync após visibilitychange visível, pageshow e online, com limite contra eventos repetidos. Browser/CDP autenticado comprovou Company do Restaurante em /sync/pull, cache IndexedDB por tenant, revisão 3→4 após atualização canônica, atualização do DOM do Motoboy em pageshow e edição Company desabilitada. 20 verificações em cinco larguras e dois temas, três fluxos, três negações, sem erros JS/HTTP 5xx. npm test dos dois apps e teste PostgreSQL de domínio/sync passaram. Manifesto da fixture COMPLETED, databaseCommitted=false e tenant com resíduos zero; runit restaurado e readiness 200.
+
+Offline durante envio, ACK perdido no Browser, conflito concorrente em conexões independentes, tombstone concorrente e reprise autenticada completa continuam PARTIAL. A suíte integral de migrations/rollback ficou BLOCKED pelo guard que requer banco descartável; não foi contornado. RM-0253-CROSS-TAB-SYNC, RM-0252-CROSS-TAB-SYNC, RM-0251-SYNC-STATUS, RM-0250/0247-SYNC-ACK e RM-AUD19-02/03/10 permanecem PARTIAL; todos os 19 IDs Android e pendências históricas permanecem. CDP não valida Chrome Android físico; 0258 segue BLOCKED_AUTHORIZATION. 0263 não foi iniciada. Ver [REGISTRO 0262](REGISTROS/0262.md), [inventário](INVENTARIO_UNICO_PROBLEMAS.md), [backlog](BACKLOG_MESTRE.md) e [ordem](ORDEM_EXECUCAO_CAMPANHAS.md).
+
+---
+
 ## Estado vigente — Campanha 0261 (2026-10-20)
 
 **PARTIAL.** A auditoria encontrou que a hidratação Company atualizava o endereço e estado, mas não atualizava coordenadas exibidas e o mapa já montado. Corrigido em `app.js`: os readouts da página Empresa e o marcador/mapa agora seguem a leitura canônica sem substituir rascunho de endereço; publicação de coordenadas exige ACK e GET readback com mesmos endereço, latitude, longitude, provenance `operator_confirmed` e versão.
