@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0256-E (2026-10-20)
+
+**PARTIAL.** Backup PostgreSQL cifrado, manifesto/integridade e restauração foram comprovados somente em cluster PostgreSQL efêmero criado para o teste; 51 migrações, 40 tabelas RLS, 43 policies e uma linha sintética foram verificadas. `npm run test:backup-center`, inventário, storage e recuperação passaram; cinco execuções isoladas da concorrência de 32 jobs também passaram sem reproduzir a corrida histórica. O helper parou/removou o cluster descartável em `finally`.
+
+Prontidão operacional permanece bloqueada: o GET real `127.0.0.1:8787/api/admin/backup` responde 503 `BACKUP_ADMIN_NOT_CONFIGURED` e o operador informa backup `not_configured`. Nada foi habilitado. O `npm test` do Restaurante para antes dos testes de backup em `tests/test-help-center.js`, que espera asset `app.js?v=0256d3.1` enquanto o shell atual referencia `0256d6.1`; suíte específica de backup passou. `npm test` Motoboy passou. Browser E2E autenticado não executado porque o runner disponível mantém escritas sintéticas no `rotamoto_e2e` sem rollback integral. Não houve teste Android físico, destino externo ou recuperação fora do equipamento.
+
+`RM-0256C-BACKUP-CONTENTION` fica PARTIAL_NOT_REPRODUCED; `RM-0256E-BACKUP-RECOVERY` fica PARTIAL técnico / BLOCKED operacional. Os 19 problemas Android (inclusive 002/003/010) e demais pendências mantêm seus estados. RPO/RTO, custodiante, cópia offsite, `BACKUP_ADMIN_NOT_CONFIGURED`, Browser autenticado reversível e regressão da suíte integral permanecem pendentes. Sem alterações de app, banco oficial, credenciais, identidades, MFA ou privilégios persistentes; nenhum commit de código. A campanha 0256-F e o roadmap 0257–0268 permanecem, sem iniciar outra campanha. Ver [REGISTRO 0256-E](REGISTROS/0256-E.md).
+
+---
+
 ## Estado vigente — Campanha 0256-D6 (2026-10-20)
 
 **PARTIAL; RM-AUD19-02/10 continuam abertos.** Corrigido o carregamento tardio do snapshot Company na primeira abertura de Ajustes → Operação e habilitação do seletor de agrupamento. Browser/CDP autenticado confirmou PUT 200, política e revisão canônicas, além de status de sucesso. Handlers reais de Logística gravaram e releram configuração de rota/custos, conflito 409 e dados inválidos 400. Company sintética e origem empresarial Logística retornaram coordenadas coincidentes com `operator_confirmed`; nenhuma localização real foi modificada. Ver [registro 0256-D6](REGISTROS/0256-D6.md) e relatório `browser-tests/evidencias/campanhas/0256-D6/batch-core-report.json`.
