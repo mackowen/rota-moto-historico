@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0265 (2026-10-20)
+
+**PARTIAL.** O catálogo de integrações mantém separados adaptador, autorização, conexão confirmada, sandbox e produção. E2E autenticado em fixture transacional `rotamoto_e2e` confirmou iFood/99Food/Keeta sem conexão confirmada, isolamento das páginas, clareza de origem versus executor, Laboratório 99Food sem `}` isolado e simulação sem escrita no IndexedDB. Integrações e Laboratório passaram 20 combinações (cinco larguras × dois temas × duas telas), sem overflow, exceções JS, console errors ou HTTP 5xx; nenhum POST comercial foi enviado. Corrigimos na origem a apresentação de operação/código técnico de erro de pedido marketplace, com rótulos em português, mensagem compreensível e código recolhido. `npm test` dos dois apps passou; o erro OpenSSL/ASN1 reportado em 0264 não se reproduziu, sem causa raiz histórica comprovada.
+
+`RM-0265-PROVIDER-UI` permanece PARTIAL por ausência de conta/sandbox comercial, cenários de erro de pedidos no Browser e confirmação real dos lifecycles externos. RM-AUD19-06 e 09 têm `PASS_SCOPE` nas superfícies específicas testadas; RM-AUD19-17 continua `PARTIAL_EXTERNAL`. RM-AUD19-02/10/15 e os demais estados não foram encerrados; todos os 19 IDs e pendências históricas permanecem. 0258 segue `BLOCKED_AUTHORIZATION`; 0266 não foi iniciada e depende de onboarding/credenciais/autorização externos. Fixture revertida e resíduos verificados pelo lifecycle; Chromium/listener encerrados. Readiness final: APIs 8787/8788 `ready` com PostgreSQL `ready`; frontends E2E 8083/8084 responderam HTTP 200. Nenhum Chrome Android físico. Ver [REGISTRO 0265](REGISTROS/0265.md), [inventário](INVENTARIO_UNICO_PROBLEMAS.md), [backlog](BACKLOG_MESTRE.md) e [ordem](ORDEM_EXECUCAO_CAMPANHAS.md).
+
+---
+
 ## Estado vigente — Campanha 0264 (2026-10-20)
 
 **PARTIAL.** A implementação de domínio já representa devolução após coleta como nova Delivery RETURN ligada à original, sem nova Order/Earning; Route conserva a sequência canônica e remove só a parada de devolução após receipt. Não foi necessário alterar código de produção. Um runner E2E atual foi adicionado para corrigir a expectativa legada de Driver `OFFLINE` (estado administrativo) versus OperationalAvailability `online/offline`, e aguardar sync `ready` antes de operar.

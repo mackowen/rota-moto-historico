@@ -1,0 +1,211 @@
+{
+  "campaign": "0265",
+  "fixture": {
+    "database": "rotamoto_e2e",
+    "mode": "transactional",
+    "rollbackVerified": true,
+    "residuals": "zero"
+  },
+  "browser": {
+    "authenticated": true,
+    "database": "rotamoto_e2e",
+    "fixture": "transactional-rollback",
+    "providers": [
+      "iFood · sem conexão confirmada",
+      "99Food · sem conexão confirmada",
+      "Keeta · sem conexão confirmada"
+    ],
+    "providerPageIsolation": true,
+    "credentialExposure": false,
+    "lab": {
+      "strayBraceNodes": 0,
+      "postSimulationBraceNodes": 0,
+      "localSimulation": true,
+      "syntheticOrderProcessed": true
+    },
+    "sourceAndExecutorDistinguished": true,
+    "sourceExecutionText": "RESPONSABILIDADE\nOrigem, conexão e entrega são controles separados\n\nEsta página controla nomes e disponibilidade local. Para administrar contas autorizadas, consulte Integrações. Regras de entrega e despacho ficam em Logística.\n\nAbrir Integrações\nOrigem local do pedido\nConta e estado da plataforma\nResponsável pela entrega",
+    "viewportThemeChecks": 20,
+    "layouts": [
+      {
+        "width": 360,
+        "scrollWidth": 360,
+        "theme": "light",
+        "visibleProviders": [
+          "keeta"
+        ]
+      },
+      {
+        "width": 360,
+        "scrollWidth": 360,
+        "theme": "dark",
+        "visibleProviders": [
+          "keeta"
+        ]
+      },
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "light",
+        "visibleProviders": [
+          "keeta"
+        ]
+      },
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 768,
+        "scrollWidth": 753,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 768,
+        "scrollWidth": 753,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1024,
+        "scrollWidth": 1009,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1024,
+        "scrollWidth": 1009,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      }
+    ],
+    "labLayouts": [
+      {
+        "width": 360,
+        "scrollWidth": 360,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 360,
+        "scrollWidth": 360,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 768,
+        "scrollWidth": 753,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 768,
+        "scrollWidth": 753,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1024,
+        "scrollWidth": 1009,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1024,
+        "scrollWidth": 1009,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "theme": "light",
+        "visibleProviders": [
+          "ifood"
+        ]
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "theme": "dark",
+        "visibleProviders": [
+          "ifood"
+        ]
+      }
+    ],
+    "httpErrors": [],
+    "jsExceptions": [],
+    "consoleErrors": [],
+    "providerRequests": [
+      {
+        "method": "GET",
+        "path": "/api/admin/integrations"
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/integrations"
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/integrations"
+      }
+    ]
+  }
+}

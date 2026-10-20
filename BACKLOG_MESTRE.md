@@ -1,3 +1,9 @@
+## Atualização vigente — Campanha 0265 (2026-10-20)
+
+**PARTIAL.** `identity-ui.js` agora apresenta resultado de ações marketplace com rótulos de operação em português, texto amigável para falha e código interno apenas em disclosure recolhida. Browser/CDP autenticado provou status honesto sem conexão em iFood, 99Food e Keeta, páginas exclusivas, separação origem/executor e Laboratório 99Food sintético sem escrita IndexedDB, overflow, JS exception ou 5xx em cinco larguras e dois temas. `npm test` Restaurante/Motoboy passou. Sem conta comercial ou sandbox autorizada, nenhuma conectividade/homologação foi alegada; seguir como dependência da 0266. O erro ASN1 do teste de backup reportado em 0264 não foi reproduzido (teste isolado e suíte atual passaram), sem inferir causa histórica. IDs RM-AUD19-01..19, campanhas futuras e pendências preservados. Registro: [REGISTROS/0265.md](REGISTROS/0265.md).
+
+---
+
 ## Atualização vigente — Campanha 0262 (2026-10-20)
 
 **PARTIAL.** Os dois clientes agora revalidam sessão e retomam sync quando a página volta ao primeiro plano. E2E Browser/CDP autenticado comprovou Company em /sync/pull, IndexedDB/DOM do Motoboy e revisão 3→4; 20 combinações viewport/tema, três fluxos e três negações. npm test nos dois aplicativos e teste PostgreSQL sync passaram. Fixture revertida com zero resíduos e serviço runit/readiness restaurados. Offline durante envio, conflitos em concorrência real, recuperação autenticada de outbox pendente e ACK perdido no Browser seguem PARTIAL. Ver [REGISTRO 0262](REGISTROS/0262.md).
