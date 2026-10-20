@@ -1,3 +1,9 @@
+## Atualização vigente — Campanha 0260 (2026-10-20)
+
+**PARTIAL.** Contratos e implementação confirmam edição de perfil personalizado e de membership (papel/situação), com RBAC, CSRF/MFA, proteção de perfil de sistema, autoalteração e revogação de sessões. O cadastro Driver é editável pelo Restaurante através de Local-First + `sync.push` autorizado, com revisão otimista; Motoboy permanece read-only. Nome/email canônicos de User e edição do proprietário global não têm endpoint permitido. `accept-authenticated` reutilizou identidade existente em segundo tenant em teste sequencial; concorrência independente e ações de reenvio/revogação pela UI seguem pendentes. Ver [REGISTRO 0260](REGISTROS/0260.md). RM-AUD19-18/19 continuam parcialmente abertos. Não iniciar 0261 automaticamente.
+
+---
+
 ## Atualização vigente — Campanha 0257 (2026-10-20)
 
 **PARTIAL.** Os testes HTTP/PG provaram guards e operações de usuários globais sintéticos; Browser/CDP provou que tenant admin autenticado não vê nem acessa a administração global. As cinco larguras e dois temas passaram sem overflow. Não há tela/endpoint para grants, serviços/configuração, filtros/detalhes nem leitura de auditoria. `rotamoto.audit_log` continua sem SELECT para `rotamoto_app`; nenhum privilégio foi concedido. A UI positiva global não foi comprovada porque a fixture reversível não pode conceder o grant reservado ao operador migrator no mesmo ciclo de sessão. O manifesto final confirma rollback e zero resíduos. Ver [REGISTRO 0257](REGISTROS/0257.md).
@@ -130,8 +136,8 @@ Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evi
 | 0256-F | Auditoria visual e E2E final | PLANNED | 0256-C/D/E e Chrome Android owner review | Regressão completa visual/funcional nos viewports, temas, navegação e fluxos autenticados. |
 | 0257 | Administração global | PARTIAL | Identidade global sintética; schema E2E | Painel positivo/negativo funcional e auditado, sem promoção persistente. |
 | 0258 | Fundador e privilégios | BLOCKED_AUTHORIZATION | Evidência histórica e aprovação explícita | Proposta reversível revisada; alteração persistente somente após gate. |
-| 0259 | Identidades, convites e vínculos empresariais | PARTIAL | E2E sintético; fluxos concorrentes e identidade multiempresa | Caminho principal autenticado e protegido comprovado; fechar gaps de concorrência, conta existente, cross-tenant e UI de reenvio/revogação. Ver REGISTROS/0259.md. |
-| 0260 | Equipe, permissões, Motoboys e convites | PARTIAL | 0259; contrato Driver e política MFA | Cobrir gaps de identidade/vínculo, edição operacional conforme contrato, RBAC, isolamento, duplicidade e reload; manter RM-AUD19-18/19 e outros IDs abertos até prova própria. |
+| 0259 | Identidades, convites e vínculos empresariais | PARTIAL | E2E sintético; corridas transacionais e ações administrativas na UI | Fluxo principal e reuso sequencial de User em tenant adicional comprovados até 0260; fechar concorrência e reenvio/revogação Browser. Ver REGISTROS/0259.md e 0260.md. |
+| 0260 | Equipe, permissões, Motoboys e convites | PARTIAL | 0259; contrato Driver e política MFA | Perfil/membership editáveis e revogação de sessão; Driver por sync com RBAC/revisão/readback. User canônico sem API; concorrência e identidade existente em outro tenant seguem abertas. Não iniciar 0261. |
 | 0261 | Persistência empresarial | PARTIAL | Fonte PostgreSQL e fixture rollback | Empresa/endereço/fuso sobrevivem ACK, reload e sessão nova. |
 | 0262 | Sincronização | PARTIAL | Outbox/inbox e protocolo canônico | Status baseado em ACK, atualização entre abas/reconexão sem perda nem duplicação. |
 | 0263 | E2E real e segurança | PARTIAL | Role/runtime dedicada e harness | Browser autenticado via runit, isolamento e regressões verificados. |

@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0260 (2026-10-20)
+
+**PARTIAL.** `npm test` passou nos dois aplicativos; `test:identity-http` e `test-domain-sync-postgres.js` passaram com fixtures sintéticas em `rotamoto_e2e`, e Browser/CDP autenticado completou 12 fluxos, 36 verificações de viewport e quatro negações esperadas, sem erros JS/HTTP 5xx. O Browser verificou edição de nome/telefone/email de contato do Driver, ACK/readback canônico, distinção de situação administrativa e disponibilidade, reload local, criação/edição de perfil, convite/aceite, vínculo explícito same-tenant, unlink e restrição de funcionário. PostgreSQL comprovou edição de role/situação da membership, sessão revogada, login bloqueado durante suspensão, reativação, conflito por revisão antiga e negação de vínculo cross-tenant/edição sem `sync.push`. Runtime E2E foi restaurado e readiness respondeu 200.
+
+Não há endpoint para alterar nome/email canônicos de User; operação não foi inventada. `accept-authenticated` para identidade existente em empresa adicional passou de forma sequencial e reutilizou o mesmo User. Disputas concorrentes verdadeiras e reenvio/revogação pela UI não foram cobertos. Portanto RM-AUD19-18/19 e `RM-0256C-TEAM-RBAC`, `RM-0256C-DRIVER-LINK-UI`, `RM-0259-IDENTITY-INVITE-LIFECYCLE` ficam PARTIAL. 0258 permanece `BLOCKED_AUTHORIZATION`; 0261–0268 mantidas; nenhuma próxima campanha iniciada. Nenhum banco oficial, identidade real, MFA, credencial ou privilégio persistente foi alterado. Chrome Android físico permanece `PENDING_OWNER`. Ver [REGISTRO 0260](REGISTROS/0260.md), [inventário](INVENTARIO_UNICO_PROBLEMAS.md) e [ordem](ORDEM_EXECUCAO_CAMPANHAS.md).
+
+---
+
 ## Estado vigente — Campanha 0259 (2026-10-20)
 
 **PARTIAL.** A suíte HTTP/PostgreSQL cobriu login/sessão sintéticos, MFA/CSRF/RBAC, recuperação genérica, convite, reenvio com rotação, token vencido/revogado, aceite, conflito para membership ativa e negação de funcionário limitado. Browser/CDP passou 11 fluxos em 36 verificações de viewport nos dois apps, cinco larguras e temas claro/escuro: convite via sink local, aceite e login, 403 sem Driver, vínculo explícito same-tenant, acesso autorizado, unlink com 403 imediato e regressão de páginas de equipe. Zero exceções JS/5xx inesperadas.
