@@ -1,3 +1,13 @@
+## Estado vigente — Campanha 0256-F (2026-10-20)
+
+**PARTIAL.** `npm test` passou nos dois aplicativos. Browser/CDP autenticado completou 250 renderizações: 70 visitas operacionais e 180 páginas de Ajustes, em cinco larguras e dois temas; zero exceções JavaScript/overflow. A fixture transacional confirmou rollback. Correção F: `identity-ui.js` mantinha consulta DOM a controles MFA depois que Conta e segurança era desmontada, causando TypeError e impedindo fechar o painel; referências estáveis corrigem a desmontagem. Nenhum MFA real foi alterado.
+
+Os 19 problemas Android mantêm seus estados individuais em [REGISTROS/0256-F.md](REGISTROS/0256-F.md) e [INVENTARIO_UNICO_PROBLEMAS.md](INVENTARIO_UNICO_PROBLEMAS.md). Persistência por campo, reload/expiração, auditoria, edição administrativa, QR de enrollment, 404 de endpoints ausentes da fixture, backup operacional e Chrome Android físico seguem pendentes. Backup permaneceu 503 `BACKUP_ADMIN_NOT_CONFIGURED`; sem job ou restore real.
+
+**0257 não iniciada.** A ordem vigente mantém 0256-F antes de 0257; carregar todos os itens restantes e gates 0258–0268 sem removê-los.
+
+---
+
 ## Estado vigente — Campanha 0256-E (2026-10-20)
 
 **PARTIAL.** Backup PostgreSQL cifrado, manifesto/integridade e restauração foram comprovados somente em cluster PostgreSQL efêmero criado para o teste; 51 migrações, 40 tabelas RLS, 43 policies e uma linha sintética foram verificadas. `npm run test:backup-center`, inventário, storage e recuperação passaram; cinco execuções isoladas da concorrência de 32 jobs também passaram sem reproduzir a corrida histórica. O helper parou/removou o cluster descartável em `finally`.

@@ -1,3 +1,11 @@
+## Atualização vigente — Campanha 0256-F (2026-10-20)
+
+**PARTIAL.** `npm test` passou no Restaurante e no Motoboy. O Browser E2E transacional autenticou com TOTP sintético, percorreu abas e 18 cards em 360/390/768/1024/1440 nos dois temas, sem exceções JS ou overflow horizontal. O teste detectou e a correção eliminou um `TypeError` ao fechar Conta e segurança após reparenting dos controles MFA. Persistência campo a campo, reload/expiração, auditoria server-side, edição administrativa e endpoints ausentes da fixture (404) seguem abertos. Backup indisponível com 503 honesto; nenhuma restauração real. Matriz: [REGISTROS/0256-F.md](REGISTROS/0256-F.md); critérios: [INVENTARIO_UNICO_PROBLEMAS.md](INVENTARIO_UNICO_PROBLEMAS.md).
+
+Os 19 IDs originais permanecem; `RM-F-MFA-PAGE-DETACH-CLEANUP` foi adicionado sem renumerá-los. 0257 não foi iniciada. A campanha seguinte deve carregar explicitamente os itens parciais e bloqueados, os gates 0258 e os bloqueios da 0256-E.
+
+---
+
 ## Atualização vigente — Campanha 0256-E (2026-10-20)
 
 **PARTIAL.** Recovery set PostgreSQL criptografado foi criado, verificado e restaurado em cluster/dados descartáveis; testes focados de concorrência, idempotência, interrupção, autorização administrativa, retenção e armazenamento S3/SFTP sintético passaram. A corrida `BACKUP_CONTROL_BUSY`/`BACKUP_CONTROL_LOCK_UNSAFE` não se reproduziu isoladamente, mas permanece PARTIAL porque a causa histórica não foi comprovada e a suíte integral do Restaurante parou antes dela por versão desatualizada esperada em `test-help-center.js`. O runtime atual retorna `BACKUP_ADMIN_NOT_CONFIGURED`; não foi ativado. Browser E2E autenticado não foi executado porque o runner disponível conserva dados em `rotamoto_e2e`, sem rollback integral. RPO/RTO, custódia e cópia externa seguem bloqueados. Ver [REGISTROS/0256-E.md](REGISTROS/0256-E.md). 0256-F e 0257–0268 permanecem na ordem; campanha seguinte não iniciada.

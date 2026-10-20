@@ -1,0 +1,2705 @@
+{
+  "campaign": "0256-F",
+  "startedAt": "2026-10-20T05:21:13.589Z",
+  "fixture": "single PostgreSQL transaction, no independent sessions, rollback required",
+  "runtimeServerStopped": false,
+  "databaseTarget": "rotamoto_e2e (transactional fixture only)",
+  "screenshots": [
+    "dashboard-360-light.png",
+    "reports-360-light.png",
+    "help-360-light.png",
+    "settings-geral-360-light.png",
+    "settings-operacao-360-light.png",
+    "settings-seguranca-360-light.png",
+    "settings-backup-360-light.png",
+    "settings-company-admin-team-360-light.png",
+    "settings-company-admin-drivers-360-light.png",
+    "settings-company-admin-integrations-360-light.png",
+    "settings-integration-lab-360-light.png",
+    "dashboard-360-dark.png",
+    "reports-360-dark.png",
+    "help-360-dark.png",
+    "settings-geral-360-dark.png",
+    "settings-operacao-360-dark.png",
+    "settings-seguranca-360-dark.png",
+    "settings-backup-360-dark.png",
+    "settings-company-admin-team-360-dark.png",
+    "settings-company-admin-drivers-360-dark.png",
+    "settings-company-admin-integrations-360-dark.png",
+    "settings-integration-lab-360-dark.png",
+    "dashboard-390-light.png",
+    "reports-390-light.png",
+    "help-390-light.png",
+    "settings-geral-390-light.png",
+    "settings-operacao-390-light.png",
+    "settings-seguranca-390-light.png",
+    "settings-backup-390-light.png",
+    "settings-company-admin-team-390-light.png",
+    "settings-company-admin-drivers-390-light.png",
+    "settings-company-admin-integrations-390-light.png",
+    "settings-integration-lab-390-light.png",
+    "dashboard-390-dark.png",
+    "reports-390-dark.png",
+    "help-390-dark.png",
+    "settings-geral-390-dark.png",
+    "settings-operacao-390-dark.png",
+    "settings-seguranca-390-dark.png",
+    "settings-backup-390-dark.png",
+    "settings-company-admin-team-390-dark.png",
+    "settings-company-admin-drivers-390-dark.png",
+    "settings-company-admin-integrations-390-dark.png",
+    "settings-integration-lab-390-dark.png",
+    "dashboard-768-light.png",
+    "reports-768-light.png",
+    "help-768-light.png",
+    "settings-geral-768-light.png",
+    "settings-operacao-768-light.png",
+    "settings-seguranca-768-light.png",
+    "settings-backup-768-light.png",
+    "settings-company-admin-team-768-light.png",
+    "settings-company-admin-drivers-768-light.png",
+    "settings-company-admin-integrations-768-light.png",
+    "settings-integration-lab-768-light.png",
+    "dashboard-768-dark.png",
+    "reports-768-dark.png",
+    "help-768-dark.png",
+    "settings-geral-768-dark.png",
+    "settings-operacao-768-dark.png",
+    "settings-seguranca-768-dark.png",
+    "settings-backup-768-dark.png",
+    "settings-company-admin-team-768-dark.png",
+    "settings-company-admin-drivers-768-dark.png",
+    "settings-company-admin-integrations-768-dark.png",
+    "settings-integration-lab-768-dark.png",
+    "dashboard-1024-light.png",
+    "reports-1024-light.png",
+    "help-1024-light.png",
+    "settings-geral-1024-light.png",
+    "settings-operacao-1024-light.png",
+    "settings-seguranca-1024-light.png",
+    "settings-backup-1024-light.png",
+    "settings-company-admin-team-1024-light.png",
+    "settings-company-admin-drivers-1024-light.png",
+    "settings-company-admin-integrations-1024-light.png",
+    "settings-integration-lab-1024-light.png",
+    "dashboard-1024-dark.png",
+    "reports-1024-dark.png",
+    "help-1024-dark.png",
+    "settings-geral-1024-dark.png",
+    "settings-operacao-1024-dark.png",
+    "settings-seguranca-1024-dark.png",
+    "settings-backup-1024-dark.png",
+    "settings-company-admin-team-1024-dark.png",
+    "settings-company-admin-drivers-1024-dark.png",
+    "settings-company-admin-integrations-1024-dark.png",
+    "settings-integration-lab-1024-dark.png",
+    "dashboard-1440-light.png",
+    "reports-1440-light.png",
+    "help-1440-light.png",
+    "settings-geral-1440-light.png",
+    "settings-operacao-1440-light.png",
+    "settings-seguranca-1440-light.png",
+    "settings-backup-1440-light.png",
+    "settings-company-admin-team-1440-light.png",
+    "settings-company-admin-drivers-1440-light.png",
+    "settings-company-admin-integrations-1440-light.png",
+    "settings-integration-lab-1440-light.png",
+    "dashboard-1440-dark.png",
+    "reports-1440-dark.png",
+    "help-1440-dark.png",
+    "settings-geral-1440-dark.png",
+    "settings-operacao-1440-dark.png",
+    "settings-seguranca-1440-dark.png",
+    "settings-backup-1440-dark.png",
+    "settings-company-admin-team-1440-dark.png",
+    "settings-company-admin-drivers-1440-dark.png",
+    "settings-company-admin-integrations-1440-dark.png",
+    "settings-integration-lab-1440-dark.png"
+  ],
+  "visual": [
+    {
+      "tab": "dashboard",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1303,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 556,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1418,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1429,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 7248,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1120,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 360,
+      "height": 800,
+      "theme": "light",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 5168,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1290,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 556,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1437,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1429,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 7248,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 1120,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 360,
+      "height": 800,
+      "theme": "dark",
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "contentHeight": 5168,
+      "toastTop": null,
+      "navTop": 732,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1181,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 556,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1346,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1391,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 9552,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1120,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 4929,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1181,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 556,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1346,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1391,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 9552,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 1120,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "contentHeight": 4929,
+      "toastTop": null,
+      "navTop": 776,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 1044,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "contentHeight": 549,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 1149,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 1367,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 7000,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "contentHeight": 1021,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 3657,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 1044,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "contentHeight": 549,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 1149,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 1367,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 4960,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "contentHeight": 1021,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "contentHeight": 3657,
+      "toastTop": null,
+      "navTop": 956,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 1031,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "contentHeight": 614,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 1127,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 1418,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 6589,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "contentHeight": 899,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 1024,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 2515,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 1031,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "contentHeight": 614,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 1127,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 1418,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 4749,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "contentHeight": 899,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 1024,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "contentHeight": 2515,
+      "toastTop": null,
+      "navTop": 837,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "contentHeight": 1000,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "contentHeight": 1000,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 1086,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 1364,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 4619,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "contentHeight": 1000,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 2346,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "dashboard",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "contentHeight": 1000,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "orders",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "contentHeight": 1000,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "bikes",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 1086,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "routes",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 1364,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "reports",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 6296,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "events",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "contentHeight": 1000,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    },
+    {
+      "tab": "help",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "contentHeight": 2346,
+      "toastTop": null,
+      "navTop": 0,
+      "toastAboveNav": true,
+      "visibleSettingsPages": 0
+    }
+  ],
+  "settings": [
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 2216,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2587,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 2507,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 1078,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 2644,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 926,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 734,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1296,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 850,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 2239,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 2050,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 668,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1075,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 1020,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1474,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 990,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 3052,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1222,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 2216,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2587,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 2507,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 1078,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 2644,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 926,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 734,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1296,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 850,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 2239,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 2050,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 668,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1484,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 1020,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1474,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 990,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 3052,
+      "top": 222.25
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1222,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 2086,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2554,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 2473,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 1078,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 2577,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 926,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 734,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1281,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 850,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 2181,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1975,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 668,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1461,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1434,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 956,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 2964,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1207,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 2086,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2554,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 2473,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 1078,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 2577,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 926,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 734,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1281,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 850,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 2181,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1975,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 668,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1461,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1434,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 956,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 2964,
+      "top": 222.25
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1207,
+      "top": 222.25
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 1758,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2028,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 2115,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 876,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 1634,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 779,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 614,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1227,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 714,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 1753,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1763,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 570,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1401,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 912,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1273,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 764,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 2496,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1081,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 1758,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2028,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 2115,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 876,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 1634,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 779,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 614,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1227,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 714,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 1753,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1763,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 570,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1401,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 912,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1273,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 764,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 2496,
+      "top": 184.46875
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1081,
+      "top": 184.46875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 1880,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2251,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 1917,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 995,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 1675,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 932,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 765,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1257,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 867,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 1788,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1514,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 624,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1431,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 959,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1278,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 915,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 2310,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1180,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 1880,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2251,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 1917,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 995,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 1675,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 932,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 765,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1257,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 867,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 1788,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1514,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 624,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1431,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 959,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1278,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 915,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 2310,
+      "top": 254.296875
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1180,
+      "top": 254.296875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 1690,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2001,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 1854,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 1628,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 1742,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1335,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1385,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1212,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 1870,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "geral",
+      "state": "RENDERED",
+      "scrollHeight": 1690,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "operacao",
+      "state": "RENDERED",
+      "scrollHeight": 2001,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "logistica",
+      "state": "RENDERED",
+      "scrollHeight": 1741,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "impressao",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "pedidos_integracoes",
+      "state": "RENDERED",
+      "scrollHeight": 1628,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "aparencia",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "relatorios",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "navegacao",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "eventos",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "seguranca",
+      "state": "RENDERED",
+      "scrollHeight": 1742,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "dados",
+      "state": "RENDERED",
+      "scrollHeight": 1335,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "backup",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "company-admin-team",
+      "state": "RENDERED",
+      "scrollHeight": 1385,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "company-admin-drivers",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "company-admin-integrations",
+      "state": "RENDERED",
+      "scrollHeight": 1212,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "security-audit",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "system-admin",
+      "state": "RENDERED",
+      "scrollHeight": 1870,
+      "top": 245.796875
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "integration-lab",
+      "state": "RENDERED",
+      "scrollHeight": 1000,
+      "top": 245.796875
+    }
+  ],
+  "functional": [
+    {
+      "check": "account-page-isolation-after-return",
+      "width": 360,
+      "state": "PASS"
+    },
+    {
+      "check": "account-page-isolation-after-return",
+      "width": 390,
+      "state": "PASS"
+    },
+    {
+      "check": "account-page-isolation-after-return",
+      "width": 768,
+      "state": "PASS"
+    },
+    {
+      "check": "account-page-isolation-after-return",
+      "width": 1024,
+      "state": "PASS"
+    },
+    {
+      "check": "account-page-isolation-after-return",
+      "width": 1440,
+      "state": "PASS"
+    }
+  ],
+  "errors": [],
+  "httpErrors": [
+    {
+      "status": 401,
+      "path": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "path": "/api/identity/login"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    },
+    {
+      "status": 503,
+      "path": "/api/admin/backup"
+    }
+  ],
+  "auth": {
+    "authenticated": true,
+    "mfa": "synthetic TOTP challenge passed",
+    "destination": "dashboard",
+    "identity": "redacted synthetic account",
+    "panel": {
+      "before": {
+        "hidden": false,
+        "closeHidden": false,
+        "mfaLocked": "false",
+        "gated": "false"
+      },
+      "after": {
+        "hidden": true,
+        "ariaHidden": "false",
+        "inert": false,
+        "closeClickCount": 1,
+        "current": true,
+        "topAtClose": "<main id=\"main\" class=\"main\"><div class=\"pilot-command\"><header class=\"topbar rm-page-header\"><div c"
+      }
+    }
+  },
+  "fixtureRunId": "55b85351-1837-403c-a5fa-7526ba96d5a0",
+  "settingsCards": [
+    "geral",
+    "operacao",
+    "logistica",
+    "impressao",
+    "pedidos_integracoes",
+    "aparencia",
+    "relatorios",
+    "navegacao",
+    "eventos",
+    "seguranca",
+    "dados",
+    "backup",
+    "company-admin-team",
+    "company-admin-drivers",
+    "company-admin-integrations",
+    "security-audit",
+    "system-admin",
+    "integration-lab"
+  ],
+  "backupAdmin": {
+    "state": "UNAVAILABLE_CONFIRMED",
+    "status": 503,
+    "code": "BACKUP_ADMIN_NOT_CONFIGURED",
+    "noJobSubmitted": true
+  },
+  "javascriptErrors": 0,
+  "fixtureCleanup": "completed; fixture lifecycle verified rollback",
+  "result": "PARTIAL",
+  "completedAt": "2026-10-20T05:24:02.314Z",
+  "temporaryRuntime": "isolated HTTP fixture API + static app; permanent API/runit not stopped"
+}
