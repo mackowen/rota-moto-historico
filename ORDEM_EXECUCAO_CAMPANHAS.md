@@ -1,6 +1,6 @@
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-19 · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-20 · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
 
 ## Princípios de sequenciamento
 
@@ -61,3 +61,8 @@ D4 segue PARTIAL: diagnóstico confirmou falha no lifecycle do CDP, correção d
 D5 completou ciclos autenticados e reversíveis para Operação (fixo/arredondamento/repasse), cor de destaque, impressão, atalhos, 12 valores de origens, localização Company e criação/readback de perfil e usuário locais. Testou erros Company 401/403/400/409 e perda de rede. A política de agrupamento de rotas não confirmou gravação pela UI; APIs de Logística responderam 200 sob handler real, mas não tiveram escrita/readback; portanto `RM-AUD19-02/10` permanecem PARTIAL. O backup continua desabilitado no runtime (503) e fixture (fallback 404), sem ser ativado. O ponto exato em que D4 parou não está registrado; evidência não autoriza atribuir causa ao aplicativo. Ver [REGISTROS/0256-D5.md](REGISTROS/0256-D5.md).
 
 Não iniciar automaticamente 0256-E nem outra campanha. Próxima decisão de sequência permanece no roadmap: antes de avançar os gates, completar a matriz de gravação de agrupamento/Logística e dirty state; preservar 0256-E/F e 0257–0268 com dependências existentes.
+
+
+## Atualização de execução — 0256-D6
+
+D6 comprovou e corrigiu a causa de agrupamento de rotas: a leitura canônica de Company não ocorria na primeira abertura de Operação, deixando o seletor desabilitado/sem revisão. O PUT via UI passou. Os handlers de produção de Logística passaram alteração, readback, revisão conflitante e validação em fixture E2E; a localização de Company coincidiu com a origem de estabelecimento na leitura canônica. A exibição das coordenadas no DOM de ambas as páginas, reload por formulário, nova sessão e estados visuais de erro/draft/retry ainda não foram provados; RM-AUD19-02/10 e 03 permanecem PARTIAL. Registro e limites em [REGISTROS/0256-D6.md](REGISTROS/0256-D6.md). Não iniciar automaticamente 0256-E/F ou outra campanha; roadmap e dependências 0256-E/F e 0257–0268 permanecem como antes.
