@@ -2,7 +2,7 @@
 
 **PARTIAL.** Reproduzido e corrigido no Restaurante o falso sucesso/perda de rascunho quando o PUT de Logística/Frota era aceito mas o GET de readback falhava. Route e perfil econômico passaram Browser/CDP autenticado com handlers reais, ACK/readback, retry, persistência após reload, 400/401/403/409 e ausência de overflow em 360/390/768 px e claro/escuro. O comparador operacional usou a política/custo canônicos. A geometria de Route não pôde ser calculada porque a fixture não tinha snapshots elegíveis de coordenadas; providers e outras configurações não foram editados. `npm test` Restaurante passou; fixture `rotamoto_e2e` `databaseCommitted=false`, cleanup COMPLETED e resíduos tenant-scoped zero; API E2E/readiness restaurados. Evidências em [REGISTROS/0275.md](REGISTROS/0275.md) e [EVIDENCIAS/0275](EVIDENCIAS/0275/). RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY continuam PARTIAL; demais 16 RM-AUD19 preservados. `RM-UI-ACCOUNT-TOPBAR` PASS_SCOPE e conclusão autoNext 0274 preservadas. Chrome Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION; 0276 não iniciada.
 
-Commits locais: Restaurante `a0acaee16618de6df0b1b7f5810c4d9a538e1948`; Browser Tests `c74835db03cb6fac3e4273a3a6d5d34b9463fe4d`. Push somente do histórico; SHA remoto a confirmar.
+Commits locais: Restaurante `a0acaee16618de6df0b1b7f5810c4d9a538e1948`; Browser Tests `c74835db03cb6fac3e4273a3a6d5d34b9463fe4d`. O registro e as evidências foram publicados em `origin/main` no commit `9cc1e09a8ce8728ec36dbb5c5c35292ffd85af40`; a confirmação final consta no histórico.
 
 ---
 
