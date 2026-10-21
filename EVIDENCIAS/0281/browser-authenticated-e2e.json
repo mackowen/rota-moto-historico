@@ -1,0 +1,398 @@
+{
+  "campaign": "0281",
+  "result": "PARTIAL",
+  "recordedAt": "2026-10-21",
+  "database": "rotamoto_e2e only",
+  "historyRecovery": {
+    "remote": "github.com/mackowen/rota-moto-historico",
+    "diagnosis": "0280 commit was pushed to a feature branch, while origin/main remained at 0279; remote URL was correct and all requested files were committed in ff35fa3.",
+    "integration": "fast-forward push of existing ff35fa3 to main; no rebase, force push, reset, or deletion",
+    "shaAfter0280FastForward": "ff35fa3f96c42b8c06f8206c013185fb3469108a",
+    "verifiedFiles": [
+      "REGISTROS/0280.md",
+      "EVIDENCIAS/0280/browser-authenticated-e2e.json",
+      "ESTADO_ATUAL.md",
+      "INVENTARIO_UNICO_PROBLEMAS.md",
+      "BACKLOG_MESTRE.md",
+      "ORDEM_EXECUCAO_CAMPANHAS.md"
+    ],
+    "final0281Sha": "pending campaign commit"
+  },
+  "syntheticIdentity": {
+    "fixture": "tests/e2e-support/fixture-lifecycle.js",
+    "companyId": "01a16055-9bca-7e9a-9eaf-9a356d461a6a",
+    "companyNameBeforeProfileUpdate": "E2E Fixture Tenant",
+    "adminAndDriverSession": "fixture-issued session after native MFA; no frontend-forged session"
+  },
+  "addressFlow": {
+    "reproduction0280": "old temporary CDP click helper sent mousePressed/mouseReleased without clickCount; capture-phase listener observed no click, and no canonical PUT followed.",
+    "correctedBrowserInteraction": "CDP click with mouseMoved and clickCount=1 generated click; subsequent UI DOM click path also generated a click (isTrusted=false).",
+    "applicationCodeChanged": false,
+    "reason": "the missing PUT was caused by the temporary Browser runner failing to synthesize a click, not by the application handler or API.",
+    "httpSummary": [
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200
+      },
+      {
+        "method": "PUT",
+        "path": "/api/admin/company/profile",
+        "status": 200
+      },
+      {
+        "method": "PUT",
+        "path": "/api/admin/company/location",
+        "status": 200,
+        "payloadSummary": {
+          "expectedVersion": "current operationalLocationVersion",
+          "address": "Rua Sintética 120, São Paulo - SP",
+          "latitude": null,
+          "longitude": null
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200,
+        "readback": "address persisted; latitude and longitude remained null"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/admin/company/location",
+        "status": 200,
+        "payloadSummary": {
+          "expectedVersion": "current operationalLocationVersion",
+          "address": "Rua Sintética 240, São Paulo - SP",
+          "coordinates": "set only by manual map confirmation"
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200,
+        "readback": "address, manually confirmed coordinates, provenance and revision matched ACK"
+      }
+    ],
+    "nominatimCalls": 0,
+    "orsCalls": 0
+  },
+  "companyReadback": {
+    "before": {
+      "name": "E2E Fixture Tenant",
+      "operationalLocation": null,
+      "operationalLocationVersion": 0
+    },
+    "profileAfter": {
+      "name": "Company 0280 Synthetic UI",
+      "supportPhone": "+55 11 4000-0280",
+      "settingsVersion": 1
+    },
+    "addressOnlyIntermediate": {
+      "address": "Rua Sintética 240, São Paulo - SP",
+      "latitude": null,
+      "longitude": null,
+      "provenance": null
+    },
+    "afterManualMapConfirmation": {
+      "address": "Rua Sintética 240, São Paulo - SP",
+      "latitude": -23.503896252242896,
+      "longitude": -46.764819049930054,
+      "provenance": "operator_confirmed",
+      "operationalLocationVersion": 4,
+      "settingsVersion": 1
+    }
+  },
+  "syncAndMotoboy": {
+    "canonicalSyncPull": {
+      "status": 200,
+      "authority": "restaurant",
+      "companyRevision": 5,
+      "address": "Rua Sintética 240, São Paulo - SP",
+      "coordinatesPresent": true
+    },
+    "motoboyAuthenticated": true,
+    "motoboySyncPullStatus": 200,
+    "indexedDb": {
+      "database": "RotaMotoDB",
+      "store": "meta",
+      "key": "settings",
+      "companyProfilePresent": true,
+      "companyId": "01a16055-9bca-7e9a-9eaf-9a356d461a6a",
+      "address": "Rua Sintética 240, São Paulo - SP",
+      "coordinatesPresent": true
+    },
+    "reloadIndexedDbReadback": "PASS",
+    "renderedSettingsPanel": "NOT_VERIFIED: Browser runner did not complete settings navigation after reload; no application write defect inferred"
+  },
+  "visualAndFailures": {
+    "screenshots": 0,
+    "viewports": [
+      360,
+      390,
+      768
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "matrixCompleted": false,
+    "browserHttpFailureMatrixCompleted": false,
+    "npmTest": {
+      "restaurante": "PASS",
+      "motoboy": "PASS"
+    }
+  },
+  "cleanup": {
+    "fixtureRuns": 14,
+    "allDatabaseCommittedFalseAndResidualsZero": true,
+    "runs": [
+      {
+        "runId": "01ac49e2-e9ae-4531-95b6-75840e991eea",
+        "tenantId": "01a16049-1c2c-730b-8060-963f72359111",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "08515b86-82b3-439a-97ce-2e046c7b2235",
+        "tenantId": "01a1604f-51fa-7e77-8026-364c6b4c9181",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "09be30f2-534f-411d-a2d6-7866b45761f4",
+        "tenantId": "01a16050-a01d-7fb9-98aa-79f62ceeb127",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "384f3efb-4dd1-49dd-ad2e-1f244b5653a8",
+        "tenantId": "01a1604a-5aab-7d47-a2bc-1d4b77d009e0",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "81c14bab-08bb-4ce8-8942-bc57e2623049",
+        "tenantId": "01a16052-3b75-75d0-b1a9-bbf015c03df0",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "8a4d7624-4f43-4d32-a03c-c944343c0016",
+        "tenantId": "01a16057-8312-7f47-9df6-dd5ad3e66ffa",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "985034fa-4334-425d-a328-879bc014b638",
+        "tenantId": "01a16058-f914-71a6-9886-162cc5dcaa88",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "987a4cf3-bab1-4991-91c9-b11469d32386",
+        "tenantId": "01a1604d-9185-71a4-b49c-441367b32b83",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "988df708-11f6-4a26-ac85-c583e5794a48",
+        "tenantId": "01a16055-9bca-7e9a-9eaf-9a356d461a6a",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "9bcb98e4-3811-4658-b040-9f530e102e19",
+        "tenantId": "01a1604b-1a4a-7d45-8e76-19022451d06a",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "c7eb25ae-62b3-488f-a748-bd84696d7178",
+        "tenantId": "01a1604c-3c0b-785b-9d2b-cff6bdeaf4fc",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "ceb1aafc-4a41-4d6c-87b1-93f3b64d0c13",
+        "tenantId": "01a1605a-46f1-7d2f-9b0e-a15f59c2d6ec",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "d51c983a-9375-4297-b39e-45f476793ee6",
+        "tenantId": "01a16054-5cca-79b0-b706-6274bbed51d4",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      },
+      {
+        "runId": "decd228c-d6f2-4956-8021-e85df97f39c4",
+        "tenantId": "01a1604e-52db-7566-97f4-cc19ef336a31",
+        "fixtureStatus": "FAILED",
+        "databaseCommitted": false,
+        "tenantScopedResidualCounts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      }
+    ],
+    "rollbackNote": "fixtures ended with runner status FAILED at later Browser assertion/diagnostic steps; each manifest proves databaseCommitted=false and all tenant-scoped count fields zero."
+  },
+  "officialEnvironment": {
+    "officialDatabaseWrites": 0,
+    "officialServicesChanged": false,
+    "orsCredentialRequested": false,
+    "0258": "BLOCKED_AUTHORIZATION",
+    "ORS": "PENDING_EXTERNAL_CREDENTIAL"
+  }
+}

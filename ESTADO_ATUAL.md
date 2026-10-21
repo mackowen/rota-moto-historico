@@ -1851,3 +1851,8 @@ Os outros 17 itens não foram declarados resolvidos: persistência por categoria
 # Estado vigente — Campanha 0280 (2026-10-21)
 
 **PARTIAL.** A autenticação E2E real passou pela fixture reversível em `rotamoto_e2e`; Restaurante salvou nome/contato com ACK/readback. Foi removida a geocodificação automática e coordenada antiga não é reaproveitada após mudar endereço. O Browser não produziu PUT canônico de localização, portanto endereço→Motoboy, matriz visual e falhas não estão comprovados. `npm test` passou nos dois aplicativos. Cleanup tenant-scoped: resíduos zero; databaseCommitted=false. 0258 segue BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0280.md](REGISTROS/0280.md) e [EVIDENCIAS/0280](EVIDENCIAS/0280/).
+
+
+# Estado vigente — Campanha 0281 (2026-10-21)
+
+**PARTIAL.** Corrigida a posição do histórico: 0280 foi integrada por fast-forward e lida remotamente em `main` (`ff35fa3f96c42b8c06f8206c013185fb3469108a`). O PUT ausente em 0280 era falta de clique efetivo no helper CDP; com evento correto, formulário real gravou endereço com ACK/readback, coordenadas nulas até confirmação manual, e Company chegou ao sync pull e IndexedDB Motoboy inclusive após reload. A tela renderizada de Ajustes Motoboy, screenshots e matriz visual/falhas não foram confirmadas. `npm test` dos dois apps passou. Sem alterações de produção nesta campanha; 0258 BLOCKED_AUTHORIZATION, ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0281.md](REGISTROS/0281.md) e [EVIDENCIAS/0281](EVIDENCIAS/0281/).

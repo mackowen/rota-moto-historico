@@ -250,3 +250,8 @@ Browser/CDP autenticado comprovou edição de nome/telefone pela UI, API Company
 ## Atualização da campanha 0280 — autenticação E2E e localização
 
 **PARTIAL.** Fixture existente autenticou sessões sintéticas com MFA real e rollback; perfil Company teve ACK/readback. Correção no Restaurante remove geocodificação automática e limpa coordenadas antigas quando endereço muda sem confirmação. O clique Browser não produziu PUT de localização, impedindo conclusão da persistência e sincronização Motoboy. Próximo trabalho funcional: reproduzir esse caminho e validar ACK/readback/reload/segunda sessão, Motoboy e matriz dirigida de falhas. `npm test` Restaurante e Motoboy passou. Não reclassificar problemas globais. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Registro: REGISTROS/0280.md.
+
+
+## Atualização da campanha 0281 — histórico e localização
+
+**PARTIAL.** O commit 0280 estava somente na branch de campanha; fast-forward não destrutivo levou `main` a `ff35fa3f96c42b8c06f8206c013185fb3469108a`, cuja leitura remota confirmou registro e evidências. PUT ausente era falha no helper CDP sem `clickCount`; com o clique efetivo, endereço teve ACK/readback, coordenadas mantidas desconhecidas até confirmação manual, e sync + IndexedDB Motoboy confirmados após reload. Sem mudança em código de produção. Restam tela renderizada Motoboy, matriz Browser visual e falhas/concorrrência/tenant. `npm test` dos dois apps passou. Não resolver itens globais com subset. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0281.md.

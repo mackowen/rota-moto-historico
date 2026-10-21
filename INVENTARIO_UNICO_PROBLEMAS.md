@@ -474,3 +474,8 @@ RM-AUD19-02/10 continuam **PARTIAL**: um conjunto de campos Company passou, mas 
 ### Atualização da campanha 0280
 
 RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem **PARTIAL**: autenticação sintética E2E e Company Profile foram comprovados; gravação de endereço pela interface não emitiu PUT canônico e fluxo de localização até Motoboy não foi comprovado. Corrigida a geocodificação automática e a retenção de coordenadas antigas sem confirmação. Demais RM-AUD19-01..19 e RM-UI-ACCOUNT-TOPBAR preservam estado. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0280.md.
+
+
+### Atualização da campanha 0281
+
+RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem **PARTIAL**. PUT/readback de endereço e localização/sync no IndexedDB Motoboy foram confirmados; a tela Motoboy após reload, matriz visual e cenários Browser de falha/concorrência/tenant não foram. A ausência de PUT em 0280 foi causada pelo helper CDP sem clique DOM efetivo, não reclassificar defeito do formulário. Todos os demais RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME e aliases preservam status. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0281.md.

@@ -141,3 +141,8 @@ D6 comprovou e corrigiu a causa de agrupamento de rotas: a leitura canônica de 
 ## Atualização da execução — 0280
 
 0280 executada com **PARTIAL**. Identidade E2E sintética autenticada por fixture existente, sessões API-issued, MFA e rollback em `rotamoto_e2e`; nenhuma escrita oficial. Perfil Company salvo e lido de volta. Corrigida a geocodificação automática no save geral. A interface Browser não emitiu PUT de localização; sync ao Motoboy, matriz HTTP/concorrência e matriz visual seguem pendentes. Regressões direcionadas e `npm test` dos dois aplicativos passaram. Cleanup comprovado com `databaseCommitted=false` e contagens tenant-scoped zero. Manter IDs e estados globais, 0258 BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0280.md. Não iniciar 0281 automaticamente.
+
+
+## Atualização da execução — 0281
+
+0281 executada com **PARTIAL**. Histórico recuperado por fast-forward seguro: `origin/main` passou a conter 0280 em `ff35fa3f96c42b8c06f8206c013185fb3469108a`; leitura remota validou o registro, evidências, estado e inventário. O PUT não observado em 0280 decorreu de evento CDP incompleto no runner; clique efetivo executou formulário, PUT/ACK/readback e endereço sem coordenadas. Confirmação manual gerou localização canônica; sync e IndexedDB Motoboy após reload confirmados. A tela renderizada de Ajustes Motoboy e matrizes visuais/HTTP/concorrência/tenant seguem pendentes. `npm test` de ambos passou. Fixtures isoladas: 14 rollbacks, databaseCommitted=false e resíduos tenant-scoped zero; manifests FAILED nas verificações Browser posteriores. Sem escrita oficial. IDs globais preservados; 0258 BLOCKED_AUTHORIZATION, ORS PENDING_EXTERNAL_CREDENTIAL. Não iniciar 0282. Ver REGISTROS/0281.md.
