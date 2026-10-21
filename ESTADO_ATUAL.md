@@ -2,7 +2,7 @@
 
 **PARTIAL.** Corrigido no Restaurante o fluxo de gravação Company que podia reportar sucesso após PUT sem readback e podia reutilizar coordenadas antigas ao publicar novo endereço. Agora perfil/endereço com revisão exigem ACK e GET canônico antes de limpar rascunho/confirmar; a interface atualiza coordenadas apenas do readback e deixa valores ausentes como `null`. PostgreSQL E2E sintético confirmou gravação, GET e snapshot `/sync/pull` read-only ao Motoboy; rollback e resíduos tenant-scoped zero. `npm test` Restaurante passou. Chromium/CDP anônimo carregou os assets em 360/390/768 claro/escuro sem overflow, exceções ou erros; não havia identidade sintética autorizada para o Browser autenticado dos formulários. Nenhum código Motoboy foi alterado; não houve teste físico Android, escrita no banco oficial ou chamada ORS. RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY seguem PARTIAL; os demais 16 RM-AUD19 e RM-UI-ACCOUNT-TOPBAR permanecem sem reclassificação. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL; 0280 não iniciada. Ver [REGISTROS/0279.md](REGISTROS/0279.md) e [evidência Browser](EVIDENCIAS/0279/browser-anonymous-smoke.json).
 
-Commit local Restaurante `2d4ee95e977fb255a003045643bad74bccb035de`; Motoboy sem alteração/commit; Browser Tests permanece intocado. O SHA de publicação do histórico será acrescentado após verificação do origin/main.
+Commit local Restaurante `2d4ee95e977fb255a003045643bad74bccb035de`; Motoboy sem alteração/commit; Browser Tests permanece intocado. O histórico e as evidências foram publicados inicialmente em `origin/main` no commit `fc6dac7e19ee330ee4e161b13c6376a50fdac8d7`; a atualização documental final segue neste commit.
 
 ---
 

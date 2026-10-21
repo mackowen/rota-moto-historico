@@ -1,0 +1,33 @@
+{
+  "campaign": "0279",
+  "fixture": "domain-sync-company-location-0279",
+  "fixtureTenantId": "b4b74457-1501-4d18-a50b-3b6b4ea6d0c2",
+  "database": "rotamoto_e2e",
+  "runtimeRole": "rotamoto_app",
+  "migratorRole": "rotamoto_migrator",
+  "databaseCommitted": false,
+  "scenario": {
+    "companyLocationPut": { "httpStatus": 200, "version": 1, "provenance": "operator_confirmed" },
+    "companyCanonicalGet": {
+      "address": "Rua Sintética 120, São Paulo",
+      "latitude": -23.5505,
+      "longitude": -46.6333,
+      "version": 1
+    },
+    "motoboySyncPull": {
+      "httpStatus": 200,
+      "companySettingsRevision": 2,
+      "operationalLocationVersion": 1,
+      "readOnlySnapshot": true
+    }
+  },
+  "cleanup": "COMPLETED",
+  "tenantScopedResiduals": {
+    "companies": 0,
+    "domain_records": 0,
+    "memberships": 0,
+    "sync_outbox": 0
+  },
+  "test": "NODE_ENV=test DATABASE_URL and MIGRATOR_DATABASE_URL explicitly targeted rotamoto_e2e; tests/test-domain-sync-postgres.js",
+  "scope": "Synthetic transaction only; no official database, credentials, roles, or services changed"
+}
