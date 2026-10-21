@@ -1,10 +1,14 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0273 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0274 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+
+### Atualização da campanha 0274
+
+A falha operacional atribuída ao 502 foi corrigida no runner Browser, sem mudança no aplicativo: a fixture/API E2E agora permanece aberta até o Chromium fechar, e a sincronização explícita aguarda o bootstrap/readback autenticado. O endpoint real `/api/sync/installations/motoboy` respondeu 200. Os cenários A/B/C/D de autoNext passaram em Browser/CDP com ACK/readback, incluindo falha sintética de persistência sem avanço prematuro; fixture revertida e resíduos zero. A evidência antiga da 0272 aponta 502 em `/api/sync/pull`, enquanto a linha narrativa nomeava installations; ver REGISTROS/0274.md para a reconciliação sem apagar o registro histórico. RM-AUD19-01..19 e estados gerais, inclusive RM-AUD19-02/10, permanecem inalterados; `RM-UI-ACCOUNT-TOPBAR` segue PASS_SCOPE com Android físico PENDING_OWNER. 0258 continua BLOCKED_AUTHORIZATION.
 
 ### Atualização da campanha 0273
 
-`RM-UI-ACCOUNT-TOPBAR` passou a **PASS_SCOPE**: Browser/CDP autenticado reproduziu o clique inerte quando faltava o marcador do handler delegado; com a correção, toque/clique abre Ajustes → Conta e segurança, retorna aos cards, mantém sessão e passa reload, foco e teclado nos cinco viewports e dois temas. Capturas e relatório estão em [EVIDENCIAS/0273](EVIDENCIAS/0273/). Chrome Android físico segue PENDING_OWNER. Os 19 RM-AUD19 mantêm estados anteriores; `RM-AUD19-02/10` e `RM-D1-SETTINGS-SAVE` continuam PARTIAL. O HTTP 502 de `/api/sync/installations/motoboy` da 0272 segue pendente e separado. Ver [REGISTROS/0273.md](REGISTROS/0273.md).
+`RM-UI-ACCOUNT-TOPBAR` passou a **PASS_SCOPE**: Browser/CDP autenticado reproduziu o clique inerte quando faltava o marcador do handler delegado; com a correção, toque/clique abre Ajustes → Conta e segurança, retorna aos cards, mantém sessão e passa reload, foco e teclado nos cinco viewports e dois temas. Capturas e relatório estão em [EVIDENCIAS/0273](EVIDENCIAS/0273/). Chrome Android físico segue PENDING_OWNER. Os 19 RM-AUD19 mantêm estados anteriores; `RM-AUD19-02/10` e `RM-D1-SETTINGS-SAVE` continuam PARTIAL. A atribuição do 502 da 0272 foi reconciliada em 0274: o upstream E2E estava indisponível durante teardown do runner; endpoint e autoNext passaram no escopo Browser/CDP, sem alterar estados gerais dos 19 problemas. Ver [REGISTROS/0273.md](REGISTROS/0273.md).
 
 ### Atualização da campanha 0272
 

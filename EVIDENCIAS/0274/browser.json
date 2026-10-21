@@ -1,0 +1,814 @@
+{
+  "campaign": "0274",
+  "fixture": {
+    "database": "rotamoto_e2e",
+    "id": "a5bc73f4-de08-4e35-ba56-53fea9f23d4a",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "residualCounts": [
+      {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    ]
+  },
+  "endpoint": [
+    {
+      "path": "/api/sync/installations/motoboy",
+      "status": 200,
+      "appKey": "motoboy",
+      "deviceIdMatches": true
+    }
+  ],
+  "browser": [
+    {
+      "type": "viewport-theme",
+      "width": 360,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 390,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 768,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 768,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "closedBeforeFixtureRollback": true
+    }
+  ],
+  "autoNext": {
+    "acks": [
+      {
+        "deliveryId": "01a15e56-125c-7d82-ad01-75a83c1489af",
+        "status": "ACCEPTED",
+        "serverVersion": 2,
+        "deliveryEventAck": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-125c-7d82-ad01-75a83c1489af",
+        "status": "PICKED_UP",
+        "serverVersion": 3,
+        "deliveryEventAck": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-125c-7d82-ad01-75a83c1489af",
+        "status": "OUT_FOR_DELIVERY",
+        "serverVersion": 4,
+        "deliveryEventAck": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-125c-7d82-ad01-75a83c1489af",
+        "status": "ARRIVED",
+        "serverVersion": 5,
+        "deliveryEventAck": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1328-7857-b0d6-91f19f4a3224",
+        "status": "ACCEPTED",
+        "serverVersion": 2,
+        "action": "accept",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1328-7857-b0d6-91f19f4a3224",
+        "status": "PICKED_UP",
+        "serverVersion": 3,
+        "action": "pickup",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1328-7857-b0d6-91f19f4a3224",
+        "status": "OUT_FOR_DELIVERY",
+        "serverVersion": 4,
+        "action": "depart",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1328-7857-b0d6-91f19f4a3224",
+        "status": "ARRIVED",
+        "serverVersion": 5,
+        "action": "arrive",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-134b-7c0a-918e-0093421b8078",
+        "status": "ACCEPTED",
+        "serverVersion": 2,
+        "action": "accept",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-134b-7c0a-918e-0093421b8078",
+        "status": "PICKED_UP",
+        "serverVersion": 3,
+        "action": "pickup",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-134b-7c0a-918e-0093421b8078",
+        "status": "OUT_FOR_DELIVERY",
+        "serverVersion": 4,
+        "action": "depart",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-134b-7c0a-918e-0093421b8078",
+        "status": "ARRIVED",
+        "serverVersion": 5,
+        "action": "arrive",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-136a-711e-9772-e6d622f29f34",
+        "status": "ACCEPTED",
+        "serverVersion": 2,
+        "action": "accept",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-136a-711e-9772-e6d622f29f34",
+        "status": "PICKED_UP",
+        "serverVersion": 3,
+        "action": "pickup",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-136a-711e-9772-e6d622f29f34",
+        "status": "OUT_FOR_DELIVERY",
+        "serverVersion": 4,
+        "action": "depart",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-136a-711e-9772-e6d622f29f34",
+        "status": "ARRIVED",
+        "serverVersion": 5,
+        "action": "arrive",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1395-7ef1-9aaa-3fb725ed591c",
+        "status": "ACCEPTED",
+        "serverVersion": 2,
+        "action": "accept",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1395-7ef1-9aaa-3fb725ed591c",
+        "status": "PICKED_UP",
+        "serverVersion": 3,
+        "action": "pickup",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1395-7ef1-9aaa-3fb725ed591c",
+        "status": "OUT_FOR_DELIVERY",
+        "serverVersion": 4,
+        "action": "depart",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-1395-7ef1-9aaa-3fb725ed591c",
+        "status": "ARRIVED",
+        "serverVersion": 5,
+        "action": "arrive",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-13ba-786d-ab6c-af81cce5ad93",
+        "status": "ACCEPTED",
+        "serverVersion": 2,
+        "action": "accept",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-13ba-786d-ab6c-af81cce5ad93",
+        "status": "PICKED_UP",
+        "serverVersion": 3,
+        "action": "pickup",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-13ba-786d-ab6c-af81cce5ad93",
+        "status": "OUT_FOR_DELIVERY",
+        "serverVersion": 4,
+        "action": "depart",
+        "ackResults": [
+          "accepted"
+        ]
+      },
+      {
+        "deliveryId": "01a15e56-13ba-786d-ab6c-af81cce5ad93",
+        "status": "ARRIVED",
+        "serverVersion": 5,
+        "action": "arrive",
+        "ackResults": [
+          "accepted"
+        ]
+      }
+    ],
+    "enabled": {
+      "firstDelivery": "01a15e56-125c-7d82-ad01-75a83c1489af",
+      "focusedNext": "01a15e56-1328-7857-b0d6-91f19f4a3224",
+      "focusText": "#2 · QA parada 2"
+    },
+    "disabled": {
+      "focusPaused": true,
+      "manualAction": "Ver próxima entrega",
+      "focusAfterManual": "#3 · QA parada 3"
+    },
+    "storageFailure": {
+      "actionRejected": true,
+      "statusPreserved": true,
+      "focusUnchanged": true
+    },
+    "endOfRoute": {
+      "lastDelivery": "01a15e56-13ba-786d-ab6c-af81cce5ad93",
+      "noNextStop": true,
+      "activeDeliveries": 0
+    },
+    "ackReadback": {
+      "deliveryStatus": "DELIVERED",
+      "sourceVersion": 6,
+      "acknowledged": true
+    }
+  },
+  "errors": [],
+  "http5xx": [],
+  "httpRequests": [
+    {
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "status": 200,
+      "path": "/api/motoboy/domain/drivers/01a15e56-1188-7f8c-87c1-d88dc63ceff0"
+    },
+    {
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "status": 200,
+      "path": "/api/driver-availability"
+    },
+    {
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 200,
+      "path": "/api/driver-availability"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/driver-availability"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 201,
+      "path": "/api/motoboy/domain/deliveries/01a15e56-125c-7d82-ad01-75a83c1489af/proofs/media"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 201,
+      "path": "/api/motoboy/domain/deliveries/01a15e56-1328-7857-b0d6-91f19f4a3224/proofs/media"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 201,
+      "path": "/api/motoboy/domain/deliveries/01a15e56-134b-7c0a-918e-0093421b8078/proofs/media"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 201,
+      "path": "/api/motoboy/domain/deliveries/01a15e56-136a-711e-9772-e6d622f29f34/proofs/media"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 201,
+      "path": "/api/motoboy/domain/deliveries/01a15e56-1395-7ef1-9aaa-3fb725ed591c/proofs/media"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 201,
+      "path": "/api/motoboy/domain/deliveries/01a15e56-13ba-786d-ab6c-af81cce5ad93/proofs/media"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/installations/motoboy"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "status": 200,
+      "path": "/api/sync/pull"
+    }
+  ],
+  "status": "PASS_SCOPE",
+  "runtimeRestored": true
+}

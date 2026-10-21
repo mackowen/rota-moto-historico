@@ -1,6 +1,12 @@
+## Atualização da campanha 0274 — runner E2E e autoNext
+
+**PASS_SCOPE.** Causa do 502 comprovada como teardown prematuro do servidor de fixture enquanto Chromium ainda podia sincronizar (nginx E2E registrou conexão recusada ao upstream 8787). O JSON antigo da 0272 aponta `/api/sync/pull`, embora seu texto cite `/api/sync/installations/motoboy`. Runner corrigido para encerrar Browser antes do rollback e aguardar bootstrap/readback; endpoint real retornou 200. Cenários autoNext ligado/desligado, fim de rota e falha de armazenamento passaram com fixture `rotamoto_e2e`, ACK/readback e resíduos zero. Motoboy `npm test` passou. Browser/CDP 360/390/768, claro/escuro; sem JS/5xx. Nenhuma alteração de app. Evidências e limites em [REGISTROS/0274.md](REGISTROS/0274.md) e [EVIDENCIAS/0274](EVIDENCIAS/0274/). RM-AUD19-01..19 mantidos; 02/10 permanecem PARTIAL; validação física PENDING_OWNER. 0258 BLOCKED_AUTHORIZATION; 0275 não iniciada.
+
+---
+
 ## Atualização da campanha 0273 — Conta pela barra superior
 
-**PASS_SCOPE.** Causa comprovada: o botão era movido para `.top-actions` sem `data-account-security`, que o listener delegado exige; o handler local era vazio. A sessão autenticada agora navega para a página própria Ajustes → Conta e segurança, com retorno aos cards e foco no título. Browser/CDP autenticado passou toque/clique, teclado, reload, cinco larguras e dois temas, sem exceções JS ou HTTP 5xx; `npm test` Restaurante passou. `RM-UI-ACCOUNT-TOPBAR` é PASS_SCOPE; Chrome Android físico continua PENDING_OWNER. Os 19 RM-AUD19 não mudaram; o bloqueio `autoNext` HTTP 502 da 0272 permanece separado. Evidências e commits no [REGISTRO 0273](REGISTROS/0273.md). 0258 segue BLOCKED_AUTHORIZATION; 0274 não iniciada.
+**PASS_SCOPE.** Causa comprovada: o botão era movido para `.top-actions` sem `data-account-security`, que o listener delegado exige; o handler local era vazio. A sessão autenticada agora navega para a página própria Ajustes → Conta e segurança, com retorno aos cards e foco no título. Browser/CDP autenticado passou toque/clique, teclado, reload, cinco larguras e dois temas, sem exceções JS ou HTTP 5xx; `npm test` Restaurante passou. `RM-UI-ACCOUNT-TOPBAR` é PASS_SCOPE; Chrome Android físico continua PENDING_OWNER. Os 19 RM-AUD19 não mudaram. Evidências e commits no [REGISTRO 0273](REGISTROS/0273.md). 0258 segue BLOCKED_AUTHORIZATION.
 
 ---
 
