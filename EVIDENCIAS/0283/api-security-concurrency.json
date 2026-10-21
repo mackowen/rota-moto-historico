@@ -1,0 +1,53 @@
+{
+  "campaign": "0283",
+  "result": "PARTIAL",
+  "database": "rotamoto_e2e",
+  "databaseCommitted": false,
+  "fixture": {
+    "companyId": "01a160d4-0f90-7cab-98ff-d3d9f7135e32",
+    "manifestRunId": "fdbd6d9f-807d-47a7-8e39-ef50e7e6822b",
+    "manifestStatus": "COMPLETED",
+    "tenantScopedResiduals": {
+      "companies": 0,
+      "users": 0,
+      "auth_records": 0,
+      "memberships": 0,
+      "sessions": 0,
+      "domain_records": 0,
+      "sync_inbox": 0,
+      "sync_outbox": 0,
+      "audit_log": 0
+    },
+    "additionalTenantResiduals": 0
+  },
+  "staleRevision": {
+    "sessionAReadRevision": 0,
+    "sessionBReadRevision": 0,
+    "sessionAWriteStatus": 200,
+    "sessionBStaleWriteStatus": 409,
+    "canonicalRevisionAfter": 1,
+    "canonicalWriter": "sessionA"
+  },
+  "authorization": {
+    "unauthenticatedReadStatus": 401,
+    "authenticatedWithoutCompanyManageWriteStatus": 403,
+    "crossTenantCompanyIdPayloadStatus": 400,
+    "tenantAUnchanged": true
+  },
+  "browser": {
+    "locationPutFaultStatusesInjected": [400, 401, 403, 409, 500, 503],
+    "draftPreservedForInjectedStatusCases": true,
+    "canonicalAddressUnchangedForInjectedStatusCases": true,
+    "interruptedConnection": "first PUT connection dropped; subsequent PUT returned 200 and canonical GET/readback confirmed the requested address",
+    "reloadDuringPendingWrite": "not verified after runner did not observe authenticated post-navigation state",
+    "visualMatrix": "not captured"
+  },
+  "testSuites": {
+    "restaurantNpmTest": "PASS",
+    "motoboyNpmTest": "PASS"
+  },
+  "history": {
+    "appRepositoriesChanged": false,
+    "browserTestsRepositoryChanged": false
+  }
+}

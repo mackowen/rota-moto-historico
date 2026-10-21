@@ -1,6 +1,12 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-21 · Inventário cumulativo; campanha vigente 0282 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-21 · Inventário cumulativo; campanha vigente 0283 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+
+### Atualização da campanha 0283
+
+**PARTIAL.** API E2E autenticada confirmou revisão obsoleta rejeitada (200/409), 401 sem sessão, 403 sem `company.manage`, rejeição de payload com Company estrangeira e preservação do tenant A. Browser real injetou 400/401/403/409/500/503 no PUT canônico; rascunho foi mantido e GET confirmou que o servidor não mudou. Conexão interrompida recebeu retry que concluiu com ACK/readback. `npm test` de ambos passou. Fixture completada com `databaseCommitted=false` e resíduos tenant-scoped zero. Reload durante gravação, timeout persistente, falha de readback/ACK, concorrência simultânea, falhas IndexedDB e matriz visual autenticada não foram comprovados. Sem correção de aplicação e sem reclassificação dos problemas globais: RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY continuam PARTIAL; demais IDs/aliases permanecem íntegros. Detalhes e evidência: [REGISTRO 0283](REGISTROS/0283.md), [JSON](EVIDENCIAS/0283/api-security-concurrency.json).
+
+### Atualização da campanha 0282
 
 ### Atualização da campanha 0282
 

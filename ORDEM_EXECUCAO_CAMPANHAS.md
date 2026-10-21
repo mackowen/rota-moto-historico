@@ -1,4 +1,8 @@
-## Atualização da execução — 0282
+## Atualização da execução — 0283
+
+0283 terminou **PARTIAL**. `npm test` Restaurante/Motoboy passou; API E2E confirmou stale revision 409, RBAC 401/403, rejeição de payload cross-tenant e rollback sem resíduos. Browser autenticado passou as falhas injetadas 400/401/403/409/500/503 no PUT Company com rascunho preservado; a conexão interrompida foi recuperada por nova tentativa e readback. Reload pendente, falhas persistentes de GET/ACK/timeout, concorrência simultânea, IndexedDB e testes visuais autenticados permanecem pendentes. Nenhum código de app foi alterado; problemas cumulativos permanecem nos estados anteriores. 0258 continua BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0283.md](REGISTROS/0283.md). 0284 não iniciada.
+
+## Atualização histórica da execução — 0282
 
 0282 terminou **PARTIAL**. Corrigidos snapshot address-only no sync Restaurante e apresentação read-only da localização Company em Ajustes Motoboy. Browser/CDP autenticado comprovou login/MFA de fixture, navegação para Ajustes antes/depois do reload e em segunda sessão, PUT de endereço pela interface Restaurante com ACK/readback, sync pull e exibição no Motoboy; coordenadas permaneceram desconhecidas. Matriz visual autenticada dos dois apps em 360/390/768 e claro/escuro sem overflow detectado. `npm test` e regressões direcionadas passaram. Matriz HTTP/concorrência/tenant segue não comprovada. Cleanup: 18 manifests, 2 COMPLETED/16 falhas anteriores do runner, todos databaseCommitted=false e resíduos zero. Atualização cumulativa publicada em `origin/main`; ver [REGISTRO 0282](REGISTROS/0282.md). RM-AUD19-02/03/10 e aliases permanecem PARTIAL; 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Não iniciar 0283 automaticamente.
 
@@ -22,7 +26,7 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Última execução: 0278 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0283 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
 
 ## Atualização da ordem — campanha 0278
 

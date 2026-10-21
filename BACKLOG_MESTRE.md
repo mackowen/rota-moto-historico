@@ -1,4 +1,8 @@
-## Atualização vigente — campanha 0282 — localização Restaurante/Motoboy
+## Atualização vigente — campanha 0283 — falhas, concorrência e segurança
+
+**PARTIAL.** `npm test` de ambos os aplicativos passou. Browser/CDP autenticado injetou HTTP 400/401/403/409/500/503 no PUT de localização e confirmou retenção do rascunho e ausência de alteração canônica; conexão interrompida recuperou por nova tentativa com readback. API E2E confirmou 401/403, rejeição de revisão obsoleta 409 e proteção contra o payload cross-tenant testado. Fixture revertida (`databaseCommitted=false`, resíduos tenant-scoped zero). Oito runs Browser com estado FAILED no harness também terminaram com rollback e zero resíduo. Não houve correção de produção nem fechamento de problema global. Reload durante gravação, concorrência simultânea, timeout/readback/ACK divergente, IndexedDB e visual autenticado continuam abertos. Preservar RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME e os aliases; RM-AUD19-02/03/10 e RM-D1-SETTINGS-SAVE/RM-D1-LOCATION-CONSISTENCY seguem PARTIAL. Ver [REGISTRO 0283](REGISTROS/0283.md) e [evidência](EVIDENCIAS/0283/api-security-concurrency.json).
+
+## Atualização histórica — campanha 0282 — localização Restaurante/Motoboy
 
 **PARTIAL.** Snapshot Company com endereço e coordenadas nulas agora é propagado; Ajustes Motoboy aceita e apresenta esse estado read-only. Browser/CDP autenticado confirmou formulário Restaurante real, PUT/ACK/GET/pull, renderização pré/pós-reload e segunda sessão MFA. `npm test` e regressões direcionadas passaram nos dois apps; matriz visual autenticada 360/390/768 claro/escuro passou sem overflow observado. Negativos de falha/concorrência/tenant continuam pendentes; não reclassificar problemas cumulativos. A fixture reverteu sem resíduos. 0258 segue BLOCKED_AUTHORIZATION; ORS segue PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0282](REGISTROS/0282.md). A próxima campanha não foi iniciada.
 
