@@ -8,7 +8,7 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0271 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
 
 ## Atualização da ordem — campanha 0269
 
@@ -43,6 +43,11 @@
 | 14 | **0267 — relatórios e regressão funcional** | `RM-0267-REPORTS-REGRESSION`, `RM-D1-REPORTS-VISUAL`, RM-AUD19-13 e aliases 0252/0253 | **Executada; PARTIAL.** Corrigida a agregação de várias Deliveries por Order e deduplicação de aliases. `npm test` dos dois apps, analytics e suites PostgreSQL territorial/logística transacionais passaram; Browser autenticado em 5 larguras × 2 temas, dados/vazio, filtros e CSV; 36 capturas publicadas. | Indicadores Orders/finanças continuam no nível Order; devoluções/reentregas contam como operações sem gerar nova cobrança/earning; export CSV sem duplicidade, fórmula ou PII. Readback/frescor de Orders/Earnings canônicos, negativos 403/409/tenant, Chrome Android físico e UX global seguem pendentes. 0258 permanece BLOCKED_AUTHORIZATION. Ver REGISTROS/0267.md; à época, 0268 ainda não iniciada. |
 | 15 | **0268 — validação operacional do proprietário / DR físico** | `RM-0268-OWNER-ANDROID`, `RM-0234-DR-EXTERNAL`, `RM-0242-ANDROID-PHYSICAL`, `RM-0255-OWNER` | **Executada; PARTIAL.** Checklists Android e DR publicados. `adb devices` sem aparelho; suites Motoboy PASS e Restaurante conforme resultado final no registro. Readiness somente leitura; nenhuma ação destrutiva ou operacional. | Proprietário executa [checklist Android](CHECKLISTS/CHECKLIST_ANDROID_0268.md); validação física permanece PENDING_OWNER. Offsite, chave/custódia, alvo independente, RPO/RTO e serviço administrativo de backup exigem autorização/decisão separadas. Ver [REGISTROS/0268.md](REGISTROS/0268.md). 0258 continua BLOCKED_AUTHORIZATION; não iniciar outra campanha automaticamente. |
 | 16 | **0269 — consolidação e correção de pendências prioritárias** | RM-AUD19-01..19; `RM-D1-SETTINGS-SAVE`, `RM-D1-AUTH-RESUME`, `RM-D1-LOCATION-CONSISTENCY` | **Executada; PARTIAL.** npm test integral de ambos os apps passou. Browser autenticado transacional revalidou Company/location, ACK/readback, origem customizada, reload/segunda sessão, RBAC, 5 viewports × 2 temas. Nenhuma falha nova reproduzida; nenhum item fechado; sem patch de app especulativo. | Próximo passo recomendado (não iniciado): matriz remanescente RM-AUD19-02/10 por fonte e cenários de erro/draft/retry, e sessão Browser; manter todos os 19 IDs e PENDING_OWNER físico. 0258 continua bloqueada. Ver [REGISTROS/0269.md](REGISTROS/0269.md). |
+| 17 | **0271 — correção funcional de configurações do Motoboy** | RM-AUD19-02/10; `RM-D1-SETTINGS-SAVE` | **Executada; PARTIAL.** Tema, autosave de taxa e meta diária passaram falha sintética, draft/rerender, retry e readback IndexedDB no Browser autenticado. `npm test` Motoboy passou; sem overflow em 360/390/768 claro/escuro. | Não fechar RM-AUD19-02/10: matriz de outros controles, erros HTTP/RBAC/revisão e validação física permanecem. 0258 BLOCKED_AUTHORIZATION. Ver [REGISTROS/0271.md](REGISTROS/0271.md). 0272 não iniciada. |
+
+## Atualização da execução — 0271
+
+0271 foi executada com **PARTIAL**. Três caminhos do Motoboy passaram Browser/CDP autenticado sob falha de armazenamento, retenção de rascunho após rerender, retry/readback e viewports 360/390/768 nos dois temas. `npm test` do Motoboy passou. O restante das configurações e os estados globais RM-AUD19-02/10 continuam PARTIAL; validação física é PENDING_OWNER. Ver [REGISTROS/0271.md](REGISTROS/0271.md). Nenhuma campanha seguinte foi iniciada automaticamente.
 
 ## Execução concluída — 0256-D2
 

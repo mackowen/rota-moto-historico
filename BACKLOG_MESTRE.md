@@ -1,3 +1,9 @@
+## Atualização da campanha 0271 — configurações Motoboy
+
+**PARTIAL.** Reproduzidos e corrigidos três fluxos sob falha de gravação: Aparência/tema, autosave de taxa e meta diária. Browser/CDP autenticado confirmou falha IndexedDB, draft preservado após `renderSettings()`, retry/readback local e proteção de saída; npm test Motoboy passou. Isso cobre somente os controles declarados em [REGISTROS/0271.md](REGISTROS/0271.md) e [evidência](EVIDENCIAS/0271/motoboy-settings-recovery.json). RM-AUD19-02, RM-AUD19-10 e RM-D1-SETTINGS-SAVE continuam PARTIAL; matriz de todos os controles, HTTP/RBAC/conflito e Chrome Android físico seguem pendentes. Nenhum dos demais 19 IDs foi removido ou encerrado. 0258 permanece BLOCKED_AUTHORIZATION; não iniciar 0272 automaticamente.
+
+---
+
 ## Atualização da campanha 0270 — persistência por campo
 
 **PARTIAL.** Corrigida em Restaurante a perda de seleção de agrupamento de rotas após conflito de revisão. Browser/CDP autenticado cobriu 33 caminhos únicos (31 locais e 2 Company), respostas 401/403/400/409/offline, leitura de três endpoints reais de Logística e reload de usuário/perfil local. O ciclo completo por todas as configurações não está concluído; Motoboy não teve Browser autenticado de preferências, Logística foi somente lida e 360/768/1024/1440 e tema escuro não foram repetidos nos lotes. `npm test` dos dois apps passou. RM-AUD19-02/10 e RM-D1-SETTINGS-SAVE ficam PARTIAL; todos os 19 IDs preservados. Veja [REGISTROS/0270.md](REGISTROS/0270.md). 0258 segue BLOCKED_AUTHORIZATION; nenhuma campanha seguinte iniciada.

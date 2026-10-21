@@ -1,0 +1,79 @@
+{
+  "campaign": "0271",
+  "browser": "Chromium/CDP authenticated synthetic Motoboy",
+  "fixture": "rotamoto_e2e transactional rollback",
+  "failures": [
+    {
+      "control": "themeMode",
+      "before": "auto",
+      "requested": "dark",
+      "afterFailure": "dark",
+      "draftPreserved": true,
+      "writeFailureInjected": true,
+      "statusAfterFailure": "Não foi possível salvar o tema. Suas alterações continuam no formulário; toque em “Salvar ajustes” para tentar novamente.",
+      "persistedUnchanged": true,
+      "retryReadback": "dark",
+      "unloadGuardWhileDirty": true,
+      "unloadGuardAfterSave": true
+    },
+    {
+      "control": "minFee",
+      "requested": "12.34",
+      "afterFailure": "12.34",
+      "draftPreserved": true,
+      "writeFailureInjected": true,
+      "statusAfterFailure": "Falha ao gravar. O rascunho continua no formulário; toque em “Salvar ajustes” para tentar novamente.",
+      "retryReadback": 12.34
+    },
+    {
+      "control": "dailyGoal",
+      "before": 0,
+      "requested": "123.45",
+      "draftPreserved": true,
+      "writeFailureInjected": true,
+      "persistedUnchanged": true,
+      "retryReadback": 12345
+    }
+  ],
+  "checks": [
+    {
+      "kind": "viewport-theme",
+      "width": 360,
+      "theme": "light",
+      "horizontalOverflow": false
+    },
+    {
+      "kind": "viewport-theme",
+      "width": 360,
+      "theme": "dark",
+      "horizontalOverflow": false
+    },
+    {
+      "kind": "viewport-theme",
+      "width": 390,
+      "theme": "light",
+      "horizontalOverflow": false
+    },
+    {
+      "kind": "viewport-theme",
+      "width": 390,
+      "theme": "dark",
+      "horizontalOverflow": false
+    },
+    {
+      "kind": "viewport-theme",
+      "width": 768,
+      "theme": "light",
+      "horizontalOverflow": false
+    },
+    {
+      "kind": "viewport-theme",
+      "width": 768,
+      "theme": "dark",
+      "horizontalOverflow": false
+    }
+  ],
+  "errors": [],
+  "http5xx": [],
+  "status": "PASS_FIXED_SETTINGS_RECOVERY"
+}
