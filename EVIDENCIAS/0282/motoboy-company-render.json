@@ -3,25 +3,152 @@
   "auth": {
     "browserLogin": true,
     "mfa": "native-e2e-service",
-    "authenticatedSession": true
+    "authenticatedSession": true,
+    "secondSessionAuthenticated": true
   },
   "company": {
-    "address": "Rua E2E 0282, São Paulo - SP",
-    "latitude": -23.503896252242896,
-    "longitude": -46.764819049930054,
-    "provenance": "operator_confirmed",
-    "companyRevision": 1,
-    "operationalLocationVersion": 1
+    "before": "Rua E2E 0282 Inicial, São Paulo - SP",
+    "after": "Rua E2E 0282 Restaurante, São Paulo - SP",
+    "latitude": null,
+    "longitude": null,
+    "provenance": null,
+    "companyRevision": 2,
+    "operationalLocationVersion": 2,
+    "syncPullRevision": 2
   },
   "motoboy": {
     "initialScreen": "settings",
-    "addressRenderedBeforeReload": false,
-    "viewBeforeReload": "Configuração oficial recebida do Restaurante · revisão 1 · agrupamento de rota: menor extensão estimada · localização confirmada: -23.503896, -46.764819",
-    "viewAfterReload": "Configuração oficial recebida do Restaurante · revisão 1 · agrupamento de rota: menor extensão estimada · localização confirmada: -23.503896, -46.764819",
-    "indexedDbAddressBeforeReload": "Rua E2E 0282, São Paulo - SP",
-    "indexedDbAddressAfterReload": "Rua E2E 0282, São Paulo - SP",
+    "addressRenderedBeforeReload": true,
+    "viewBeforeReload": "Configuração oficial recebida do Restaurante · revisão 1 · agrupamento de rota: menor extensão estimada · Endereço operacional: Rua E2E 0282 Inicial, São Paulo - SP · Coordenadas operacionais desconhecidas",
+    "viewAfterReload": "Configuração oficial recebida do Restaurante · revisão 2 · agrupamento de rota: menor extensão estimada · Endereço operacional: Rua E2E 0282 Restaurante, São Paulo - SP · Coordenadas operacionais desconhecidas",
+    "indexedDbAddressBeforeReload": "Rua E2E 0282 Inicial, São Paulo - SP",
+    "indexedDbAddressAfterReload": "Rua E2E 0282 Restaurante, São Paulo - SP",
+    "addressRenderedSecondSession": true,
+    "unknownCoordinatesRenderedSecondSession": true,
     "companyOwnedFieldsDisabled": true,
-    "reloadAuthenticated": true
+    "reloadAuthenticated": true,
+    "companyRevisionUnchangedByMotoboy": true
+  },
+  "restaurant": {
+    "locationPutObserved": true,
+    "successToast": "ConcluídoConfigurações atualizadas. Endereço confirmado pelo servidor. Coordenadas não foram inferidas; ajuste o pino e confirme a localização no mapa.",
+    "sanitizedRequests": [
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200
+      },
+      {
+        "method": "PUT",
+        "path": "/api/admin/company/location",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/company",
+        "status": 200
+      }
+    ]
+  },
+  "visual": {
+    "restaurant": [
+      {
+        "file": "restaurant-company-360-light.png",
+        "width": 360,
+        "theme": "light",
+        "documentWidth": 360,
+        "active": "settings"
+      },
+      {
+        "file": "restaurant-company-360-dark.png",
+        "width": 360,
+        "theme": "dark",
+        "documentWidth": 360,
+        "active": "settings"
+      },
+      {
+        "file": "restaurant-company-390-light.png",
+        "width": 390,
+        "theme": "light",
+        "documentWidth": 390,
+        "active": "settings"
+      },
+      {
+        "file": "restaurant-company-390-dark.png",
+        "width": 390,
+        "theme": "dark",
+        "documentWidth": 390,
+        "active": "settings"
+      },
+      {
+        "file": "restaurant-company-768-light.png",
+        "width": 768,
+        "theme": "light",
+        "documentWidth": 768,
+        "active": "settings"
+      },
+      {
+        "file": "restaurant-company-768-dark.png",
+        "width": 768,
+        "theme": "dark",
+        "documentWidth": 768,
+        "active": "settings"
+      }
+    ],
+    "motoboy": [
+      {
+        "file": "motoboy-company-settings-360-light.png",
+        "width": 360,
+        "theme": "light",
+        "documentWidth": 360,
+        "active": "settings"
+      },
+      {
+        "file": "motoboy-company-settings-360-dark.png",
+        "width": 360,
+        "theme": "dark",
+        "documentWidth": 360,
+        "active": "settings"
+      },
+      {
+        "file": "motoboy-company-settings-390-light.png",
+        "width": 390,
+        "theme": "light",
+        "documentWidth": 390,
+        "active": "settings"
+      },
+      {
+        "file": "motoboy-company-settings-390-dark.png",
+        "width": 390,
+        "theme": "dark",
+        "documentWidth": 390,
+        "active": "settings"
+      },
+      {
+        "file": "motoboy-company-settings-768-light.png",
+        "width": 768,
+        "theme": "light",
+        "documentWidth": 768,
+        "active": "settings"
+      },
+      {
+        "file": "motoboy-company-settings-768-dark.png",
+        "width": 768,
+        "theme": "dark",
+        "documentWidth": 768,
+        "active": "settings"
+      }
+    ]
   },
   "cleanup": {
     "fixtureManagedTransaction": true,

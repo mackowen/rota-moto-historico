@@ -27,8 +27,12 @@
     "companyOwnedFieldsReadOnly": true,
     "indexedDbAddressMatchedSnapshot": true,
     "reloadAuthenticationObserved": true,
-    "settingsNavigationAfterReload": "NOT_CONFIRMED: Browser runner could not find .bottom-navigation [data-screen=\"settings\"] after reload",
-    "secondAuthenticatedBrowserSession": "NOT_CONFIRMED"
+    "settingsNavigationAfterReload": "PASS: runner waited for Page.loadEventFired, then navigated to Ajustes and rendered the canonical address",
+    "secondAuthenticatedBrowserSession": true,
+    "addressAndUnknownCoordinatesRenderedAfterReload": true,
+    "addressAndUnknownCoordinatesRenderedSecondSession": true,
+    "indexedDbAddressMatchedSnapshotAfterReload": true,
+    "companyRevisionUnchangedByMotoboy": true
   },
   "visual": {
     "authenticatedBrowser": true,
@@ -53,10 +57,11 @@
     "httpFailureAndConcurrencyMatrix": "NOT_EXECUTED"
   },
   "cleanup": {
-    "fixtureCompletedRunId": "f75c8482-62d4-4938-bfec-27415a7266ca",
+    "fixtureCompletedRunIds": ["f75c8482-62d4-4938-bfec-27415a7266ca", "44dffb8f-b304-43e5-95f0-2a27d65cb95d"],
+    "latestCompletedRunId": "44dffb8f-b304-43e5-95f0-2a27d65cb95d",
     "latestFailedRunId": "f435eccc-100e-4d45-89cb-550f144ee8c2",
-    "campaignManifestCount": 17,
-    "completed": 1,
+    "campaignManifestCount": 18,
+    "completed": 2,
     "runnerFailed": 16,
     "databaseCommitted": false,
     "tenantScopedResiduals": {
