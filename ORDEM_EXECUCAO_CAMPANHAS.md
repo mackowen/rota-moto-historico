@@ -14,7 +14,11 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Última execução: 0276 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0277 BLOCKED · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+
+## Atualização da ordem — campanha 0277
+
+0277 encerrou **BLOCKED** sem instalação: não há pacote/binário OSRM Termux, build upstream não validado em Android/Bionic e qualquer tentativa nativa requer alterações de pacotes e downloads/build. O provider existe e a fixture E2E já aceita injeção local; URL e serviços oficiais não foram alterados. Próximo gate para esta dependência: autorização explícita para ensaio de build Termux e PBF custom limitado, ou host Linux ARM64 isolado; antes de baixar, obter tamanho estimado/checksum e reservar disco/memória. Geometria real, endpoint E2E, mapas dos dois apps e atualizações operacionais continuam BLOCKED; a duração não é exposta pelo contrato atual e não deve virar ETA. 0258 segue BLOCKED_AUTHORIZATION; 0278 não iniciada. Ver [REGISTROS/0277.md](REGISTROS/0277.md).
 
 ## Atualização da ordem — campanha 0276
 
@@ -65,6 +69,7 @@
 | 18 | **0272 — navegação, mapa e alertas Motoboy** | Controles Motoboy de provedor de navegação, avanço/reordenação, endereço, mapa e alertas; RM-AUD19-02/10 mantêm estados globais | **Executada; PARTIAL.** Corrigidos provedor forçado no foco, autoNext inerte e alertas sem rechecagem foreground. Browser autenticado validou subset; operação com entrega sintética foi bloqueada por 502 no endpoint da fixture. Mapa vazio sem GPS passou; reordenação e telas restantes foram revisadas sem necessidade de mudança. | Preservar RM-AUD19-02/10 como PARTIAL; a limitação Browser do autoNext/502 foi resolvida em 0274. Validar GPS/permissões/apps externos no Android físico permanece pendente. P1 `RM-UI-ACCOUNT-TOPBAR` não pertence a 0272. Ver [REGISTROS/0272.md](REGISTROS/0272.md); commits locais Motoboy `ef91ceeb32f9d8361445b03c176d87987f2602da` e `e0386b1b502fe9b23d86b6516f9ff4e57590c858`. 0273 não iniciada. |
 | 19 | **0273 — navegação da conta pela barra superior do Restaurante** | `RM-UI-ACCOUNT-TOPBAR` | Executada; **PASS_SCOPE** no Browser/CDP; PENDING_OWNER físico. | Causa corrigida: marcador delegado ausente e destino autenticado ajustado à página dedicada; toque/clique, retorno a Ajustes, reload, teclado/foco passaram em 5 larguras × 2 temas. 19 RM-AUD19 preservados. | Evidência: [REGISTROS/0273.md](REGISTROS/0273.md) e [capturas/relatório](EVIDENCIAS/0273/). Chrome Android físico permanece gate do proprietário; 0258 BLOCKED_AUTHORIZATION. |
 | 20 | **0274 — HTTP 502 e autoNext operacional** | runner `browser-tests`; limitação 0272 de Browser operacional | Executada; **PASS_SCOPE** para causa do 502, endpoint e cenários A/B/C/D; PENDING_OWNER físico. | Teardown foi corrigido para fechar Chromium antes do rollback/API e sincronizar com bootstrap/readback. `POST /api/sync/installations/motoboy` real 200; autoNext ligado/desligado, rota encerrada e erro de armazenamento passaram com ACK/readback e zero resíduos. Nenhum código de app alterado. | [REGISTROS/0274.md](REGISTROS/0274.md), [JSON e capturas](EVIDENCIAS/0274/); commits locais Browser `f31284a`, `317ff09`, `62dbef7`; histórico 0274 a publicar. 19 RM-AUD19 preservados; 0258 BLOCKED_AUTHORIZATION. |
+| 21 | **0277 — viabilidade OSRM Termux e implantação E2E** | `RM-0277-OSRM-TERMUX`, `RM-D1-LOCATION-CONSISTENCY`, geometria dos mapas Restaurante/Motoboy | **Executada; BLOCKED.** Diagnóstico ARM64/Termux, toolchain, recursos, package catalog e adapter concluído; nenhum pacote, dado, build ou serviço instalado/iniciado. | Prosseguir somente com autorização para ensaio nativo limitado e PBF custom verificado, ou ambiente Linux ARM64 isolado. Exigir provider OSRM real, endpoint, dois mapas, duração semanticamente separada de ETA e cleanup. Ver [REGISTROS/0277.md](REGISTROS/0277.md). Não iniciar 0278 automaticamente. |
 
 ## Atualização da execução — 0271
 
