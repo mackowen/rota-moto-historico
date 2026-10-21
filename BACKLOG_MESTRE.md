@@ -1,3 +1,9 @@
+## Atualização vigente — Campanha 0266 (2026-10-21)
+
+**PARTIAL / BLOCKED_EXTERNAL_DEPENDENCY.** Suites completas dos aplicativos, testes locais de runtime/worker/segurança e Browser autenticado sintético passaram no escopo. iFood, 99Food e Keeta permanecem sem sandbox ou conectividade confirmada. Nenhum dos 19 IDs Android foi encerrado. Matriz, checklist individual, conflito histórico 0152/99Food e a exceção de fixture retida/limpeza posterior constam em [REGISTROS/0266.md](REGISTROS/0266.md). 0258 permanece BLOCKED_AUTHORIZATION; 0267 não iniciada.
+
+---
+
 ## Atualização vigente — Campanha 0265 (2026-10-20)
 
 **PARTIAL.** `identity-ui.js` agora apresenta resultado de ações marketplace com rótulos de operação em português, texto amigável para falha e código interno apenas em disclosure recolhida. Browser/CDP autenticado provou status honesto sem conexão em iFood, 99Food e Keeta, páginas exclusivas, separação origem/executor e Laboratório 99Food sintético sem escrita IndexedDB, overflow, JS exception ou 5xx em cinco larguras e dois temas. `npm test` Restaurante/Motoboy passou. Sem conta comercial ou sandbox autorizada, nenhuma conectividade/homologação foi alegada; seguir como dependência da 0266. O erro ASN1 do teste de backup reportado em 0264 não foi reproduzido (teste isolado e suíte atual passaram), sem inferir causa histórica. IDs RM-AUD19-01..19, campanhas futuras e pendências preservados. Registro: [REGISTROS/0265.md](REGISTROS/0265.md).
@@ -153,7 +159,7 @@ Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evi
 | 0263 | Runtime permanente, estabilidade e E2E | PARTIAL — executada | Runtime E2E 8787 e fixture autenticada reversível | npm test dos dois, sync, identidade HTTP e domínio sync passaram; Browser anônimo em 8083/8084 20 viewport/tema, offline/recovery sem JS/5xx; reinício exclusivo 8787 restaurado. Browser autenticado diretamente no runtime permanente segue bloqueado sem fixture descartável; suíte migrations exige NODE_ENV=test e banco descartável para DOWN/cleanup. Ver REGISTROS/0263.md. |
 | 0264 | Operação Restaurante/Motoboy | PARTIAL — executada | Contratos Order/Delivery/Route/Driver/Event; fixtures reversíveis 0260/0263 | Fluxos direcionados de dispatch, RETURN, ACK, idempotência, RBAC e tenant passaram; corrida real, jornada Browser ponta a ponta e npm test Restaurante permanecem pendentes. Ver REGISTROS/0264.md. |
 | 0265 | Integrações locais | PARTIAL | Runtime/adaptadores existentes | Páginas e estados funcionais localmente para cada adaptador disponível. |
-| 0266 | Homologação comercial | BLOCKED_EXTERNAL_DEPENDENCY | Contas, credenciais e homologação externa | Conexões externas verificadas sem simulação como PASS. |
+| 0266 | Validação de provedores e preparação para homologação | PARTIAL / BLOCKED_EXTERNAL_DEPENDENCY | Onboarding, especificação/versionamento, sandbox, app/loja de teste, credenciais e autorização por provedor | Evidência local não equivale a homologação. Manter cada provider separado; critérios e próximos passos em REGISTROS/0266.md. Nenhum dos três está READY_FOR_SANDBOX ou PRODUCTION_READY. |
 | 0267 | Relatórios e UX | PASS_SCOPE | Regressões dos relatórios 0254 | UX responsiva, métricas canônicas e exportações seguras mantidas. |
 | 0268 | Auditoria de lançamento | BLOCKED | Gates, dependências externas, aparelho e aprovação | Revisão de segurança/operação com evidências e bloqueios explícitos. |
 

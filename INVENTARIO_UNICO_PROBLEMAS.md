@@ -1,12 +1,16 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-20 · Inventário cumulativo; campanha 0265 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0266 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
 
 ## Como usar
 
 Este documento é o índice operacional único. IDs e linhas históricas existentes são preservados; quando dois registros descrevem a mesma capacidade, a linha principal lista os IDs predecessores como aliases/rastreabilidade, sem apagar os registros-fonte. `PENDENCIAS.md` continua sendo o arquivo de arquivo histórico integral, incluindo itens antigos que não foram revalidados nesta reconciliação. Itens desses registros sem prova atual são mantidos abertos, não convertidos em PASS. Novos documentos de campanha devem atualizar este inventário com estado, evidência e critério de aceite.
 
 Estados: `OPEN` = trabalho não concluído; `PARTIAL` = evidência/capacidade parcial; `BLOCKED_*` = depende de decisão, permissão, infraestrutura ou agente externo; `PENDING_OWNER` = ação física/decisão do proprietário; `PASS_SCOPE` = só a parte local declarada passou, com regressão obrigatória; `PASS` = aceite específico comprovado, nunca PASS geral do produto.
+
+### Reconciliação documentada — provedor 99Food (0266)
+
+As linhas `0152-99-1/2/4/6` abaixo preservam o retrato e as conclusões registradas naquela campanha; não devem ser interpretadas isoladamente como estado atual. A inspeção 0266 encontrou runtime, account/admin routes, worker, webhook e testes PostgreSQL locais para o protocolo 99Food adotado, incluindo `/api/marketplace/99food/webhooks`. Isso comprova implementação/teste local, não sandbox nem homologação. O schema detalhado e o protocolo efetivamente concedido à conta continuam dependentes do parceiro. Nenhuma fixture histórica 0152 foi alterada. Ver [REGISTROS/0266.md](REGISTROS/0266.md).
 
 ## Inventário operacional atual
 

@@ -1,0 +1,38 @@
+{
+  "campaign": "0266",
+  "browser": "Chromium via CDP",
+  "fixture": "rotamoto_e2e; transactional rollback",
+  "manifest": "246cdadd-8b40-42c4-b0f7-9a8e6de98dbd",
+  "manifestStatus": "COMPLETED",
+  "databaseCommitted": false,
+  "tenantResidualCounts": {
+    "companies": 0,
+    "users": 0,
+    "auth_records": 0,
+    "memberships": 0,
+    "sessions": 0,
+    "domain_records": 0,
+    "sync_inbox": 0,
+    "sync_outbox": 0,
+    "audit_log": 0
+  },
+  "providers": {
+    "ifood": "sem conexão confirmada",
+    "99food": "sem conexão confirmada",
+    "keeta": "sem conexão confirmada"
+  },
+  "checks": {
+    "providerPagesIsolated": true,
+    "credentialExposure": false,
+    "syntheticLabOnly": true,
+    "sourceAndExecutorSeparated": true,
+    "viewportThemeCombinations": 20,
+    "horizontalOverflow": false,
+    "javascriptExceptions": 0,
+    "consoleErrors": 0,
+    "unexpectedHttp5xx": 0,
+    "commercialWrites": 0,
+    "physicalChromeAndroid": false
+  },
+  "localReport": "../browser-tests/evidencias/campanhas/0266-providers-run-20261021-002/report.json"
+}
