@@ -1,0 +1,241 @@
+{
+  "campaign": "0276",
+  "status": "PARTIAL",
+  "fixture": {
+    "database": "rotamoto_e2e",
+    "runId": "45bb1655-181c-4c3f-af10-8012748ec291",
+    "manifestCampaign": "0251",
+    "manifestCampaignGuard": "required by the existing fixture lifecycle guard",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "residualCounts": [
+      {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    ]
+  },
+  "engine": {
+    "provider": "OSRM adapter",
+    "status": "BLOCKED_EXTERNAL_INFRA",
+    "reason": "Fixture API is constructed without a routeDistanceProvider; osrm-routed is not installed locally.",
+    "localCommandAvailable": false
+  },
+  "route": {
+    "establishmentOrigin": {
+      "mode": "establishment",
+      "locationKnown": false,
+      "origin": null,
+      "geometryReason": "ROUTE_ORIGIN_UNKNOWN"
+    },
+    "customOrigin": {
+      "latitude": -23.54,
+      "longitude": -46.62,
+      "provenance": "operator_configured",
+      "mode": "custom"
+    },
+    "returnToggle": {
+      "disabledTested": true,
+      "enabledReadback": true
+    },
+    "stops": [
+      {
+        "position": 1,
+        "latitude": -23.55,
+        "longitude": -46.63
+      },
+      {
+        "position": 2,
+        "latitude": -23.552,
+        "longitude": -46.632000000000005
+      },
+      {
+        "position": 3,
+        "latitude": -23.554000000000002,
+        "longitude": -46.634
+      },
+      {
+        "position": 4,
+        "latitude": -23.556,
+        "longitude": -46.636
+      },
+      {
+        "position": 5,
+        "latitude": -23.558,
+        "longitude": -46.638000000000005
+      },
+      {
+        "position": 6,
+        "latitude": -23.560000000000002,
+        "longitude": -46.64
+      }
+    ],
+    "endpointReason": "ROUTE_GEOMETRY_PROVIDER_NOT_CONFIGURED",
+    "geometry": null,
+    "routingEngineCalled": false
+  },
+  "maps": {
+    "restaurant": {
+      "localRouteFixture": {
+        "routeId": "01a15efd-9f23-7f86-aef1-dcc7e7605d16",
+        "routeVersion": 1,
+        "deliveryIds": [
+          "01a15efd-9d31-7b39-b348-8b75ee84dac9",
+          "01a15efd-9e0e-72d4-8336-a1f937f55874",
+          "01a15efd-9e3f-7638-8b44-2d1861963701",
+          "01a15efd-9e69-710d-a325-797a96e22fab",
+          "01a15efd-9e95-70f8-9cec-3827f3c0f3ef",
+          "01a15efd-9eb8-7e56-95bd-6d2e35560675"
+        ],
+        "source": "canonical E2E fixture records copied into temporary Browser IndexedDB"
+      },
+      "status": "BLOCKED_EXTERNAL_INFRA",
+      "responseReason": "ROUTE_GEOMETRY_PROVIDER_NOT_CONFIGURED",
+      "markerCount": 6,
+      "renderedRoadPaths": 0,
+      "retryPerformed": true,
+      "retryCount": 1,
+      "noStraightLineFallback": true
+    },
+    "motoboy": {
+      "endpoint": {
+        "status": 200,
+        "reason": "ROUTE_GEOMETRY_PROVIDER_NOT_CONFIGURED",
+        "routeVersion": 1,
+        "stopCount": 6
+      },
+      "initial": {
+        "status": "Trajeto viário indisponível; marcadores e sequência recebida continuam disponíveis. Tentar novamente",
+        "retry": true,
+        "markers": 7,
+        "paths": 0
+      },
+      "geometryStatus": "BLOCKED_EXTERNAL_INFRA",
+      "responseReason": "ROUTE_GEOMETRY_PROVIDER_NOT_CONFIGURED",
+      "markerCount": 7,
+      "renderedRoadPaths": 0,
+      "retryAvailable": true,
+      "retryPerformed": true,
+      "retryCount": 2,
+      "noStraightLineFallback": true
+    }
+  },
+  "providers": {
+    "creationStatus": 200,
+    "edited": {
+      "displayName": "Parceiro 0276 atualizado",
+      "mode": "manual",
+      "portalUrl": "https://example.invalid/portal",
+      "instructions": "Solicitação manual em ambiente sintético.",
+      "canonicalVersion": 4,
+      "ackReadback": true,
+      "reloadReadback": true
+    },
+    "activation": [
+      "disabled",
+      "enabled"
+    ],
+    "staleRevisionStatus": 409,
+    "noExternalCall": true
+  },
+  "economicProfile": {
+    "cleared": true,
+    "readbackVersion": 2,
+    "defaultPolicyPreserved": "prefer_internal",
+    "historyChanged": false,
+    "comparisonInternalCost": {
+      "status": "insufficient_data",
+      "reason": "FLEET_COST_MODEL_NOT_CONFIGURED"
+    },
+    "ackReadback": true,
+    "reloadReadback": true
+  },
+  "browser": [
+    {
+      "app": "restaurante",
+      "width": 360,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "app": "restaurante",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "app": "restaurante",
+      "width": 390,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "app": "restaurante",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "app": "restaurante",
+      "width": 768,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "app": "restaurante",
+      "width": 768,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "app": "motoboy",
+      "width": 360,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "app": "motoboy",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "app": "motoboy",
+      "width": 390,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "app": "motoboy",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "app": "motoboy",
+      "width": 768,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "app": "motoboy",
+      "width": 768,
+      "theme": "dark",
+      "overflow": false
+    }
+  ],
+  "diagnostics": {
+    "unexpectedHttp5xx": [],
+    "javascriptErrors": [],
+    "screenshotErrors": [],
+    "runtimeRestored": true,
+    "readinessHttp": 200
+  }
+}

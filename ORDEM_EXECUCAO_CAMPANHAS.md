@@ -14,7 +14,11 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Última execução: 0275 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0276 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+
+## Atualização da ordem — campanha 0276
+
+0276 terminou **PARTIAL**. O mapa Restaurante agora repete a consulta de geometria quando a sessão sincronizada é restaurada; Motoboy não renderiza a geometria integral antiga quando a sequência operacional diverge. Browser/CDP autenticado verificou os endpoints reais, origem Company desconhecida, custom com retorno ligado/desligado, marcadores/retry sem linha falsa, providers e limpeza econômica com ACK/readback/reload. O motor respondeu `ROUTE_GEOMETRY_PROVIDER_NOT_CONFIGURED`; OSRM não está instalado/configurado no runtime. Não se declara rota viária nem atualização pós-evento concluída. `npm test` dos apps, testes focados, rollback e resíduos zero passaram; runit/readiness restaurados. RM-AUD19-02/03/10 e aliases permanecem PARTIAL; Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION. Ver [REGISTROS/0276.md](REGISTROS/0276.md). 0277 não iniciada.
 
 ## Atualização da ordem — campanha 0275
 
