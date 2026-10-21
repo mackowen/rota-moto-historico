@@ -1,6 +1,10 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0279 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-21 · Inventário cumulativo; campanha vigente 0282 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+
+### Atualização da campanha 0282
+
+**PARTIAL.** Corrigidos o snapshot Company address-only do sync Restaurante e a aceitação/apresentação do mesmo snapshot no Ajustes Motoboy. Formulário Restaurante autenticado enviou PUT canônico 200, recebeu GET/readback e o pull correspondeu ao valor; endereço chegou ao Motoboy e foi renderizado antes de reload, com coordenadas explicitamente desconhecidas. Browser autenticado capturou telas 360/390/768, claro/escuro, sem overflow detectado. O runner não encontrou o controle de navegação Ajustes após reload; não há prova da segunda sessão, da matriz de erros/retry ou concorrência/tenant. Testes direcionados e `npm test` dos dois apps passaram. Fixture: 17 manifests (1 COMPLETED, 16 runner FAILED), todos com `databaseCommitted=false` e zero resíduos tenant-scoped. RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY mantêm PARTIAL; todos os IDs/aliases restantes preservam seus estados. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0282](REGISTROS/0282.md) e [EVIDÊNCIAS 0282](EVIDENCIAS/0282/).
 
 ### Atualização da campanha 0279
 

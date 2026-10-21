@@ -1,0 +1,75 @@
+{
+  "campaign": "0282",
+  "result": "PARTIAL",
+  "environment": "rotamoto_e2e",
+  "authentication": {
+    "identity": "synthetic fixture",
+    "loginThroughBrowser": true,
+    "mfa": "native E2E identity service",
+    "backendIssuedSession": true,
+    "frontendSessionFabrication": false
+  },
+  "company": {
+    "initialAddress": "Rua E2E 0282 Inicial, São Paulo - SP",
+    "finalAddress": "Rua E2E 0282 Restaurante, São Paulo - SP",
+    "realRestaurantFormPut": { "path": "/api/admin/company/location", "status": 200 },
+    "canonicalGetReadback": { "path": "/api/admin/company", "status": 200 },
+    "syncPull": { "status": 200, "snapshotMatchedCanonicalReadback": true },
+    "coordinates": { "latitude": null, "longitude": null, "provenance": null },
+    "coordinatesWereGeocoded": false
+  },
+  "motoboy": {
+    "authenticatedBootstrap": true,
+    "syncPullCompleted": true,
+    "realNavigationToSettingsBeforeReload": true,
+    "addressRenderedBeforeReload": true,
+    "unknownCoordinatesRendered": true,
+    "companyOwnedFieldsReadOnly": true,
+    "indexedDbAddressMatchedSnapshot": true,
+    "reloadAuthenticationObserved": true,
+    "settingsNavigationAfterReload": "NOT_CONFIRMED: Browser runner could not find .bottom-navigation [data-screen=\"settings\"] after reload",
+    "secondAuthenticatedBrowserSession": "NOT_CONFIRMED"
+  },
+  "visual": {
+    "authenticatedBrowser": true,
+    "viewports": [360, 390, 768],
+    "themes": ["light", "dark"],
+    "screenshots": [
+      "restaurant-company-360-light.png", "restaurant-company-360-dark.png",
+      "restaurant-company-390-light.png", "restaurant-company-390-dark.png",
+      "restaurant-company-768-light.png", "restaurant-company-768-dark.png",
+      "motoboy-company-settings-360-light.png", "motoboy-company-settings-360-dark.png",
+      "motoboy-company-settings-390-light.png", "motoboy-company-settings-390-dark.png",
+      "motoboy-company-settings-768-light.png", "motoboy-company-settings-768-dark.png"
+    ],
+    "horizontalOverflowDetected": false
+  },
+  "tests": {
+    "restaurantNpmTest": "PASS",
+    "motoboyNpmTest": "PASS",
+    "restaurantPostgresCanonicalSyncRegression": "PASS",
+    "motoboyCompanySnapshotRenderingRegression": "PASS",
+    "cdpTrustedClickHelper": "PASS",
+    "httpFailureAndConcurrencyMatrix": "NOT_EXECUTED"
+  },
+  "cleanup": {
+    "fixtureCompletedRunId": "f75c8482-62d4-4938-bfec-27415a7266ca",
+    "latestFailedRunId": "f435eccc-100e-4d45-89cb-550f144ee8c2",
+    "campaignManifestCount": 17,
+    "completed": 1,
+    "runnerFailed": 16,
+    "databaseCommitted": false,
+    "tenantScopedResiduals": {
+      "companies": 0,
+      "users": 0,
+      "auth_records": 0,
+      "memberships": 0,
+      "sessions": 0,
+      "domain_records": 0,
+      "sync_inbox": 0,
+      "sync_outbox": 0,
+      "audit_log": 0
+    },
+    "officialDatabaseWritten": false
+  }
+}

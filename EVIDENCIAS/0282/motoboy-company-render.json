@@ -1,0 +1,30 @@
+{
+  "campaign": "0282",
+  "auth": {
+    "browserLogin": true,
+    "mfa": "native-e2e-service",
+    "authenticatedSession": true
+  },
+  "company": {
+    "address": "Rua E2E 0282, São Paulo - SP",
+    "latitude": -23.503896252242896,
+    "longitude": -46.764819049930054,
+    "provenance": "operator_confirmed",
+    "companyRevision": 1,
+    "operationalLocationVersion": 1
+  },
+  "motoboy": {
+    "initialScreen": "settings",
+    "addressRenderedBeforeReload": false,
+    "viewBeforeReload": "Configuração oficial recebida do Restaurante · revisão 1 · agrupamento de rota: menor extensão estimada · localização confirmada: -23.503896, -46.764819",
+    "viewAfterReload": "Configuração oficial recebida do Restaurante · revisão 1 · agrupamento de rota: menor extensão estimada · localização confirmada: -23.503896, -46.764819",
+    "indexedDbAddressBeforeReload": "Rua E2E 0282, São Paulo - SP",
+    "indexedDbAddressAfterReload": "Rua E2E 0282, São Paulo - SP",
+    "companyOwnedFieldsDisabled": true,
+    "reloadAuthenticated": true
+  },
+  "cleanup": {
+    "fixtureManagedTransaction": true,
+    "committed": false
+  }
+}
