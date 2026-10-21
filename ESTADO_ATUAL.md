@@ -1,4 +1,12 @@
-## Estado vigente — Campanha 0274 (2026-10-21)
+## Estado vigente — Campanha 0275 (2026-10-21)
+
+**PARTIAL.** Reproduzido e corrigido no Restaurante o falso sucesso/perda de rascunho quando o PUT de Logística/Frota era aceito mas o GET de readback falhava. Route e perfil econômico passaram Browser/CDP autenticado com handlers reais, ACK/readback, retry, persistência após reload, 400/401/403/409 e ausência de overflow em 360/390/768 px e claro/escuro. O comparador operacional usou a política/custo canônicos. A geometria de Route não pôde ser calculada porque a fixture não tinha snapshots elegíveis de coordenadas; providers e outras configurações não foram editados. `npm test` Restaurante passou; fixture `rotamoto_e2e` `databaseCommitted=false`, cleanup COMPLETED e resíduos tenant-scoped zero; API E2E/readiness restaurados. Evidências em [REGISTROS/0275.md](REGISTROS/0275.md) e [EVIDENCIAS/0275](EVIDENCIAS/0275/). RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY continuam PARTIAL; demais 16 RM-AUD19 preservados. `RM-UI-ACCOUNT-TOPBAR` PASS_SCOPE e conclusão autoNext 0274 preservadas. Chrome Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION; 0276 não iniciada.
+
+Commits locais: Restaurante `a0acaee16618de6df0b1b7f5810c4d9a538e1948`; Browser Tests `c74835db03cb6fac3e4273a3a6d5d34b9463fe4d`. Push somente do histórico; SHA remoto a confirmar.
+
+---
+
+## Registro da campanha 0274 (2026-10-21)
 
 **PASS_SCOPE.** Corrigido o lifecycle do runner E2E que encerrava a API de fixture antes de o Chromium parar; o nginx havia mostrado conexão recusada ao upstream 8787. O JSON da 0272 registra 502 em `/api/sync/pull` (a narrativa citava installations). O endpoint real de instalação respondeu 200; o runner agora aguarda bootstrap/readback e fecha Browser antes do rollback. Browser/CDP autenticado comprovou autoNext ligado (foco avança após ACK), desligado (foco aguarda “Ver próxima entrega”), fim da rota e falha de armazenamento sem avanço/perda, com retry/readback. `npm test` Motoboy passou; seis combinações 360/390/768 × claro/escuro, zero overflow/JS/5xx. Fixture `rotamoto_e2e` `databaseCommitted=false`, cleanup COMPLETED, resíduos zero; API E2E/PostgreSQL prontos ao final. Nenhum código de aplicação foi alterado. Evidências em [REGISTROS/0274.md](REGISTROS/0274.md) e [EVIDENCIAS/0274](EVIDENCIAS/0274/). RM-AUD19-01..19 preservados; 02/10 e RM-D1-SETTINGS-SAVE seguem PARTIAL; RM-UI-ACCOUNT-TOPBAR segue PASS_SCOPE. Chrome Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION; 0275 não iniciada.
 

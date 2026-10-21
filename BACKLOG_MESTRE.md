@@ -1,4 +1,10 @@
-## Atualização da campanha 0274 — runner E2E e autoNext
+## Atualização da campanha 0275 — Logística e Frota
+
+**PARTIAL.** Corrigido o falso sucesso/perda de rascunho quando a escrita logística foi aceita mas o readback falhou. Browser autenticado com handlers reais comprovou Route e perfil econômico, retry/readback, reload, runtime do comparador, independência Company/origem custom e negativos 400/401/403/409. `npm test` Restaurante passou; fixture revertida, resíduos zero e readiness restaurado. Geometria Route não pôde ser calculada por falta de snapshots elegíveis na fixture; edição de providers, limpar perfil e matriz restante seguem pendentes. RM-AUD19-02/03/10 e aliases continuam PARTIAL. Chrome Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION; 0276 não iniciada. Ver [REGISTROS/0275.md](REGISTROS/0275.md) e [EVIDENCIAS/0275](EVIDENCIAS/0275/).
+
+---
+
+## Registro da campanha 0274 — runner E2E e autoNext
 
 **PASS_SCOPE.** Causa do 502 comprovada como teardown prematuro do servidor de fixture enquanto Chromium ainda podia sincronizar (nginx E2E registrou conexão recusada ao upstream 8787). O JSON antigo da 0272 aponta `/api/sync/pull`, embora seu texto cite `/api/sync/installations/motoboy`. Runner corrigido para encerrar Browser antes do rollback e aguardar bootstrap/readback; endpoint real retornou 200. Cenários autoNext ligado/desligado, fim de rota e falha de armazenamento passaram com fixture `rotamoto_e2e`, ACK/readback e resíduos zero. Motoboy `npm test` passou. Browser/CDP 360/390/768, claro/escuro; sem JS/5xx. Nenhuma alteração de app. Evidências e limites em [REGISTROS/0274.md](REGISTROS/0274.md) e [EVIDENCIAS/0274](EVIDENCIAS/0274/). RM-AUD19-01..19 mantidos; 02/10 permanecem PARTIAL; validação física PENDING_OWNER. 0258 BLOCKED_AUTHORIZATION; 0275 não iniciada.
 
@@ -201,6 +207,7 @@ Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evi
 | 0266 | Validação de provedores e preparação para homologação | PARTIAL / BLOCKED_EXTERNAL_DEPENDENCY | Onboarding, especificação/versionamento, sandbox, app/loja de teste, credenciais e autorização por provedor | Evidência local não equivale a homologação. Manter cada provider separado; critérios e próximos passos em REGISTROS/0266.md. Nenhum dos três está READY_FOR_SANDBOX ou PRODUCTION_READY. |
 | 0267 | Relatórios e regressão funcional | PARTIAL | `RM-0267-REPORTS-REGRESSION`; snapshot local, readback canônico e projeção de executor | Corrigida contagem de operações Delivery, devoluções/reentregas, aliases de ID e filtros sem duplicar Order/finanças. `npm test` dos dois apps, analytics, territorial/logistics PostgreSQL transacionais e Browser autenticado sintético passaram; 36 capturas 360–1440 claro/escuro. CSV filtrado permanece uma linha por Order, neutraliza fórmula e omite telefone/endereço. Snapshots do relatório não tiveram ACK/readback canônico nesta campanha; executor próprio/plataforma não foi inferido da origem; 403/409/tenant e Android físico permanecem pendentes. Ver REGISTROS/0267.md. |
 | 0268 | Auditoria de lançamento | BLOCKED | Gates, dependências externas, aparelho e aprovação | Revisão de segurança/operação com evidências e bloqueios explícitos. |
+| 0275 | Configurações de Logística e Frota | PARTIAL — executada | `RM-AUD19-02/03/10`, `RM-D1-SETTINGS-SAVE`, `RM-D1-LOCATION-CONSISTENCY`; fixture `rotamoto_e2e` com handlers reais | Correção de falso sucesso/draft, Route e perfil econômico com ACK/readback/retry/reload e comparador runtime comprovados. Geometria Route, edição provider, matriz de campos restante e validação física ainda pendentes. Ver REGISTROS/0275.md. 0276 não iniciada. |
 
 ## Regra de manutenção
 

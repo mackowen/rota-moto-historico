@@ -14,7 +14,15 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Última execução: 0274 PASS_SCOPE · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0275 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+
+## Atualização da ordem — campanha 0275
+
+0275 terminou **PARTIAL**. Corrigido no Restaurante o caminho que, após PUT aceito e falha do GET readback, podia descartar o formulário e informar sucesso sem confirmação. Browser autenticado usou handlers reais e comprovou Route e perfil econômico por ACK/readback/retry/reload, separação de origem custom e Company, comparador usando custo/política e negativos 400/401/403/409. `npm test` Restaurante passou; 360/390/768 em claro/escuro sem overflow no DOM observado; fixture revertida com resíduos zero e readiness restaurado. Geometria operacional de Route não foi calculada devido a snapshots de coordenadas ausentes na fixture; providers, ação de limpar perfil, rede geral, matriz restante e Chrome Android físico seguem pendentes. RM-AUD19-02/03/10 e aliases continuam PARTIAL; 0258 permanece BLOCKED_AUTHORIZATION. Ver [REGISTROS/0275.md](REGISTROS/0275.md) e [evidências](EVIDENCIAS/0275/). 0276 não iniciada.
+
+---
+
+## Atualização da campanha 0274 — runner E2E e autoNext
 
 ## Atualização da ordem — campanha 0269
 
