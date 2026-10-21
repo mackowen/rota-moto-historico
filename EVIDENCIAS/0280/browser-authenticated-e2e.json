@@ -1,0 +1,370 @@
+{
+  "campaign": "0280",
+  "result": "PARTIAL",
+  "database": "rotamoto_e2e only",
+  "authentication": {
+    "method": "existing E2E fixture lifecycle; synthetic tenant/admin/driver; fixture provisions MFA and authenticates through API; Browser receives API-issued HttpOnly session cookie through CDP",
+    "frontendSessionForged": false
+  },
+  "browser": {
+    "restaurant": {
+      "authenticated": true,
+      "companyProfileSave": "PASS: canonical server readback returned name Company 0280 Synthetic UI, supportPhone +55 11 4000-0280, settingsVersion 1",
+      "addressSave": "FAIL: real form click produced no PUT /api/admin/company/location; canonical readback stayed operationalLocation=null, operationalLocationVersion=0",
+      "jsErrors": 0
+    },
+    "motoboy": {
+      "authenticatedBrowserFlow": "NOT_COMPLETED",
+      "companySync": "NOT_PROVEN"
+    },
+    "screenshots": "not captured because full flow did not reach visual matrix",
+    "externalGeocoderRequests": 0
+  },
+  "fixtureRuns": [
+    {
+      "runId": "11288418-80b4-4c38-8362-5bba0e6a9f74",
+      "tenantId": "01a16020-91ad-7484-a670-d486b8e4d5d3",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "25969143-0f8f-47d0-9759-4c4938edbc0f",
+      "tenantId": "01a16012-c50b-7b81-ae4c-7dbd6bd576a9",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "37f762ee-36b5-4388-8d38-cefef3707715",
+      "tenantId": "01a16011-1839-7dd0-b77e-3e5005d25c54",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "38f4fd5a-f589-4eba-b954-bcc26d07dfed",
+      "tenantId": "01a16011-f4a2-7a5d-a688-19fea356a6eb",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "4aa9e7b1-f88b-4b40-9726-cb4ed75c0c44",
+      "tenantId": "01a16025-3abf-7b7f-a942-2eaf8796902f",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "631a5d55-d158-47e2-baaf-1bc89ffc7c0e",
+      "tenantId": "01a16018-aa08-750a-a5c4-8078f19fdfea",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "a318d106-2a2a-4c92-bd4b-d7c04b0b3367",
+      "tenantId": "01a1601a-5989-7dd4-958f-15b4280bb8e3",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "b5ee0dec-aba3-49d9-97eb-a5f81bdd0a0a",
+      "tenantId": "01a16026-6120-74e0-8ca3-e16786dd1fde",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "bbbebc90-577d-4a66-93ea-f644d6f31c4b",
+      "tenantId": "01a1602a-0fee-7d1b-b3fd-d3fc6a0f59b1",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "bcb6ae0b-deb8-4cc3-ad3a-bbdd2435d071",
+      "tenantId": "01a16014-a6d8-773b-a3b3-e90805cc283a",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "bef4720f-d9e8-4e83-9740-4c42e43009e8",
+      "tenantId": "01a16015-8c40-70c4-b348-3a3f1c0936c2",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "c1155833-0c76-4c32-a5e3-e15d9c351ce2",
+      "tenantId": "01a1601d-d3b8-7f16-978b-b6a2b196a5d6",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "c27acc3f-bc4d-4000-a849-98adc350c9bf",
+      "tenantId": "01a16013-a43e-7c2c-bd0e-5fedd61e5417",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "c60b6dbd-89eb-4b75-bd7b-f0060d7f19d0",
+      "tenantId": "01a1601b-95c7-70d1-9d1b-3fc9f97cfc43",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "cd840bb8-acc3-4773-bc03-612ac61ffc49",
+      "tenantId": "01a1601c-7dd8-7722-b52c-5a04febaa9fc",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "d7bf2039-81c5-4448-91ce-33d1010d7124",
+      "tenantId": "01a16028-e00e-7149-b957-e58e2b6c631d",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "de30d443-de78-4d48-bafa-8704a61f197e",
+      "tenantId": "01a16027-e045-7377-a426-bbb85aacedfe",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "e0361740-3588-472a-966c-3c3d0469ab9d",
+      "tenantId": "01a16016-f319-7d19-af58-fa0032d82cfa",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    },
+    {
+      "runId": "f9a197b5-a8b9-47e1-972b-fdf39e798995",
+      "tenantId": "01a1601f-451d-77bc-a306-b5947a9bdbc0",
+      "status": "FAILED",
+      "databaseCommitted": false,
+      "tenantDatabaseCounts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    }
+  ],
+  "cleanup": {
+    "databaseCommitted": false,
+    "residualTenantScopedRows": 0,
+    "countsPerTenant": [
+      "companies",
+      "users",
+      "auth_records",
+      "memberships",
+      "sessions",
+      "domain_records",
+      "sync_inbox",
+      "sync_outbox",
+      "audit_log"
+    ],
+    "serviceState": "rotamoto-api-e2e remained running; not restarted or modified"
+  },
+  "limitations": [
+    "No authenticated Browser matrix for HTTP 400/401/403/409, timeout, network loss, duplicate clicks, pending-draft reload, stale revision, cross-tenant, or no-permission cases.",
+    "No Company location propagation to Motoboy validated.",
+    "No mobile/tablet theme screenshot matrix completed.",
+    "No official database was written; official read attempt was unavailable because auditor authentication was not configured."
+  ]
+}

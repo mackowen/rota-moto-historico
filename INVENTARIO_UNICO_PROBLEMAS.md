@@ -469,3 +469,8 @@ RM-AUD19-02/10 continuam **PARTIAL**: um conjunto de campos Company passou, mas 
 ### Atualização 0262 — reconciliação multiaba e Company no Motoboy
 
 **PARTIAL.** Foreground passou a revalidar sessão e agendar sync nos dois clientes. Browser/CDP comprovou Company canônica via /sync/pull, cache por tenant, revisão 3→4, DOM read-only Motoboy, reload/sessão independente e negações; 20 viewports/temas, sem JS/5xx. npm test dos dois apps e PostgreSQL sync passaram. Fixture transacional COMPLETED, sem commit e zero resíduos; runit restaurado/readiness 200. Offline durante envio, disputa concorrente real, ACK perdido Browser e ciclo de outbox pendente continuam sem prova integral. RM-AUD19-01..19 mantidos; RM-AUD19-02/03/10 e aliases Company continuam PARTIAL. Ver [REGISTROS/0262.md](REGISTROS/0262.md), `browser-tests/evidencias/campanhas/0262/report.json`; 0258 continua BLOCKED_AUTHORIZATION, 0263 não iniciada.
+
+
+### Atualização da campanha 0280
+
+RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem **PARTIAL**: autenticação sintética E2E e Company Profile foram comprovados; gravação de endereço pela interface não emitiu PUT canônico e fluxo de localização até Motoboy não foi comprovado. Corrigida a geocodificação automática e a retenção de coordenadas antigas sem confirmação. Demais RM-AUD19-01..19 e RM-UI-ACCOUNT-TOPBAR preservam estado. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0280.md.
