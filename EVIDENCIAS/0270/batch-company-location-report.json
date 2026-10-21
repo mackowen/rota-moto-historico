@@ -1,0 +1,86 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "geral",
+    "operacao"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "geral",
+      "count": 0
+    },
+    {
+      "category": "operacao",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "geral",
+      "path": "company.operationalLocation",
+      "status": "PASS",
+      "mechanism": "authorized synthetic API write + UI/API readback after reload; original location restored"
+    },
+    {
+      "category": "operacao",
+      "path": "company.routeGroupingPolicy.conflictDraft",
+      "status": "PASS",
+      "mechanism": "stale canonical revision is rejected; changed selection remains in the control"
+    },
+    {
+      "category": "operacao",
+      "path": "company.routeGroupingPolicy",
+      "status": "PASS",
+      "mechanism": "authorized UI autosave + canonical API readback after reload; original policy restored"
+    },
+    {
+      "category": "operacao",
+      "path": "delivery.fixedFee",
+      "status": "PASS",
+      "elapsedMs": 1643,
+      "mechanism": "delivery.fixedFee readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "operacao",
+      "path": "delivery.roundTo",
+      "status": "PASS",
+      "elapsedMs": 1770,
+      "mechanism": "delivery.roundTo readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "operacao",
+      "path": "delivery.repassePercent",
+      "status": "PASS",
+      "elapsedMs": 1728,
+      "mechanism": "delivery.repassePercent readback after edit, navigation, reload; synthetic fixture value restored"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

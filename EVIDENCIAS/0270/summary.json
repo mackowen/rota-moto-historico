@@ -1,0 +1,414 @@
+{
+  "campaign": "0270",
+  "fixture": "authenticated synthetic owner; rotamoto_e2e transactional rollback",
+  "browser": {
+    "viewportWidth": 390,
+    "theme": "default/auto; theme contrast matrix not run in 0270",
+    "javascriptErrors": 0,
+    "unexpectedHttpFailures": 0
+  },
+  "completedBatches": [
+    "aparencia",
+    "operacao",
+    "impressao",
+    "navegacao",
+    "origens",
+    "company-location",
+    "errors",
+    "logistics",
+    "system-local"
+  ],
+  "settings": [
+    {
+      "batch": "batch-aparencia-report.json",
+      "category": "aparencia",
+      "path": "theme",
+      "status": "PASS",
+      "mechanism": "IndexedDB meta.settings autosave + readback/navigation"
+    },
+    {
+      "batch": "batch-aparencia-report.json",
+      "category": "aparencia",
+      "path": "accent",
+      "status": "PASS",
+      "mechanism": "IndexedDB meta.settings autosave + readback/navigation"
+    },
+    {
+      "batch": "batch-aparencia-report.json",
+      "category": "aparencia",
+      "path": "language",
+      "status": "PASS",
+      "mechanism": "IndexedDB meta.settings autosave + readback/navigation"
+    },
+    {
+      "batch": "batch-operacao-report.json",
+      "category": "operacao",
+      "path": "delivery.fixedFee",
+      "status": "PASS",
+      "mechanism": "delivery.fixedFee readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-operacao-report.json",
+      "category": "operacao",
+      "path": "delivery.roundTo",
+      "status": "PASS",
+      "mechanism": "delivery.roundTo readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-operacao-report.json",
+      "category": "operacao",
+      "path": "delivery.repassePercent",
+      "status": "PASS",
+      "mechanism": "delivery.repassePercent readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-impressao-report.json",
+      "category": "impressao",
+      "path": "printing.enabled",
+      "status": "PASS",
+      "mechanism": "printing.enabled readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-impressao-report.json",
+      "category": "impressao",
+      "path": "printing.mode",
+      "status": "PASS",
+      "mechanism": "printing.mode readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-impressao-report.json",
+      "category": "impressao",
+      "path": "printing.includeDeliveryQr",
+      "status": "PASS",
+      "mechanism": "printing.includeDeliveryQr readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.dashboard",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.dashboard readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.orders",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.orders readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.bikes",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.bikes readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.routes",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.routes readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.reports",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.reports readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.events",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.events readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.settings",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.settings readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.admin",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.admin readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.integrationLab",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.integrationLab readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-navegacao-report.json",
+      "category": "navegacao",
+      "path": "navigation.shortcuts.help",
+      "status": "PASS",
+      "mechanism": "navigation.shortcuts.help readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.1.active",
+      "status": "PASS",
+      "mechanism": "orders.sources.1.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.1.name",
+      "status": "PASS",
+      "mechanism": "orders.sources.1.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.1.externalId",
+      "status": "PASS",
+      "mechanism": "orders.sources.1.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.2.active",
+      "status": "PASS",
+      "mechanism": "orders.sources.2.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.2.name",
+      "status": "PASS",
+      "mechanism": "orders.sources.2.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.2.externalId",
+      "status": "PASS",
+      "mechanism": "orders.sources.2.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.3.active",
+      "status": "PASS",
+      "mechanism": "orders.sources.3.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.3.name",
+      "status": "PASS",
+      "mechanism": "orders.sources.3.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.3.externalId",
+      "status": "PASS",
+      "mechanism": "orders.sources.3.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.4.active",
+      "status": "PASS",
+      "mechanism": "orders.sources.4.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.4.name",
+      "status": "PASS",
+      "mechanism": "orders.sources.4.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-origens-report.json",
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.4.externalId",
+      "status": "PASS",
+      "mechanism": "orders.sources.4.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-company-location-report.json",
+      "category": "geral",
+      "path": "company.operationalLocation",
+      "status": "PASS",
+      "mechanism": "authorized synthetic API write + UI/API readback after reload; original location restored"
+    },
+    {
+      "batch": "batch-company-location-report.json",
+      "category": "operacao",
+      "path": "company.routeGroupingPolicy.conflictDraft",
+      "status": "PASS",
+      "mechanism": "stale canonical revision is rejected; changed selection remains in the control"
+    },
+    {
+      "batch": "batch-company-location-report.json",
+      "category": "operacao",
+      "path": "company.routeGroupingPolicy",
+      "status": "PASS",
+      "mechanism": "authorized UI autosave + canonical API readback after reload; original policy restored"
+    },
+    {
+      "batch": "batch-company-location-report.json",
+      "category": "operacao",
+      "path": "delivery.fixedFee",
+      "status": "PASS",
+      "mechanism": "delivery.fixedFee readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-company-location-report.json",
+      "category": "operacao",
+      "path": "delivery.roundTo",
+      "status": "PASS",
+      "mechanism": "delivery.roundTo readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-company-location-report.json",
+      "category": "operacao",
+      "path": "delivery.repassePercent",
+      "status": "PASS",
+      "mechanism": "delivery.repassePercent readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "batch": "batch-errors-report.json",
+      "category": "geral",
+      "path": "company.location.401",
+      "status": "PASS",
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "batch": "batch-errors-report.json",
+      "category": "geral",
+      "path": "company.location.403",
+      "status": "PASS",
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "batch": "batch-errors-report.json",
+      "category": "geral",
+      "path": "company.location.400",
+      "status": "PASS",
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "batch": "batch-errors-report.json",
+      "category": "geral",
+      "path": "company.location.409",
+      "status": "PASS",
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "batch": "batch-errors-report.json",
+      "category": "geral",
+      "path": "company.location.network",
+      "status": "PASS",
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "batch": "batch-logistics-report.json",
+      "category": "logistica",
+      "path": "/api/logistics/route-settings",
+      "status": "PASS",
+      "mechanism": "authenticated GET through production Logistics HTTP handler and PostgreSQL fixture; no mock"
+    },
+    {
+      "batch": "batch-logistics-report.json",
+      "category": "logistica",
+      "path": "/api/logistics/intelligence/settings",
+      "status": "PASS",
+      "mechanism": "authenticated GET through production Logistics HTTP handler and PostgreSQL fixture; no mock"
+    },
+    {
+      "batch": "batch-logistics-report.json",
+      "category": "logistica",
+      "path": "/api/logistics/intelligence/analytics",
+      "status": "PASS",
+      "mechanism": "authenticated GET through production Logistics HTTP handler and PostgreSQL fixture; no mock"
+    },
+    {
+      "batch": "batch-system-local-report.json",
+      "category": "system-admin",
+      "path": "users+profiles",
+      "status": "PASS",
+      "mechanism": "created synthetic local profile and user in IndexedDB; read back after app reload; Chrome profile removed in finally"
+    }
+  ],
+  "fixtureManifests": [
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    },
+    {
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "zeroResidualRows": true,
+      "tenantCount": 1
+    }
+  ],
+  "counts": {
+    "browserRoundTripUniqueRestaurantPaths": 33,
+    "motoboyPropertiesInspectedStatically": 28,
+    "rootCausesFixed": 1,
+    "provenCapabilityBlocksAmongBrowserPaths": 0,
+    "completedTransactionalRollbackManifests": 10
+  }
+}

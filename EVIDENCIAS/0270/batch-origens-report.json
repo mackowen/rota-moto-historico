@@ -1,0 +1,126 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "pedidos_integracoes"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "pedidos_integracoes",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.1.active",
+      "status": "PASS",
+      "elapsedMs": 1941,
+      "mechanism": "orders.sources.1.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.1.name",
+      "status": "PASS",
+      "elapsedMs": 1902,
+      "mechanism": "orders.sources.1.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.1.externalId",
+      "status": "PASS",
+      "elapsedMs": 1795,
+      "mechanism": "orders.sources.1.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.2.active",
+      "status": "PASS",
+      "elapsedMs": 1841,
+      "mechanism": "orders.sources.2.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.2.name",
+      "status": "PASS",
+      "elapsedMs": 1818,
+      "mechanism": "orders.sources.2.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.2.externalId",
+      "status": "PASS",
+      "elapsedMs": 1930,
+      "mechanism": "orders.sources.2.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.3.active",
+      "status": "PASS",
+      "elapsedMs": 1900,
+      "mechanism": "orders.sources.3.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.3.name",
+      "status": "PASS",
+      "elapsedMs": 1768,
+      "mechanism": "orders.sources.3.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.3.externalId",
+      "status": "PASS",
+      "elapsedMs": 1709,
+      "mechanism": "orders.sources.3.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.4.active",
+      "status": "PASS",
+      "elapsedMs": 1899,
+      "mechanism": "orders.sources.4.active readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.4.name",
+      "status": "PASS",
+      "elapsedMs": 1864,
+      "mechanism": "orders.sources.4.name readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "pedidos_integracoes",
+      "path": "orders.sources.4.externalId",
+      "status": "PASS",
+      "elapsedMs": 1701,
+      "mechanism": "orders.sources.4.externalId readback after edit, navigation, reload; synthetic fixture value restored"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

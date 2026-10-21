@@ -1,0 +1,112 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "navegacao"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "navegacao",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.dashboard",
+      "status": "PASS",
+      "elapsedMs": 1927,
+      "mechanism": "navigation.shortcuts.dashboard readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.orders",
+      "status": "PASS",
+      "elapsedMs": 1688,
+      "mechanism": "navigation.shortcuts.orders readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.bikes",
+      "status": "PASS",
+      "elapsedMs": 1552,
+      "mechanism": "navigation.shortcuts.bikes readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.routes",
+      "status": "PASS",
+      "elapsedMs": 1576,
+      "mechanism": "navigation.shortcuts.routes readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.reports",
+      "status": "PASS",
+      "elapsedMs": 1485,
+      "mechanism": "navigation.shortcuts.reports readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.events",
+      "status": "PASS",
+      "elapsedMs": 1530,
+      "mechanism": "navigation.shortcuts.events readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.settings",
+      "status": "PASS",
+      "elapsedMs": 1535,
+      "mechanism": "navigation.shortcuts.settings readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.admin",
+      "status": "PASS",
+      "elapsedMs": 1402,
+      "mechanism": "navigation.shortcuts.admin readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.integrationLab",
+      "status": "PASS",
+      "elapsedMs": 1435,
+      "mechanism": "navigation.shortcuts.integrationLab readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "navegacao",
+      "path": "navigation.shortcuts.help",
+      "status": "PASS",
+      "elapsedMs": 1569,
+      "mechanism": "navigation.shortcuts.help readback after edit, navigation, reload; synthetic fixture value restored"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "logistica"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "logistica",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "logistica",
+      "path": "/api/logistics/route-settings",
+      "status": "PASS",
+      "mechanism": "authenticated GET through production Logistics HTTP handler and PostgreSQL fixture; no mock"
+    },
+    {
+      "category": "logistica",
+      "path": "/api/logistics/intelligence/settings",
+      "status": "PASS",
+      "mechanism": "authenticated GET through production Logistics HTTP handler and PostgreSQL fixture; no mock"
+    },
+    {
+      "category": "logistica",
+      "path": "/api/logistics/intelligence/analytics",
+      "status": "PASS",
+      "mechanism": "authenticated GET through production Logistics HTTP handler and PostgreSQL fixture; no mock"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

@@ -1,3 +1,9 @@
+## Campanha 0270
+
+- Registro: [REGISTROS/0270.md](REGISTROS/0270.md)
+- Evidências sanitizadas: [EVIDENCIAS/0270](EVIDENCIAS/0270/)
+- Estado: PARTIAL; RM-AUD19-02/10 e RM-D1-SETTINGS-SAVE seguem abertos.
+
 # Índice geral
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |

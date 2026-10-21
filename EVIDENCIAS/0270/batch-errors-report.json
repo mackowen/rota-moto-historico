@@ -1,0 +1,77 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "geral"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "geral",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "geral",
+      "path": "company.location.401",
+      "status": "PASS",
+      "observed": 401,
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "category": "geral",
+      "path": "company.location.403",
+      "status": "PASS",
+      "observed": 403,
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "category": "geral",
+      "path": "company.location.400",
+      "status": "PASS",
+      "observed": 400,
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "category": "geral",
+      "path": "company.location.409",
+      "status": "PASS",
+      "observed": 409,
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    },
+    {
+      "category": "geral",
+      "path": "company.location.network",
+      "status": "PASS",
+      "observed": "TypeError",
+      "mechanism": "real Company endpoint; synthetic transaction rollback"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

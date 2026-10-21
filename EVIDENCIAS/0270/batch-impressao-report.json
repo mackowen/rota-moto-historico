@@ -1,0 +1,63 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "impressao"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "impressao",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "impressao",
+      "path": "printing.enabled",
+      "status": "PASS",
+      "elapsedMs": 1694,
+      "mechanism": "printing.enabled readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "impressao",
+      "path": "printing.mode",
+      "status": "PASS",
+      "elapsedMs": 1769,
+      "mechanism": "printing.mode readback after edit, navigation, reload; synthetic fixture value restored"
+    },
+    {
+      "category": "impressao",
+      "path": "printing.includeDeliveryQr",
+      "status": "PASS",
+      "elapsedMs": 1777,
+      "mechanism": "printing.includeDeliveryQr readback after edit, navigation, reload; synthetic fixture value restored"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

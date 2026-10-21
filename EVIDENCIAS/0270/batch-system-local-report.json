@@ -1,0 +1,53 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "dados",
+    "system-admin"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "dados",
+      "count": 0
+    },
+    {
+      "category": "system-admin",
+      "count": 0
+    }
+  ],
+  "settings": [
+    {
+      "category": "system-admin",
+      "path": "users+profiles",
+      "status": "PASS",
+      "mechanism": "created synthetic local profile and user in IndexedDB; read back after app reload; Chrome profile removed in finally"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "fixture": "authenticated MFA synthetic owner; transactional rotamoto_e2e rollback",
+  "permissions": [
+    "company.manage",
+    "integrations.manage",
+    "members.invite",
+    "members.read",
+    "orders.manage",
+    "orders.read",
+    "sync.pull",
+    "sync.push"
+  ],
+  "settingsCategories": [
+    "aparencia"
+  ],
+  "categoryControlCounts": [
+    {
+      "category": "aparencia",
+      "count": 3
+    }
+  ],
+  "settings": [
+    {
+      "category": "aparencia",
+      "path": "theme",
+      "status": "PASS",
+      "mechanism": "IndexedDB meta.settings autosave + readback/navigation"
+    },
+    {
+      "category": "aparencia",
+      "path": "accent",
+      "status": "PASS",
+      "mechanism": "IndexedDB meta.settings autosave + readback/navigation"
+    },
+    {
+      "category": "aparencia",
+      "path": "language",
+      "status": "PASS",
+      "mechanism": "IndexedDB meta.settings autosave + readback/navigation"
+    }
+  ],
+  "views": [],
+  "browserErrors": [],
+  "expectedAuthResponses": [
+    {
+      "status": 401,
+      "url": "/api/identity/session"
+    },
+    {
+      "status": 403,
+      "url": "/api/identity/login"
+    }
+  ],
+  "unsupportedFixtureEndpoints": [],
+  "httpFailures": [],
+  "authState": {
+    "theme": "auto",
+    "loginFormVisible": false,
+    "appVisible": true
+  }
+}
