@@ -1,3 +1,9 @@
+## Atualização da campanha 0269 (2026-10-21)
+
+**PARTIAL.** Revalidação prioritária sem alterações de aplicação: `npm test` passou no Restaurante e Motoboy. Browser/CDP autenticado transacional passou Company save com ACK/readback, DOM Empresa/Logística, separação da origem customizada, reload/segunda sessão e negação de acesso (400/403), em 360/390/768/1024/1440 e claro/escuro, sem overflow, exceção JS ou 5xx inesperado. Nenhum defeito novo reproduzível justificou patch; suíte e subset não fecham a matriz completa. Os 19 `RM-AUD19` permanecem com estado vigente anterior; RM-AUD19-02/03/10 seguem PARTIAL, 11 BLOCKED_PERMISSION_MODEL, 18 BLOCKED_BY_CAPABILITY e validação física segue PENDING_OWNER. Fixture transacional COMPLETED com `databaseCommitted=false`, contagens tenant-scoped zero; runit API E2E/PostgreSQL readied. Histórico de fixtures RETAINED da 0266 e ASN1/OpenSSL da 0264 preservado. 0258 permanece BLOCKED_AUTHORIZATION. Não iniciar 0270. Detalhes: [REGISTROS/0269.md](REGISTROS/0269.md), [evidência Browser](EVIDENCIAS/0269/company-browser.json).
+
+---
+
 ## Estado vigente — Campanha 0268 (2026-10-21)
 
 **PARTIAL.** Checklists sanitizados publicados: [Android físico](CHECKLISTS/CHECKLIST_ANDROID_0268.md) (24 cenários) e [DR](CHECKLISTS/CHECKLIST_DR_0268.md). `adb devices` não listou aparelho; nenhum teste físico foi executado ou marcado PASS_PHYSICAL. `npm test`: Motoboy **PASS**, Restaurante **PASS** (exit 0; detalhes em [REGISTRO 0268](REGISTROS/0268.md)). GET readiness observou E2E 8787/PostgreSQL prontos e API 8788 HTTP 200; nenhum serviço foi reiniciado. Evidência 0256-E de restore é apenas sintética/descartável; offsite, custódia, host independente e RPO/RTO seguem sem prova. `BACKUP_ADMIN_NOT_CONFIGURED` não foi alterado. RM-AUD19-01..19 mantêm seus estados prévios; 0258 segue BLOCKED_AUTHORIZATION. Nenhuma campanha posterior foi iniciada.

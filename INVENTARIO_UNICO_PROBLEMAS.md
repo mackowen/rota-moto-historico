@@ -1,10 +1,14 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0268 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0269 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
 
 ### Atualização da campanha 0268
 
 Checklists físicos e DR foram publicados em `CHECKLISTS/`; todos os 19 `RM-AUD19-01..19` preservam seus estados anteriores. `RM-0268-OWNER-ANDROID` continua `PENDING_OWNER` (nenhum Android físico listado por ADB). `RM-0234-DR-EXTERNAL` continua `BLOCKED_AUTHORIZATION/PENDING_OWNER`: offsite, custódia, host independente e RPO/RTO não foram comprovados. Ver [REGISTROS/0268.md](REGISTROS/0268.md). Nenhum ID de problema foi encerrado nesta atualização.
+
+### Atualização da campanha 0269
+
+0269 terminou **PARTIAL**. Os testes integrais `npm test` dos dois apps passaram; Browser/CDP autenticado repetiu o subset Company→ACK/readback→DOM Empresa/Logística→origem custom isolada→reload/segunda sessão e a negação RBAC, sem overflow, exceções JS ou HTTP inesperado. Nenhum defeito novo foi reproduzido e nenhum ID foi encerrado. Os 19 estados globais e critérios abaixo permanecem inalterados; `RM-D1-SETTINGS-SAVE`, `RM-D1-AUTH-RESUME` e `RM-D1-LOCATION-CONSISTENCY` seguem PARTIAL fora do subset provado. Ver [REGISTROS/0269.md](REGISTROS/0269.md) e [evidência sanitizada](EVIDENCIAS/0269/company-browser.json). Recomendação: próxima campanha deve completar RM-AUD19-02/10 por lotes/fonte de verdade e retomar sessão em Browser; Chrome Android físico permanece PENDING_OWNER.
 
 ## Como usar
 

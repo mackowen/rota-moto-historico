@@ -1,3 +1,9 @@
+## Atualização da campanha 0269 — regressão prioritária
+
+**PARTIAL; nenhum dos 19 problemas foi encerrado.** A suíte integral `npm test` dos dois apps passou. Browser/CDP comprovou somente persistência Company/location no fluxo autenticado, separação da origem customizada, segunda sessão/reload e negação RBAC; nenhum novo defeito reproduzível foi encontrado. Continuam P0: matriz de configurações RM-AUD19-02/10, consistência completa RM-AUD19-03 e retomada física de sessão RM-AUD19-07/12. RM-AUD19-11 depende do modelo de permissões; RM-AUD19-18 depende de capacidade contratual para identidade canônica. Nenhuma validação física foi feita. Veja [REGISTROS/0269.md](REGISTROS/0269.md) e o inventário único. Próxima recomendação: completar a matriz por lotes e critérios por campo; 0270 não iniciada.
+
+---
+
 ## Atualização vigente — Campanha 0266 (2026-10-21)
 
 **PARTIAL / BLOCKED_EXTERNAL_DEPENDENCY.** Suites completas dos aplicativos, testes locais de runtime/worker/segurança e Browser autenticado sintético passaram no escopo. iFood, 99Food e Keeta permanecem sem sandbox ou conectividade confirmada. Nenhum dos 19 IDs Android foi encerrado. Matriz, checklist individual, conflito histórico 0152/99Food e a exceção de fixture retida/limpeza posterior constam em [REGISTROS/0266.md](REGISTROS/0266.md). 0258 permanece BLOCKED_AUTHORIZATION; 0267 não iniciada.

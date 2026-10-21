@@ -1,0 +1,138 @@
+{
+  "campaign": "0269-regression-company",
+  "scope": "synthetic authenticated browser; PostgreSQL E2E transaction rollback",
+  "flows": [
+    {
+      "name": "Company save ACK/readback, DOM consistency, custom origin isolation, reload and second session",
+      "result": "PASS",
+      "revision": 2
+    },
+    {
+      "name": "limited employee browser session has no admin UI and backend denies direct API",
+      "result": "PASS"
+    }
+  ],
+  "viewportChecks": [
+    {
+      "app": "restaurante",
+      "label": "company-360-light",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": false,
+      "theme": "light",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-360-dark",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": false,
+      "theme": "dark",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-390-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "theme": "light",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-390-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "theme": "dark",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-768-light",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "theme": "light",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-768-dark",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "theme": "dark",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-1024-light",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "overflow": false,
+      "theme": "light",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-1024-dark",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "overflow": false,
+      "theme": "dark",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-1440-light",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "theme": "light",
+      "rootInert": false,
+      "pageVisible": false
+    },
+    {
+      "app": "restaurante",
+      "label": "company-1440-dark",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "theme": "dark",
+      "rootInert": false,
+      "pageVisible": false
+    }
+  ],
+  "expectedDenials": [
+    {
+      "path": "/admin/company?companyId=<foreign-tenant>",
+      "status": 400,
+      "persona": "authenticated-owner"
+    },
+    {
+      "path": "/admin/company/location with client companyId",
+      "status": 400,
+      "persona": "authenticated-owner"
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 403,
+      "persona": "limited-employee"
+    }
+  ],
+  "unexpectedHttp": [],
+  "pageErrors": [],
+  "result": "PASS",
+  "completedAt": "2026-10-21T01:27:27.680Z"
+}
