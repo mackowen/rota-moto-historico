@@ -1,3 +1,9 @@
+## Atualização da campanha 0273 — Conta pela barra superior
+
+**PASS_SCOPE.** Causa comprovada: o botão era movido para `.top-actions` sem `data-account-security`, que o listener delegado exige; o handler local era vazio. A sessão autenticada agora navega para a página própria Ajustes → Conta e segurança, com retorno aos cards e foco no título. Browser/CDP autenticado passou toque/clique, teclado, reload, cinco larguras e dois temas, sem exceções JS ou HTTP 5xx; `npm test` Restaurante passou. `RM-UI-ACCOUNT-TOPBAR` é PASS_SCOPE; Chrome Android físico continua PENDING_OWNER. Os 19 RM-AUD19 não mudaram; o bloqueio `autoNext` HTTP 502 da 0272 permanece separado. Evidências e commits no [REGISTRO 0273](REGISTROS/0273.md). 0258 segue BLOCKED_AUTHORIZATION; 0274 não iniciada.
+
+---
+
 ## Atualização da campanha 0272 — navegação, mapa e alertas
 
 **PARTIAL.** Corrigidos três defeitos reais no Motoboy: provedor preferido ignorado no foco da rota, `autoNext` sem efeito e ausência de rechecagem dos alertas no foreground. `npm test` integral e Browser/CDP autenticado passaram no subset descrito em [REGISTROS/0272.md](REGISTROS/0272.md); fluxo Browser de entrega ficou limitado por 502 em `/api/sync/installations/motoboy`, sem sucesso simulado. RM-AUD19-02/10 seguem PARTIAL e os demais IDs preservados. `RM-UI-ACCOUNT-TOPBAR` P1 OPEN pertence a 0273. 0258 BLOCKED_AUTHORIZATION; Android físico PENDING_OWNER.

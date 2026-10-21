@@ -1,0 +1,219 @@
+{
+  "campaign": "0273",
+  "runtime": "synthetic transactional fixture in rotamoto_e2e; rollback by fixture lifecycle",
+  "browser": "Chromium via CDP; not physical Android",
+  "checks": [
+    {
+      "type": "session-http",
+      "status": 200
+    },
+    {
+      "type": "session-http",
+      "status": 200
+    },
+    {
+      "type": "before-fix-reproduction",
+      "result": "click ignored when delegated selector marker is absent"
+    },
+    {
+      "type": "touch-open",
+      "width": 360,
+      "theme": "light",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 360,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "touch-open",
+      "width": 360,
+      "theme": "dark",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 360,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "touch-open",
+      "width": 390,
+      "theme": "light",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 390,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "touch-open",
+      "width": 390,
+      "theme": "dark",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 390,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "click-open",
+      "width": 768,
+      "theme": "light",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 768,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "keyboard-open-return",
+      "width": 768,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "click-open",
+      "width": 768,
+      "theme": "dark",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 768,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "keyboard-open-return",
+      "width": 768,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "click-open",
+      "width": 1024,
+      "theme": "light",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 1024,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "keyboard-open-return",
+      "width": 1024,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "click-open",
+      "width": 1024,
+      "theme": "dark",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 1024,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "keyboard-open-return",
+      "width": 1024,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "click-open",
+      "width": 1440,
+      "theme": "light",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 1440,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "keyboard-open-return",
+      "width": 1440,
+      "theme": "light",
+      "works": true
+    },
+    {
+      "type": "click-open",
+      "width": 1440,
+      "theme": "dark",
+      "screen": "Conta e segurança",
+      "panelHidden": true,
+      "focusToHeading": true
+    },
+    {
+      "type": "return-to-settings",
+      "width": 1440,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "keyboard-open-return",
+      "width": 1440,
+      "theme": "dark",
+      "works": true
+    },
+    {
+      "type": "session-http",
+      "status": 200
+    },
+    {
+      "type": "session-http",
+      "status": 200
+    },
+    {
+      "type": "authenticated-reload",
+      "sessionRestored": true,
+      "accountOpens": true
+    }
+  ],
+  "screenshots": [
+    "account-open-390-light.png",
+    "account-open-1440-dark.png"
+  ],
+  "jsErrors": [],
+  "http5xx": [],
+  "cleanup": [
+    "API E2E runit restored; /health/ready ready",
+    "temporary Chromium profile removed"
+  ],
+  "status": "PASS_SCOPE"
+}

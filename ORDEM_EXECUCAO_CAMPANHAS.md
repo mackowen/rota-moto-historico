@@ -1,3 +1,9 @@
+## Atualização da execução — 0273
+
+0273 passou **PASS_SCOPE** para `RM-UI-ACCOUNT-TOPBAR`: causa estrutural corrigida; sessão autenticada abre a página existente de Conta e segurança, com retorno para Ajustes. Browser/CDP passou 5 viewports × 2 temas, toque/clique, teclado/foco e reload; `npm test` Restaurante passou. Android físico segue PENDING_OWNER. Os 19 RM-AUD19 permanecem inalterados, e o 502 de `autoNext` da 0272 permanece separado. Ver [REGISTROS/0273.md](REGISTROS/0273.md). 0258 continua BLOCKED_AUTHORIZATION; próxima campanha não iniciada.
+
+---
+
 ## Atualização da execução — 0270
 
 0270 terminou **PARTIAL**. Corrigida a preservação do rascunho de política de agrupamento quando Company responde conflito de revisão; ACK/readback canônico e reload passaram. Browser autenticado comprovou 33 caminhos Restaurant (390px, tema padrão), e dez fixtures transacionais concluídas com rollback/contagens zero. Os campos adicionais de Logística foram apenas lidos e as preferências do Motoboy não passaram Browser nesta execução; matrizes responsivas completas e Chrome Android físico seguem pendentes. `npm test` nos dois apps passou. RM-AUD19-02/10 e `RM-D1-SETTINGS-SAVE` permanecem PARTIAL. Recomendação posterior: Browser autenticado de configurações do Motoboy e lotes faltantes no Restaurante. 0258 permanece BLOCKED_AUTHORIZATION. Ver [REGISTROS/0270.md](REGISTROS/0270.md). Não iniciar 0271 automaticamente.
@@ -8,7 +14,7 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Última execução: 0271 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0273 PASS_SCOPE · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
 
 ## Atualização da ordem — campanha 0269
 
@@ -45,11 +51,11 @@
 | 16 | **0269 — consolidação e correção de pendências prioritárias** | RM-AUD19-01..19; `RM-D1-SETTINGS-SAVE`, `RM-D1-AUTH-RESUME`, `RM-D1-LOCATION-CONSISTENCY` | **Executada; PARTIAL.** npm test integral de ambos os apps passou. Browser autenticado transacional revalidou Company/location, ACK/readback, origem customizada, reload/segunda sessão, RBAC, 5 viewports × 2 temas. Nenhuma falha nova reproduzida; nenhum item fechado; sem patch de app especulativo. | Próximo passo recomendado (não iniciado): matriz remanescente RM-AUD19-02/10 por fonte e cenários de erro/draft/retry, e sessão Browser; manter todos os 19 IDs e PENDING_OWNER físico. 0258 continua bloqueada. Ver [REGISTROS/0269.md](REGISTROS/0269.md). |
 | 17 | **0271 — correção funcional de configurações do Motoboy** | RM-AUD19-02/10; `RM-D1-SETTINGS-SAVE` | **Executada; PARTIAL.** Tema, autosave de taxa e meta diária passaram falha sintética, draft/rerender, retry e readback IndexedDB no Browser autenticado. `npm test` Motoboy passou; sem overflow em 360/390/768 claro/escuro. | Não fechar RM-AUD19-02/10: matriz de outros controles, erros HTTP/RBAC/revisão e validação física permanecem. 0258 BLOCKED_AUTHORIZATION. Ver [REGISTROS/0271.md](REGISTROS/0271.md). 0272 não iniciada. |
 | 18 | **0272 — navegação, mapa e alertas Motoboy** | Controles Motoboy de provedor de navegação, avanço/reordenação, endereço, mapa e alertas; RM-AUD19-02/10 mantêm estados globais | **Executada; PARTIAL.** Corrigidos provedor forçado no foco, autoNext inerte e alertas sem rechecagem foreground. Browser autenticado validou subset; operação com entrega sintética foi bloqueada por 502 no endpoint da fixture. Mapa vazio sem GPS passou; reordenação e telas restantes foram revisadas sem necessidade de mudança. | Preservar RM-AUD19-02/10 como PARTIAL; completar Browser de auto-next quando fixture não der 502 e validar GPS/permissões/apps externos no Android físico. P1 `RM-UI-ACCOUNT-TOPBAR` não pertence a 0272. Ver [REGISTROS/0272.md](REGISTROS/0272.md); commits locais Motoboy `ef91ceeb32f9d8361445b03c176d87987f2602da` e `e0386b1b502fe9b23d86b6516f9ff4e57590c858`. 0273 não iniciada. |
-| 19 | **0273 — navegação da conta pela barra superior do Restaurante** | `RM-UI-ACCOUNT-TOPBAR` | Planejada; `OPEN`, P1. | Reproduzir o botão Conta com sessão sintética autorizada, corrigir o handler e provar navegação/retorno/foco em Browser; validar Android físico com proprietário quando disponível. Não antecipar alterações de MFA ou permissões. | Aceite: clique/toque abre o fluxo de Conta autorizado sem overlay ou sessão inválida; retorno, reload e histórico funcionam. |
+| 19 | **0273 — navegação da conta pela barra superior do Restaurante** | `RM-UI-ACCOUNT-TOPBAR` | Executada; **PASS_SCOPE** no Browser/CDP; PENDING_OWNER físico. | Causa corrigida: marcador delegado ausente e destino autenticado ajustado à página dedicada; toque/clique, retorno a Ajustes, reload, teclado/foco passaram em 5 larguras × 2 temas. 19 RM-AUD19 preservados; bloqueio 0272 autoNext/502 segue separado. | Evidência: [REGISTROS/0273.md](REGISTROS/0273.md) e [capturas/relatório](EVIDENCIAS/0273/). Chrome Android físico permanece gate do proprietário; 0258 BLOCKED_AUTHORIZATION. |
 
 ## Atualização da execução — 0271
 
-0271 foi executada com **PARTIAL**. Três caminhos do Motoboy passaram Browser/CDP autenticado sob falha de armazenamento, retenção de rascunho após rerender, retry/readback e viewports 360/390/768 nos dois temas. `npm test` do Motoboy passou. O restante das configurações e os estados globais RM-AUD19-02/10 continuam PARTIAL; validação física é PENDING_OWNER. Ver [REGISTROS/0271.md](REGISTROS/0271.md). 0272 foi executada; 0273 não foi iniciada automaticamente.
+0271 foi executada com **PARTIAL**. Três caminhos do Motoboy passaram Browser/CDP autenticado sob falha de armazenamento, retenção de rascunho após rerender, retry/readback e viewports 360/390/768 nos dois temas. `npm test` do Motoboy passou. O restante das configurações e os estados globais RM-AUD19-02/10 continuam PARTIAL; validação física é PENDING_OWNER. Ver [REGISTROS/0271.md](REGISTROS/0271.md). 0272 foi executada; 0273 foi executada; 0274 não iniciada automaticamente.
 
 ## Execução concluída — 0256-D2
 

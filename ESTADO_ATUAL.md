@@ -1,4 +1,10 @@
-## Estado vigente — Campanha 0272 (2026-10-21)
+## Estado vigente — Campanha 0273 (2026-10-21)
+
+**PASS_SCOPE.** Corrigido o botão Conta do Restaurante: o trigger não carregava o marcador exigido pelo listener delegado e, autenticado, abria um painel cujo resumo já pertence à página dedicada. Agora abre Ajustes → Conta e segurança, preserva retorno aos cards e foca o título. Browser/CDP autenticado reproduziu o defeito sem marcador e passou com o patch: toque em 360/390, clique em 768/1024/1440, claro/escuro, retorno, reload, teclado e foco; zero exceções JS/HTTP 5xx. `node tests/test-identity-ui.js`, verificações de sintaxe e `npm test` Restaurante passaram. Fixture transacional revertida; API E2E e PostgreSQL `ready`; perfil Chromium removido. Commit Restaurante `0eae7372c372737ee9e0d27f8d5af2041edcc895`, local e sem push. Chrome Android físico permanece PENDING_OWNER. RM-AUD19-01..19 preservados; RM-AUD19-02/10 e RM-D1-SETTINGS-SAVE continuam PARTIAL. A limitação `autoNext`/502 de 0272 permanece separada. 0258 BLOCKED_AUTHORIZATION; 0274 não iniciada. Registro e capturas: [REGISTROS/0273.md](REGISTROS/0273.md), [EVIDENCIAS/0273](EVIDENCIAS/0273/).
+
+---
+
+## Registro histórico — Campanha 0272 (2026-10-21)
 
 **PARTIAL.** Motoboy: corrigidos o provedor da preferência de navegação no foco da rota, a aplicação de `autoNext` e reavaliação de alertas após foreground. Teste focado e `npm test` passaram. Browser/CDP autenticado comprovou provedor salvo/readback/aplicado, alerta, mapa sem GPS e 360/390/768 claro/escuro, sem overflow/JS/5xx no lote aprovado. Um Browser de operação com entregas sintéticas recebeu 502 de `/api/sync/installations/motoboy`; não foi usado mock para declarar auto-next validado em operação. `RM-AUD19-02/10` e `RM-D1-SETTINGS-SAVE` continuam PARTIAL. `RM-UI-ACCOUNT-TOPBAR` está P1 OPEN para 0273 e não foi tocado. API E2E `/health/ready` e PostgreSQL prontos após restauração; Chrome Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION. Commits locais Motoboy `ef91ceeb32f9d8361445b03c176d87987f2602da` e `e0386b1b502fe9b23d86b6516f9ff4e57590c858`. Ver [REGISTRO 0272](REGISTROS/0272.md) e [evidência](EVIDENCIAS/0272/motoboy-navigation-map-alerts.json). 0273 não iniciada.
 
