@@ -1,0 +1,41 @@
+{
+  "campaign": "0267",
+  "status": "PASS_SCOPE",
+  "browser": "Chromium via CDP; not physical Chrome Android",
+  "fixture": {
+    "database": "rotamoto_e2e",
+    "authentication": "synthetic MFA-verified administrator",
+    "lifecycle": "transactional fixture; cleanup in finally",
+    "runtimeGuard": "fixed-port fixture allowed only under the existing 0251 lifecycle guard"
+  },
+  "coverage": {
+    "viewports": [360, 390, 768, 1024, 1440],
+    "themes": ["light", "dark"],
+    "states": ["synthetic report data", "empty"],
+    "screenshots": 36,
+    "orders": 4,
+    "deliveryRows": 6,
+    "canonicalDeliveryOperationsAfterAliasDeduplication": 5,
+    "assertions": [
+      "one return Delivery appears in operation totals without duplicating its Order",
+      "a local Delivery ID and its canonical alias count once",
+      "combined period, status, driver, delivery type and commercial source filters",
+      "filtered CSV remains one row per Order and neutralizes formula-leading cells",
+      "CSV excludes synthetic phone and address fields",
+      "invalid territorial metric returns HTTP 400",
+      "unauthenticated logistics analytics returns HTTP 401",
+      "logistics and territorial report endpoints return HTTP 200",
+      "no JavaScript exceptions or document horizontal overflow"
+    ]
+  },
+  "limitations": [
+    "Report Orders and Earnings are synthetic local IndexedDB snapshots; this run does not prove canonical PostgreSQL report readback or freshness beyond the UI's unconfirmed-sync notice.",
+    "Report-specific 403, 409, tenant-crossing report data, and server-side pagination scenarios were not exercised.",
+    "No commercial marketplace, external fulfillment, real financial data, or physical Android device was used."
+  ],
+  "runtime": {
+    "apiE2eReadinessAfterCleanup": "ready",
+    "postgres": "ready",
+    "errors": 0
+  }
+}
