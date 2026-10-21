@@ -14,7 +14,11 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-21 · Última execução: 0277 BLOCKED · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-21 · Última execução: 0278 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+
+## Atualização da ordem — campanha 0278
+
+0278 executou a etapa de adapter e testes locais, **PARTIAL**. ORS foi implementado por interface de provider sem chamada comercial; a credencial estava ausente. A geometria real, endpoint, Browser nos mapas e atualização operacional continuam dependentes de credencial/uso autorizado e de uma fixture canônica segura. ORS não publica perfil de motocicleta; adequação deve ser decidida antes da ativação operacional. OSRM continua compatível, mas implantação Termux 0277 permanece sem autorização. A próxima etapa não começa automaticamente; seguir a ordem/inventário vigente. Ver [REGISTROS/0278.md](REGISTROS/0278.md).
 
 ## Atualização da ordem — campanha 0277
 
@@ -70,6 +74,7 @@
 | 19 | **0273 — navegação da conta pela barra superior do Restaurante** | `RM-UI-ACCOUNT-TOPBAR` | Executada; **PASS_SCOPE** no Browser/CDP; PENDING_OWNER físico. | Causa corrigida: marcador delegado ausente e destino autenticado ajustado à página dedicada; toque/clique, retorno a Ajustes, reload, teclado/foco passaram em 5 larguras × 2 temas. 19 RM-AUD19 preservados. | Evidência: [REGISTROS/0273.md](REGISTROS/0273.md) e [capturas/relatório](EVIDENCIAS/0273/). Chrome Android físico permanece gate do proprietário; 0258 BLOCKED_AUTHORIZATION. |
 | 20 | **0274 — HTTP 502 e autoNext operacional** | runner `browser-tests`; limitação 0272 de Browser operacional | Executada; **PASS_SCOPE** para causa do 502, endpoint e cenários A/B/C/D; PENDING_OWNER físico. | Teardown foi corrigido para fechar Chromium antes do rollback/API e sincronizar com bootstrap/readback. `POST /api/sync/installations/motoboy` real 200; autoNext ligado/desligado, rota encerrada e erro de armazenamento passaram com ACK/readback e zero resíduos. Nenhum código de app alterado. | [REGISTROS/0274.md](REGISTROS/0274.md), [JSON e capturas](EVIDENCIAS/0274/); commits locais Browser `f31284a`, `317ff09`, `62dbef7`; histórico 0274 a publicar. 19 RM-AUD19 preservados; 0258 BLOCKED_AUTHORIZATION. |
 | 21 | **0277 — viabilidade OSRM Termux e implantação E2E** | `RM-0277-OSRM-TERMUX`, `RM-D1-LOCATION-CONSISTENCY`, geometria dos mapas Restaurante/Motoboy | **Executada; BLOCKED.** Diagnóstico ARM64/Termux, toolchain, recursos, package catalog e adapter concluído; nenhum pacote, dado, build ou serviço instalado/iniciado. | Prosseguir somente com autorização para ensaio nativo limitado e PBF custom verificado, ou ambiente Linux ARM64 isolado. Exigir provider OSRM real, endpoint, dois mapas, duração semanticamente separada de ETA e cleanup. Ver [REGISTROS/0277.md](REGISTROS/0277.md). Não iniciar 0278 automaticamente. |
+| 22 | **0278 — API de roteamento OpenStreetMap** | `RM-0278-OSM-ROUTING`, RM-0277-OSRM-TERMUX, `RM-D1-LOCATION-CONSISTENCY` | **Executada; PARTIAL.** Factory OSRM/ORS e adaptador ORS testados localmente; sem credencial real/chamada externa. Mapas e atualização canônica ainda não comprovados. | Só concluir com provider autorizado real, geometria validada no backend e em ambos mapas, mutações Route canônicas/ACK-readback e E2E reversível; profile moto e autorização comercial/dados externos precisam resolver. Ver [REGISTROS/0278.md](REGISTROS/0278.md). Nenhuma campanha subsequente iniciada. |
 
 ## Atualização da execução — 0271
 

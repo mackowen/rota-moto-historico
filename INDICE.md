@@ -1,3 +1,9 @@
+## Campanha 0278
+
+- Registro: [REGISTROS/0278.md](REGISTROS/0278.md)
+- Resultado: PARTIAL; adaptador ORS implementado e validado por fixtures locais; chamada real, perfil de moto e Browser dos mapas BLOCKED.
+- Commit Restaurante local: `2b467a7f0ccbc4265b4216c6343adf2ba843ed2f`; sem push do aplicativo.
+
 ## Campanha 0273
 
 - Registro: [REGISTROS/0273.md](REGISTROS/0273.md)
@@ -8,6 +14,7 @@
 
 | Registro | Data | Projeto | Tipo | Assunto | Resultado | Arquivo |
 |----------|------|---------|------|---------|-----------|---------|
+| 0278 | 2026-10-21 | Restaurante / ORS / OpenStreetMap | API DE ROTEAMENTO / GEOJSON / SEGURANÇA | Provider independente com compatibilidade OSRM e adaptador ORS | PARTIAL: adapter, config backend, validação/cache/dedupe/rate limit/timeout e falhas passam fixtures determinísticas e `npm test` Restaurante. Sem chave/autorização, nenhum request real ou Browser dos mapas; geometria operacional e perfil moto não comprovados. Motoboy/Browser não alterados; 0258 BLOCKED_AUTHORIZATION. | [REGISTROS/0278.md](REGISTROS/0278.md) · [inventário](INVENTARIO_UNICO_PROBLEMAS.md) · [ordem](ORDEM_EXECUCAO_CAMPANHAS.md) |
 | 0273 | 2026-10-21 | Restaurante / `rotamoto_e2e` / Chromium CDP | NAVEGAÇÃO / CONTA / ACESSIBILIDADE | Corrigir Conta na barra superior e abrir destino de conta válido | PASS_SCOPE: causa estrutural do handler delegado corrigida; página Conta e segurança, retorno, teclado/foco, reload e 5 viewports × 2 temas passaram Browser autenticado. `npm test` Restaurante passou; fixture revertida e API E2E ready. Chrome Android físico PENDING_OWNER; RM-AUD19 preservados; bloqueio autoNext/502 da 0272 não alterado. | [REGISTROS/0273.md](REGISTROS/0273.md) · [relatório](EVIDENCIAS/0273/account-topbar-browser.json) · [capturas](EVIDENCIAS/0273/) · [inventário](INVENTARIO_UNICO_PROBLEMAS.md) · [ordem](ORDEM_EXECUCAO_CAMPANHAS.md) |
 | 0272 | 2026-10-21 | Motoboy / `rotamoto_e2e` / Chromium CDP | NAVEGAÇÃO / MAPA / ALERTAS | Aplicação real das preferências no runtime | PARTIAL: corrigidos provedor ignorado no foco, autoNext sem efeito e alerta não reavaliado ao retornar do background; teste focused e npm test passaram. Browser autenticado confirmou readback/aplicação do provedor, alerta, mapa vazio e 6 viewports/temas; operação com entrega sintética limitada por fixture 502. Android físico PENDING_OWNER; 0258 BLOCKED_AUTHORIZATION. | [REGISTROS/0272.md](REGISTROS/0272.md) · [Evidência](EVIDENCIAS/0272/motoboy-navigation-map-alerts.json) · [Inventário](INVENTARIO_UNICO_PROBLEMAS.md) · [Ordem](ORDEM_EXECUCAO_CAMPANHAS.md) |
 | 0269 | 2026-10-21 | Restaurante / Motoboy / `rotamoto_e2e` / Chromium CDP | PERSISTÊNCIA / SESSÃO / COMPANY | Regressão de pendências prioritárias | PARTIAL: `npm test` dos dois apps passou; Browser autenticado Company/location, readback, segunda sessão, custom origin e RBAC passaram no subset; nenhum novo defeito confirmado. 19 IDs preservados; Android físico PENDING_OWNER. | [REGISTROS/0269.md](REGISTROS/0269.md) · [evidência](EVIDENCIAS/0269/company-browser.json) · [inventário](INVENTARIO_UNICO_PROBLEMAS.md) |
