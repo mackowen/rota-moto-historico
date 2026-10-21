@@ -1,3 +1,7 @@
+## Atualização da execução — 0279
+
+0279 terminou **PARTIAL**. Corrigido o gate de salvamento Company no Restaurante: perfil e endereço agora exigem revisão atual, ACK compatível e GET readback canônico antes da confirmação; coordenadas derivam somente do readback. PostgreSQL E2E autenticado com Company sintética confirmou localização e snapshot `/sync/pull` para Motoboy, com rollback e resíduos tenant-scoped zero. `npm test` Restaurante passou. Browser/CDP anônimo cobriu carregamento e overflow em 360/390/768, claro/escuro; formulário autenticado, DOM comparativo e reload Browser não foram validados por falta de identidade sintética autorizada. RM-AUD19-02/03/10 e aliases continuam PARTIAL. Chrome Android físico PENDING_OWNER; ORS PENDING_EXTERNAL_CREDENTIAL; 0258 BLOCKED_AUTHORIZATION. Ver [REGISTROS/0279.md](REGISTROS/0279.md). 0280 não iniciada.
+
 ## Atualização da execução — 0273
 
 0273 passou **PASS_SCOPE** para `RM-UI-ACCOUNT-TOPBAR`: causa estrutural corrigida; sessão autenticada abre a página existente de Conta e segurança, com retorno para Ajustes. Browser/CDP passou 5 viewports × 2 temas, toque/clique, teclado/foco e reload; `npm test` Restaurante passou. Android físico segue PENDING_OWNER. Os 19 RM-AUD19 permanecem inalterados, e o 502 de `autoNext` da 0272 permanece separado. Ver [REGISTROS/0273.md](REGISTROS/0273.md). 0258 continua BLOCKED_AUTHORIZATION; próxima campanha não iniciada.

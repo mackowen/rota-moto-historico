@@ -1,4 +1,12 @@
-# Estado vigente — Campanha 0278 (2026-10-21)
+# Estado vigente — Campanha 0279 (2026-10-21)
+
+**PARTIAL.** Corrigido no Restaurante o fluxo de gravação Company que podia reportar sucesso após PUT sem readback e podia reutilizar coordenadas antigas ao publicar novo endereço. Agora perfil/endereço com revisão exigem ACK e GET canônico antes de limpar rascunho/confirmar; a interface atualiza coordenadas apenas do readback e deixa valores ausentes como `null`. PostgreSQL E2E sintético confirmou gravação, GET e snapshot `/sync/pull` read-only ao Motoboy; rollback e resíduos tenant-scoped zero. `npm test` Restaurante passou. Chromium/CDP anônimo carregou os assets em 360/390/768 claro/escuro sem overflow, exceções ou erros; não havia identidade sintética autorizada para o Browser autenticado dos formulários. Nenhum código Motoboy foi alterado; não houve teste físico Android, escrita no banco oficial ou chamada ORS. RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY seguem PARTIAL; os demais 16 RM-AUD19 e RM-UI-ACCOUNT-TOPBAR permanecem sem reclassificação. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL; 0280 não iniciada. Ver [REGISTROS/0279.md](REGISTROS/0279.md) e [evidência Browser](EVIDENCIAS/0279/browser-anonymous-smoke.json).
+
+Commit local Restaurante `2d4ee95e977fb255a003045643bad74bccb035de`; Motoboy sem alteração/commit; Browser Tests permanece intocado. O SHA de publicação do histórico será acrescentado após verificação do origin/main.
+
+---
+
+## Estado histórico — Campanha 0278 (2026-10-21)
 
 **PARTIAL.** Restaurante recebeu abstração de provider de roteamento compatível com OSRM e adaptador ORS Directions v2 GeoJSON, com segredo apenas em configuração backend, timeout, validação, deduplicação/cache e limite local. Testes determinísticos do contrato, falhas, segurança da chave e compatibilidade OSRM, configuração e `npm test` Restaurante passaram. Não havia chave ORS; nenhuma chamada externa, fixture DB ou teste Browser dos mapas ocorreu. Portanto geometria real, endpoint canônico com ORS, mapas Restaurante/Motoboy e atualizações operacionais continuam BLOCKED_CREDENTIAL. ORS não lista perfil de motocicleta; driving-car não é declarado equivalente. Duração viária continua separada de ETA e fora do payload. Motoboy e Browser Tests não foram alterados; nenhum banco ou serviço foi tocado. 0258 continua BLOCKED_AUTHORIZATION; RM-AUD19-01..19 e RM-UI-ACCOUNT-TOPBAR preservados; Chrome Android físico PENDING_OWNER. Ver [REGISTROS/0278.md](REGISTROS/0278.md).
 

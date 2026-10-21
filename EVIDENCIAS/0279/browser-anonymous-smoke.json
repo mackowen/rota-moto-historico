@@ -1,0 +1,27 @@
+{
+  "campaign": "0279",
+  "test": "source-tree-browser-smoke",
+  "mode": "Chromium headless via CDP; anonymous; temporary static server",
+  "authenticated": false,
+  "databaseTouched": false,
+  "app": "Restaurant working tree",
+  "checks": [
+    { "width": 360, "theme": "light", "documentReady": "complete", "persistenceHelperLoaded": true, "horizontalOverflow": false },
+    { "width": 390, "theme": "light", "documentReady": "complete", "persistenceHelperLoaded": true, "horizontalOverflow": false },
+    { "width": 768, "theme": "light", "documentReady": "complete", "persistenceHelperLoaded": true, "horizontalOverflow": false },
+    { "width": 360, "theme": "dark", "documentReady": "complete", "persistenceHelperLoaded": true, "horizontalOverflow": false },
+    { "width": 390, "theme": "dark", "documentReady": "complete", "persistenceHelperLoaded": true, "horizontalOverflow": false },
+    { "width": 768, "theme": "dark", "documentReady": "complete", "persistenceHelperLoaded": true, "horizontalOverflow": false }
+  ],
+  "javascriptExceptions": 0,
+  "consoleErrors": 0,
+  "assets": [
+    { "path": "/company-settings-persistence.js?v=0279.1", "httpStatus": 200 },
+    { "path": "/app.js?v=0279.1", "httpStatus": 200 }
+  ],
+  "limitations": [
+    "No authenticated synthetic browser identity was available, so Company forms were not submitted in Browser.",
+    "The static smoke validates source loading and shell layout only; it is not proof of authenticated persistence or physical Android behavior."
+  ],
+  "cleanup": "temporary Chromium profile and static server closed"
+}
