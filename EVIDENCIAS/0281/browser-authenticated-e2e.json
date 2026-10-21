@@ -16,7 +16,19 @@
       "BACKLOG_MESTRE.md",
       "ORDEM_EXECUCAO_CAMPANHAS.md"
     ],
-    "final0281Sha": "pending campaign commit"
+    "final0281Sha": "ec5a60082d7b7c3eb4ebc29346847a069cf2d77c",
+    "finalBranch": "main",
+    "finalRemoteReadbackVerified": true,
+    "finalVerifiedPaths": [
+      "REGISTROS/0280.md",
+      "REGISTROS/0281.md",
+      "EVIDENCIAS/0280/browser-authenticated-e2e.json",
+      "EVIDENCIAS/0281/browser-authenticated-e2e.json",
+      "ESTADO_ATUAL.md",
+      "INVENTARIO_UNICO_PROBLEMAS.md",
+      "BACKLOG_MESTRE.md",
+      "ORDEM_EXECUCAO_CAMPANHAS.md"
+    ]
   },
   "syntheticIdentity": {
     "fixture": "tests/e2e-support/fixture-lifecycle.js",
