@@ -1,4 +1,10 @@
-## Estado vigente — Campanha 0267 (2026-10-21)
+## Estado vigente — Campanha 0268 (2026-10-21)
+
+**PARTIAL.** Checklists sanitizados publicados: [Android físico](CHECKLISTS/CHECKLIST_ANDROID_0268.md) (24 cenários) e [DR](CHECKLISTS/CHECKLIST_DR_0268.md). `adb devices` não listou aparelho; nenhum teste físico foi executado ou marcado PASS_PHYSICAL. `npm test`: Motoboy **PASS**, Restaurante **PASS** (exit 0; detalhes em [REGISTRO 0268](REGISTROS/0268.md)). GET readiness observou E2E 8787/PostgreSQL prontos e API 8788 HTTP 200; nenhum serviço foi reiniciado. Evidência 0256-E de restore é apenas sintética/descartável; offsite, custódia, host independente e RPO/RTO seguem sem prova. `BACKUP_ADMIN_NOT_CONFIGURED` não foi alterado. RM-AUD19-01..19 mantêm seus estados prévios; 0258 segue BLOCKED_AUTHORIZATION. Nenhuma campanha posterior foi iniciada.
+
+---
+
+## Registro histórico vigente — Campanha 0267 (2026-10-21)
 
 **PARTIAL.** Corrigida a regressão em que o relatório reduzia uma Order a uma Delivery e podia omitir devoluções/reentregas ou duplicar snapshot com aliases local/canônico. A camada de analytics agora separa pedidos/valores comerciais de operações Delivery, preserva a Order única em filtros/CSV, deduplica IDs aliases e não infere taxa ou Earning a partir de RETURN. `npm test` completo passou no Restaurante e no Motoboy; analytics e testes PostgreSQL territorial/logística com rollback passaram. Browser/CDP autenticado usou fixture sintética em `rotamoto_e2e`, cobriu dados/vazio, filtros, CSV, 360/390/768/1024/1440 em claro/escuro (36 capturas), zero overflow horizontal do documento e zero exceção JS; endpoints respondem 200, métrica inválida 400 e requisição sem sessão 401. Serviço E2E restaurado e `/health/ready` respondeu ready. O dataset Orders/Earnings do relatório foi semeado somente no IndexedDB de teste: relatório sinaliza snapshot local com sync não confirmado; não houve prova de readback canônico para dados de Orders/finanças, 403/409 ou tenant cruzado específico de relatórios. A ocorrência OpenSSL/ASN1 reportada em 0264 não reproduziu e o teste permaneceu habilitado. 19 RM-AUD19 e demais pendências permanecem; validação Chrome Android física continua PENDING_OWNER. 0258 segue BLOCKED_AUTHORIZATION; 0268 não iniciada. Evidências: [REGISTRO 0267](REGISTROS/0267.md), [sumário e capturas](EVIDENCIAS/0267-reports/).
 

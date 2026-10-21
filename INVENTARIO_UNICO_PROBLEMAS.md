@@ -1,6 +1,10 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0267 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-21 · Inventário cumulativo; campanha 0268 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+
+### Atualização da campanha 0268
+
+Checklists físicos e DR foram publicados em `CHECKLISTS/`; todos os 19 `RM-AUD19-01..19` preservam seus estados anteriores. `RM-0268-OWNER-ANDROID` continua `PENDING_OWNER` (nenhum Android físico listado por ADB). `RM-0234-DR-EXTERNAL` continua `BLOCKED_AUTHORIZATION/PENDING_OWNER`: offsite, custódia, host independente e RPO/RTO não foram comprovados. Ver [REGISTROS/0268.md](REGISTROS/0268.md). Nenhum ID de problema foi encerrado nesta atualização.
 
 ## Como usar
 

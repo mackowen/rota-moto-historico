@@ -105,6 +105,11 @@ Ver [REGISTRO 0256-D](REGISTROS/0256-D.md). Campanhas 0256-E (Sistema/backup/rec
 
 # Backlog mestre RotaMoto
 
+## Atualização vigente — Campanha 0268 (2026-10-21)
+
+**PARTIAL.** Entregues checklists Android físico e DR com resultados iniciais PENDING_OWNER/BLOCKED explícitos. Nenhum dispositivo Android conectado; nenhum teste físico realizado. `npm test` integral passou nos dois aplicativos (exit 0). Prontidão operacional de DR segue parcial: offsite, custódia, RPO/RTO e restore independente sem prova/autorização. RM-AUD19-01..19 e demais pendências preservados; 0258 segue BLOCKED_AUTHORIZATION.
+
+
 Fonte consolidada para pendências documentadas nos registros 0234–0256-C; evidências de campanhas corretivas complementam as linhas sem remover itens anteriores. Um estado só muda com nova evidência. Pendências anteriores a 0247 continuam rastreáveis em `PENDENCIAS.md` e não são descartadas por esta consolidação.
 
 ## Itens em aberto
