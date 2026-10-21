@@ -1,0 +1,61 @@
+{
+  "campaign": "0272",
+  "browser": "Authenticated Chromium/CDP; synthetic E2E owner; no persisted delivery fixture",
+  "checks": [
+    {
+      "type": "viewport-theme",
+      "width": 360,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 390,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 768,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "type": "viewport-theme",
+      "width": 768,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "type": "navigation-provider-applied",
+      "before": "osmand",
+      "saved": "google",
+      "providerOpened": "google",
+      "indexedDbReadback": true
+    },
+    {
+      "type": "foreground-alert-recheck",
+      "message": "Corrida pendente: Entrega sintética está em rota há mais de 1 min.",
+      "duration": 2000
+    },
+    {
+      "type": "empty-map-without-location",
+      "status": "Mapa geral do Brasil. Toque em “Minha localização” para buscar sua posição; isso não altera sua disponibilidade nem confirma presença."
+    }
+  ],
+  "errors": [],
+  "http5xx": [],
+  "status": "PASS_FOCUSED_SYNTHETIC"
+}

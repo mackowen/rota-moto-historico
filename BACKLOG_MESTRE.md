@@ -1,3 +1,9 @@
+## Atualização da campanha 0272 — navegação, mapa e alertas
+
+**PARTIAL.** Corrigidos três defeitos reais no Motoboy: provedor preferido ignorado no foco da rota, `autoNext` sem efeito e ausência de rechecagem dos alertas no foreground. `npm test` integral e Browser/CDP autenticado passaram no subset descrito em [REGISTROS/0272.md](REGISTROS/0272.md); fluxo Browser de entrega ficou limitado por 502 em `/api/sync/installations/motoboy`, sem sucesso simulado. RM-AUD19-02/10 seguem PARTIAL e os demais IDs preservados. `RM-UI-ACCOUNT-TOPBAR` P1 OPEN pertence a 0273. 0258 BLOCKED_AUTHORIZATION; Android físico PENDING_OWNER.
+
+---
+
 ## Atualização da campanha 0271 — configurações Motoboy
 
 **PARTIAL.** Reproduzidos e corrigidos três fluxos sob falha de gravação: Aparência/tema, autosave de taxa e meta diária. Browser/CDP autenticado confirmou falha IndexedDB, draft preservado após `renderSettings()`, retry/readback local e proteção de saída; npm test Motoboy passou. Isso cobre somente os controles declarados em [REGISTROS/0271.md](REGISTROS/0271.md) e [evidência](EVIDENCIAS/0271/motoboy-settings-recovery.json). RM-AUD19-02, RM-AUD19-10 e RM-D1-SETTINGS-SAVE continuam PARTIAL; matriz de todos os controles, HTTP/RBAC/conflito e Chrome Android físico seguem pendentes. Nenhum dos demais 19 IDs foi removido ou encerrado. 0258 permanece BLOCKED_AUTHORIZATION; não iniciar 0272 automaticamente.
