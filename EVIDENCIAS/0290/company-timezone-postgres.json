@@ -1,0 +1,14 @@
+{
+  "scenario": "domain-sync-company-location-0279",
+  "companyId": "d3bf2c0d-5054-47a3-a56b-d1b917aa3f9b",
+  "database": "rotamoto_e2e",
+  "operations": [
+    {"method":"PUT /api/admin/company", "expectedVersion":1, "timeZone":"America/Sao_Paulo", "status":200, "ackSettingsVersion":2},
+    {"method":"PUT /api/admin/company", "expectedVersion":1, "timeZone":"America/Manaus", "status":409, "reason":"stale revision"},
+    {"method":"GET /api/admin/company", "timeZone":"America/Sao_Paulo", "settingsVersion":2},
+    {"method":"GET /api/sync/pull", "companySettings.timeZone":"America/Sao_Paulo", "companySettings.revision":2}
+  ],
+  "databaseCommitted": false,
+  "cleanup": "COMPLETED",
+  "residuals": {"companies":0,"domain_records":0,"memberships":0,"sync_outbox":0}
+}

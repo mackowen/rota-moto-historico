@@ -1,3 +1,9 @@
+## Campanha 0290 — PARTIAL (2026-10-22)
+
+Escopo ativo: RM-AUD19-02, RM-AUD19-03 e RM-AUD19-10. Corrigido o caminho do timezone Company com revisão esperada, conflito e ACK + readback canônico. Suíte Restaurante integral passou. Gates remanescentes obrigatórios: Browser autenticado em Configurações; navegação, reload, nova aba e restauração; antes/depois; cenários 400/401/403/409/500/timeout/resposta incompleta/clique duplo/readback divergente/retry; viewports 360/390/768 claro/escuro; comparação canônica e visível Empresa–Logística–Frota–Motoboy com endereço sintético e coordenadas `null`; cleanup tenant-scoped se usar fixture. Revalidar distribuição e pendências de 0289 sem apagá-las. 0258 continua bloqueada por autorização; ORS aguarda credencial externa. **Não iniciar 0291 automaticamente.** Ver [REGISTRO 0290](REGISTROS/0290.md).
+
+---
+
 ## Atualização vigente — 0289
 
 0289 terminou **PARTIAL**. RM-AUD22-21 foi corrigido e validado no Browser autenticado 360/390/768 claro/escuro. RM-AUD22-22 comprovou os dois botões, ACK/readback e ausência de atribuição de Order já distribuído; regressão em memória após pull e elegibilidade de Orders foram corrigidas. `npm test` Restaurante passou; fixture `rotamoto_e2e` completou rollback sem resíduos. Permanecem por testar erro HTTP/sem permissão, clique duplo, concorrência simultânea, replay e apresentação no Motoboy. Não iniciar automaticamente a campanha seguinte. Preservar todos os demais IDs/aliases e as pendências de persistência/localização. Ver [REGISTRO 0289](REGISTROS/0289.md).

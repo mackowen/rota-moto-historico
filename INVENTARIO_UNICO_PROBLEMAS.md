@@ -1,4 +1,18 @@
-## Revisão vigente — Campanha 0289 (2026-10-22)
+## Revisão vigente — Campanha 0290 (2026-10-22)
+
+**PARTIAL.** Corrigida a gravação de timezone Company com revisão esperada e ACK/readback canônico; testes direcionados e `npm test` Restaurante passaram. Inventário estático inicial criado. PostgreSQL E2E confirmou PUT/ACK/readback, stale 409 e sync/pull, com rollback e resíduos zero. Sem Browser autenticado, nova sessão/reload, negativos, telas, screenshots ou validação de localização Motoboy nesta execução. Não reclassificar como PASS: RM-AUD19-02/03/10 e aliases permanecem PARTIAL. As demais 19+3 ocorrências preservam IDs, aliases, descrições e estados anteriores; pendências de distribuição 0289 também preservadas. Nenhuma escrita DB/fixture. Detalhes em [REGISTRO 0290](REGISTROS/0290.md).
+
+### Atualização dos três itens
+
+| ID | Estado após 0290 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-02 | PARTIAL | Fuso horário Company corrigido com revisão + ACK/readback; demais formulários e Browser autenticado permanecem sem confirmação. |
+| RM-AUD19-03 | PARTIAL | Regra anterior para endereço/coordenadas canônicos preservada; nenhuma nova prova UI/sync entre Empresa, Logística, Frota e Motoboy. |
+| RM-AUD19-10 | PARTIAL | Autosave local serializado/readback e feedback/retry presentes; reload, nova sessão e falhas Browser não reexecutados. |
+
+---
+
+## Revisão histórica — Campanha 0289 (2026-10-22)
 
 **PARTIAL.** RM-AUD22-21 passou no escopo visual Browser autenticado; RM-AUD22-22 passou nos dois caminhos funcionais com ACK/readback, estado sem elegíveis e proteção contra reatribuir Orders já atribuídos. Foram corrigidas reconciliação em memória do Delivery canônico e filtragem de elegibilidade; ver [REGISTRO 0289](REGISTROS/0289.md). Permanecem por testar falhas HTTP/sem permissão, clique duplo, concorrência simultânea, replay e visualização no Motoboy. Fixture `a6619894-ff01-471f-9cb8-51d076800937` COMPLETED, `databaseCommitted=false`, zero resíduos tenant-scoped. RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME e problemas globais de persistência/localização preservados; nenhum estado global encerrado.
 

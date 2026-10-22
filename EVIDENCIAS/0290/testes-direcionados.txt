@@ -1,0 +1,16 @@
+Campanha 0290 — testes direcionados executados no Restaurante
+
+PASS node --check app.js
+PASS node --check backend/admin/http.js
+PASS node --check backend/admin/repository.js
+PASS node tests/test-company-timezone.js
+PASS node tests/test-company-settings.js
+PASS node tests/test-company-settings-persistence.js
+PASS NODE_ENV=test DATABASE_URL=postgresql://rotamoto_app@127.0.0.1:5432/rotamoto_e2e MIGRATOR_DATABASE_URL=postgresql://rotamoto_migrator@127.0.0.1:5432/rotamoto_e2e node tests/test-domain-sync-postgres.js — timezone PUT/ACK/readback, stale 409, sync/pull; rollback COMPLETED, residues zero
+PASS node tests/test-visual-shell-cache.js
+PASS node tests/test-dispatch-assignment.js (expectativa de versão do cache atualizada)
+PASS git diff --check
+PASS npm test Restaurante (suite integral, exit 0 após atualizar expectativa de cache v81)
+PASS npm test Motoboy (suite integral, exit 0; somente contrato compartilhado sincronizado)
+
+Não executados nesta campanha: Browser E2E autenticado, Motoboy npm test (sem alteração), testes visuais 360/390/768 × claro/escuro, matriz negativa/timeout, fluxos de reload/nova aba/nova sessão e comparação renderizada Empresa/Logística/Frota/Motoboy. Fixture PostgreSQL `domain-sync-company-location-0279`: `databaseCommitted=false`; cleanup COMPLETED; resíduos zero. Nenhuma escrita em banco oficial foi feita.

@@ -1,3 +1,9 @@
+## Atualização vigente — campanha 0290 — salvamento e persistência de configurações
+
+**PARTIAL.** A escrita de timezone da Company agora é revisionada e requer ACK + GET/readback; conflito/falha preserva rascunho. Cobertura de unidade/client e `npm test` Restaurante passaram. Inventário estático inicial em [matriz 0290](EVIDENCIAS/0290/matriz-configuracoes.md). Browser autenticado, navegação/reload/nova sessão, erros de rede/HTTP, retry real, matriz visual e consistência Empresa–Logística–Frota–Motoboy não foram executados. Manter RM-AUD19-02/03/10 PARTIAL, aliases e pendências 0289. Nenhum Motoboy alterado. Não iniciar 0291. Ver [REGISTRO 0290](REGISTROS/0290.md).
+
+---
+
 ## Atualização vigente — campanha 0289 — distribuição de corridas e modal Motoboys
 
 **PARTIAL.** RM-AUD22-21: correção e validação visual autenticada do modal Restaurante em seis combinações viewport/tema, sem overflow. RM-AUD22-22: ambos os botões enviaram atribuições canônicas distintas e apresentaram toast após ACK/readback; entrega já atribuída não aparece como elegível e o estado sem Driver/Order elegíveis é explicado. Corrigidos estado `syncState` após pull canônico, filtro `CREATED`/`REDELIVERY` sem Driver e leitura autorizada do roster. `npm test` Restaurante passou; fixture concluída com rollback e resíduos zero. Permanecem falhas HTTP/sem permissão, clique duplo e concorrência simultânea, replay/idempotência adicional e confirmação da visão Motoboy. Não encerrar RM-AUD19 ou problemas globais. Classificação cumulativa em [inventário](INVENTARIO_UNICO_PROBLEMAS.md); ver [REGISTRO 0289](REGISTROS/0289.md). Não iniciar automaticamente a próxima campanha.
