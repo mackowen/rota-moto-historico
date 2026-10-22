@@ -1,3 +1,9 @@
+## Atualização vigente — campanha 0287 — Motoboy IndexedDB/sync
+
+0287 terminou **PARTIAL**. Snapshot Company de revisão 1→2 foi sincronizado, persistido e renderizado; abort IndexedDB manteve o estado válido e retry/reload recuperou a revisão nova. Endereço sem coordenadas permaneceu válido; snapshots de tenant/revisão/payload inválidos não sobrescreveram os dados. Browser autenticado passou seis combinações viewport/tema; `npm test` Motoboy passou; cleanup fixture foi COMPLETED sem resíduos. Permanecem no backlog segunda sessão independente, outros tipos de falha IndexedDB/pull, snapshot duplicado e isolamento cross-tenant backend explícito. Cenários Restaurante de timeout persistente, ACK/readback divergente, concorrência simultânea e isolamento adicional continuam pendentes. Nenhum estado global encerrado. Ver [REGISTRO 0287](REGISTROS/0287.md).
+
+---
+
 ## Atualização vigente — campanha 0286
 
 **PARTIAL.** Correção comprovada no salvamento local de Empresa Restaurante: serialização impede escrita de sincronização concorrente de invalidar o readback local e abortar o PUT canônico. Browser autenticado comprovou reconciliação de ACK perdido após reload e clique duplo sem duplicação canônica. Permanecem pendentes a matriz completa de falhas persistentes, IndexedDB/sync Motoboy, concorrência simultânea, isolamento adicional e validação visual. Preservar pendências e aliases cumulativos; não fechar RM-AUD19 ou RM-D1 globalmente com este escopo parcial. Ver [REGISTRO 0286](REGISTROS/0286.md).

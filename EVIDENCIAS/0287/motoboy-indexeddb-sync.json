@@ -1,0 +1,63 @@
+{
+  "campaign": "0287",
+  "result": "PARTIAL",
+  "application": "Motoboy",
+  "authentication": {
+    "method": "backend-issued synthetic E2E session with verified MFA",
+    "identitySessionHttpStatus": 200,
+    "mfaVerified": true,
+    "tenantId": "01a16174-de2e-7b11-82c3-f1ac1348fb1c",
+    "driverId": "01a16175-51bf-7ce0-8161-7927ce0a964b"
+  },
+  "company": {
+    "revisionBefore": 1,
+    "addressBefore": "Rua 0287 Snapshot Inicial, São Paulo - SP",
+    "revisionAfter": 2,
+    "addressAfter": "Rua 0287 Snapshot Atualizado, São Paulo - SP",
+    "latitude": null,
+    "longitude": null,
+    "uiAfterReload": true,
+    "readOnlyConsumer": true
+  },
+  "indexedDb": {
+    "controlledTransactionAbort": "QuotaExceededError",
+    "previousSnapshotPreserved": true,
+    "syncStateAfterAbort": "error",
+    "falseSuccess": false,
+    "retryAndReloadRecoveredRevision": 2,
+    "foreignStaleAndInvalidSnapshotsReplacedValidData": false
+  },
+  "visual": [
+    { "width": 360, "theme": "light", "addressVisible": true, "horizontalOverflow": false },
+    { "width": 360, "theme": "dark", "addressVisible": true, "horizontalOverflow": false },
+    { "width": 390, "theme": "light", "addressVisible": true, "horizontalOverflow": false },
+    { "width": 390, "theme": "dark", "addressVisible": true, "horizontalOverflow": false },
+    { "width": 768, "theme": "light", "addressVisible": true, "horizontalOverflow": false },
+    { "width": 768, "theme": "dark", "addressVisible": true, "horizontalOverflow": false }
+  ],
+  "tests": { "npmTestMotoboy": "PASS", "browserCdpAuthenticated": "PASS" },
+  "fixture": {
+    "runId": "37575245-2242-44f4-bbae-e014d87dd014",
+    "database": "rotamoto_e2e",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantResidualCounts": {
+      "companies": 0,
+      "users": 0,
+      "auth_records": 0,
+      "memberships": 0,
+      "sessions": 0,
+      "domain_records": 0,
+      "sync_inbox": 0,
+      "sync_outbox": 0,
+      "audit_log": 0
+    }
+  },
+  "notProven": [
+    "independent second Browser session",
+    "unavailable or independently rejected IndexedDB writes",
+    "sync pull HTTP/timeout/incomplete response and duplicate snapshot",
+    "explicit backend cross-tenant request",
+    "Android physical validation"
+  ]
+}

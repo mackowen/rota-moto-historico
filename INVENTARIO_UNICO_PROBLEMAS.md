@@ -1,3 +1,9 @@
+## Revisão vigente — Campanha 0287 (2026-10-22)
+
+**PARTIAL.** No Motoboy, Browser autenticado comprovou sync Company, persistência IndexedDB e renderização do endereço sem coordenadas; falha transacional preservou snapshot anterior e retry/reload recuperou revisão 2. Snapshots foreign/stale/inválido foram rejeitados sem substituir estado válido. Matriz Browser Ajustes 360/390/768 claro/escuro e `npm test` Motoboy passaram. Fixture com rollback COMPLETED, `databaseCommitted=false`, resíduos zero. Não encerrar RM-AUD19-03/10 ou RM-D1-LOCATION-CONSISTENCY; demais IDs e aliases preservados. Segunda sessão, falhas de sync adicionais e cross-tenant backend explícito seguem pendentes; 0258 BLOCKED_AUTHORIZATION, ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0287](REGISTROS/0287.md).
+
+---
+
 ## Revisão vigente — Campanha 0286 (2026-10-22)
 
 **PARTIAL.** Corrida IndexedDB corrigida no Restaurante: gravação local e readback de `settings` serializados contra `updateSyncStatus`; regressão aprovada. Browser autenticado comprovou PUT Company com ACK perdido, readback após reload, revisão consistente e retry sem duplicar. Falhas IndexedDB/sync Motoboy, matriz negativa completa, concorrência simultânea/cross-tenant adicional e matriz visual não foram executadas. Nenhum problema cumulativo global encerrado. Preservar integralmente RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME, IDs e aliases; RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem PARTIAL. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0286](REGISTROS/0286.md).

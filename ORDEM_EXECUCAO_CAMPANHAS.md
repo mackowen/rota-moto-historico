@@ -1,3 +1,9 @@
+## Atualização vigente — 0287
+
+0287 terminou **PARTIAL**, focada no Motoboy: sessão sintética autenticada, pull Company, abort/recovery IndexedDB, endereço sem coordenadas, rejeição de snapshots inválidos/obsoletos/estrangeiros e matriz visual 360/390/768 claro/escuro passaram no escopo descrito. `npm test` Motoboy passou; fixture `rotamoto_e2e` rollback concluído e resíduos zero. Permanecem pendentes segunda sessão Browser, falhas de sync/IndexedDB adicionais, duplicação e verificação cross-tenant backend explícita. No Restaurante permanecem timeout persistente, ACK/readback divergente, concorrência simultânea e isolamento adicional. Nenhum problema cumulativo foi encerrado. Ver [REGISTROS/0287.md](REGISTROS/0287.md). Próxima campanha não iniciada.
+
+---
+
 ## Atualização vigente — 0286
 
 0286 terminou **PARTIAL**. Reproduzida e corrigida corrida entre a gravação/readback local de settings e atualização de estado de sincronização, que abortava salvamento antes do PUT. Browser/CDP autenticado (fixture backend-issued, MFA verificada) comprovou PUT confirmado com ACK perdido, reload completo, readback canônico e reconciliação na revisão 1; retry não repetiu PUT. Clique duplo resultou em 1 PUT/revisão 1→2. Coordenadas permaneceram `null`. Regressões específicas passaram e cleanup fixture foi COMPLETED com `databaseCommitted=false` e zero resíduos. Falhas restantes, IndexedDB/Motoboy, concorrência simultânea, cross-tenant adicional e matriz visual seguem pendentes. Ver [REGISTRO 0286](REGISTROS/0286.md). A próxima campanha não foi iniciada.
@@ -40,7 +46,7 @@
 
 # Ordem de execução das campanhas RotaMoto
 
-**Revisão:** 2026-10-22 · Última execução: 0284 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
+**Revisão:** 2026-10-22 · Última execução: 0287 PARTIAL · Fonte de rastreio: [Inventário único](INVENTARIO_UNICO_PROBLEMAS.md). Ordem documental; não autoriza alterações operacionais.
 
 ## Atualização da ordem — campanha 0278
 
