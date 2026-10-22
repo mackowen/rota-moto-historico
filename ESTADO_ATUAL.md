@@ -1,4 +1,10 @@
-# Estado vigente — Campanha 0293 (2026-10-22)
+# Estado vigente — Campanha 0294 (2026-10-22)
+
+**PARTIAL; PASS_SCOPE**: Browser E2E/MFA confirmou autosave local + reload para Operação (perKm, taxa mínima, arredondamento), dez atalhos de Navegação, nome local de origem e preferências locais de Segurança; perfil sintético orders.read criado/readback na UI. Integrações listadas sem conectar; backup indisponível (GET 404) e sem escrita. RM-AUD19-02/10 PARTIAL global; RM-AUD19-18 PARTIAL com evidência limitada de perfil; RM-AUD19-03 cross-app pendente. npm test Restaurante passou. Fixtures rotamoto_e2e completaram rollback, databaseCommitted=false, resíduos zero. Motoboy não alterado. Ver REGISTRO 0294, matriz consolidada EVIDENCIAS/0294. Não iniciar 0295.
+
+---
+
+# Estado histórico — Campanha 0293 (2026-10-22)
 
 **PARTIAL.** Tema Claro/Escuro/Automático, cor e idioma do Restaurante persistiram por navegação/reload; tema confirmado em nova aba autenticada. Correção de `updateSetting` impede render tardio que apagava confirmação de “Salvar aparência”. Relatórios, Eventos, um atalho, Impressão e origem sintética também passaram navegação/reload. Segurança administrativa bloqueada por card/permissão; Integrações, Backup, Equipe e campos restantes sem teste. `npm test` Restaurante passou. Fixture `12e967fd-8984-4131-922b-eb864f169f83`: rollback completo e resíduos zero. RM-AUD19-01 PASS_SCOPE Restaurante apenas; RM-AUD19-02/10 PARTIAL global; RM-AUD19-03 pendências cross-app; RM-AUD19-13 PASS_SCOPE limitado para toast Aparência acima da barra em 360/390/768 claro/escuro, permanecendo PARTIAL global. SHA remoto 0292 verificado: `07e387a1574b4057b1c6a12378c750ae6af326ec`. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0293](REGISTROS/0293.md). Não iniciar 0294.
 

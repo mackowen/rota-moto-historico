@@ -1,0 +1,76 @@
+{
+  "browser": "Chromium/CDP no ambiente E2E com sessão emitida pelo backend e MFA verificada",
+  "principalPermissions": ["company.manage", "integrations.manage", "members.invite", "members.read", "orders.manage", "orders.read", "sync.pull", "sync.push"],
+  "fixture": {
+    "id": "cde30ba2-533c-4ea5-9613-942a0188bbd0",
+    "database": "rotamoto_e2e",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantResiduals": 0
+  },
+  "results": {
+    "companyIntegrations": {
+      "state": "PASS_SCOPE_READ_ONLY",
+      "request": "GET /api/admin/integrations",
+      "providers": ["iFood", "99Food", "Keeta"],
+      "connection": "none confirmed; no authorization, marketplace calls or external credentials used",
+      "editableConfigurationFields": 0
+    },
+    "team": {
+      "state": "PASS_SCOPE",
+      "operation": "created synthetic role through UI, permission set limited to orders.read",
+      "request": "POST /api/admin/roles followed by canonical roles GET/readback",
+      "reload": "not exercised for role create",
+      "owner": "system protected; no owner or real user changed"
+    },
+    "backup": {
+      "state": "BLOCKED_BY_CAPABILITY",
+      "request": "GET /api/admin/backup returned 404 in E2E",
+      "ui": "service unavailable message; no config form rendered",
+      "writes": "none"
+    },
+    "securityLocal": {
+      "state": "PASS_SCOPE",
+      "mechanism": "local IndexedDB autosave",
+      "changes": {"logRetentionDays": {"before": 365, "after": 37}, "history.enabled": {"before": true, "after": false}},
+      "reloadReadback": true,
+      "navigationReadback": false,
+      "serverAuditPolicy": "not modified; UI states server critical events cannot be disabled"
+    },
+    "operation": {
+      "state": "PASS_SCOPE",
+      "mechanism": "local IndexedDB autosave",
+      "changes": {"delivery.perKm": {"before": 0, "after": 0.5}, "delivery.minFee": {"before": 0, "after": 1.25}, "delivery.round": {"before": false, "after": true}},
+      "reloadReadback": true,
+      "navigationReadback": false
+    },
+    "navigation": {
+      "state": "PASS_SCOPE",
+      "mechanism": "local IndexedDB autosave",
+      "fields": ["dashboard", "orders", "bikes", "routes", "reports", "events", "settings", "admin", "integrationLab", "help"],
+      "reloadReadback": true,
+      "navigationReadback": false
+    },
+    "orderSources": {
+      "state": "PASS_SCOPE",
+      "mechanism": "local IndexedDB autosave",
+      "field": "iFood local display name changed to synthetic value iFood 0294",
+      "reloadReadback": true,
+      "navigationReadback": false,
+      "externalConnection": "not attempted"
+    }
+  },
+  "visual": {
+    "section": "Segurança e auditoria (preferências locais)",
+    "viewports": [360, 390, 768],
+    "themes": ["light", "dark"],
+    "horizontalOverflow": false,
+    "screenshots": ["0294-security-360-light.png", "0294-security-360-dark.png", "0294-security-390-light.png", "0294-security-390-dark.png", "0294-security-768-light.png", "0294-security-768-dark.png"]
+  },
+  "network": {
+    "adminReadRequestsObserved": ["GET /api/admin/company", "GET /api/admin/memberships", "GET /api/admin/roles", "GET /api/admin/permissions", "GET /api/admin/integrations", "GET /api/admin/mfa-recovery", "GET /api/admin/backup"],
+    "externalMarketplaceRequests": 0,
+    "secretValuesCaptured": false
+  },
+  "limitations": ["No edit/reassignment of a real or synthetic membership was attempted; owner remains protected.", "No backup write/config test because the E2E service exposed no authorized endpoint to this principal.", "The last navigation/reload runner attempt encountered a page lifecycle error after reloading Team; prior successful reload evidence remains valid for local preferences, but navigation-away-and-return is not claimed for the 0294 fields.", "Negative HTTP matrix, timeout, lost ACK, concurrent writes and independent session were not run in this campaign."]
+}

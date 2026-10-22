@@ -1,4 +1,10 @@
-## Estado vigente — execução 0293
+## Estado vigente — execução 0294
+
+0294 PARTIAL. Integrações, Equipe/perfil sintético, Segurança local, Operação, Navegação e Origens exercitados conforme matriz; Backup BLOCKED_BY_CAPABILITY por GET 404. Nenhum defeito de persistência foi reproduzido nos campos locais testados; sem alteração de fonte de app. npm test Restaurante passou; E2E somente em rotamoto_e2e, rollback completo, databaseCommitted=false, resíduos zero. Campos não testados, negativos e novas sessões permanecem PARTIAL. RM-AUD19-02/10 e RM-AUD19-18 não fechados globalmente; demais ocorrências e pendências 0289 preservadas. Ver REGISTRO 0294. Não iniciar campanha 0295.
+
+---
+
+## Estado histórico — execução 0293
 
 0293 **PARTIAL**. Tema local Restaurante, subset de Aparência, Relatórios, Eventos, Navegação, Impressão e Origens passaram UI/reload; corrigido feedback de Salvar aparência perdido por render. RM-AUD19-01 PASS_SCOPE local; RM-AUD19-02/10 PARTIAL global; 03 cross-app pendente; 13 PASS_SCOPE limitado para toast Aparência acima da barra em 360/390/768 claro/escuro, sem fechar globalmente. Segurança por permissão/card indisponível; Integrações, Backup, Equipe e outras configurações pendentes. Ver [REGISTROS/0293](REGISTROS/0293.md). 0294 não iniciada.
 

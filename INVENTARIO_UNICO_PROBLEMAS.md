@@ -1,4 +1,18 @@
-## Revisão vigente — Campanha 0293 (2026-10-22)
+## Revisão vigente — Campanha 0294 (2026-10-22)
+
+**PARTIAL.** Testes funcionais Browser limitados por campo estão na matriz 0294. Nenhum PASS_GLOBAL atribuído. Backup BLOCKED_BY_CAPABILITY (404 no E2E); integração externa não acionada; permissões do owner respeitadas.
+
+| ID | Estado após 0294 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-01 | PASS_SCOPE local; sem PASS_GLOBAL | Tema Restaurante comprovado em 0293; Motoboy/cross-app/Android continuam pendentes. |
+| RM-AUD19-02 | PARTIAL | Autosave de campos selecionados confirmado; backup bloqueado e demais campos/erros/retry/navegação não completos. |
+| RM-AUD19-10 | PARTIAL | Reload confirmado por campo para subset; navegação-away-and-return, nova sessão e negativos permanecem pendentes. |
+| RM-AUD19-13 | PARTIAL; PASS_SCOPE limitado | Capturas Segurança local 360/390/768 claro/escuro sem overflow; toast em outras páginas/safe areas físicas sem teste. |
+| RM-AUD19-18 | PARTIAL / BLOCKED_BY_CAPABILITY | Perfil sintético orders.read criado/readback pela UI; membership/usuário/owner não testados nesta campanha; owner oficial protegido. |
+
+---
+
+## Revisão histórica — Campanha 0293 (2026-10-22)
 
 **PARTIAL.** Tema, aparência, Relatórios, Eventos, subset de Navegação/Impressão/Origens tiveram UI e persistência local após reload. Corrigida confirmação “Salvar aparência” apagada por render assíncrono. RM-AUD19-01 recebeu PASS_SCOPE apenas para preferência local do Restaurante; sem PASS_GLOBAL cross-app. RM-AUD19-02/10 PARTIAL. Para RM-AUD19-13, toast de Aparência ficou visível acima da navegação inferior em 360/390/768 claro/escuro; demais páginas/estados não testados e estado global preservado. Segurança indisponível ao principal; Integrações, Backup, Equipe e outros campos pendentes. 0292 publicada e SHA `07e387a1574b4057b1c6a12378c750ae6af326ec` verificado. Ver [0293](REGISTROS/0293.md) e [matriz](EVIDENCIAS/0293/matriz-funcional.md).
 
