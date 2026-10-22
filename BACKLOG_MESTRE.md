@@ -301,3 +301,8 @@ Browser/CDP autenticado comprovou edição de nome/telefone pela UI, API Company
 ## Atualização da campanha 0281 — histórico e localização
 
 **PARTIAL.** O commit 0280 estava somente na branch de campanha; fast-forward não destrutivo levou `main` a `ff35fa3f96c42b8c06f8206c013185fb3469108a`, cuja leitura remota confirmou registro e evidências. PUT ausente era falha no helper CDP sem `clickCount`; com o clique efetivo, endereço teve ACK/readback, coordenadas mantidas desconhecidas até confirmação manual, e sync + IndexedDB Motoboy confirmados após reload. Sem mudança em código de produção. Restam tela renderizada Motoboy, matriz Browser visual e falhas/concorrência/tenant. `npm test` dos dois apps passou. Não resolver itens globais com subset. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0281.md.
+
+
+## Campanha 0292 — continuidade de configurações
+
+RM-AUD19-02/03/10 permanecem PARTIAL globalmente. Browser comprovou Empresa (nome, telefone, fuso, endereço), ACK/readback e persistência após navegação/reload/aba; corrigidos feedback pós-render e coordenadas null em Logística. Outras categorias editáveis e UI Motoboy aguardam prova funcional por campo. Pendências de distribuição 0289 preservadas. Não iniciar 0293 automaticamente. [Registro 0292](REGISTROS/0292.md).

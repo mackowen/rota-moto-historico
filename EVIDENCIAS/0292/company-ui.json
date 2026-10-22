@@ -1,0 +1,357 @@
+{
+  "campaign": "0292",
+  "status": "PASS_SCOPE",
+  "fixture": {
+    "id": "c4491d51-9e10-46fe-8d01-9d3e10ee712c",
+    "database": "rotamoto_e2e",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "residualCounts": [
+      {
+        "tenantId": "01a163e9-e97f-7884-93eb-2ccafc9047d2",
+        "counts": {
+          "companies": 0,
+          "users": 0,
+          "auth_records": 0,
+          "memberships": 0,
+          "sessions": 0,
+          "domain_records": 0,
+          "sync_inbox": 0,
+          "sync_outbox": 0,
+          "audit_log": 0
+        }
+      }
+    ]
+  },
+  "fields": {
+    "namePhone": {
+      "uiSave": true,
+      "feedback": {
+        "status": "Nome e contato confirmados pelo servidor · revisão 1. O Motoboy receberá a atualização ao sincronizar.",
+        "toast": "ConcluídoNome e contato da empresa confirmados · revisão 1."
+      },
+      "canonicalVersion": 1,
+      "request": [
+        {
+          "method": "PUT",
+          "path": "/api/admin/company/profile",
+          "status": 200
+        }
+      ],
+      "readback": true,
+      "doubleClickOneWrite": true,
+      "failureRetry": {
+        "injected503": true,
+        "draftPreserved": true,
+        "falseSuccess": false,
+        "retryReadback": true,
+        "canonicalVersion": 2
+      }
+    },
+    "timeZone": {
+      "uiSave": true,
+      "value": "America/Fortaleza",
+      "canonicalVersion": 3,
+      "feedback": {
+        "status": "Fuso horário confirmado pelo servidor · revisão 3.",
+        "toast": "ConcluídoFuso horário da empresa confirmado pelo servidor."
+      },
+      "request": [
+        {
+          "method": "PUT",
+          "path": "/api/admin/company",
+          "status": 200
+        }
+      ],
+      "readback": true
+    },
+    "address": {
+      "uiSave": true,
+      "feedback": "ConcluídoConfigurações atualizadas. Endereço confirmado pelo servidor. Coordenadas não foram inferidas; ajuste o pino e confirme a localização no mapa.",
+      "canonicalAddress": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+      "locationRevision": 1,
+      "coordinatesPreservedNull": true,
+      "readback": true,
+      "request": [
+        {
+          "method": "PUT",
+          "path": "/api/admin/company/location",
+          "status": 200
+        }
+      ]
+    }
+  },
+  "navigationReadback": {
+    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "phone": "11987659992",
+    "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+    "timeZone": "America/Fortaleza"
+  },
+  "reloadReadback": {
+    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "phone": "11987659992",
+    "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+    "timeZone": "America/Fortaleza"
+  },
+  "independentTabReadback": {
+    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "phone": "11987659992",
+    "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+    "timeZone": "America/Fortaleza"
+  },
+  "companyFinal": {
+    "id": "01a163e9-e97f-7884-93eb-2ccafc9047d2",
+    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "status": "active",
+    "timeZone": "America/Fortaleza",
+    "supportPhone": "11987659992",
+    "operationalLocation": {
+      "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+      "latitude": null,
+      "longitude": null,
+      "provenance": null,
+      "version": 1
+    },
+    "operationalLocationVersion": 1,
+    "settingsVersion": 4,
+    "routeGroupingPolicy": "nearest_extension",
+    "createdAt": "2026-10-22T14:00:36.203Z",
+    "updatedAt": "2026-10-22T14:00:36.203Z",
+    "requestId": "e44217ca-ecb1-46a5-97c5-ece9c4f412fe"
+  },
+  "http": [
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/installations/restaurante",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/push",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/company/profile",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/company/profile",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/admin/company/location",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/installations/restaurante",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/push",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/installations/restaurante",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/logistics/internal-provider",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/logistics/route-settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/logistics/intelligence/analytics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/logistics/providers",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/push",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/pull",
+      "status": 200
+    }
+  ],
+  "visual": [
+    {
+      "width": 360,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "overflow": false
+    }
+  ],
+  "jsErrors": []
+}

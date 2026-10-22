@@ -1,3 +1,13 @@
+## Revisão vigente — Campanha 0292 (2026-10-22)
+
+**PARTIAL; PASS_SCOPE restrito a nome, telefone, fuso e endereço Company exercitados no Browser autenticado.** PUT/ACK/readback, navegação/reload/aba independente confirmados; retry após 503 preservou rascunho; endereço sem coordenadas renderiza em Logística. Outros formulários, Motoboy e negativos não executados mantêm pendência. Fixture E2E `c4491d51-9e10-46fe-8d01-9d3e10ee712c`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. Ver [REGISTRO 0292](REGISTROS/0292.md) e [matriz](EVIDENCIAS/0292/matriz-funcional.md).
+
+| ID | Estado após 0292 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-02 | PARTIAL | Campos Company testados e confirmados; outros formulários sem prova Browser. |
+| RM-AUD19-03 | PARTIAL | Endereço UI, ACK/readback e projeção Logística com coordenadas null; coordenadas válidas, Frota/Motoboy e sync pendentes. |
+| RM-AUD19-10 | PARTIAL | Campos Company persistiram após navegação, reload e aba; demais autosaves/seções sem teste. |
+
 ## Revisão vigente — Campanha 0291 (2026-10-22)
 
 **PARTIAL.** Browser autenticado em `rotamoto_e2e` comprovou localização Company, Route e perfil econômico/Frota no subset exercitado: ACK + GET/readback, reload, rascunho preservado em falha 503 e retry; 360/390/768 claro/escuro sem overflow. Nenhum defeito de produto foi reproduzido nesses caminhos. As seções gerais de Ajustes, nova sessão, Motoboy e cenários negativos restantes não foram executados; não declarar PASS_GLOBAL. A fixture `7b51c964-7517-40fa-900c-22175dffaa3a` terminou `databaseCommitted=false`, cleanup `COMPLETED`, resíduos zero. Pendências 0289 preservadas. Ver [REGISTRO 0291](REGISTROS/0291.md) e [matriz funcional](EVIDENCIAS/0291/matriz-funcional.md).

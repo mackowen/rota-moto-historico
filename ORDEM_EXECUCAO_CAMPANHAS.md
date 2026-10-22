@@ -195,3 +195,8 @@ D6 comprovou e corrigiu a causa de agrupamento de rotas: a leitura canônica de 
 ## Execução 0285 — autenticação E2E e recuperação Browser
 
 **PARTIAL.** Sessão HttpOnly emitida pelo backend E2E autenticou Chromium, MFA verificada, reload manteve sessão. Foi reproduzida e corrigida a perda de endereço quando reload ocorre com PUT pendente; DOM/IndexedDB preservaram o rascunho e backend permaneceu no endereço anterior sem ACK/falso sucesso. Regressões, `npm test` Restaurante e testes CDP passaram; cleanup `rotamoto_e2e` COMPLETED, databaseCommitted=false, resíduos zero. O 401 de 0284 e o caminho UI login/MFA não foram diagnosticados de forma conclusiva. Cenários de falhas persistentes, IndexedDB, concorrência, isolamento, visual integral autenticado e Motoboy seguem pendentes. Manter RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE, RM-D1-LOCATION-CONSISTENCY e RM-D1-AUTH-RESUME PARTIAL; manter 0258 BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL. Próxima campanha não iniciada. Ver [REGISTRO 0285](REGISTROS/0285.md).
+
+
+## Execução 0292
+
+0292 **PARTIAL**. Corrigidos defeitos funcionais de feedback Company e projeção Logística com coordenadas null. Nome, telefone, fuso e endereço salvaram por UI com confirmação canônica; navegação/reload/aba, retry 503, valor inválido e clique duplo validados. `npm test` Restaurante passou; fixture rollback e resíduos zero. Formulários restantes, Motoboy, coordenadas válidas e falhas adicionais sem comprovação. RM-AUD19-02/03/10 seguem PARTIAL; não iniciar 0293. [Registro](REGISTROS/0292.md).

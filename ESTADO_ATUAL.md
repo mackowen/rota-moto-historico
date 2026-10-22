@@ -1910,3 +1910,8 @@ Os outros 17 itens não foram declarados resolvidos: persistência por categoria
 # Estado vigente — Campanha 0281 (2026-10-21)
 
 **PARTIAL.** Corrigida a posição do histórico: 0280 foi integrada por fast-forward e lida remotamente em `main` (`ff35fa3f96c42b8c06f8206c013185fb3469108a`). O PUT ausente em 0280 era falta de clique efetivo no helper CDP; com evento correto, formulário real gravou endereço com ACK/readback, coordenadas nulas até confirmação manual, e Company chegou ao sync pull e IndexedDB Motoboy inclusive após reload. A tela renderizada de Ajustes Motoboy, screenshots e matriz visual/falhas não foram confirmadas. `npm test` dos dois apps passou. Sem alterações de produção nesta campanha; 0258 BLOCKED_AUTHORIZATION, ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0281.md](REGISTROS/0281.md) e [EVIDENCIAS/0281](EVIDENCIAS/0281/).
+
+
+## Atualização 0292 — formulários Empresa
+
+0292 **PARTIAL**, PASS_SCOPE para nome, telefone, fuso e endereço Company via Browser autenticado. Corrigidos feedback apagado por render e projeção Logística de endereço sem coordenadas. ACK/readback, navegação/reload/aba independente e retry após 503 confirmados. `npm test` Restaurante passou. Outras seções, Motoboy e falhas restantes mantêm pendência; RM-AUD19-02/03/10 sem PASS_GLOBAL. Fixture `c4491d51-9e10-46fe-8d01-9d3e10ee712c`, `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [0292](REGISTROS/0292.md). Não iniciar 0293.
