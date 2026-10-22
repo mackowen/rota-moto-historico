@@ -1,0 +1,12 @@
+{"at": "2026-10-22T22:55:08.494Z", "kind": "authenticated_session", "mfaVerified": true}
+{"at": "2026-10-22T22:55:12.582Z", "kind": "print_after_reload", "previewOpened": true, "previewTitle": "Pedido #0296-MANUAL-SYNTH"}
+{"at": "2026-10-22T22:55:17.187Z", "kind": "order_detail_layout", "sections": ["1. Cliente e contato", "2. Endereço e localização", "3. Dados comerciais", "4. Entrega e responsável", "5. Observações", "6. Histórico resumido"], "actions": ["Fechar", "Cancelar entrega", "Salvar alterações"], "overflow": false}
+{"at": "2026-10-22T22:55:17.220Z", "kind": "advanced_section_expanded", "open": true, "entryVisible": true}
+{"at": "2026-10-22T22:55:17.938Z", "kind": "detail_form_canonical_update", "sameCanonicalOrderUpdated": true, "revision": 2, "syntheticCustomerUpdated": true}
+{"at": "2026-10-22T22:42:12.089Z", "kind": "outside_button_manual_assignment", "status": "ASSIGNED", "revision": 2, "successFeedback": true, "path": "outside button"}
+{"at": "2026-10-22T22:42:12.234Z", "kind": "qr_log", "path": "/api/delivery-qr/deliveries/01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2", "status": 200}
+{"at": "2026-10-22T22:42:12.239Z", "kind": "browser_api_response", "path": "/api/delivery-qr/deliveries/01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2", "status": 200}
+{"at": "2026-10-22T22:42:12.362Z", "kind": "eligible_signed_qr_ui", "active": true, "canvasVisible": true, "canvasWidth": 260}
+{"at": "2026-10-22T22:42:13.540Z", "kind": "modal_button_manual_assignment", "status": "ASSIGNED", "revision": 2, "successFeedback": true, "path": "more races modal"}
+{"at": "2026-10-22T22:42:36.997Z", "kind": "motoboy_manual_assignment_ui", "uiVisible": true, "afterReload": null, "status": null, "raceCount": null}
+{"kind": "detail_footer_visual", "viewportThemePairs": 6, "actionsPosition": "static", "saveVisibleAfterScroll": true, "retryHiddenAfterAck": true, "documentOverflow": false}

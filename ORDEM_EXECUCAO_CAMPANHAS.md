@@ -1,4 +1,10 @@
-## Estado vigente — execução 0296
+## Estado vigente — execução 0297
+
+0297 PARTIAL, sem iniciar 0298 automaticamente. Entregues interface normal da corrida e Gestão avançada separada; device ID durável corrigido e edição Browser após reload atualizou a mesma Order/Delivery canônica. Browser autenticado comprovou preview/fluxo de impressão, QR elegível, ambos botões de distribuição, chegada Motoboy e reload, em 360/390/768 claro/escuro sem overflow no subset. `npm test` Restaurante passou após último ajuste; Motoboy não alterado. Falta injeção de IDs/caches obsoletos equivalente ao #1234, concorrência/replay/falhas 401/403/409/500/503/timeout, QR expiração/negação, workflows de Gestão avançada, Chrome Android físico e atualizar serviço servido. Fixture final `rotamoto_e2e` completa com `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. 0258 permanece BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0297](REGISTROS/0297.md), [matriz](EVIDENCIAS/0297/matriz-funcional.md), [report](EVIDENCIAS/0297/browser-report.json).
+
+---
+
+## Estado histórico — execução 0296
 
 0296 PARTIAL, não iniciar 0297 automaticamente. Order manual sintético, ACK/readback, reload e preview Browser passaram; QR inelegível explicou o motivo; cancel dialog e cartões mobile 360/390/768 claro/escuro passaram no subset. Correção de lookup canônico e checagem tenant-aware foi feita, mas #1234 original não foi reproduzido. O erro inicial `403 CSRF_INVALID` no register installation foi seguido de retry autenticado 200; acompanhar se ocorrer fora da restauração E2E. Pendências objetivas: (1) reproduzir impressão/QR do pedido #1234 com cópia equivalente; (2) confirmar impressão/QR elegível e autorização tenant; (3) exercitar falhas/retry/concorrência de “Distribuir mais corridas” e chegada no Motoboy; (4) testar modal avançado, dados de data inválida e cancelamento canônico; (5) Chrome Android físico. Fixture final COMPLETED, databaseCommitted=false, resíduos zero; `npm test` Restaurante passou. Motoboy/browser-tests sem alterações. Ver [REGISTROS/0296](REGISTROS/0296.md) e [matriz](EVIDENCIAS/0296/matriz-funcional.md).
 

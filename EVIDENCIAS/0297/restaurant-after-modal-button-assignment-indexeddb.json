@@ -1,0 +1,134 @@
+{
+  "campaign": "0297",
+  "label": "after-modal-button-assignment",
+  "counts": {
+    "bikes": 2,
+    "orders": 2,
+    "deliveries": 2,
+    "outbox": 0,
+    "syncState": 13
+  },
+  "drivers": [
+    {
+      "id": "01a165c7-47cc-7c72-b57e-a70e3f585556",
+      "canonicalId": "01a165c7-47cc-7c72-b57e-a70e3f585556",
+      "name": "Motorista E2E",
+      "status": "active",
+      "version": 1,
+      "syncState": "synced"
+    },
+    {
+      "id": "bike_mvk4lwzs_dmbm7u",
+      "canonicalId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210",
+      "name": "0135 Motoboy Editado",
+      "status": "ACTIVE",
+      "version": 3,
+      "syncState": "synced"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_mvk4lyzr_r1ybow",
+      "number": "0135-MANUAL",
+      "status": "ATRIBUIDA",
+      "deliveryStatus": "ASSIGNED",
+      "canonicalStatus": "ASSIGNED",
+      "driverId": "bike_mvk4lwzs_dmbm7u",
+      "syncState": "synced"
+    },
+    {
+      "id": "ord_mvk4lzif_4qnqnt",
+      "number": "0135-MANUAL-2",
+      "status": "ATRIBUIDA",
+      "deliveryStatus": "ASSIGNED",
+      "canonicalStatus": "ASSIGNED",
+      "driverId": "bike_mvk4lwzs_dmbm7u",
+      "syncState": "synced"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "del_2bf765c0-b184-4d28-ae28-b76f75d7043c",
+      "canonicalId": "01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "orderId": "01a165c7-6c3a-7954-b753-355dc55096cc",
+      "status": "ASSIGNED",
+      "driverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210",
+      "syncState": "synced"
+    },
+    {
+      "id": "del_63d2cc2e-911b-40e5-9765-21e462fd4425",
+      "canonicalId": "01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "orderId": "01a165c7-69de-783c-8ca7-1d69cca71a1f",
+      "status": "ASSIGNED",
+      "driverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210",
+      "syncState": "synced"
+    }
+  ],
+  "races": [],
+  "syncRecords": [
+    {
+      "id": "canonical:Delivery:01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "status": "canonical",
+      "canonicalId": "01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "canonicalVersion": 2,
+      "payloadStatus": "ASSIGNED",
+      "payloadDriverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210"
+    },
+    {
+      "id": "canonical:Delivery:01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "status": "canonical",
+      "canonicalId": "01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "canonicalVersion": 2,
+      "payloadStatus": "ASSIGNED",
+      "payloadDriverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210"
+    },
+    {
+      "id": "canonical:Order:01a165c7-69de-783c-8ca7-1d69cca71a1f",
+      "status": "canonical",
+      "canonicalId": "01a165c7-69de-783c-8ca7-1d69cca71a1f",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "canonical:Order:01a165c7-6c3a-7954-b753-355dc55096cc",
+      "status": "canonical",
+      "canonicalId": "01a165c7-6c3a-7954-b753-355dc55096cc",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Delivery:del_2bf765c0-b184-4d28-ae28-b76f75d7043c",
+      "status": "accepted",
+      "canonicalId": "01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Delivery:del_63d2cc2e-911b-40e5-9765-21e462fd4425",
+      "status": "accepted",
+      "canonicalId": "01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Order:ord_mvk4lyzr_r1ybow",
+      "status": "accepted",
+      "canonicalId": "01a165c7-69de-783c-8ca7-1d69cca71a1f",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Order:ord_mvk4lzif_4qnqnt",
+      "status": "accepted",
+      "canonicalId": "01a165c7-6c3a-7954-b753-355dc55096cc",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    }
+  ]
+}

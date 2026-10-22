@@ -1,4 +1,21 @@
-## Revisão vigente — Campanha 0296 (2026-10-22)
+## Revisão vigente — Campanha 0297 (2026-10-22)
+
+**PARTIAL; PASS_SCOPE em fluxos específicos; nenhum PASS_GLOBAL.** O novo Browser encontrou troca de `deviceId` após reload que duplicava Order canônica; identidade foi estabilizada no IndexedDB e uma edição UI passou ACK/readback mantendo Order/Delivery, revisão 1→2. Corrida simples e “Distribuir mais corridas” passaram pela UI, estado ASSIGNED e leitura visual Motoboy após reload; QR assinado elegível passou; preview e fluxo print Browser passaram. Pedidos/Company real #1234, IDs deliberadamente divergentes, conflitos/concorrência/replay, falhas HTTP, QR expiração/permissão e Chrome Android físico seguem sem prova. 0221/0295 e pendências anteriores preservadas. Ver [REGISTROS/0297](REGISTROS/0297.md) e [matriz](EVIDENCIAS/0297/matriz-funcional.md).
+
+| ID | Estado após 0297 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-02 | PARTIAL | Salvamento da edição de Order passou UI/ACK/readback; matriz global de configurações não faz parte desta campanha. |
+| RM-AUD19-10 | PARTIAL | Device ID e edição de pedido persistiram/reconciliaram; demais settings e falhas gerais não testadas. |
+| RM-AUD19-08 | PASS_SCOPE; global pendente | QR signed emitido e desenhado para Delivery ASSIGNED; expiração, sem permissão, cross-tenant e aparelho físico pendentes. |
+| RM-AUD19-13 | PARTIAL; PASS_SCOPE subset | Cartão/formulário/QR em viewport 360/390/768 claro/escuro; demais telas, safe areas físicas e serviço servido pendentes. |
+| RM-AUD22-21 | PASS_SCOPE; global limitado | Card/form novo em seis combinações visual; modal/logística completa e validação física pendentes. |
+| RM-AUD22-22 | PASS_SCOPE; PARTIAL global | Distribuir e Distribuir mais corridas; ACK/readback ASSIGNED e duas corridas no Motoboy após reload. Concorrência, replay, falhas HTTP/timeout pendentes. |
+| RM-AUD26-01 | PARTIAL | Save/edit/print/QR em Order sintética; não reproduzidos ID local/canônico divergente, snapshot Company antigo nem incidente real #1234. |
+| RM-AUD26-02 | PARTIAL; PASS_SCOPE subset | Fluxos de distribuição, tela simplificada, Gestão avançada em expand, modal cancelar e mobile passaram; erros, decisões/logística profunda e físico pendentes. |
+
+---
+
+## Revisão histórica — Campanha 0296 (2026-10-22)
 
 **PARTIAL; PASS_SCOPE no subset E2E.** Order manual sintético criado na UI recebeu ACK/readback, sobreviveu a navegação/reload e abriu prévia correta de impressão. QR em Delivery `CREATED` agora explica a elegibilidade sem emitir token; cancelamento usa modal de motivo. Cartões/filtros foram ajustados e verificados em 360/390/768 claro/escuro. Incidente real #1234 não foi acessado nem reproduzido em cópia equivalente. Nenhum PASS_GLOBAL atribuído; impressão física, QR elegível, tenant cruzado, distribuição com falhas/concorrência e interface Motoboy permanecem pendentes. Fixture final `rotamoto_e2e` COMPLETED, `databaseCommitted=false`, cleanup e resíduos zero. Ver [REGISTROS/0296](REGISTROS/0296.md) e [matriz](EVIDENCIAS/0296/matriz-funcional.md).
 
@@ -104,12 +121,12 @@ As ocorrências RM-AUD19-01..19 conservam descrições, aliases, estados e evid�
 | RM-AUD19-05 | P2 | Central de Ajuda fora do padrão; PARTIAL/RECHECK | Browser autenticado, viewport, foco e toque. |
 | RM-AUD19-06 | P1 | `}` isolado no laboratório; PASS_SCOPE limitado | Revalidar outros simuladores e Android físico. |
 | RM-AUD19-07 | P0 | Login pisca durante atualização; PARTIAL | 0288 validou login e reload; rede lenta/Android físico ainda pendentes. |
-| RM-AUD19-08 | P1 | QR vazio em comanda; PASS_SCOPE, físico pendente | Prévia/impressão confirmada pelo proprietário. |
+| RM-AUD19-08 | P1 | QR vazio em comanda; PASS_SCOPE Browser 0297, físico pendente | QR assinado elegível passou na UI; expiração, autorização negativa e Chrome Android. |
 | RM-AUD19-09 | P1 | Explicações em Origem dos pedidos; PASS_SCOPE textual | E2E visual/físico adicional conforme aceite original. |
 | RM-AUD19-10 | P0 | Configurações não persistem; PARTIAL | Matriz integral por campo, erros/retry e validação física. |
 | RM-AUD19-11 | P0 | Auditoria administrativa; BLOCKED_PERMISSION_MODEL | Modelo tenant-scoped; sem GRANT/migration oficial. |
 | RM-AUD19-12 | P0 | Sessão encerra ao voltar ao app; PARTIAL/PENDING_OWNER | Background/foreground e política real em Android. |
-| RM-AUD19-13 | P2 | Espaçamento/cards/bordas; PARTIAL | Demais páginas, safe area e percepção física. |
+| RM-AUD19-13 | P2 | Espaçamento/cards/bordas; PARTIAL | 0297 cobriu cartão/form/QR em 360/390/768 claro/escuro; demais páginas, safe area e percepção física. |
 | RM-AUD19-14 | P0 | Instruções MFA aparecem com fator ativo; PARTIAL | Browser sintético estado ativo e recovery autorizada. |
 | RM-AUD19-15 | P2 | Hierarquia modal laboratório; PARTIAL/RECHECK | Modal em larguras/temas, foco e rolagem. |
 | RM-AUD19-16 | P2 | Bordas em permissões por função; PARTIAL/RECHECK | UI e acessibilidade preservando permissões. |

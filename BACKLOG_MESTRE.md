@@ -1,4 +1,10 @@
-## Estado vigente — Campanha 0296
+## Estado vigente — Campanha 0297
+
+0297 PARTIAL. UI de Order simplificada; Gestão avançada aberta em área separada e ligada ao módulo atual. Corrigido `deviceId` que mudava após reload e causava Order canônica duplicada/Delivery conflitada: Browser editou após reload e atualizou mesmas identidades/revisões 1→2. Prévia e print Browser, QR ASSIGNED assinado, Distribuir e Distribuir mais corridas pela UI, chegada Motoboy após reload passaram. Concorrência, replay, falhas HTTP, IDs/Company antigos do incidente #1234, QR expiração/negação, workflows profundos e Android físico seguem pendentes. Nenhum PASS_GLOBAL. Ver [0297](REGISTROS/0297.md) e [matriz](EVIDENCIAS/0297/matriz-funcional.md).
+
+---
+
+## Estado histórico — Campanha 0296
 
 0296 PARTIAL. Order manual sintético criado pela UI teve ACK/readback, persistiu no reload e abriu prévia correta. QR `CREATED` mostra requisito de atribuição/sync; cancelamento usa modal; cartões e QR passaram viewport 360/390/768 claro/escuro sem overflow. Correção de matching usa aliases canônicos, comparação de Company usa sessão ativa e readback; incidente real #1234 permanece não reproduzido. Retry/feedback de disponibilidade foi corrigido mas negativo de dispatch não foi testado via Browser. E2E fixture final COMPLETED, databaseCommitted=false, resíduos zero. `npm test` Restaurante PASS. RM-AUD19-02/10 globais, 03 cross-app e RM-AUD22-22 seguem PARTIAL. RM-AUD26-01/02 novos, PARTIAL. Ver [REGISTROS/0296](REGISTROS/0296.md) e [matriz funcional](EVIDENCIAS/0296/matriz-funcional.md). Não iniciar 0297.
 

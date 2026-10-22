@@ -1,0 +1,65 @@
+{
+  "campaign": "0297",
+  "label": "campaign-0295-after-reload",
+  "counts": {
+    "races": 2,
+    "deliveryEvents": 0,
+    "outbox": 0,
+    "syncState": 8
+  },
+  "drivers": [],
+  "orders": [],
+  "deliveries": [],
+  "races": [
+    {
+      "id": "01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "deliveryId": "01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "orderNo": "0135-MANUAL",
+      "status": "open",
+      "driverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210",
+      "syncState": "synced"
+    },
+    {
+      "id": "01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "deliveryId": "01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "orderNo": "0135-MANUAL-2",
+      "status": "open",
+      "driverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210",
+      "syncState": "synced"
+    }
+  ],
+  "syncRecords": [
+    {
+      "id": "canonical:Delivery:01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "status": "canonical",
+      "canonicalId": "01a165c7-6a09-7d78-ac8d-1bc8e8de4ff2",
+      "canonicalVersion": 2,
+      "payloadStatus": "ASSIGNED",
+      "payloadDriverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210"
+    },
+    {
+      "id": "canonical:Delivery:01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "status": "canonical",
+      "canonicalId": "01a165c7-6c5c-7204-a6d5-d42972b6f18a",
+      "canonicalVersion": 2,
+      "payloadStatus": "ASSIGNED",
+      "payloadDriverId": "01a165c7-5ff5-7f83-8305-c8b8a57ee210"
+    },
+    {
+      "id": "canonical:Order:01a165c7-69de-783c-8ca7-1d69cca71a1f",
+      "status": "canonical",
+      "canonicalId": "01a165c7-69de-783c-8ca7-1d69cca71a1f",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "canonical:Order:01a165c7-6c3a-7954-b753-355dc55096cc",
+      "status": "canonical",
+      "canonicalId": "01a165c7-6c3a-7954-b753-355dc55096cc",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    }
+  ]
+}

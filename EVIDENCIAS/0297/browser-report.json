@@ -1,0 +1,98 @@
+{
+  "campaign": "0297",
+  "result": "PARTIAL; PASS_SCOPE for exercised UI and persistence flows",
+  "browserRuns": [
+    {
+      "purpose": "order detail, save/readback after reload, print preview+dispatch, mobile cards/form, cancel modal",
+      "runId": "d8764430-a57e-46d6-8a40-b53b79e16376",
+      "mfaVerified": true,
+      "status": "PASS_SCOPE",
+      "browserErrors": [],
+      "viewports": [
+        360,
+        390,
+        768
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "fixtureRunId": "973deb47-c5f2-4874-ba43-3fe7f4c59a14",
+      "detailFooter": {
+        "actionsPosition": "static",
+        "saveVisibleAfterScroll": true,
+        "retryHiddenAfterCanonicalAck": true,
+        "overlapObserved": false
+      }
+    },
+    {
+      "purpose": "Distribuir, Distribuir mais corridas, cross-app Motoboy, signed QR",
+      "runId": "e2cc362f-7809-4501-882c-c24702463d91",
+      "status": "PASS_SCOPE",
+      "assignments": 2,
+      "canonicalStatus": "ASSIGNED",
+      "canonicalRevision": 2,
+      "motoboyUI": {
+        "visible": true,
+        "afterReload": true
+      },
+      "eligibleSignedQr": {
+        "httpStatus": 200,
+        "rendered": true,
+        "tokenStoredOrLogged": false
+      },
+      "browserErrors": [],
+      "viewports": [
+        360,
+        390,
+        768
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ]
+    }
+  ],
+  "deviceIdentityRegression": {
+    "before": "reload changed the sync deviceId; editing created a second canonical Order and conflicting Delivery in the first run",
+    "after": "same stable IndexedDB deviceId across reload; original Order canonicalId kept, Order revision 1->2; linked Delivery revision 1->2; both ACK accepted"
+  },
+  "print": {
+    "listPreview": true,
+    "detailPreview": true,
+    "syntheticOrderTitle": "Pedido #0296-MANUAL-SYNTH",
+    "customerAndAddressInPreview": true,
+    "printFlowContentVerified": true,
+    "feedback": "Concluído\nComanda enviada à caixa de impressão do navegador. Confirme a impressora e as cópias.",
+    "physicalAndroid": false
+  },
+  "fixtureCleanup": [
+    {
+      "runId": "a25696bb-4381-4d6a-a74d-b9509fe38b55",
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "cleanup": "COMPLETED",
+      "residualsZero": true
+    },
+    {
+      "runId": "8035dbd9-457a-4784-910f-1bd516d5f53c",
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "cleanup": "COMPLETED",
+      "residualsZero": true
+    },
+    {
+      "runId": "973deb47-c5f2-4874-ba43-3fe7f4c59a14",
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "cleanup": "COMPLETED",
+      "residualsZero": true
+    }
+  ],
+  "limitations": [
+    "Real owner order #1234 was not accessed; deliberate local/canonical ID and stale Company snapshot injection was not completed in this campaign.",
+    "Physical Chrome Android printing and served-device update were not executed; read-only 127.0.0.1:8083 still served 0296 asset hashes before this campaign change.",
+    "Dispatch concurrency, replay and HTTP 401/403/409/500/503/timeout failure injection remain pending.",
+    "QR expiration and denied-permission cases remain pending."
+  ]
+}

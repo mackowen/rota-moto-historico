@@ -1,0 +1,60 @@
+{
+  "campaign": "0297",
+  "fixtures": [
+    {
+      "runId": "a25696bb-4381-4d6a-a74d-b9509fe38b55",
+      "environment": "rotamoto_e2e",
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "cleanup": "COMPLETED",
+      "tenantDatabaseCounts": [
+        {
+          "tenantId": "01a165ca-d83e-7388-b7f5-a435d57585ba",
+          "counts": {
+            "companies": 0,
+            "users": 0,
+            "auth_records": 0,
+            "memberships": 0,
+            "sessions": 0,
+            "domain_records": 0,
+            "sync_inbox": 0,
+            "sync_outbox": 0,
+            "audit_log": 0
+          }
+        }
+      ],
+      "residualsZero": true
+    },
+    {
+      "runId": "8035dbd9-457a-4784-910f-1bd516d5f53c",
+      "environment": "rotamoto_e2e",
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "cleanup": "COMPLETED",
+      "tenantDatabaseCounts": [
+        {
+          "tenantId": "01a165c7-0ded-78bf-8580-3c2c6145ad7b",
+          "counts": {
+            "companies": 0,
+            "users": 0,
+            "auth_records": 0,
+            "memberships": 0,
+            "sessions": 0,
+            "domain_records": 0,
+            "sync_inbox": 0,
+            "sync_outbox": 0,
+            "audit_log": 0
+          }
+        }
+      ],
+      "residualsZero": true
+    },
+    {
+      "runId": "973deb47-c5f2-4874-ba43-3fe7f4c59a14",
+      "status": "COMPLETED",
+      "databaseCommitted": false,
+      "cleanup": "COMPLETED",
+      "residualsZero": true
+    }
+  ]
+}
