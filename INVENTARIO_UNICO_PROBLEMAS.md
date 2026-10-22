@@ -1,6 +1,12 @@
+## Revisão vigente — Campanha 0286 (2026-10-22)
+
+**PARTIAL.** Corrida IndexedDB corrigida no Restaurante: gravação local e readback de `settings` serializados contra `updateSyncStatus`; regressão aprovada. Browser autenticado comprovou PUT Company com ACK perdido, readback após reload, revisão consistente e retry sem duplicar. Falhas IndexedDB/sync Motoboy, matriz negativa completa, concorrência simultânea/cross-tenant adicional e matriz visual não foram executadas. Nenhum problema cumulativo global encerrado. Preservar integralmente RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME, IDs e aliases; RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem PARTIAL. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0286](REGISTROS/0286.md).
+
+---
+
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-22 · Inventário cumulativo; campanha vigente 0285 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-22 · Inventário cumulativo; campanha vigente 0286 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
 
 ### Atualização da campanha 0285
 

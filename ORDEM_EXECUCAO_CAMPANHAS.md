@@ -1,3 +1,13 @@
+## Atualização vigente — 0286
+
+0286 terminou **PARTIAL**. Reproduzida e corrigida corrida entre a gravação/readback local de settings e atualização de estado de sincronização, que abortava salvamento antes do PUT. Browser/CDP autenticado (fixture backend-issued, MFA verificada) comprovou PUT confirmado com ACK perdido, reload completo, readback canônico e reconciliação na revisão 1; retry não repetiu PUT. Clique duplo resultou em 1 PUT/revisão 1→2. Coordenadas permaneceram `null`. Regressões específicas passaram e cleanup fixture foi COMPLETED com `databaseCommitted=false` e zero resíduos. Falhas restantes, IndexedDB/Motoboy, concorrência simultânea, cross-tenant adicional e matriz visual seguem pendentes. Ver [REGISTRO 0286](REGISTROS/0286.md). A próxima campanha não foi iniciada.
+
+## Atualização histórica da execução — 0285
+
+0285 terminou **PARTIAL**. Sessão sintética emitida pelo backend com MFA autenticada via Browser/CDP; reload durante PUT pendente preservou o rascunho e não apresentou confirmação antes do readback. A causa exata do HTTP 401 original da 0284 permaneceu não determinada. Matriz negativa, IndexedDB, concorrência e segurança Browser ficaram pendentes. Fixture revertida sem resíduos; ver [REGISTRO 0285](REGISTROS/0285.md).
+
+---
+
 ## Atualização vigente — 0284
 
 0284 terminou **PARTIAL**. O runner CDP agora tem timeout/cancelamento de avaliação, correlação de reload pelo frame principal, autenticação observável e fechamento de Chromium/perfil temporário. Regressões unitárias e smoke com Chromium real passaram. A fixture funcional retornou 401 em `/api/identity/session` antes da tela de configurações; a matriz de persistência, IndexedDB, concorrência simultânea e tenant Browser não foi executada. Fixture reconciliada com `databaseCommitted=false`, cleanup COMPLETED e resíduos tenant-scoped zero. Sem alteração de apps. Próxima execução desta pendência deve reutilizar a sessão sintética autorizada via harness, confirmar API da sessão antes de interagir e então executar somente cenários negativos restantes. Ver [REGISTRO 0284](REGISTROS/0284.md). Não iniciar 0285 automaticamente.

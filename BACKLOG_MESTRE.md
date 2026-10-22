@@ -1,3 +1,9 @@
+## Atualização vigente — campanha 0286
+
+**PARTIAL.** Correção comprovada no salvamento local de Empresa Restaurante: serialização impede escrita de sincronização concorrente de invalidar o readback local e abortar o PUT canônico. Browser autenticado comprovou reconciliação de ACK perdido após reload e clique duplo sem duplicação canônica. Permanecem pendentes a matriz completa de falhas persistentes, IndexedDB/sync Motoboy, concorrência simultânea, isolamento adicional e validação visual. Preservar pendências e aliases cumulativos; não fechar RM-AUD19 ou RM-D1 globalmente com este escopo parcial. Ver [REGISTRO 0286](REGISTROS/0286.md).
+
+---
+
 ## Atualização vigente — campanha 0285 — autenticação e rascunho pendente
 
 **PARTIAL.** Corrigida e coberta por regressão a perda do rascunho de endereço no reload durante PUT pendente (marcador local persistente e reconciliação por GET canônico); Browser autenticado comprovou rascunho DOM/IndexedDB preservado e ausência de falso sucesso. `npm test` Restaurante e lifecycle/interação CDP passaram. Sessão backend-issued foi válida (200, MFA verificada), porém login/MFA via formulário UI e causa exata do 401 registrado em 0284 continuam em aberto. Falhas persistentes, IndexedDB fault injection, concorrência, isolamento e Motoboy não foram revalidados; sem mudança de código Motoboy/runner. Não encerrar IDs cumulativos. Fixture revertida sem resíduos. Ver [REGISTRO 0285](REGISTROS/0285.md).

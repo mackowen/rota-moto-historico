@@ -1,0 +1,43 @@
+{
+  "campaign": "0286",
+  "scenario": "put-commit-drop",
+  "authentication": {
+    "sessionEndpoint": 200,
+    "mfaVerified": true,
+    "tenantScoped": true,
+    "permission": "company.manage",
+    "identitySource": "E2E backend fixture"
+  },
+  "operation": {
+    "endpoint": "PUT /api/admin/company/location",
+    "acknowledgement": "dropped after backend response",
+    "backendReadback": "new synthetic address, operationalLocationVersion=1",
+    "transportAttempts": 2,
+    "duplicateRevisionCommit": false,
+    "coordinates": null
+  },
+  "reload": {
+    "mainFrameLoadObserved": true,
+    "authenticatedStateObserved": true,
+    "draftReconciledFromCanonicalRead": true,
+    "visibleRevision": 1,
+    "manualRetryIssuedAnotherPut": false
+  },
+  "duplicateClickControl": {
+    "putRequests": 1,
+    "revisionBefore": 1,
+    "revisionAfter": 2
+  },
+  "fixture": {
+    "runId": "7ccbe576-2bf0-4129-bef0-4b3613e80300",
+    "database": "rotamoto_e2e",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantScopedResiduals": 0
+  },
+  "limitations": [
+    "Motoboy IndexedDB fault-injection and sync recovery not executed",
+    "Concurrent multi-session and cross-tenant Browser matrix not executed",
+    "Authenticated visual viewport/theme matrix not executed"
+  ]
+}
