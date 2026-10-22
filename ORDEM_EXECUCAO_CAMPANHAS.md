@@ -1,4 +1,14 @@
-## Campanha 0291 — PARTIAL (2026-10-22)
+## Estado vigente — execução 0293
+
+0293 **PARTIAL**. Tema local Restaurante, subset de Aparência, Relatórios, Eventos, Navegação, Impressão e Origens passaram UI/reload; corrigido feedback de Salvar aparência perdido por render. RM-AUD19-01 PASS_SCOPE local; RM-AUD19-02/10 PARTIAL global; 03 cross-app pendente; 13 PASS_SCOPE limitado para toast Aparência acima da barra em 360/390/768 claro/escuro, sem fechar globalmente. Segurança por permissão/card indisponível; Integrações, Backup, Equipe e outras configurações pendentes. Ver [REGISTROS/0293](REGISTROS/0293.md). 0294 não iniciada.
+
+## Histórico confirmado — execução 0292
+
+A publicação histórica 0292 está em `origin/main`, SHA `07e387a1574b4057b1c6a12378c750ae6af326ec`, validada por leitura remota de registro, evidências e documentos cumulativos. 0292 permanece PARTIAL globalmente. Ver [REGISTROS/0292](REGISTROS/0292.md).
+
+---
+
+## Campanha 0291 — histórica; PARTIAL (2026-10-22)
 
 Escopo RM-AUD19-02/03/10. Browser autenticado comprovou persistência canônica na UI de Route e perfil econômico/Frota: ACK + GET/readback, reload, falha 503 com rascunho preservado e retry; negativos 400/401/403/409; 360/390/768 claro/escuro sem overflow. Company foi escrita pelo helper API do fixture e sua projeção lida na UI, sem acionar o botão Salvar. Fixture `rotamoto_e2e` finalizou com `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. Nenhum defeito do subset UI foi reproduzido e não houve alteração de código; o resultado não fecha os problemas globais. Restam os formulários gerais/autosave e Company, timezone pela UI, nova sessão, visualização Motoboy, coordenadas `null` comparativas e negativos adicionais (500/timeout/resposta incompleta/ACK perdido/clique duplo/reload durante operação). Pendências de distribuição 0289 mantidas. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0291](REGISTROS/0291.md) e [matriz funcional](EVIDENCIAS/0291/matriz-funcional.md). Não iniciar 0292.
 

@@ -1,6 +1,18 @@
-# Estado vigente — Campanha 0291 (2026-10-22)
+# Estado vigente — Campanha 0293 (2026-10-22)
 
-**PARTIAL.** Browser/CDP autenticado comprovou no subset de Configurações de Logística e Frota: salvamento UI, ACK/readback, persistência após reload, draft preservado em falha 503 e retry; negativos 400/401/403/409 e visual 360/390/768 claro/escuro sem overflow. Company foi gravada pelo helper API do fixture (não pelo formulário), e a projeção foi lida na UI logística; isso não comprova o botão Salvar Company. Nenhum defeito nos fluxos UI testados foi reproduzido; não houve alteração de código de app. Ainda não foram percorridos os demais formulários, fuso horário pela UI, nova sessão ou readback Motoboy. RM-AUD19-02/03/10 e aliases permanecem PARTIAL, sem PASS_GLOBAL. Fixture `7b51c964-7517-40fa-900c-22175dffaa3a` em `rotamoto_e2e`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero; readiness E2E restaurada. Pendências de distribuição 0289 preservadas; 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0291](REGISTROS/0291.md) e [evidências](EVIDENCIAS/0291/). Não iniciar 0292.
+**PARTIAL.** Tema Claro/Escuro/Automático, cor e idioma do Restaurante persistiram por navegação/reload; tema confirmado em nova aba autenticada. Correção de `updateSetting` impede render tardio que apagava confirmação de “Salvar aparência”. Relatórios, Eventos, um atalho, Impressão e origem sintética também passaram navegação/reload. Segurança administrativa bloqueada por card/permissão; Integrações, Backup, Equipe e campos restantes sem teste. `npm test` Restaurante passou. Fixture `12e967fd-8984-4131-922b-eb864f169f83`: rollback completo e resíduos zero. RM-AUD19-01 PASS_SCOPE Restaurante apenas; RM-AUD19-02/10 PARTIAL global; RM-AUD19-03 pendências cross-app; RM-AUD19-13 PASS_SCOPE limitado para toast Aparência acima da barra em 360/390/768 claro/escuro, permanecendo PARTIAL global. SHA remoto 0292 verificado: `07e387a1574b4057b1c6a12378c750ae6af326ec`. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0293](REGISTROS/0293.md). Não iniciar 0294.
+
+---
+
+## Estado histórico — Campanha 0292
+
+0292 comprovou por Browser os campos Company (nome, telefone, fuso, endereço) e corrigiu feedback Company e projeção Logística com coordenadas null. Resultado parcial; demais formulários pendentes. Publicação confirmada em `origin/main`, SHA `07e387a1574b4057b1c6a12378c750ae6af326ec`. Ver [REGISTROS/0292](REGISTROS/0292.md) e [evidências](EVIDENCIAS/0292/).
+
+---
+
+# Estado histórico — Campanha 0291 (2026-10-22)
+
+**PARTIAL.** Browser/CDP autenticado comprovou no subset de Configurações de Logística e Frota: salvamento UI, ACK/readback, persistência após reload, draft preservado em falha 503 e retry; negativos 400/401/403/409 e visual 360/390/768 claro/escuro sem overflow. Company foi gravada pelo helper API do fixture (não pelo formulário), e a projeção foi lida na UI logística; isso não comprova o botão Salvar Company. Nenhum defeito nos fluxos UI testados foi reproduzido; não houve alteração de código de app. Ainda não foram percorridos os demais formulários, fuso horário pela UI, nova sessão ou readback Motoboy. RM-AUD19-02/03/10 e aliases permanecem PARTIAL, sem PASS_GLOBAL. Fixture `7b51c964-7517-40fa-900c-22175dffaa3a` em `rotamoto_e2e`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero; readiness E2E restaurada. Pendências de distribuição 0289 preservadas; 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0291](REGISTROS/0291.md) e [evidências](EVIDENCIAS/0291/). 0292 foi posteriormente executada; consultar REGISTROS/0292.md.
 
 ---
 

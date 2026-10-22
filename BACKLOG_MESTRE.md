@@ -1,4 +1,14 @@
-## Atualização vigente — campanha 0291 — salvamento e persistência de configurações
+## Estado vigente — Campanha 0293
+
+RM-AUD19-01 PASS_SCOPE para tema local do Restaurante (claro/escuro/auto, navegação/reload/aba); não global cross-app. RM-AUD19-02/10 continuam PARTIAL. Subset de aparência, relatórios, eventos, navegação, impressão e origens passou Browser/reload. RM-AUD19-13 PASS_SCOPE limitado: toast Aparência visível acima da navegação inferior em 360/390/768 claro/escuro; demais páginas/estados pendentes. Segurança por card/permissão bloqueada; Integrações, Backup, Equipe e demais campos pendentes. 0292 SHA `07e387a1574b4057b1c6a12378c750ae6af326ec` verificado. Ver [0293](REGISTROS/0293.md).
+
+## Estado histórico — Campanha 0292
+
+Company (nome, telefone, fuso, endereço) salva e lida via UI; feedback e projeção Logística/null coordenadas corrigidos. Os outros formulários permaneceram pendentes. Ver [0292](REGISTROS/0292.md).
+
+---
+
+## Atualização histórica — campanha 0291 — salvamento e persistência de configurações
 
 **PARTIAL.** Sessão Browser autenticada comprovou UI de Route e Frota: ACK/readback/reload, draft e retry após falha 503, negativos 400/401/403/409 e viewport 360/390/768 claro/escuro sem overflow. Company foi escrita pelo helper API e somente sua projeção lida na UI; botão de salvar não foi provado. Não foram testados os outros ajustes editáveis, UI do timezone, nova sessão independente nem Motoboy; RM-AUD19-02/03/10 permanecem PARTIAL e sem PASS_GLOBAL. Pendências 0289 continuam. Registro e matriz funcional: [0291](REGISTROS/0291.md), [evidências](EVIDENCIAS/0291/). Fixture rollback e resíduos zero. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Não iniciar 0292.
 

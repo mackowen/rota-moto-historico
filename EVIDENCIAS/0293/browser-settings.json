@@ -1,0 +1,41 @@
+{
+  "campaign": "0293",
+  "status": "PARTIAL",
+  "authenticatedBrowser": {"mfaVerified": true, "runner": "Chromium/CDP with backend-issued rotamoto_e2e session"},
+  "fixture": {
+    "runId": "12e967fd-8984-4131-922b-eb864f169f83",
+    "database": "rotamoto_e2e",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantDatabaseCounts": {"companies": 0, "users": 0, "auth_records": 0, "memberships": 0, "sessions": 0, "domain_records": 0, "sync_inbox": 0, "sync_outbox": 0, "audit_log": 0}
+  },
+  "appearance": {
+    "themeModes": ["light", "dark", "auto"],
+    "themeAfterNavigation": "auto",
+    "themeAfterReload": "auto",
+    "themeInIndependentTab": "auto",
+    "independentTabMfaVerified": true,
+    "accentAfterReload": "#c32f68",
+    "languageAfterReload": "en",
+    "saveAppearanceConfirmation": "Aparência gravada neste aparelho.",
+    "visual": [
+      {"width": 360, "theme": "light", "overflow": false}, {"width": 360, "theme": "dark", "overflow": false},
+      {"width": 390, "theme": "light", "overflow": false}, {"width": 390, "theme": "dark", "overflow": false},
+      {"width": 768, "theme": "light", "overflow": false}, {"width": 768, "theme": "dark", "overflow": false}
+    ]
+  },
+  "localSettings": {
+    "reports": {"defaultPeriod": "90", "defaultChart": "both", "navigationReadback": true, "reloadReadback": true},
+    "events": {"success": false, "automatic": false, "error": false, "navigationReadback": true, "reloadReadback": true},
+    "navigation": {"shortcut": "dashboard", "checked": false, "navigationReadback": true, "reloadReadback": true},
+    "printing": {"changedFields": ["enabled", "mode", "includeDeliveryQr"], "navigationReadback": true, "reloadReadback": true},
+    "orderSources": {"sourceIndex": 1, "syntheticName": "iFood 0293", "navigationReadback": true, "reloadReadback": true},
+    "securityAudit": {"status": "BLOCKED", "reason": "security-audit card not available to fixture principal"},
+    "integrationsAdmin": {"status": "PARTIAL", "reason": "not exercised; no credential or external connection modified"},
+    "backup": {"status": "PARTIAL", "reason": "not exercised; no backup operation/configuration activated"},
+    "teamAndPermissions": {"status": "PARTIAL", "reason": "not exercised; no member, role or invitation changed"}
+  },
+  "toast": {"text": "Aparência salva neste aparelho", "visibleAboveBottomNavigation": true, "widths": [360, 390, 768], "themes": ["light", "dark"]},
+  "javascriptErrors": [],
+  "screenshots": ["appearance-before-390.png", "appearance-after-390.png", "appearance-360-light.png", "appearance-360-dark.png", "appearance-390-light.png", "appearance-390-dark.png", "appearance-768-light.png", "appearance-768-dark.png"]
+}

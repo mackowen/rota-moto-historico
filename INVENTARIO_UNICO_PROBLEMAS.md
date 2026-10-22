@@ -1,3 +1,14 @@
+## Revisão vigente — Campanha 0293 (2026-10-22)
+
+**PARTIAL.** Tema, aparência, Relatórios, Eventos, subset de Navegação/Impressão/Origens tiveram UI e persistência local após reload. Corrigida confirmação “Salvar aparência” apagada por render assíncrono. RM-AUD19-01 recebeu PASS_SCOPE apenas para preferência local do Restaurante; sem PASS_GLOBAL cross-app. RM-AUD19-02/10 PARTIAL. Para RM-AUD19-13, toast de Aparência ficou visível acima da navegação inferior em 360/390/768 claro/escuro; demais páginas/estados não testados e estado global preservado. Segurança indisponível ao principal; Integrações, Backup, Equipe e outros campos pendentes. 0292 publicada e SHA `07e387a1574b4057b1c6a12378c750ae6af326ec` verificado. Ver [0293](REGISTROS/0293.md) e [matriz](EVIDENCIAS/0293/matriz-funcional.md).
+
+| ID | Estado após 0293 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-01 | PASS_SCOPE | Preferência tema Restaurante claro/escuro/auto persiste em navegação/reload/aba; Motoboy e demais cenários cross-app/Android não testados, manter sem PASS_GLOBAL. |
+| RM-AUD19-02 | PARTIAL | Setores locais exercitados; Integrações, Backup, Equipe, Segurança e campos restantes ainda não comprovados. |
+| RM-AUD19-10 | PARTIAL | Subset local persistiu por navegação/reload; erros IndexedDB e demais configurações sem teste. |
+| RM-AUD19-13 | PARTIAL; PASS_SCOPE toast Aparência | Toast visível acima da barra em 360/390/768 claro/escuro; demais páginas e safe areas físicas não testadas. |
+
 ## Revisão vigente — Campanha 0292 (2026-10-22)
 
 **PARTIAL; PASS_SCOPE restrito a nome, telefone, fuso e endereço Company exercitados no Browser autenticado.** PUT/ACK/readback, navegação/reload/aba independente confirmados; retry após 503 preservou rascunho; endereço sem coordenadas renderiza em Logística. Outros formulários, Motoboy e negativos não executados mantêm pendência. Fixture E2E `3caec691-f414-40e2-92b9-dc7f8c4a2d17`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. Ver [REGISTRO 0292](REGISTROS/0292.md) e [matriz](EVIDENCIAS/0292/matriz-funcional.md).
