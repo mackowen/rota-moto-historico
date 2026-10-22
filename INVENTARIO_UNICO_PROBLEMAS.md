@@ -1,6 +1,6 @@
 ## Revisão vigente — Campanha 0292 (2026-10-22)
 
-**PARTIAL; PASS_SCOPE restrito a nome, telefone, fuso e endereço Company exercitados no Browser autenticado.** PUT/ACK/readback, navegação/reload/aba independente confirmados; retry após 503 preservou rascunho; endereço sem coordenadas renderiza em Logística. Outros formulários, Motoboy e negativos não executados mantêm pendência. Fixture E2E `c4491d51-9e10-46fe-8d01-9d3e10ee712c`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. Ver [REGISTRO 0292](REGISTROS/0292.md) e [matriz](EVIDENCIAS/0292/matriz-funcional.md).
+**PARTIAL; PASS_SCOPE restrito a nome, telefone, fuso e endereço Company exercitados no Browser autenticado.** PUT/ACK/readback, navegação/reload/aba independente confirmados; retry após 503 preservou rascunho; endereço sem coordenadas renderiza em Logística. Outros formulários, Motoboy e negativos não executados mantêm pendência. Fixture E2E `3caec691-f414-40e2-92b9-dc7f8c4a2d17`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. Ver [REGISTRO 0292](REGISTROS/0292.md) e [matriz](EVIDENCIAS/0292/matriz-funcional.md).
 
 | ID | Estado após 0292 | Evidência / pendência |
 |---|---|---|

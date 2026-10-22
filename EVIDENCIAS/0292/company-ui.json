@@ -2,13 +2,13 @@
   "campaign": "0292",
   "status": "PASS_SCOPE",
   "fixture": {
-    "id": "c4491d51-9e10-46fe-8d01-9d3e10ee712c",
+    "id": "3caec691-f414-40e2-92b9-dc7f8c4a2d17",
     "database": "rotamoto_e2e",
     "databaseCommitted": false,
     "cleanup": "COMPLETED",
     "residualCounts": [
       {
-        "tenantId": "01a163e9-e97f-7884-93eb-2ccafc9047d2",
+        "tenantId": "01a163f1-24e4-7e2c-95e7-09c41b2e3d28",
         "counts": {
           "companies": 0,
           "users": 0,
@@ -68,7 +68,7 @@
     "address": {
       "uiSave": true,
       "feedback": "ConcluídoConfigurações atualizadas. Endereço confirmado pelo servidor. Coordenadas não foram inferidas; ajuste o pino e confirme a localização no mapa.",
-      "canonicalAddress": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+      "canonicalAddress": "Av. Sintética 0292, 3caec691, Curitiba - PR",
       "locationRevision": 1,
       "coordinatesPreservedNull": true,
       "readback": true,
@@ -82,31 +82,31 @@
     }
   },
   "navigationReadback": {
-    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "name": "Restaurante Sintético 0292 3caec6 Retry",
     "phone": "11987659992",
-    "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+    "address": "Av. Sintética 0292, 3caec691, Curitiba - PR",
     "timeZone": "America/Fortaleza"
   },
   "reloadReadback": {
-    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "name": "Restaurante Sintético 0292 3caec6 Retry",
     "phone": "11987659992",
-    "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+    "address": "Av. Sintética 0292, 3caec691, Curitiba - PR",
     "timeZone": "America/Fortaleza"
   },
   "independentTabReadback": {
-    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "name": "Restaurante Sintético 0292 3caec6 Retry",
     "phone": "11987659992",
-    "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+    "address": "Av. Sintética 0292, 3caec691, Curitiba - PR",
     "timeZone": "America/Fortaleza"
   },
   "companyFinal": {
-    "id": "01a163e9-e97f-7884-93eb-2ccafc9047d2",
-    "name": "Restaurante Sintético 0292 c4491d Retry",
+    "id": "01a163f1-24e4-7e2c-95e7-09c41b2e3d28",
+    "name": "Restaurante Sintético 0292 3caec6 Retry",
     "status": "active",
     "timeZone": "America/Fortaleza",
     "supportPhone": "11987659992",
     "operationalLocation": {
-      "address": "Av. Sintética 0292, c4491d51, Curitiba - PR",
+      "address": "Av. Sintética 0292, 3caec691, Curitiba - PR",
       "latitude": null,
       "longitude": null,
       "provenance": null,
@@ -115,9 +115,9 @@
     "operationalLocationVersion": 1,
     "settingsVersion": 4,
     "routeGroupingPolicy": "nearest_extension",
-    "createdAt": "2026-10-22T14:00:36.203Z",
-    "updatedAt": "2026-10-22T14:00:36.203Z",
-    "requestId": "e44217ca-ecb1-46a5-97c5-ece9c4f412fe"
+    "createdAt": "2026-10-22T14:08:30.063Z",
+    "updatedAt": "2026-10-22T14:08:30.063Z",
+    "requestId": "68ca7b69-5758-4cbe-bca2-db6b9435bdec"
   },
   "http": [
     {

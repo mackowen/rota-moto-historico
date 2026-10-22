@@ -1,6 +1,6 @@
 # Campanha 0292 — matriz funcional (formulários executados)
 
-Browser Chromium/CDP autenticado com sessão HttpOnly emitida pelo backend E2E, MFA verificada e `company.manage`. Banco `rotamoto_e2e`; fixture `c4491d51-9e10-46fe-8d01-9d3e10ee712c`; `databaseCommitted=false`, cleanup `COMPLETED`, resíduos tenant-scoped zero. Evidência sanitizada em `company-ui.json`; screenshots desta campanha. Nenhum registro persistiu fora da fixture.
+Browser Chromium/CDP autenticado com sessão HttpOnly emitida pelo backend E2E, MFA verificada e `company.manage`. Banco `rotamoto_e2e`; fixture `3caec691-f414-40e2-92b9-dc7f8c4a2d17`; `databaseCommitted=false`, cleanup `COMPLETED`, resíduos tenant-scoped zero. Evidência sanitizada em `company-ui.json`; screenshots desta campanha. Nenhum registro persistiu fora da fixture.
 
 | Seção/campo | Mecanismo | UI + request/ACK | Readback/reload/aba independente | Defeito/correção | Resultado |
 |---|---|---|---|---|---|
