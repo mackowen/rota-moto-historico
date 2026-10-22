@@ -1,0 +1,15 @@
+{
+  "campaign": "0135",
+  "label": "campaign-0295-after-manual-assignment",
+  "counts": {
+    "races": 0,
+    "deliveryEvents": 0,
+    "outbox": 1,
+    "syncState": 1
+  },
+  "drivers": [],
+  "orders": [],
+  "deliveries": [],
+  "races": [],
+  "syncRecords": []
+}

@@ -322,3 +322,13 @@ Browser/CDP autenticado comprovou edição de nome/telefone pela UI, API Company
 ## Campanha 0292 — continuidade de configurações
 
 RM-AUD19-02/03/10 permanecem PARTIAL globalmente. Browser comprovou Empresa (nome, telefone, fuso, endereço), ACK/readback e persistência após navegação/reload/aba; corrigidos feedback pós-render e coordenadas null em Logística. Outras categorias editáveis e UI Motoboy aguardam prova funcional por campo. Pendências de distribuição 0289 preservadas. Não iniciar 0293 automaticamente. [Registro 0292](REGISTROS/0292.md).
+
+
+## Campanha 0295 — atualização de escopo
+
+- **RM-AUD19-18:** PARTIAL/BLOCKED_BY_CAPABILITY preservado. 0295 identificou as operações de Role/Membership autorizadas; testes de UI para edição role/status não executados nesta campanha. User name/email e edição global owner não têm endpoint autorizado.
+- **RM-AUD22-22:** PARTIAL com FAIL na projeção cross-app. Distribuição pela UI Restaurante e canonical ACK/readback, dois caminhos e estado sem elegíveis passaram. Motoboy recebeu eventos `ASSIGNED`, mas parou em `SYNC_PACKET_IDENTITY_MISMATCH`; corrigir a divergência device/packet e repetir UI, reload e duplicidade.
+- **RM-AUD19-02/10:** nenhum estado global alterado.
+- **Backup:** BLOCKED_BY_CAPABILITY no runtime E2E; 404 de 0294 veio do fixture harness sem handler; servidor runtime responde `BACKUP_ADMIN_NOT_CONFIGURED` 503.
+
+Detalhes e limites por cenário em [REGISTROS/0295.md](REGISTROS/0295.md) e [matriz 0295](EVIDENCIAS/0295/matriz-funcional.md). Manter todas as 22 ocorrências, aliases e pendências 0289; não iniciar 0296 automaticamente.

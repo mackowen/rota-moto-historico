@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "runId": "ea690d02-abda-402e-b418-30a1f96a3cfa",
+  "campaign": "0251",
+  "environment": "rotamoto_e2e",
+  "status": "COMPLETED",
+  "createdAt": "2026-10-22T19:49:17.234Z",
+  "updatedAt": "2026-10-22T19:50:10.570Z",
+  "owner": {
+    "pid": 4714,
+    "hostname": "localhost"
+  },
+  "timestamps": {
+    "PREPARING": "2026-10-22T19:49:17.244Z",
+    "RUNNING": "2026-10-22T19:49:17.305Z",
+    "COMPLETED": "2026-10-22T19:50:10.570Z"
+  },
+  "history": [
+    {
+      "status": "PREPARING",
+      "at": "2026-10-22T19:49:17.244Z"
+    },
+    {
+      "status": "RUNNING",
+      "at": "2026-10-22T19:49:17.305Z"
+    },
+    {
+      "status": "COMPLETED",
+      "at": "2026-10-22T19:50:10.570Z"
+    }
+  ],
+  "tenants": [
+    {
+      "id": "01a16529-25a8-7e63-9bbd-b85c6aa7ebfa",
+      "userIds": [
+        "01a16529-25a8-7b1b-bae8-73a2aa4dde6e",
+        "01a16529-8ca0-7ae1-9ce1-1539cd2be6b9"
+      ],
+      "sessionIds": [
+        "01a16529-29c6-7ba9-bb95-dd6d5e4b50f3",
+        "01a16529-5646-7668-a5fe-8465485c6839",
+        "01a16529-8f27-7de9-b64e-cec5b97171fb",
+        "01a16529-cbb1-78f8-b2a6-8b62fc8490fa"
+      ],
+      "counts": {
+        "companies": 1,
+        "users": 2,
+        "sessions": 4,
+        "authRecords": 2,
+        "memberships": 2,
+        "roles": 2,
+        "drivers": 1
+      }
+    }
+  ],
+  "records": {
+    "companies": [
+      "01a16529-25a8-7e63-9bbd-b85c6aa7ebfa"
+    ],
+    "users": [
+      "01a16529-25a8-7b1b-bae8-73a2aa4dde6e",
+      "01a16529-8ca0-7ae1-9ce1-1539cd2be6b9"
+    ],
+    "sessions": [
+      "01a16529-29c6-7ba9-bb95-dd6d5e4b50f3",
+      "01a16529-5646-7668-a5fe-8465485c6839",
+      "01a16529-8f27-7de9-b64e-cec5b97171fb",
+      "01a16529-cbb1-78f8-b2a6-8b62fc8490fa"
+    ],
+    "authRecords": [
+      "01a16529-25a8-7b1b-bae8-73a2aa4dde6e",
+      "01a16529-8ca0-7ae1-9ce1-1539cd2be6b9"
+    ],
+    "memberships": [
+      "01a16529-25a8-7332-8299-c4b8e9fca45f",
+      "01a16529-8ca3-7d46-a339-4b5b2fdd9c27"
+    ],
+    "roles": [
+      "01a16529-25a8-70f3-bdff-c681ec3a2ea7",
+      "b7f0585c-9544-423c-a2ab-106613741043"
+    ],
+    "drivers": [
+      "01a16529-59c4-7183-8d8e-8fe8d6cb0ac2"
+    ],
+    "orders": [],
+    "deliveries": [],
+    "routes": [],
+    "proofs": []
+  },
+  "evidence": [
+    {
+      "kind": "fixture-manifest",
+      "path": "/data/data/com.termux/files/home/.local/state/rotamoto/e2e-fixtures/ea690d02-abda-402e-b418-30a1f96a3cfa.json"
+    }
+  ],
+  "retentionReason": null,
+  "lastError": null,
+  "databaseCommitted": false,
+  "tenantDatabaseCounts": [
+    {
+      "tenantId": "01a16529-25a8-7e63-9bbd-b85c6aa7ebfa",
+      "counts": {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    }
+  ]
+}

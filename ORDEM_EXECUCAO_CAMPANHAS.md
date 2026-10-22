@@ -1,6 +1,12 @@
-## Estado vigente — execução 0294
+## Estado vigente — execução 0295
 
-0294 PARTIAL. Integrações, Equipe/perfil sintético, Segurança local, Operação, Navegação e Origens exercitados conforme matriz; Backup BLOCKED_BY_CAPABILITY por GET 404. Nenhum defeito de persistência foi reproduzido nos campos locais testados; sem alteração de fonte de app. npm test Restaurante passou; E2E somente em rotamoto_e2e, rollback completo, databaseCommitted=false, resíduos zero. Campos não testados, negativos e novas sessões permanecem PARTIAL. RM-AUD19-02/10 e RM-AUD19-18 não fechados globalmente; demais ocorrências e pendências 0289 preservadas. Ver REGISTRO 0294. Não iniciar campanha 0295.
+0295 PARTIAL; PASS_SCOPE sequencial cross-app após correção Motoboy. Distribuição Restaurante por dois botões com ACK/readback e estado sem elegíveis; Motoboy exibiu duas corridas na UI autenticada e reload. `SYNC_PACKET_IDENTITY_MISMATCH` corrigido reutilizando ID capturado no ciclo, com regressão automatizada. Backup HTTP 404 de 0294 era fallback do harness sem handler; runtime reconhece a rota e retorna 503 `BACKUP_ADMIN_NOT_CONFIGURED`, BLOCKED_BY_CAPABILITY. Edição UI role/membership não foi coberta de novo; owner e operações User sem API permanecem protegidos. `npm test` Restaurante/Motoboy PASS. E2E transacional terminou COMPLETED, databaseCommitted=false, resíduos tenant-scoped zero. RM-AUD19-18 PARTIAL, RM-AUD22-22 PASS_SCOPE sequencial/PARTIAL global por concorrência e negativos, RM-AUD19-02/10 sem alteração. Ver [REGISTROS/0295.md](REGISTROS/0295.md) e [matriz](EVIDENCIAS/0295/matriz-funcional.md). Não iniciar campanha 0296.
+
+---
+
+## Estado histórico — execução 0294
+
+0294 PARTIAL. Integrações, Equipe/perfil sintético, Segurança local, Operação, Navegação e Origens exercitados conforme matriz; Backup no fixture retornou 404, posteriormente identificado em 0295 como fallback do harness sem handler. Nenhum defeito de persistência reproduzido nos campos locais testados; sem alteração de fonte de app. npm test Restaurante passou; E2E somente em rotamoto_e2e, rollback completo, databaseCommitted=false, resíduos zero. Campos não testados, negativos e novas sessões permanecem PARTIAL. RM-AUD19-02/10 e RM-AUD19-18 não fechados globalmente; demais ocorrências e pendências 0289 preservadas. Ver REGISTRO 0294.
 
 ---
 

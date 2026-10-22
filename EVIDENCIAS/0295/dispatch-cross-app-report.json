@@ -1,0 +1,79 @@
+{
+  "campaign": "0295",
+  "runId": "0a087ec8-0260-448a-a977-1b0b0753bcb2",
+  "database": "rotamoto_e2e",
+  "status": "PASS_SCOPE",
+  "scope": "restaurant-ui-dispatch-to-authenticated-motoboy-ui-and-reload",
+  "driver": {
+    "canonicalId": "01a16529-70af-7d69-b8c0-5d0d9d9c1473"
+  },
+  "deliveries": {
+    "outsideButton": {
+      "id": "01a16529-79a9-7a0f-85d0-ff154c440f9c",
+      "status": "ASSIGNED",
+      "driverId": "01a16529-70af-7d69-b8c0-5d0d9d9c1473",
+      "version": 2,
+      "successToast": "Concluído\n1 corrida(s) distribuída(s) com sucesso."
+    },
+    "moreRacesButton": {
+      "id": "01a16529-7bed-7e4e-9fc3-1dd3d9ca7a24",
+      "status": "ASSIGNED",
+      "driverId": "01a16529-70af-7d69-b8c0-5d0d9d9c1473",
+      "version": 2,
+      "successToast": "Concluído\n1 corrida(s) distribuída(s) com sucesso."
+    }
+  },
+  "motoboy": {
+    "initialPullVisible": true,
+    "uiRendered": true,
+    "afterReload": true,
+    "raceCount": 2,
+    "visual": [
+      {
+        "width": 360,
+        "theme": "light",
+        "overflow": false,
+        "visible": true,
+        "text": "#0135-MANUAL-2 · Cliente E2E 0135 B\nRua Sintética, 136\n—\nAtribuída\n0.0 km\nAceitar entrega\n#0135-MANUAL · Cliente E2E 0135\nRua Sintética, 135\n—\nAtribuída\n0.0 km\nAceitar entrega"
+      },
+      {
+        "width": 360,
+        "theme": "dark",
+        "overflow": false,
+        "visible": true,
+        "text": "#0135-MANUAL-2 · Cliente E2E 0135 B\nRua Sintética, 136\n—\nAtribuída\n0.0 km\nAceitar entrega\n#0135-MANUAL · Cliente E2E 0135\nRua Sintética, 135\n—\nAtribuída\n0.0 km\nAceitar entrega"
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "overflow": false,
+        "visible": true,
+        "text": "#0135-MANUAL-2 · Cliente E2E 0135 B\nRua Sintética, 136\n—\nAtribuída\n0.0 km\nAceitar entrega\n#0135-MANUAL · Cliente E2E 0135\nRua Sintética, 135\n—\nAtribuída\n0.0 km\nAceitar entrega"
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "overflow": false,
+        "visible": true,
+        "text": "#0135-MANUAL-2 · Cliente E2E 0135 B\nRua Sintética, 136\n—\nAtribuída\n0.0 km\nAceitar entrega\n#0135-MANUAL · Cliente E2E 0135\nRua Sintética, 135\n—\nAtribuída\n0.0 km\nAceitar entrega"
+      },
+      {
+        "width": 768,
+        "theme": "light",
+        "overflow": false,
+        "visible": true,
+        "text": "#0135-MANUAL-2 · Cliente E2E 0135 B\nRua Sintética, 136\n—\nAtribuída\n0.0 km\nAceitar entrega\n#0135-MANUAL · Cliente E2E 0135\nRua Sintética, 135\n—\nAtribuída\n0.0 km\nAceitar entrega"
+      },
+      {
+        "width": 768,
+        "theme": "dark",
+        "overflow": false,
+        "visible": true,
+        "text": "#0135-MANUAL-2 · Cliente E2E 0135 B\nRua Sintética, 136\n—\nAtribuída\n0.0 km\nAceitar entrega\n#0135-MANUAL · Cliente E2E 0135\nRua Sintética, 135\n—\nAtribuída\n0.0 km\nAceitar entrega"
+      }
+    ]
+  },
+  "browserErrors": [],
+  "evidence": "/data/data/com.termux/files/usr/tmp/0295-dispatch-final-visual",
+  "fixture": "transactional rotamoto_e2e; rolled back by fixture lifecycle"
+}

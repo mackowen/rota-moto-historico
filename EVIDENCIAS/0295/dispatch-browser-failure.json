@@ -1,0 +1,51 @@
+{
+  "campaign": "0135",
+  "runId": "07b7b705-527b-4e59-a3ac-25c0725e61d0",
+  "status": "FAIL",
+  "message": "Motoboy UI sync pull receives assigned canonical Delivery for its authenticated Driver",
+  "stack": [
+    "AssertionError [ERR_ASSERTION]: Motoboy UI sync pull receives assigned canonical Delivery for its authenticated Driver",
+    "    at exercise (/data/data/com.termux/files/usr/tmp/campaign-0295-dispatch-motoboy.cjs:355:9)",
+    "    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+    "    at async runFixtureLifecycle (/data/data/com.termux/files/home/projetos/repos/rota-moto-restaurante/tests/e2e-support/fixture-lifecycle.js:753:5)",
+    "    at async main (/data/data/com.termux/files/usr/tmp/campaign-0295-dispatch-motoboy.cjs:160:5)"
+  ],
+  "receipts": [
+    {
+      "packetId": "pkt_351d0001-6f1e-4152-9a7a-d24e7163b979",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_351d0001-6f1e-4152-9a7a-d24e7163b979",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_63ec897d-cdfd-4dc1-ba42-c7ef5eba47ac",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_ff047aa8-b891-45a7-9e34-041cb3531732",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_701c31c1-2d1d-47f9-aeea-81a7a17de57b",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_274b4110-bdc3-41da-a873-e03469be4065",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_ac4e9d9a-4dae-4549-a719-e4c6936b6299",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_c72d3042-0dce-4b99-8a21-8af862c007a9",
+      "deviceId": "panel_b0a214bd-3822-4c09-80b6-b3c7ae3c0c05"
+    },
+    {
+      "packetId": "pkt_c4d4dc93-81f8-46cd-a9ac-7f21bdf60a35",
+      "deviceId": "4442c497-cbfe-4f6e-bb9b-1362eaff964d"
+    }
+  ]
+}
