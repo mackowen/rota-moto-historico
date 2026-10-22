@@ -10,6 +10,12 @@
   },
   "operation": {
     "endpoint": "PUT /api/admin/company/location",
+    "companyId": "01a1615f-c66a-7271-bfb9-dd5bb51b272b",
+    "canonicalBefore": {
+      "address": null,
+      "operationalLocationVersion": 0
+    },
+    "syntheticAddressAfter": "Rua 0286 ACK Perdido, São Paulo - SP",
     "acknowledgement": "dropped after backend response",
     "backendReadback": "new synthetic address, operationalLocationVersion=1",
     "transportAttempts": 2,
