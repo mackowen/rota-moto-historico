@@ -1,4 +1,10 @@
-# Estado vigente — Campanha 0290 (2026-10-22)
+# Estado vigente — Campanha 0291 (2026-10-22)
+
+**PARTIAL.** Browser/CDP autenticado comprovou no subset de Configurações de Empresa/localização, Logística e Frota: publicação e leitura canônicas, persistência após reload, draft preservado em falha 503 e retry, negativos 400/401/403/409 e visual 360/390/768 claro/escuro sem overflow. Nenhum defeito nesses fluxos foi reproduzido; não houve alteração de código de app. Ainda não foram percorridos os demais formulários, fuso horário pela UI, nova sessão, ou readback Motoboy. RM-AUD19-02/03/10 e aliases permanecem PARTIAL, sem PASS_GLOBAL. Fixture `7b51c964-7517-40fa-900c-22175dffaa3a` em `rotamoto_e2e`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero; readiness E2E restaurada. Pendências de distribuição 0289 preservadas; 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0291](REGISTROS/0291.md) e [evidências](EVIDENCIAS/0291/). Não iniciar 0292.
+
+---
+
+# Estado histórico — Campanha 0290 (2026-10-22)
 
 **PARTIAL.** Corrigido o salvamento corporativo do fuso horário no Restaurante para usar `settingsVersion`/`expectedVersion`, rejeitar revisão obsoleta, validar ACK revisionado e exigir GET/readback do valor antes de limpar o rascunho e informar sucesso. Contrato compartilhado foi sincronizado nos dois apps; testes integrais Restaurante e Motoboy passaram. Foi criada matriz estática das seções de Configurações. A fixture PostgreSQL E2E confirmou PUT/ACK, GET/readback, stale 409, sync/pull e rollback em `rotamoto_e2e` (`databaseCommitted=false`, cleanup COMPLETED, resíduos zero). Não houve Browser autenticado, screenshots, teste de reload/segunda sessão, matriz negativa, matriz visual ou verificação cross-app nesta execução. Logo os gates globais continuam abertos: RM-AUD19-02/03/10 e aliases/pendências não foram encerrados. Baselines protegidas. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`; Android físico pendente. Ver [REGISTRO 0290](REGISTROS/0290.md) e [evidências](EVIDENCIAS/0290/). Não iniciar 0291.
 

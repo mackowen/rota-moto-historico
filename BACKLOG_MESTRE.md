@@ -1,4 +1,10 @@
-## Atualização vigente — campanha 0290 — salvamento e persistência de configurações
+## Atualização vigente — campanha 0291 — salvamento e persistência de configurações
+
+**PARTIAL.** Sessão Browser autenticada e fixture `rotamoto_e2e` comprovaram Company/localização, Route e Frota no subset: ACK/readback/reload, draft e retry após falha 503, negativos 400/401/403/409 e viewport 360/390/768 claro/escuro sem overflow. Nenhum defeito foi reproduzido nesse subset e não houve mudança de produto. Não foram testados os outros ajustes editáveis, UI do timezone, nova sessão independente nem Motoboy; RM-AUD19-02/03/10 permanecem PARTIAL e sem PASS_GLOBAL. Pendências 0289 continuam. Registro e matriz funcional: [0291](REGISTROS/0291.md), [evidências](EVIDENCIAS/0291/). Fixture rollback e resíduos zero. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Não iniciar 0292.
+
+---
+
+## Atualização histórica — campanha 0290 — salvamento e persistência de configurações
 
 **PARTIAL.** A escrita de timezone da Company agora é revisionada e requer ACK + GET/readback; conflito/falha preserva rascunho. Cobertura de unidade/client e `npm test` Restaurante passaram. Inventário estático inicial em [matriz 0290](EVIDENCIAS/0290/matriz-configuracoes.md). Browser autenticado, navegação/reload/nova sessão, erros de rede/HTTP, retry real, matriz visual e consistência Empresa–Logística–Frota–Motoboy não foram executados. Manter RM-AUD19-02/03/10 PARTIAL, aliases e pendências 0289. Nenhum Motoboy alterado. Não iniciar 0291. Ver [REGISTRO 0290](REGISTROS/0290.md).
 

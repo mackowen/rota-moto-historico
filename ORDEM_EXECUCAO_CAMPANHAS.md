@@ -1,3 +1,9 @@
+## Campanha 0291 — PARTIAL (2026-10-22)
+
+Escopo RM-AUD19-02/03/10. Browser autenticado comprovou persistência canônica em Company/localização, Route e perfil econômico/Frota: ACK + GET/readback, reload, falha 503 com rascunho preservado e retry; negativos 400/401/403/409; 360/390/768 claro/escuro sem overflow. Fixture `rotamoto_e2e` finalizou com `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. Nenhum defeito do subset foi reproduzido e não houve alteração de código; o resultado não fecha os problemas globais. Restam os formulários gerais/autosave, timezone pela UI, nova sessão, visualização Motoboy, coordenadas `null` comparativas e negativos adicionais (500/timeout/resposta incompleta/ACK perdido/clique duplo/reload durante operação). Pendências de distribuição 0289 mantidas. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0291](REGISTROS/0291.md) e [matriz funcional](EVIDENCIAS/0291/matriz-funcional.md). Não iniciar 0292.
+
+---
+
 ## Campanha 0290 — PARTIAL (2026-10-22)
 
 Escopo ativo: RM-AUD19-02, RM-AUD19-03 e RM-AUD19-10. Corrigido o caminho do timezone Company com revisão esperada, conflito e ACK + readback canônico. Suíte Restaurante integral passou. Gates remanescentes obrigatórios: Browser autenticado em Configurações; navegação, reload, nova aba e restauração; antes/depois; cenários 400/401/403/409/500/timeout/resposta incompleta/clique duplo/readback divergente/retry; viewports 360/390/768 claro/escuro; comparação canônica e visível Empresa–Logística–Frota–Motoboy com endereço sintético e coordenadas `null`; cleanup tenant-scoped se usar fixture. Revalidar distribuição e pendências de 0289 sem apagá-las. 0258 continua bloqueada por autorização; ORS aguarda credencial externa. **Não iniciar 0291 automaticamente.** Ver [REGISTRO 0290](REGISTROS/0290.md).

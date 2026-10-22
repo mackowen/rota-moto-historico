@@ -1,4 +1,18 @@
-## Revisão vigente — Campanha 0290 (2026-10-22)
+## Revisão vigente — Campanha 0291 (2026-10-22)
+
+**PARTIAL.** Browser autenticado em `rotamoto_e2e` comprovou localização Company, Route e perfil econômico/Frota no subset exercitado: ACK + GET/readback, reload, rascunho preservado em falha 503 e retry; 360/390/768 claro/escuro sem overflow. Nenhum defeito de produto foi reproduzido nesses caminhos. As seções gerais de Ajustes, nova sessão, Motoboy e cenários negativos restantes não foram executados; não declarar PASS_GLOBAL. A fixture `7b51c964-7517-40fa-900c-22175dffaa3a` terminou `databaseCommitted=false`, cleanup `COMPLETED`, resíduos zero. Pendências 0289 preservadas. Ver [REGISTRO 0291](REGISTROS/0291.md) e [matriz funcional](EVIDENCIAS/0291/matriz-funcional.md).
+
+### Atualização dos três itens
+
+| ID | Estado após 0291 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-02 | PARTIAL | Company/localização, Logística e Frota têm salvamento explícito comprovado no subset; timezone apenas possui cobertura anterior de API/testes. Os demais formulários e cenários UI não foram verificados. |
+| RM-AUD19-03 | PARTIAL | Endereço Company e sua projeção em Logística foram confirmados; ainda falta comparação Frota/Motoboy em nova sessão e o caso de coordenadas `null` em todas as telas. |
+| RM-AUD19-10 | PARTIAL | Logística/Frota persistiram após reload e recuperaram de falha 503; autosaves locais, nova sessão e restante da matriz ainda sem Browser nesta campanha. |
+
+---
+
+## Revisão histórica — Campanha 0290 (2026-10-22)
 
 **PARTIAL.** Corrigida a gravação de timezone Company com revisão esperada e ACK/readback canônico; testes direcionados e `npm test` Restaurante passaram. Inventário estático inicial criado. PostgreSQL E2E confirmou PUT/ACK/readback, stale 409 e sync/pull, com rollback e resíduos zero. Sem Browser autenticado, nova sessão/reload, negativos, telas, screenshots ou validação de localização Motoboy nesta execução. Não reclassificar como PASS: RM-AUD19-02/03/10 e aliases permanecem PARTIAL. As demais 19+3 ocorrências preservam IDs, aliases, descrições e estados anteriores; pendências de distribuição 0289 também preservadas. Nenhuma escrita DB/fixture. Detalhes em [REGISTRO 0290](REGISTROS/0290.md).
 

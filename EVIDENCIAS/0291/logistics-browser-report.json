@@ -1,0 +1,337 @@
+{
+  "campaign": "0291",
+  "status": "PASS_SCOPE",
+  "fixture": {
+    "database": "rotamoto_e2e",
+    "id": "7b51c964-7517-40fa-900c-22175dffaa3a",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "residualCounts": [
+      {
+        "companies": 0,
+        "users": 0,
+        "auth_records": 0,
+        "memberships": 0,
+        "sessions": 0,
+        "domain_records": 0,
+        "sync_inbox": 0,
+        "sync_outbox": 0,
+        "audit_log": 0
+      }
+    ]
+  },
+  "companyLocation": {
+    "status": 200,
+    "canonicalVersion": 1,
+    "readback": "ACK + GET",
+    "syntheticOnly": true,
+    "domReadback": "Localização cadastral confirmada\nLocalização sintética campanha 0275 · -23.550520, -46.633308\nFonte: Restaurante · localização confirmada pelo administrador · versão 1"
+  },
+  "routeSettings": {
+    "firstWriteVersion": 1,
+    "readbackVersion": 2,
+    "writeCount": 2,
+    "companyUnchanged": true,
+    "readbackFailure": {
+      "synthetic503": true,
+      "draftPreserved": true,
+      "falseSuccess": false,
+      "retryReadbackVersion": 2
+    },
+    "reloadReadback": {
+      "routeMode": "custom",
+      "latitude": "-23.5623",
+      "returnToOrigin": false,
+      "companyLocationStillCanonical": true
+    }
+  },
+  "costSettings": {
+    "ack": true,
+    "readback": {
+      "configured": true,
+      "costModel": {
+        "fixedCostPerDeliveryMinor": 550,
+        "variableCostPerKmMinor": 0,
+        "currency": "BRL",
+        "formula": "fixedCostPerDelivery + ceil(variableCostPerKm × estimatedDistanceM / 1000)"
+      },
+      "defaultPolicy": "prefer_internal",
+      "version": 1,
+      "updatedAt": "2026-10-22T13:26:04.949Z"
+    },
+    "runtimeComparison": {
+      "policy": "prefer_internal",
+      "policyVersion": 1,
+      "internalCost": {
+        "status": "known",
+        "amountMinor": 550,
+        "currency": "BRL",
+        "fixedCostMinor": 550,
+        "variableCostMinor": 0,
+        "variableCostPerKmMinor": 0,
+        "distanceM": null,
+        "rounding": "variable component rounded up to the next minor unit",
+        "source": "operator_configured_fleet_model",
+        "componentsKnown": 2,
+        "componentsTotal": 2
+      }
+    },
+    "readbackFailure": {
+      "synthetic503": true,
+      "draftPreserved": true,
+      "falseSuccess": false
+    },
+    "reloadReadback": {
+      "fixed": "5.50",
+      "policy": "prefer_internal"
+    }
+  },
+  "negativeCases": [
+    {
+      "routeInvalidCoordinates": 400,
+      "tenantOverrideRejected": 400,
+      "insufficientPermission": 403,
+      "unauthenticated": 401,
+      "revisionConflict": 409
+    }
+  ],
+  "browser": [
+    {
+      "width": 360,
+      "theme": "light",
+      "horizontalOverflow": false
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "horizontalOverflow": false
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "horizontalOverflow": false
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "horizontalOverflow": false
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "horizontalOverflow": false
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "horizontalOverflow": false
+    }
+  ],
+  "httpRequests": [
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/logistics/internal-provider"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/sync/installations/restaurante"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/providers"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "method": "PUT",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "method": "PUT",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/logistics/internal-provider"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/providers"
+    },
+    {
+      "method": "PUT",
+      "status": 200,
+      "path": "/api/logistics/intelligence/settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/identity/session"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/sync/installations/restaurante"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/logistics/internal-provider"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/admin/company"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/sync/pull"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/logistics/providers"
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "path": "/api/sync/push"
+    },
+    {
+      "method": "GET",
+      "status": 200,
+      "path": "/api/sync/pull"
+    }
+  ],
+  "expectedInjectedFailures": [
+    {
+      "path": "/api/logistics/route-settings",
+      "status": 503,
+      "interceptedAtFetch": true
+    },
+    {
+      "path": "/api/logistics/intelligence/analytics",
+      "status": 503,
+      "interceptedAtFetch": true
+    }
+  ],
+  "unexpectedHttp5xx": [],
+  "javascriptErrors": [],
+  "runtimeRestored": true
+}
