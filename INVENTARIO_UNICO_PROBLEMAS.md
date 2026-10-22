@@ -6,8 +6,8 @@
 
 | ID | Estado após 0291 | Evidência / pendência |
 |---|---|---|
-| RM-AUD19-02 | PARTIAL | Company/localização, Logística e Frota têm salvamento explícito comprovado no subset; timezone apenas possui cobertura anterior de API/testes. Os demais formulários e cenários UI não foram verificados. |
-| RM-AUD19-03 | PARTIAL | Endereço Company e sua projeção em Logística foram confirmados; ainda falta comparação Frota/Motoboy em nova sessão e o caso de coordenadas `null` em todas as telas. |
+| RM-AUD19-02 | PARTIAL | Logística e Frota têm salvamento explícito UI/readback/reload comprovado no subset; Company foi escrita pelo helper, não pelo botão. Timezone possui cobertura anterior de API/testes, não UI 0291. Os demais formulários não foram verificados. |
+| RM-AUD19-03 | PARTIAL | A projeção do endereço Company em Logística foi confirmada após escrita via fixture API; salvamento pela UI, comparação Frota/Motoboy em nova sessão e coordenadas `null` seguem pendentes. |
 | RM-AUD19-10 | PARTIAL | Logística/Frota persistiram após reload e recuperaram de falha 503; autosaves locais, nova sessão e restante da matriz ainda sem Browser nesta campanha. |
 
 ---
