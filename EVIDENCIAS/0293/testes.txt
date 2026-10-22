@@ -1,0 +1,18 @@
+Campanha 0293 — testes e resultados
+
+Restaurante
+- node tests/test-appearance-settings.js — PASS.
+- node --check app.js — PASS.
+- git diff --check — PASS.
+- npm test — PASS, exit code 0 (suíte completa).
+- Browser Chromium/CDP autenticado, MFA verificada — PASS_SCOPE para campos da matriz; sem exceções JavaScript.
+- Viewports/tema — 360/390/768 × claro/escuro, sem overflow; capturas appearance-*.png.
+- Fixture rotamoto_e2e: run 12e967fd-8984-4131-922b-eb864f169f83; databaseCommitted=false; cleanup COMPLETED; resíduos tenant-scoped zero.
+
+Motoboy
+- npm test não executado: nenhum arquivo ou contrato do Motoboy foi alterado nesta campanha.
+
+Não executados
+- Falha IndexedDB injetada, falta de permissão por formulário, timeout, resposta incompleta, readback divergente, reload durante escrita e retry de autosave.
+- Seções Integrações administrativas, Backup, Equipe/permissões; Segurança local bloqueada pela ausência do card para o principal E2E.
+- Formulários restantes de Operação, Android físico e cobertura de toast em outras páginas.
