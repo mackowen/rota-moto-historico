@@ -1,0 +1,209 @@
+{
+  "campaign": "0289",
+  "runId": "c668ce7e-4266-4a27-bf28-af04aac79321",
+  "database": "rotamoto_e2e",
+  "status": "PASS",
+  "scope": "manual-dispatch-buttons-race-modal-and-no-eligible-feedback",
+  "driver": {
+    "canonicalId": "01a161e3-49f4-7b4d-b68f-8145c87d5e2d"
+  },
+  "deliveries": {
+    "outsideButton": {
+      "id": "01a161e3-5321-7d89-aac4-1e50a902f3cd",
+      "status": "ASSIGNED",
+      "driverId": "01a161e3-49f4-7b4d-b68f-8145c87d5e2d",
+      "version": 2,
+      "successToast": "Concluído\n1 corrida(s) distribuída(s) com sucesso."
+    },
+    "racesModalButton": {
+      "id": "01a161e3-5534-77db-a796-3cc768fa54a6",
+      "status": "ASSIGNED",
+      "driverId": "01a161e3-49f4-7b4d-b68f-8145c87d5e2d",
+      "version": 2,
+      "successToast": "Concluído\n1 corrida(s) distribuída(s) com sucesso."
+    },
+    "doubleAssignmentPrevented": true
+  },
+  "preselected": [
+    {
+      "id": "01a161e3-3137-761a-b173-6b80cd57998c",
+      "checked": false
+    },
+    {
+      "id": "bike_mvj1qr4h_t9x238",
+      "checked": true
+    }
+  ],
+  "layout": {
+    "rows": 2,
+    "selects": [
+      {
+        "text": "Todos os status",
+        "width": 326,
+        "scrollWidth": 326,
+        "rect": {
+          "x": 31,
+          "y": 298.84375,
+          "width": 328,
+          "height": 44,
+          "top": 298.84375,
+          "right": 359,
+          "bottom": 342.84375,
+          "left": 31
+        }
+      },
+      {
+        "text": "30 dias",
+        "width": 326,
+        "scrollWidth": 326,
+        "rect": {
+          "x": 31,
+          "y": 376.234375,
+          "width": 328,
+          "height": 44,
+          "top": 376.234375,
+          "right": 359,
+          "bottom": 420.234375,
+          "left": 31
+        }
+      }
+    ],
+    "overflow": false
+  },
+  "visualMatrix": [
+    {
+      "width": 360,
+      "theme": "light",
+      "overflow": false,
+      "dialogOverflow": false,
+      "selects": [
+        {
+          "text": "Todos os status",
+          "width": 296,
+          "scrollWidth": 296,
+          "visible": true
+        },
+        {
+          "text": "30 dias",
+          "width": 296,
+          "scrollWidth": 296,
+          "visible": true
+        }
+      ],
+      "footerVisible": true
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "overflow": false,
+      "dialogOverflow": false,
+      "selects": [
+        {
+          "text": "Todos os status",
+          "width": 296,
+          "scrollWidth": 296,
+          "visible": true
+        },
+        {
+          "text": "30 dias",
+          "width": 296,
+          "scrollWidth": 296,
+          "visible": true
+        }
+      ],
+      "footerVisible": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "dialogOverflow": false,
+      "selects": [
+        {
+          "text": "Todos os status",
+          "width": 326,
+          "scrollWidth": 326,
+          "visible": true
+        },
+        {
+          "text": "30 dias",
+          "width": 326,
+          "scrollWidth": 326,
+          "visible": true
+        }
+      ],
+      "footerVisible": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "dialogOverflow": false,
+      "selects": [
+        {
+          "text": "Todos os status",
+          "width": 326,
+          "scrollWidth": 326,
+          "visible": true
+        },
+        {
+          "text": "30 dias",
+          "width": 326,
+          "scrollWidth": 326,
+          "visible": true
+        }
+      ],
+      "footerVisible": true
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "overflow": false,
+      "dialogOverflow": false,
+      "selects": [
+        {
+          "text": "Todos os status",
+          "width": 662,
+          "scrollWidth": 662,
+          "visible": true
+        },
+        {
+          "text": "30 dias",
+          "width": 324,
+          "scrollWidth": 324,
+          "visible": true
+        }
+      ],
+      "footerVisible": true
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "overflow": false,
+      "dialogOverflow": false,
+      "selects": [
+        {
+          "text": "Todos os status",
+          "width": 662,
+          "scrollWidth": 662,
+          "visible": true
+        },
+        {
+          "text": "30 dias",
+          "width": 324,
+          "scrollWidth": 324,
+          "visible": true
+        }
+      ],
+      "footerVisible": true
+    }
+  ],
+  "noEligible": {
+    "text": "DISTRIBUIÇÃO\nDistribuir corridas\n\nA rota de cada motoboy começa no restaurante. O GPS do motoboy é apenas informação operacional; ele não substitui a origem no restaurante.\n\nOrigem da rota\nConfigure o endereço do restaurante antes de otimizar\nCorridas disponíveis\n0 sem motoboy\nNenhuma entrega para distribuir\nEntregas abertas aparecerão aqui quando estiverem prontas.\nMotoboys\n0 disponíveis\nNenhum motoboy elegível\nA disponibilidade operacional precisa estar confirmada como Online para receber novas corridas.\nSelecione ao menos uma corrida e um motoboy para gerar a sugestão automática.\nCancelar\nConfirmar distribuição",
+    "assignableDrivers": 0,
+    "assignableOrders": 0
+  },
+  "browserErrors": [],
+  "evidence": "/data/data/com.termux/files/usr/tmp/0289-final-26",
+  "fixture": "transactional rotamoto_e2e; rolled back by fixture lifecycle"
+}

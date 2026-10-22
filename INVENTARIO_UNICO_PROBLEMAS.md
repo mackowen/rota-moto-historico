@@ -1,6 +1,6 @@
-## Revisão vigente — Campanha 0288 (2026-10-22)
+## Revisão vigente — Campanha 0289 (2026-10-22)
 
-**PASS_SCOPE restrito a RM-AUD22-20.** Browser autenticado com login pelo formulário e MFA válida reproduziu Conta RotaMoto cobrindo a home enquanto o sync permanecia pendente. Causa: `app-ready` era publicado em `window` e aguardado em `document`; fechamento dependia do sync completo. Corrigido no Restaurante e testado em login, reload, nova aba, navegação explícita para Conta e Fechar; sessão revogada voltou ao login. Browser visual home/Conta 360/390/768 claro/escuro e `npm test` Restaurante passaram. TTL natural e Android físico não testados. Fixture `1cdc37ef-fd88-4754-bdb3-ffd21c2e3f1f` COMPLETED, `databaseCommitted=false`, zero resíduos tenant-scoped. RM-AUD22-21/22 OPEN; problemas globais antigos não reclassificados. Ver [REGISTRO 0288](REGISTROS/0288.md).
+**PARTIAL.** RM-AUD22-21 passou no escopo visual Browser autenticado; RM-AUD22-22 passou nos dois caminhos funcionais com ACK/readback, estado sem elegíveis e proteção contra reatribuir Orders já atribuídos. Foram corrigidas reconciliação em memória do Delivery canônico e filtragem de elegibilidade; ver [REGISTRO 0289](REGISTROS/0289.md). Permanecem por testar falhas HTTP/sem permissão, clique duplo, concorrência simultânea, replay e visualização no Motoboy. Fixture `a6619894-ff01-471f-9cb8-51d076800937` COMPLETED, `databaseCommitted=false`, zero resíduos tenant-scoped. RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME e problemas globais de persistência/localização preservados; nenhum estado global encerrado.
 
 ### Plano cumulativo das 22 ocorrências
 
@@ -28,8 +28,8 @@ As ocorrências RM-AUD19-01..19 conservam descrições, aliases, estados e evid�
 | RM-AUD19-18 | P0 | Edição owner/usuários/perfis; PARTIAL/BLOCKED_BY_CAPABILITY | Endpoint autorizado para identidade canônica/global. |
 | RM-AUD19-19 | P0 | Edição de motoboys; PASS_SCOPE/PHYSICAL_PENDING_OWNER | Driver Browser testado; confirmação física pendente. |
 | RM-AUD22-20 | P1 | **PASS_SCOPE técnico 0288**; correção Restaurante | Login UI+MFA, app pronto, reload/nova aba e Conta manual; TTL natural e Android pendentes. |
-| RM-AUD22-21 | P1 | OPEN; Motoboy | Reproduzir modal de corridas em 360/390/768, corrigir espaçamento/seletor status. Não testado em 0288. |
-| RM-AUD22-22 | P0 | OPEN; Motoboy e contrato de distribuição | Comprovar ação/feedback/API e ownership dos botões Distribuir; não testado em 0288. |
+| RM-AUD22-21 | P1 | **PASS_SCOPE técnico Browser 0289**; modal de corridas Restaurante | Filtros, status, spacing e rodapé corrigidos em 360/390/768 claro/escuro; sem overflow. Android físico pendente. |
+| RM-AUD22-22 | P0 | **PARTIAL 0289**; distribuição manual Restaurante | Ambos botões tiveram ACK/readback e feedback; atribuição existente e ausência de elegíveis são excluídas. HTTP failure/sem permissão, clique duplo, simultaneidade, replay e confirmação no Motoboy pendentes. |
 
 Sequência sugerida: proteger falhas P0 de persistência/localização (02/03/10), validar a ação funcional de distribuição (22), depois modal (21), sem perder os demais IDs. 0258 permanece BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Próxima campanha não foi iniciada.
 

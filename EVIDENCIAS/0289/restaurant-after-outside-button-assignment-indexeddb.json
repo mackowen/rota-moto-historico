@@ -1,0 +1,134 @@
+{
+  "campaign": "0135",
+  "label": "after-outside-button-assignment",
+  "counts": {
+    "bikes": 2,
+    "orders": 2,
+    "deliveries": 2,
+    "outbox": 0,
+    "syncState": 13
+  },
+  "drivers": [
+    {
+      "id": "01a161e3-3137-761a-b173-6b80cd57998c",
+      "canonicalId": "01a161e3-3137-761a-b173-6b80cd57998c",
+      "name": "Motorista E2E",
+      "status": "active",
+      "version": 1,
+      "syncState": "synced"
+    },
+    {
+      "id": "bike_mvj1qr4h_t9x238",
+      "canonicalId": "01a161e3-49f4-7b4d-b68f-8145c87d5e2d",
+      "name": "0135 Motoboy Editado",
+      "status": "ACTIVE",
+      "version": 3,
+      "syncState": "synced"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_mvj1qsu3_fw8at1",
+      "number": "0135-MANUAL",
+      "status": "ATRIBUIDA",
+      "deliveryStatus": "ASSIGNED",
+      "canonicalStatus": "ASSIGNED",
+      "driverId": "bike_mvj1qr4h_t9x238",
+      "syncState": "synced"
+    },
+    {
+      "id": "ord_mvj1qtcp_4pu22h",
+      "number": "0135-MANUAL-2",
+      "status": "AGUARDANDO",
+      "deliveryStatus": "CREATED",
+      "canonicalStatus": "CREATED",
+      "driverId": null,
+      "syncState": "synced"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "del_00ffa7f2-0c79-475f-a387-0f5aa67df72a",
+      "canonicalId": "01a161e3-5321-7d89-aac4-1e50a902f3cd",
+      "orderId": "01a161e3-52dc-7f1d-8b69-8c786c58fc62",
+      "status": "ASSIGNED",
+      "driverId": "01a161e3-49f4-7b4d-b68f-8145c87d5e2d",
+      "syncState": "synced"
+    },
+    {
+      "id": "del_05ec7981-dd02-4a9a-a0d3-13d50321b160",
+      "canonicalId": "01a161e3-5534-77db-a796-3cc768fa54a6",
+      "orderId": "01a161e3-551b-70b1-9ff6-69bf0a0b554a",
+      "status": "CREATED",
+      "driverId": null,
+      "syncState": "synced"
+    }
+  ],
+  "races": [],
+  "syncRecords": [
+    {
+      "id": "canonical:Delivery:01a161e3-5321-7d89-aac4-1e50a902f3cd",
+      "status": "canonical",
+      "canonicalId": "01a161e3-5321-7d89-aac4-1e50a902f3cd",
+      "canonicalVersion": 2,
+      "payloadStatus": "ASSIGNED",
+      "payloadDriverId": "01a161e3-49f4-7b4d-b68f-8145c87d5e2d"
+    },
+    {
+      "id": "canonical:Delivery:01a161e3-5534-77db-a796-3cc768fa54a6",
+      "status": "canonical",
+      "canonicalId": "01a161e3-5534-77db-a796-3cc768fa54a6",
+      "canonicalVersion": 1,
+      "payloadStatus": "CREATED",
+      "payloadDriverId": null
+    },
+    {
+      "id": "canonical:Order:01a161e3-52dc-7f1d-8b69-8c786c58fc62",
+      "status": "canonical",
+      "canonicalId": "01a161e3-52dc-7f1d-8b69-8c786c58fc62",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "canonical:Order:01a161e3-551b-70b1-9ff6-69bf0a0b554a",
+      "status": "canonical",
+      "canonicalId": "01a161e3-551b-70b1-9ff6-69bf0a0b554a",
+      "canonicalVersion": 1,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Delivery:del_00ffa7f2-0c79-475f-a387-0f5aa67df72a",
+      "status": "accepted",
+      "canonicalId": "01a161e3-5321-7d89-aac4-1e50a902f3cd",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Delivery:del_05ec7981-dd02-4a9a-a0d3-13d50321b160",
+      "status": "accepted",
+      "canonicalId": "01a161e3-5534-77db-a796-3cc768fa54a6",
+      "canonicalVersion": 1,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Order:ord_mvj1qsu3_fw8at1",
+      "status": "accepted",
+      "canonicalId": "01a161e3-52dc-7f1d-8b69-8c786c58fc62",
+      "canonicalVersion": 2,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    },
+    {
+      "id": "operation:Order:ord_mvj1qtcp_4pu22h",
+      "status": "accepted",
+      "canonicalId": "01a161e3-551b-70b1-9ff6-69bf0a0b554a",
+      "canonicalVersion": 1,
+      "payloadStatus": null,
+      "payloadDriverId": null
+    }
+  ]
+}

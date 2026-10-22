@@ -1,6 +1,6 @@
-## Atualização vigente — 0288
+## Atualização vigente — 0289
 
-0288 terminou **PASS_SCOPE para RM-AUD22-20**: login UI/MFA autenticado foi reproduzido, `app-ready` desalinhado corrigido, home exposta durante sync pendente e navegação manual/retomada/revogação verificadas. Regressões Browser e `npm test` Restaurante passaram; fixture completou rollback e zero resíduos. Não iniciar automaticamente a campanha seguinte. Próximo trabalho planejado, sem execução nesta campanha: RM-AUD22-22 (botões Distribuir sem efeito perceptível; confirmar contrato e resultado funcional) e RM-AUD22-21 (modal de corridas, espaçamento e seletor cortado). Manter demais IDs/aliases no inventário, sobretudo pendências de salvamento e localização. Ver [REGISTRO 0288](REGISTROS/0288.md).
+0289 terminou **PARTIAL**. RM-AUD22-21 foi corrigido e validado no Browser autenticado 360/390/768 claro/escuro. RM-AUD22-22 comprovou os dois botões, ACK/readback e ausência de atribuição de Order já distribuído; regressão em memória após pull e elegibilidade de Orders foram corrigidas. `npm test` Restaurante passou; fixture `rotamoto_e2e` completou rollback sem resíduos. Permanecem por testar erro HTTP/sem permissão, clique duplo, concorrência simultânea, replay e apresentação no Motoboy. Não iniciar automaticamente a campanha seguinte. Preservar todos os demais IDs/aliases e as pendências de persistência/localização. Ver [REGISTRO 0289](REGISTROS/0289.md).
 
 ---
 

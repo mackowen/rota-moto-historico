@@ -1,0 +1,20 @@
+{
+  "campaign": "0289",
+  "runId": "a6619894-ff01-471f-9cb8-51d076800937",
+  "environment": "rotamoto_e2e",
+  "companySyntheticId": "01a161e3-0f3c-7628-a91d-ec9072994a15",
+  "status": "COMPLETED",
+  "databaseCommitted": false,
+  "cleanup": "COMPLETED",
+  "tenantScopedResiduals": {
+    "companies": 0,
+    "users": 0,
+    "auth_records": 0,
+    "memberships": 0,
+    "sessions": 0,
+    "domain_records": 0,
+    "sync_inbox": 0,
+    "sync_outbox": 0,
+    "audit_log": 0
+  }
+}
