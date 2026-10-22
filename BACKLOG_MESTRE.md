@@ -1,6 +1,18 @@
-## Estado vigente — Campanha 0294
+## Estado vigente — Campanha 0296
 
-0294 PARTIAL. E2E autenticado comprovou autosave/reload de Segurança local, Operação, Navegação e Origens em subset; perfil sintético orders.read criado/readback; Integrações lidas sem ação externa. Backup retorna 404 em rotamoto_e2e e fica BLOCKED_BY_CAPABILITY. RM-AUD19-02/10 permanecem PARTIAL global; RM-AUD19-18 permanece PARTIAL com evidência limitada. npm test Restaurante exit 0, fixture rollback sem resíduos. Ver REGISTRO 0294 e matriz funcional consolidada. Não iniciar 0295.
+0296 PARTIAL. Order manual sintético criado pela UI teve ACK/readback, persistiu no reload e abriu prévia correta. QR `CREATED` mostra requisito de atribuição/sync; cancelamento usa modal; cartões e QR passaram viewport 360/390/768 claro/escuro sem overflow. Correção de matching usa aliases canônicos, comparação de Company usa sessão ativa e readback; incidente real #1234 permanece não reproduzido. Retry/feedback de disponibilidade foi corrigido mas negativo de dispatch não foi testado via Browser. E2E fixture final COMPLETED, databaseCommitted=false, resíduos zero. `npm test` Restaurante PASS. RM-AUD19-02/10 globais, 03 cross-app e RM-AUD22-22 seguem PARTIAL. RM-AUD26-01/02 novos, PARTIAL. Ver [REGISTROS/0296](REGISTROS/0296.md) e [matriz funcional](EVIDENCIAS/0296/matriz-funcional.md). Não iniciar 0297.
+
+---
+
+## Estado histórico — Campanha 0295
+
+0295 PARTIAL; distribuição sequencial Restaurante→Motoboy passou após a correção de identidade do packet. Concorrência, replay, falhas HTTP e edição de Membership/Role pela UI permaneceram pendentes. Backup 404 era fallback sem handler; runtime devolveu 503 de capacidade não configurada. Ver [REGISTROS/0295](REGISTROS/0295.md).
+
+---
+
+## Estado histórico — Campanha 0294
+
+0294 PARTIAL. E2E autenticado comprovou autosave/reload de Segurança local, Operação, Navegação e Origens em subset; perfil sintético orders.read criado/readback; Integrações lidas sem ação externa. Backup retorna 404 em rotamoto_e2e e fica BLOCKED_BY_CAPABILITY. RM-AUD19-02/10 permanecem PARTIAL global; RM-AUD19-18 permanece PARTIAL com evidência limitada. npm test Restaurante exit 0, fixture rollback sem resíduos. Ver REGISTRO 0294 e matriz funcional consolidada.
 
 ---
 

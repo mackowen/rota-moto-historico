@@ -1,6 +1,12 @@
-## Estado vigente — execução 0295
+## Estado vigente — execução 0296
 
-0295 PARTIAL; PASS_SCOPE sequencial cross-app após correção Motoboy. Distribuição Restaurante por dois botões com ACK/readback e estado sem elegíveis; Motoboy exibiu duas corridas na UI autenticada e reload. `SYNC_PACKET_IDENTITY_MISMATCH` corrigido reutilizando ID capturado no ciclo, com regressão automatizada. Backup HTTP 404 de 0294 era fallback do harness sem handler; runtime reconhece a rota e retorna 503 `BACKUP_ADMIN_NOT_CONFIGURED`, BLOCKED_BY_CAPABILITY. Edição UI role/membership não foi coberta de novo; owner e operações User sem API permanecem protegidos. `npm test` Restaurante/Motoboy PASS. E2E transacional terminou COMPLETED, databaseCommitted=false, resíduos tenant-scoped zero. RM-AUD19-18 PARTIAL, RM-AUD22-22 PASS_SCOPE sequencial/PARTIAL global por concorrência e negativos, RM-AUD19-02/10 sem alteração. Ver [REGISTROS/0295.md](REGISTROS/0295.md) e [matriz](EVIDENCIAS/0295/matriz-funcional.md). Não iniciar campanha 0296.
+0296 PARTIAL, não iniciar 0297 automaticamente. Order manual sintético, ACK/readback, reload e preview Browser passaram; QR inelegível explicou o motivo; cancel dialog e cartões mobile 360/390/768 claro/escuro passaram no subset. Correção de lookup canônico e checagem tenant-aware foi feita, mas #1234 original não foi reproduzido. O erro inicial `403 CSRF_INVALID` no register installation foi seguido de retry autenticado 200; acompanhar se ocorrer fora da restauração E2E. Pendências objetivas: (1) reproduzir impressão/QR do pedido #1234 com cópia equivalente; (2) confirmar impressão/QR elegível e autorização tenant; (3) exercitar falhas/retry/concorrência de “Distribuir mais corridas” e chegada no Motoboy; (4) testar modal avançado, dados de data inválida e cancelamento canônico; (5) Chrome Android físico. Fixture final COMPLETED, databaseCommitted=false, resíduos zero; `npm test` Restaurante passou. Motoboy/browser-tests sem alterações. Ver [REGISTROS/0296](REGISTROS/0296.md) e [matriz](EVIDENCIAS/0296/matriz-funcional.md).
+
+---
+
+## Estado histórico — execução 0295
+
+0295 PARTIAL; PASS_SCOPE sequencial cross-app após correção Motoboy. Distribuição Restaurante por dois botões com ACK/readback e estado sem elegíveis; Motoboy exibiu duas corridas na UI autenticada e reload. `SYNC_PACKET_IDENTITY_MISMATCH` corrigido reutilizando ID capturado no ciclo. Backup HTTP 404 era fallback do harness, runtime 503 `BACKUP_ADMIN_NOT_CONFIGURED`. Concorrência/replay/negativos e UI User/Membership/Role pendentes. Ver [REGISTROS/0295.md](REGISTROS/0295.md).
 
 ---
 

@@ -1,0 +1,182 @@
+{
+  "campaign": "0296",
+  "runId": "97c31f43-b304-4562-8db9-69ba0f0c84f4",
+  "status": "PASS_SCOPE",
+  "scope": "synthetic manual order persistence, print preview, QR eligibility message and cancel modal UI",
+  "session": {
+    "mfaVerified": true
+  },
+  "qr": {
+    "state": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+    "visual": [
+      {
+        "width": 360,
+        "theme": "light",
+        "documentWidth": 360,
+        "clientWidth": 360,
+        "qrState": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+        "buttonVisible": true,
+        "screenshot": "qr-ineligible-360-light.png"
+      },
+      {
+        "width": 360,
+        "theme": "dark",
+        "documentWidth": 360,
+        "clientWidth": 360,
+        "qrState": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+        "buttonVisible": true,
+        "screenshot": "qr-ineligible-360-dark.png"
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "qrState": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+        "buttonVisible": true,
+        "screenshot": "qr-ineligible-390-light.png"
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "qrState": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+        "buttonVisible": true,
+        "screenshot": "qr-ineligible-390-dark.png"
+      },
+      {
+        "width": 768,
+        "theme": "light",
+        "documentWidth": 768,
+        "clientWidth": 768,
+        "qrState": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+        "buttonVisible": true,
+        "screenshot": "qr-ineligible-768-light.png"
+      },
+      {
+        "width": 768,
+        "theme": "dark",
+        "documentWidth": 768,
+        "clientWidth": 768,
+        "qrState": "QR disponível após atribuição e sincronização da entrega. O pedido permanece sem alteração.",
+        "buttonVisible": true,
+        "screenshot": "qr-ineligible-768-dark.png"
+      }
+    ]
+  },
+  "orderCardVisual": [
+    {
+      "width": 360,
+      "documentWidth": 360,
+      "clientWidth": 360,
+      "hasOrder": true,
+      "hasStatus": true,
+      "hasCustomer": true,
+      "customerText": "Cliente E2E Sintético\nRua Sintética, 296",
+      "customerWidth": 282,
+      "customerContentWidth": 282,
+      "customerWhiteSpace": "normal",
+      "actionsInViewport": true,
+      "theme": "light",
+      "screenshot": "order-card-360-light.png"
+    },
+    {
+      "width": 360,
+      "documentWidth": 360,
+      "clientWidth": 360,
+      "hasOrder": true,
+      "hasStatus": true,
+      "hasCustomer": true,
+      "customerText": "Cliente E2E Sintético\nRua Sintética, 296",
+      "customerWidth": 282,
+      "customerContentWidth": 282,
+      "customerWhiteSpace": "normal",
+      "actionsInViewport": true,
+      "theme": "dark",
+      "screenshot": "order-card-360-dark.png"
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "hasOrder": true,
+      "hasStatus": true,
+      "hasCustomer": true,
+      "customerText": "Cliente E2E Sintético\nRua Sintética, 296",
+      "customerWidth": 312,
+      "customerContentWidth": 312,
+      "customerWhiteSpace": "normal",
+      "actionsInViewport": true,
+      "theme": "light",
+      "screenshot": "order-card-390-light.png"
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "hasOrder": true,
+      "hasStatus": true,
+      "hasCustomer": true,
+      "customerText": "Cliente E2E Sintético\nRua Sintética, 296",
+      "customerWidth": 312,
+      "customerContentWidth": 312,
+      "customerWhiteSpace": "normal",
+      "actionsInViewport": true,
+      "theme": "dark",
+      "screenshot": "order-card-390-dark.png"
+    },
+    {
+      "width": 768,
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "hasOrder": true,
+      "hasStatus": true,
+      "hasCustomer": true,
+      "customerText": "Cliente E2E Sintético\nRua Sintética, 296",
+      "customerWidth": 664,
+      "customerContentWidth": 664,
+      "customerWhiteSpace": "normal",
+      "actionsInViewport": true,
+      "theme": "light",
+      "screenshot": "order-card-768-light.png"
+    },
+    {
+      "width": 768,
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "hasOrder": true,
+      "hasStatus": true,
+      "hasCustomer": true,
+      "customerText": "Cliente E2E Sintético\nRua Sintética, 296",
+      "customerWidth": 664,
+      "customerContentWidth": 664,
+      "customerWhiteSpace": "normal",
+      "actionsInViewport": true,
+      "theme": "dark",
+      "screenshot": "order-card-768-dark.png"
+    }
+  ],
+  "cancelDialog": {
+    "required": true,
+    "confirm": "Confirmar cancelamento",
+    "cancel": "Cancelar operação",
+    "nativePromptCalls": 0
+  },
+  "order": {
+    "localId": "ord_mvk01b63_vxg9fz",
+    "canonicalId": "01a16552-2feb-7677-ad33-f89ffa54cc61",
+    "companyId": "01a16551-de51-7ca1-b9fc-8b32ab392e4e",
+    "syncState": "synced",
+    "persistedAfterReload": true
+  },
+  "print": {
+    "preview": true,
+    "title": "Pedido #0296-MANUAL-SYNTH",
+    "toast": "",
+    "dialog": "PRÉVIA DA COMANDA\nPedido #0296-MANUAL-SYNTH\n\nRevise os dados antes de abrir a impressão do navegador.\n\nRotaMoto\nComanda #0296-MANUAL-SYNTH\n\nmanual · 2026-10-22 20:34 UTC (fuso da empresa não configurado)\n\nCLIENTE\n\nCliente E2E Sintético\n\nTelefone: 11900000296\n\nRua Sintética, 296\n\nOBSERVAÇÕES\n\nfixture campaign 0296\n\nTaxa de entrega\nR$ 0,00\nNORMAL\nAguardando\n\nQR não solicitado nesta configuração.\n\nCancelar\nImprimir"
+  },
+  "browserErrors": [],
+  "evidence": "/data/data/com.termux/files/usr/tmp/0296-mobile-cards-final",
+  "fixture": "transactional rotamoto_e2e; rolled back by fixture lifecycle"
+}

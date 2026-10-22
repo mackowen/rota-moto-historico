@@ -1,6 +1,18 @@
-# Estado vigente — Campanha 0294 (2026-10-22)
+# Estado vigente — Campanha 0296 (2026-10-22)
 
-**PARTIAL; PASS_SCOPE**: Browser E2E/MFA confirmou autosave local + reload para Operação (perKm, taxa mínima, arredondamento), dez atalhos de Navegação, nome local de origem e preferências locais de Segurança; perfil sintético orders.read criado/readback na UI. Integrações listadas sem conectar; backup indisponível (GET 404) e sem escrita. RM-AUD19-02/10 PARTIAL global; RM-AUD19-18 PARTIAL com evidência limitada de perfil; RM-AUD19-03 cross-app pendente. npm test Restaurante passou. Fixtures rotamoto_e2e completaram rollback, databaseCommitted=false, resíduos zero. Motoboy não alterado. Ver REGISTRO 0294, matriz consolidada EVIDENCIAS/0294. Não iniciar 0295.
+**PARTIAL; PASS_SCOPE no subset E2E.** Order manual sintético foi criado pela UI, recebeu ACK/readback, persistiu após reload e abriu prévia correta. QR de Delivery `CREATED` explica a elegibilidade; cancelamento usa modal com motivo; cartões/filtros passaram Browser em 360/390/768 claro/escuro sem overflow. Identidade/cross-ID local e session-scoped foi corrigida; incidente real #1234 não foi reproduzido nem acessado. RM-AUD19-02/10 permanecem PARTIAL globais; RM-AUD19-03 cross-app pendente; RM-AUD22-22 continua PARTIAL em negativos/concorrência/replay; novos RM-AUD26-01/02 PARTIAL. Distribuição bem-sucedida não foi repetida, Motoboy não alterado e impressão física Android pendente. `npm test` Restaurante PASS; fixture final `8b57d073-e38f-48e7-9efc-98e5d7afabc1` em `rotamoto_e2e`: COMPLETED, `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`. Ver [REGISTROS/0296](REGISTROS/0296.md), [matriz](EVIDENCIAS/0296/matriz-funcional.md) e [capturas](EVIDENCIAS/0296/).
+
+---
+
+## Estado histórico — Campanha 0295 (2026-10-22)
+
+0295 PARTIAL; PASS_SCOPE sequencial cross-app depois da correção `SYNC_PACKET_IDENTITY_MISMATCH` no Motoboy. Backup 404 foi atribuído ao harness sem handler; runtime reconhece a rota e retorna 503 `BACKUP_ADMIN_NOT_CONFIGURED`. User/Profile UI e negativos da distribuição permaneceram pendentes. Fixture rollback e resíduos zero. Ver [REGISTROS/0295](REGISTROS/0295.md).
+
+---
+
+## Estado histórico — Campanha 0294 (2026-10-22)
+
+**PARTIAL; PASS_SCOPE**: Browser E2E/MFA confirmou autosave local + reload para Operação (perKm, taxa mínima, arredondamento), dez atalhos de Navegação, nome local de origem e preferências locais de Segurança; perfil sintético orders.read criado/readback na UI. Integrações listadas sem conectar; backup indisponível (GET 404) e sem escrita. RM-AUD19-02/10 PARTIAL global; RM-AUD19-18 PARTIAL com evidência limitada de perfil; RM-AUD19-03 cross-app pendente. npm test Restaurante passou. Fixtures rotamoto_e2e completaram rollback, databaseCommitted=false, resíduos zero. Motoboy não alterado. Ver REGISTRO 0294, matriz consolidada EVIDENCIAS/0294.
 
 ---
 
@@ -1935,6 +1947,6 @@ Os outros 17 itens não foram declarados resolvidos: persistência por categoria
 0292 **PARTIAL**, PASS_SCOPE para nome, telefone, fuso e endereço Company via Browser autenticado. Corrigidos feedback apagado por render e projeção Logística de endereço sem coordenadas. ACK/readback, navegação/reload/aba independente e retry após 503 confirmados. `npm test` Restaurante passou. Outras seções, Motoboy e falhas restantes mantêm pendência; RM-AUD19-02/03/10 sem PASS_GLOBAL. Fixture `3caec691-f414-40e2-92b9-dc7f8c4a2d17`, `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [0292](REGISTROS/0292.md). Não iniciar 0293.
 
 
-## Estado vigente — Campanha 0295
+## Estado histórico — Campanha 0295
 
 **PARTIAL; PASS_SCOPE cross-app sequencial.** Restaurante executou “Distribuir” e “Distribuir mais corridas” pela UI com ACK/readback Delivery `ASSIGNED`; Motoboy exibiu ambas as corridas para a identidade autenticada e preservou após reload. Corrigido `SYNC_PACKET_IDENTITY_MISMATCH` fazendo `buildSyncPacket()` reutilizar o device ID capturado pelo ciclo; regressão específica passou. RM-AUD22-22 ainda depende de concorrência, replay/clique duplo e matriz negativa antes de fechar globalmente. O 404 de Backup 0294 veio do fallback do harness sem handler; servidor atual reconhece a rota e retorna 503 `BACKUP_ADMIN_NOT_CONFIGURED`, portanto permanece BLOCKED_BY_CAPABILITY. Edição UI de Role/Membership não foi refeita; RM-AUD19-18 PARTIAL, com operações de User/owner sem API autorizada. `npm test` Restaurante e Motoboy passou. Browser E2E final passou no fluxo sequencial e matriz visual; fixture `COMPLETED`, `databaseCommitted=false` e zero resíduos tenant-scoped. Alteração local de código Motoboy; sem publicação/deploy. Os quatro escopos proibidos e serviços oficiais não foram alterados. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0295.md](REGISTROS/0295.md), [matriz](EVIDENCIAS/0295/matriz-funcional.md) e evidências. Não iniciar 0296 automaticamente.

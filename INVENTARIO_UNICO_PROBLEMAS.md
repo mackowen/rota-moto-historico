@@ -1,4 +1,30 @@
-## Revisão vigente — Campanha 0294 (2026-10-22)
+## Revisão vigente — Campanha 0296 (2026-10-22)
+
+**PARTIAL; PASS_SCOPE no subset E2E.** Order manual sintético criado na UI recebeu ACK/readback, sobreviveu a navegação/reload e abriu prévia correta de impressão. QR em Delivery `CREATED` agora explica a elegibilidade sem emitir token; cancelamento usa modal de motivo. Cartões/filtros foram ajustados e verificados em 360/390/768 claro/escuro. Incidente real #1234 não foi acessado nem reproduzido em cópia equivalente. Nenhum PASS_GLOBAL atribuído; impressão física, QR elegível, tenant cruzado, distribuição com falhas/concorrência e interface Motoboy permanecem pendentes. Fixture final `rotamoto_e2e` COMPLETED, `databaseCommitted=false`, cleanup e resíduos zero. Ver [REGISTROS/0296](REGISTROS/0296.md) e [matriz](EVIDENCIAS/0296/matriz-funcional.md).
+
+| ID | Estado após 0296 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-01 | PASS_SCOPE local; sem PASS_GLOBAL | Tema Restaurante comprovado em 0293; Motoboy/cross-app/Android continuam pendentes. |
+| RM-AUD19-02 | PARTIAL | Sem teste de configurações nesta campanha; formulário de pedido e sincronização não fecha salvamento global de settings. |
+| RM-AUD19-03 | PARTIAL | Comparação Company cross-app não repetida; localização continua pendente em Logística/Frota/Motoboy. |
+| RM-AUD19-08 | PASS_SCOPE histórico; incidente novo PARTIAL | Teste de QR sintético CREATED mostrou motivo de elegibilidade; QR de entrega elegível e incidente do proprietário permanecem sem reprodução. |
+| RM-AUD19-10 | PARTIAL | Pedido sintético persistiu após reload; isso não prova persistência de todas as configurações editáveis. |
+| RM-AUD19-13 | PARTIAL; PASS_SCOPE limitado | Cartões de pedido e modal QR verificados em 360/390/768 claro/escuro; demais telas, safe areas físicas e feedback não testados. |
+| RM-AUD19-18 | PARTIAL / BLOCKED_BY_CAPABILITY | Evidência e limitações canônicas anteriores preservadas; sem teste de usuários/perfis nesta campanha. |
+| RM-AUD22-21 | PASS_SCOPE histórico; sem nova prova do modal de frota | Apenas a lista/card de pedido e modal QR receberam regressão visual nesta campanha. |
+| RM-AUD22-22 | PARTIAL | Retry/falha de disponibilidade recebeu tratamento de código/teste; clique duplo, simultaneidade, replay, erros e nova confirmação cross-app pendentes. |
+| RM-AUD26-01 | PARTIAL | Resolução local/canônica e acesso à prévia corrigidos; o `companyId` divergente do pedido real #1234 não foi reproduzido. |
+| RM-AUD26-02 | PARTIAL; PASS_SCOPE subset | Feedback do modal de cancelamento, datas inválidas e cartões tratados; modal avançado, dispatch negativo e validação física pendentes. |
+
+---
+
+## Revisão histórica — Campanha 0295 (2026-10-22)
+
+**PARTIAL; PASS_SCOPE sequencial de distribuição.** Distribuição UI Restaurante e apresentação Motoboy passaram no fluxo sequencial; falhas HTTP/concorrência/replay continuaram pendentes. Backup 404 foi atribuído ao harness sem handler; runtime tem 503 `BACKUP_ADMIN_NOT_CONFIGURED`. Ver [0295](REGISTROS/0295.md).
+
+---
+
+## Revisão histórica — Campanha 0294 (2026-10-22)
 
 **PARTIAL.** Testes funcionais Browser limitados por campo estão na matriz 0294. Nenhum PASS_GLOBAL atribuído. Backup BLOCKED_BY_CAPABILITY (404 no E2E); integração externa não acionada; permissões do owner respeitadas.
 
@@ -92,7 +118,7 @@ As ocorrências RM-AUD19-01..19 conservam descrições, aliases, estados e evid�
 | RM-AUD19-19 | P0 | Edição de motoboys; PASS_SCOPE/PHYSICAL_PENDING_OWNER | Driver Browser testado; confirmação física pendente. |
 | RM-AUD22-20 | P1 | **PASS_SCOPE técnico 0288**; correção Restaurante | Login UI+MFA, app pronto, reload/nova aba e Conta manual; TTL natural e Android pendentes. |
 | RM-AUD22-21 | P1 | **PASS_SCOPE técnico Browser 0289**; modal de corridas Restaurante | Filtros, status, spacing e rodapé corrigidos em 360/390/768 claro/escuro; sem overflow. Android físico pendente. |
-| RM-AUD22-22 | P0 | **PARTIAL 0289**; distribuição manual Restaurante | Ambos botões tiveram ACK/readback e feedback; atribuição existente e ausência de elegíveis são excluídas. HTTP failure/sem permissão, clique duplo, simultaneidade, replay e confirmação no Motoboy pendentes. |
+| RM-AUD22-22 | P0 | **PARTIAL 0289/0295/0296**; distribuição manual cross-app | 0295 comprovou fluxo sequencial Restaurante→Motoboy; 0296 impede seleção baseada em disponibilidade não confirmada e informa falha com retry, mas não injetou falha no Browser. HTTP errors, clique duplo, concorrência, replay e retry end-to-end continuam pendentes. |
 
 Sequência sugerida: proteger falhas P0 de persistência/localização (02/03/10), validar a ação funcional de distribuição (22), depois modal (21), sem perder os demais IDs. 0258 permanece BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Próxima campanha não foi iniciada.
 
@@ -244,12 +270,12 @@ A lista abaixo é a autoridade textual dos 19 problemas. Os IDs provisórios `RM
 | RM-AUD19-05 | Botão Central de Ajuda fora do padrão visual. | RM-D1-UX-CLARITY; RM-0256D1-VISUAL | PARTIAL / RECHECK | Browser visual autenticado por viewport/tema, incluindo foco e toque. |
 | RM-AUD19-06 | Caractere `}` isolado no laboratório. | RM-D1-UX-CLARITY; RM-0256D-LAB | PASS_SCOPE — Laboratório 99Food | Browser autenticado inspecionou DOM inteiro antes/depois de processar pedido/evento sintético; nenhum nó de texto isolado `}`. Revalidar outros simuladores e Chrome Android físico antes do fechamento geral. REGISTROS/0265.md. |
 | RM-AUD19-07 | Tela de login aparece brevemente durante atualização. | RM-D1-AUTH-RESUME; RM-0256B-AUTH | PARTIAL; F corrigiu exceção de fechamento após MFA, mas não mediu reload com sessão válida/rede lenta | Reload com sessão sintética válida e rede lenta, medindo que painel/login não pisquem; CDP não encerra confirmação Android. |
-| RM-AUD19-08 | QR Code vazio na comanda de teste. | RM-D1-PRINT-QR; RM-0256D1-PRINT-QR | PASS_SCOPE; PENDING_OWNER físico | Unitário e Browser/CDP confirmaram QR sintético decodificado no documento de impressão antes do diálogo; proprietário confirma a prévia/impressão Android. |
+| RM-AUD19-08 | QR Code vazio na comanda de teste. | RM-D1-PRINT-QR; RM-0256D1-PRINT-QR | PASS_SCOPE histórico; PENDING_OWNER físico | Unitário/Browser anteriores confirmaram QR sintético de impressão. Em 0296, uma entrega CREATED recebeu explicação de elegibilidade; QR assinado para estado elegível e reprodução do relato #1234 seguem pendentes. |
 | RM-AUD19-09 | Explicações confusas em Origem dos pedidos. | RM-0256D-ORDER-SOURCES; RM-D1-UX-CLARITY | PASS_SCOPE — texto/DOM da página | Browser autenticado confirmou distinção explícita de origem local, conta/estado de plataforma e responsável da entrega; nenhuma regra de dispatch foi alterada. E2E visual/físico adicional permanece para fechamento total. REGISTROS/0265.md. |
 | RM-AUD19-10 | Configurações alteradas não persistem. | RM-D1-SETTINGS-SAVE | PARTIAL — persistência por campo permanece incompleta. 0295 sem prova nova de settings; npm test de ambos passou, mas isso não fecha o ciclo Browser/readback global. | Manter matriz campo a campo, APIs restantes, erros/retry da UI e validação física; não fechar por `npm test`. Ver 0275–0295. |
 | RM-AUD19-11 | Auditoria administrativa incompleta. | RM-D1-ADMIN-AUDIT; RM-0255-GLOBAL-UI | BLOCKED_PERMISSION_MODEL | Papel/endpoint tenant-scoped, filtros/paginação/redação/exportação autorizada; sem GRANT/migration oficial nesta campanha. |
 | RM-AUD19-12 | Sessão encerrada prematuramente ao voltar ao aplicativo. | RM-D1-AUTH-RESUME; RM-0234-IDENTITY-EXTERNAL | PARTIAL; PENDING_OWNER_PHYSICAL | Background/foreground no Chrome Android após período reportado, rede e idle conforme política; nunca prolongar sessão por workaround. |
-| RM-AUD19-13 | Espaçamentos, cards e bordas inconsistentes. | RM-D1-UX-CLARITY; RM-D1-REPORTS-VISUAL; RM-D1-MOBILE-FEEDBACK | PARTIAL; toast PASS_SCOPE | 0267 arquivou capturas de Relatórios em 5 viewports × 2 temas e estados de dados/vazio, sem overflow horizontal do documento; percepção física, safe area, espaçamento e demais páginas continuam abertos. Ver REGISTROS/0267.md e EVIDENCIAS/0267-reports. |
+| RM-AUD19-13 | Espaçamentos, cards e bordas inconsistentes. | RM-D1-UX-CLARITY; RM-D1-REPORTS-VISUAL; RM-D1-MOBILE-FEEDBACK | PARTIAL; toast e cartões PASS_SCOPE limitados | 0267: Relatórios em 5 viewports × 2 temas. 0296: cartões/filtros Orders em 360/390/768 claro/escuro sem overflow e com cliente/endereço em linha própria. Safe area física, telas restantes e percepção no Chrome Android continuam pendentes. Ver EVIDENCIAS/0296. |
 | RM-AUD19-14 | Instruções de cadastro MFA aparecem quando já está ativo. | RM-D1-MFA-STATE | PARTIAL | Estado ativo autenticado não mostra onboarding nem segredo; cobertura sintética e recuperação autorizada. |
 | RM-AUD19-15 | Hierarquia visual inadequada nos modais do laboratório. | RM-D1-UX-CLARITY; RM-0256D-LAB | PARTIAL / RECHECK | Modal em cinco larguras e dois temas, hierarquia/foco/rolagem sem overflow. |
 | RM-AUD19-16 | Excesso de bordas nas permissões por função. | RM-D1-UX-CLARITY; RM-0256C-TEAM-RBAC | PARTIAL / RECHECK | Perfil permitido e protegido sem bordas redundantes; permissões e acessibilidade preservadas. |
@@ -608,6 +634,17 @@ RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem *
 
 RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY permanecem **PARTIAL**. PUT/readback de endereço e localização/sync no IndexedDB Motoboy foram confirmados; a tela Motoboy após reload, matriz visual e cenários Browser de falha/concorrência/tenant não foram. A ausência de PUT em 0280 foi causada pelo helper CDP sem clique DOM efetivo, não reclassificar defeito do formulário. Todos os demais RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME e aliases preservam status. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver REGISTROS/0281.md.
 
+
+## Atualização 0296 — integridade de corridas e UX mobile
+
+RM-AUD26-01/PARTIAL acompanha a divergência relatada entre pedido manual #1234, listagem, impressão e QR; o proprietário não foi acessado e o Browser usou Order sintético. Foi corrigida a busca de Delivery por IDs local/canônico e a comparação de tenant prefere Company da sessão/Order canônico; o Browser sintético validou ACK/readback/reload/prévia, sem reproduzir a recusa original. RM-AUD26-02/PARTIAL agrega feedback do dispatch indisponível, fallback `Invalid Date`, cancelamento por modal e composição mobile; as partes exercitadas têm PASS_SCOPE limitado, não fechamento global. Cartões Orders foram vistos em 360/390/768 claro/escuro; demais modais/cross-app/físico pendentes. Matriz e capturas em EVIDENCIAS/0296.
+
+Novos IDs vinculados (sem substituir as 22 ocorrências históricas):
+
+| ID novo | Sintomas deduplicados | Estado | Evidência e pendência |
+|---|---|---|---|
+| RM-AUD26-01 | Order manual visível após reload mas impressão recusa Company ativa; QR indisponível | PARTIAL | Resolução local/canônica e feedback de QR CREATED corrigidos. Reproduzir cópia equivalente da falha Company, testar QR assinado elegível, identidade cross-tenant e Chrome Android. |
+| RM-AUD26-02 | Distribuir mais corridas sem reação em falha, data inválida, texto comprimido e cancelamento nativo | PARTIAL | Falha de disponibilidade agora explica e oferece retry; fallback de data, modal reason e cartão mobile implementados. Browser testou modal sem confirmar cancelamento e apenas estado vazio QR; modal avançado, dispatch negativo e Android físico pendentes. |
 
 ## Atualização 0295 — Equipe, Backup e distribuição
 
