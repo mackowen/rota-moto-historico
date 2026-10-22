@@ -1,0 +1,13 @@
+{
+  "campaign": "0289",
+  "environment": "rotamoto_e2e",
+  "manifestCount": 23,
+  "statusCounts": {
+    "COMPLETED": 3,
+    "FAILED": 20
+  },
+  "allDatabaseCommittedFalse": true,
+  "allTenantScopedResidualsZero": true,
+  "failedRuns": "Runner preparation/assertion iterations; not functional PASS evidence",
+  "functionalPassRunId": "a6619894-ff01-471f-9cb8-51d076800937"
+}
