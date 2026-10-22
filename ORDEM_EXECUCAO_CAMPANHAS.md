@@ -1,4 +1,10 @@
-## Atualização vigente — 0287
+## Atualização vigente — 0288
+
+0288 terminou **PASS_SCOPE para RM-AUD22-20**: login UI/MFA autenticado foi reproduzido, `app-ready` desalinhado corrigido, home exposta durante sync pendente e navegação manual/retomada/revogação verificadas. Regressões Browser e `npm test` Restaurante passaram; fixture completou rollback e zero resíduos. Não iniciar automaticamente a campanha seguinte. Próximo trabalho planejado, sem execução nesta campanha: RM-AUD22-22 (botões Distribuir sem efeito perceptível; confirmar contrato e resultado funcional) e RM-AUD22-21 (modal de corridas, espaçamento e seletor cortado). Manter demais IDs/aliases no inventário, sobretudo pendências de salvamento e localização. Ver [REGISTRO 0288](REGISTROS/0288.md).
+
+---
+
+## Atualização histórica — 0287
 
 0287 terminou **PARTIAL**, focada no Motoboy: sessão sintética autenticada, pull Company, abort/recovery IndexedDB, endereço sem coordenadas, rejeição de snapshots inválidos/obsoletos/estrangeiros e matriz visual 360/390/768 claro/escuro passaram no escopo descrito. `npm test` Motoboy passou; fixture `rotamoto_e2e` rollback concluído e resíduos zero. Permanecem pendentes segunda sessão Browser, falhas de sync/IndexedDB adicionais, duplicação e verificação cross-tenant backend explícita. No Restaurante permanecem timeout persistente, ACK/readback divergente, concorrência simultânea e isolamento adicional. Nenhum problema cumulativo foi encerrado. Ver [REGISTROS/0287.md](REGISTROS/0287.md). Próxima campanha não iniciada.
 

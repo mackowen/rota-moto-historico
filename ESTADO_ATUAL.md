@@ -1,4 +1,10 @@
-# Estado vigente — Campanha 0287 (2026-10-22)
+# Estado vigente — Campanha 0288 (2026-10-22)
+
+**PASS_SCOPE para RM-AUD22-20.** Login real pelo formulário do Restaurante, MFA sintética verificada e sessão backend-issued reproduziram a Conta cobrindo a home enquanto sync estava pendente. Causa: bootstrap emite `rotamoto:app-ready` em `window`, mas a UI aguardava em `document`; o fechamento ocorria apenas depois da sincronização. Listener alinhado ao alvo e fechamento no sinal de app pronto; Conta manual retorna à rota anterior. Reload e nova aba restauraram a sessão; logout/revogação levou ao login. Browser autenticado validou home/Conta em 360/390/768 claro/escuro; regressões e `npm test` Restaurante passaram. Expiração natural por TTL e Android físico não foram testados. Fixture `1cdc37ef-fd88-4754-bdb3-ffd21c2e3f1f`, `rotamoto_e2e`, `databaseCommitted=false`, cleanup COMPLETED, resíduos tenant-scoped zero. RM-AUD22-21/22 continuam OPEN; nenhum problema global encerrado. RM-AUD19-01..19, aliases, RM-UI-ACCOUNT-TOPBAR e RM-D1-AUTH-RESUME preservados. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0288](REGISTROS/0288.md) e [evidências](EVIDENCIAS/0288/).
+
+---
+
+# Estado histórico — Campanha 0287 (2026-10-22)
 
 **PARTIAL.** Motoboy autenticado por sessão backend-issued com MFA; sync/pull trouxe Company revisões 1→2, IndexedDB preservou a revisão válida após abort transacional e recuperou por retry/reload. Ajustes renderizou endereço com latitude/longitude `null`; snapshots foreign, stale e inválido não substituíram dados válidos. Browser visual passou 360/390/768 em claro/escuro, sem overflow; `npm test` Motoboy passou. Fixture `37575245-2242-44f4-bbae-e014d87dd014`, `rotamoto_e2e`, `databaseCommitted=false`, cleanup COMPLETED, resíduos tenant-scoped zero. Segunda sessão independente, demais falhas de IndexedDB/sync, duplicação e cross-tenant backend explícito permanecem pendentes; nenhum problema cumulativo global foi encerrado. Motoboy sem alteração de código. Android físico pendente; 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0287](REGISTROS/0287.md) e [evidências](EVIDENCIAS/0287/).
 

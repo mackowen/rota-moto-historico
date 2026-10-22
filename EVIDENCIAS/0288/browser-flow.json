@@ -1,0 +1,31 @@
+{
+  "campaign": "0288",
+  "application": "restaurante",
+  "browser": "Chromium via CDP",
+  "authentication": {
+    "formLogin": true,
+    "mfaChallenge": "HTTP 403 before valid TOTP",
+    "mfaVerifiedLogin": "HTTP 200",
+    "backendSession": "HTTP 200 after login/reload/new tab",
+    "sessionRevocation": "HTTP 204 logout; subsequent session HTTP 401",
+    "initialUnauthenticatedSessionRead": "HTTP 401 before cookie"
+  },
+  "beforeFix": {
+    "syncPullHeld": true,
+    "appMountedBehindAccount": true,
+    "accountCoveredHome": true
+  },
+  "afterFix": {
+    "homeVisibleBeforeSyncCompletes": true,
+    "accountClosedAfterAppReady": true,
+    "reloadRestoresSessionWithoutAccountOverlay": true,
+    "newTabRestoresSessionWithoutAccountOverlay": true,
+    "manualAccountOpen": true,
+    "closeReturnsToPreviousRoute": true,
+    "revokedSessionReturnsToLogin": true,
+    "javascriptErrors": 0,
+    "horizontalOverflow": false,
+    "visualChecks": 12
+  },
+  "notTested": ["natural TTL expiry", "physical Android Chrome"]
+}

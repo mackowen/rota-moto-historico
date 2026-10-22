@@ -1,4 +1,41 @@
-## Revisão vigente — Campanha 0287 (2026-10-22)
+## Revisão vigente — Campanha 0288 (2026-10-22)
+
+**PASS_SCOPE restrito a RM-AUD22-20.** Browser autenticado com login pelo formulário e MFA válida reproduziu Conta RotaMoto cobrindo a home enquanto o sync permanecia pendente. Causa: `app-ready` era publicado em `window` e aguardado em `document`; fechamento dependia do sync completo. Corrigido no Restaurante e testado em login, reload, nova aba, navegação explícita para Conta e Fechar; sessão revogada voltou ao login. Browser visual home/Conta 360/390/768 claro/escuro e `npm test` Restaurante passaram. TTL natural e Android físico não testados. Fixture `1cdc37ef-fd88-4754-bdb3-ffd21c2e3f1f` COMPLETED, `databaseCommitted=false`, zero resíduos tenant-scoped. RM-AUD22-21/22 OPEN; problemas globais antigos não reclassificados. Ver [REGISTRO 0288](REGISTROS/0288.md).
+
+### Plano cumulativo das 22 ocorrências
+
+As ocorrências RM-AUD19-01..19 conservam descrições, aliases, estados e evidências na tabela abaixo; esta matriz apenas organiza prioridade, dependência e próximo tipo de prova, sem renumerar nem encerrar itens.
+
+| Ocorrência | Prioridade | Situação / dependência | Evidência ou próximo passo |
+|---|---:|---|---|
+| RM-AUD19-01 | P1 | Tema não persiste após reload; preserva PARTIAL conforme linha original | Reload/reinício e fonte gravada; critério original preservado. |
+| RM-AUD19-02 | P0 | Botão Salvar/settings; PARTIAL | Formulários restantes, falhas, ACK/readback e reload. |
+| RM-AUD19-03 | P0 | Latitude/longitude em Logística; PARTIAL | DOM comparativo, origem, sync, reload e Android físico. |
+| RM-AUD19-04 | P0 | QR de cadastro MFA; PARTIAL | Enrollment sintético e QR decodificável; MFA real intocada. |
+| RM-AUD19-05 | P2 | Central de Ajuda fora do padrão; PARTIAL/RECHECK | Browser autenticado, viewport, foco e toque. |
+| RM-AUD19-06 | P1 | `}` isolado no laboratório; PASS_SCOPE limitado | Revalidar outros simuladores e Android físico. |
+| RM-AUD19-07 | P0 | Login pisca durante atualização; PARTIAL | 0288 validou login e reload; rede lenta/Android físico ainda pendentes. |
+| RM-AUD19-08 | P1 | QR vazio em comanda; PASS_SCOPE, físico pendente | Prévia/impressão confirmada pelo proprietário. |
+| RM-AUD19-09 | P1 | Explicações em Origem dos pedidos; PASS_SCOPE textual | E2E visual/físico adicional conforme aceite original. |
+| RM-AUD19-10 | P0 | Configurações não persistem; PARTIAL | Matriz integral por campo, erros/retry e validação física. |
+| RM-AUD19-11 | P0 | Auditoria administrativa; BLOCKED_PERMISSION_MODEL | Modelo tenant-scoped; sem GRANT/migration oficial. |
+| RM-AUD19-12 | P0 | Sessão encerra ao voltar ao app; PARTIAL/PENDING_OWNER | Background/foreground e política real em Android. |
+| RM-AUD19-13 | P2 | Espaçamento/cards/bordas; PARTIAL | Demais páginas, safe area e percepção física. |
+| RM-AUD19-14 | P0 | Instruções MFA aparecem com fator ativo; PARTIAL | Browser sintético estado ativo e recovery autorizada. |
+| RM-AUD19-15 | P2 | Hierarquia modal laboratório; PARTIAL/RECHECK | Modal em larguras/temas, foco e rolagem. |
+| RM-AUD19-16 | P2 | Bordas em permissões por função; PARTIAL/RECHECK | UI e acessibilidade preservando permissões. |
+| RM-AUD19-17 | P1 | Linguagem técnica nas integrações; PARTIAL_EXTERNAL | Sandbox/onboarding e feedback em contexto; sem credencial não provada. |
+| RM-AUD19-18 | P0 | Edição owner/usuários/perfis; PARTIAL/BLOCKED_BY_CAPABILITY | Endpoint autorizado para identidade canônica/global. |
+| RM-AUD19-19 | P0 | Edição de motoboys; PASS_SCOPE/PHYSICAL_PENDING_OWNER | Driver Browser testado; confirmação física pendente. |
+| RM-AUD22-20 | P1 | **PASS_SCOPE técnico 0288**; correção Restaurante | Login UI+MFA, app pronto, reload/nova aba e Conta manual; TTL natural e Android pendentes. |
+| RM-AUD22-21 | P1 | OPEN; Motoboy | Reproduzir modal de corridas em 360/390/768, corrigir espaçamento/seletor status. Não testado em 0288. |
+| RM-AUD22-22 | P0 | OPEN; Motoboy e contrato de distribuição | Comprovar ação/feedback/API e ownership dos botões Distribuir; não testado em 0288. |
+
+Sequência sugerida: proteger falhas P0 de persistência/localização (02/03/10), validar a ação funcional de distribuição (22), depois modal (21), sem perder os demais IDs. 0258 permanece BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Próxima campanha não foi iniciada.
+
+---
+
+## Revisão histórica — Campanha 0287 (2026-10-22)
 
 **PARTIAL.** No Motoboy, Browser autenticado comprovou sync Company, persistência IndexedDB e renderização do endereço sem coordenadas; falha transacional preservou snapshot anterior e retry/reload recuperou revisão 2. Snapshots foreign/stale/inválido foram rejeitados sem substituir estado válido. Matriz Browser Ajustes 360/390/768 claro/escuro e `npm test` Motoboy passaram. Fixture com rollback COMPLETED, `databaseCommitted=false`, resíduos zero. Não encerrar RM-AUD19-03/10 ou RM-D1-LOCATION-CONSISTENCY; demais IDs e aliases preservados. Segunda sessão, falhas de sync adicionais e cross-tenant backend explícito seguem pendentes; 0258 BLOCKED_AUTHORIZATION, ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0287](REGISTROS/0287.md).
 

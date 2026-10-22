@@ -1,4 +1,10 @@
-## Atualização vigente — campanha 0287 — Motoboy IndexedDB/sync
+## Atualização vigente — campanha 0288 — navegação pós-login Restaurante
+
+**PASS_SCOPE somente para RM-AUD22-20.** Corrigida a divergência do evento de app pronto que mantinha Conta RotaMoto cobrindo o painel após login UI/MFA. Browser comprovou MFA backend-issued, home durante sync pendente, reload/nova aba, abertura/fechamento manual e logout/revogação. Regressões e `npm test` Restaurante passaram; fixture concluída com zero resíduos. RM-AUD22-21 (modal Motoboy) e RM-AUD22-22 (Distribuir) permanecem OPEN e são a próxima prioridade funcional. As 19 ocorrências originais, aliases e estados parciais permanecem; problemas de persistência/localização não foram encerrados. Plano e classificação cumulativa em [inventário](INVENTARIO_UNICO_PROBLEMAS.md). Ver [REGISTRO 0288](REGISTROS/0288.md).
+
+---
+
+## Atualização histórica — campanha 0287 — Motoboy IndexedDB/sync
 
 0287 terminou **PARTIAL**. Snapshot Company de revisão 1→2 foi sincronizado, persistido e renderizado; abort IndexedDB manteve o estado válido e retry/reload recuperou a revisão nova. Endereço sem coordenadas permaneceu válido; snapshots de tenant/revisão/payload inválidos não sobrescreveram os dados. Browser autenticado passou seis combinações viewport/tema; `npm test` Motoboy passou; cleanup fixture foi COMPLETED sem resíduos. Permanecem no backlog segunda sessão independente, outros tipos de falha IndexedDB/pull, snapshot duplicado e isolamento cross-tenant backend explícito. Cenários Restaurante de timeout persistente, ACK/readback divergente, concorrência simultânea e isolamento adicional continuam pendentes. Nenhum estado global encerrado. Ver [REGISTRO 0287](REGISTROS/0287.md).
 
