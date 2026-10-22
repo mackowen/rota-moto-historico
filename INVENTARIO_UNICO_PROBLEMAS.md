@@ -1,6 +1,10 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-22 · Inventário cumulativo; campanha vigente 0284 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-22 · Inventário cumulativo; campanha vigente 0285 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+
+### Atualização da campanha 0285
+
+**PARTIAL.** `RM-D1-SETTINGS-SAVE`: Browser/CDP autenticado com sessão backend-issued reproduziu reload durante PUT de localização pendente; o rascunho era substituído pelo GET canônico porque o dirty state era apenas memória. Restaurante agora persiste marcador `pending`, preserva divergência no reload e reconcilia somente por leitura canônica; Browser confirmou rascunho no DOM e IndexedDB, backend inalterado e sem falso sucesso. Testes direcionados, CDP lifecycle/interação e `npm test` Restaurante passaram. Sessão E2E retornou 200/MFA verificada após reload. Retifica-se a hipótese de incompatibilidade de campos do fixture: email/senha sintéticos existem. A causa exata do 401 anterior, login pela UI/MFA, negativos persistentes, IndexedDB faults, concorrência e cross-tenant continuam sem comprovação. Motoboy sem alteração. Fixture rollback COMPLETED, `databaseCommitted=false`, resíduos tenant-scoped zero. Nenhum estado global encerrado: RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE, RM-D1-LOCATION-CONSISTENCY e RM-D1-AUTH-RESUME seguem PARTIAL; demais IDs/aliases preservados. Ver [REGISTRO 0285](REGISTROS/0285.md) e [evidência](EVIDENCIAS/0285/browser-reload-pending.json).
 
 ### Atualização da campanha 0284
 

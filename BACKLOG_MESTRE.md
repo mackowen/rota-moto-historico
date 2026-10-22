@@ -1,4 +1,8 @@
-## Atualização vigente — campanha 0284 — estabilização Browser e persistência
+## Atualização vigente — campanha 0285 — autenticação e rascunho pendente
+
+**PARTIAL.** Corrigida e coberta por regressão a perda do rascunho de endereço no reload durante PUT pendente (marcador local persistente e reconciliação por GET canônico); Browser autenticado comprovou rascunho DOM/IndexedDB preservado e ausência de falso sucesso. `npm test` Restaurante e lifecycle/interação CDP passaram. Sessão backend-issued foi válida (200, MFA verificada), porém login/MFA via formulário UI e causa exata do 401 registrado em 0284 continuam em aberto. Falhas persistentes, IndexedDB fault injection, concorrência, isolamento e Motoboy não foram revalidados; sem mudança de código Motoboy/runner. Não encerrar IDs cumulativos. Fixture revertida sem resíduos. Ver [REGISTRO 0285](REGISTROS/0285.md).
+
+## Atualização histórica — campanha 0284 — estabilização Browser e persistência
 
 **PARTIAL.** O helper Browser/CDP passou testes direcionados e smoke com Chromium real: limite de Runtime.evaluate, lifecycle do frame principal e cleanup. A sessão da tentativa funcional respondeu 401, antes do formulário; falhas persistentes, reload pendente, IndexedDB, concorrência simultânea e isolamento Browser continuam pendentes. Fixture E2E reconciliada com `databaseCommitted=false` e resíduos tenant-scoped zero. Sem alterações de aplicação e sem reclassificação global. Priorizar retomada de autenticação E2E pelo mecanismo de sessão autorizado existente e depois executar os negativos sem repetir os positivos 0280–0282. Ver [REGISTRO 0284](REGISTROS/0284.md).
 

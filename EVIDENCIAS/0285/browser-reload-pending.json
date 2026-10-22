@@ -1,0 +1,42 @@
+{
+  "campaign": "0285",
+  "scenario": "restaurant-company-address-reload-during-pending-put",
+  "browser": "Chromium headless via CDP",
+  "authentication": {
+    "source": "HttpOnly session cookie issued by the authenticated E2E fixture backend",
+    "sessionEndpointStatus": 200,
+    "mfaVerified": true,
+    "uiLoginFormFlowProven": false
+  },
+  "companyId": "01a16138-4138-7b5b-86d7-dd2bc6051f4a",
+  "before": {
+    "canonicalAddress": "Rua 0284 Canônica, São Paulo - SP",
+    "draftAddress": "Rua 0284 Rascunho Pendente, São Paulo - SP"
+  },
+  "operation": {
+    "request": "PUT /api/admin/company/location",
+    "requestHeldByE2EProxy": true,
+    "reload": {
+      "mainFrameLoadObserved": true,
+      "expectedDocumentStateObserved": true,
+      "sessionAuthenticatedAfterReload": true,
+      "beforeUnloadDialogAccepted": true,
+      "clientConnectionClosed": true
+    },
+    "acknowledgement": "not received; request remained pending and client closed it"
+  },
+  "after": {
+    "addressRenderedInDom": "Rua 0284 Rascunho Pendente, São Paulo - SP",
+    "addressStoredInIndexedDb": "Rua 0284 Rascunho Pendente, São Paulo - SP",
+    "canonicalBackendAddress": "Rua 0284 Canônica, São Paulo - SP",
+    "draftPreserved": true,
+    "falseSuccess": false
+  },
+  "fixture": {
+    "database": "rotamoto_e2e",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantScopedResiduals": 0
+  },
+  "sanitization": "No credentials, session cookie, MFA secret, or personal data included."
+}
