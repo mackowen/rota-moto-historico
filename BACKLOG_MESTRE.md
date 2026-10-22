@@ -1,4 +1,8 @@
-## Atualização vigente — campanha 0283 — falhas, concorrência e segurança
+## Atualização vigente — campanha 0284 — estabilização Browser e persistência
+
+**PARTIAL.** O helper Browser/CDP passou testes direcionados e smoke com Chromium real: limite de Runtime.evaluate, lifecycle do frame principal e cleanup. A sessão da tentativa funcional respondeu 401, antes do formulário; falhas persistentes, reload pendente, IndexedDB, concorrência simultânea e isolamento Browser continuam pendentes. Fixture E2E reconciliada com `databaseCommitted=false` e resíduos tenant-scoped zero. Sem alterações de aplicação e sem reclassificação global. Priorizar retomada de autenticação E2E pelo mecanismo de sessão autorizado existente e depois executar os negativos sem repetir os positivos 0280–0282. Ver [REGISTRO 0284](REGISTROS/0284.md).
+
+## Atualização histórica — campanha 0283 — falhas, concorrência e segurança
 
 **PARTIAL.** `npm test` de ambos os aplicativos passou. Browser/CDP autenticado injetou HTTP 400/401/403/409/500/503 no PUT de localização e confirmou retenção do rascunho e ausência de alteração canônica; conexão interrompida recuperou por nova tentativa com readback. API E2E confirmou 401/403, rejeição de revisão obsoleta 409 e proteção contra o payload cross-tenant testado. Fixture revertida (`databaseCommitted=false`, resíduos tenant-scoped zero). Oito runs Browser com estado FAILED no harness também terminaram com rollback e zero resíduo. Não houve correção de produção nem fechamento de problema global. Reload durante gravação, concorrência simultânea, timeout/readback/ACK divergente, IndexedDB e visual autenticado continuam abertos. Preservar RM-AUD19-01..19, RM-UI-ACCOUNT-TOPBAR, RM-D1-AUTH-RESUME e os aliases; RM-AUD19-02/03/10 e RM-D1-SETTINGS-SAVE/RM-D1-LOCATION-CONSISTENCY seguem PARTIAL. Ver [REGISTRO 0283](REGISTROS/0283.md) e [evidência](EVIDENCIAS/0283/api-security-concurrency.json).
 

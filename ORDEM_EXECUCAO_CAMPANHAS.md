@@ -1,4 +1,8 @@
-## Atualização da execução — 0283
+## Atualização vigente — 0284
+
+0284 terminou **PARTIAL**. O runner CDP agora tem timeout/cancelamento de avaliação, correlação de reload pelo frame principal, autenticação observável e fechamento de Chromium/perfil temporário. Regressões unitárias e smoke com Chromium real passaram. A fixture funcional retornou 401 em `/api/identity/session` antes da tela de configurações; a matriz de persistência, IndexedDB, concorrência simultânea e tenant Browser não foi executada. Fixture reconciliada com `databaseCommitted=false`, cleanup COMPLETED e resíduos tenant-scoped zero. Sem alteração de apps. Próxima execução desta pendência deve reutilizar a sessão sintética autorizada via harness, confirmar API da sessão antes de interagir e então executar somente cenários negativos restantes. Ver [REGISTRO 0284](REGISTROS/0284.md). Não iniciar 0285 automaticamente.
+
+## Atualização histórica da execução — 0283
 
 0283 terminou **PARTIAL**. `npm test` Restaurante/Motoboy passou; API E2E confirmou stale revision 409, RBAC 401/403, rejeição de payload cross-tenant e rollback sem resíduos. Browser autenticado passou as falhas injetadas 400/401/403/409/500/503 no PUT Company com rascunho preservado; a conexão interrompida foi recuperada por nova tentativa e readback. Reload pendente, falhas persistentes de GET/ACK/timeout, concorrência simultânea, IndexedDB e testes visuais autenticados permanecem pendentes. Nenhum código de app foi alterado; problemas cumulativos permanecem nos estados anteriores. 0258 continua BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0283.md](REGISTROS/0283.md). 0284 não iniciada.
 

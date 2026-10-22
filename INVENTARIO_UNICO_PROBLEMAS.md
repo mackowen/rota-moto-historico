@@ -1,12 +1,14 @@
 # Inventário único de problemas RotaMoto
 
-**Revisão:** 2026-10-21 · Inventário cumulativo; campanha vigente 0283 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+**Revisão:** 2026-10-22 · Inventário cumulativo; campanha vigente 0284 · **Autoridade de estado:** evidência do registro mais recente por item. Este inventário não muda estado por inferência, campanha concluída ou sucesso isolado de `npm test`.
+
+### Atualização da campanha 0284
+
+**PARTIAL.** O runner CDP foi corrigido para limitar `Runtime.evaluate`, encerrar execução de página pendente, correlacionar `Page.lifecycleEvent` com o frame principal e liberar listeners/Chromium/perfil temporário. Testes unitários do helper e smoke com Chromium local passaram. A tentativa E2E 0284 foi interrompida antes do formulário: `/api/identity/session` retornou 401; logo, reload durante salvamento, falhas persistentes, IndexedDB, concorrência simultânea e isolamento Browser não foram comprovados. Fixture interrompida `3d33e3c0-b8b3-4742-a723-a82076f54179` foi reconciliada por leitura tenant-scoped em `rotamoto_e2e`: zero Company/users/auth_records/memberships/sessions/domain_records/sync inbox/outbox/audit; `databaseCommitted=false`, cleanup `COMPLETED`. Sem alterações em apps e sem mudança de estado dos problemas globais. Ver [REGISTRO 0284](REGISTROS/0284.md) e [evidência](EVIDENCIAS/0284/cdp-runner-and-fixture.json).
 
 ### Atualização da campanha 0283
 
 **PARTIAL.** API E2E autenticada confirmou revisão obsoleta rejeitada (200/409), 401 sem sessão, 403 sem `company.manage`, rejeição de payload com Company estrangeira e preservação do tenant A. Browser real injetou 400/401/403/409/500/503 no PUT canônico; rascunho foi mantido e GET confirmou que o servidor não mudou. Conexão interrompida recebeu retry que concluiu com ACK/readback. `npm test` de ambos passou. Fixture completada com `databaseCommitted=false` e resíduos tenant-scoped zero. Reload durante gravação, timeout persistente, falha de readback/ACK, concorrência simultânea, falhas IndexedDB e matriz visual autenticada não foram comprovados. Sem correção de aplicação e sem reclassificação dos problemas globais: RM-AUD19-02/03/10, RM-D1-SETTINGS-SAVE e RM-D1-LOCATION-CONSISTENCY continuam PARTIAL; demais IDs/aliases permanecem íntegros. Detalhes e evidência: [REGISTRO 0283](REGISTROS/0283.md), [JSON](EVIDENCIAS/0283/api-security-concurrency.json).
-
-### Atualização da campanha 0282
 
 ### Atualização da campanha 0282
 

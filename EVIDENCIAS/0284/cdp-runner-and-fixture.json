@@ -1,0 +1,48 @@
+{
+  "campaign": "0284",
+  "result": "PARTIAL",
+  "runner": {
+    "commit": "65e9f27256b9ad4b689c73a38b0da929050dee58",
+    "unitTest": "PASS",
+    "chromiumLifecycleSmoke": "PASS",
+    "realChromium": true,
+    "cdpPort": "ephemeral via DevToolsActivePort",
+    "mainFrameReloadObserved": true,
+    "authStateClassification": "PASS in controlled runner fixture",
+    "runtimeEvaluateTimeoutAndTerminate": "PASS",
+    "temporaryProfileRemoved": true
+  },
+  "applicationBrowserAttempt": {
+    "authenticated": false,
+    "sessionEndpointStatus": 401,
+    "reachedSettingsForm": false,
+    "pendingSaveReload": "NOT_RUN",
+    "persistentFailureMatrix": "NOT_RUN",
+    "indexedDb": "NOT_RUN",
+    "simultaneousConcurrency": "NOT_RUN",
+    "browserTenantIsolation": "NOT_RUN",
+    "visualAuthenticated": "NOT_RUN"
+  },
+  "fixture": {
+    "manifest": "3d33e3c0-b8b3-4742-a723-a82076f54179",
+    "database": "rotamoto_e2e",
+    "tenant": "01a160e6-7f16-7e2a-aefd-3abda5e58f05",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "reconciliation": "read-only tenant-scoped count after interruption",
+    "residualCounts": {
+      "companies": 0,
+      "users": 0,
+      "auth_records": 0,
+      "memberships": 0,
+      "sessions": 0,
+      "domain_records": 0,
+      "sync_inbox": 0,
+      "sync_outbox": 0,
+      "audit_log": 0
+    },
+    "officialDatabaseModified": false
+  },
+  "applicationRepositoriesChanged": false,
+  "physicalAndroid": "NOT_RUN"
+}
