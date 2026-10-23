@@ -1,3 +1,13 @@
+## Campanha 0300
+
+- Registro: [REGISTROS/0300.md](REGISTROS/0300.md)
+- Resumo: [RESUMOS/0300.md](RESUMOS/0300.md)
+- Evidências: [EVIDENCIAS/0300](EVIDENCIAS/0300/)
+- Resultado: PARTIAL; Home V2 oficial na branch local, E2E autenticado e `npm test` Restaurante PASS; cross-module, módulos com fixture incompleto, Android físico e revisão visual humana pendentes.
+- Restaurante: commit local apenas; sem push. Motoboy e Browser QA sem alterações.
+
+---
+
 ## Campanha 0299
 
 - Registro: [REGISTROS/0299.md](REGISTROS/0299.md)

@@ -1,4 +1,10 @@
-# Estado vigente — Campanha 0299 (2026-10-23)
+# Estado vigente — Campanha 0300 (2026-10-23)
+
+**PARTIAL.** Dashboard V2 passou a Home oficial na branch local `codex/campaign-0300-dashboard-integration`; preview removido da operação normal, referência legada preservada para reversão. Browser autenticado/MFA comprovou criação de Order pela UI, ACK + GET canônico, tenant correto, reload/reapresentação, impressão em preview e QR para Delivery elegível. Antiga/V2 tiveram mesmos IDs em “Entregas para revisar”; KPI “Aguardando” tem semântica nova explícita (CREATED + ASSIGNED + REDELIVERY), distinta do antigo “aguardando entregador”. 20 combinações de viewport/tema, sem overflow da página; `npm test` Restaurante PASS. G1/G3/G4/G6/G7 PASS_SCOPE; G2/G5/G8 PARTIAL. Fixture `rotamoto_e2e`: `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. 8083 serviu o mesmo hash de `app.js` e os assets `0300` sem reinício; nenhuma publicação do app e nenhum Android físico. Test fixture retornou 404 em endpoints de logística/analytics sem handlers; esses módulos não foram comprovados. Motoboy não alterado; falta checagem funcional cross-module, física e visual humana. RM-AUD19-01/02/03/10/13 e demais 22 IDs/aliases preservados, sem PASS_GLOBAL. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0300](REGISTROS/0300.md), [Browser](EVIDENCIAS/0300/browser-report.json) e [capturas](EVIDENCIAS/0300/capturas/). Não iniciar 0301.
+
+---
+
+# Estado histórico — Campanha 0299 (2026-10-23)
 
 **PARTIAL; `PENDING_USER_APPROVAL` no Gate D.** Prévia Início v2 implementada em rota de query isolada, com sessão autenticada/MFA, RBAC e Company scope. 14 capturas nos 10 viewports, claro/escuro em celular; zero overflow/erros JS. Página `dashboard()` atual permanece padrão. `npm test` Restaurante e Browser E2E autenticado passaram no escopo descrito; fixture final `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. Referência aprovada encontrada em Downloads. Divergências visuais registradas e aguardam avaliação humana. Nenhuma ocorrência global encerrada; RM-AUD19-13 recebe apenas PASS_SCOPE na POC, continua PARTIAL global. Não houve validação Android físico. Consulte [REGISTRO 0299](REGISTROS/0299.md), [capturas](EVIDENCIAS/0299/capturas/) e [comparação](EVIDENCIAS/0299/comparacao-visual.md).
 

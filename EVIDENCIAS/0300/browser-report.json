@@ -1,0 +1,1273 @@
+{
+  "campaign": "0300",
+  "beforeAfter": {
+    "before": "before-legacy-390x844-dark.png",
+    "after": "after-dashboard-v2-390x844-dark.png",
+    "sameSession": true,
+    "sameTenant": true,
+    "sameState": true
+  },
+  "database": "rotamoto_e2e",
+  "mfaVerified": true,
+  "companyId": "01a16994-0a92-7e9b-ab43-ea8112e9b363",
+  "fixture": {
+    "orderId": "01a16994-7c40-7f2a-875d-938cb4c1e7b2",
+    "deliveryId": "01a16994-7c4a-74ac-9665-d1af748a8cfc",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantScopedResiduals": 0
+  },
+  "servedAssets": [
+    {
+      "path": "/styles.css?v=0300.1",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/design-system.css?v=0300.2",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/dashboard-v2.css?v=0300.3",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/dashboard-v2.js?v=0300.2",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/app.js?v=0300.4",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/styles.css?v=0300.1",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/design-system.css?v=0300.2",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/dashboard-v2.css?v=0300.3",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/dashboard-v2.js?v=0300.2",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/app.js?v=0300.4",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/styles.css?v=0300.1",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/design-system.css?v=0300.2",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/dashboard-v2.css?v=0300.3",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/dashboard-v2.js?v=0300.2",
+      "status": 200,
+      "fromDiskCache": false
+    },
+    {
+      "path": "/app.js?v=0300.4",
+      "status": 200,
+      "fromDiskCache": false
+    }
+  ],
+  "localReadback": {
+    "id": "ord_mvl6ky3a_hk2x3q",
+    "companyId": "01a16994-0a92-7e9b-ab43-ea8112e9b363",
+    "sync": {
+      "state": "synced",
+      "version": 1,
+      "canonicalId": "01a16994-94c6-7bad-9522-39d4210d4419",
+      "canonicalVersion": 1,
+      "lastSyncedAt": 1792772707609
+    },
+    "dataOrigin": null
+  },
+  "afterReload": [
+    {
+      "visible": true,
+      "model": [
+        {
+          "id": "ord_mvl6ky3a_hk2x3q",
+          "number": "E2E0300-1792772707054"
+        }
+      ]
+    },
+    {
+      "id": "ord_mvl6ky3a_hk2x3q",
+      "companyId": "01a16994-0a92-7e9b-ab43-ea8112e9b363",
+      "sync": {
+        "state": "synced",
+        "version": 1,
+        "canonicalId": "01a16994-94c6-7bad-9522-39d4210d4419",
+        "canonicalVersion": 1,
+        "lastSyncedAt": 1792772707609,
+        "source": "panel",
+        "remoteId": null,
+        "lastReceivedAt": null
+      }
+    }
+  ],
+  "canonicalReadback": {
+    "status": 200,
+    "companyId": "01a16994-0a92-7e9b-ab43-ea8112e9b363",
+    "customer": "Cliente sintético campanha 0300"
+  },
+  "parity": {
+    "tenant": "01a16994-0a92-7e9b-ab43-ea8112e9b363",
+    "newOrderIds": [
+      "ord_mvl6ky3a_hk2x3q"
+    ],
+    "newKpis": [
+      {
+        "label": "Em rota",
+        "value": 0
+      },
+      {
+        "label": "Aguardando",
+        "value": 2
+      },
+      {
+        "label": "Concluídos",
+        "value": 0
+      },
+      {
+        "label": "Cancelados",
+        "value": 0
+      }
+    ],
+    "oldKpis": [
+      {
+        "label": "entregas em andamento",
+        "value": "2"
+      },
+      {
+        "label": "aguardando entregador",
+        "value": "1"
+      },
+      {
+        "label": "no período selecionado",
+        "value": "0"
+      }
+    ],
+    "oldAttentionIds": [
+      "ord_mvl6ky3a_hk2x3q"
+    ],
+    "newAttentionIds": [
+      "ord_mvl6ky3a_hk2x3q"
+    ],
+    "legacyCount": 1,
+    "companyScopedCount": 1,
+    "aggregate": {
+      "openCount": 2,
+      "completedCount": 0,
+      "deliveryStatusCounts": {
+        "ASSIGNED": 1,
+        "CREATED": 1
+      }
+    },
+    "fixtureOrderId": "01a16994-7c40-7f2a-875d-938cb4c1e7b2",
+    "fixtureDeliveryId": "01a16994-7c4a-74ac-9665-d1af748a8cfc",
+    "uiCreatedNumber": "E2E0300-1792772707054"
+  },
+  "officialHome": {
+    "dashboard": true,
+    "previewBanner": false,
+    "title": "Olá, Restaurante!",
+    "moreIcon": "<svg viewBox=\"0 0 24 24\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"></path></svg>",
+    "nav": [
+      "dashboard",
+      "orders",
+      "routes",
+      "bikes",
+      "Mais opções"
+    ]
+  },
+  "modelOrders": [
+    {
+      "id": "ord_mvl6ky3a_hk2x3q",
+      "number": "E2E0300-1792772707054",
+      "qrEligible": false,
+      "canPrint": true
+    }
+  ],
+  "print": {
+    "opened": true,
+    "preview": "PRÉVIA DA COMANDA\nPedido #E2E0300-1792772707054\n\nRevise os dados antes de abrir a impressão do navegador.\n\nRotaMoto\nComanda #E2E0300-1792772707054\n\nmanual · 2026-10-23 16:25 UTC (fuso da empresa não configurado)\n\nCLIENTE\n\nCliente sintético campanha 0300\n\nRua de teste E2E, 100\n\nTaxa de entrega\nR$ 0,00\nNORMAL\nAguardando\n\nQR não solicitado nesta configuração.\n\nCancelar\nImprimir"
+  },
+  "detail": {
+    "opened": true,
+    "preview": "PEDIDO MANUAL\nPedido #E2E0300-1792772707054\nCriada\nmanual\n1 pedido(s) deste cliente\n1 neste endereço\nImprimir\nQR seguro\nSelecionar motoboy\n1. Cliente e contato\nCliente\nTelefone\n2. Endereço e localização\nEndereço\n\nEndereço textual; não há coordenadas confirmadas. Nenhuma localização foi inferida.\n\n3. Dados comerciais\nOrigem\nEntrada manual\niFood\nTaxa de entrega\nCalculada conforme o modelo de cobrança ativo.\nDistância (km)\nTipo de entrega\nNormal\nRetorno\nTroca\nRecolhimento\n4. Entrega e responsável\nStatus confirmadoCriadaAtualizações de execução vêm do aplicativo Motoboy.\nMotoboyNão atribuídoConta e vínculo são administrados separadamente do cadastro operacional.\n5. Observações\nInstruções para a entrega\n6. Histórico resumido\nPedidos deste cliente: 1\nNeste endereço: 1\nÚltimo pedido: Data não informada\n#E2E0300-1792772707054\n23/10/2026 • R$ 0,00 • Aguardando\nGestão avançada\nFulfillment, alternativas, capacidade, decisões e rastreamento\nNenhuma alteração pendente.\nFechar\nCancelar entrega\nSalvar alterações"
+  },
+  "qrResult": {
+    "eligibleButton": true,
+    "opened": true,
+    "usable": true,
+    "unavailable": false
+  },
+  "captures": [
+    {
+      "viewport": "320x720",
+      "theme": "dark",
+      "file": "dashboard-320x720-dark.png",
+      "width": 320,
+      "scroll": 320,
+      "main": 320,
+      "root": 296,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "dv2-workspace",
+          "right": 299,
+          "w": 278,
+          "scroll": 283,
+          "client": 278
+        },
+        {
+          "tag": "SECTION",
+          "cls": "dv2-review",
+          "right": 299,
+          "w": 278,
+          "scroll": 283,
+          "client": 278
+        },
+        {
+          "tag": "DIV",
+          "cls": "dv2-section-heading",
+          "right": 299,
+          "w": 278,
+          "scroll": 283,
+          "client": 278
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "dv2-button dv2-all",
+          "right": 298,
+          "w": 53,
+          "scroll": 58,
+          "client": 51
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 145,
+          "w": 111,
+          "scroll": 232,
+          "client": 111
+        }
+      ]
+    },
+    {
+      "viewport": "320x720",
+      "theme": "light",
+      "file": "dashboard-320x720-light.png",
+      "width": 320,
+      "scroll": 320,
+      "main": 320,
+      "root": 296,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "dv2-workspace",
+          "right": 299,
+          "w": 278,
+          "scroll": 283,
+          "client": 278
+        },
+        {
+          "tag": "SECTION",
+          "cls": "dv2-review",
+          "right": 299,
+          "w": 278,
+          "scroll": 283,
+          "client": 278
+        },
+        {
+          "tag": "DIV",
+          "cls": "dv2-section-heading",
+          "right": 299,
+          "w": 278,
+          "scroll": 283,
+          "client": 278
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "dv2-button dv2-all",
+          "right": 298,
+          "w": 53,
+          "scroll": 58,
+          "client": 51
+        },
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 145,
+          "w": 111,
+          "scroll": 232,
+          "client": 111
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "theme": "dark",
+      "file": "dashboard-360x800-dark.png",
+      "width": 360,
+      "scroll": 360,
+      "main": 360,
+      "root": 336,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 160,
+          "w": 123,
+          "scroll": 271,
+          "client": 123
+        }
+      ]
+    },
+    {
+      "viewport": "360x800",
+      "theme": "light",
+      "file": "dashboard-360x800-light.png",
+      "width": 360,
+      "scroll": 360,
+      "main": 360,
+      "root": 336,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 160,
+          "w": 123,
+          "scroll": 271,
+          "client": 123
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "theme": "dark",
+      "file": "dashboard-390x844-dark.png",
+      "width": 390,
+      "scroll": 390,
+      "main": 390,
+      "root": 366,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 190,
+          "w": 153,
+          "scroll": 271,
+          "client": 153
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "theme": "light",
+      "file": "dashboard-390x844-light.png",
+      "width": 390,
+      "scroll": 390,
+      "main": 390,
+      "root": 366,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 190,
+          "w": 153,
+          "scroll": 271,
+          "client": 153
+        }
+      ]
+    },
+    {
+      "viewport": "430x932",
+      "theme": "dark",
+      "file": "dashboard-430x932-dark.png",
+      "width": 430,
+      "scroll": 430,
+      "main": 430,
+      "root": 406,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 230,
+          "w": 193,
+          "scroll": 271,
+          "client": 193
+        }
+      ]
+    },
+    {
+      "viewport": "430x932",
+      "theme": "light",
+      "file": "dashboard-430x932-light.png",
+      "width": 430,
+      "scroll": 430,
+      "main": 430,
+      "root": 406,
+      "sidebar": "none",
+      "bottom": "grid",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 230,
+          "w": 193,
+          "scroll": 271,
+          "client": 193
+        }
+      ]
+    },
+    {
+      "viewport": "600x960",
+      "theme": "dark",
+      "file": "dashboard-600x960-dark.png",
+      "width": 600,
+      "scroll": 585,
+      "main": 421,
+      "root": 397,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 385,
+          "w": 184,
+          "scroll": 271,
+          "client": 184
+        }
+      ]
+    },
+    {
+      "viewport": "600x960",
+      "theme": "light",
+      "file": "dashboard-600x960-light.png",
+      "width": 600,
+      "scroll": 585,
+      "main": 421,
+      "root": 397,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "STRONG",
+          "cls": "",
+          "right": 385,
+          "w": 184,
+          "scroll": 271,
+          "client": 184
+        }
+      ]
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "dark",
+      "file": "dashboard-768x1024-dark.png",
+      "width": 768,
+      "scroll": 768,
+      "main": 604,
+      "root": 580,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "dv2-table-wrap",
+          "right": 742,
+          "w": 552,
+          "scroll": 645,
+          "client": 550
+        },
+        {
+          "tag": "TABLE",
+          "cls": "dv2-table",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "THEAD",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "right": 836,
+          "w": 187,
+          "scroll": 187,
+          "client": 187
+        },
+        {
+          "tag": "TBODY",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TD",
+          "cls": "",
+          "right": 836,
+          "w": 187,
+          "scroll": 187,
+          "client": 187
+        },
+        {
+          "tag": "DIV",
+          "cls": "dv2-actions",
+          "right": 827,
+          "w": 169,
+          "scroll": 169,
+          "client": 169
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "dv2-button dv2-primary",
+          "right": 777,
+          "w": 119,
+          "scroll": 117,
+          "client": 117
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "dv2-button dv2-icon-button",
+          "right": 827,
+          "w": 44,
+          "scroll": 42,
+          "client": 42
+        },
+        {
+          "tag": "SPAN",
+          "cls": "dv2-icon",
+          "right": 815,
+          "w": 20,
+          "scroll": 20,
+          "client": 20
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "right": 815,
+          "w": 20,
+          "scroll": 20,
+          "client": 20
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "right": 811,
+          "w": 13,
+          "scroll": 0,
+          "client": 0
+        }
+      ]
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "light",
+      "file": "dashboard-768x1024-light.png",
+      "width": 768,
+      "scroll": 768,
+      "main": 604,
+      "root": 580,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "dv2-table-wrap",
+          "right": 742,
+          "w": 552,
+          "scroll": 645,
+          "client": 550
+        },
+        {
+          "tag": "TABLE",
+          "cls": "dv2-table",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "THEAD",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "right": 836,
+          "w": 187,
+          "scroll": 187,
+          "client": 187
+        },
+        {
+          "tag": "TBODY",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "right": 836,
+          "w": 645,
+          "scroll": 645,
+          "client": 645
+        },
+        {
+          "tag": "TD",
+          "cls": "",
+          "right": 836,
+          "w": 187,
+          "scroll": 187,
+          "client": 187
+        },
+        {
+          "tag": "DIV",
+          "cls": "dv2-actions",
+          "right": 827,
+          "w": 169,
+          "scroll": 169,
+          "client": 169
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "dv2-button dv2-primary",
+          "right": 777,
+          "w": 119,
+          "scroll": 117,
+          "client": 117
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "dv2-button dv2-icon-button",
+          "right": 827,
+          "w": 44,
+          "scroll": 42,
+          "client": 42
+        },
+        {
+          "tag": "SPAN",
+          "cls": "dv2-icon",
+          "right": 815,
+          "w": 20,
+          "scroll": 20,
+          "client": 20
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "right": 815,
+          "w": 20,
+          "scroll": 20,
+          "client": 20
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "right": 811,
+          "w": 13,
+          "scroll": 0,
+          "client": 0
+        }
+      ]
+    },
+    {
+      "viewport": "1024x768",
+      "theme": "dark",
+      "file": "dashboard-1024x768-dark.png",
+      "width": 1024,
+      "scroll": 1009,
+      "main": 753,
+      "root": 692,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": []
+    },
+    {
+      "viewport": "1024x768",
+      "theme": "light",
+      "file": "dashboard-1024x768-light.png",
+      "width": 1024,
+      "scroll": 1009,
+      "main": 753,
+      "root": 692,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": []
+    },
+    {
+      "viewport": "1280x800",
+      "theme": "dark",
+      "file": "dashboard-1280x800-dark.png",
+      "width": 1280,
+      "scroll": 1265,
+      "main": 1009,
+      "root": 932,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "dv2-table-wrap",
+          "right": 903,
+          "w": 590,
+          "scroll": 645,
+          "client": 588
+        }
+      ]
+    },
+    {
+      "viewport": "1280x800",
+      "theme": "light",
+      "file": "dashboard-1280x800-light.png",
+      "width": 1280,
+      "scroll": 1265,
+      "main": 1009,
+      "root": 932,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "dv2-table-wrap",
+          "right": 903,
+          "w": 590,
+          "scroll": 645,
+          "client": 588
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "theme": "dark",
+      "file": "dashboard-1440x900-dark.png",
+      "width": 1440,
+      "scroll": 1425,
+      "main": 1169,
+      "root": 1083,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": []
+    },
+    {
+      "viewport": "1440x900",
+      "theme": "light",
+      "file": "dashboard-1440x900-light.png",
+      "width": 1440,
+      "scroll": 1425,
+      "main": 1169,
+      "root": 1083,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": []
+    },
+    {
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "file": "dashboard-1920x1080-dark.png",
+      "width": 1920,
+      "scroll": 1920,
+      "main": 1600,
+      "root": 1504,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": []
+    },
+    {
+      "viewport": "1920x1080",
+      "theme": "light",
+      "file": "dashboard-1920x1080-light.png",
+      "width": 1920,
+      "scroll": 1920,
+      "main": 1600,
+      "root": 1504,
+      "sidebar": "flex",
+      "bottom": "none",
+      "orders": 2,
+      "menuIcon": true,
+      "sidebarModules": [
+        "dashboard",
+        "orders",
+        "routes",
+        "bikes",
+        "reports",
+        "events",
+        "settings",
+        "admin",
+        "integrationLab",
+        "help"
+      ],
+      "mainTitle": "Olá, Restaurante!",
+      "offenders": []
+    }
+  ],
+  "moreMenu": {
+    "title": "Mais opções",
+    "groups": [
+      "GESTÃO\nRelatórios\nEventos",
+      "ADMINISTRAÇÃO\nConfigurações\nSistema local\nLaboratório",
+      "SUPORTE\nAjuda"
+    ],
+    "close": true,
+    "height": 360.875,
+    "focus": true
+  },
+  "focusRestored": true,
+  "outsideClosed": true,
+  "navReport": [
+    {
+      "tab": "orders",
+      "state": "RENDERED",
+      "title": "Pedidos e entregasPedidos e entregas"
+    },
+    {
+      "tab": "routes",
+      "state": "RENDERED",
+      "title": "RotasRotas"
+    },
+    {
+      "tab": "bikes",
+      "state": "RENDERED",
+      "title": "MotoboysMotoboys"
+    },
+    {
+      "tab": "reports",
+      "state": "RENDERED",
+      "title": "RelatóriosRelatórios"
+    },
+    {
+      "tab": "events",
+      "state": "RENDERED",
+      "title": "EventosEventos"
+    },
+    {
+      "tab": "settings",
+      "state": "RENDERED",
+      "title": "AjustesAjustes"
+    },
+    {
+      "tab": "help",
+      "state": "RENDERED",
+      "title": "AjudaAjuda"
+    },
+    {
+      "tab": "admin",
+      "state": "RENDERED",
+      "title": "AjustesAjustes"
+    },
+    {
+      "tab": "integrationLab",
+      "state": "RENDERED",
+      "title": "AjustesAjustes"
+    }
+  ],
+  "errors": {
+    "js": [],
+    "api": [
+      {
+        "path": "/api/identity/session",
+        "status": 401
+      },
+      {
+        "path": "/api/restaurant-driver-queue",
+        "status": 404
+      },
+      {
+        "path": "/api/restaurant-driver-queue",
+        "status": 404
+      },
+      {
+        "path": "/api/logistics/analytics",
+        "status": 404
+      },
+      {
+        "path": "/api/logistics/intelligence/analytics",
+        "status": 404
+      },
+      {
+        "path": "/api/logistics/intelligence/decision-quality",
+        "status": 404
+      },
+      {
+        "path": "/api/logistics/route-settings",
+        "status": 404
+      },
+      {
+        "path": "/api/analytics/territorial",
+        "status": 404
+      },
+      {
+        "path": "/api/analytics/territorial/deliveries/01a16994-7c4a-74ac-9665-d1af748a8cfc/destination",
+        "status": 404
+      }
+    ],
+    "assets": []
+  }
+}

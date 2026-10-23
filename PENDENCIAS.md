@@ -1,4 +1,19 @@
-## Pendências vigentes — Campanha 0299
+## Pendências vigentes — Campanha 0300
+
+- **G2 PARTIAL:** validar que a mesma Order aparece na interface Orders, Rotas e Motoboy, não apenas Home/GET. Não repetir escrita real; usar fixture tenant-scoped.
+- **G5 PARTIAL:** proprietário ainda deve conferir a composição integrada em aparelho/contexto visual real. 20 capturas Chromium não substituem avaliação humana.
+- **G8 PARTIAL:** fixture sem handlers devolveu 404 nos endpoints de fila/logística/analytics listados em `EVIDENCIAS/0300/testes.md`; validar esses módulos em cenário apropriado sem mascarar o 404.
+- Android físico, impressão física, teste cross-tenant adversarial, negativos completos de sync e Motoboy não executados; Motoboy não foi alterado.
+- Telas diferentes de Início mantêm layouts legados onde não foi comprovada migração segura. Gestão avançada continua planejada como rota/módulo próprio; não improvisada nesta campanha.
+- Preservar RM-AUD19-01/02/03/10/13 e demais IDs/aliases; nenhuma ocorrência global encerrada. RM-AUD19-02/10 permanecem PARTIAL por não haver cobertura dos demais formulários.
+- Estado operacional: Dashboard V2 está no branch local, **não publicado**; `127.0.0.1:8083` serviu os arquivos do workspace durante a leitura, mas nenhuma atualização/deploy foi feita. Não interpretar o endpoint local como rollout.
+- Preservar pendências 0289, 0258 `BLOCKED_AUTHORIZATION`, ORS `PENDING_EXTERNAL_CREDENTIAL`. Não iniciar 0301 automaticamente.
+
+Ver [REGISTRO 0300](REGISTROS/0300.md), [testes](EVIDENCIAS/0300/testes.md), [paridade](EVIDENCIAS/0300/comparativo-dados.md) e [plano de reversão](EVIDENCIAS/0300/plano-reversao.md).
+
+---
+
+## Pendências históricas — Campanha 0299
 
 - Aguardando avaliação visual humana da POC autenticada Início v2; pedir aprovação ou divergências concretas antes de qualquer integração à página padrão.
 - Chrome Android físico, integração de ações operacionais, persistência/negócio e Motoboy não foram escopo nem validados. Não atribuir PASS a esses itens.

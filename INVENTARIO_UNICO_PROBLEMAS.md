@@ -1,4 +1,23 @@
-## Revisão vigente — Campanha 0299 (2026-10-23)
+## Revisão vigente — Campanha 0300 (2026-10-23)
+
+**PARTIAL; nenhum problema global foi encerrado.** Home V2 integrada no branch do Restaurante. A sessão/Company foi restaurada antes da projeção inicial, eliminando a corrida de render que ocultava uma Order sincronizada após reload. A mesma Order apareceu na Home antiga e V2 e recebeu ACK/GET/reload na Company sintética. `RM-AUD19-01/02/03/10/13`, RM-AUD22, RM-AUD26, aliases e estados globais anteriores não são encerrados por esta cobertura.
+
+| ID | Estado após 0300 | Evidência / pendência |
+|---|---|---|
+| RM-AUD19-01 | PARTIAL global | Claro/escuro em Home no Restaurante; sem validação Motoboy nem aparelho físico. |
+| RM-AUD19-02 | PARTIAL global, sem novo teste de settings | A promoção da Home não comprova formulários de Configurações. |
+| RM-AUD19-03 | PARTIAL | Order/Company scope validado no Home e GET canônico; Logística/Frota/Motoboy cross-module não verificados nesta campanha. |
+| RM-AUD19-10 | PARTIAL global | Uma Order persistiu após reload; não fecha os demais campos editáveis. |
+| RM-AUD19-13 | PARTIAL global | 20 combinações viewport/tema da Home; outras telas e Chrome Android físico seguem sem validação. |
+| RM-AUD22-21 | Histórico preservado | Sem regressão de modais Motoboy/Frota nesta campanha. |
+| RM-AUD22-22 | Histórico preservado | Ação Home e navegação testadas; concorrência/replay/distribuição cross-app não repetidos. |
+| RM-AUD26-01/02 | PARTIAL histórico | Order sintética/preview/QR foram revalidados; divergência específica do pedido real #1234 e casos restantes não foram acessados. |
+
+404 do harness em APIs de fila/logística/analytics registrados em `EVIDENCIAS/0300/testes.md`; não reclassificar os respectivos módulos como resolvidos. Pendências 0289 de concorrência/distribuição/Motoboy permanecem. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`.
+
+---
+
+## Revisão histórica — Campanha 0299 (2026-10-23)
 
 **PARTIAL; nenhum PASS_GLOBAL.** POC isolada do Início com sessão/MFA/RBAC, tema claro/escuro em celular, side navigation adaptada no preview e dados de apresentação sintéticos não persistidos. 14 capturas/10 tamanhos sem overflow; página vigente não substituída. Gate visual aguarda aprovação humana. RM-AUD19-13: PASS_SCOPE apenas nesta página e preview; estado global PARTIAL. RM-AUD19-01/02/03/10, RM-AUD22-20..22 e RM-AUD26-01/02 mantêm estados anteriores. 0258 BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL preservados. Sem escrita oficial, Android físico ou promoção.
 

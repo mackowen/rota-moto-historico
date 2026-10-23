@@ -1,4 +1,10 @@
-## Atualização vigente — Campanha 0299
+## Atualização vigente — Campanha 0300
+
+**PARTIAL.** Home V2 integrada no Restaurante na branch local; `npm test` Restaurante e Browser autenticado/MFA no subset passaram. Corrigida corrida de restauração da Company antes do render, ações Home conectadas, menu Mais refinado e cache invalidado. Mantêm-se pendentes cross-module/Motoboy, módulos de logística cujo fixture responde 404, Chrome Android físico, prova de impressão física e revisão visual humana. Dados E2E rollback e resíduos zero. Sem push do app e sem alterações Motoboy/Browser. Todos os 22 IDs e aliases preservados; nenhum PASS_GLOBAL. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Consulte [REGISTRO 0300](REGISTROS/0300.md).
+
+---
+
+## Atualização histórica — Campanha 0299
 
 - **PARTIAL / PENDING_USER_APPROVAL:** POC Início v2 isolada acessível com `/?preview=dashboard-v2`, autenticação/MFA e capability de Início. Página normal preservada; 14 capturas sem overflow; npm Restaurante e Browser final registrados em 0299.
 - Divergências humanas abertas: ícones tipográficos, faixa de preview, topo/ busca desktop, painéis e print/QR read-only. Ver comparação visual.

@@ -1,4 +1,10 @@
-## Estado vigente — Campanha 0298 (2026-10-23)
+## Estado vigente — Campanha 0300 (2026-10-23)
+
+0300 PARTIAL; não iniciar 0301 automaticamente. DashboardV2 promovido como Home oficial na branch local do Restaurante, handlers existentes e menu Mais acessível. Corrigido o render antes da restauração de sessão/Company. Browser/MFA confirmou escrita sintética por UI, ACK + GET canônico + reload, preview de impressão, QR elegível e 10 larguras × 2 temas; npm test Restaurante passou. 8083 serviu `app.js` idêntico ao workspace, sem reinício; isso não representa deploy. G1/G3/G4/G6/G7 PASS_SCOPE; G2/G5/G8 PARTIAL. Falta consistência da Order em todas as áreas/Motoboy, módulos cujo fixture respondeu 404, Android/impressão físicos e confirmação visual humana. Banco oficial e infraestrutura intocados. Ver [REGISTRO 0300](REGISTROS/0300.md), [evidências](EVIDENCIAS/0300/).
+
+---
+
+## Estado histórico — Campanha 0298 (2026-10-23)
 
 0298 PARTIAL. Início e navegação global receberam tokens/estrutura adaptativa; Gate 1 foi concluído antes da alteração. Browser autenticado/CDP passou 20 viewport/tema e navegação subset (390/768/1280, 18 categorias Ajustes), sem overflow/JS; assets 8083 hash-match; suite Restaurante precisa registrar resultado final pós execução. Formulários e telas fora do subset permanecem sem aprovação; Gestão avançada separada como módulo próprio ainda não migrou. 0258 continua BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL; sem alterações/push dos aplicativos, Motoboy ou browser-tests. Ver [REGISTRO 0298](REGISTROS/0298.md) e [evidências](EVIDENCIAS/0298/).
 
