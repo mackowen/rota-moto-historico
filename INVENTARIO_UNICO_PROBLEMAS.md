@@ -768,10 +768,12 @@ RM-AUD19-18 permanece PARTIAL/BLOCKED_BY_CAPABILITY nas operações sem API can�
 - `0304-E2E-AUTH` — Browser login 403; prova funcional autenticada BLOCKED.
 - `0304-PLAN-PERSIST` — criação/reordenação/readback/reload de rota OPEN até E2E.
 - `0304-SYNC-CONFLICT` — cenários concorrência, conflito, idempotência e reconexão BLOCKED.
-- `0304-MAP-VISUAL` — referências verificadas, implementação parcial, comparação final PARTIAL.
+- `0304-MAP-VISUAL` — G14 continua FAIL pela reprovação do proprietário; referências reabertas e fix visual medido por CDP em renderer vazio/10 viewports, mas desktop-toolbar, conteúdo autenticado e aprovação continuam pendentes.
 - `0304-RBAC-TENANT` — validação Browser adversarial OPEN.
 - `0304-OWNER-APPROVAL` — avaliação visual Android do proprietário pendente.
 - Nenhuma ocorrência global antiga encerrada/reclassificada/removida. Ver `REGISTROS/0304.md`.
+
+Intervenção pós-reprovação registrada em `REGISTROS/0304.md`: painel mobile mapa-primeiro e filtros corrigidos; G14 não foi encerrado. Evidência geométrica fixture não substitui aprovação humana nem E2E autenticado.
 
 ---
 
@@ -782,3 +784,4 @@ RM-AUD19-18 permanece PARTIAL/BLOCKED_BY_CAPABILITY nas operações sem API can�
 - `0303-A-ACCOUNT` — Ação Conta/perfil: BLOCKED para confirmação pós-change autenticada; controle de identidade e permissões existentes preservados.
 - Nenhum item histórico foi encerrado, reclassificado ou removido. Consulte `REGISTROS/0303-A.md`.
 
+- `0303-A-HEADER-ACTIONS` — diferença original de 6 px no limite direito e notificação com 42×44 na Home; regra de grid e dimensão corrigidas. Medição isolada agora 0 px de diferença entre cabeçalhos componentes; autenticação e confirmação física Android permanecem PARTIAL.

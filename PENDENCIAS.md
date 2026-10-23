@@ -5,7 +5,7 @@
 | 0304-E2E-AUTH | Browser autenticado; P0; **BLOCKED** | `/api/identity/login` HTTP 403; jornadas de Rotas/Home não concluídas. | Corrigir/estabelecer harness sintético autorizado e repetir E2E em tenant isolado, documentando rollback/resíduos. |
 | 0304-PLAN-PERSIST | Planejamento/ordem/readback; P0; **OPEN** | Lógica existente preservada; Browser não confirmou salvar, reload, reabrir ou edição. | Exercitar seleção, duplicidade, ordenação canônica, save/ACK/readback/reload e conflito. |
 | 0304-SYNC-CONFLICT | Sync/concorrência; P0; **BLOCKED** | Revisões e guarda de duplicidade auditadas; cenário não executado. | Testar duas sessões, retry/idempotência, revisão obsoleta, evento duplicado e reconexão. |
-| 0304-MAP-VISUAL | Comparação cartográfica por referência; P1; **PARTIAL** | Referências abertas/hashadas; layouts implementados; não existe captura autenticada pós-change. | Capturar 10 viewports × 2 temas, falha tiles, seleção, resize, coordenadas ausentes e estados previstos. |
+| 0304-MAP-VISUAL | Comparação cartográfica por referência; P1; **PARTIAL; gate owner FAIL** | Referências reabertas/hashadas; CDP de renderer vazio capturou 10 viewports × 2 temas e 5/5 filtros. G14 FAIL por reprovação explícita; desktop toolbar ainda diverge e não existe captura autenticada pós-change. | Corrigir divergências remanescentes e capturar tiles/dados/seleção/resize/coordenadas ausentes em sessão autorizada; proprietário revisar no Chrome Android. |
 | 0304-RBAC-TENANT | Isolamento/RBAC; P0; **OPEN** | Código/contrato preservado; sem tentativa adversarial Browser desta campanha. | Testar acesso cruzado e ações proibidas com tenants sintéticos independentes. |
 | 0304-OWNER-APPROVAL | Aprovação visual Rotas/Início; P1; **PENDING_USER_APPROVAL** | Sem pares visuais autenticados finais nem avaliação física do proprietário. | Proprietário conferir no Chrome Android; Codex não substitui a aprovação. |
 
@@ -2244,3 +2244,5 @@ Ver [REGISTRO 0253](REGISTROS/0253.md), [resumo](RESUMOS/0253.md) e [matriz](MAT
 - Implementar/verificar UI/API globais de serviços e configurações e fluxo visual de grants, sem promover contas persistentes.
 - Não promover a conta existente: registro 0234 a identifica como proprietária; falta evidência de papel fundador e autorização explícita. O CLI de bootstrap não foi executado.
 - Marketplace permanece `MARKETPLACE_RUNTIME_UNAVAILABLE` (503) até configuração real do runtime/provedor.
+
+- `0303-A-AUTH-ALIGNMENT` — comparar e exercitar Notificações/Nova corrida/Perfil nas abas autenticadas em 320/360/390/430 e temas: PARTIAL (login 403; fixture de componentes já mediu diferença 0 px; validação física Chrome Android e proprietário pendentes).

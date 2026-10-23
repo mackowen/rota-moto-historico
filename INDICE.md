@@ -3,7 +3,7 @@
 - Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
 - Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/)
-- Resultado: PARTIAL; G0 PASS; layout e validações iniciais documentados; E2E autenticado, sync, comparação visual e revisão operacional pendentes.
+- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; intervenção estrutural posterior capturada em renderer isolado/10 viewports, 5/5 filtros visíveis; toolbar PC, dados/mapa autenticados, E2E e revisão do proprietário pendentes.
 - Restaurante: branch local `codex/campaign-0304-rotas-v2`; sem push. Motoboy sem alterações. Histórico recebe somente fast-forward.
 
 ---
@@ -354,3 +354,5 @@
 | 0244 | 2026-10-17 | Restaurante / Motoboy / `rotamoto_e2e` | SEGURANÇA / MFA / AUTORIZAÇÃO | Bloqueio pré-MFA e correção mobile/desktop | PASS: gate central bloqueia operações sem permission key e leituras/escritas API pré-MFA; enrollment/TOTP sintético permitido; confirmação libera o papel autorizado. CDP sintético passou 1280×900 e 390×844 nos dois apps. npm completo passou. Oficial sem DDL/DML; APIs reiniciadas/readiness 200. Sessão persistente do proprietário pendente de enrollment. | [REGISTROS/0244.md](REGISTROS/0244.md) · [RESUMOS/0244.md](RESUMOS/0244.md) |
 
 | 0261 | 2026-10-20 | Restaurante / Motoboy / `rotamoto_e2e` / Browser CDP | PERSISTÊNCIA EMPRESARIAL / LOCALIZAÇÃO | Hidratação Company, confirmação do mapa e origem custom | PARTIAL: DOM Empresa e Logística, Company Profile, coordenadas sintéticas confirmadas na UI, ACK/GET readback, revisão, reload/segunda sessão, origem custom isolada, RBAC negativo e 400/409 passaram. Faltam outras configurações, erro de rede/draft/retry, snapshot sync/pull Motoboy e validação física. Commits locais Restaurante `33244f2`, Browser `8120dce`; somente histórico será publicado. | [REGISTROS/0261.md](REGISTROS/0261.md) · [Browser evidence](../browser-tests/evidencias/campanhas/0261/report.json) |
+
+| 0303-A (adendos) | 2026-10-23 | Restaurante / Browser QA | Sticky e alinhamento horizontal | Home header imóvel e ações alinhadas ao operacional | PARTIAL (medição CDP: top=0 em 8 offsets; gap lateral corrigido de 18 para 12 px; diferenças entre renderers 0 px; sessão autenticada HTTP 403 e validação final Android pendentes). | [REGISTROS/0303-A.md](REGISTROS/0303-A.md) · [RESUMOS/0303-A.md](RESUMOS/0303-A.md) · [evidências](EVIDENCIAS/0303-A/) |
