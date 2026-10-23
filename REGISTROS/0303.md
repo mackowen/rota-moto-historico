@@ -42,6 +42,10 @@ Fixture E2E `9eaf6445-3244-44ce-816c-b630e73488b6`: `rotamoto_e2e`, status `COMP
 | G7 — Integração e regressões | PASS_SCOPE | Browser autenticado/MFA: filtro, navegação, criação/edição/readback/reload, print preview; `npm test` integral exit 0. QR backend permanece bloqueado. |
 | G8 — Fidelidade visual preservada | PARTIAL | Paleta e composição V2 preservadas; screenshots automatizados disponíveis. Conferência final do proprietário no Chrome Android pendente. |
 
+## Publicação do histórico
+
+Commit de conteúdo 0303 publicado por fast-forward em `origin/main`: `7a7183f736c49f7452c3f34b66991850ca2cb0c1`. Os documentos e evidências foram lidos de volta do commit publicado. O SHA final da atualização de fechamento será informado no handoff. Aplicativos não receberam push.
+
 ## Reversão e pendências
 
 Reversão local segura: `git revert <SHA-do-commit-local-0303>` no Restaurante; isso preserva histórico e não toca a tag baseline. O commit será indicado na atualização pós-commit. Não houve push do app. Não executar 0304 automaticamente.
