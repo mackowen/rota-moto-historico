@@ -1,3 +1,18 @@
+## Revisão vigente — Campanha 0299 (2026-10-23)
+
+**PARTIAL; nenhum PASS_GLOBAL.** POC isolada do Início com sessão/MFA/RBAC, tema claro/escuro em celular, side navigation adaptada no preview e dados de apresentação sintéticos não persistidos. 14 capturas/10 tamanhos sem overflow; página vigente não substituída. Gate visual aguarda aprovação humana. RM-AUD19-13: PASS_SCOPE apenas nesta página e preview; estado global PARTIAL. RM-AUD19-01/02/03/10, RM-AUD22-20..22 e RM-AUD26-01/02 mantêm estados anteriores. 0258 BLOCKED_AUTHORIZATION e ORS PENDING_EXTERNAL_CREDENTIAL preservados. Sem escrita oficial, Android físico ou promoção.
+
+| Ocorrência/gate | Estado nesta campanha | Limite |
+|---|---|---|
+| RM-AUD19-13 | PASS_SCOPE da POC; PARTIAL global | Evidência visual da rota isolada; outras áreas e Chrome Android físico não revalidados. |
+| RM-AUD19-01/02/03/10 | Estado global anterior preservado | Sem teste de persistência de preferência/configurações ou integração Motoboy nesta POC. |
+| RM-AUD19 restantes, RM-AUD22-20..22, RM-AUD26-01/02 | Estados anteriores preservados | Não reclassificados por evidência visual isolada. |
+| Gate D visual 0299 | PENDING_USER_APPROVAL | O proprietário deve avaliar as divergências documentadas. |
+
+Ver [REGISTROS/0299.md](REGISTROS/0299.md) e [comparação](EVIDENCIAS/0299/comparacao-visual.md).
+
+---
+
 ## Revisão vigente — Campanha 0298 (2026-10-23)
 
 **PARTIAL; nenhum PASS_GLOBAL.** Gate 1 inventariou destinos, capacidades e dependências antes de mexer na navegação. Tokens semânticos e shell adaptativo foram implementados; Início e navegação passaram subset autenticado. Nenhuma alteração encerra defeitos funcionais históricos de persistência, impressão, QR, dispatch, Company, edição de usuários, mapas ou permissões. Não renumerar os 19 `RM-AUD19`, `RM-AUD22-20..22`, `RM-AUD26-01/02` nem aliases. Evidências e limites: [registro](REGISTROS/0298.md), [matriz](EVIDENCIAS/0298/matriz-cobertura-interface.md), [Browser](EVIDENCIAS/0298/browser-report.json).

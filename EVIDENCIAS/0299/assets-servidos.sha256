@@ -1,0 +1,9 @@
+# HTTP GET 127.0.0.1:8083 compared byte-for-byte with workspace (2026-10-23)
+index.html 3722952c812a9df599295b6c5fa52760f768f16286aac7ff3ec2f83f5ec8985f MATCH
+app.js 464fb68d3785c71073dcda9e0ef8b2ad9f3c26c4f1a8b71cd97f13c3e9b43832 MATCH
+styles.css 89d2515735989be61c3bf66541219329f2d23802d3aab8151bb972defc160088 MATCH
+sw.js e5ba1684db46de048ae314721d496da8b957e793b854f5b42ceb6d58dd773348 MATCH
+dashboard-v2.js 74ed88f785fccb05b8c30a42a8f9b4f5115c83f16c35f2dec7a8d853b3e13e6e MATCH
+dashboard-v2.css 9ca4515f4cd866f479ee992cb0116bf2669fd89400a3ad8ff29fa0a8fbdbdacb MATCH
+
+Status was HTTP 200 for all six resources. This proves the local listener serves the current workspace bytes; it does not prove physical Android browser cache/service-worker state.

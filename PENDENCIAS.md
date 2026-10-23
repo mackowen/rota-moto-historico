@@ -1,3 +1,13 @@
+## Pendências vigentes — Campanha 0299
+
+- Aguardando avaliação visual humana da POC autenticada Início v2; pedir aprovação ou divergências concretas antes de qualquer integração à página padrão.
+- Chrome Android físico, integração de ações operacionais, persistência/negócio e Motoboy não foram escopo nem validados. Não atribuir PASS a esses itens.
+- Ocorrências originais e aliases preservados; RM-AUD19-13 continua PARTIAL global, com PASS_SCOPE restrito à POC. 0258 permanece BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL.
+
+Ver [REGISTRO 0299](REGISTROS/0299.md).
+
+---
+
 ## Atualização — Campanha 0298 (2026-10-23)
 
 - `PARTIAL`: auditoria estrutural do painel gerou [matriz de cobertura 0298](EVIDENCIAS/0298/matriz-cobertura-interface.md); ainda não há Browser de cada área/componente.

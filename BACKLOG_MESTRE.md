@@ -1,3 +1,13 @@
+## Atualização vigente — Campanha 0299
+
+- **PARTIAL / PENDING_USER_APPROVAL:** POC Início v2 isolada acessível com `/?preview=dashboard-v2`, autenticação/MFA e capability de Início. Página normal preservada; 14 capturas sem overflow; npm Restaurante e Browser final registrados em 0299.
+- Divergências humanas abertas: ícones tipográficos, faixa de preview, topo/ busca desktop, painéis e print/QR read-only. Ver comparação visual.
+- Próximo aceite: proprietário abrir preview, comparar referência e responder com “aprovado” ou diferenças específicas. Não integrar/substituir Início antes disso.
+- RM-AUD19-13 apenas PASS_SCOPE da POC; RM-AUD19-01/02/03/10 e demais IDs continuam nos estados cumulativos anteriores. Sem PASS_GLOBAL.
+- Chrome Android físico não executado; `127.0.0.1:8083` confirma hashes dos assets do workspace, mas isso não comprova cache/service worker já ativo em aparelho.
+
+---
+
 ## Atualização vigente — Campanha 0298 (2026-10-23)
 
 | ID / gate | Estado | Evidência / próximo aceite |

@@ -242,3 +242,6 @@ D6 comprovou e corrigiu a causa de agrupamento de rotas: a leitura canônica de 
 ## Execução 0292
 
 0292 **PARTIAL**. Corrigidos defeitos funcionais de feedback Company e projeção Logística com coordenadas null. Nome, telefone, fuso e endereço salvaram por UI com confirmação canônica; navegação/reload/aba, retry 503, valor inválido e clique duplo validados. `npm test` Restaurante passou; fixture rollback e resíduos zero. Formulários restantes, Motoboy, coordenadas válidas e falhas adicionais sem comprovação. RM-AUD19-02/03/10 seguem PARTIAL; não iniciar 0293. [Registro](REGISTROS/0292.md).
+## Atualização — 0299
+
+0299 concluiu como **PARTIAL / PENDING_USER_APPROVAL**. A prévia isolada do Início v2 foi validada em Browser autenticado nos viewports registrados, sem overflow, com acesso RBAC e saída para o Início atual. A imagem de referência foi obtida da pasta Downloads. A versão existente permanece preservada. A avaliação visual do proprietário é o próximo gate; não integrar a POC nem iniciar 0300 antes da decisão humana. Ver [REGISTROS/0299.md](REGISTROS/0299.md) e [evidências](EVIDENCIAS/0299/).

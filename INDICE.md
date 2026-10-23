@@ -1,3 +1,12 @@
+## Campanha 0299
+
+- Registro: [REGISTROS/0299.md](REGISTROS/0299.md)
+- Evidências: [EVIDENCIAS/0299](EVIDENCIAS/0299/)
+- Resultado: PARTIAL; POC autenticada e isolada, aguardando aprovação visual humana.
+- Restaurante: commit local apenas; página Início atual preservada. Motoboy sem alteração.
+
+---
+
 ## Campanha 0298
 
 - Registro: [REGISTROS/0298.md](REGISTROS/0298.md)

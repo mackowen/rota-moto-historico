@@ -1,3 +1,9 @@
+# Estado vigente — Campanha 0299 (2026-10-23)
+
+**PARTIAL; `PENDING_USER_APPROVAL` no Gate D.** Prévia Início v2 implementada em rota de query isolada, com sessão autenticada/MFA, RBAC e Company scope. 14 capturas nos 10 viewports, claro/escuro em celular; zero overflow/erros JS. Página `dashboard()` atual permanece padrão. `npm test` Restaurante e Browser E2E autenticado passaram no escopo descrito; fixture final `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. Referência aprovada encontrada em Downloads. Divergências visuais registradas e aguardam avaliação humana. Nenhuma ocorrência global encerrada; RM-AUD19-13 recebe apenas PASS_SCOPE na POC, continua PARTIAL global. Não houve validação Android físico. Consulte [REGISTRO 0299](REGISTROS/0299.md), [capturas](EVIDENCIAS/0299/capturas/) e [comparação](EVIDENCIAS/0299/comparacao-visual.md).
+
+---
+
 # Estado vigente — Campanha 0298 (2026-10-23)
 
 **PARTIAL; PASS_SCOPE** para Gate 1 estático, tokens de design, shell responsivo e Início no subset Browser autenticado. 20 viewport/tema, navegação em 390/768/1280, 18 categorias Ajustes abertas; zero overflow e zero JS exceptions. `npm test` Restaurante resultado descrito no REGISTRO 0298. Motoboy sem alterações. Settings/formulários, operações, visual de todas as telas, Gestão avançada como rota própria, integração cross-app, mapas reais e Android físico permanecem pendentes. Assets em 127.0.0.1:8083 iguais ao workspace por SHA-256; cache/dispositivo físico não provados. Fixture final `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. RM-AUD19-01/02/10/13 e demais IDs/aliases mantêm estados globais históricos; nenhum PASS_GLOBAL. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTRO 0298](REGISTROS/0298.md), [matriz](EVIDENCIAS/0298/matriz-cobertura-interface.md), [capturas](EVIDENCIAS/0298/).
