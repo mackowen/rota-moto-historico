@@ -1,4 +1,18 @@
-## Revisão vigente — Campanha 0302 (2026-10-23)
+## Revisão vigente — Campanha 0303 (2026-10-23)
+
+**PARTIAL; nenhum ID global encerrado.** Corrigidos cabeçalho que saía da viewport no Home, composição sobreposta da busca/filtros e fechamento externo do painel; a linha era `border-top` do `<details>`; QR segue fail-closed e indisponível para emissão no ambiente porque a capacidade/endpoint retorna 404. Browser autenticado/MFA e regressões E2E provam somente esse subset de apresentação e ações. Manter RM-AUD19-01..19, RM-AUD22-20..22, RM-AUD26-01/02, aliases e estados anteriores. Em especial, não reclassificar RM-AUD19-13/02/10, distribuição RM-AUD22-22 ou integração cross-app. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`.
+
+| ID/Grupo | Estado após 0303 | Evidência / limite |
+|---|---|---|
+| RM-AUD19-01/02/03/10/13 | Estados globais históricos preservados | 0303 exerceu layout/feedback de Home e Pedidos; não testou todos os campos de settings, persistência global, localização cross-app ou toast em aparelho físico. |
+| RM-AUD19-04..09, 11..12, 14..19 | Estados históricos mantidos | Sem novo teste específico que autorize encerramento. |
+| RM-AUD22-20..22; RM-AUD26-01/02 | Estados históricos mantidos | Não revalidou corrida bilateral, concorrência, replay ou histórico. |
+| 0258 / ORS | BLOCKED_AUTHORIZATION / PENDING_EXTERNAL_CREDENTIAL | Mantidos. |
+
+Ver [REGISTRO 0303](REGISTROS/0303.md) e [matriz funcional](EVIDENCIAS/0303/matriz-funcional.md).
+---
+
+## Revisão histórica — Campanha 0302 (2026-10-23)
 
 **PARTIAL; nenhuma ocorrência global foi encerrada.** Pedidos V2 cobriu um fluxo sintético de criar/editar/readback/reload, busca, filtro e impressão Preview. Não comprova as ocorrências globais de configurações, tema, localização, distribuição bilateral, concorrência ou sincronização cross-module. QR continua bloqueado por assinatura ausente no ambiente. Preservar todos os 22 IDs originais, RM-AUD26-01/02, aliases e estados anteriores. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`.
 

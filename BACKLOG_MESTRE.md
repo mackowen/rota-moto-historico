@@ -1,4 +1,13 @@
-## Atualização vigente — Campanha 0302
+## Atualização vigente — Campanha 0303
+
+- **PARTIAL; refinamentos Início/Pedidos V2**: renderer de cabeçalho único/sticky, busca e filtros sem sobreposição, remoção da borda indevida e fechamento acessível do painel corrigidos e exercitados em Browser autenticado/MFA.
+- QR inelegível continua oculto corretamente e sem coluna vazia. QR elegível permanece **BLOCKED_BY_CAPABILITY** no E2E (`GET /api/delivery-qr/deliveries/{id}` 404; assinatura indisponível); não fabricar token.
+- 10 viewports × claro/escuro sem overflow; revisão visual física Android aguarda o proprietário. Não houve reinício de 8083/serviços, escrita no banco oficial ou mudança Motoboy/browser-tests.
+- Fixture E2E final COMPLETED, `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. `npm test` Restaurante passou integralmente após alinhar expectativas de cache offline e regressões do cabeçalho compartilhado.
+- Nenhuma ocorrência global/alias encerrada; preservar pendências 0289, RM-AUD19, RM-AUD22, RM-AUD26, 0258 e ORS.
+---
+
+## Atualização histórica — Campanha 0302
 
 - **PARTIAL; Lote 2 de Pedidos/entregas**: composição V2 responsiva com filtro/busca, cartões mobile, lista/detalhes tablet, tabela PC e handlers canônicos. Criar/editar receberam ACK/GET/reload no Browser autenticado/MFA; impressão validada como prévia.
 - QR seguro permanece `BLOCKED_BY_CAPABILITY` para este ambiente: endpoint retornou 404; sem gerar token/QR local.

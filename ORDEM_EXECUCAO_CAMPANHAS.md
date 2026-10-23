@@ -1,4 +1,9 @@
-## Estado vigente — Campanha 0302 (2026-10-23)
+## Estado vigente — Campanha 0303 (2026-10-23)
+
+0303 PARTIAL: correções locais de sticky header, layout busca/filtros e dismiss do painel aprovadas tecnicamente por Browser autenticado/MFA; screenshot visual pelo proprietário no Chrome Android segue pendente. QR seguro elegível continua bloqueado pela API ausente/404. A fixture foi limpa e o app não foi publicado/reiniciado. Próximo passo após esta entrega: aguardar conferência visual do proprietário; corrigir divergências que ele indicar antes de abrir outro escopo. Não iniciar 0304 automaticamente. Ver [REGISTRO 0303](REGISTROS/0303.md), [matriz](EVIDENCIAS/0303/matriz-funcional.md), [Browser](EVIDENCIAS/0303/capturas/browser-report.json).
+---
+
+## Estado histórico — Campanha 0302 (2026-10-23)
 
 0302 PARTIAL; Lote 2 Pedidos/entregas V2 exercitado por Browser autenticado/MFA: criar, ACK/GET, editar/readback, reload, filtros e preview de impressão. QR endpoint de assinatura 404; scroll interno PC em 1280 px e aprovação visual humana pendentes. npm test Restaurante exit 0; E2E rollback/cleanup completos e zero resíduos. Próximo passo: proprietário conferir no Chrome Android e aprovar ou solicitar ajustes. Depois da aprovação, seguir para Lote 3 (Rotas/Motoboys); não iniciar campanha 0303 automaticamente. Ver [REGISTRO 0302](REGISTROS/0302.md), [matriz](EVIDENCIAS/0302/matriz-funcional.md), [Browser](EVIDENCIAS/0302/capturas/browser-report.json).
 

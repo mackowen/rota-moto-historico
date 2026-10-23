@@ -1,3 +1,16 @@
+## Pendências vigentes — Campanha 0303
+
+- Proprietário validar no Chrome Android: Home sticky após rolagem, Pedidos sticky, linha de busca/filtros e abertura/fecho do painel (fora/acionador/Escape/navegação). Browser Chromium automatizado não substitui o aparelho físico.
+- QR elegível: capacidade de emissão segura inexistente/retornando 404 no E2E; manter comportamento fail-closed. Sem token/QR simulado.
+- Não validada safe-area real/orientação do Android nem overlay de modal com rolagem física. Servidor `127.0.0.1:8083` não foi reiniciado.
+- Nenhum ID global foi encerrado; preservar os 22 IDs, RM-AUD26-01/02, aliases, pendências de distribuição/concorrência/integração da 0289, 0258 `BLOCKED_AUTHORIZATION` e ORS `PENDING_EXTERNAL_CREDENTIAL`.
+- Não iniciar 0304 automaticamente.
+
+Ver [REGISTRO 0303](REGISTROS/0303.md), [matriz](EVIDENCIAS/0303/matriz-funcional.md), [Browser report](EVIDENCIAS/0303/capturas/browser-report.json) e [capturas](EVIDENCIAS/0303/capturas/).
+
+---
+---
+
 ## Pendências vigentes — Campanha 0302
 
 - Aguardar avaliação visual do proprietário da aba Pedidos em celular/tablet/PC; preservar referência e capturas. Em 1280 px a tabela precisa de rolagem interna para mostrar as colunas finais.

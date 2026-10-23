@@ -1,3 +1,14 @@
+# Campanha 0303
+
+- Registro: [REGISTROS/0303.md](REGISTROS/0303.md)
+- Resumo: [RESUMOS/0303.md](RESUMOS/0303.md)
+- Evidências: [EVIDENCIAS/0303](EVIDENCIAS/0303/)
+- Resultado: PARTIAL; PASS_SCOPE para cabeçalho sticky, alinhamento da busca/filtros e fechamento do painel; QR emissão bloqueada por capacidade; avaliação visual humana pendente.
+- Restaurante: commit local a registrar; sem push. Motoboy e Browser QA preservados.
+
+---
+---
+
 # Campanha 0302
 
 - Registro: [REGISTROS/0302.md](REGISTROS/0302.md)
