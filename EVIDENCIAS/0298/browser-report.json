@@ -1,6 +1,5 @@
 {
   "campaign": "0298",
-  "sourceCommit": "f5c29f6a025eb7580398c708785f645d31511706",
   "origin": "http://127.0.0.1:41935",
   "authenticated": true,
   "mfaVerified": true,
@@ -713,5 +712,8 @@
     "databaseCommitted": false,
     "cleanup": "COMPLETED",
     "tenantScopedResiduals": 0
-  }
+  },
+  "baseCommitAtRun": "f5c29f6a025eb7580398c708785f645d31511706",
+  "validatedApplicationCommit": "1400dad1efb31c5b01b0843b6bbd02fe3fa8171b",
+  "worktreeAtRun": "same application changes later committed locally; Browser runner served current workspace files at run time"
 }
