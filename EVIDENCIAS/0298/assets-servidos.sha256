@@ -1,0 +1,6 @@
+127.0.0.1:8083, read-only em 2026-10-23. Hashes servidos iguais aos arquivos locais após correções; não houve restart de serviço nem prova do cache no aparelho Android.
+app.js 1dfe5ed5d7e455708c55a6644094e558cd0a5e860bda611287137302fa06c16f
+styles.css 89d2515735989be61c3bf66541219329f2d23802d3aab8151bb972defc160088
+design-system.css 29e4f0e69d9018228590af596317c60c641a13a2476754f91ec42a5b236f2bf9
+pilot-views.css 447303529d55b78a16ade4666708cd79b73992fadafed54c35e4b9bd8d21def0
+sw.js 3e074d52b2152629049ed04ac5c6f33ef06e7c5f959bf6c3da1b0ec932986c3a

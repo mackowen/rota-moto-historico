@@ -1,0 +1,9 @@
+# Evidências de teste — campanha 0298
+
+- Browser/CDP autenticado: `PASS_SCOPE`; backend-issued, sessão verificada (`/api/identity/session` 200 e `mfaVerified=true`). 20 combinações de viewport/tema: 320, 360, 390, 430, 600, 768, 1024, 1280, 1440 e 1920 px em claro/escuro. Navegação funcional verificada em 390, 768 e 1280 px (24 destinos/visitas), incluindo categorias Ajustes exibidas ao perfil (18 aberturas). Sem overflow horizontal (0) e sem exceções/erros JS (0). Capturas do Início em 320, 390, 768, 1280 e 1920 px nos dois temas.
+- O relatório registra 23 respostas HTTP 404 em rotas de analytics/logística/backup não atendidas pelo fixture Browser desta execução; não foram tratadas como sucessos de endpoint. O escopo visual não confirmou esses serviços.
+- Duas mensagens de console sobre `vector-initialization-failed GPUInitializationError` foram classificadas como aviso de inicialização gráfica do mapa no Chromium headless; a página e capturas foram renderizadas, sem exceção JS. Navegação de mapa real não foi validada.
+- Fixture final do runner: `databaseCommitted=false`, `cleanup=COMPLETED`, `tenantScopedResiduals=0`. Tentativas anteriores do runner que falharam antes da execução completa também ficaram em rollback e não são contabilizadas como PASS.
+- Hashes do conteúdo entregue por `127.0.0.1:8083` iguais aos arquivos do workspace. Isso confirma a raiz estática servida; não confirma service worker/cache ou atualização física no Chrome Android.
+- `npm test` Restaurante: PASS (suíte completa terminou sem falhas); commit local `1400dad1efb31c5b01b0843b6bbd02fe3fa8171b` sem push. Regressões específicas de navegação, dashboard, cache, impressão e dispatch incluídas. `node --check app.js`, `node --check sw.js` e `git diff --check`: PASS.
+- Motoboy, escrita no banco oficial, concorrência operacional, formulários com dados persistentes, fluxos de impressão/QR e aparelho Android físico não foram exercitados nesta campanha.

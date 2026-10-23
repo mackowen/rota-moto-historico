@@ -1,0 +1,717 @@
+{
+  "campaign": "0298",
+  "sourceCommit": "f5c29f6a025eb7580398c708785f645d31511706",
+  "origin": "http://127.0.0.1:41935",
+  "authenticated": true,
+  "mfaVerified": true,
+  "screens": [
+    {
+      "viewport": "320x720",
+      "theme": "light",
+      "width": 320,
+      "height": 720,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "60.7969px 60.7969px 60.7969px 60.7969px 60.7969px",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "320x720",
+      "theme": "dark",
+      "width": 320,
+      "height": 720,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "60.7969px 60.7969px 60.7969px 60.7969px 60.7969px",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "360x800",
+      "theme": "light",
+      "width": 360,
+      "height": 800,
+      "scrollWidth": 360,
+      "bodyScrollWidth": 360,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "68.7969px 68.7969px 68.7969px 68.7969px 68.8125px",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "360x800",
+      "theme": "dark",
+      "width": 360,
+      "height": 800,
+      "scrollWidth": 360,
+      "bodyScrollWidth": 360,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "68.7969px 68.7969px 68.7969px 68.7969px 68.8125px",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "390x844",
+      "theme": "light",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "74.7969px 74.7969px 74.7969px 74.7969px 74.8125px",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "390x844",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "74.7969px 74.7969px 74.7969px 74.7969px 74.8125px",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "430x932",
+      "theme": "light",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "82.7969px 82.7969px 82.7969px 82.7969px 82.8125px",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "430x932",
+      "theme": "dark",
+      "width": 430,
+      "height": 932,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "82.7969px 82.7969px 82.7969px 82.7969px 82.8125px",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "600x960",
+      "theme": "light",
+      "width": 600,
+      "height": 960,
+      "scrollWidth": 585,
+      "bodyScrollWidth": 585,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "600x960",
+      "theme": "dark",
+      "width": 600,
+      "height": 960,
+      "scrollWidth": 585,
+      "bodyScrollWidth": 585,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "light",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 753,
+      "bodyScrollWidth": 753,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "dark",
+      "width": 768,
+      "height": 1024,
+      "scrollWidth": 753,
+      "bodyScrollWidth": 753,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "1024x768",
+      "theme": "light",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1009,
+      "bodyScrollWidth": 1009,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "1024x768",
+      "theme": "dark",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1009,
+      "bodyScrollWidth": 1009,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "1280x800",
+      "theme": "light",
+      "width": 1280,
+      "height": 800,
+      "scrollWidth": 1265,
+      "bodyScrollWidth": 1265,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "1280x800",
+      "theme": "dark",
+      "width": 1280,
+      "height": 800,
+      "scrollWidth": 1265,
+      "bodyScrollWidth": 1265,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "1440x900",
+      "theme": "light",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "1440x900",
+      "theme": "dark",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1425,
+      "bodyScrollWidth": 1425,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    },
+    {
+      "viewport": "1920x1080",
+      "theme": "light",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(255, 255, 255)",
+      "canvas": "#f4f7fb",
+      "surface": "#fff"
+    },
+    {
+      "viewport": "1920x1080",
+      "theme": "dark",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "navItems": [
+        "Visão geral",
+        "Pedidos e entregas",
+        "Rotas",
+        "Motoboys",
+        null
+      ],
+      "navColumns": "none",
+      "card": "rgb(32, 44, 58)",
+      "canvas": "#121a25",
+      "surface": "#202c3a"
+    }
+  ],
+  "navigation": [
+    {
+      "width": 390,
+      "id": "dashboard",
+      "title": "Início",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "orders",
+      "title": "Pedidos e entregas",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "bikes",
+      "title": "Motoboys",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "routes",
+      "title": "Rotas",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "reports",
+      "title": "Relatórios",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "events",
+      "title": "Eventos",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "settings",
+      "title": "Ajustes",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 390,
+      "id": "help",
+      "title": "Ajuda",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "dashboard",
+      "title": "Início",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "orders",
+      "title": "Pedidos e entregas",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "bikes",
+      "title": "Motoboys",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "routes",
+      "title": "Rotas",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "reports",
+      "title": "Relatórios",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "events",
+      "title": "Eventos",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "settings",
+      "title": "Ajustes",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 768,
+      "id": "help",
+      "title": "Ajuda",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "dashboard",
+      "title": "Início",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "orders",
+      "title": "Pedidos e entregas",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "bikes",
+      "title": "Motoboys",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "routes",
+      "title": "Rotas",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "reports",
+      "title": "Relatórios",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "events",
+      "title": "Eventos",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "settings",
+      "title": "Ajustes",
+      "state": "PASS_UI"
+    },
+    {
+      "width": 1280,
+      "id": "help",
+      "title": "Ajuda",
+      "state": "PASS_UI"
+    }
+  ],
+  "settingsCategories": [
+    {
+      "id": "geral",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "operacao",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "logistica",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "impressao",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "pedidos_integracoes",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "aparencia",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "relatorios",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "navegacao",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "eventos",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "seguranca",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "dados",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "backup",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "company-admin-team",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "company-admin-drivers",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "company-admin-integrations",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "security-audit",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "system-admin",
+      "state": "PASS_OPEN"
+    },
+    {
+      "id": "integration-lab",
+      "state": "PASS_OPEN"
+    }
+  ],
+  "httpErrors": [
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/decision-quality"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/decision-quality"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 404,
+      "path": "/api/restaurant-driver-queue"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/decision-quality"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "status": 404,
+      "path": "/api/analytics/territorial"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/internal-provider"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/route-settings"
+    },
+    {
+      "status": 404,
+      "path": "/api/logistics/intelligence/analytics"
+    },
+    {
+      "status": 404,
+      "path": "/api/admin/backup"
+    }
+  ],
+  "jsErrors": [],
+  "runtimeWarnings": [
+    "[RotaMoto mapas] vector-initialization-failed GPUInitializationError",
+    "[RotaMoto mapas] vector-initialization-failed GPUInitializationError"
+  ],
+  "dialogs": [],
+  "overflow": [],
+  "status": "PASS_SCOPE",
+  "fixture": {
+    "lifecycle": "completed by runFixtureLifecycle",
+    "databaseCommitted": false,
+    "cleanup": "COMPLETED",
+    "tenantScopedResiduals": 0
+  }
+}

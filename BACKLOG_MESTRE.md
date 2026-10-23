@@ -1,3 +1,19 @@
+## Atualização vigente — Campanha 0298 (2026-10-23)
+
+| ID / gate | Estado | Evidência / próximo aceite |
+|---|---|---|
+| Inventário global / Gate 1 | PASS_SCOPE estático | Matriz completa criada antes da navegação estrutural; cobrir todos os caminhos em Browser continua necessário. |
+| Design System | PARTIAL | Tokens semânticos e primitives compartilhadas implementados; harmonizar CSS legado por tela com regressões. |
+| Navegação adaptativa | PASS_SCOPE subset | Celular/tablet/desktop autenticados; exercitar navegação por teclado, zoom e telas com estado operacional. |
+| Início | PASS_SCOPE subset | Novo layout responsivo e vazio em Browser; validar com entregas reais sintéticas e ações end-to-end. |
+| RM-AUD19-01/02/10/13 | PARTIAL global | Persistência de settings, telas completas e dispositivo físico pendentes. |
+| Gestão avançada | PARTIAL | Matriz mapeou dependências/contexto; rota independente exige campanha própria preservando deep links e RBAC. |
+| Assets/Android | PARTIAL | 127.0.0.1:8083 hash-matched; service worker e cache/aparelho não validados após rollout. |
+
+Próxima sequência: auditar componentes por grupos de tela; cobrir dados, estados vazios e erros pelo Browser; migrar Gestão avançada apenas após isolamento arquitetural; validar no aparelho após atualização autorizada. Não iniciar 0299 automaticamente.
+
+---
+
 ## Estado vigente — Campanha 0297
 
 0297 PARTIAL. UI de Order simplificada; Gestão avançada aberta em área separada e ligada ao módulo atual. Corrigido `deviceId` que mudava após reload e causava Order canônica duplicada/Delivery conflitada: Browser editou após reload e atualizou mesmas identidades/revisões 1→2. Prévia e print Browser, QR ASSIGNED assinado, Distribuir e Distribuir mais corridas pela UI, chegada Motoboy após reload passaram. Concorrência, replay, falhas HTTP, IDs/Company antigos do incidente #1234, QR expiração/negação, workflows profundos e Android físico seguem pendentes. Nenhum PASS_GLOBAL. Ver [0297](REGISTROS/0297.md) e [matriz](EVIDENCIAS/0297/matriz-funcional.md).

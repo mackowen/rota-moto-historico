@@ -1,3 +1,22 @@
+## Revisão vigente — Campanha 0298 (2026-10-23)
+
+**PARTIAL; nenhum PASS_GLOBAL.** Gate 1 inventariou destinos, capacidades e dependências antes de mexer na navegação. Tokens semânticos e shell adaptativo foram implementados; Início e navegação passaram subset autenticado. Nenhuma alteração encerra defeitos funcionais históricos de persistência, impressão, QR, dispatch, Company, edição de usuários, mapas ou permissões. Não renumerar os 19 `RM-AUD19`, `RM-AUD22-20..22`, `RM-AUD26-01/02` nem aliases. Evidências e limites: [registro](REGISTROS/0298.md), [matriz](EVIDENCIAS/0298/matriz-cobertura-interface.md), [Browser](EVIDENCIAS/0298/browser-report.json).
+
+| ID | Estado após 0298 | Evidência / próxima prova |
+|---|---|---|
+| RM-AUD19-01 | PARTIAL global | Temas claro/escuro renderizados no shell; persistência/nova sessão é evidência anterior e Motoboy/físico não cobertos nesta campanha. |
+| RM-AUD19-02 | PARTIAL | Navegação de Ajustes e abertura de categorias não comprova Salvar de campos. Testar cada campo pendente pela UI/readback. |
+| RM-AUD19-03 | PARTIAL | Sem novo teste Company cross-app, coordenadas/mapa/Logística/Frota/Motoboy. |
+| RM-AUD19-10 | PARTIAL | Não houve escrita funcional por formulário; manter matriz por campo pendente. |
+| RM-AUD19-13 | PASS_SCOPE subset; PARTIAL global | Início e shell 20 viewport/tema; outras telas, toast/modal individual e Android físico pendentes. |
+| RM-AUD22-21 | PASS_SCOPE anterior; sem nova cobertura integral | Sem regressão específica do modal nesta campanha. |
+| RM-AUD22-22 | PASS_SCOPE anterior; pendências concorrência/replay | Sem teste operacional nesta campanha. |
+| RM-AUD26-01/02 | Estados PARTIAL anteriores | Sem reprodução/fechamento nesta campanha. |
+
+IDs sem linha nova preservam integralmente seus estados e evidências anteriores. Pendências de distribuição 0289, RM-AUD19-18, 0258 `BLOCKED_AUTHORIZATION` e ORS `PENDING_EXTERNAL_CREDENTIAL` mantidas. Ver o histórico detalhado abaixo.
+
+---
+
 ## Revisão vigente — Campanha 0297 (2026-10-22)
 
 **PARTIAL; PASS_SCOPE em fluxos específicos; nenhum PASS_GLOBAL.** O novo Browser encontrou troca de `deviceId` após reload que duplicava Order canônica; identidade foi estabilizada no IndexedDB e uma edição UI passou ACK/readback mantendo Order/Delivery, revisão 1→2. Corrida simples e “Distribuir mais corridas” passaram pela UI, estado ASSIGNED e leitura visual Motoboy após reload; QR assinado elegível passou; preview e fluxo print Browser passaram. Pedidos/Company real #1234, IDs deliberadamente divergentes, conflitos/concorrência/replay, falhas HTTP, QR expiração/permissão e Chrome Android físico seguem sem prova. RM-AUD22-21/0295 e pendências anteriores preservadas. Ver [REGISTROS/0297](REGISTROS/0297.md) e [matriz](EVIDENCIAS/0297/matriz-funcional.md).

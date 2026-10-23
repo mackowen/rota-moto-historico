@@ -1,3 +1,14 @@
+## Campanha 0298
+
+- Registro: [REGISTROS/0298.md](REGISTROS/0298.md)
+- Resumo: [RESUMOS/0298.md](RESUMOS/0298.md)
+- Evidências: [EVIDENCIAS/0298](EVIDENCIAS/0298/)
+- Resultado: PARTIAL; Design System/base adaptativa, navegação e Início passaram subset Browser autenticado.
+- Restaurante: alterações locais na branch `codex/campaign-0298-design-system-global`; não publicar o app.
+- Motoboy/browser-tests: sem alterações nesta campanha.
+
+---
+
 ## Campanha 0278
 
 - Registro: [REGISTROS/0278.md](REGISTROS/0278.md)

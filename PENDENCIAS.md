@@ -1,3 +1,17 @@
+## Atualização — Campanha 0298 (2026-10-23)
+
+- `PARTIAL`: auditoria estrutural do painel gerou [matriz de cobertura 0298](EVIDENCIAS/0298/matriz-cobertura-interface.md); ainda não há Browser de cada área/componente.
+- `PARTIAL`: Design System implementado em tokens e primitives, mas CSS especializado/legado requer harmonização e QA tela a tela.
+- `PARTIAL`: navegação responsiva e Início passaram subset autenticado; telas de dados, formulários, modais, impressão/QR e operações não foram revalidadas globalmente.
+- `PARTIAL`: gestão avançada está mapeada mas ainda não é módulo/rota independente.
+- `PARTIAL`: assets servidos em 127.0.0.1:8083 são iguais ao workspace; comportamento service worker/cache e Chrome Android físico não confirmados.
+- Permanecem todos os IDs cumulativos e aliases, incluindo RM-AUD19-01/02/03/10/13/18, RM-AUD22-20..22, RM-AUD26-01/02; nenhum PASS_GLOBAL novo. Distribuição/concorrência 0289, 0258 `BLOCKED_AUTHORIZATION` e ORS `PENDING_EXTERNAL_CREDENTIAL` preservados.
+- Ações futuras sem iniciar campanha: (a) jornadas por área, (b) persistência funcional por campo, (c) migração de Gestão avançada com deep links/RBAC, (d) validação física Android após rollout autorizado.
+
+Ver [REGISTRO 0298](REGISTROS/0298.md) e [evidências](EVIDENCIAS/0298/).
+
+---
+
 ## Atualização vigente — Campanha 0256-D (2026-10-19)
 
 | ID | Componente; prioridade; estado | Evidência atual | Próxima ação |

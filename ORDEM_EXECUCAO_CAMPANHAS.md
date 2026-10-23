@@ -1,3 +1,11 @@
+## Estado vigente — Campanha 0298 (2026-10-23)
+
+0298 PARTIAL. Início e navegação global receberam tokens/estrutura adaptativa; Gate 1 foi concluído antes da alteração. Browser autenticado/CDP passou 20 viewport/tema e navegação subset (390/768/1280, 18 categorias Ajustes), sem overflow/JS; assets 8083 hash-match; suite Restaurante precisa registrar resultado final pós execução. Formulários e telas fora do subset permanecem sem aprovação; Gestão avançada separada como módulo próprio ainda não migrou. 0258 continua BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL; sem alterações/push dos aplicativos, Motoboy ou browser-tests. Ver [REGISTRO 0298](REGISTROS/0298.md) e [evidências](EVIDENCIAS/0298/).
+
+Próximo trabalho recomendado (sem iniciar): (1) padronização responsiva por grupos de telas além de Início, (2) jornadas Browser funcionais por operação e formulário, (3) desenho isolado da rota Gestão avançada, (4) prova Android física após atualização operacional autorizada.
+
+---
+
 ## Estado vigente — execução 0297
 
 0297 PARTIAL, sem iniciar 0298 automaticamente. Entregues interface normal da corrida e Gestão avançada separada; device ID durável corrigido e edição Browser após reload atualizou a mesma Order/Delivery canônica. Browser autenticado comprovou preview/fluxo de impressão, QR elegível, ambos botões de distribuição, chegada Motoboy e reload, em 360/390/768 claro/escuro sem overflow no subset. `npm test` Restaurante passou após último ajuste; Motoboy não alterado. Falta injeção de IDs/caches obsoletos equivalente ao #1234, concorrência/replay/falhas 401/403/409/500/503/timeout, QR expiração/negação, workflows de Gestão avançada, Chrome Android físico e atualizar serviço servido. Fixture final `rotamoto_e2e` completa com `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. 0258 permanece BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Ver [REGISTROS/0297](REGISTROS/0297.md), [matriz](EVIDENCIAS/0297/matriz-funcional.md), [report](EVIDENCIAS/0297/browser-report.json).
