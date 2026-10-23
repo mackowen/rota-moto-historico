@@ -763,3 +763,22 @@ Novos IDs vinculados (sem substituir as 22 ocorrências históricas):
 ## Atualização 0295 — Equipe, Backup e distribuição
 
 RM-AUD19-18 permanece PARTIAL/BLOCKED_BY_CAPABILITY nas operações sem API canônica; nenhuma edição UI de Membership/Role foi comprovada em 0295. RM-AUD22-22 recebeu PASS_SCOPE para Distribuir/Distribuir mais corridas e estado sem elegíveis no Restaurante, além da visualização Motoboy autenticada após sync/reload. Sync cross-app reproduziu `SYNC_PACKET_IDENTITY_MISMATCH`, corrigido no Motoboy reutilizando o device ID capturado pelo ciclo. Browser repetido comprovou pull, tela Entregas e reload com duas corridas; concorrência, replay e negativos permanecem pendentes, sem PASS_GLOBAL. Backup 404 de 0294 foi atribuído ao fallback do harness sem handler; runtime API reconhece a rota e retorna 503 `BACKUP_ADMIN_NOT_CONFIGURED`, logo BLOCKED_BY_CAPABILITY. Os 22 IDs/aliases e estados não relacionados preservados. Ver REGISTROS/0295.md e EVIDENCIAS/0295/matriz-funcional.md.
+# Atualização aditiva — 0304 (2026-10-23)
+
+- `0304-E2E-AUTH` — Browser login 403; prova funcional autenticada BLOCKED.
+- `0304-PLAN-PERSIST` — criação/reordenação/readback/reload de rota OPEN até E2E.
+- `0304-SYNC-CONFLICT` — cenários concorrência, conflito, idempotência e reconexão BLOCKED.
+- `0304-MAP-VISUAL` — referências verificadas, implementação parcial, comparação final PARTIAL.
+- `0304-RBAC-TENANT` — validação Browser adversarial OPEN.
+- `0304-OWNER-APPROVAL` — avaliação visual Android do proprietário pendente.
+- Nenhuma ocorrência global antiga encerrada/reclassificada/removida. Ver `REGISTROS/0304.md`.
+
+---
+
+# Atualização aditiva — 0303-A (2026-10-23)
+
+- `0303-A-AUTH` — Browser autenticado pós-change: BLOCKED, login HTTP 403; ações e regressões funcionais da Home não exercitadas nesta rodada.
+- `0303-A-VISUAL` — Comparação final Home/Orders/Routes: PARTIAL; medições pré reais e pós via renderer isolado em 390px; falta captura autenticada completa e aprovação do proprietário no Android.
+- `0303-A-ACCOUNT` — Ação Conta/perfil: BLOCKED para confirmação pós-change autenticada; controle de identidade e permissões existentes preservados.
+- Nenhum item histórico foi encerrado, reclassificado ou removido. Consulte `REGISTROS/0303-A.md`.
+

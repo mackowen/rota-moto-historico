@@ -1,4 +1,16 @@
-# Estado vigente — Campanha 0303 (2026-10-23)
+# Estado vigente — Campanha 0304 (2026-10-23)
+
+**PARTIAL; sem PASS global.** Três referências Rotas abertas e verificadas. Composição celular mapa-primeiro, tablet e PC implementada; seleção/detalhe baseia-se em dados canônicos. Coordenadas são validadas; removido geocode automático e não se inventam rotas, distância ou ETA. Testes direcionados/domínio e paridade passaram. Browser E2E não autenticou (HTTP 403); criação/salvamento/readback de rota, conflito, concorrência, tenant/RBAC Browser e regressões funcionais estão pendentes. Capturas disponíveis são gate de login ou renderer Home isolado, sem comparação visual final autenticada. G0 PASS; G8/G10 BLOCKED, G13 FAIL; demais gates parciais; aprovação visual final exclusivamente do proprietário. DB oficial sem escrita; app/Motoboy sem push. Ver [REGISTRO 0304](REGISTROS/0304.md) e [gates](EVIDENCIAS/0304/gates.md).
+
+---
+
+# Estado histórico — Adendo 0303-A (2026-10-23)
+
+**PARTIAL.** A causa da largura reduzida foi medida: em 390×844, o `#main` tinha 12px de padding por lado e `.dashboard-v2` repetia outros 12px, deixando a área interna Home em 342px; Orders/Routes tinham 366px. Corrigido o padding duplicado até 1199px e colocado Home no conjunto de classes compartilhado do cabeçalho operacional. Renderer isolado pós mediu 366px de conteúdo, 386px de header, `position:sticky`, documento 390px sem overflow. `/api/identity/login` respondeu 403; as comparações pós autenticadas, Conta/perfil real, ações/regressão e avaliação Android não foram concluídas. Não se considera o renderer isolado aprovação visual. Nenhuma pendência anterior foi encerrada. Ver [REGISTRO 0303-A](REGISTROS/0303-A.md), [relatório de larguras](EVIDENCIAS/0303-A/larguras.md) e capturas.
+
+---
+
+# Estado histórico — Campanha 0303 (2026-10-23)
 
 **PARTIAL; PASS_SCOPE nos refinamentos comprovados de Home/Pedidos.** Cabeçalho compartilhado sticky corrigido e verificado após rolagem nas duas áreas; busca/limpar/filtros alinhados; borda do painel removida na regra fonte; painel fecha por área externa, acionador, Escape com foco restaurado e navegação. Chromium autenticado/MFA, 10 larguras × claro/escuro sem overflow e sem exceções JS; criação/edição/readback/reload/preview regressivos passaram. QR inelegível é omitido; emissão elegível continua bloqueada por API de assinatura 404 e não é simulada. Fixture `9eaf6445-3244-44ce-816c-b630e73488b6`: COMPLETED, `databaseCommitted=false`, cleanup COMPLETED e resíduos zero. `npm test` Restaurante exit 0; Motoboy e browser-tests sem alterações. Não houve Android físico nem reinício do servidor 8083. Avaliação final no Chrome Android fica com o proprietário. Nenhuma ocorrência global antiga foi encerrada; aliases, pendências 0289, 0258 `BLOCKED_AUTHORIZATION` e ORS `PENDING_EXTERNAL_CREDENTIAL` preservados. Ver [REGISTRO 0303](REGISTROS/0303.md), [matriz](EVIDENCIAS/0303/matriz-funcional.md), [testes](EVIDENCIAS/0303/testes.md) e [capturas](EVIDENCIAS/0303/capturas/).
 ---

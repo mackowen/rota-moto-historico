@@ -1,3 +1,23 @@
+# Campanha 0304 — Rotas V2
+
+- Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
+- Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
+- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/)
+- Resultado: PARTIAL; G0 PASS; layout e validações iniciais documentados; E2E autenticado, sync, comparação visual e revisão operacional pendentes.
+- Restaurante: branch local `codex/campaign-0304-rotas-v2`; sem push. Motoboy sem alterações. Histórico recebe somente fast-forward.
+
+---
+
+# Adendo 0303-A — largura responsiva de Início V2
+
+- Registro: [REGISTROS/0303-A.md](REGISTROS/0303-A.md)
+- Resumo: [RESUMOS/0303-A.md](RESUMOS/0303-A.md)
+- Evidências: [EVIDENCIAS/0303-A](EVIDENCIAS/0303-A/)
+- Resultado: PARTIAL; causa e medidas DOM documentadas, CSS corrigido na branch local do Restaurante; autenticação 403, regressões funcionais e aprovação visual no Chrome Android pendentes.
+- Restaurante: commit local após revisão final; sem push. Motoboy sem alteração; Browser QA mantém alterações pré-existentes.
+
+---
+
 # Campanha 0303
 
 - Registro: [REGISTROS/0303.md](REGISTROS/0303.md)

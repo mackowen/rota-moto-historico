@@ -1,4 +1,31 @@
-## Pendências vigentes — Campanha 0303
+## Pendências vigentes — Campanha 0304 (2026-10-23)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0304-E2E-AUTH | Browser autenticado; P0; **BLOCKED** | `/api/identity/login` HTTP 403; jornadas de Rotas/Home não concluídas. | Corrigir/estabelecer harness sintético autorizado e repetir E2E em tenant isolado, documentando rollback/resíduos. |
+| 0304-PLAN-PERSIST | Planejamento/ordem/readback; P0; **OPEN** | Lógica existente preservada; Browser não confirmou salvar, reload, reabrir ou edição. | Exercitar seleção, duplicidade, ordenação canônica, save/ACK/readback/reload e conflito. |
+| 0304-SYNC-CONFLICT | Sync/concorrência; P0; **BLOCKED** | Revisões e guarda de duplicidade auditadas; cenário não executado. | Testar duas sessões, retry/idempotência, revisão obsoleta, evento duplicado e reconexão. |
+| 0304-MAP-VISUAL | Comparação cartográfica por referência; P1; **PARTIAL** | Referências abertas/hashadas; layouts implementados; não existe captura autenticada pós-change. | Capturar 10 viewports × 2 temas, falha tiles, seleção, resize, coordenadas ausentes e estados previstos. |
+| 0304-RBAC-TENANT | Isolamento/RBAC; P0; **OPEN** | Código/contrato preservado; sem tentativa adversarial Browser desta campanha. | Testar acesso cruzado e ações proibidas com tenants sintéticos independentes. |
+| 0304-OWNER-APPROVAL | Aprovação visual Rotas/Início; P1; **PENDING_USER_APPROVAL** | Sem pares visuais autenticados finais nem avaliação física do proprietário. | Proprietário conferir no Chrome Android; Codex não substitui a aprovação. |
+
+Manter todos os IDs e estados históricos abaixo, incluindo os itens do adendo 0303-A e do registro 0303. Ver [REGISTRO 0304](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [pendências 0303-A](#pendências-históricas--adendo-0303-a-2026-10-23).
+
+---
+
+## Pendências históricas — Adendo 0303-A (2026-10-23)
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0303-A-AUTH | Browser autenticado para Início/Orders/Routes; P1; **BLOCKED** | Chromium/CDP recebeu HTTP 403 em `/api/identity/login`; sem regressão funcional pós-change. | Restaurar fluxo sintético autenticado no harness autorizado; não usar conta do proprietário nem DB oficial. |
+| 0303-A-VISUAL | Comparação final de Início com abas; P1; **PARTIAL** | Medidas 390px antes/pós renderer isolado; imagens pós não representam a sessão autorizada completa. | Repetir 10 viewports × 2 temas em Browser autenticado e proprietário conferir no Chrome Android; não aprovar em nome do Codex. |
+| 0303-A-ACCOUNT | Conta/perfil inline e acessível; P1; **BLOCKED** | O gate de identidade manteve o acionador fora do `.top-actions`; o CSS reutilizado só se aplica quando a sessão o coloca inline. | Verificar label/ícone, foco, ação/permissões e sticky após sessão real sintética válida, sem mudar lógica de autorização. |
+
+Manter todas as pendências e IDs globais do registro 0303 e dos inventários anteriores inalterados. Ver [REGISTRO 0303-A](REGISTROS/0303-A.md), [evidências](EVIDENCIAS/0303-A/).
+
+---
+
+## Pendências históricas — Campanha 0303
 
 - Proprietário validar no Chrome Android: Home sticky após rolagem, Pedidos sticky, linha de busca/filtros e abertura/fecho do painel (fora/acionador/Escape/navegação). Browser Chromium automatizado não substitui o aparelho físico.
 - QR elegível: capacidade de emissão segura inexistente/retornando 404 no E2E; manter comportamento fail-closed. Sem token/QR simulado.
