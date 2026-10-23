@@ -1,4 +1,10 @@
-## Estado vigente — Campanha 0301 (2026-10-23)
+## Estado vigente — Campanha 0302 (2026-10-23)
+
+0302 PARTIAL; Lote 2 Pedidos/entregas V2 exercitado por Browser autenticado/MFA: criar, ACK/GET, editar/readback, reload, filtros e preview de impressão. QR endpoint de assinatura 404; scroll interno PC em 1280 px e aprovação visual humana pendentes. npm test Restaurante exit 0; E2E rollback/cleanup completos e zero resíduos. Próximo passo: proprietário conferir no Chrome Android e aprovar ou solicitar ajustes. Depois da aprovação, seguir para Lote 3 (Rotas/Motoboys); não iniciar campanha 0303 automaticamente. Ver [REGISTRO 0302](REGISTROS/0302.md), [matriz](EVIDENCIAS/0302/matriz-funcional.md), [Browser](EVIDENCIAS/0302/capturas/browser-report.json).
+
+---
+
+## Estado histórico — Campanha 0301 (2026-10-23)
 
 0301 PARTIAL, checkpoint controlado do Lote 1. Browser autenticado/MFA passou filtros rápidos e preview de impressão da linha sintética; cache keys de app/design-system/styles e shell SW foram avançados; npm test Restaurante passou após alinhar expectations antigas. Restante das áreas pendente. Próxima ordem: completar Pedidos; Rotas e Motoboys; Gestão avançada; Gestão/Admin; auditoria final. Não iniciar 0302 automaticamente.
 

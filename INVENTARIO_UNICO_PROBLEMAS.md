@@ -1,4 +1,19 @@
-## Revisão vigente — Campanha 0301 (2026-10-23)
+## Revisão vigente — Campanha 0302 (2026-10-23)
+
+**PARTIAL; nenhuma ocorrência global foi encerrada.** Pedidos V2 cobriu um fluxo sintético de criar/editar/readback/reload, busca, filtro e impressão Preview. Não comprova as ocorrências globais de configurações, tema, localização, distribuição bilateral, concorrência ou sincronização cross-module. QR continua bloqueado por assinatura ausente no ambiente. Preservar todos os 22 IDs originais, RM-AUD26-01/02, aliases e estados anteriores. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`.
+
+| ID/Grupo | Estado após 0302 | Evidência / limite |
+|---|---|---|
+| RM-AUD19-01/02/03/10/13 | Estados globais históricos mantidos | Esta campanha não testou tema/configurações/localização/toasts de forma abrangente. |
+| RM-AUD19-04..09, 11..12, 14..19 | Estados históricos mantidos | Fora do escopo funcional desta campanha; sem alteração de status. |
+| RM-AUD22-20..22; RM-AUD26-01/02 | Estados históricos mantidos | Ações operacionais de distribuição, cross-app e histórico não foram repetidas em amplitude global. |
+| 0258 / ORS | BLOCKED_AUTHORIZATION / PENDING_EXTERNAL_CREDENTIAL | Mantidos sem alteração. |
+
+Ver [REGISTRO 0302](REGISTROS/0302.md) e [matriz funcional](EVIDENCIAS/0302/matriz-funcional.md).
+
+---
+
+## Revisão histórica — Campanha 0301 (2026-10-23)
 
 **PARTIAL; nenhum problema global foi encerrado.** O lote exercitou busca/filtros e ações de leitura/impressão em Pedidos, mas não muda RM-AUD19-02/03/10 nem outros estados globais. A prévia correspondeu à linha filtrada; ainda falta cobertura ampla de campos, módulos, RBAC/erros e sincronização cross-module. Todos os IDs e aliases permanecem preservados. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL.
 

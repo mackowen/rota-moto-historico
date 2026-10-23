@@ -1,3 +1,13 @@
+# Campanha 0302
+
+- Registro: [REGISTROS/0302.md](REGISTROS/0302.md)
+- Resumo: [RESUMOS/0302.md](RESUMOS/0302.md)
+- Evidências: [EVIDENCIAS/0302](EVIDENCIAS/0302/)
+- Resultado: PARTIAL; Pedidos V2 validado por Browser autenticado no fluxo criar/editar/readback/reload/busca/preview; aprovação visual humana pendente; QR bloqueado por capacidade ausente.
+- Restaurante: commits locais `ff49492`, `3f6910d`, sem push; Motoboy e Browser QA sem alteração.
+
+---
+
 ## Campanha 0301
 
 - Registro: [REGISTROS/0301.md](REGISTROS/0301.md)

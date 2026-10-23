@@ -1,4 +1,16 @@
-## Pendências vigentes — Campanha 0301
+## Pendências vigentes — Campanha 0302
+
+- Aguardar avaliação visual do proprietário da aba Pedidos em celular/tablet/PC; preservar referência e capturas. Em 1280 px a tabela precisa de rolagem interna para mostrar as colunas finais.
+- QR elegível não pôde ser emitido porque a API de assinatura respondeu 404 neste ambiente. Implementação local não deve simular QR; desbloquear somente com capacidade/ambiente autorizado.
+- Não cobertos: cancelar/devolver/atribuir/distribuir e concorrência/replay, erros HTTP e timeout, nova sessão/troca de empresa/isolamento adversarial, filtros avançados combinados, QR expiração/permissão, impressão física e validação Android físico.
+- Próximas áreas só após aprovação desta aba: Rotas/Motoboys; depois Gestão avançada independente; Gestão/Admin; auditoria final. Não iniciar 0303 automaticamente.
+- Preservar todos os 22 IDs originais, RM-AUD26-01/02, aliases, pendências de distribuição/concorrência/integração de 0289, 0258 `BLOCKED_AUTHORIZATION` e ORS `PENDING_EXTERNAL_CREDENTIAL`. Nenhum estado global foi encerrado por este fluxo isolado.
+
+Ver [REGISTRO 0302](REGISTROS/0302.md), [matriz funcional](EVIDENCIAS/0302/matriz-funcional.md) e [testes](EVIDENCIAS/0302/testes.md).
+
+---
+
+## Pendências históricas — Campanha 0301
 
 - Lote 1 somente parcial. Continuar modernização de Pedidos/entregas em celular/tablet/desktop, cobrir filtros avançados, Abrir/QR/edição/cancelamento e criar capturas claras/escuras específicas por viewport.
 - Lotes 3–5 inteiros pendentes: Rotas, Motoboys, módulo próprio Gestão avançada, Relatórios, Eventos, Configurações/Administração, Integrações, Backup, Laboratório, Ajuda.

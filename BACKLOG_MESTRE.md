@@ -1,4 +1,14 @@
-## Atualização vigente — Campanha 0301
+## Atualização vigente — Campanha 0302
+
+- **PARTIAL; Lote 2 de Pedidos/entregas**: composição V2 responsiva com filtro/busca, cartões mobile, lista/detalhes tablet, tabela PC e handlers canônicos. Criar/editar receberam ACK/GET/reload no Browser autenticado/MFA; impressão validada como prévia.
+- QR seguro permanece `BLOCKED_BY_CAPABILITY` para este ambiente: endpoint retornou 404; sem gerar token/QR local.
+- Desktop 1280 px mantém rolagem horizontal interna; o restante da largura até 1920 e 10 viewports × 2 temas foram capturados sem overflow do documento. Revisão visual humana pendente.
+- `npm test` Restaurante exit 0; fixture final `rotamoto_e2e`, `databaseCommitted=false`, cleanup COMPLETED, resíduos zero. Sem mudanças Motoboy/Browser QA ou página Início V2.
+- Lotes de Rotas/Motoboys, Gestão avançada, Gestão/Admin e auditoria global permanecem pendentes. Sem mudança nos estados globais das 22 ocorrências/aliases, RM-AUD26, distribuição 0289, 0258 e ORS.
+
+---
+
+## Atualização histórica — Campanha 0301
 
 - **PARTIAL, Lote 1 checkpoint:** Pedidos ganhou busca rotulada/Limpar, filtros rápidos e avançados, handlers ligados depois da reconstrução e ações mobile reagrupadas. QR fixo legado foi corrigido na origem. Unit e Browser/MFA sintético comprovaram filtro Aguardando e preview de impressão ligado à Order sintética.
 - **Lotes 2–6 pendentes**; nenhum outro módulo é declarado migrado. APIs de fila/logística/analytics do fixture responderam 404; preservar o bloqueio por capacidade.
