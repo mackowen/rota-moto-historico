@@ -1,4 +1,17 @@
-## Pendências vigentes — Campanha 0300
+## Pendências vigentes — Campanha 0301
+
+- Lote 1 somente parcial. Continuar modernização de Pedidos/entregas em celular/tablet/desktop, cobrir filtros avançados, Abrir/QR/edição/cancelamento e criar capturas claras/escuras específicas por viewport.
+- Lotes 3–5 inteiros pendentes: Rotas, Motoboys, módulo próprio Gestão avançada, Relatórios, Eventos, Configurações/Administração, Integrações, Backup, Laboratório, Ajuda.
+- Verificar dependências de dados/serviços canônicos por área. Endpoints /api/restaurant-driver-queue, /api/logistics/analytics, /api/logistics/intelligence/analytics, /api/logistics/intelligence/decision-quality, /api/logistics/route-settings, /api/analytics/territorial e /api/analytics/territorial/deliveries/:id/destination retornaram 404 no harness; são bloqueios de capacidade do fixture para validar esses módulos, não motivos para simular respostas.
+- npm test Restaurante passou integralmente após alinhar expectativas antigas dos assets offline/cache.
+- Android físico e atualização/cache do aparelho permanecem sem validação; leitura somente leitura de 127.0.0.1:8083 já confirmou SHA-256 igual ao workspace, sem reinício.
+- Preservar os 22 problemas originais, RM-AUD26 e aliases; nenhum status global alterado. RM-AUD19-02/03/10 continuam parciais; pendências 0289 de distribuição/concorrência/Motoboy mantidas. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL.
+
+Ver [REGISTRO 0301](REGISTROS/0301.md), [Browser report](EVIDENCIAS/0301/browser-report.json), [matriz de cobertura](EVIDENCIAS/0301/matriz-cobertura-interface.md).
+
+---
+
+## Pendências históricas — Campanha 0300
 
 - **G2 PARTIAL:** validar que a mesma Order aparece na interface Orders, Rotas e Motoboy, não apenas Home/GET. Não repetir escrita real; usar fixture tenant-scoped.
 - **G5 PARTIAL:** proprietário ainda deve conferir a composição integrada em aparelho/contexto visual real. 20 capturas Chromium não substituem avaliação humana.

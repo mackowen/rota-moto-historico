@@ -1,4 +1,10 @@
-## Estado vigente — Campanha 0300 (2026-10-23)
+## Estado vigente — Campanha 0301 (2026-10-23)
+
+0301 PARTIAL, checkpoint controlado do Lote 1. Browser autenticado/MFA passou filtros rápidos e preview de impressão da linha sintética; cache keys de app/design-system/styles e shell SW foram avançados; npm test Restaurante passou após alinhar expectations antigas. Restante das áreas pendente. Próxima ordem: completar Pedidos; Rotas e Motoboys; Gestão avançada; Gestão/Admin; auditoria final. Não iniciar 0302 automaticamente.
+
+---
+
+## Estado histórico — Campanha 0300 (2026-10-23)
 
 0300 PARTIAL; não iniciar 0301 automaticamente. DashboardV2 promovido como Home oficial na branch local do Restaurante, handlers existentes e menu Mais acessível. Corrigido o render antes da restauração de sessão/Company. Browser/MFA confirmou escrita sintética por UI, ACK + GET canônico + reload, preview de impressão, QR elegível e 10 larguras × 2 temas; npm test Restaurante passou. 8083 serviu `app.js` idêntico ao workspace, sem reinício; isso não representa deploy. G1/G3/G4/G6/G7 PASS_SCOPE; G2/G5/G8 PARTIAL. Falta consistência da Order em todas as áreas/Motoboy, módulos cujo fixture respondeu 404, Android/impressão físicos e confirmação visual humana. Banco oficial e infraestrutura intocados. Ver [REGISTRO 0300](REGISTROS/0300.md), [evidências](EVIDENCIAS/0300/).
 

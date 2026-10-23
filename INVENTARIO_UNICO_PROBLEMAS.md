@@ -1,4 +1,19 @@
-## Revisão vigente — Campanha 0300 (2026-10-23)
+## Revisão vigente — Campanha 0301 (2026-10-23)
+
+**PARTIAL; nenhum problema global foi encerrado.** O lote exercitou busca/filtros e ações de leitura/impressão em Pedidos, mas não muda RM-AUD19-02/03/10 nem outros estados globais. A prévia correspondeu à linha filtrada; ainda falta cobertura ampla de campos, módulos, RBAC/erros e sincronização cross-module. Todos os IDs e aliases permanecem preservados. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL.
+
+| ID/Grupo | Estado após 0301 | Evidência / limite |
+|---|---|---|
+| RM-AUD19-01/02/03/10/13 | Estados históricos mantidos | Nenhum escopo global correspondente foi coberto por este lote; Pedidos não comprova tema/settings, localização ou persistência de configurações. |
+| RM-AUD19-04..09, 11..12, 14..19 | Estados históricos mantidos | Sem alteração/teste específico nesta execução. |
+| RM-AUD22-20..22; RM-AUD26-01/02 | Estados históricos mantidos | Sem novo teste no escopo desta campanha. |
+| 0258 / ORS | BLOCKED_AUTHORIZATION / PENDING_EXTERNAL_CREDENTIAL | Mantidos sem alteração. |
+
+Ver [REGISTRO 0301](REGISTROS/0301.md) e [matriz por lote](EVIDENCIAS/0301/matriz-lote-1.md).
+
+---
+
+## Revisão histórica — Campanha 0300 (2026-10-23)
 
 **PARTIAL; nenhum problema global foi encerrado.** Home V2 integrada no branch do Restaurante. A sessão/Company foi restaurada antes da projeção inicial, eliminando a corrida de render que ocultava uma Order sincronizada após reload. A mesma Order apareceu na Home antiga e V2 e recebeu ACK/GET/reload na Company sintética. `RM-AUD19-01/02/03/10/13`, RM-AUD22, RM-AUD26, aliases e estados globais anteriores não são encerrados por esta cobertura.
 

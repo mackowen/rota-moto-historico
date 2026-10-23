@@ -1,3 +1,13 @@
+## Campanha 0301
+
+- Registro: [REGISTROS/0301.md](REGISTROS/0301.md)
+- Resumo: [RESUMOS/0301.md](RESUMOS/0301.md)
+- Evidências: [EVIDENCIAS/0301](EVIDENCIAS/0301/)
+- Resultado: PARTIAL; checkpoint do Lote 1 em Pedidos, Browser autenticado e regressões; demais módulos pendentes.
+- Restaurante: alterações locais na branch própria, sem push. Motoboy e browser-tests sem alterações.
+
+---
+
 ## Campanha 0300
 
 - Registro: [REGISTROS/0300.md](REGISTROS/0300.md)

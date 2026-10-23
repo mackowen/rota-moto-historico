@@ -1,4 +1,14 @@
-## Atualização vigente — Campanha 0300
+## Atualização vigente — Campanha 0301
+
+- **PARTIAL, Lote 1 checkpoint:** Pedidos ganhou busca rotulada/Limpar, filtros rápidos e avançados, handlers ligados depois da reconstrução e ações mobile reagrupadas. QR fixo legado foi corrigido na origem. Unit e Browser/MFA sintético comprovaram filtro Aguardando e preview de impressão ligado à Order sintética.
+- **Lotes 2–6 pendentes**; nenhum outro módulo é declarado migrado. APIs de fila/logística/analytics do fixture responderam 404; preservar o bloqueio por capacidade.
+- npm test Restaurante passou após atualizar expectativas antigas do shell offline para os assets cache-busted desta campanha.
+- Fixture tenant-scoped E2E: rollback, databaseCommitted=false, cleanup COMPLETED, resíduos zero. Sem alteração ao banco oficial, Motoboy ou Browser QA.
+- RM-AUD19-01..19, RM-AUD22-20..22, RM-AUD26-01/02 e aliases preservados; sem encerramentos globais. Continuar lote de Pedidos e avançar módulos na ordem prevista.
+
+---
+
+## Atualização histórica — Campanha 0300
 
 **PARTIAL.** Home V2 integrada no Restaurante na branch local; `npm test` Restaurante e Browser autenticado/MFA no subset passaram. Corrigida corrida de restauração da Company antes do render, ações Home conectadas, menu Mais refinado e cache invalidado. Mantêm-se pendentes cross-module/Motoboy, módulos de logística cujo fixture responde 404, Chrome Android físico, prova de impressão física e revisão visual humana. Dados E2E rollback e resíduos zero. Sem push do app e sem alterações Motoboy/Browser. Todos os 22 IDs e aliases preservados; nenhum PASS_GLOBAL. 0258 BLOCKED_AUTHORIZATION; ORS PENDING_EXTERNAL_CREDENTIAL. Consulte [REGISTRO 0300](REGISTROS/0300.md).
 
