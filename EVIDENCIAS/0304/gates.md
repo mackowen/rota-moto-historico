@@ -111,3 +111,24 @@ G8 PASS continua limitado à persistência local-first definida para esse gate; 
 | G14 aprovação do proprietário | **FAIL** | A reprovação anterior permanece; aguarda aprovação expressa. |
 
 A descrição completa, medições, hashes das referências e capturas estão em [intervencao-consolidada-2026-10-24](intervencao-consolidada-2026-10-24/README.md). Os demais gates operacionais G8–G13 mantêm exatamente os limites do checkpoint E2E durável imediatamente acima; esta atualização não fecha pendências anteriores.
+
+
+## Continuação — cabeçalhos e cartões de Pedidos (2026-10-24)
+
+| Área/gate | Estado | Evidência e limite |
+|---|---|---|
+| Header compartilhado e gutters | PASS técnico (fixture) | 130 pares antes/depois; getBoundingClientRect nos quatro lados; nove larguras, cinco páginas, claro/escuro e sidebar aberta/recolhida; zero overlap/overflow. Chrome Android físico pendente. |
+| Cartão único por pedido | PASS técnico (fixture/unit) | 72 casos 0/1/5/20; um article por linha de dado, sem painel lateral permanente, Abrir visível, sem overflow. |
+| Abrir e imprimir | PARTIAL | Handlers existentes foram exercitados por fixture/unit; fluxo autenticado e impressão física pendentes. |
+| Regressão automatizada Restaurante | PASS | `npm test` integral após atualizar expectativas de cache antigas. |
+| Publicação servida em 8083 | PASS técnico | SHA-256 de index, design-system.css, orders-v2.css e app.js coincide fonte↔HTTP 200 servido. |
+| E2E autenticado | BLOCKED | Nenhuma sessão/tenant sintéticos autorizados com cleanup verificável nesta intervenção; sem bypass e sem escrita oficial. |
+| G14 aprovação visual | **FAIL** | Reprovação anterior continua vigente; imagens CDP são fixtures e não autorizam aceite humano. |
+| G15 regressões globais | PARTIAL | Suíte automatizada passou; Android físico e jornada autenticada dos módulos não cobertos. |
+
+Medições, método, capturas, status da evidência exploratória anterior e limites: [README cabeçalhos/pedidos](cabecalhos-pedidos-2026-10-24/README.md). Nenhum gate operacional anterior G8–G13 foi ampliado por estes testes visuais/unitários.
+
+
+## Commits da intervenção visual de 2026-10-24
+
+Implementação Restaurante: `288d62fb38eb78440daf6a8f9e1ce9ce453649a4` (header compartilhado, cartões responsivos, cache e testes). Evidência controlada adicional: `fef04776d70718ea20f3b49d20ac9f218f726156`. Branch `codex/campaign-0304-visual-consolidated`; ambos são commits locais, sem push do app. HEAD final local Restaurante: `193bbb9fb89f67593b1ce1b279f222d843648a6d`; implementação `288d62f`; evidências `fef0477` (header) e `fec751c` (tablet); documentação local `e19d6c9`/`f12a550`; referências e registro de campanha `193bbb9`. Todos locais, sem push do app. Motoboy e Browser QA não alterados.

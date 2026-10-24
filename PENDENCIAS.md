@@ -2302,3 +2302,14 @@ Os itens anteriores permanecem abertos e inalterados; estes complementam, não s
 | 0304-ANDROID-SCROLL-REVIEW | Sticky/safe area; P1; **PARTIAL** | Scroll e foco avaliados em Chromium fixture com evento `scrollend`; nenhum bloqueio reproduzível demonstrado. | Validar Chrome Android físico no topo/fim e navegação por teclado; não classificar conteúdo fora do enquadramento como defeito sem bloqueio de interação. |
 
 Evidências da rodada: `EVIDENCIAS/0304/refinamento-final-2026-10-24/`. Nenhum item anterior foi removido ou fechado.
+
+
+## Atualização cumulativa 0304 — 2026-10-24
+
+Nenhuma linha antiga foi removida ou encerrada. As pendências da 0257 e campanhas posteriores permanecem abertas.
+
+| ID | Área | Estado atual | Evidência | Próxima ação |
+|---|---|---|---|---|
+| 0304-HEADER-ANDROID-OWNER | Cabeçalho global / P1 | PARTIAL; medidas CDP passaram, validação física pendente | [130 medições antes/depois](EVIDENCIAS/0304/cabecalhos-pedidos-2026-10-24/README.md) | Conferir no Chrome Android físico e temas conforme referência. |
+| 0304-ORDERS-AUTHENTICATED | Pedidos / P1 | BLOCKED para fluxo autenticado; renderer/unit passaram | [72 cenários de cartões](EVIDENCIAS/0304/cabecalhos-pedidos-2026-10-24/README.md) | Confirmar abrir detalhe, impressão, filtros e seleção em sessão E2E autorizada. |
+| 0304-OWNER-CHROME-REVIEW | Fidelidade humana | BLOCKED/PENDING_USER_APPROVAL; G14 FAIL | Capturas fixture, não aprovação | Proprietário revisar no dispositivo e fornecer decisão expressa. |

@@ -53,3 +53,17 @@ As capturas `before/after`, estados com entrega sintética e rota selecionada fi
 | Aprovação visual final G14 | FAIL | Reprovação anterior permanece até aprovação expressa do proprietário |
 
 **Sem PASS global.** A campanha permanece PARTIAL e aberta; G8/G9/G10/G11/G12/G13 e demais pendências mantêm o escopo comprovado no gate matrix principal.
+
+
+## Atualização cumulativa — header e Pedidos, 2026-10-24
+
+| Elemento | Baseline verificado | Implementação após correção | Divergência/limite | Estado técnico |
+|---|---|---|---|---|
+| Header tablet 768 px | Padding computado 0 px em ambos os lados | 16,13 px em ambos os lados | Render CDP com shell/#app; Android real pendente | Corrigido / PASS fixture |
+| Header desktop 1024–1920 px | Gutters 20,47–28 px | 24–32 px | Respeita intervalos previstos; composição de conteúdo mantida | Corrigido / PASS fixture |
+| Header mobile 320–430 px | 10 px em ambos os lados | 10 px em ambos os lados | Padrão mobile preservado | PASS fixture |
+| Ações do header | Três botões sujeitos a gutters inconsistentes | Botões sem overlap; gap visual 4 px mobile e 5–10 px tablet/desktop conforme layout | Ação real autorizada não executada nesta rodada | PARTIAL |
+| Pedido selecionado | Pedido repetido em cartão de lista e painel lateral | Um cartão por pedido; detalhe aberto no fluxo existente | Autenticação funcional pendente | PASS renderer / PARTIAL operacional |
+| Reorganização por largura | Tabela/lista com duplicação lateral | Container queries reorganizam metadados e ações sem duplicar pedido | Fixtures sintéticas; G14 continua FAIL | PARTIAL visual |
+
+Ver os dados completos e imagens verificadas em [cabecalhos-pedidos-2026-10-24](../cabecalhos-pedidos-2026-10-24/README.md). As capturas exploratórias sem wrapper #app foram preservadas, porém não são usadas para os resultados acima.
