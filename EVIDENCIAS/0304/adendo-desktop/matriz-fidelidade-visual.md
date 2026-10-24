@@ -89,7 +89,7 @@ O fixture CDP gerou 72 combinações: 3 módulos × 2 temas × 7 viewports (360�
 
 Na Início mobile, três botões do cabeçalho medem 44×44 px; distribuição em 390 px: x=238, 286, 334 e right do último=378, portanto 12 px até a viewport. O ícone “+” mede 19×19 px, sem clipping. O arranjo geométrico não encerra a avaliação do proprietário.
 
-Ver [`adendo-desktop/README.md`](adendo-desktop/README.md), [`adendo-desktop/0304-shell-visual-report.json`](adendo-desktop/0304-shell-visual-report.json) e [`adendo-desktop/0304-shell-inicio-390x844-dark-expanded.png`](adendo-desktop/0304-shell-inicio-390x844-dark-expanded.png). G14 permanece FAIL; nenhuma pendência anterior é encerrada por este acréscimo.
+Ver [`README.md`](README.md), [`0304-shell-visual-report.json`](0304-shell-visual-report.json) e [`0304-shell-inicio-390x844-dark-expanded.png`](0304-shell-inicio-390x844-dark-expanded.png). G14 permanece FAIL; nenhuma pendência anterior é encerrada por este acréscimo.
 
 ### Medidas correntes do mapa no fixture Rotas (10 viewports × 2 temas)
 

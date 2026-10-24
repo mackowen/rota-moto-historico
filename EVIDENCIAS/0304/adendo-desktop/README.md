@@ -39,4 +39,4 @@ Comparação de Rotas com o fixture do renderer de produção e medidas atualiza
 
 ## Testes e histórico
 
-`npm test` concluiu com exit code 0 após a correção final do ícone e atualização do shell/cache. Os runners CDP do shell (72 combinações) e de Rotas (26 linhas) concluíram com zero falhas em suas verificações geométricas, conforme o [registro](../../REGISTROS/0304.md). Consulte também os [gates](gates.md) e as [regressões/testes](regressoes.md). Isso não substitui os E2E autenticados nem a comparação visual pelo proprietário. Evidência não inclui credenciais, banco oficial, respostas operacionais nem dados pessoais.
+`npm test` concluiu com exit code 0 após a correção final do ícone e atualização do shell/cache. Os runners CDP do shell (72 combinações) e de Rotas (26 linhas) concluíram com zero falhas em suas verificações geométricas, conforme o [registro do adendo](../../../REGISTROS/0304-ADENDO-DESKTOP.md). Consulte também os [gates](gates.md) e as [regressões/testes](regressoes.md). Isso não substitui os E2E autenticados nem a comparação visual pelo proprietário. Evidência não inclui credenciais, banco oficial, respostas operacionais nem dados pessoais.

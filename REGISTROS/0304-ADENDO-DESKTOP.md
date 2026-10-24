@@ -36,3 +36,5 @@ Manter todas as pendências antigas, inclusive as de campanha 0303/0303-A. Próx
 ## Publicação do histórico
 
 O commit `b1a00938de5d0a2525bf62562606a595fdc7b579` (`Record campaign 0304 desktop shell checkpoint`) foi publicado por fast-forward exclusivamente em `origin/codex/campaign-0303-ui-refinements`, partindo do SHA remoto confirmado `3b988fee29f051458cfa3e2999e865d7b275401b`. Resultado do push: `3b988fe..b1a0093`. Nenhum push foi realizado nos repositórios Restaurante, Motoboy ou Browser QA. Este parágrafo registra o resultado e segue para o próximo commit do histórico.
+
+Na revisão pós-publicação dos links relativos, foram corrigidos alvos dos snapshots da matriz/regressões e adicionadas ao histórico duas notas 0303-A já existentes no app para não deixar referências quebradas. O verificador de links locais do conjunto atualizado reportou zero alvos ausentes. Esta correção documental será publicada em outro fast-forward do mesmo branch.
