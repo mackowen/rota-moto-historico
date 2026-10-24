@@ -2058,3 +2058,9 @@ HEAD local Restaurante de entrada `6c5eeb3`; intervenção de correção do head
 ## Commits da intervenção visual de 2026-10-24
 
 Implementação Restaurante: `288d62fb38eb78440daf6a8f9e1ce9ce453649a4` (header compartilhado, cartões responsivos, cache e testes). Evidência controlada adicional: `fef04776d70718ea20f3b49d20ac9f218f726156`. Branch `codex/campaign-0304-visual-consolidated`; ambos são commits locais, sem push do app. HEAD final local Restaurante: `193bbb9fb89f67593b1ce1b279f222d843648a6d`; implementação `288d62f`; evidências `fef0477` (header) e `fec751c` (tablet); documentação local `e19d6c9`/`f12a550`; referências e registro de campanha `193bbb9`. Todos locais, sem push do app. Motoboy e Browser QA não alterados.
+
+### Campanha 0304 — Pedidos V2 (2026-10-24)
+
+A central operacional complementar e cartões compactos estão no branch local do Restaurante; “Gerenciamento completo” foi removido por duplicar a ação “Abrir pedido”. Evidência CDP é sintética, sem E2E autenticado. G14 FAIL, G8 somente local-first, G9–G13 sem avanço operacional; campanha PARTIAL/aberta. Ver `REGISTROS/0304.md`, `RESUMOS/0304.md`, `EVIDENCIAS/0304/gates.md` e `EVIDENCIAS/0304/pedidos-central-operacional-2026-10-24/README.md`. Nenhuma escrita no PostgreSQL oficial; não iniciar 0305.
+
+Commit local Restaurante da central operacional: `d23ba9be8b0702c7689313a5efd4c6e01cbb44f8` na branch `codex/campaign-0304-visual-consolidated`; não publicado.

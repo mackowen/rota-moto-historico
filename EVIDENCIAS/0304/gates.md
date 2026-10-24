@@ -132,3 +132,15 @@ Medições, método, capturas, status da evidência exploratória anterior e lim
 ## Commits da intervenção visual de 2026-10-24
 
 Implementação Restaurante: `288d62fb38eb78440daf6a8f9e1ce9ce453649a4` (header compartilhado, cartões responsivos, cache e testes). Evidência controlada adicional: `fef04776d70718ea20f3b49d20ac9f218f726156`. Branch `codex/campaign-0304-visual-consolidated`; ambos são commits locais, sem push do app. HEAD final local Restaurante: `193bbb9fb89f67593b1ce1b279f222d843648a6d`; implementação `288d62f`; evidências `fef0477` (header) e `fec751c` (tablet); documentação local `e19d6c9`/`f12a550`; referências e registro de campanha `193bbb9`. Todos locais, sem push do app. Motoboy e Browser QA não alterados.
+
+## Atualização — Pedidos V2 central operacional (2026-10-24)
+
+| Área | Estado | Evidência/limite |
+|---|---|---|
+| Cartão único e responsivo | PARTIAL | Renderer/CDP sintético em 390, 768, 1280 e 1920 px, dois temas; lista 0/1/5/20 coberta em teste. Não substitui comparação humana. |
+| Central operacional | PARTIAL | Elegibilidade/faixa recente e fallbacks testados; distribuição delega fluxo existente. UI autenticada com despacho real não executada. |
+| Ação Abrir | PASS (componente) | Um único acionador de detalhe por cartão; ação repetida “Gerenciamento completo” removida e teste de regressão incluído. |
+| Persistência/sincronização cross-app | BLOCKED | Sem jornada autenticada de pedido nesta rodada. |
+| E2E autenticado | BLOCKED | Sem tenant/MFA sintéticos com cleanup verificável disponível. |
+| G14 fidelidade visual | **FAIL** | Reprovação anterior permanece; capturas desta rodada são fixtures sintéticas. |
+| Campanha 0304 | PARTIAL | Aberta; pendências anteriores preservadas; sem PASS global ou início da 0305. |

@@ -1,0 +1,567 @@
+{
+  "scope": "fixture visual only; synthetic orders and courier; no authentication or persistence claim",
+  "capturedAt": "2026-10-24T23:42:04.571Z",
+  "results": [
+    {
+      "phase": "before",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "scrollWidth": 390,
+      "count": 5,
+      "list": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 1393
+      },
+      "side": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 117.9
+      },
+      "card": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 270.6
+      },
+      "panel": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 117.9
+      },
+      "screenshot": "before-phone-390x844-light.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "scrollWidth": 390,
+      "count": 5,
+      "list": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 1393
+      },
+      "side": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 841.1
+      },
+      "card": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 270.6
+      },
+      "panel": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 841.1
+      },
+      "screenshot": "after-phone-390x844-light.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "scrollWidth": 390,
+      "count": 5,
+      "list": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 1393
+      },
+      "side": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 117.9
+      },
+      "card": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 270.6
+      },
+      "panel": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 117.9
+      },
+      "screenshot": "before-phone-390x844-dark.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "scrollWidth": 390,
+      "count": 5,
+      "list": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 1393
+      },
+      "side": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 841.1
+      },
+      "card": {
+        "x": 10,
+        "y": 188,
+        "w": 370,
+        "h": 270.6
+      },
+      "panel": {
+        "x": 10,
+        "y": 1597,
+        "w": 370,
+        "h": 841.1
+      },
+      "screenshot": "after-phone-390x844-dark.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        768,
+        1024
+      ],
+      "theme": "light",
+      "scrollWidth": 753,
+      "count": 5,
+      "list": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 957.6
+      },
+      "side": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 91.6
+      },
+      "card": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 91.6
+      },
+      "screenshot": "before-tablet-768x1024-light.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        768,
+        1024
+      ],
+      "theme": "light",
+      "scrollWidth": 753,
+      "count": 5,
+      "list": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 957.6
+      },
+      "side": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 780.8
+      },
+      "card": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 780.8
+      },
+      "screenshot": "after-tablet-768x1024-light.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        768,
+        1024
+      ],
+      "theme": "dark",
+      "scrollWidth": 753,
+      "count": 5,
+      "list": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 957.6
+      },
+      "side": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 91.6
+      },
+      "card": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 91.6
+      },
+      "screenshot": "before-tablet-768x1024-dark.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        768,
+        1024
+      ],
+      "theme": "dark",
+      "scrollWidth": 753,
+      "count": 5,
+      "list": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 957.6
+      },
+      "side": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 780.8
+      },
+      "card": {
+        "x": 104,
+        "y": 148,
+        "w": 621,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 104,
+        "y": 1121.6,
+        "w": 621,
+        "h": 780.8
+      },
+      "screenshot": "after-tablet-768x1024-dark.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        1280,
+        800
+      ],
+      "theme": "light",
+      "scrollWidth": 1265,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 957.6
+      },
+      "side": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 117.9
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 117.9
+      },
+      "screenshot": "before-desktop-1280x800-light.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        1280,
+        800
+      ],
+      "theme": "light",
+      "scrollWidth": 1265,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 957.6
+      },
+      "side": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 668
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 668
+      },
+      "screenshot": "after-desktop-1280x800-light.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        1280,
+        800
+      ],
+      "theme": "dark",
+      "scrollWidth": 1265,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 957.6
+      },
+      "side": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 117.9
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 117.9
+      },
+      "screenshot": "before-desktop-1280x800-dark.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        1280,
+        800
+      ],
+      "theme": "dark",
+      "scrollWidth": 1265,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 957.6
+      },
+      "side": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 668
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 617,
+        "h": 183.5
+      },
+      "panel": {
+        "x": 911,
+        "y": 148,
+        "w": 326,
+        "h": 668
+      },
+      "screenshot": "after-desktop-1280x800-dark.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "theme": "light",
+      "scrollWidth": 1905,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 917.6
+      },
+      "side": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 117.9
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 175.5
+      },
+      "panel": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 117.9
+      },
+      "screenshot": "before-desktop-1920x1080-light.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "theme": "light",
+      "scrollWidth": 1905,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 917.6
+      },
+      "side": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 845.1
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 175.5
+      },
+      "panel": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 845.1
+      },
+      "screenshot": "after-desktop-1920x1080-light.png"
+    },
+    {
+      "phase": "before",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "theme": "dark",
+      "scrollWidth": 1905,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 917.6
+      },
+      "side": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 117.9
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 175.5
+      },
+      "panel": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 117.9
+      },
+      "screenshot": "before-desktop-1920x1080-dark.png"
+    },
+    {
+      "phase": "after",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "theme": "dark",
+      "scrollWidth": 1905,
+      "count": 5,
+      "list": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 917.6
+      },
+      "side": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 845.1
+      },
+      "card": {
+        "x": 278,
+        "y": 148,
+        "w": 1203,
+        "h": 175.5
+      },
+      "panel": {
+        "x": 1497,
+        "y": 148,
+        "w": 380,
+        "h": 845.1
+      },
+      "screenshot": "after-desktop-1920x1080-dark.png"
+    }
+  ],
+  "consoleExceptions": []
+}

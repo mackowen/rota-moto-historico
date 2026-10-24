@@ -2313,3 +2313,11 @@ Nenhuma linha antiga foi removida ou encerrada. As pendências da 0257 e campanh
 | 0304-HEADER-ANDROID-OWNER | Cabeçalho global / P1 | PARTIAL; medidas CDP passaram, validação física pendente | [130 medições antes/depois](EVIDENCIAS/0304/cabecalhos-pedidos-2026-10-24/README.md) | Conferir no Chrome Android físico e temas conforme referência. |
 | 0304-ORDERS-AUTHENTICATED | Pedidos / P1 | BLOCKED para fluxo autenticado; renderer/unit passaram | [72 cenários de cartões](EVIDENCIAS/0304/cabecalhos-pedidos-2026-10-24/README.md) | Confirmar abrir detalhe, impressão, filtros e seleção em sessão E2E autorizada. |
 | 0304-OWNER-CHROME-REVIEW | Fidelidade humana | BLOCKED/PENDING_USER_APPROVAL; G14 FAIL | Capturas fixture, não aprovação | Proprietário revisar no dispositivo e fornecer decisão expressa. |
+
+### Campanha 0304 — Pedidos V2 central operacional (2026-10-24)
+
+- **0304-ORDERS-AUTH-DISPATCH — BLOCKED:** confirmar abertura/impressão/filtros e distribuição rápida com MFA, tenant sintético isolado e cleanup verificável; a rodada validou renderer e fluxo delegado por teste, não a operação autenticada.
+- **0304-ORDERS-OWNER-REVIEW — BLOCKED / PENDING_USER_APPROVAL:** revisar capturas com referências aprovadas em aparelho/Chrome do proprietário; G14 permanece FAIL.
+- **0304-ORDERS-CROSS-APP-SYNC — BLOCKED:** verificar persistência confirmada e convergência Restaurante↔Motoboy para pedidos criados/atribuídos pela central; não inferir de teste visual.
+
+Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-2026-10-24/`. Estas pendências complementam as anteriores; nenhuma pendência oriunda da 0257 ou campanhas anteriores foi encerrada.
