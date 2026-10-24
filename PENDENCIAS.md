@@ -2250,3 +2250,11 @@ Ver [REGISTRO 0253](REGISTROS/0253.md), [resumo](RESUMOS/0253.md) e [matriz](MAT
 - Marketplace permanece `MARKETPLACE_RUNTIME_UNAVAILABLE` (503) até configuração real do runtime/provedor.
 
 - `0303-A-AUTH-ALIGNMENT` — comparar e exercitar Notificações/Nova corrida/Perfil nas abas autenticadas em 320/360/390/430 e temas: PARTIAL (login 403; fixture de componentes já mediu diferença 0 px; validação física Chrome Android e proprietário pendentes).
+
+## Atualização de pendências 0304 — 2026-10-24
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0304-DURABLE-E2E | Fixture durável e sync cross-app; P0; **BLOCKED** | Cluster E2E temporário isolado e CDP 9223 preparados; tenant provision retornou 500 antes do browser. Nenhum commit operacional independente foi feito. Cluster integralmente removido; DB oficial e E2E compartilhado sem escrita. | Capturar causa interna sanitizada do provisionamento no harness E2E; corrigir ACL/config somente no ambiente descartável; então executar readback independente por PID/XID e jornada autenticada. Ver `EVIDENCIAS/0304/e2e-durable-attempt-2026-10-24.json`. |
+| 0304-DELIVERY-EVENT-READBACK | Verificação de histórico de eventos; P1; **PARTIAL** | Contrato e código usam `eventId` para identidade do evento e `entityId`/`canonicalId` para Delivery relacionada; consulta antiga filtrava apenas `deliveryId`, provável falso negativo. Sem confirmação de leitura browser nova. | Reexecutar query pelo vínculo canônico e conferir persistência/renderização em ambos os apps após jornada autenticada durável. |
+| 0304-OFFLINE-REOPEN-RETURN | Offline, cancelamento e devolução; P0; **BLOCKED** | Tentativa atual abortou antes da sessão Browser; evidência anterior cobre retirada offline e ACK após reconexão online, sem reload ainda offline nem RETURN. | Executar com fixture isolada após desbloquear provisionamento, respeitando estado canônico e ownership. |

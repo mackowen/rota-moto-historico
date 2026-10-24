@@ -1,0 +1,60 @@
+{
+  "campaign": "0304",
+  "date": "2026-10-24",
+  "classification": "PARTIAL_BLOCKED_BEFORE_BROWSER_FLOW",
+  "purpose": "Retry durable cross-app E2E with an isolated disposable PostgreSQL cluster and independent committed request transactions",
+  "repositories": {
+    "restaurant": "65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025",
+    "motoboy": "64d2e13d8e455f48b20b32b396e9c49ba7553e0b",
+    "history_before": "ca45ba410d5e810049515eab84c4c9a162494845"
+  },
+  "setup": {
+    "database": "rotamoto_e2e in a newly initialized temporary PostgreSQL cluster on loopback port 55432",
+    "migrations": "E2E migrations 0001-0051 applied only to the disposable cluster",
+    "runtime_role": "rotamoto_app with no superuser, create-role, create-database, or database TEMP privilege",
+    "acl_observation": "Read-only comparison showed identity-table ACLs missing from the new cluster; explicit identity runtime grants were applied only to the temporary cluster.",
+    "official_database_written": false,
+    "shared_e2e_database_written": false
+  },
+  "execution": {
+    "runner": "temporary CDP runner, no repository files changed",
+    "chromium_cdp": "isolated port 9223 was reachable",
+    "fixture_provisioning": "HTTP 500 INTERNAL_ERROR before tenant creation completed and before browser sessions opened",
+    "browser_sessions_started": false,
+    "postgres_independent_commits_observed": false,
+    "delivery_or_delivery_event_created": false,
+    "offline_reload_while_offline": "NOT_RUN",
+    "cancel_return_concurrency_security_journeys": "NOT_RUN"
+  },
+  "cleanup": {
+    "temporary_cluster_stopped": true,
+    "temporary_cluster_directory_removed": true,
+    "cdp_9223_closed": true,
+    "fixture_residuals": "No fixture completed; lifecycle transaction failed before a tenant was established. The whole disposable cluster was deleted.",
+    "official_database_changed": false
+  },
+  "delivery_event_investigation": {
+    "contract_identifier": "DeliveryEvent is a canonical sync entity whose related canonical identifier is entityId; eventId identifies the event itself.",
+    "restaurant_reconciliation": "Source maps canonical event payloads into the deliveryEvents store using eventId/entityId and deduplicates by canonical event identity.",
+    "likely_prior_verifier_issue": "The previous E2E assertion matched only deliveryId and could miss canonical events keyed by entityId/canonicalId.",
+    "classification": "LIKELY_FALSE_NEGATIVE_IN_PRIOR_QUERY; NOT CONFIRMED BY A NEW SUCCESSFUL BROWSER READBACK",
+    "production_code_changed": false
+  },
+  "tests": {
+    "restaurant_npm_test": "PASS, exit 0",
+    "motoboy_npm_test": "PASS, exit 0",
+    "new_durable_cross_app_browser_e2e": "BLOCKED at fixture tenant provisioning; no operational browser flow ran",
+    "backend_tests_repeated": "Not repeated; prior approved backend concurrency/idempotency/tenant-isolation evidence remains scoped as previously recorded."
+  },
+  "gates": {
+    "G8": "PASS, local-first IndexedDB only; no new durable remote proof",
+    "G9": "PARTIAL",
+    "G10": "PARTIAL",
+    "G11": "PARTIAL",
+    "G12": "PARTIAL; reconnect path previously passed, offline reload not run",
+    "G13": "PARTIAL",
+    "G14": "FAIL, owner visual approval pending",
+    "G15": "PARTIAL"
+  },
+  "remaining_blocker": "Capture a sanitized internal error for fixture provisioning in the disposable-cluster harness and correct only the isolated E2E setup; then rerun independent PostgreSQL readback and browser journeys."
+}
