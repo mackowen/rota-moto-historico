@@ -1,0 +1,72 @@
+{
+  "campaign": "0304",
+  "checkpoint": "authenticated-routes-navigation-and-local-persistence",
+  "date": "2026-10-24",
+  "classification": "PASS_SCOPE_WITH_REMAINING_BLOCKED_SCENARIOS",
+  "rootCause": {
+    "category": "browser-harness-reload-synchronization",
+    "finding": "The readiness predicate could match the prior document while Page.reload was transitioning. It did not require a changed performance.timeOrigin and a completed new document before continuing.",
+    "applicationDefectObserved": false,
+    "corroboration": "Coordinate-driven navigation worked before reload; with new-document readiness gating, authenticated navigation and route view succeeded after reload."
+  },
+  "authenticatedE2E": {
+    "mfaFlow": "completed with synthetic user and tenant; no MFA bypass",
+    "sessionAfterReload": "verified valid",
+    "navigation": [
+      "dashboard",
+      "routes",
+      "dashboard",
+      "routes"
+    ],
+    "routesModuleMounted": true,
+    "leafletMapInitialized": true,
+    "eligibleSyntheticDeliveries": 3,
+    "syntheticMarkers": 3,
+    "filterInteraction": true,
+    "planSaved": true,
+    "stopCount": 2,
+    "routeSelection": true,
+    "localIndexedDbReadbackAfterReload": true,
+    "fixtureScope": "rollback-only rotamoto_e2e tenant"
+  },
+  "browser": {
+    "viewportCaptureCount": 21,
+    "viewportsPx": [
+      320,
+      360,
+      390,
+      430,
+      600,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "horizontalOverflowAtOperational390px": false,
+    "javascriptExceptionCount": 0,
+    "geocoderRequests": 0,
+    "httpStatuses": [
+      401,
+      403
+    ],
+    "httpStatusContext": "initial anonymous session 401 and expected MFA challenge 403; authenticated session and route journey succeeded"
+  },
+  "evidence": {
+    "selectedRouteScreenshot": "capturas/authenticated-routes-390x844-2026-10-24.png",
+    "screenshotIsApprovedReference": false,
+    "note": "Operational fixture screenshot only; not a visual approval artifact. Synthetic IDs, credentials, cookies, addresses, and tokens omitted."
+  },
+  "notExercised": [
+    "server-confirmed persistence or remote acknowledgement",
+    "concurrency and revision conflicts",
+    "Restaurant-to-Motoboy synchronization",
+    "adversarial tenant isolation and RBAC",
+    "offline/reconnection",
+    "tile failure resilience and marker refresh lifecycle"
+  ]
+}

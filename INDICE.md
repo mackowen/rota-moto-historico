@@ -5,7 +5,7 @@
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
 - Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md)
-- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Checkpoint 2026-10-24: follow-up CDP confirmou MFA, sessão 200 e shell hidratado após reload (`#app`/`#main`), mas a navegação pós-reload não chegou a Rotas; G13 BLOCKED e causa da navegação pendente. [Follow-up sanitizado](EVIDENCIAS/0304/auth-e2e-followup-2026-10-24.json); diagnóstico anterior preservado.
+- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Checkpoint 2026-10-24: follow-up CDP confirmou MFA, sessão 200 e shell hidratado após reload (`#app`/`#main`), mas a navegação pós-reload não chegou a Rotas; G13 PARTIAL: causa do falso bloqueio identificada no sincronismo do harness; MFA, navegação repetida, mapa e persistência IndexedDB passaram. G8 PASS somente local-first; G10 BLOCKED; sync/conflitos/RBAC/offline pendentes. [Evidência autenticada](EVIDENCIAS/0304/auth-e2e-navigation-2026-10-24.json); diagnósticos anteriores preservados.
 - Restaurante `main` publicado em `65a0239`; Motoboy `main` em `64d2e13`; ambos integrados por fast-forward após `npm test` passar. Histórico atualizado por último; detalhes e bloqueios em [registro de publicação](REGISTROS/0304.md).
 
 ---
