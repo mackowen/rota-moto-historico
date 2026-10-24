@@ -21,6 +21,8 @@ Browser QA não tem remoto configurado e seu worktree contém 1.026 entradas mod
 
 `REGISTROS/0304.md`, `REGISTROS/0304-ADENDO-DESKTOP.md`, `RESUMOS/0304.md`, `EVIDENCIAS/0304/`, o índice, o estado atual e o inventário estão incluídos em `main`. Os registros e evidências anteriores foram preservados. `git diff --check` não encontrou erros de whitespace nos commits consolidados. A inspeção de padrões de credenciais e de extensões sensíveis nas evidências 0304 não encontrou ocorrências suspeitas; não houve impressão de valores secretos.
 
+A verificação de links Markdown dos registros, resumos e notas de evidência 0304 identificou um destino legado que apontava para o checkout local do Restaurante. O destino foi corrigido para a matriz comparativa e as evidências 0304 dentro deste histórico; o conteúdo de avaliação e os estados de gate foram preservados.
+
 O avanço autorizado é somente `codex-historico/main` → `origin/main`, por fast-forward e sem `--force`. SHA consolidado antes deste registro: `8c220222d1f67229d39f4d18008fb46a24cea879`. A verificação do SHA publicado deve ser reportada junto da entrega; nenhum push de aplicação, Motoboy ou Browser QA é autorizado ou realizado.
 
 ## Situação da campanha
