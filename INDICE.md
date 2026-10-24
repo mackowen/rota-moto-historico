@@ -1,9 +1,10 @@
 # Campanha 0304 — Rotas V2
 
 - Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
+- Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
-- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/)
-- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; intervenção estrutural posterior capturada em renderer isolado/10 viewports, 5/5 filtros visíveis; toolbar PC, dados/mapa autenticados, E2E e revisão do proprietário pendentes.
+- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md)
+- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Toolbar/Rotas autenticadas, operação E2E e revisão do proprietário pendentes.
 - Restaurante: branch local `codex/campaign-0304-rotas-v2`; sem push. Motoboy sem alterações. Histórico recebe somente fast-forward.
 
 ---

@@ -11,6 +11,11 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 - `REGISTROS/NNNN.md`: relato imutável de cada interação relevante. Nunca editar um registro anterior para representar uma nova interação; criar sempre o próximo número livre.
 - `POLITICA_GIT_CAMPANHAS.md`: inventário, preservação, commits e publicação obrigatória do histórico nas campanhas futuras.
 
+## Trabalho vigente
+
+- Campanha 0304: [registro original](REGISTROS/0304.md), [adendo desktop e shell responsivo](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md), [gates e evidências](EVIDENCIAS/0304/).
+- Status: campanha aberta; G14 continua FAIL por reprovação visual do proprietário; E2E autenticado permanece bloqueado após o desafio MFA e falha de shell no reload. Não iniciar a campanha 0305 nem publicar os repositórios de aplicação.
+
 ## Histórico, estado, decisões e pendências
 
 O registro é a narrativa de uma interação específica. O estado atual é uma síntese do que se verificou mais recentemente e pode mudar. Decisões guardam escolhas duráveis e seus motivos, inclusive escolhas depois superadas. Pendências acompanham trabalho futuro e seu ciclo de vida. Nenhum desses documentos substitui o código, os dados ou o histórico Git.

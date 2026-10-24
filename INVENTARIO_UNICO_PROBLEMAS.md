@@ -785,3 +785,15 @@ Intervenção pós-reprovação registrada em `REGISTROS/0304.md`: painel mobile
 - Nenhum item histórico foi encerrado, reclassificado ou removido. Consulte `REGISTROS/0303-A.md`.
 
 - `0303-A-HEADER-ACTIONS` — diferença original de 6 px no limite direito e notificação com 42×44 na Home; regra de grid e dimensão corrigidas. Medição isolada agora 0 px de diferença entre cabeçalhos componentes; autenticação e confirmação física Android permanecem PARTIAL.
+
+---
+
+# Atualização aditiva — Campanha 0304, adendo desktop e ícone de ação (2026-10-24)
+
+- Navegação lateral: duplicação de labels corrigida no renderer e geometria recolhida/expandida coberta por fixture; confirmação autenticada de RBAC e persistência real segue pendente.
+- Cabeçalho de Início: agora usa estrutura compartilhada com as páginas operacionais; ações autenticadas e revisão física seguem pendentes.
+- Pedidos desktop: painel de detalhes oculto por breakpoint foi restaurado para >=1180px; fixture sem conteúdo autenticado.
+- Nova corrida na Home mobile: regra de acessibilidade recortava wrapper do ícone “+”; renderer/CSS corrigidos, glyph 19×19 px em captura CDP 390px. Chrome Android físico e clique autenticado ainda pendentes; não apagar este item até comprovação pelo proprietário.
+- E2E 0304: login respondeu `403 MFA_REQUIRED`; desafio foi atendido, mas reload não restaurou o shell. Planejamento/readback, concorrência/sync, tenant/RBAC permanecem BLOCKED/OPEN conforme matriz; sem bypass nem escrita no DB oficial.
+- G14 visual Rotas permanece FAIL. Nenhuma pendência global ou anterior de 0303/0303-A/0304 foi encerrada por este adendo.
+- Referência: `REGISTROS/0304-ADENDO-DESKTOP.md`, `EVIDENCIAS/0304/adendo-desktop/README.md` e gates `EVIDENCIAS/0304/gates.md`.

@@ -1,13 +1,14 @@
-## Pendências vigentes — Campanha 0304 (2026-10-23)
+## Pendências vigentes — Campanha 0304 (2026-10-24)
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
 |---|---|---|---|
-| 0304-E2E-AUTH | Browser autenticado; P0; **BLOCKED** | `/api/identity/login` HTTP 403; jornadas de Rotas/Home não concluídas. | Corrigir/estabelecer harness sintético autorizado e repetir E2E em tenant isolado, documentando rollback/resíduos. |
+| 0304-E2E-AUTH | Browser autenticado; P0; **BLOCKED** | Login respondeu `403 MFA_REQUIRED`; o desafio foi atendido sem bypass, mas reload seguinte deixou `#app` oculto e a jornada de Rotas/Home não concluiu. | Diagnosticar restauração legítima do shell/harness; repetir E2E em tenant isolado autorizado, documentar rollback/resíduos e não contornar MFA/RBAC. |
 | 0304-PLAN-PERSIST | Planejamento/ordem/readback; P0; **OPEN** | Lógica existente preservada; Browser não confirmou salvar, reload, reabrir ou edição. | Exercitar seleção, duplicidade, ordenação canônica, save/ACK/readback/reload e conflito. |
 | 0304-SYNC-CONFLICT | Sync/concorrência; P0; **BLOCKED** | Revisões e guarda de duplicidade auditadas; cenário não executado. | Testar duas sessões, retry/idempotência, revisão obsoleta, evento duplicado e reconexão. |
 | 0304-MAP-VISUAL | Comparação cartográfica por referência; P1; **PARTIAL; gate owner FAIL** | Referências reabertas/hashadas; CDP de renderer vazio capturou 10 viewports × 2 temas e 5/5 filtros. G14 FAIL por reprovação explícita; desktop toolbar ainda diverge e não existe captura autenticada pós-change. | Corrigir divergências remanescentes e capturar tiles/dados/seleção/resize/coordenadas ausentes em sessão autorizada; proprietário revisar no Chrome Android. |
 | 0304-RBAC-TENANT | Isolamento/RBAC; P0; **OPEN** | Código/contrato preservado; sem tentativa adversarial Browser desta campanha. | Testar acesso cruzado e ações proibidas com tenants sintéticos independentes. |
 | 0304-OWNER-APPROVAL | Aprovação visual Rotas/Início; P1; **PENDING_USER_APPROVAL** | Sem pares visuais autenticados finais nem avaliação física do proprietário. | Proprietário conferir no Chrome Android; Codex não substitui a aprovação. |
+| 0304-ANDROID-HEADER | Cabeçalho/Início, ícone Nova corrida; P1; **PENDING_PHYSICAL_VALIDATION** | Clipping corrigido no renderer e ícone “+” mede 19×19 px em fixture 390×844 claro/escuro; funcionalidade autenticada não clicada. | Proprietário confirmar no Chrome Android físico que o ícone aparece e que Nova corrida continua abrindo o fluxo existente. |
 
 Manter todos os IDs e estados históricos abaixo, incluindo os itens do adendo 0303-A e do registro 0303. Ver [REGISTRO 0304](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [pendências 0303-A](#pendências-históricas--adendo-0303-a-2026-10-23).
 
