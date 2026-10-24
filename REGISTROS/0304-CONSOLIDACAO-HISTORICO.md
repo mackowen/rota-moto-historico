@@ -28,3 +28,7 @@ O avanço autorizado é somente `codex-historico/main` → `origin/main`, por fa
 ## Situação da campanha
 
 Esta consolidação publica documentação e evidências para auditoria externa; não aprova a implementação. G14 permanece **FAIL**; validação visual do proprietário, E2E operacional autenticado, persistência/readback de planejamento, sync, concorrência e RBAC permanecem pendentes ou bloqueados conforme as matrizes 0304. A Campanha 0304 continua aberta. Não iniciar 0305.
+
+## Adendo de publicação dos aplicativos
+
+Em 2026-10-24, por autorização explícita do proprietário, `main` do Restaurante avançou por fast-forward de `8fcd9f0ffffe37047a79834161cc1f791f20d76f` a `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025`, e `main` do Motoboy de `aad1c6c07499e4fdf5c931ce5ce9e92cde3f7478` a `64d2e13d8e455f48b20b32b396e9c49ba7553e0b`. `npm test` passou em ambos. O registro detalhado, incluindo falha transitória e indisponibilidade do CDP/E2E, está em [REGISTROS/0304.md](0304.md). G14 segue FAIL; a publicação não representa aprovação visual.

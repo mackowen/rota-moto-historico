@@ -5,8 +5,8 @@
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
 - Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md)
-- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Toolbar/Rotas autenticadas, operação E2E e revisão do proprietário pendentes.
-- Restaurante: branch local `codex/campaign-0304-rotas-v2`; sem push. Motoboy sem alterações. Histórico recebe somente fast-forward.
+- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. E2E autenticado não executável no runtime desta publicação; revisão do proprietário pendente.
+- Restaurante `main` publicado em `65a0239`; Motoboy `main` em `64d2e13`; ambos integrados por fast-forward após `npm test` passar. Histórico atualizado por último; detalhes e bloqueios em [registro de publicação](REGISTROS/0304.md).
 
 ---
 
