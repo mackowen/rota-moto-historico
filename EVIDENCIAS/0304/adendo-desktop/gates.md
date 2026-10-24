@@ -43,7 +43,7 @@ O browser foi Chromium/CDP com emulação de viewport, não Chrome Android físi
 |---|---|---|
 | G16 — Integridade dos repositórios | PARTIAL | Branches, HEADs, remotos e baselines verificadas; tag baseline intacta. Não foi feita operação destrutiva. Browser QA conservou alterações preexistentes. Auditoria ampla do conteúdo remoto permanece limitada e não autoriza limpeza/rewrite. |
 | G17 — Histórico e evidências | PARTIAL | Checkpoints, links, gates e diagnóstico sanitizado atualizados; E2E permanece BLOCKED e não há evidência visual autenticada final. Não encerra pendências anteriores. |
-| G18 — Política de publicação | PASS (escopo histórico publicado até `d7456f9`) | Histórico publicado por fast-forward apenas até `d7456f9`; nenhuma publicação de app/Motoboy/Browser QA naquele checkpoint. Este status descreve a publicação então verificada, não antecipa o push deste adendo. |
+| G18 — Política de publicação | PASS | Atualização documental publicada por fast-forward somente em `codex-historico/main`: `cb117ee` → `6242fad`. Nenhum push de Restaurante, Motoboy ou Browser QA. |
 
 Nota de rastreabilidade: G15 da matriz principal significa “sem regressões” e não muda. A nomenclatura suplementar anterior desta seção foi ambígua; crosswalk preservado: suplemento antigo G15 (integridade)→atual G16; antigo G16 (histórico/evidências)→atual G17; antigo G17 (política de publicação)→atual G18. Os estados suplementares são reclassificados no checkpoint 2026-10-24 sem apagar os eventos de publicação já registrados.
 

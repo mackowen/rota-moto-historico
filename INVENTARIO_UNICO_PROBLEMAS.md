@@ -9,7 +9,7 @@
 | 0304-SYNC-CONFLICT / G10 | BLOCKED | Sync, concorrência, retry/replay e conflito de revisão não chegaram a ser exercitados. |
 | 0304-MAP-VISUAL / G14 | FAIL | Reprovação do proprietário não foi substituída por fixture/CDP; capturas autenticadas não foram produzidas. Aguardar correções e aprovação expressa. |
 | 0304-REGRESSION / G15 | PARTIAL | Unitários/domínio/contrato e CDP fixture são subconjuntos; regressões operacionais autenticadas seguem pendentes. |
-| 0304-HISTORY / G16–G18 | PARTIAL/PARTIAL/PASS anterior | Crosswalk vigente: G16 integridade, G17 histórico/evidências, G18 política. O status de publicação refere-se ao SHA histórico anterior, até publicar este checkpoint. |
+| 0304-HISTORY / G16–G18 | PARTIAL/PARTIAL/PASS | Crosswalk vigente: G16 integridade, G17 histórico/evidências, G18 política. Histórico publicado por fast-forward `cb117ee`→`6242fad`; aplicações e Browser QA não publicados. |
 
 Ver [registro 0304](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md) e [pendências acumuladas](PENDENCIAS.md). As revisões históricas abaixo permanecem íntegras.
 
