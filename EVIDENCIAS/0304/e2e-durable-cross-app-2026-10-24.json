@@ -1,0 +1,85 @@
+{
+  "campaign": "0304",
+  "date": "2026-10-24",
+  "classification": "PARTIAL_OPERATIONAL_FLOW_PASS_WITH_REMAINING_SCENARIOS",
+  "repositories": {
+    "restaurant": "65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025",
+    "motoboy": "64d2e13d8e455f48b20b32b396e9c49ba7553e0b",
+    "history_before": "2d790fb7a2d9c60a56d9fd3a5ad965aadd2303a5"
+  },
+  "root_cause": {
+    "initial_tenant_provisioning_http_500": {
+      "cause": "The disposable cluster had not received the runtime ACL used by the working E2E database for rotamoto.provisioning_requests.",
+      "reproduction": "Before the grant, rotamoto_app SELECT on rotamoto.provisioning_requests failed with PostgreSQL SQLSTATE 42501 (permission denied); the shared E2E database grants SELECT, INSERT and UPDATE on this table.",
+      "first_service_query": "Identity service reads provisioning_requests during provisionInitialOwner before creating the tenant."
+    },
+    "mfa_confirmation_http_500_after_provisioning_was_fixed": {
+      "cause": "The disposable cluster also lacked the existing E2E runtime ACL on rotamoto.recovery_tokens, which MFA enrollment confirmation updates/inserts.",
+      "evidence": "The fixture advanced through tenant provisioning, invitation acceptance, login and MFA enrollment, then failed at enrollment confirmation. The table was absent from the temporary app grants but had SELECT/INSERT/UPDATE in the working E2E database; granting that exact DML on the disposable cluster allowed MFA to complete.",
+      "scope": "Temporary cluster only; no migration or persistent database ACL changed."
+    }
+  },
+  "correction": {
+    "kind": "E2E disposable-cluster setup",
+    "acl": "Applied runtime table grants matching the minimum existing E2E app-role grants needed for identity/MFA provisioning; no superuser, BYPASSRLS or elevated runtime attributes.",
+    "application_code_changed": false,
+    "repository_files_changed": false
+  },
+  "browser_flow": {
+    "cdp": "Isolated Chromium CDP 9223",
+    "authenticated_sessions": 2,
+    "mfa": "PASS in Restaurant and Motoboy through the real synthetic MFA flow",
+    "restaurant_delivery_creation": "PASS; IndexedDB order/delivery and canonical ACK observed, outbox pending count 0",
+    "motoboy_receipt_and_acceptance": "PASS through UI; API returned accepted for DeliveryEvent",
+    "restaurant_pull_and_projection": "PASS; Delivery status ACCEPTED and one matching DELIVERY_ACCEPTED event found in the local deliveryEvents store when matching entityId to Delivery.sync.canonicalId",
+    "orders_history_ui": "PASS; selecting the current synthetic order, opening details and expanding execution history showed DELIVERY_ACCEPTED.",
+    "offline_pickup": "PASS for local outbox recovery after network restoration: pickup remained pending while offline; after reconnect sync returned accepted and both pickup/acceptance operations were acknowledged with zero pending outbox.",
+    "reload_while_still_offline": "NOT_RUN; reload in the prior runner sequence occurred after reconnect."
+  },
+  "delivery_event_verifier": {
+    "prior_false_negative": "The older predicate omitted the canonical Delivery ID stored as delivery.sync.canonicalId.",
+    "corrected_match": "Match event.entityId to delivery.sync.canonicalId (and supported canonical aliases); event.eventId remains the event identity.",
+    "result": "One DELIVERY_ACCEPTED fact was present in Restaurant IndexedDB and rendered in the Orders detail history after expanding the technical execution section.",
+    "production_reconciler_changed": false
+  },
+  "durable_postgres_readback": {
+    "database": "Dedicated disposable PostgreSQL cluster, separate from rotamoto and shared rotamoto_e2e",
+    "migrations": "0001-0051 applied only in this cluster",
+    "read_method": "Read-only query from an independent PostgreSQL connection after the Browser runner process and its request pools had exited.",
+    "latest_synthetic_order": "Found by canonical Order→Delivery→DeliveryEvent relationships without recording the identifier.",
+    "delivery_status": "PICKED_UP",
+    "delivery_event_types": ["DELIVERY_ACCEPTED", "DELIVERY_PICKED_UP"],
+    "commit_visibility": "PASS; rows and transaction xmin values remained visible after the writer process ended."
+  },
+  "not_run": [
+    "Restaurant UI pull and render after the later offline pickup event",
+    "reload/reopen while network remains offline",
+    "cancel before/after pickup and return queue placement",
+    "operational UI concurrency for accept/pickup/cancel",
+    "adversarial tenant/RBAC/session-expiry/tampered-payload scenarios in this Browser run"
+  ],
+  "tests": {
+    "restaurant_npm_test": "PASS",
+    "motoboy_npm_test": "PASS",
+    "authenticated_browser_e2e": "PASS for the scoped create→receive/accept→Restaurant event projection/history and offline outbox reconnect flow; this is not full G13 acceptance."
+  },
+  "cleanup": {
+    "temporary_postgresql_cluster_stopped_and_removed": true,
+    "temporary_chromium_profile_removed": true,
+    "cdp_9223_closed": true,
+    "official_rotamoto_written": false,
+    "shared_rotamoto_e2e_written": false,
+    "official_migrations_applied": false
+  },
+  "gates": {
+    "G8": "PASS, local-first persistence remains scoped; separate durable PostgreSQL readback now also demonstrated for this E2E delivery/event journey.",
+    "G9": "PARTIAL; bidirectional create/accept flow and event presentation passed; later pickup was not pulled/rendered in Restaurant UI in this run.",
+    "G10": "PARTIAL; durable event commits and prior backend concurrency evidence; cancellation/revision conflict UI scenarios remain.",
+    "G11": "PARTIAL; prior backend tenant/non-owner checks remain scoped; full adversarial browser matrix not run.",
+    "G12": "PARTIAL; offline pickup stayed queued and was ACKed after reconnect; reload while still offline not run.",
+    "G13": "PARTIAL; authenticated scoped E2E passed but required operational scenarios remain.",
+    "G14": "FAIL, owner visual approval pending.",
+    "G15": "PARTIAL; both npm test suites passed, full visual regression matrix remains pending."
+  },
+  "campaign": "0304 remains open; no global PASS and campaign 0305 not started."
+}
