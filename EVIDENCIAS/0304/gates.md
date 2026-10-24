@@ -69,3 +69,17 @@ Com as ACLs mínimas temporárias, duas sessões Browser autenticadas por MFA re
 A retirada offline permaneceu pendente até reconexão; o sync retornou `accepted`, ambos os eventos ficaram `acknowledged` e a outbox ficou zerada. Limite: não houve reload enquanto ainda offline e a UI Restaurante não foi sincronizada após a retirada posterior. Cancelamento/devolução, conflitos de UI e matriz adversarial browser não foram executados. `npm test` passou nos dois apps. O cluster PostgreSQL e perfil Chromium temporários foram removidos, CDP 9223 encerrado, sem escrita em `rotamoto` oficial ou no E2E compartilhado. Evidência: [`e2e-durable-cross-app-2026-10-24.json`](e2e-durable-cross-app-2026-10-24.json).
 
 G8 PASS continua limitado à persistência local-first definida para esse gate; a durabilidade PostgreSQL do fluxo específico está comprovada como evidência complementar. G9 PARTIAL (criação/aceite e histórico convergiram; atualização da retirada na UI Restaurante ainda pendente); G10 PARTIAL; G11 PARTIAL; G12 PARTIAL (reconexão/outbox passou; reload ainda offline pendente); G13 PARTIAL; G14 **FAIL**; G15 PARTIAL. Sem PASS global; campanha aberta e 0305 não iniciada.
+
+## Adendo visual consolidado — 2026-10-24
+
+| Gate | Estado | Evidência desta intervenção |
+|---|---|---|
+| Sidebar/header | PASS técnico / PARTIAL visual | Renderizador emite um nome por item; toggle/tooltip testados; header compartilhado preservado. Não houve E2E RBAC novo. |
+| Rotas mobile | PARTIAL | 320–430 px, dois temas; mapa antes dos indicadores, abas compactas, card sintético e sem sobreposição na fixture. |
+| Tablet | PARTIAL | Retrato em coluna única; paisagem lista+mapa; navegação física pendente. |
+| PC | PARTIAL | Estado sem seleção e seleção sintética medidos até 1920 px; tiles reais pendentes. |
+| Testes Restaurante | PASS | `npm test`, `test-routes-v2.js`, `test-navigation-shell-renderer.js`, checagens JS/diff. |
+| E2E autenticado pós-patch | BLOCKED | Fixture CDP não autentica; não havia tenant MFA sintético provisionado com limpeza verificável nesta execução. |
+| G14 aprovação do proprietário | **FAIL** | A reprovação anterior permanece; aguarda aprovação expressa. |
+
+A descrição completa, medições, hashes das referências e capturas estão em [intervencao-consolidada-2026-10-24](intervencao-consolidada-2026-10-24/README.md). Os demais gates operacionais G8–G13 mantêm exatamente os limites do checkpoint E2E durável imediatamente acima; esta atualização não fecha pendências anteriores.

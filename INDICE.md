@@ -4,7 +4,7 @@
 - Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
-- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md)
+- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md) e a [intervenção visual consolidada](EVIDENCIAS/0304/intervencao-consolidada-2026-10-24/README.md)
 - Checkpoint durabilidade/DeliveryEvent 2026-10-24: [tentativa E2E isolada e bloqueio de fixture](EVIDENCIAS/0304/e2e-durable-attempt-2026-10-24.json)
 - Resultado posterior: [provisionamento corrigido, evento verificado e readback durável cross-app](EVIDENCIAS/0304/e2e-durable-cross-app-2026-10-24.json)
 - Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Checkpoint autenticado: MFA, navegação repetida, mapa e readback IndexedDB local passaram. Checkpoint PostgreSQL: concorrência de backend logístico com commits independentes em schema descartável, conflitos, idempotência e isolamento tenant passaram no escopo exercitado; schema limpo. G8 PASS somente local-first; G9/G10/G11/G12/G13 PARTIAL; sync entre UIs e offline com ACK pendentes. [Evidência autenticada de Rotas](EVIDENCIAS/0304/auth-e2e-navigation-2026-10-24.json); [concorrência PostgreSQL](EVIDENCIAS/0304/e2e-sync-concurrency-resilience-2026-10-24.json); diagnósticos anteriores preservados.
@@ -364,3 +364,7 @@
 ## Atualização Campanha 0304 — E2E cross-app (2026-10-24)
 
 Duas UIs autenticadas por MFA: criação Restaurante→Motoboy, aceite e projeção Restaurante `ACCEPTED`; retirada offline reconhecida após reconexão. Fixture rollback-only, sem commit PostgreSQL durável cross-process; eventos/linha Orders, RETURN, replay, RBAC adversarial e fechar/reabrir ainda offline pendentes. G8 PASS somente local-first; G9–G13 PARTIAL; G14 FAIL; G15 PARTIAL. Banco oficial sem escrita, zero resíduos nas 41 tabelas verificadas. [Evidência](EVIDENCIAS/0304/e2e-cross-app-browser-2026-10-24.json).
+
+## Atualização visual acumulativa — 2026-10-24
+
+Rotas V2 ajustada no branch local Restaurante `codex/campaign-0304-visual-consolidated`, commit `2000b1828fbe3a44a0beabc627be0207c383aeba`, sem push do app. Sidebar/header compartilhados e um rótulo por item verificados; controles/tabs mobile compactados; mapa ganhou prioridade; desktop adapta grade com/sem rota selecionada. `npm test` e testes direcionados passaram. CDP fixture produziu capturas em dez viewports/temas e evidência para rota selecionada. E2E MFA pós-patch BLOCKED; G14 continua FAIL e aprovação permanece exclusiva do proprietário; G8–G13 mantêm pendências prévias. Consulte [matriz](EVIDENCIAS/0304/intervencao-consolidada-2026-10-24/matriz-fidelidade-visual.md) e [gates](EVIDENCIAS/0304/gates.md).
