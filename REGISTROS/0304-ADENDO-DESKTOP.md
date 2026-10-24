@@ -32,3 +32,7 @@ Restaurante: branch local `codex/campaign-0304-rotas-v2`, commit local `f4f13782
 Navegação lateral: PASS no renderer/fixture. Cabeçalho comum: PARTIAL. Desktop: PARTIAL. Mobile: PARTIAL até Chrome Android e sessão real. Rotas: FAIL pela avaliação do proprietário. Jornada funcional/E2E: BLOCKED após desafio MFA seguido de shell ausente no reload. Segurança/integridade: PARTIAL, sem escritas oficiais e sem validação E2E tenant/RBAC. Avaliação visual final: permanece exclusivamente com o proprietário.
 
 Manter todas as pendências antigas, inclusive as de campanha 0303/0303-A. Próximos passos: restabelecer harness E2E autorizado sem contornar MFA; validar criação/save/readback de rota, sincronização/conflito e RBAC com tenant sintético; comparar Rotas populada com cada referência; testar Chrome Android físico; obter aprovação expressa do proprietário. Não declarar PASS global, não publicar app/Motoboy e não iniciar 0305.
+
+## Publicação do histórico
+
+O commit `b1a00938de5d0a2525bf62562606a595fdc7b579` (`Record campaign 0304 desktop shell checkpoint`) foi publicado por fast-forward exclusivamente em `origin/codex/campaign-0303-ui-refinements`, partindo do SHA remoto confirmado `3b988fee29f051458cfa3e2999e865d7b275401b`. Resultado do push: `3b988fe..b1a0093`. Nenhum push foi realizado nos repositórios Restaurante, Motoboy ou Browser QA. Este parágrafo registra o resultado e segue para o próximo commit do histórico.

@@ -4,6 +4,8 @@
 
 Adendo do shell: labels duplicados da sidebar, header separado da Início, painel de detalhes de Pedidos desktop escondido e ícone “+” mobile recortado foram corrigidos e medidos no Chromium/CDP controlado. Resultado 72 combinações de layout; sem validação em Chrome Android físico. Login respondeu `403 MFA_REQUIRED`; desafio atendido, mas reload deixou `#app` oculto, sem jornada E2E operacional. G14 continua FAIL, nenhuma pendência antiga fechada e 0304 permanece aberta. Ver [adendo](REGISTROS/0304-ADENDO-DESKTOP.md) e [capturas](EVIDENCIAS/0304/adendo-desktop/README.md).
 
+Histórico publicado em fast-forward: `b1a00938de5d0a2525bf62562606a595fdc7b579` na branch `codex/campaign-0303-ui-refinements`; somente `codex-historico` recebeu push.
+
 ---
 
 # Estado histórico — Adendo 0303-A (2026-10-23)
