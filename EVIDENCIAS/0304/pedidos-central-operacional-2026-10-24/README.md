@@ -46,3 +46,4 @@ Commit local da aplicação poderá ser revertido com `git revert <SHA>` sem ree
 - **Escolher motoboy** ao lado de uma entrega abre o mesmo fluxo com aquela entrega marcada.
 
 Os rótulos e explicações foram ajustados após o proprietário apontar que os textos anteriores não deixavam clara a diferença. O botão redundante “Gerenciamento completo” segue removido; “Abrir pedido” é o acesso único ao detalhe.
+- **Usar este motoboy** na fila de disponibilidade abre o mesmo fluxo com pedido e motoboy marcados; a confirmação continua necessária.
