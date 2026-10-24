@@ -6,7 +6,7 @@ Restaurante `main` publicado: `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025`. Motobo
 
 Adendo do shell: labels duplicados da sidebar, header separado da Início, painel de detalhes de Pedidos desktop escondido e ícone “+” mobile recortado foram corrigidos e medidos no Chromium/CDP controlado. Resultado 72 combinações de layout; sem validação em Chrome Android físico. O relato histórico de `#app` oculto após reload permanece no diagnóstico original; o follow-up posterior não o reproduziu, mas também não concluiu a jornada E2E operacional. G14 continua FAIL, nenhuma pendência antiga fechada e 0304 permanece aberta. Ver [adendo](REGISTROS/0304-ADENDO-DESKTOP.md) e [capturas](EVIDENCIAS/0304/adendo-desktop/README.md).
 
-Histórico `main` publicado por fast-forward em `953299b3dde6d3a40656b412da78ea844ca8c36c` antes deste follow-up; a atualização documental atual aguarda o commit/push indicado no checkpoint 0304. Somente `codex-historico` recebe push. Crosswalk vigente: G15 regressões; G16 integridade; G17 histórico/evidências; G18 política de publicação.
+Histórico `main` atualizado por fast-forward: `953299b3dde6d3a40656b412da78ea844ca8c36c` → `3f29a2b0d26c556347f80ae2f870c024622e37ba`; a verificação pós-push confirmou `HEAD=origin/main`. O registro deste SHA está em [0304](REGISTROS/0304.md). Somente `codex-historico` recebeu push nesta continuação. Crosswalk vigente: G15 regressões; G16 integridade; G17 histórico/evidências; G18 política de publicação.
 
 ---
 
