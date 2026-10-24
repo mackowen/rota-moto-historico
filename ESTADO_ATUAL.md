@@ -1,6 +1,6 @@
 # Estado vigente — Campanha 0304 (checkpoint 2026-10-24)
 
-Restaurante `main` publicado: `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025`. Motoboy `main` publicado: `64d2e13d8e455f48b20b32b396e9c49ba7553e0b`. Histórico será atualizado depois desses pushes por fast-forward. As branches da campanha e baselines estão preservadas. G14 continua FAIL; campanha aberta.
+Restaurante `main` publicado: `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025`. Motoboy `main` publicado: `64d2e13d8e455f48b20b32b396e9c49ba7553e0b`. O histórico foi atualizado e publicado depois dos dois pushes por fast-forward. As branches da campanha e baselines estão preservadas. G14 continua FAIL; campanha aberta.
 
 **PARTIAL; sem PASS global.** Três referências Rotas abertas e verificadas. Composição celular mapa-primeiro, tablet e PC implementada; seleção/detalhe baseia-se em dados canônicos. Coordenadas são validadas; removido geocode automático e não se inventam rotas, distância ou ETA. Testes direcionados/domínio e paridade passaram. Shell desktop e ícone Home mobile corrigidos em código e medidos com fixture Chromium/CDP; a reprovação visual Rotas permanece. Login respondeu `403 MFA_REQUIRED`; após o desafio MFA, reload ocultou `#app`, sem completar jornada E2E. Planejamento/save/readback de rota, conflitos, concorrência, sync, RBAC/tenant e regressões funcionais seguem pendentes. G0 PASS; G8/G10/G13 BLOCKED; G14 FAIL; demais estados na matriz. DB oficial sem escrita; app/Motoboy sem push. Ver [adendo](REGISTROS/0304-ADENDO-DESKTOP.md) e [gates](EVIDENCIAS/0304/gates.md).
 
