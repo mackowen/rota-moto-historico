@@ -1,0 +1,61 @@
+{
+  "campaign": "0304",
+  "checkpoint": "integrated-sync-concurrency-resilience",
+  "date": "2026-10-24",
+  "overall": "PARTIAL",
+  "environment": "rotamoto_e2e; synthetic isolated migration-derived schema",
+  "applicationHeads": {
+    "restaurant": "65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025",
+    "motoboy": "64d2e13d8e455f48b20b32b396e9c49ba7553e0b"
+  },
+  "syncArchitecture": {
+    "contract": "rotamoto-sync v1; cross-app contract parity tests pass",
+    "restaurantToMotoboy": "Restaurant-owned Route/Driver/Order and canonical Delivery projection; client changes are persisted locally and queued through outbox; API validates and commits canonical state; Motoboy consumes via inbox/pull into IndexedDB",
+    "motoboyToRestaurant": "Motoboy owns LocationPoint and proof; execution is emitted as append-only DeliveryEvent; API validates ownership/idempotency and projects canonical Delivery; Restaurant reconciles server-confirmed state",
+    "idempotency": "eventId and packetId are contract-level deduplication keys",
+    "evidenceBoundary": "architecture verified in contracts/services and automated parity tests; the two-client network journey was not observed in this checkpoint"
+  },
+  "automatedSuites": {
+    "restaurantNpmTest": "PASS",
+    "motoboyNpmTest": "PASS",
+    "restaurantLogisticsPostgres": "PASS",
+    "restaurantDomainSyncPostgres": "PASS; rollback-only fixture; not durable-commit evidence"
+  },
+  "committedPostgresConcurrency": {
+    "status": "PASS_SCOPE",
+    "execution": "temporary adaptation of existing logistics concurrency E2E; independent authenticated sessions and committed transactions in a unique schema derived from the E2E migration set",
+    "coverage": [
+      "concurrent delivery assignment and revision conflict",
+      "acceptance by two Driver-linked sessions; non-owner rejected",
+      "idempotent return receipt race",
+      "availability transitions and dispatch locking/retry",
+      "cross-tenant isolation",
+      "committed visibility across independent PostgreSQL sessions"
+    ],
+    "cleanup": "schema dropped after test; manifest verified zero schema residue",
+    "limitations": "backend logistics concurrency only; does not prove Restaurant-to-Motoboy client sync, route-plan persistence, complete adversarial RBAC, or offline outbox recovery"
+  },
+  "liveEnvironmentCheck": {
+    "restaurantApiReady": true,
+    "motoboyApiReady": true,
+    "restaurantFrontend8083": "HTTP 200",
+    "motoboyFrontend8084": "HTTP 200",
+    "sharedCdp9222": "unavailable at check time",
+    "authenticatedTwoClientJourney": "not executed"
+  },
+  "officialDatabase": {
+    "writes": false,
+    "migrations": false
+  },
+  "gates": {
+    "G8": "PASS_LOCAL_FIRST_ONLY",
+    "G9": "PARTIAL",
+    "G10": "PARTIAL",
+    "G11": "PARTIAL",
+    "G12": "PARTIAL",
+    "G13": "PARTIAL",
+    "G14": "FAIL",
+    "G15": "PARTIAL"
+  },
+  "campaign": "open; no global PASS; campaign 0305 not started"
+}

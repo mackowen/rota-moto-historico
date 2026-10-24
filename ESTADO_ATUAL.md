@@ -2020,3 +2020,7 @@ O proprietário reprovou a implementação real de Rotas V2. G14 continua **FAIL
 
 
 Atualização autenticada em 2026-10-24: defeito demonstrado no runner de reload (aceite do documento anterior sem conferir `performance.timeOrigin` novo). Após correção da sincronização, MFA, navegação repetida até Rotas/Leaflet e salvar/readback local de duas paradas passaram. A suíte E2E operacional completa permanece parcial; sync, conflito, tenant/RBAC adversarial e offline ainda não executados. Evidência: [jornada](EVIDENCIAS/0304/auth-e2e-navigation-2026-10-24.json). G14 permanece FAIL.
+
+## Continuação 0304 — PostgreSQL E2E, sincronização e resiliência (2026-10-24)
+
+`npm test` nos dois apps e testes PostgreSQL de domínio/logística passaram. Um ensaio temporário com commits independentes em schema E2E isolado comprovou cenários concorrentes do backend logístico e isolamento tenant; schema removido com resíduo zero. Não equivale a sync real entre clientes. APIs/sites 8787/8788/8083/8084 responderam; CDP 9222 indisponível nesta checagem. G8 PASS estritamente local-first; G9 PARTIAL; G10 PARTIAL (concorrência backend delimitada); G11 PARTIAL; G12 PARTIAL; G13 PARTIAL; G14 FAIL; G15 PARTIAL. Jornada cross-app autenticada, ACK remoto, outbox offline e reconexão continuam pendentes. Banco oficial sem escrita; nenhum código de app alterado. Ver [registro 0304](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md) e [evidência E2E sanitizada](EVIDENCIAS/0304/e2e-sync-concurrency-resilience-2026-10-24.json).
