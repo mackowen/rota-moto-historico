@@ -15,7 +15,7 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 
 - Campanha 0304: [registro original](REGISTROS/0304.md), [adendo desktop e shell responsivo](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md), [gates e evidências](EVIDENCIAS/0304/).
 - Consolidação da publicação de 0304: [auditoria dos branches e fast-forward](REGISTROS/0304-CONSOLIDACAO-HISTORICO.md).
-- Status: campanha aberta; G14 continua FAIL por reprovação visual do proprietário; E2E autenticado permanece bloqueado após o desafio MFA e falha de shell no reload. Não iniciar a campanha 0305 nem publicar os repositórios de aplicação.
+- Status: campanha aberta; G14 continua FAIL por reprovação visual do proprietário; MFA E2E sintético conclui e a sessão responde 200 no reload, mas o shell não hidrata (`#main`/`#routeMap` ausentes), então G13 permanece BLOCKED. G15 é regressões; suplementos atuais G16 integridade, G17 histórico/evidências e G18 política de publicação. Não iniciar a campanha 0305 nem publicar os repositórios de aplicação.
 
 ## Histórico, estado, decisões e pendências
 

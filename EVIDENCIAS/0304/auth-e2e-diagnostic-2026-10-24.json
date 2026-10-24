@@ -1,0 +1,56 @@
+{
+  "campaign": "0304",
+  "date": "2026-10-24",
+  "classification": "BLOCKED",
+  "browser": "Chromium headless via CDP, isolated temporary profiles",
+  "applicationCommit": "65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025",
+  "database": "rotamoto_e2e",
+  "tenant": "synthetic; identifier intentionally omitted",
+  "authentication": {
+    "initialAnonymousSession": 401,
+    "initialLogin": "403 MFA_REQUIRED challenge",
+    "mfaCompleted": true,
+    "authenticatedShellObservedBeforeReload": true,
+    "sessionAfterReload": 200,
+    "sessionCookieObservedInRequest": true,
+    "cookieValuesRecorded": false
+  },
+  "reloadOutcome": {
+    "reproducedWithFreshBrowserProfile": true,
+    "reproducedWithSyntheticIndexedDbSeed": true,
+    "reproducedWithoutSyntheticIndexedDbSeed": true,
+    "applicationRootHiddenOrCleared": true,
+    "mainPresent": false,
+    "routeMapPresent": false,
+    "mapMarkers": 0,
+    "javascriptRuntimeExceptionsObserved": 0,
+    "routePlanningJourney": "not reached"
+  },
+  "diagnosis": {
+    "mfaOrCookieTransportFailure": "not supported by this reproduction; MFA completed and session endpoint returned 200 with cookie present",
+    "rootCause": "unresolved shell bootstrap/hydration failure after reload; exact application or harness trigger not established",
+    "securityControlsChanged": false,
+    "mfaBypassed": false
+  },
+  "fixtureIntegrity": {
+    "transactionMode": "rollback-only",
+    "databaseCommitted": false,
+    "residualCounts": {
+      "companies": 0,
+      "users": 0,
+      "auth_records": 0,
+      "memberships": 0,
+      "sessions": 0,
+      "domain_records": 0,
+      "sync_inbox": 0,
+      "sync_outbox": 0,
+      "audit_log": 0
+    },
+    "officialDatabaseWrites": false
+  },
+  "evidenceLimits": [
+    "No screenshot was produced after the shell disappeared.",
+    "No operational route save/readback, conflict, sync, RBAC, offline, tile or marker scenario completed.",
+    "CDP reproduction is not physical Chrome Android validation."
+  ]
+}

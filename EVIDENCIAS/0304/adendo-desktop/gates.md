@@ -37,15 +37,15 @@ Esta tabela complementa os gates originais. Nenhuma linha fecha pendência anter
 
 O browser foi Chromium/CDP com emulação de viewport, não Chrome Android físico nem modo computador físico. O `403` inicial foi uma resposta de desafio MFA e não prova de senha/permissão recusada; a falha subsequente ocorreu após reload, quando o shell autenticado não apareceu.
 
-## G15–G17 — integridade e publicação do histórico
+## G16–G18 — integridade, histórico e publicação
 
 | Gate | Estado | Evidência/limite |
 |---|---|---|
-| G15 — Integridade dos repositórios | PARTIAL | Branches, HEADs, remotos e baselines verificadas; tag baseline intacta. Não foi feita operação destrutiva. Browser QA conservou alterações preexistentes, com somente o runner da campanha em commit local. Busca de credenciais em arquivos do adendo/histórico não encontrou marcadores conhecidos. A auditoria ampla de todo o conteúdo remoto permanece limitada pelas alterações históricas e não autoriza limpeza/rewrite. |
-| G16 — Histórico e evidências | PASS (registro desta intervenção) | Registro 0304-A, resumo, índice, estado, inventário, pendências, gates/matriz/regressões e capturas foram organizados; links relativos do conjunto atualizado validados. Não encerra pendências anteriores. |
-| G17 — Política de publicação | PASS | Push fast-forward apenas de `codex-historico` (`3b988fe` → `b1a0093` → `07f080b` → `d7456f9`). Nenhum push de Restaurante, Motoboy ou Browser QA. |
+| G16 — Integridade dos repositórios | PARTIAL | Branches, HEADs, remotos e baselines verificadas; tag baseline intacta. Não foi feita operação destrutiva. Browser QA conservou alterações preexistentes. Auditoria ampla do conteúdo remoto permanece limitada e não autoriza limpeza/rewrite. |
+| G17 — Histórico e evidências | PARTIAL | Checkpoints, links, gates e diagnóstico sanitizado atualizados; E2E permanece BLOCKED e não há evidência visual autenticada final. Não encerra pendências anteriores. |
+| G18 — Política de publicação | PASS (escopo histórico publicado até `d7456f9`) | Histórico publicado por fast-forward apenas até `d7456f9`; nenhuma publicação de app/Motoboy/Browser QA naquele checkpoint. Este status descreve a publicação então verificada, não antecipa o push deste adendo. |
 
-Nota: a linha G15 da tabela original desta campanha refere-se a “sem regressões”. Para manter os identificadores da matriz inicial, ela continua preservada como avaliação de regressões; nesta intervenção de auditoria, G15 usa a definição de integridade dos repositórios definida pelo proprietário. As duas avaliações não encerram uma à outra.
+Nota de rastreabilidade: G15 da matriz principal significa “sem regressões” e não muda. A nomenclatura suplementar anterior desta seção foi ambígua; crosswalk preservado: suplemento antigo G15 (integridade)→atual G16; antigo G16 (histórico/evidências)→atual G17; antigo G17 (política de publicação)→atual G18. Os estados suplementares são reclassificados no checkpoint 2026-10-24 sem apagar os eventos de publicação já registrados.
 
 ## Intervenção do proprietário — reprovação visual (checkpoint)
 

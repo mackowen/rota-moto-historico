@@ -1,3 +1,18 @@
+## Revisão vigente — Campanha 0304 (2026-10-24)
+
+**PARTIAL; nenhum PASS global.** Este checkpoint atualiza evidência de autenticação e gates sem encerrar problemas anteriores. A sessão de teste sintética conclui MFA e responde 200 após reload, porém a árvore do shell desaparece antes de `#main`/`#routeMap`; causa específica de inicialização ainda em investigação. Fixture `rotamoto_e2e` rollback-only, sem commit e com resíduos zero; banco oficial não foi acessado para escrita. G14 continua FAIL por reprovação visual expressa. Preservar problemas e aliases 0303/0303-A e campanhas anteriores.
+
+| ID/Grupo | Estado vigente | Evidência / próxima ação |
+|---|---|---|
+| 0304-E2E-AUTH / G13 | BLOCKED | Cookie e sessão 200 foram observados sem registrar valores; shell não hidrata após reload mesmo sem seed local. Instrumentar `auth-ready`, `app-ready`, bootstrap IndexedDB e leituras concorrentes; sem bypass. [Diagnóstico](EVIDENCIAS/0304/auth-e2e-diagnostic-2026-10-24.json). |
+| 0304-PLAN-PERSIST / G8 | BLOCKED | Nenhuma rota salva/reaberta nesta execução; repetir seleção, ordem canônica, save/ACK/readback/reload após resolver o shell. |
+| 0304-SYNC-CONFLICT / G10 | BLOCKED | Sync, concorrência, retry/replay e conflito de revisão não chegaram a ser exercitados. |
+| 0304-MAP-VISUAL / G14 | FAIL | Reprovação do proprietário não foi substituída por fixture/CDP; capturas autenticadas não foram produzidas. Aguardar correções e aprovação expressa. |
+| 0304-REGRESSION / G15 | PARTIAL | Unitários/domínio/contrato e CDP fixture são subconjuntos; regressões operacionais autenticadas seguem pendentes. |
+| 0304-HISTORY / G16–G18 | PARTIAL/PARTIAL/PASS anterior | Crosswalk vigente: G16 integridade, G17 histórico/evidências, G18 política. O status de publicação refere-se ao SHA histórico anterior, até publicar este checkpoint. |
+
+Ver [registro 0304](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md) e [pendências acumuladas](PENDENCIAS.md). As revisões históricas abaixo permanecem íntegras.
+
 ## Revisão vigente — Campanha 0303 (2026-10-23)
 
 **PARTIAL; nenhum ID global encerrado.** Corrigidos cabeçalho que saía da viewport no Home, composição sobreposta da busca/filtros e fechamento externo do painel; a linha era `border-top` do `<details>`; QR segue fail-closed e indisponível para emissão no ambiente porque a capacidade/endpoint retorna 404. Browser autenticado/MFA e regressões E2E provam somente esse subset de apresentação e ações. Manter RM-AUD19-01..19, RM-AUD22-20..22, RM-AUD26-01/02, aliases e estados anteriores. Em especial, não reclassificar RM-AUD19-13/02/10, distribuição RM-AUD22-22 ou integração cross-app. 0258 `BLOCKED_AUTHORIZATION`; ORS `PENDING_EXTERNAL_CREDENTIAL`.

@@ -5,7 +5,7 @@
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
 - Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md)
-- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. E2E autenticado não executável no runtime desta publicação; revisão do proprietário pendente.
+- Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Checkpoint 2026-10-24: MFA sintético concluído e sessão 200 após reload, mas shell não hidratou (`#main`/`#routeMap` ausentes); G13 BLOCKED. [Diagnóstico sanitizado](EVIDENCIAS/0304/auth-e2e-diagnostic-2026-10-24.json).
 - Restaurante `main` publicado em `65a0239`; Motoboy `main` em `64d2e13`; ambos integrados por fast-forward após `npm test` passar. Histórico atualizado por último; detalhes e bloqueios em [registro de publicação](REGISTROS/0304.md).
 
 ---
