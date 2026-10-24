@@ -4,11 +4,12 @@
 - Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
-- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md) e a [intervenção visual consolidada](EVIDENCIAS/0304/intervencao-consolidada-2026-10-24/README.md)
+- Evidências: [EVIDENCIAS/0304](EVIDENCIAS/0304/), incluindo [adendo-desktop](EVIDENCIAS/0304/adendo-desktop/README.md), [intervenção visual consolidada](EVIDENCIAS/0304/intervencao-consolidada-2026-10-24/README.md) e [intervenção responsiva complementar](EVIDENCIAS/0304/intervencao-visual-2026-10-24/README.md)
 - Checkpoint durabilidade/DeliveryEvent 2026-10-24: [tentativa E2E isolada e bloqueio de fixture](EVIDENCIAS/0304/e2e-durable-attempt-2026-10-24.json)
 - Resultado posterior: [provisionamento corrigido, evento verificado e readback durável cross-app](EVIDENCIAS/0304/e2e-durable-cross-app-2026-10-24.json)
 - Resultado: PARTIAL, G14 visual FAIL por reprovação do proprietário; shell medido em 72 combinações CDP, ícone “+” mobile visível no fixture, painel de Pedidos desktop restaurado. Checkpoint autenticado: MFA, navegação repetida, mapa e readback IndexedDB local passaram. Checkpoint PostgreSQL: concorrência de backend logístico com commits independentes em schema descartável, conflitos, idempotência e isolamento tenant passaram no escopo exercitado; schema limpo. G8 PASS somente local-first; G9/G10/G11/G12/G13 PARTIAL; sync entre UIs e offline com ACK pendentes. [Evidência autenticada de Rotas](EVIDENCIAS/0304/auth-e2e-navigation-2026-10-24.json); [concorrência PostgreSQL](EVIDENCIAS/0304/e2e-sync-concurrency-resilience-2026-10-24.json); diagnósticos anteriores preservados.
 - Restaurante `main` publicado em `65a0239`; Motoboy `main` em `64d2e13`; ambos integrados por fast-forward após `npm test` passar. Histórico atualizado por último; detalhes e bloqueios em [registro de publicação](REGISTROS/0304.md).
+- Atualização visual local Restaurante `26d2282` na branch `codex/campaign-0304-visual-consolidated`, sem push. Mapa escuro fallback OSM, filtros mobile/safe-area e painéis Home/Pedidos validados em CDP fixture; `npm test` passou. G14 FAIL, campanha PARTIAL/aberta. Ver [capturas e matriz novas](EVIDENCIAS/0304/intervencao-visual-2026-10-24/README.md).
 
 ---
 

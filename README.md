@@ -13,9 +13,9 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 
 ## Trabalho vigente
 
-- Campanha 0304: [registro original](REGISTROS/0304.md), [adendo desktop e shell responsivo](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md), [gates e evidências](EVIDENCIAS/0304/).
+- Campanha 0304: [registro original e atualizações cumulativas](REGISTROS/0304.md), [adendo desktop e shell responsivo](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md), [gates e evidências](EVIDENCIAS/0304/), incluindo a [intervenção visual responsiva mais recente](EVIDENCIAS/0304/intervencao-visual-2026-10-24/README.md).
 - Consolidação da publicação de 0304: [auditoria dos branches e fast-forward](REGISTROS/0304-CONSOLIDACAO-HISTORICO.md).
-- Status: campanha aberta; G14 continua FAIL por reprovação visual do proprietário; MFA E2E sintético conclui e a sessão responde 200 no reload, mas o shell não hidrata (`#main`/`#routeMap` ausentes), então G13 permanece BLOCKED. G15 é regressões; suplementos atuais G16 integridade, G17 histórico/evidências e G18 política de publicação. Não iniciar a campanha 0305 nem publicar os repositórios de aplicação.
+- Status: campanha PARTIAL e aberta; G14 continua FAIL por reprovação visual do proprietário. G8 é PASS somente para persistência local-first; E2E autenticado cross-app e commit PostgreSQL durável foram comprovados em escopo delimitado, mas reload ainda offline, RETURN, concorrência de UI e testes adversariais permanecem pendentes. A intervenção visual mais recente passou `npm test` e fixtures CDP, sem E2E MFA pós-patch ou Chrome Android físico. G15 é regressões; suplementos atuais G16 integridade, G17 histórico/evidências e G18 política de publicação. Não iniciar a campanha 0305 nem publicar os repositórios de aplicação.
 
 ## Histórico, estado, decisões e pendências
 

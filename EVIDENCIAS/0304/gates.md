@@ -5,19 +5,31 @@
 | G0 — Referências | PASS | Três referências abertas, medidas, identificadas e SHA-256 registrados. |
 | G1 — Auditoria | PARTIAL | Contratos e serviços centrais inventariados; testes operacionais e conflitos não executados. |
 | G2 — Design System | PARTIAL | Tokens/regras V2 reaproveitados; fidelidade visual comparativa Rotas pendente. |
-| G3 — Celular | PARTIAL | Layout mapa-primeiro implementado; Browser autêntico pós-change bloqueado. |
+| G3 — Celular | PARTIAL | CDP fixture 320/360/390/430 claro/escuro; cinco filtros em linha e 27,6–27,8 px entre último painel e navegação fixa no scroll inferior. E2E pós-patch/Android físico pendentes. |
 | G4 — Tablet | PARTIAL | Grid dedicado 600–1023px; referência verificada, render final não comparado. |
-| G5 — PC | PARTIAL | Lista/mapa/detalhe em painéis; render final não comparado. |
-| G6 — Mapa/cartografia | PARTIAL | Leaflet e serviços existentes preservados; geocode tácito removido; falha/resize/tiles E2E pendentes. |
+| G5 — PC | PARTIAL | Home/Pedidos em 1024–1920, Rotas em 1280–1920; detalhes Pedidos 320–380 px. Fixtures comparativas, conteúdo autenticado e fidelidade final pendentes. |
+| G6 — Mapa/cartografia | PARTIAL | Causa do fallback Carto sem chave corrigida; Leaflet raster OSM exibiu 20 tiles no Chromium sem GPU. Rede móvel, resize e E2E autenticado pendentes. |
 | G7 — Planejamento | PARTIAL | Plano sintético com sequência de 2 paradas criado/salvo/readback em Browser; edição, ACK servidor, regras de duplicidade sob concorrência e sincronização cross-app não testados. |
 | G8 — Persistência | PASS (escopo local-first) | E2E autenticado criou planejamento com 2 paradas, salvou e confirmou seleção/readback no IndexedDB após reload. Confirmação remota/ack permanece fora deste gate e depende de G10. Evidência `auth-e2e-navigation-2026-10-24.json`. |
-| G9 — Integração | PARTIAL | E2E com MFA real nas duas UIs: criação no Restaurante, ACK/projeção local, pull e entrega disponível no Motoboy; aceite Motoboy aceito pela API e projeção canônica `ACCEPTED` recebida pelo Restaurante. Fixture rollback-only, sem commit durável cross-process; loja local de eventos do Restaurante não mostrou linha e Orders renderizado não foi conferido. Evidência `e2e-cross-app-browser-2026-10-24.json`. |
-| G10 — Sync/concorrência | PARTIAL | Ensaio backend PostgreSQL em schema E2E isolado comprovou commits visíveis entre sessões independentes, disputas de atribuição/aceite, conflito de revisão, idempotência, retry e isolamento tenant. E2E Browser também observou ACK de criação/aceite e entrega de evento após reconexão, mas rollback-only; replay cross-app durável e concorrência operacional entre clientes ainda não testados. Evidências `e2e-sync-concurrency-resilience-2026-10-24.json` e `e2e-cross-app-browser-2026-10-24.json`. |
+| G9 — Integração | PARTIAL | MFA real em duas UIs, criação/aceite e projeção bidirecional; em cluster descartável, readback independente após encerramento do runner confirmou Delivery/eventos duráveis e evento canônico no detalhe Pedidos. UI Restaurante após retirada ainda pendente. Ver `e2e-durable-cross-app-2026-10-24.json`. |
+| G10 — Sync/concorrência | PARTIAL | Commits independentes, conflitos de revisão, idempotência, retry e isolamento backend comprovados; sync de aceite/retirada com ACK e readback independente comprovados. Reload ainda offline e concorrência operacional entre UIs pendentes. |
 | G11 — Segurança/RBAC | PARTIAL | No E2E backend isolado, isolamento entre tenants e rejeição de sessão não proprietária foram exercitados. Matriz completa de payload adulterado, sessão expirada durante sync, permissões de rota e replay cross-tenant ainda não executada nos dois clientes. |
-| G12 — Offline/resiliência | PARTIAL | Ação de retirada offline criou outbox pendente; após reconexão, reload e sync retornaram `accepted`, estado virou `acknowledged` e pendências zeraram. Não se testou fechar/reabrir ainda offline nem visibilidade ACK em processo independente com commit durável. |
-| G13 — E2E | PARTIAL | Duas UIs autenticadas por MFA real, criação Restaurante→Motoboy, aceite Motoboy→projeção Restaurante e pendência offline→ACK após reconexão passaram em fixture rollback-only. O journey não provou commit PostgreSQL durável cross-process, linha DeliveryEvent no store local do Restaurante, texto final de Orders, fluxo RETURN, replay/tenant adversarial ou ciclo de reload offline. CDP 9222 indisponível; Chromium isolado 9223 funcionou. Ver `e2e-cross-app-browser-2026-10-24.json`. |
+| G12 — Offline/resiliência | PARTIAL | Retirada offline, outbox pendente, reconexão, ACK e commit independente foram comprovados. Reload ainda offline, cancelamento/RETURN e falhas parciais continuam pendentes. |
+| G13 — E2E | PARTIAL | MFA real nos dois apps, criação, aceite, eventos, PostgreSQL durável independente e reconexão offline passaram no escopo documentado. E2E pós-patch visual, reload offline, RETURN, concorrência UI e RBAC adversarial não executados. |
 | G14 — Fidelidade visual | FAIL | Reprovação expressa do proprietário. Ajustes técnicos e capturas fixture não alteram este estado; aprovação final pertence exclusivamente ao proprietário. |
-| G15 — Sem regressões | PARTIAL | Testes direcionados de mapas/logística/contrato passaram; regression Browser Início/Pedidos/Motoboys autenticado bloqueado. |
+| G15 — Sem regressões | PARTIAL | `npm test` Restaurante completo e direcionados passaram nesta intervenção; E2E autenticado pós-patch e Android físico pendentes. |
+
+## Intervenção visual e responsiva — 2026-10-24
+
+| Área | Estado | Evidência/limite |
+|---|---|---|
+| Rotas mobile | PARTIAL | Cinco filtros em linha; abas sem contagens duplicadas; vazio compacto; 27,6–27,8 px de folga no scroll. Fixture, safe-area física pendente. |
+| Home desktop | PARTIAL | Saudação e header compartilhado; 32 combinações Home/Pedidos comparadas antes/depois em renderer CDP. Autenticação e dispositivo físico pendentes. |
+| Pedidos desktop | PARTIAL | Painel de detalhes mediu 320/320/329,3/380 px em 1024/1280/1440/1920; conteúdo sintético. |
+| Rotas PC/mapa | PARTIAL | Fallback OSM real carregou tiles no browser; composição com dados operacionais autenticados pendente. |
+| Testes automatizados | PASS | `npm test` Restaurante e 8 testes direcionados; checagens JS/ESM e diff. |
+| E2E pós-patch | BLOCKED | Fixture de captura não é sessão autenticada; não havia tenant/sessão MFA sintéticos com cleanup verificável nesta rodada. |
+| G14 visual | **FAIL** | Reprovação vigente; somente proprietário aprova. |
 
 ## Checkpoint documental e E2E — 2026-10-24
 

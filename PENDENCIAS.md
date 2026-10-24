@@ -2276,3 +2276,16 @@ Esta atualização sucede o checkpoint BLOCKED documentado acima; o registro ant
 - **Rotas PARTIAL:** validar Leaflet com tiles/coordenadas de fixture autorizadas e rota selecionada em ambiente autenticado; confirmar filtros, abrir pedido, redimensionamento e toolbar em dispositivos físicos.
 - **Tablet/PC PARTIAL:** comparar a interface autenticada populada com as referências aprovadas; a medição atual usa rota/paradas sintéticas e não prova dados operacionais.
 - Manter pendências anteriores de G9–G13: confirmação UI Restaurante após retirada, reload ainda offline, devolução/cancelamento, concorrência entre UIs e testes adversariais RBAC/tenant. Não encerrar sem evidência específica.
+
+## Atualização após intervenção responsiva complementar — 2026-10-24
+
+Os itens seguintes complementam os anteriores; não encerram pendências históricas.
+
+- **0304-VISUAL-OWNER — FAIL/PENDING_USER_APPROVAL:** proprietário deve inspecionar as referências/capturas atualizadas de Rotas no Chrome Android, tablet e PC. G14 permanece FAIL até aprovação expressa; não iniciar 0305.
+- **0304-ANDROID-SAFE-AREA — PARTIAL:** folga no scroll inferior medida em CDP (27,6–27,8 px), mas Chrome Android físico e safe area real não foram testados.
+- **0304-E2E-POST-VISUAL — BLOCKED:** fixtures Home/Pedidos/Rotas são não autenticadas; repetir navegação/ações e regressões visuais com MFA real, tenant sintético isolado e cleanup verificável.
+- **0304-ROUTE-MAP-REAL-NETWORK — PARTIAL:** fallback OSM carregou tiles reais em Chromium sem GPU; validar conexão móvel, tile errors, resize e rota selecionada com fixture operacional autorizada. Sem coordenadas falsas.
+- **0304-HOME-ORDERS-OWNER — PARTIAL:** capturas e medições desktop antes/depois são fixtures sintéticas; confirmar leitura em Chrome Android modo computador e comparar conteúdo autenticado.
+- Preservar pendências G9–G13 já registradas: UI Restaurante após retirada, reload ainda offline, cancelamento/RETURN, concorrência operacional entre UIs, isolamento e RBAC adversarial.
+
+Evidências desta rodada: `EVIDENCIAS/0304/intervencao-visual-2026-10-24/`. O Restaurante recebeu apenas commit local `26d2282`; nenhum push de app, Motoboy ou Browser QA. Nenhuma escrita oficial.
