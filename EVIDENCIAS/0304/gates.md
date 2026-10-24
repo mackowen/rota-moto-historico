@@ -19,6 +19,22 @@
 | G14 — Fidelidade visual | FAIL | Reprovação expressa do proprietário. Ajustes técnicos e capturas fixture não alteram este estado; aprovação final pertence exclusivamente ao proprietário. |
 | G15 — Sem regressões | PARTIAL | `npm test` Restaurante completo e direcionados passaram nesta intervenção; E2E autenticado pós-patch e Android físico pendentes. |
 
+## Refinamento visual e rolagem — 2026-10-24
+
+| Área | Estado | Evidência/limite |
+|---|---|---|
+| Pedidos desktop | PARTIAL | Lista resumida sem endereço repetido, painel completo sticky abaixo do cabeçalho, ação primária única; renderizador/ações reais em fixture sintética. |
+| Pedidos tablet 700–850 px | PASS (fixture) | Lista e detalhes empilhados; seleção por teclado foca o título e enquadra o painel após `scrollend` (`panelTop=296,1px`, `headerBottom=76px`, viewport 768×1024). |
+| Rotas desktop | PARTIAL | Cartões em 1024–1920 px empilham conteúdo e ação compacta; estrutura lista/mapa preservada. Dados e coordenadas sintéticos sem geografia; comparação visual final pendente. |
+| Rotas celular | PARTIAL | Nenhum novo controle ou altura adicionados; filtros, mapa, legenda, cartões e reserva inferior preservados. Fixture 320–430 px, temas claro/escuro. |
+| Início desktop | PARTIAL | Renderer V2 revisado com quatro KPIs, uma entrega e gráficos sintéticos; espaço restante corresponde à baixa densidade de registros e não foi artificialmente preenchido. |
+| Rolagem sticky | PASS (fixture) | Lista extensa rolada ao topo/fim; seleção de detalhe medida depois de `scrollend`. Nenhum bloqueio reproduzível de acesso. Chrome Android físico pendente. |
+| Testes automatizados | PASS | `npm test` completo terminou exit 0; testes dirigidos, `node --check app.js`, `node --check sw.js` e `git diff --check` passaram. |
+| E2E autenticado nesta intervenção | BLOCKED | Instância disponível exibia login; não havia tenant/sessão MFA sintéticos isolados com limpeza verificável. Nenhum bypass ou escrita em banco oficial. |
+| G14 — Fidelidade/aprovação | **FAIL** | Reprovação anterior continua em vigor. Fixtures e imagens técnicas não substituem avaliação do proprietário. |
+
+102 cenários de Chromium/CDP (Rotas 9 larguras × 2 temas × 4 densidades; Pedidos 5 larguras × 2 temas × 2 densidades e seleção; Início 4 larguras × 2 temas) foram registrados em [`refinamento-final-2026-10-24`](refinamento-final-2026-10-24/README.md). A composição da imagem de referência PC é mais completa do que o fixture, portanto G14 não avança. A Campanha 0304 segue PARTIAL/aberta; nenhuma pendência anterior foi encerrada e 0305 não foi iniciada.
+
 ## Intervenção visual e responsiva — 2026-10-24
 
 | Área | Estado | Evidência/limite |

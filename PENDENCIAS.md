@@ -2289,3 +2289,16 @@ Os itens seguintes complementam os anteriores; não encerram pendências histór
 - Preservar pendências G9–G13 já registradas: UI Restaurante após retirada, reload ainda offline, cancelamento/RETURN, concorrência operacional entre UIs, isolamento e RBAC adversarial.
 
 Evidências desta rodada: `EVIDENCIAS/0304/intervencao-visual-2026-10-24/`. O Restaurante recebeu apenas commit local `26d2282`; nenhum push de app, Motoboy ou Browser QA. Nenhuma escrita oficial.
+
+## Refinamento final 0304 — novas pendências (2026-10-24)
+
+Os itens anteriores permanecem abertos e inalterados; estes complementam, não substituem nem encerram o backlog cumulativo desde a Campanha 0257.
+
+| ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |
+|---|---|---|---|
+| 0304-OWNER-CHROME-REVIEW | Fidelidade e revisão humana; P0; **BLOCKED / PENDING_USER_APPROVAL** | Capturas CDP e fixtures sintéticas preservadas; G14 continua FAIL. Referência PC possui composição completa que o renderer fixture não reproduz. | Proprietário comparar as referências/capturas atualizadas em Chrome Android, tablet e PC; somente aprovação expressa altera G14. |
+| 0304-ORDERS-AUTHENTICATED | Pedidos desktop/tablet; P1; **BLOCKED** | Renderer e ações de produção foram exercitados em 1/20 registros sintéticos; sem sessão autenticada na rodada. | Confirmar seleção, imprimir, abrir/gerenciar, filtros e pesquisa em sessão autorizada, sem repetir testes de backend não afetados. |
+| 0304-ROUTES-REAL-DATA | Rotas desktop/mobile; P1; **PARTIAL** | Cartões e mapa estruturalmente medidos com contagens sintéticas e sem coordenadas; mapa operacional não entrou em fixture autenticada. | Confirmar dados reais autorizados, estado selecionado, controles e resize no ambiente E2E isolado; não inventar geometria. |
+| 0304-ANDROID-SCROLL-REVIEW | Sticky/safe area; P1; **PARTIAL** | Scroll e foco avaliados em Chromium fixture com evento `scrollend`; nenhum bloqueio reproduzível demonstrado. | Validar Chrome Android físico no topo/fim e navegação por teclado; não classificar conteúdo fora do enquadramento como defeito sem bloqueio de interação. |
+
+Evidências da rodada: `EVIDENCIAS/0304/refinamento-final-2026-10-24/`. Nenhum item anterior foi removido ou fechado.
