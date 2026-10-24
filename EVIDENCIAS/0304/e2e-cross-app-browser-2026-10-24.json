@@ -1,0 +1,75 @@
+{
+  "campaign": "0304",
+  "date": "2026-10-24",
+  "result": "PARTIAL",
+  "browser": {
+    "chromium": "Headless Chrome 155.0.8059.79",
+    "debugPort": 9223,
+    "mode": "isolated profile and dedicated CDP port; shared 9222 was unavailable",
+    "contexts": 2,
+    "authentication": "both app UIs completed login and MFA; separate sessions, same synthetic tenant",
+    "browserExceptions": 0,
+    "http5xx": 0
+  },
+  "environment": {
+    "database": "rotamoto_e2e",
+    "fixtureMode": "transaction rollback; server ACKs in this browser run are not durable cross-process commits",
+    "sameE2eApi": true,
+    "officialDatabaseWrites": false,
+    "officialMigrations": false
+  },
+  "restaurantToMotoboy": {
+    "restaurantUiCreatedDelivery": true,
+    "localOrderAndDeliveryReadback": true,
+    "assignedDriverLinked": true,
+    "serverOperationStatus": "accepted",
+    "canonicalAckProjectedToIndexedDb": true,
+    "restaurantOutboxPendingAfterAck": 0,
+    "motoboyPullPages": 2,
+    "motoboyIndexedDbDeliveryPresent": true,
+    "motoboyCanonicalDelivery": true
+  },
+  "motoboyToRestaurant": {
+    "motoboyUiAcceptAction": true,
+    "deliveryEventServerResult": "accepted",
+    "restaurantPullPages": 2,
+    "restaurantCanonicalDeliveryStatus": "ACCEPTED",
+    "restaurantIndexedDbDeliveryEventRows": 0,
+    "limitation": "The Restaurant received the canonical Delivery status projection, but this run did not observe a DeliveryEvent row in its local event store or assert the final rendered Orders row."
+  },
+  "offlineReconnect": {
+    "offlinePickupAction": true,
+    "offlineOutboxStatus": {
+      "DELIVERY_PICKED_UP": "pending",
+      "pendingCount": 1
+    },
+    "reload": "after network reconnection; the app reloaded and sync bootstrap became ready",
+    "reconnectSyncResult": "accepted",
+    "afterReconnectOutboxStatus": {
+      "DELIVERY_PICKED_UP": "acknowledged",
+      "pendingCount": 0
+    },
+    "closeOrReloadWhileStillOffline": "not tested"
+  },
+  "cleanup": {
+    "fixtureStatus": "COMPLETED",
+    "databaseCommitted": false,
+    "readOnlyResidualAudit": "zero rows for the fixture company in 41 company-scoped tables and zero company/membership rows"
+  },
+  "coverageLimits": [
+    "No committed PostgreSQL transaction for this two-client UI journey; separate committed backend concurrency evidence remains in e2e-sync-concurrency-resilience-2026-10-24.json.",
+    "No second-user cross-tenant adversarial run, session-expiry test, replay assertion, or cancellation-after-pickup/return flow in this browser run.",
+    "Offline recovery was exercised in the rollback fixture; durable ACK visibility to an independent process is not established."
+  ],
+  "gates": {
+    "G8": "PASS_LOCAL_FIRST_ONLY",
+    "G9": "PARTIAL",
+    "G10": "PARTIAL",
+    "G11": "PARTIAL",
+    "G12": "PARTIAL",
+    "G13": "PARTIAL",
+    "G14": "FAIL",
+    "G15": "PARTIAL"
+  },
+  "campaign": "open; no global PASS; campaign 0305 not started"
+}
