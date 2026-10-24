@@ -1,5 +1,6 @@
 # Campanha 0304 — Rotas V2
 
+- Consolidação/publicação do histórico: [REGISTROS/0304-CONSOLIDACAO-HISTORICO.md](REGISTROS/0304-CONSOLIDACAO-HISTORICO.md)
 - Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)
 - Resumo: [RESUMOS/0304.md](RESUMOS/0304.md)
