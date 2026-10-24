@@ -1,0 +1,69 @@
+{
+  "campaign": "0304",
+  "checkpoint": "authenticated-bootstrap-followup",
+  "date": "2026-10-24",
+  "classification": "PARTIAL",
+  "applicationCommit": "65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025",
+  "motoboyCommit": "64d2e13d8e455f48b20b32b396e9c49ba7553e0b",
+  "historyCommitBefore": "953299b3dde6d3a40656b412da78ea844ca8c36c",
+  "browser": "Chromium headless through CDP; fresh profile; temporary harness outside repositories",
+  "database": "rotamoto_e2e; rollback-only fixture",
+  "authentication": {
+    "initialAnonymousSession": 401,
+    "initialLogin": "403 MFA_REQUIRED challenge",
+    "mfaCompleted": true,
+    "loginAfterMfa": 200,
+    "sessionAfterReload": 200,
+    "sessionCookieValueRecorded": false
+  },
+  "timelineAfterReload": {
+    "authReadyObserved": true,
+    "appReadyObserved": true,
+    "authRevokedObserved": false,
+    "appRootVisibleAfterBootstrap": true,
+    "mainPresentAfterBootstrap": true,
+    "routeMapAfterBootstrap": false,
+    "reasonRouteMapAbsent": "The app bootstrap intentionally sets the initial tab to dashboard; routeMap is only mounted after navigating to Routes.",
+    "shellDisappearanceReproduced": false,
+    "testedDurationAfterReloadMs": 6000
+  },
+  "routesJourney": {
+    "preReloadRoutesViewAndMap": true,
+    "postReloadNavigationAttempt": true,
+    "routeMapAfterNavigationAttempt": false,
+    "operationalPlanSaveReached": false,
+    "rootCauseOfNavigationAttemptFailure": "Unresolved; no production defect proven. Browser runner assertion fails before an operational route is mounted.",
+    "browserRuntimeExceptions": 0,
+    "httpErrorsApartFromExpectedAnonymous401AndMfa403": 0
+  },
+  "automatedTests": {
+    "restaurantNpmTest": "PASS",
+    "motoboyNpmTest": "PASS",
+    "crossAppContractParity": "PASS (included in both npm test suites)"
+  },
+  "fixtureIntegrity": {
+    "databaseCommitted": false,
+    "officialDatabaseWrites": false,
+    "manifestResidualCounts": "zero in prior checkpoint; current fixture lifecycle rollback completed"
+  },
+  "changes": {
+    "restaurantSource": false,
+    "motoboySource": false,
+    "browserTestsTrackedFiles": false,
+    "productionPushes": false,
+    "mfaOrRbacBypass": false
+  },
+  "gateUpdates": {
+    "G8": "BLOCKED",
+    "G10": "BLOCKED",
+    "G13": "BLOCKED",
+    "G14": "FAIL",
+    "G15": "PARTIAL"
+  },
+  "limitations": [
+    "No code change was justified because the previously reported shell disappearance did not reproduce with complete event instrumentation.",
+    "Reload returns to dashboard by design; authenticated route planning after reload was not validated because navigation did not reach the Routes module.",
+    "No route save/readback, cross-app sync, conflicts, RBAC, tenant isolation, offline or map tile/marker flow passed.",
+    "Physical Chrome Android visual approval remains pending."
+  ]
+}
