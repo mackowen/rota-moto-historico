@@ -169,6 +169,7 @@ As medidas, capturas antes/depois e limites estão em `pedidos-layout-controles-
 | Duas colunas/empilhamento e áreas fixas preservados | PASS técnico (fixture) | Regra de container query, aside sticky e cabeçalho permanecem; sem overflow horizontal na matriz. |
 | Regressão automatizada | PASS | `npm test` integral Restaurante; teste estático impede retorno a max-height/overflow interno. |
 | E2E autenticado / Chrome Android físico | BLOCKED / não executado nesta intervenção | O ambiente usado foi fixture CDP visual sem autenticação; sem declaração de validação operacional/física. |
+| Acesso ao fim do painel após rolagem | PASS técnico (fixture CDP) | Em 1280×800, documento scrollTop=1035; ação final totalmente visível; Central scrollTop=0. Captura/JSON no mesmo pacote. |
 | G14 — aprovação visual do proprietário | **FAIL** | Aprovação expressa continua pendente. |
 
 As capturas antes/depois e métricas estão em [pedidos-rolagem-central-2026-10-25](pedidos-rolagem-central-2026-10-25/README.md). G8–G13 não avançam; G15 permanece PARTIAL no escopo global. Campanha 0304 PARTIAL/aberta; nenhuma pendência anterior encerrada.

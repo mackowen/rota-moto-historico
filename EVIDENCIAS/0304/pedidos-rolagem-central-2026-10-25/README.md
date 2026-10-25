@@ -16,7 +16,7 @@ A captura `before-1280-light-expanded.png` e `before-measurements.json` reproduz
 | 1280×800 | 1924 / 666 / `auto` / 668 px | 1924 / 1924 / `visible` / `none` | 979/800 → 2241/800 |
 | 1920×1080 | 1924 / 946 / `auto` / 948 px | 1924 / 1924 / `visible` / `none` | 1265/1080 → 2248/1080 |
 
-Após o patch, a rolagem Chromium moveu o documento (`pageYOffset` positivo) e manteve `panelScrollTop=0`; no estado medido em 1280×800, documento `scrollHeight=2241`, `clientHeight=800`, Central `scrollHeight=clientHeight=1924`, `overflowY=visible`. O teste confirma que a rolagem acontece no documento e não em uma barra interna da Central.
+Após o patch, a rolagem Chromium moveu o documento e manteve `panelScrollTop=0`; no estado medido em 1280×800, documento `scrollHeight=2241`, `clientHeight=800`, Central `scrollHeight=clientHeight=1924`, `overflowY=visible`. Uma fixture separada de 1280×800 foi levada até o fim do documento: `documentScrollTop=1035`, `scrollHeight=1835`, último botão entre y=679,66–723,66 visível no viewport de 800 px; Central `scrollTop=0` e `scrollHeight=clientHeight=1682`. Para estabilizar a medição programática, `scroll-behavior:auto` foi aplicado somente à fixture (CSS de produção inalterado). Dados em `scroll-end-check.json` e captura em `after-page-end-check.png`.
 
 ## Estados e matriz
 
@@ -32,7 +32,7 @@ Após o patch, a rolagem Chromium moveu o documento (`pageYOffset` positivo) e m
 - `before-1280-light-expanded.png`: regra anterior reproduzida; scrollbar interna visível.
 - `after-1280-light-expanded.png`: regra corrigida, conteúdo fluindo no documento.
 - `few-measurements.json`, `many-measurements.json`, `before-measurements.json`, `after-measurements.json`: geometria e métricas de rolagem por caso.
-- `few-1280-light-content-fit.png`: caso curto que cabe no viewport; `many-1280-light-page-scroll.png`: captura durante a rolagem do documento.
+- `few-1280-light-content-fit.png`: caso curto que cabe no viewport; `many-1280-light-page-scroll.png`: captura durante a rolagem; `after-page-end-check.png`: último controle visível após scroll do documento até o final.
 
 O Chromium usou os CSS reais da aplicação servidos por HTTP em `127.0.0.1:8083`; a fixture isolada não executou JS da aplicação, autenticação, dispatch, persistência ou sincronização. Portanto, isto é validação de layout/renderização, não E2E operacional nem teste físico no Chrome Android. Nenhum dado ou banco foi alterado.
 
@@ -45,3 +45,5 @@ O Chromium usou os CSS reais da aplicação servidos por HTTP em `127.0.0.1:8083
 - G14 permanece **FAIL / aprovação do proprietário pendente**; campanha 0304 continua PARTIAL e aberta.
 
 O CSS servido `orders-v2.css?v=0304.8` retornou o mesmo SHA-256 do arquivo local após a alteração (`faecd0d0be60bc8df3d58c133e49757e08609f0502d47771d0777caeeff0d030`). `index.html` anuncia esse URL e o service worker usa o cache shell `v113`.
+
+SHA-256 das capturas principais: antes `259581403a991c4c86281517e784659097bd4fb053cf13dc896a67bac4caa29f`; depois `ca267c4f0edc6dc204f80cc155a677dc5797fbf3e589132a173eed2afa81c0fe`; rolagem até o fim `6c3b4e75b94f74f6cb8b41d5232c84c1907ac80a9a0b8e50b129a9f634778e60`.

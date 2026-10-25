@@ -1,0 +1,29 @@
+{
+  "kind": "CDP fixture, synthetic content, production CSS over HTTP 8083; no application scripts or authentication",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "fixture": {
+    "waitingOrders": 12,
+    "syntheticDrivers": 14
+  },
+  "test": {
+    "scrollBehavior": "auto applied only inside fixture to let programmatic scroll measurement settle; production stylesheet unchanged",
+    "documentScroller": "HTML",
+    "documentScrollTop": 1035,
+    "documentScrollHeight": 1835,
+    "documentClientHeight": 800,
+    "windowInnerHeight": 800,
+    "panelScrollTop": 0,
+    "panelScrollHeight": 1682,
+    "panelClientHeight": 1682,
+    "panelOverflowY": "visible",
+    "lastAction": {
+      "top": 679.66,
+      "bottom": 723.66,
+      "viewportHeight": 800,
+      "fullyVisible": true
+    }
+  }
+}
