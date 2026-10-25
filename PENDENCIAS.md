@@ -2340,3 +2340,10 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - [ ] Executar E2E autenticado com tenant/usuário MFA sintéticos autorizados e PostgreSQL descartável: cadastro, edição, filtros interativos, distribuição confirmada, reload/readback, ACK e sync Restaurante↔Motoboy.
 - [ ] Exercitar despacho concorrente, offline/reconexão, RBAC/tenant e falhas de sessão com duas sessões reais. A presente rodada não altera nem encerra essas pendências.
 - [ ] Validar fisicamente no Chrome Android; capturas CDP atuais são fixtures sintéticas.
+
+### Complemento — Motoboys V2, contraste e navegação (2026-10-25)
+
+- [ ] Confirmar no Chrome Android real o fluxo de lista → detalhe → voltar, incluindo posição de rolagem não-zero e controles perto da navegação inferior; a fixture CDP não conseguiu gerar `scrollY` não-zero.
+- [ ] Proprietário revisar as novas capturas frente às referências aprovadas e fornecer decisão expressa. G14 permanece FAIL.
+- [ ] Executar E2E autenticado com MFA/tenant sintético autorizado para cadastro, busca/filtros reais, edição, dispatch por `openAssignment()`, persistência/sync e RBAC. Nenhum desses fluxos operacionais foi aprovado por capturas sintéticas.
+- As pendências existentes de sync cross-app, offline/reconexão, devolução, concorrência e segurança permanecem abertas; este complemento não encerra itens anteriores nem os da Campanha 0257.

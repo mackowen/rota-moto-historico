@@ -386,3 +386,10 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Resumo 0304](RESUMOS/0304.md#motoboys-v2--2026-10-25)
 - [Gates 0304](EVIDENCIAS/0304/gates.md#motoboys-v2--checkpoint-2026-10-25)
 - [Referências, capturas, matriz e medições](EVIDENCIAS/0304/motoboys-v2-2026-10-25/README.md)
+
+### Refinamento Motoboys V2 — contraste e navegação mobile (2026-10-25)
+
+- [Registro 0304](REGISTROS/0304.md#refinamento-motoboys-v2--contraste-e-navegacao-mobile-2026-10-25)
+- [Resumo 0304](RESUMOS/0304.md#refinamento-mobile-e-contraste--2026-10-25)
+- [Gates 0304](EVIDENCIAS/0304/gates.md#motoboys-v2--refinamento-visual-e-navegacao-mobile-2026-10-25)
+- [Capturas, hashes e medições](EVIDENCIAS/0304/motoboys-v2-refinamento-2026-10-25/README.md)

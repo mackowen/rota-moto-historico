@@ -191,3 +191,20 @@ As capturas antes/depois e métricas estão em [pedidos-rolagem-central-2026-10-
 | G14 — aprovação visual do proprietário | **FAIL** | Reprovação global anterior segue vigente; capturas fixture não mudam o gate. |
 
 Evidências, limites, matriz comparativa e hashes: [`Motoboys V2`](motoboys-v2-2026-10-25/README.md). G8–G13 e suas pendências operacionais conservam os estados anteriores; esta rodada não amplia sincronização, persistência remota ou RBAC. Campanha permanece PARTIAL/aberta.
+
+## Motoboys V2 — refinamento visual e navegação mobile (2026-10-25)
+
+| Gate desta intervenção | Estado | Evidência/limite |
+|---|---|---|
+| Contraste dos ícones vazios/indicadores nos temas claro/escuro | PASS técnico | CDP: 5,74:1 claro e 6,46:1 escuro nos ícones principais; verde 3,87:1. |
+| Indicadores e cartões compactos no celular | PASS técnico / revisão visual pendente | 390×844: indicador 179,5×64,2 px; capturas fixture. |
+| Lista inicial sem painel completo de detalhes | PASS técnico | CDP fixture: lista `block`, detalhe `none`. |
+| Seleção abre apenas detalhes; voltar restaura lista | PASS técnico (fixture CDP) | Detalhes `grid`, lista `none`; troca para Localização e retorno concluídos. |
+| Preservação de rolagem não-zero após retorno | PARTIAL | Runner não conseguiu produzir scroll não-zero; não se declara restauração integral. |
+| Tablet/PC e ausência de overflow horizontal | PASS técnico (fixture) | Viewports registrados em `geometry.json`; sem overflow medido. |
+| Regressão automatizada Restaurante | PASS | `npm test` completo, exit 0; `node --check` e `git diff --check`. |
+| E2E autenticado, dispatch, CRUD, sync e RBAC | BLOCKED/não executado | Renderer/CDP fixture não prova sessão ou operações reais. |
+| Chrome Android físico e novas capturas do proprietário | BLOCKED/PENDING | Não disponíveis nesta execução. |
+| G14 — aprovação visual do proprietário | **FAIL** | Somente aprovação expressa do proprietário altera o estado. |
+
+Evidências completas e hashes: `motoboys-v2-refinamento-2026-10-25/README.md`. G8–G13 não avançam; G15 permanece PARTIAL na cobertura global. Campanha PARTIAL/aberta; sem PASS global e sem 0305.

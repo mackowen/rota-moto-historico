@@ -1,0 +1,1680 @@
+{
+  "generatedAt": "2026-10-25T12:39:49.748Z",
+  "measurements": [
+    {
+      "w": 320,
+      "h": 720,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 296,
+        "height": 2402.4,
+        "display": "grid"
+      },
+      "list": {
+        "x": 12,
+        "y": 149.4,
+        "width": 296,
+        "height": 2253,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 12,
+        "y": 0,
+        "width": 144.5,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 654,
+        "width": 320,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 320,
+        "cw": 320,
+        "sh": 2496,
+        "ch": 720,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2251,
+          "ch": 2251,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 250,
+          "y": 250.6,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 360,
+      "h": 800,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 336,
+        "height": 2377.8,
+        "display": "grid"
+      },
+      "list": {
+        "x": 12,
+        "y": 149.4,
+        "width": 336,
+        "height": 2228.4,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 12,
+        "y": 0,
+        "width": 164.5,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 734,
+        "width": 360,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 360,
+        "cw": 360,
+        "sh": 2472,
+        "ch": 800,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2226,
+          "ch": 2226,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 290,
+          "y": 225.9,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 2377.8,
+        "display": "grid"
+      },
+      "list": {
+        "x": 12,
+        "y": 149.4,
+        "width": 366,
+        "height": 2228.4,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 12,
+        "y": 0,
+        "width": 179.5,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 390,
+        "cw": 390,
+        "sh": 2472,
+        "ch": 844,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2226,
+          "ch": 2226,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 320,
+          "y": 225.9,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 406,
+        "height": 2377.8,
+        "display": "grid"
+      },
+      "list": {
+        "x": 12,
+        "y": 149.4,
+        "width": 406,
+        "height": 2228.4,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 12,
+        "y": 0,
+        "width": 199.5,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 866,
+        "width": 430,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 430,
+        "cw": 430,
+        "sh": 2472,
+        "ch": 932,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2226,
+          "ch": 2226,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 302,
+          "y": 225.9,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 508,
+        "y": 22,
+        "width": 0,
+        "height": 2449.1,
+        "display": "grid"
+      },
+      "list": {
+        "x": 508,
+        "y": 208.1,
+        "width": 42,
+        "height": 2263,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 508,
+        "y": 22,
+        "width": 20,
+        "height": 74.6,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 768,
+        "cw": 768,
+        "sh": 2507,
+        "ch": 1024,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2261,
+          "ch": 2261,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 534,
+          "y": 314.2,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 820,
+      "h": 1180,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 534,
+        "y": 22,
+        "width": 0,
+        "height": 2450.5,
+        "display": "grid"
+      },
+      "list": {
+        "x": 534,
+        "y": 208.1,
+        "width": 42,
+        "height": 2264.5,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 534,
+        "y": 22,
+        "width": 20,
+        "height": 74.6,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 820,
+        "cw": 820,
+        "sh": 2509,
+        "ch": 1180,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2262,
+          "ch": 2262,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 560,
+          "y": 315.6,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 286.7,
+        "y": 28,
+        "width": 691.6,
+        "height": 2389.3,
+        "display": "grid"
+      },
+      "list": {
+        "x": 286.7,
+        "y": 177.4,
+        "width": 691.6,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 286.7,
+        "y": 28,
+        "width": 342.3,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1009,
+        "cw": 1009,
+        "sh": 2465,
+        "ch": 768,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 857.3,
+          "y": 260.4,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 1024,
+      "h": 1366,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 286.7,
+        "y": 28,
+        "width": 691.6,
+        "height": 2389.3,
+        "display": "grid"
+      },
+      "list": {
+        "x": 286.7,
+        "y": 177.4,
+        "width": 691.6,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 286.7,
+        "y": 28,
+        "width": 342.3,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1009,
+        "cw": 1009,
+        "sh": 2465,
+        "ch": 1366,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 857.3,
+          "y": 260.4,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 294.4,
+        "y": 28,
+        "width": 932.2,
+        "height": 2345.5,
+        "display": "grid"
+      },
+      "list": {
+        "x": 294.4,
+        "y": 133.7,
+        "width": 932.2,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 294.4,
+        "y": 28,
+        "width": 224,
+        "height": 91.7,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1265,
+        "cw": 1265,
+        "sh": 2422,
+        "ch": 800,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 1105.6,
+          "y": 216.6,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 299.2,
+        "y": 28,
+        "width": 1082.6,
+        "height": 2345.5,
+        "display": "grid"
+      },
+      "list": {
+        "x": 299.2,
+        "y": 133.7,
+        "width": 1082.6,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 299.2,
+        "y": 28,
+        "width": 261.7,
+        "height": 91.7,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1425,
+        "cw": 1425,
+        "sh": 2422,
+        "ch": 900,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 1260.8,
+          "y": 216.6,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 328.5,
+        "y": 28,
+        "width": 1504,
+        "height": 2345.5,
+        "display": "grid"
+      },
+      "list": {
+        "x": 328.5,
+        "y": 133.7,
+        "width": 1504,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 328.5,
+        "y": 28,
+        "width": 367,
+        "height": 91.7,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1905,
+        "cw": 1905,
+        "sh": 2422,
+        "ch": 1080,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 1711.5,
+          "y": 216.6,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "detail",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 940.7,
+        "display": "grid"
+      },
+      "list": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "detail": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 940.7,
+        "display": "grid"
+      },
+      "back": {
+        "x": 28,
+        "y": 16,
+        "width": 103.2,
+        "height": 44,
+        "display": "flex"
+      },
+      "stat": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 390,
+        "cw": 390,
+        "sh": 1035,
+        "ch": 844,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 939,
+          "ch": 939,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": {
+          "x": 28,
+          "y": 210.8,
+          "width": 82,
+          "height": 42,
+          "display": "block"
+        },
+        "filter": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": false,
+        "detail": true,
+        "back": true
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "location",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 451.1,
+        "display": "grid"
+      },
+      "list": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "detail": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 451.1,
+        "display": "grid"
+      },
+      "back": {
+        "x": 28,
+        "y": 16,
+        "width": 103.2,
+        "height": 44,
+        "display": "flex"
+      },
+      "stat": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 390,
+        "cw": 390,
+        "sh": 844,
+        "ch": 844,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 449,
+          "ch": 449,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": {
+          "x": 28,
+          "y": 210.8,
+          "width": 82,
+          "height": 42,
+          "display": "block"
+        },
+        "filter": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": false,
+        "detail": true,
+        "back": true
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "theme": "light",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 2377.8,
+        "display": "grid"
+      },
+      "list": {
+        "x": 12,
+        "y": 149.4,
+        "width": 366,
+        "height": 2228.4,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 12,
+        "y": 0,
+        "width": 179.5,
+        "height": 64.2,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 390,
+        "cw": 390,
+        "sh": 2472,
+        "ch": 844,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2226,
+          "ch": 2226,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 320,
+          "y": 225.9,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(36, 94, 168)",
+        "iconBg": "rgb(233, 242, 255)",
+        "empty": "rgb(36, 94, 168)",
+        "emptyBg": "rgb(233, 242, 255)"
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "theme": "light",
+      "collapsed": false,
+      "view": "detail",
+      "root": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 940.7,
+        "display": "grid"
+      },
+      "list": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "detail": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 940.7,
+        "display": "grid"
+      },
+      "back": {
+        "x": 28,
+        "y": 16,
+        "width": 103.2,
+        "height": 44,
+        "display": "flex"
+      },
+      "stat": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66,
+        "display": "grid"
+      },
+      "doc": {
+        "sw": 390,
+        "cw": 390,
+        "sh": 1035,
+        "ch": 844,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 939,
+          "ch": 939,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": {
+          "x": 28,
+          "y": 210.8,
+          "width": 82,
+          "height": 42,
+          "display": "block"
+        },
+        "filter": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": false,
+        "detail": true,
+        "back": true
+      },
+      "colors": {
+        "icon": "rgb(36, 94, 168)",
+        "iconBg": "rgb(233, 242, 255)",
+        "empty": "rgb(36, 94, 168)",
+        "emptyBg": "rgb(233, 242, 255)"
+      }
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "theme": "light",
+      "collapsed": false,
+      "view": "list",
+      "root": {
+        "x": 508,
+        "y": 22,
+        "width": 0,
+        "height": 2449.1,
+        "display": "grid"
+      },
+      "list": {
+        "x": 508,
+        "y": 208.1,
+        "width": 42,
+        "height": 2263,
+        "display": "block"
+      },
+      "detail": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "back": null,
+      "stat": {
+        "x": 508,
+        "y": 22,
+        "width": 20,
+        "height": 74.6,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 768,
+        "cw": 768,
+        "sh": 2507,
+        "ch": 1024,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2261,
+          "ch": 2261,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": null,
+        "filter": {
+          "x": 534,
+          "y": 314.2,
+          "width": 42,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": false,
+        "back": false
+      },
+      "colors": {
+        "icon": "rgb(36, 94, 168)",
+        "iconBg": "rgb(233, 242, 255)",
+        "empty": "rgb(36, 94, 168)",
+        "emptyBg": "rgb(233, 242, 255)"
+      }
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "theme": "dark",
+      "collapsed": false,
+      "view": "detail",
+      "root": {
+        "x": 508,
+        "y": 22,
+        "width": 0,
+        "height": 1493.9,
+        "display": "grid"
+      },
+      "list": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "detail": {
+        "x": 508,
+        "y": 22,
+        "width": 42,
+        "height": 1493.9,
+        "display": "grid"
+      },
+      "back": {
+        "x": 529,
+        "y": 43,
+        "width": 32,
+        "height": 44,
+        "display": "flex"
+      },
+      "stat": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 768,
+        "cw": 768,
+        "sh": 1552,
+        "ch": 1024,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 0,
+          "ch": 0,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 1492,
+          "ch": 1492,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": {
+          "x": 529,
+          "y": 269.1,
+          "width": 8,
+          "height": 45,
+          "display": "block"
+        },
+        "filter": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": false,
+        "detail": true,
+        "back": true
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "theme": "light",
+      "collapsed": false,
+      "view": "detail",
+      "root": {
+        "x": 299.2,
+        "y": 28,
+        "width": 1082.6,
+        "height": 2345.5,
+        "display": "grid"
+      },
+      "list": {
+        "x": 299.2,
+        "y": 133.7,
+        "width": 533.3,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 848.5,
+        "y": 133.7,
+        "width": 533.3,
+        "height": 884.9,
+        "display": "grid"
+      },
+      "back": {
+        "x": 869.5,
+        "y": 154.7,
+        "width": 491.3,
+        "height": 44,
+        "display": "flex"
+      },
+      "stat": {
+        "x": 299.2,
+        "y": 28,
+        "width": 261.7,
+        "height": 91.7,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1425,
+        "cw": 1425,
+        "sh": 2422,
+        "ch": 900,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 883,
+          "ch": 883,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": {
+          "x": 869.5,
+          "y": 335.5,
+          "width": 121.3,
+          "height": 42,
+          "display": "block"
+        },
+        "filter": {
+          "x": 711.5,
+          "y": 216.6,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": true,
+        "back": true
+      },
+      "colors": {
+        "icon": "rgb(36, 94, 168)",
+        "iconBg": "rgb(233, 242, 255)",
+        "empty": "rgb(36, 94, 168)",
+        "emptyBg": "rgb(233, 242, 255)"
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "theme": "dark",
+      "collapsed": true,
+      "view": "detail",
+      "root": {
+        "x": 119.2,
+        "y": 28,
+        "width": 1262.6,
+        "height": 2345.5,
+        "display": "grid"
+      },
+      "list": {
+        "x": 119.2,
+        "y": 133.7,
+        "width": 623.3,
+        "height": 2239.8,
+        "display": "block"
+      },
+      "detail": {
+        "x": 758.5,
+        "y": 133.7,
+        "width": 623.3,
+        "height": 869.5,
+        "display": "grid"
+      },
+      "back": {
+        "x": 779.5,
+        "y": 154.7,
+        "width": 581.3,
+        "height": 44,
+        "display": "flex"
+      },
+      "stat": {
+        "x": 119.2,
+        "y": 28,
+        "width": 306.7,
+        "height": 91.7,
+        "display": "grid"
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "display": "none"
+      },
+      "doc": {
+        "sw": 1425,
+        "cw": 1425,
+        "sh": 2422,
+        "ch": 900,
+        "ox": "visible"
+      },
+      "panels": {
+        "list": {
+          "sh": 2238,
+          "ch": 2238,
+          "oy": "visible"
+        },
+        "detail": {
+          "sh": 867,
+          "ch": 867,
+          "oy": "visible"
+        }
+      },
+      "buttons": {
+        "tab": {
+          "x": 779.5,
+          "y": 320.2,
+          "width": 143.8,
+          "height": 42,
+          "display": "block"
+        },
+        "filter": {
+          "x": 621.5,
+          "y": 216.6,
+          "width": 100,
+          "height": 42,
+          "display": "inline-flex"
+        }
+      },
+      "visible": {
+        "list": true,
+        "detail": true,
+        "back": true
+      },
+      "colors": {
+        "icon": "rgb(139, 188, 255)",
+        "iconBg": "rgb(28, 52, 82)",
+        "empty": "rgb(139, 188, 255)",
+        "emptyBg": "rgb(28, 52, 82)"
+      }
+    }
+  ],
+  "interaction": {
+    "before": 0,
+    "afterSelect": {
+      "list": "none",
+      "detail": "grid",
+      "back": true,
+      "scroll": 0
+    },
+    "tab": "location",
+    "tabCount": 5,
+    "afterBack": {
+      "list": "block",
+      "detail": "none",
+      "scroll": 0,
+      "filter": "all",
+      "selected": "driver-1"
+    }
+  },
+  "contrastDarkTokens": {
+    "info": 6.46,
+    "secondary": 10.96,
+    "success": 3.87,
+    "warning": 7.13,
+    "danger": 6.71
+  },
+  "exceptions": []
+}

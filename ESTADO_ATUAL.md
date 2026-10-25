@@ -2076,3 +2076,7 @@ Commit local Restaurante da central operacional: `d23ba9be8b0702c7689313a5efd4c6
 ## Atualização 0304 — Motoboys V2 (2026-10-25)
 
 Branch local Restaurante `codex/campaign-0304-visual-consolidated`, commits `9199fc7`, `bef730d` e `2fe4b2b` (HEAD `ba4158363fce37df5e4bd45122fc889cd7233ea6`); sem push de app. Renderer responsivo, sem fotos, dados inventados ou painel vazio duplicado. `npm test` exit 0; CDP 92 combinações sem overflow. Evidência: `EVIDENCIAS/0304/motoboys-v2-2026-10-25/`. E2E autenticado de CRUD/despacho/sync BLOCKED; G14 FAIL; campanha PARTIAL/aberta. Motoboy e Browser QA intactos; nenhuma escrita oficial. Não iniciar 0305.
+
+### Último checkpoint — refinamento Motoboys V2 (2026-10-25)
+
+Restaurante commit local `2efa6af8ee5ace38179b42a30675d1f0a6a29aba`, sem push; Motoboy e Browser QA intocados. Contraste de ícones medido acima de 3:1, lista/detalhes alternam no fixture CDP, `npm test` completo PASS. Scroll não-zero, Chrome Android físico e E2E autenticado seguem pendentes. G14 FAIL; campanha PARTIAL/aberta; backlog preservado, 0305 não iniciada. Ver [registro](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [evidências](EVIDENCIAS/0304/motoboys-v2-refinamento-2026-10-25/README.md) e [pendências](PENDENCIAS.md).
