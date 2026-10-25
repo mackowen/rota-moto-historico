@@ -6,7 +6,7 @@ No Restaurante, causa raiz do erro QR foi o handler que reclassificava `PRESENCE
 
 Corrigida a largura intrínseca de `.main` em shell de grid/tablet: regra compartilhada preenche a coluna útil. CDP emulado com CSS real de 8083 avaliou 104 combinações; em 720×320, largura principal Rotas foi 314→641 px e Pedidos 333→644 px; sem overflow. Estado vazio de Rotas recebeu ícone SVG e espaçamento semântico. Capturas não são comparação com referência proprietária nem Chrome Android físico.
 
-`npm test` Restaurante completo passou com exit 0; checagem sintática e diff passaram. G14 permanece FAIL, campanha PARTIAL/aberta, nenhuma pendência antiga encerrada; nenhum push de aplicação. Commit Restaurante local: `5c77d560927f0d8e6a0030aa2902f2aafbfe0435`. Evidências: `EVIDENCIAS/0304/qr-layout-empty-2026-10-25/`.
+`npm test` Restaurante completo passou com exit 0; checagem sintática e diff passaram. G14 permanece FAIL, campanha PARTIAL/aberta, nenhuma pendência antiga encerrada; nenhum push de aplicação. Commits Restaurante locais: `5c77d56` e `4e6d341`. Evidências: `EVIDENCIAS/0304/qr-layout-empty-2026-10-25/`.
 
 ## Atualização — Pedidos V2 responsivo
 
