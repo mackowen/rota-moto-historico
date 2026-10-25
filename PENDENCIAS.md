@@ -1,4 +1,11 @@
 ## Pendências vigentes — Campanha 0304 (2026-10-24)
+
+### Acréscimos desta intervenção (2026-10-25)
+
+- **0304 — QR check-in autenticado:** emissão/leitura cross-app continua bloqueada enquanto o serviço E2E autorizado não tiver chave QR de teste configurada e o fluxo MFA/tenant sintético disponível. O tratamento genérico foi corrigido; isso não conclui o check-in. Não configurar segredos nem escrever no banco oficial como parte desta pendência.
+- **0304 — validação paisagem:** regra compartilhada corrigida e medida por CDP; falta inspeção no Chrome Android físico e aprovação das referências pelo proprietário.
+- **0304 — Rotas vazio:** componente implementado e capturado em fixture; revisão visual expressa pendente (G14 continua FAIL).
+
 A tabela reflete o checkpoint E2E autenticado de 2026-10-24; os diagnósticos anteriores permanecem preservados como histórico.
 
 | ID/origem | Componente; prioridade; estado | Evidência atual | Próxima ação / aceite |

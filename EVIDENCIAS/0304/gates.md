@@ -1,5 +1,20 @@
 # Gates — campanha 0304 (checkpoint atual)
 
+## Intervenção QR, layout paisagem e vazio de Rotas — 2026-10-25
+
+| Gate | Estado | Evidência e limite |
+|---|---|---|
+| QR: erro genérico corrigido | PASS técnico | Regressão HTTP reproduz a classificação errada e verifica 503 `PRESENCE_QR_UNAVAILABLE`, request ID e diagnóstico sem segredo. |
+| Serviço emite QR assinado com chave configurada | PASS unitário | Chave sintética e cliente DB falso; tenant/nonce e ausência de consulta da fila confirmados. Não é emissão no runtime autenticado. |
+| QR renderizado e check-in Restaurante↔Motoboy autenticado | BLOCKED | Runtime E2E sem referência/ID de chave; sem sessão sintética autorizada nesta execução. Nenhuma emissão real ou leitura foi declarada. |
+| Layout horizontal Início/Pedidos/Rotas/Motoboys | PASS técnico / aprovação física pendente | Chromium/CDP com CSS real 8083, cache/SW bypassados, fixture DOM: 104 combinações de viewport, módulo e tema, sem overflow. Em 720×320, conteúdo principal aumentou (Rotas 314→641 px; Pedidos 333→644 px). |
+| Estado vazio “Nenhuma rota planejada” | PASS estrutural / revisão visual pendente | SVG e estilos semânticos conferidos em screenshots fixture claro/escuro; não há ação fictícia. |
+| Chrome Android físico e comparação às novas imagens do proprietário | BLOCKED/PENDING | Capturas novas não encontradas localmente; teste foi Chromium/CDP emulado. |
+| Regressão Restaurante | PASS | `npm test` completo (exit 0), `node --check` nos JS/SW alterados e `git diff --check`. |
+| G14 — aprovação visual do proprietário | **FAIL** | Estado mantido até aprovação expressa; nenhuma fixture pode promovê-lo. |
+
+G8–G13 não avançam: não houve check-in autenticado/cross-app, sincronização operacional ou persistência remota nova. Campanha 0304 segue PARTIAL/aberta; pendências anteriores continuam vigentes.
+
 | Gate | Estado | Evidência/limite |
 |---|---|---|
 | G0 — Referências | PASS | Três referências abertas, medidas, identificadas e SHA-256 registrados. |

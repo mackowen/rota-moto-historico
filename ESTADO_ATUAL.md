@@ -1,5 +1,13 @@
 # Estado vigente — Campanha 0304 (checkpoint 2026-10-25)
 
+## Campanha 0304 — QR, paisagem e vazio Rotas (2026-10-25)
+
+No Restaurante, causa raiz do erro QR foi o handler que reclassificava `PRESENCE_QR_UNAVAILABLE` 503 como falha interna da fila. Corrigida a resposta específica, diagnóstico sanitizado e mensagens UI por categoria; teste unitário com chave sintética aprovado. A geração autenticada/check-in segue BLOCKED porque o runtime E2E não tem chave QR configurada. Nenhuma escrita oficial.
+
+Corrigida a largura intrínseca de `.main` em shell de grid/tablet: regra compartilhada preenche a coluna útil. CDP emulado com CSS real de 8083 avaliou 104 combinações; em 720×320, largura principal Rotas foi 314→641 px e Pedidos 333→644 px; sem overflow. Estado vazio de Rotas recebeu ícone SVG e espaçamento semântico. Capturas não são comparação com referência proprietária nem Chrome Android físico.
+
+`npm test` Restaurante completo passou com exit 0; checagem sintática e diff passaram. G14 permanece FAIL, campanha PARTIAL/aberta, nenhuma pendência antiga encerrada; nenhum push de aplicação. Commit Restaurante local: `5c77d560927f0d8e6a0030aa2902f2aafbfe0435`. Evidências: `EVIDENCIAS/0304/qr-layout-empty-2026-10-25/`.
+
 ## Atualização — Pedidos V2 responsivo
 
 Restaurante: branch local `codex/campaign-0304-visual-consolidated`, HEAD `89b3753b1a508e22a5b55ee926af1118d251ab7c` (correção local da rolagem após `ce8a75a`); `main` publicada permanece `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025` e o aplicativo não recebeu push. Motoboy: `main` `64d2e13d8e455f48b20b32b396e9c49ba7553e0b`, sem alteração. Browser QA: branch `codex/campaign-0294-admin-settings`, HEAD `57cb7745828e24d50502bec89061d2ceb59e0200`, alterações locais anteriores preservadas. Histórico: correção de rolagem registrada e publicada por fast-forward em `main`, SHA `4e9f091e645ab19705b7ad8c41bfafbea282bdcb`, confirmado igual a `origin/main`. O registro inicial desta correção foi publicado em `549c72a`; a verificação de rolagem até o fim foi acrescentada em `4e9f091`.

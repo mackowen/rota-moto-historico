@@ -1,0 +1,3957 @@
+{
+  "source": "CSS real servido por Nginx 8083; DOM estrutural sintético, sem sessão nem dados operacionais",
+  "results": [
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 397.578125,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 587.046875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 397.578125,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 587.046875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualViewport": 320,
+        "innerHeight": 720
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 316,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "page": {
+        "x": 12,
+        "width": 296
+      },
+      "document": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "width": 320,
+      "height": 720
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 397.921875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 615.859375,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 397.921875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 615.859375,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualViewport": 360,
+        "innerHeight": 800
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 356,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "page": {
+        "x": 12,
+        "width": 336
+      },
+      "document": {
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "width": 360,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 399.640625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 631.6875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 399.640625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 631.6875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualViewport": 390,
+        "innerHeight": 844
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 386,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "page": {
+        "x": 12,
+        "width": 366
+      },
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "width": 390,
+      "height": 844
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 401.1875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 663.375,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 401.1875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 275.890625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 663.375,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualViewport": 430,
+        "innerHeight": 932
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px minmax(0px, 1fr)",
+      "sidebarWidth": 0,
+      "header": {
+        "x": 2,
+        "y": 0,
+        "width": 426,
+        "height": 53
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 276.296875,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "page": {
+        "x": 12,
+        "width": 406
+      },
+      "document": {
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "width": 430,
+      "height": 932
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 705,
+        "visualViewport": 705,
+        "innerHeight": 320
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "76px 629px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 236.953125,
+        "y": 22,
+        "width": 307.078125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 215.359375,
+        "y": 0,
+        "width": 350.265625,
+        "height": 403.609375,
+        "paddingLeft": "21.6px",
+        "paddingRight": "21.6px",
+        "scrollWidth": 350,
+        "clientWidth": 350
+      },
+      "page": {
+        "x": 236.953125,
+        "width": 307.078125
+      },
+      "document": {
+        "scrollWidth": 705,
+        "clientWidth": 705
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "visualViewport": 720,
+        "innerHeight": 320
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "76px 644px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 253.21875,
+        "y": 22,
+        "width": 289.5625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 231.625,
+        "y": 0,
+        "width": 332.75,
+        "height": 320,
+        "paddingLeft": "21.6px",
+        "paddingRight": "21.6px",
+        "scrollWidth": 333,
+        "clientWidth": 333
+      },
+      "page": {
+        "x": 253.21875,
+        "width": 289.5625
+      },
+      "document": {
+        "scrollWidth": 720,
+        "clientWidth": 720
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 705,
+        "visualViewport": 705,
+        "innerHeight": 320
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "64px 641px",
+      "sidebarWidth": 64,
+      "header": {
+        "x": 239.71875,
+        "y": 10,
+        "width": 289.5625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 227.71875,
+        "y": 0,
+        "width": 313.5625,
+        "height": 699.625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 314,
+        "clientWidth": 314
+      },
+      "page": {
+        "x": 239.71875,
+        "width": 289.5625
+      },
+      "document": {
+        "scrollWidth": 705,
+        "clientWidth": 705
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "visualViewport": 720,
+        "innerHeight": 320
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "76px 644px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 253.21875,
+        "y": 22,
+        "width": 289.5625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 231.625,
+        "y": 0,
+        "width": 332.75,
+        "height": 320,
+        "paddingLeft": "21.6px",
+        "paddingRight": "21.6px",
+        "scrollWidth": 333,
+        "clientWidth": 333
+      },
+      "page": {
+        "x": 253.21875,
+        "width": 289.5625
+      },
+      "document": {
+        "scrollWidth": 720,
+        "clientWidth": 720
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 705,
+        "visualViewport": 705,
+        "innerHeight": 320
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "76px 629px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 236.953125,
+        "y": 22,
+        "width": 307.078125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 215.359375,
+        "y": 0,
+        "width": 350.265625,
+        "height": 403.609375,
+        "paddingLeft": "21.6px",
+        "paddingRight": "21.6px",
+        "scrollWidth": 350,
+        "clientWidth": 350
+      },
+      "page": {
+        "x": 236.953125,
+        "width": 307.078125
+      },
+      "document": {
+        "scrollWidth": 705,
+        "clientWidth": 705
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "visualViewport": 720,
+        "innerHeight": 320
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "76px 644px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 253.21875,
+        "y": 22,
+        "width": 289.5625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 231.625,
+        "y": 0,
+        "width": 332.75,
+        "height": 320,
+        "paddingLeft": "21.6px",
+        "paddingRight": "21.6px",
+        "scrollWidth": 333,
+        "clientWidth": 333
+      },
+      "page": {
+        "x": 253.21875,
+        "width": 289.5625
+      },
+      "document": {
+        "scrollWidth": 720,
+        "clientWidth": 720
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 705,
+        "visualViewport": 705,
+        "innerHeight": 320
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "64px 641px",
+      "sidebarWidth": 64,
+      "header": {
+        "x": 239.71875,
+        "y": 10,
+        "width": 289.5625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 227.71875,
+        "y": 0,
+        "width": 313.5625,
+        "height": 699.625,
+        "paddingLeft": "12px",
+        "paddingRight": "12px",
+        "scrollWidth": 314,
+        "clientWidth": 314
+      },
+      "page": {
+        "x": 239.71875,
+        "width": 289.5625
+      },
+      "document": {
+        "scrollWidth": 705,
+        "clientWidth": 705
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "visualViewport": 720,
+        "innerHeight": 320
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "76px 644px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 253.21875,
+        "y": 22,
+        "width": 289.5625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 231.625,
+        "y": 0,
+        "width": 332.75,
+        "height": 320,
+        "paddingLeft": "21.6px",
+        "paddingRight": "21.6px",
+        "scrollWidth": 333,
+        "clientWidth": 333
+      },
+      "page": {
+        "x": 253.21875,
+        "width": 289.5625
+      },
+      "document": {
+        "scrollWidth": 720,
+        "clientWidth": 720
+      },
+      "width": 720,
+      "height": 320
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 785,
+        "visualViewport": 785,
+        "innerHeight": 360
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "76px 709px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 137.96875,
+        "y": 22,
+        "width": 585.0625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 113.96875,
+        "y": 0,
+        "width": 633.0625,
+        "height": 414.203125,
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "scrollWidth": 633,
+        "clientWidth": 633
+      },
+      "page": {
+        "x": 137.96875,
+        "width": 585.0625
+      },
+      "document": {
+        "scrollWidth": 785,
+        "clientWidth": 785
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 800,
+        "visualViewport": 800,
+        "innerHeight": 360
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "76px 724px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 292.421875,
+        "y": 22,
+        "width": 291.15625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 268.421875,
+        "y": 0,
+        "width": 339.15625,
+        "height": 360,
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "scrollWidth": 339,
+        "clientWidth": 339
+      },
+      "page": {
+        "x": 292.421875,
+        "width": 291.15625
+      },
+      "document": {
+        "scrollWidth": 800,
+        "clientWidth": 800
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 785,
+        "visualViewport": 785,
+        "innerHeight": 360
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "68px 717px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 101.5,
+        "y": 12,
+        "width": 650,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 87.5,
+        "y": 0,
+        "width": 678,
+        "height": 574.90625,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 678,
+        "clientWidth": 678
+      },
+      "page": {
+        "x": 101.5,
+        "width": 650
+      },
+      "document": {
+        "scrollWidth": 785,
+        "clientWidth": 785
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 800,
+        "visualViewport": 800,
+        "innerHeight": 360
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "76px 724px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 292.421875,
+        "y": 22,
+        "width": 291.15625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 268.421875,
+        "y": 0,
+        "width": 339.15625,
+        "height": 360,
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "scrollWidth": 339,
+        "clientWidth": 339
+      },
+      "page": {
+        "x": 292.421875,
+        "width": 291.15625
+      },
+      "document": {
+        "scrollWidth": 800,
+        "clientWidth": 800
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 785,
+        "visualViewport": 785,
+        "innerHeight": 360
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "76px 709px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 137.96875,
+        "y": 22,
+        "width": 585.0625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 113.96875,
+        "y": 0,
+        "width": 633.0625,
+        "height": 414.203125,
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "scrollWidth": 633,
+        "clientWidth": 633
+      },
+      "page": {
+        "x": 137.96875,
+        "width": 585.0625
+      },
+      "document": {
+        "scrollWidth": 785,
+        "clientWidth": 785
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 800,
+        "visualViewport": 800,
+        "innerHeight": 360
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "76px 724px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 292.421875,
+        "y": 22,
+        "width": 291.15625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 268.421875,
+        "y": 0,
+        "width": 339.15625,
+        "height": 360,
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "scrollWidth": 339,
+        "clientWidth": 339
+      },
+      "page": {
+        "x": 292.421875,
+        "width": 291.15625
+      },
+      "document": {
+        "scrollWidth": 800,
+        "clientWidth": 800
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 785,
+        "visualViewport": 785,
+        "innerHeight": 360
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "68px 717px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 101.5,
+        "y": 12,
+        "width": 650,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 87.5,
+        "y": 0,
+        "width": 678,
+        "height": 574.90625,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 678,
+        "clientWidth": 678
+      },
+      "page": {
+        "x": 101.5,
+        "width": 650
+      },
+      "document": {
+        "scrollWidth": 785,
+        "clientWidth": 785
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 800,
+        "visualViewport": 800,
+        "innerHeight": 360
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "76px 724px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 292.421875,
+        "y": 22,
+        "width": 291.15625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 268.421875,
+        "y": 0,
+        "width": 339.15625,
+        "height": 360,
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "scrollWidth": 339,
+        "clientWidth": 339
+      },
+      "page": {
+        "x": 292.421875,
+        "width": 291.15625
+      },
+      "document": {
+        "scrollWidth": 800,
+        "clientWidth": 800
+      },
+      "width": 800,
+      "height": 360
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 829,
+        "visualViewport": 829,
+        "innerHeight": 390
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "76px 753px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 159.96875,
+        "y": 22,
+        "width": 585.0625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 134.65625,
+        "y": 0,
+        "width": 635.6875,
+        "height": 414.203125,
+        "paddingLeft": "25.32px",
+        "paddingRight": "25.32px",
+        "scrollWidth": 636,
+        "clientWidth": 636
+      },
+      "page": {
+        "x": 159.96875,
+        "width": 585.0625
+      },
+      "document": {
+        "scrollWidth": 829,
+        "clientWidth": 829
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 844,
+        "visualViewport": 844,
+        "innerHeight": 390
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "76px 768px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 313.5,
+        "y": 22,
+        "width": 293,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 288.1875,
+        "y": 0,
+        "width": 343.625,
+        "height": 390,
+        "paddingLeft": "25.32px",
+        "paddingRight": "25.32px",
+        "scrollWidth": 344,
+        "clientWidth": 344
+      },
+      "page": {
+        "x": 313.5,
+        "width": 293
+      },
+      "document": {
+        "scrollWidth": 844,
+        "clientWidth": 844
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 829,
+        "visualViewport": 829,
+        "innerHeight": 390
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "68px 761px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 123.5,
+        "y": 12,
+        "width": 650,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 109.5,
+        "y": 0,
+        "width": 678,
+        "height": 574.90625,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 678,
+        "clientWidth": 678
+      },
+      "page": {
+        "x": 123.5,
+        "width": 650
+      },
+      "document": {
+        "scrollWidth": 829,
+        "clientWidth": 829
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 844,
+        "visualViewport": 844,
+        "innerHeight": 390
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "76px 768px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 313.5,
+        "y": 22,
+        "width": 293,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 288.1875,
+        "y": 0,
+        "width": 343.625,
+        "height": 390,
+        "paddingLeft": "25.32px",
+        "paddingRight": "25.32px",
+        "scrollWidth": 344,
+        "clientWidth": 344
+      },
+      "page": {
+        "x": 313.5,
+        "width": 293
+      },
+      "document": {
+        "scrollWidth": 844,
+        "clientWidth": 844
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 829,
+        "visualViewport": 829,
+        "innerHeight": 390
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "76px 753px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 159.96875,
+        "y": 22,
+        "width": 585.0625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 134.65625,
+        "y": 0,
+        "width": 635.6875,
+        "height": 414.203125,
+        "paddingLeft": "25.32px",
+        "paddingRight": "25.32px",
+        "scrollWidth": 636,
+        "clientWidth": 636
+      },
+      "page": {
+        "x": 159.96875,
+        "width": 585.0625
+      },
+      "document": {
+        "scrollWidth": 829,
+        "clientWidth": 829
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 844,
+        "visualViewport": 844,
+        "innerHeight": 390
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "76px 768px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 313.5,
+        "y": 22,
+        "width": 293,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 288.1875,
+        "y": 0,
+        "width": 343.625,
+        "height": 390,
+        "paddingLeft": "25.32px",
+        "paddingRight": "25.32px",
+        "scrollWidth": 344,
+        "clientWidth": 344
+      },
+      "page": {
+        "x": 313.5,
+        "width": 293
+      },
+      "document": {
+        "scrollWidth": 844,
+        "clientWidth": 844
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 829,
+        "visualViewport": 829,
+        "innerHeight": 390
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "68px 761px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 123.5,
+        "y": 12,
+        "width": 650,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 109.5,
+        "y": 0,
+        "width": 678,
+        "height": 574.90625,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 678,
+        "clientWidth": 678
+      },
+      "page": {
+        "x": 123.5,
+        "width": 650
+      },
+      "document": {
+        "scrollWidth": 829,
+        "clientWidth": 829
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 844,
+        "visualViewport": 844,
+        "innerHeight": 390
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "76px 768px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 313.5,
+        "y": 22,
+        "width": 293,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 288.1875,
+        "y": 0,
+        "width": 343.625,
+        "height": 390,
+        "paddingLeft": "25.32px",
+        "paddingRight": "25.32px",
+        "scrollWidth": 344,
+        "clientWidth": 344
+      },
+      "page": {
+        "x": 313.5,
+        "width": 293
+      },
+      "document": {
+        "scrollWidth": 844,
+        "clientWidth": 844
+      },
+      "width": 844,
+      "height": 390
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 917,
+        "visualViewport": 917,
+        "innerHeight": 430
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "76px 841px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 103.953125,
+        "y": 22,
+        "width": 785.09375,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 76,
+        "y": 0,
+        "width": 841,
+        "height": 430,
+        "paddingLeft": "27.96px",
+        "paddingRight": "27.96px",
+        "scrollWidth": 841,
+        "clientWidth": 841
+      },
+      "page": {
+        "x": 103.953125,
+        "width": 785.09375
+      },
+      "document": {
+        "scrollWidth": 917,
+        "clientWidth": 917
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 932,
+        "visualViewport": 932,
+        "innerHeight": 430
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "76px 856px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 103.953125,
+        "y": 22,
+        "width": 800.09375,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 76,
+        "y": 0,
+        "width": 856,
+        "height": 430,
+        "paddingLeft": "27.96px",
+        "paddingRight": "27.96px",
+        "scrollWidth": 856,
+        "clientWidth": 856
+      },
+      "page": {
+        "x": 103.953125,
+        "width": 800.09375
+      },
+      "document": {
+        "scrollWidth": 932,
+        "clientWidth": 932
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 917,
+        "visualViewport": 917,
+        "innerHeight": 430
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "68px 849px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 82,
+        "y": 12,
+        "width": 821,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 68,
+        "y": 0,
+        "width": 849,
+        "height": 582.1875,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 849,
+        "clientWidth": 849
+      },
+      "page": {
+        "x": 82,
+        "width": 821
+      },
+      "document": {
+        "scrollWidth": 917,
+        "clientWidth": 917
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 932,
+        "visualViewport": 932,
+        "innerHeight": 430
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "76px 856px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 103.953125,
+        "y": 22,
+        "width": 800.09375,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 76,
+        "y": 0,
+        "width": 856,
+        "height": 430,
+        "paddingLeft": "27.96px",
+        "paddingRight": "27.96px",
+        "scrollWidth": 856,
+        "clientWidth": 856
+      },
+      "page": {
+        "x": 103.953125,
+        "width": 800.09375
+      },
+      "document": {
+        "scrollWidth": 932,
+        "clientWidth": 932
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 917,
+        "visualViewport": 917,
+        "innerHeight": 430
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "76px 841px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 103.953125,
+        "y": 22,
+        "width": 785.09375,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 76,
+        "y": 0,
+        "width": 841,
+        "height": 430,
+        "paddingLeft": "27.96px",
+        "paddingRight": "27.96px",
+        "scrollWidth": 841,
+        "clientWidth": 841
+      },
+      "page": {
+        "x": 103.953125,
+        "width": 785.09375
+      },
+      "document": {
+        "scrollWidth": 917,
+        "clientWidth": 917
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 932,
+        "visualViewport": 932,
+        "innerHeight": 430
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "76px 856px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 103.953125,
+        "y": 22,
+        "width": 800.09375,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 76,
+        "y": 0,
+        "width": 856,
+        "height": 430,
+        "paddingLeft": "27.96px",
+        "paddingRight": "27.96px",
+        "scrollWidth": 856,
+        "clientWidth": 856
+      },
+      "page": {
+        "x": 103.953125,
+        "width": 800.09375
+      },
+      "document": {
+        "scrollWidth": 932,
+        "clientWidth": 932
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 917,
+        "visualViewport": 917,
+        "innerHeight": 430
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "68px 849px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 82,
+        "y": 12,
+        "width": 821,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 68,
+        "y": 0,
+        "width": 849,
+        "height": 582.1875,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 849,
+        "clientWidth": 849
+      },
+      "page": {
+        "x": 82,
+        "width": 821
+      },
+      "document": {
+        "scrollWidth": 917,
+        "clientWidth": 917
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 932,
+        "visualViewport": 932,
+        "innerHeight": 430
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "76px 856px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 103.953125,
+        "y": 22,
+        "width": 800.09375,
+        "height": 90.703125
+      },
+      "main": {
+        "x": 76,
+        "y": 0,
+        "width": 856,
+        "height": 430,
+        "paddingLeft": "27.96px",
+        "paddingRight": "27.96px",
+        "scrollWidth": 856,
+        "clientWidth": 856
+      },
+      "page": {
+        "x": 103.953125,
+        "width": 800.09375
+      },
+      "document": {
+        "scrollWidth": 932,
+        "clientWidth": 932
+      },
+      "width": 932,
+      "height": 430
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 753,
+        "visualViewport": 753,
+        "innerHeight": 1024
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "76px 677px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 121.96875,
+        "y": 22,
+        "width": 585.0625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 98.9375,
+        "y": 0,
+        "width": 631.125,
+        "height": 1024,
+        "paddingLeft": "23.04px",
+        "paddingRight": "23.04px",
+        "scrollWidth": 631,
+        "clientWidth": 631
+      },
+      "page": {
+        "x": 121.96875,
+        "width": 585.0625
+      },
+      "document": {
+        "scrollWidth": 753,
+        "clientWidth": 753
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualViewport": 768,
+        "innerHeight": 1024
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "76px 692px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 277.09375,
+        "y": 22,
+        "width": 289.8125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 254.0625,
+        "y": 0,
+        "width": 335.875,
+        "height": 1024,
+        "paddingLeft": "23.04px",
+        "paddingRight": "23.04px",
+        "scrollWidth": 336,
+        "clientWidth": 336
+      },
+      "page": {
+        "x": 277.09375,
+        "width": 289.8125
+      },
+      "document": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualViewport": 768,
+        "innerHeight": 1024
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "68px 700px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 273.09375,
+        "y": 12,
+        "width": 289.8125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 259.09375,
+        "y": 0,
+        "width": 317.8125,
+        "height": 1024,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "page": {
+        "x": 273.09375,
+        "width": 289.8125
+      },
+      "document": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualViewport": 768,
+        "innerHeight": 1024
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "76px 692px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 277.09375,
+        "y": 22,
+        "width": 289.8125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 254.0625,
+        "y": 0,
+        "width": 335.875,
+        "height": 1024,
+        "paddingLeft": "23.04px",
+        "paddingRight": "23.04px",
+        "scrollWidth": 336,
+        "clientWidth": 336
+      },
+      "page": {
+        "x": 277.09375,
+        "width": 289.8125
+      },
+      "document": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 753,
+        "visualViewport": 753,
+        "innerHeight": 1024
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "76px 677px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 121.96875,
+        "y": 22,
+        "width": 585.0625,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 98.9375,
+        "y": 0,
+        "width": 631.125,
+        "height": 1024,
+        "paddingLeft": "23.04px",
+        "paddingRight": "23.04px",
+        "scrollWidth": 631,
+        "clientWidth": 631
+      },
+      "page": {
+        "x": 121.96875,
+        "width": 585.0625
+      },
+      "document": {
+        "scrollWidth": 753,
+        "clientWidth": 753
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualViewport": 768,
+        "innerHeight": 1024
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "76px 692px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 277.09375,
+        "y": 22,
+        "width": 289.8125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 254.0625,
+        "y": 0,
+        "width": 335.875,
+        "height": 1024,
+        "paddingLeft": "23.04px",
+        "paddingRight": "23.04px",
+        "scrollWidth": 336,
+        "clientWidth": 336
+      },
+      "page": {
+        "x": 277.09375,
+        "width": 289.8125
+      },
+      "document": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualViewport": 768,
+        "innerHeight": 1024
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "68px 700px",
+      "sidebarWidth": 68,
+      "header": {
+        "x": 273.09375,
+        "y": 12,
+        "width": 289.8125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 259.09375,
+        "y": 0,
+        "width": 317.8125,
+        "height": 1024,
+        "paddingLeft": "14px",
+        "paddingRight": "14px",
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "page": {
+        "x": 273.09375,
+        "width": 289.8125
+      },
+      "document": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualViewport": 768,
+        "innerHeight": 1024
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "76px 692px",
+      "sidebarWidth": 76,
+      "header": {
+        "x": 277.09375,
+        "y": 22,
+        "width": 289.8125,
+        "height": 83.421875
+      },
+      "main": {
+        "x": 254.0625,
+        "y": 0,
+        "width": 335.875,
+        "height": 1024,
+        "paddingLeft": "23.04px",
+        "paddingRight": "23.04px",
+        "scrollWidth": 336,
+        "clientWidth": 336
+      },
+      "page": {
+        "x": 277.09375,
+        "width": 289.8125
+      },
+      "document": {
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1009,
+        "visualViewport": 1009,
+        "innerHeight": 768
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px 753px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 691.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 753,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 753,
+        "clientWidth": 753
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 691.5625
+      },
+      "document": {
+        "scrollWidth": 1009,
+        "clientWidth": 1009
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualViewport": 1024,
+        "innerHeight": 768
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px 768px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 706.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 768,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 706.5625
+      },
+      "document": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualViewport": 1024,
+        "innerHeight": 768
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px 768px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 706.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 768,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 706.5625
+      },
+      "document": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualViewport": 1024,
+        "innerHeight": 768
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px 768px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 706.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 768,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 706.5625
+      },
+      "document": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1009,
+        "visualViewport": 1009,
+        "innerHeight": 768
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px 753px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 691.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 753,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 753,
+        "clientWidth": 753
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 691.5625
+      },
+      "document": {
+        "scrollWidth": 1009,
+        "clientWidth": 1009
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualViewport": 1024,
+        "innerHeight": 768
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px 768px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 706.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 768,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 706.5625
+      },
+      "document": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualViewport": 1024,
+        "innerHeight": 768
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px 768px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 706.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 768,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 706.5625
+      },
+      "document": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualViewport": 1024,
+        "innerHeight": 768
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px 768px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 286.71875,
+        "y": 28,
+        "width": 706.5625,
+        "height": 91.828125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 768,
+        "height": 768,
+        "paddingLeft": "30.72px",
+        "paddingRight": "30.72px",
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "page": {
+        "x": 286.71875,
+        "width": 706.5625
+      },
+      "document": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1265,
+        "visualViewport": 1265,
+        "innerHeight": 800
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px 1009px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 932.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1009,
+        "height": 800,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1009,
+        "clientWidth": 1009
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 932.21875
+      },
+      "document": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1280,
+        "visualViewport": 1280,
+        "innerHeight": 800
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px 1024px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 947.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1024,
+        "height": 800,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 947.21875
+      },
+      "document": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1265,
+        "visualViewport": 1265,
+        "innerHeight": 800
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px 1009px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 932.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1009,
+        "height": 816.609375,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1009,
+        "clientWidth": 1009
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 932.21875
+      },
+      "document": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1280,
+        "visualViewport": 1280,
+        "innerHeight": 800
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px 1024px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 947.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1024,
+        "height": 800,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 947.21875
+      },
+      "document": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1265,
+        "visualViewport": 1265,
+        "innerHeight": 800
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px 1009px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 932.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1009,
+        "height": 800,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1009,
+        "clientWidth": 1009
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 932.21875
+      },
+      "document": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1280,
+        "visualViewport": 1280,
+        "innerHeight": 800
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px 1024px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 947.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1024,
+        "height": 800,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 947.21875
+      },
+      "document": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1265,
+        "visualViewport": 1265,
+        "innerHeight": 800
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px 1009px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 932.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1009,
+        "height": 816.609375,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1009,
+        "clientWidth": 1009
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 932.21875
+      },
+      "document": {
+        "scrollWidth": 1265,
+        "clientWidth": 1265
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1280,
+        "visualViewport": 1280,
+        "innerHeight": 800
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px 1024px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 294.390625,
+        "y": 28,
+        "width": 947.21875,
+        "height": 101.125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1024,
+        "height": 800,
+        "paddingLeft": "38.4px",
+        "paddingRight": "38.4px",
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "page": {
+        "x": 294.390625,
+        "width": 947.21875
+      },
+      "document": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1425,
+        "visualViewport": 1425,
+        "innerHeight": 900
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px 1169px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1082.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1169,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1169,
+        "clientWidth": 1169
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1082.625
+      },
+      "document": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualViewport": 1440,
+        "innerHeight": 900
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px 1184px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1097.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1184,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1184,
+        "clientWidth": 1184
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1097.625
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualViewport": 1440,
+        "innerHeight": 900
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px 1184px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1097.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1184,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1184,
+        "clientWidth": 1184
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1097.625
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualViewport": 1440,
+        "innerHeight": 900
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px 1184px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1097.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1184,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1184,
+        "clientWidth": 1184
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1097.625
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1425,
+        "visualViewport": 1425,
+        "innerHeight": 900
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px 1169px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1082.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1169,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1169,
+        "clientWidth": 1169
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1082.625
+      },
+      "document": {
+        "scrollWidth": 1425,
+        "clientWidth": 1425
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualViewport": 1440,
+        "innerHeight": 900
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px 1184px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1097.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1184,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1184,
+        "clientWidth": 1184
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1097.625
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualViewport": 1440,
+        "innerHeight": 900
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px 1184px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1097.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1184,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1184,
+        "clientWidth": 1184
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1097.625
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualViewport": 1440,
+        "innerHeight": 900
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px 1184px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 299.1875,
+        "y": 28,
+        "width": 1097.625,
+        "height": 105.078125
+      },
+      "main": {
+        "x": 256,
+        "y": 0,
+        "width": 1184,
+        "height": 900,
+        "paddingLeft": "43.2px",
+        "paddingRight": "43.2px",
+        "scrollWidth": 1184,
+        "clientWidth": 1184
+      },
+      "page": {
+        "x": 299.1875,
+        "width": 1097.625
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1905,
+        "visualViewport": 1905,
+        "innerHeight": 1080
+      },
+      "module": "dashboard",
+      "theme": "light",
+      "shellColumns": "256px 1649px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 328.5,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 280.5,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 328.5,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualViewport": 1920,
+        "innerHeight": 1080
+      },
+      "module": "orders",
+      "theme": "light",
+      "shellColumns": "256px 1664px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 288,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 336,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualViewport": 1920,
+        "innerHeight": 1080
+      },
+      "module": "routes",
+      "theme": "light",
+      "shellColumns": "256px 1664px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 288,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 336,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualViewport": 1920,
+        "innerHeight": 1080
+      },
+      "module": "bikes",
+      "theme": "light",
+      "shellColumns": "256px 1664px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 288,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 336,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1905,
+        "visualViewport": 1905,
+        "innerHeight": 1080
+      },
+      "module": "dashboard",
+      "theme": "dark",
+      "shellColumns": "256px 1649px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 328.5,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 280.5,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 328.5,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1905,
+        "clientWidth": 1905
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualViewport": 1920,
+        "innerHeight": 1080
+      },
+      "module": "orders",
+      "theme": "dark",
+      "shellColumns": "256px 1664px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 288,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 336,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualViewport": 1920,
+        "innerHeight": 1080
+      },
+      "module": "routes",
+      "theme": "dark",
+      "shellColumns": "256px 1664px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 288,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 336,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualViewport": 1920,
+        "innerHeight": 1080
+      },
+      "module": "bikes",
+      "theme": "dark",
+      "shellColumns": "256px 1664px",
+      "sidebarWidth": 256,
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.671875
+      },
+      "main": {
+        "x": 288,
+        "y": 0,
+        "width": 1600,
+        "height": 1080,
+        "paddingLeft": "48px",
+        "paddingRight": "48px",
+        "scrollWidth": 1600,
+        "clientWidth": 1600
+      },
+      "page": {
+        "x": 336,
+        "width": 1504
+      },
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}
