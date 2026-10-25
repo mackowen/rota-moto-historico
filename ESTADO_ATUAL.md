@@ -1,5 +1,11 @@
 # Estado vigente — Campanha 0304 (checkpoint 2026-10-25)
 
+## QR de presença — configuração E2E (2026-10-25)
+
+Foi identificada ausência das variáveis de referência/ID no unit `rotamoto-api-e2e`; o keystore E2E já estava configurado. Uma chave Ed25519 exclusiva do E2E foi cifrada no keystore externo ao Git, referenciada somente no unit E2E e validada com leitura/signature verify. Serviço E2E readiness HTTP 200 após reparo do unit a partir de backup; API oficial saudável e não modificada. `test-logistics-domain.js` e `test-logistics-http.js` passaram.
+
+Emissão autenticada, leitura/check-in Motoboy, persistência e reconciliação estão BLOCKED por falta de credenciais MFA sintéticas recuperáveis e por ausência de cleanup seguro para fixture durável. Nenhuma operação QR ou escrita em PostgreSQL foi feita nesta rodada. Evidência: `EVIDENCIAS/0304/qr-signing-e2e-setup-2026-10-25/`. G14 FAIL; campanha PARTIAL/aberta; 0305 não iniciada.
+
 ## Campanha 0304 — QR, paisagem e vazio Rotas (2026-10-25)
 
 No Restaurante, causa raiz do erro QR foi o handler que reclassificava `PRESENCE_QR_UNAVAILABLE` 503 como falha interna da fila. Corrigida a resposta específica, diagnóstico sanitizado e mensagens UI por categoria; teste unitário com chave sintética aprovado. A geração autenticada/check-in segue BLOCKED porque o runtime E2E não tem chave QR configurada. Nenhuma escrita oficial.

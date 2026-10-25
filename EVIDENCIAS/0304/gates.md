@@ -223,3 +223,19 @@ Evidências, limites, matriz comparativa e hashes: [`Motoboys V2`](motoboys-v2-2
 | G14 — aprovação visual do proprietário | **FAIL** | Somente aprovação expressa do proprietário altera o estado. |
 
 Evidências completas e hashes: `motoboys-v2-refinamento-2026-10-25/README.md`. G8–G13 não avançam; G15 permanece PARTIAL na cobertura global. Campanha PARTIAL/aberta; sem PASS global e sem 0305.
+
+### Adendo QR de presença — 2026-10-25
+
+| Requisito | Estado | Evidência/limite |
+|---|---|---|
+| Diagnóstico da configuração de assinatura E2E | PASS | Unit E2E sem `ROTAMOTO_DELIVERY_QR_SIGNING_KEY_REF` e `ROTAMOTO_DELIVERY_QR_KEY_ID`; chave Ed25519 cifrada e lida com contexto correto. |
+| Serviço E2E reiniciado e pronto | PASS | Unit E2E validado por `sh -n`; readiness HTTP 200 em 8787. Serviço oficial 8788 continuou saudável e não foi modificado. |
+| Emissão HTTP autenticada/renderização QR | BLOCKED | Sem credenciais MFA sintéticas recuperáveis; nenhum QR emitido. |
+| Leitura Motoboy e confirmação de presença | BLOCKED | Jornada autenticada não executada. |
+| Persistência/readback, tenant e elegibilidade pós check-in | BLOCKED | Nenhuma operação durável iniciada. |
+| Concorrência/replay/QR adversarial nesta execução | BLOCKED | A suíte disponível deixa registros persistentes sem cleanup autorizado; não executada. |
+| Regressões direcionadas | PASS no escopo | `test-logistics-domain.js`, `test-logistics-http.js`, `node --check` dos módulos QR e `git diff --check`; não são E2E de QR. |
+| Banco oficial e publicação de aplicativos | PASS | Nenhuma escrita oficial; sem commit/push de aplicativo. |
+| G14 — aprovação visual | **FAIL** | Estado anterior permanece. |
+
+Relatório: [`qr-signing-e2e-setup-2026-10-25`](qr-signing-e2e-setup-2026-10-25/README.md). A configuração da chave não transforma a jornada operacional em PASS.

@@ -2354,3 +2354,10 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - [ ] Proprietário revisar as novas capturas frente às referências aprovadas e fornecer decisão expressa. G14 permanece FAIL.
 - [ ] Executar E2E autenticado com MFA/tenant sintético autorizado para cadastro, busca/filtros reais, edição, dispatch por `openAssignment()`, persistência/sync e RBAC. Nenhum desses fluxos operacionais foi aprovado por capturas sintéticas.
 - As pendências existentes de sync cross-app, offline/reconexão, devolução, concorrência e segurança permanecem abertas; este complemento não encerra itens anteriores nem os da Campanha 0257.
+
+### Complemento — QR de presença E2E (2026-10-25)
+
+- [ ] Emitir QR por HTTP autenticado no serviço E2E recém-configurado e validar assinatura/nonce/tenant/expiração pelo validador real.
+- [ ] Executar leitura autorizada na UI Motoboy, confirmar check-in e verificar presença persistida por leitura independente, atualização Restaurante e regras separadas de lease/elegibilidade.
+- [ ] Executar negativos de expiração, adulteração, tenant, replay, sessão, permissão, concorrência e reconexão em fixture descartável com limpeza comprovada. A suíte atual de schema/linhas retidas não foi executada nesta rodada por ausência de teardown autorizado.
+- [ ] Disponibilizar fluxo de autenticação/MFA sintético recuperável sem registrar credenciais nos manifests, e procedimento seguro para ambiente durável descartável. Nenhuma credencial foi inferida ou recuperada nesta execução.
