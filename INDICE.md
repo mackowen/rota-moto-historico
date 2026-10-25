@@ -1,5 +1,7 @@
 # Campanha 0304 — Rotas V2
 
+- Atualização mais recente — Pedidos V2 lado a lado, central operacional e Filtros (2026-10-25): [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [capturas, medições e CDP](EVIDENCIAS/0304/pedidos-layout-controles-2026-10-25/README.md), [gates](EVIDENCIAS/0304/gates.md). Restaurante commit local `ce8a75a`, sem push; G14 **FAIL**, campanha PARTIAL/aberta.
+
 - Consolidação/publicação do histórico: [REGISTROS/0304-CONSOLIDACAO-HISTORICO.md](REGISTROS/0304-CONSOLIDACAO-HISTORICO.md)
 - Registro: [REGISTROS/0304.md](REGISTROS/0304.md)
 - Adendo desktop e shell responsivo: [REGISTROS/0304-ADENDO-DESKTOP.md](REGISTROS/0304-ADENDO-DESKTOP.md)

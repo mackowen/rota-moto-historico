@@ -2321,3 +2321,9 @@ Nenhuma linha antiga foi removida ou encerrada. As pendências da 0257 e campanh
 - **0304-ORDERS-CROSS-APP-SYNC — BLOCKED:** verificar persistência confirmada e convergência Restaurante↔Motoboy para pedidos criados/atribuídos pela central; não inferir de teste visual.
 
 Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-2026-10-24/`. Estas pendências complementam as anteriores; nenhuma pendência oriunda da 0257 ou campanhas anteriores foi encerrada.
+
+### Campanha 0304 — Pedidos V2 lado a lado e Filtros (2026-10-25)
+
+- **0304-ORDERS-LAYOUT-AUTH — BLOCKED:** validar com sessão MFA e tenant E2E isolado seleção de pedido, fila autenticada, atualização, ações de atribuição e sincronização. CDP desta intervenção bloqueou scripts e usou fixture de layout; não representa navegação/autorização operacional.
+- **0304-ORDERS-LAYOUT-OWNER — BLOCKED / PENDING_USER_APPROVAL:** revisar as capturas após a correção junto às referências e no Chrome Android/desktop. G14 continua FAIL até aprovação expressa do proprietário.
+- As antigas pendências de cross-app sync, retirada/offline, RETURN/devolução, concorrência e segurança/RBAC permanecem abertas. Nenhuma pendência anterior foi encerrada por esta intervenção.

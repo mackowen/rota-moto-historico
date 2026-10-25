@@ -1,0 +1,280 @@
+{
+  "source": "CDP fixture using production shell/layout CSS and synthetic visible content; not authenticated E2E",
+  "results": [
+    {
+      "viewport": 768,
+      "page": {
+        "x": 271.03,
+        "y": 169.91,
+        "width": 458.94,
+        "height": 706.58
+      },
+      "container": {
+        "name": "orders-v2-page",
+        "type": "inline-size"
+      },
+      "workspace": {
+        "x": 271.03,
+        "y": 293.91,
+        "width": 458.94,
+        "height": 582.58
+      },
+      "grid": "458.938px",
+      "list": {
+        "x": 271.03,
+        "y": 293.91,
+        "width": 458.94,
+        "height": 280.61
+      },
+      "side": {
+        "x": 271.03,
+        "y": 590.52,
+        "width": 458.94,
+        "height": 285.97
+      },
+      "jump": "none",
+      "filters": {
+        "x": 685.97,
+        "y": 232.91,
+        "width": 44,
+        "height": 44
+      },
+      "header": {
+        "x": 271.03,
+        "y": 22,
+        "width": 458.94,
+        "height": 129.91
+      },
+      "headerInsets": {
+        "left": 16.13,
+        "right": 16.13
+      },
+      "sidebar": {
+        "x": 0,
+        "y": 0,
+        "width": 248,
+        "height": 900
+      }
+    },
+    {
+      "viewport": 1024,
+      "page": {
+        "x": 286.72,
+        "y": 133.83,
+        "width": 706.56,
+        "height": 661.48
+      },
+      "container": {
+        "name": "orders-v2-page",
+        "type": "inline-size"
+      },
+      "workspace": {
+        "x": 286.72,
+        "y": 309.83,
+        "width": 706.56,
+        "height": 485.48
+      },
+      "grid": "706.562px",
+      "list": {
+        "x": 286.72,
+        "y": 309.83,
+        "width": 706.56,
+        "height": 183.52
+      },
+      "side": {
+        "x": 286.72,
+        "y": 509.34,
+        "width": 706.56,
+        "height": 285.97
+      },
+      "jump": "flex",
+      "filters": {
+        "x": 949.28,
+        "y": 248.83,
+        "width": 44,
+        "height": 44
+      },
+      "header": {
+        "x": 286.72,
+        "y": 28,
+        "width": 706.56,
+        "height": 91.83
+      },
+      "headerInsets": {
+        "left": 24,
+        "right": 24
+      },
+      "sidebar": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 900
+      }
+    },
+    {
+      "viewport": 1280,
+      "page": {
+        "x": 294.39,
+        "y": 143.13,
+        "width": 947.22,
+        "height": 409.97
+      },
+      "container": {
+        "name": "orders-v2-page",
+        "type": "inline-size"
+      },
+      "workspace": {
+        "x": 294.39,
+        "y": 267.13,
+        "width": 947.22,
+        "height": 285.97
+      },
+      "grid": "609.172px 322.047px",
+      "list": {
+        "x": 294.39,
+        "y": 267.13,
+        "width": 609.17,
+        "height": 183.52
+      },
+      "side": {
+        "x": 919.56,
+        "y": 267.13,
+        "width": 322.05,
+        "height": 285.97
+      },
+      "jump": "none",
+      "filters": {
+        "x": 1197.61,
+        "y": 206.13,
+        "width": 44,
+        "height": 44
+      },
+      "header": {
+        "x": 294.39,
+        "y": 28,
+        "width": 947.22,
+        "height": 101.13
+      },
+      "headerInsets": {
+        "left": 28.16,
+        "right": 28.16
+      },
+      "sidebar": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 900
+      }
+    },
+    {
+      "viewport": 1440,
+      "page": {
+        "x": 299.19,
+        "y": 147.08,
+        "width": 1097.63,
+        "height": 409.97
+      },
+      "container": {
+        "name": "orders-v2-page",
+        "type": "inline-size"
+      },
+      "workspace": {
+        "x": 299.19,
+        "y": 271.08,
+        "width": 1097.63,
+        "height": 285.97
+      },
+      "grid": "708.438px 373.188px",
+      "list": {
+        "x": 299.19,
+        "y": 271.08,
+        "width": 708.44,
+        "height": 183.52
+      },
+      "side": {
+        "x": 1023.63,
+        "y": 271.08,
+        "width": 373.19,
+        "height": 285.97
+      },
+      "jump": "none",
+      "filters": {
+        "x": 1352.81,
+        "y": 210.08,
+        "width": 44,
+        "height": 44
+      },
+      "header": {
+        "x": 299.19,
+        "y": 28,
+        "width": 1097.63,
+        "height": 105.08
+      },
+      "headerInsets": {
+        "left": 31.67,
+        "right": 31.67
+      },
+      "sidebar": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 900
+      }
+    },
+    {
+      "viewport": 1920,
+      "page": {
+        "x": 336,
+        "y": 149.67,
+        "width": 1504,
+        "height": 409.97
+      },
+      "container": {
+        "name": "orders-v2-page",
+        "type": "inline-size"
+      },
+      "workspace": {
+        "x": 336,
+        "y": 273.67,
+        "width": 1504,
+        "height": 285.97
+      },
+      "grid": "1108px 380px",
+      "list": {
+        "x": 336,
+        "y": 273.67,
+        "width": 1108,
+        "height": 175.52
+      },
+      "side": {
+        "x": 1460,
+        "y": 273.67,
+        "width": 380,
+        "height": 285.97
+      },
+      "jump": "none",
+      "filters": {
+        "x": 1796,
+        "y": 212.67,
+        "width": 44,
+        "height": 44
+      },
+      "header": {
+        "x": 336,
+        "y": 28,
+        "width": 1504,
+        "height": 107.67
+      },
+      "headerInsets": {
+        "left": 32,
+        "right": 32
+      },
+      "sidebar": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 900
+      }
+    }
+  ]
+}

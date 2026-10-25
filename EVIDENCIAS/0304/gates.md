@@ -144,3 +144,17 @@ Implementação Restaurante: `288d62fb38eb78440daf6a8f9e1ce9ce453649a4` (header 
 | E2E autenticado | BLOCKED | Sem tenant/MFA sintéticos com cleanup verificável disponível. |
 | G14 fidelidade visual | **FAIL** | Reprovação anterior permanece; capturas desta rodada são fixtures sintéticas. |
 | Campanha 0304 | PARTIAL | Aberta; pendências anteriores preservadas; sem PASS global ou início da 0305. |
+
+## Atualização — Pedidos V2 responsivo, ajuda e Filtros (2026-10-25)
+
+| Gate/critério desta intervenção | Estado | Evidência e limite |
+|---|---|---|
+| Largura útil/container e layout lado a lado | PASS técnico (fixture CDP) | A 1024 px, container útil 706,56 px: lista 372,61 + central 317,95, gap 16. Sidebar aberta/recolhida testada; regra é container query. |
+| Empilhamento em largura menor | PASS técnico (fixture CDP) | Containers de 320 a 768 px abaixo do limite 680 permanecem empilhados. |
+| Filtros e atalho contextual | PASS técnico (fixture CDP) | Filtros 100×44 px, rótulo cabe; disclosure abriu; atalho visível no layout empilhado e oculto em duas colunas. |
+| Conteúdo de ajuda operacional | PASS técnico / PARTIAL visual | Orientação encurtada e confirmação junto às ações; comparação humana pendente. |
+| Regressões automatizadas | PASS | `npm test` Restaurante completo passou, incluindo novo teste de contrato responsivo; sem validação operacional autenticada nesta rodada. |
+| E2E autenticado/despacho | BLOCKED / não executado | Sessão sintética com MFA e limpeza verificável não foi exercitada nesta intervenção. |
+| G14 aprovação visual | **FAIL** | Reprovação prévia do proprietário permanece; fixture CDP não é aprovação. |
+
+As medidas, capturas antes/depois e limites estão em `pedidos-layout-controles-2026-10-25/README.md`. G8–G13 permanecem nos estados e escopos históricos; esta correção visual não os amplia. G15 continua PARTIAL em escopo de regressão global. Sem PASS global.

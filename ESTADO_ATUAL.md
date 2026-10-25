@@ -1,4 +1,12 @@
-# Estado vigente — Campanha 0304 (checkpoint 2026-10-24)
+# Estado vigente — Campanha 0304 (checkpoint 2026-10-25)
+
+## Atualização — Pedidos V2 responsivo
+
+Restaurante: branch local `codex/campaign-0304-visual-consolidated`, HEAD `ce8a75ad9750dd91ba290109a44a4777d2a1f529`; `main` publicada permanece `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025` e o aplicativo não recebeu push. Motoboy: `main` `64d2e13d8e455f48b20b32b396e9c49ba7553e0b`, sem alteração. Browser QA: branch `codex/campaign-0294-admin-settings`, HEAD `57cb7745828e24d50502bec89061d2ceb59e0200`, alterações locais anteriores preservadas. Histórico antes desta atualização: `main` `f1c9e84381bf4508e636cb89c6b99b12eb5b633b`, sincronizada com origin.
+
+Regra de container do Orders corrigida e medida em CDP fixture: em 1024 px úteis após sidebar, lista 372,61 px e central 317,95 px; Filtros 100×44 px. `npm test` Restaurante completo passou. Sessão autenticada/distribuição operacional não foi testada nesta intervenção; nenhuma escrita PostgreSQL oficial. G8–G13 não avançam; G14 **FAIL** até aprovação visual do proprietário; G15 PARTIAL; campanha PARTIAL/aberta, 0305 não iniciada. Ver [registro](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md) e [evidências](EVIDENCIAS/0304/pedidos-layout-controles-2026-10-25/README.md).
+
+---
 
 Restaurante `main` publicado: `65a0239e20dbcc6d2283ec6fc62aa9cfbb0d1025`. Motoboy `main` publicado: `64d2e13d8e455f48b20b32b396e9c49ba7553e0b`. O histórico foi atualizado e publicado depois dos dois pushes por fast-forward. As branches da campanha e baselines estão preservadas. G14 continua FAIL; campanha aberta.
 
