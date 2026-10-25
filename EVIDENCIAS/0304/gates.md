@@ -158,3 +158,17 @@ Implementação Restaurante: `288d62fb38eb78440daf6a8f9e1ce9ce453649a4` (header 
 | G14 aprovação visual | **FAIL** | Reprovação prévia do proprietário permanece; fixture CDP não é aprovação. |
 
 As medidas, capturas antes/depois e limites estão em `pedidos-layout-controles-2026-10-25/README.md`. G8–G13 permanecem nos estados e escopos históricos; esta correção visual não os amplia. G15 continua PARTIAL em escopo de regressão global. Sem PASS global.
+
+## Atualização pontual — rolagem da Central operacional (2026-10-25)
+
+| Critério | Estado | Evidência/limite |
+|---|---|---|
+| Causa da barra interna identificada | PASS | `max-height:calc(100vh - 132px)` e `overflow:auto` aplicados ao próprio painel desktop. |
+| Rolagem vertical interna removida | PASS técnico | Central `overflowY=visible`, sem max-height; conteúdo curto/volumoso medido em 10 larguras/temas/sidebar. |
+| Documento acompanha listas longas | PASS técnico (fixture) | 1280×800 documento 979→2241 px; rolagem documentada, painel `scrollTop=0`. Não é sessão autenticada. |
+| Duas colunas/empilhamento e áreas fixas preservados | PASS técnico (fixture) | Regra de container query, aside sticky e cabeçalho permanecem; sem overflow horizontal na matriz. |
+| Regressão automatizada | PASS | `npm test` integral Restaurante; teste estático impede retorno a max-height/overflow interno. |
+| E2E autenticado / Chrome Android físico | BLOCKED / não executado nesta intervenção | O ambiente usado foi fixture CDP visual sem autenticação; sem declaração de validação operacional/física. |
+| G14 — aprovação visual do proprietário | **FAIL** | Aprovação expressa continua pendente. |
+
+As capturas antes/depois e métricas estão em [pedidos-rolagem-central-2026-10-25](pedidos-rolagem-central-2026-10-25/README.md). G8–G13 não avançam; G15 permanece PARTIAL no escopo global. Campanha 0304 PARTIAL/aberta; nenhuma pendência anterior encerrada.

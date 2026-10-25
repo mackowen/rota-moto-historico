@@ -375,3 +375,7 @@ Duas UIs autenticadas por MFA: criação Restaurante→Motoboy, aceite e projeç
 Rotas V2 ajustada no branch local Restaurante `codex/campaign-0304-visual-consolidated`, commit `2000b1828fbe3a44a0beabc627be0207c383aeba`, sem push do app. Sidebar/header compartilhados e um rótulo por item verificados; controles/tabs mobile compactados; mapa ganhou prioridade; desktop adapta grade com/sem rota selecionada. `npm test` e testes direcionados passaram. CDP fixture produziu capturas em dez viewports/temas e evidência para rota selecionada. E2E MFA pós-patch BLOCKED; G14 continua FAIL e aprovação permanece exclusiva do proprietário; G8–G13 mantêm pendências prévias. Consulte [matriz](EVIDENCIAS/0304/intervencao-consolidada-2026-10-24/matriz-fidelidade-visual.md) e [gates](EVIDENCIAS/0304/gates.md).
 
 | 0304 | 2026-10-24 | Restaurante / Pedidos V2 | Cartões compactos + central operacional | Fila real e despacho delegado; ação duplicada removida; CDP sintético; E2E autenticado bloqueado | [Registro](REGISTROS/0304.md) · [Resumo](RESUMOS/0304.md) · [Gates](EVIDENCIAS/0304/gates.md) · [Evidências](EVIDENCIAS/0304/pedidos-central-operacional-2026-10-24/README.md) |
+
+### Atualização mais recente da Campanha 0304 — Pedidos V2
+
+Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [evidências antes/depois e medições](EVIDENCIAS/0304/pedidos-rolagem-central-2026-10-25/README.md). G14 continua FAIL; campanha aberta.

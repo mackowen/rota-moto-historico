@@ -2327,3 +2327,9 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - **0304-ORDERS-LAYOUT-AUTH — BLOCKED:** validar com sessão MFA e tenant E2E isolado seleção de pedido, fila autenticada, atualização, ações de atribuição e sincronização. CDP desta intervenção bloqueou scripts e usou fixture de layout; não representa navegação/autorização operacional.
 - **0304-ORDERS-LAYOUT-OWNER — BLOCKED / PENDING_USER_APPROVAL:** revisar as capturas após a correção junto às referências e no Chrome Android/desktop. G14 continua FAIL até aprovação expressa do proprietário.
 - As antigas pendências de cross-app sync, retirada/offline, RETURN/devolução, concorrência e segurança/RBAC permanecem abertas. Nenhuma pendência anterior foi encerrada por esta intervenção.
+
+### Complemento 0304 — Central operacional sem rolagem interna (2026-10-25)
+
+- **Rolagem interna CSS: resolvida tecnicamente** no branch local Restaurante; ver [evidências/matriz](EVIDENCIAS/0304/pedidos-rolagem-central-2026-10-25/README.md).
+- **Validação em Chrome Android físico: pendente**; verificar no aparelho do proprietário após servir a versão atualizada. Esta pendência não substitui a aprovação visual geral: G14 permanece FAIL.
+- E2E autenticado, dispatch, sync e demais pendências operacionais/visuais anteriores continuam nos estados já registrados; nenhum item antigo foi encerrado.
