@@ -2072,3 +2072,7 @@ Implementação Restaurante: `288d62fb38eb78440daf6a8f9e1ce9ce453649a4` (header 
 A central operacional complementar e cartões compactos estão no branch local do Restaurante; “Gerenciamento completo” foi removido por duplicar a ação “Abrir pedido”. Evidência CDP é sintética, sem E2E autenticado. G14 FAIL, G8 somente local-first, G9–G13 sem avanço operacional; campanha PARTIAL/aberta. Ver `REGISTROS/0304.md`, `RESUMOS/0304.md`, `EVIDENCIAS/0304/gates.md` e `EVIDENCIAS/0304/pedidos-central-operacional-2026-10-24/README.md`. Nenhuma escrita no PostgreSQL oficial; não iniciar 0305.
 
 Commit local Restaurante da central operacional: `d23ba9be8b0702c7689313a5efd4c6e01cbb44f8` na branch `codex/campaign-0304-visual-consolidated`; não publicado.
+
+## Atualização 0304 — Motoboys V2 (2026-10-25)
+
+Branch local Restaurante `codex/campaign-0304-visual-consolidated`, commits `9199fc7`, `bef730d` e `2fe4b2b` (HEAD `ba4158363fce37df5e4bd45122fc889cd7233ea6`); sem push de app. Renderer responsivo, sem fotos, dados inventados ou painel vazio duplicado. `npm test` exit 0; CDP 92 combinações sem overflow. Evidência: `EVIDENCIAS/0304/motoboys-v2-2026-10-25/`. E2E autenticado de CRUD/despacho/sync BLOCKED; G14 FAIL; campanha PARTIAL/aberta. Motoboy e Browser QA intactos; nenhuma escrita oficial. Não iniciar 0305.

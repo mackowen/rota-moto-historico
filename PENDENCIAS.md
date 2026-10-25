@@ -2333,3 +2333,10 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - **Rolagem interna CSS: resolvida tecnicamente** no branch local Restaurante; ver [evidências/matriz](EVIDENCIAS/0304/pedidos-rolagem-central-2026-10-25/README.md).
 - **Validação em Chrome Android físico: pendente**; verificar no aparelho do proprietário após servir a versão atualizada. Esta pendência não substitui a aprovação visual geral: G14 permanece FAIL.
 - E2E autenticado, dispatch, sync e demais pendências operacionais/visuais anteriores continuam nos estados já registrados; nenhum item antigo foi encerrado.
+
+### Campanha 0304 — Motoboys V2 (adicionado 2026-10-25)
+
+- [ ] Obter aprovação visual expressa do proprietário para Motoboys V2 (G14 continua FAIL); revisar especialmente a navegação mobile lista/detalhe frente à referência com painéis lado a lado.
+- [ ] Executar E2E autenticado com tenant/usuário MFA sintéticos autorizados e PostgreSQL descartável: cadastro, edição, filtros interativos, distribuição confirmada, reload/readback, ACK e sync Restaurante↔Motoboy.
+- [ ] Exercitar despacho concorrente, offline/reconexão, RBAC/tenant e falhas de sessão com duas sessões reais. A presente rodada não altera nem encerra essas pendências.
+- [ ] Validar fisicamente no Chrome Android; capturas CDP atuais são fixtures sintéticas.

@@ -379,3 +379,10 @@ Rotas V2 ajustada no branch local Restaurante `codex/campaign-0304-visual-consol
 ### Atualização mais recente da Campanha 0304 — Pedidos V2
 
 Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [evidências antes/depois e medições](EVIDENCIAS/0304/pedidos-rolagem-central-2026-10-25/README.md). G14 continua FAIL; campanha aberta.
+
+### Atualização 2026-10-25 — Motoboys V2
+
+- [Registro 0304](REGISTROS/0304.md#intervencao-motoboys-v2--2026-10-25)
+- [Resumo 0304](RESUMOS/0304.md#motoboys-v2--2026-10-25)
+- [Gates 0304](EVIDENCIAS/0304/gates.md#motoboys-v2--checkpoint-2026-10-25)
+- [Referências, capturas, matriz e medições](EVIDENCIAS/0304/motoboys-v2-2026-10-25/README.md)

@@ -173,3 +173,21 @@ As medidas, capturas antes/depois e limites estão em `pedidos-layout-controles-
 | G14 — aprovação visual do proprietário | **FAIL** | Aprovação expressa continua pendente. |
 
 As capturas antes/depois e métricas estão em [pedidos-rolagem-central-2026-10-25](pedidos-rolagem-central-2026-10-25/README.md). G8–G13 não avançam; G15 permanece PARTIAL no escopo global. Campanha 0304 PARTIAL/aberta; nenhuma pendência anterior encerrada.
+
+## Motoboys V2 — checkpoint 2026-10-25
+
+| Área | Estado | Evidência/limite |
+|---|---|---|
+| Referências PC/tablet/celular claro/escuro | PASS (identificação) | Seis referências visuais abertas; caminhos, dimensões e SHA-256 no pacote `motoboys-v2-2026-10-25`. |
+| PC responsivo | PARTIAL | Fixture CDP mediu dois painéis quando cabem (1280: 458+458; 1440: 533+533; 1920: 744+744; gap 16); captura 1672×941 claro/escuro. Aprovação visual humana pendente. |
+| Tablet responsivo | PARTIAL | Container útil governa layout após sidebar; 768/820/1024 com sidebar expandida empilham; 1024 recolhida oferece 428+428. Sem overflow na fixture; revisão humana pendente. |
+| Mobile claro/escuro | PARTIAL | Uma coluna e navegação lista→detalhe, em conformidade com a exigência textual de usabilidade; a referência desenha painéis lado a lado, então a adaptação precisa de avaliação do proprietário. Capturas sintéticas e safe-area/nav presentes. |
+| Dados/estados visuais | PASS (fixture) | Renderização 0/1/5/20; avatar apenas iniciais; lease Online/Offline, presença/check-in, execução e elegibilidade distintos (inclusive lease Online sem check-in); sem localização e valores inventados. |
+| Busca/filtros/ordenação/seleção | PARTIAL | Renderer e controles cobertos por teste/unit; interação autenticada Browser não executada. |
+| Cadastro/edição | BLOCKED | Fluxos existentes preservados, mas sem sessão MFA sintética para validação browser nesta rodada. |
+| Distribuição operacional | BLOCKED | Chamador reutiliza `openAssignment()`, valida módulo Pedidos e identidade canônica; despacho real, concorrência e ACK não executados nesta rodada. |
+| Regressão automatizada | PASS | `npm test` Restaurante completo, exit 0; alterações de cache cobertas. |
+| E2E autenticado cross-app | BLOCKED | Sem usuário/tenant MFA sintético autorizado e ambiente de escrita E2E isolado disponibilizado nesta execução; nenhum bypass ou escrita oficial. |
+| G14 — aprovação visual do proprietário | **FAIL** | Reprovação global anterior segue vigente; capturas fixture não mudam o gate. |
+
+Evidências, limites, matriz comparativa e hashes: [`Motoboys V2`](motoboys-v2-2026-10-25/README.md). G8–G13 e suas pendências operacionais conservam os estados anteriores; esta rodada não amplia sincronização, persistência remota ou RBAC. Campanha permanece PARTIAL/aberta.
