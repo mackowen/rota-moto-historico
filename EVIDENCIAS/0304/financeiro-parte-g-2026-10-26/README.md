@@ -27,7 +27,7 @@ Resultado observado: pagamentos `3` eventos, estorno `751` minor units, repasse 
 
 - Concorrência PostgreSQL de duas conexões: PASS. PIDs do run: `13295`, `13296`; cleanup PASS, resíduos 0.
 - Unitários de analytics e renderer: PASS após atualizar contrato do CSV; a primeira execução apontou assertion antiga, corrigida para os campos explícitos novos.
-- `npm test` suíte Restaurante completa: PASS, execução final encerrada com exit 0; inclui analytics, view, cache/service worker, segurança, contrato cross-app, billing e regressões Restaurante/Motoboy.
+- `npm test` suíte Restaurante completa: PASS, execução final encerrada com exit 0; inclui analytics, view, cache/service worker, segurança, contrato cross-app e billing. Motoboy não foi modificado nem executado separadamente.
 - Integração HTTP/PostgreSQL autenticada `tests/test-domain-sync-postgres.js`: BLOCKED antes dos casos financeiros. O fixture atual tentou inserir usuário sintético por `rotamoto_app` e recebeu `42501` (RLS); nenhum relaxamento de policy ou substituição pelo migrator foi feito.
 - Regressão Motoboy/contrato compartilhado: não executada, pois nenhum arquivo/contrato Motoboy foi alterado; paridade cross-app permanece na suíte Restaurante.
 - Browser E2E autenticado em celulares/tablet/desktop, claros/escuros, teclado, modais e erros: BLOCKED; não há credencial E2E autorizada fornecida. CDP sem sessão/fixture não seria tratado como E2E autenticado e não foi usado para alegar validação financeira.
