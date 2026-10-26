@@ -411,3 +411,7 @@ RM-AUD19-02/03/10 permanecem PARTIAL globalmente. Browser comprovou Empresa (nom
 - **Backup:** BLOCKED_BY_CAPABILITY no runtime E2E; 404 de 0294 veio do fixture harness sem handler; servidor runtime responde `BACKUP_ADMIN_NOT_CONFIGURED` 503.
 
 Detalhes e limites por cenário em [REGISTROS/0295.md](REGISTROS/0295.md) e [matriz 0295](EVIDENCIAS/0295/matriz-funcional.md). Manter todas as 22 ocorrências, aliases e pendências 0289; não iniciar 0296 automaticamente.
+
+## Campanha 0304 — checkpoint Relatórios V2 (2026-10-26)
+
+**Não encerra itens do backlog cumulativo.** Relatórios V2 teve implementação Parte 1/2 e commit local Restaurante `5de9258`; interface e suíte integral passaram, com CDP renderer de 26 cenários responsivos/temas sem overflow. E2E autenticado/cross-tenant, consulta real do mapa, Chrome Android físico e auditoria instrumental WCAG permanecem BLOCKED/PARTIAL. Razão oficial de receita e aprovação humana dos esboços continuam pendentes; G14 FAIL. Ver [REGISTRO 0304](REGISTROS/0304.md) e [evidências Relatórios V2](EVIDENCIAS/0304/relatorios-v2-2026-10-26/README.md). Campanha 0305 não iniciada.

@@ -16,3 +16,19 @@
 ## Limite de evidência
 
 O Browser usou sessão sintética autenticada com MFA confirmado e fixture transacional E2E com rollback. Handlers HTTP reais de relatórios consultaram PostgreSQL E2E; durante essa captura a instância runit foi suspensa e restaurada em seguida. Não foram inseridos dados logísticos persistentes para fabricar gráficos. Ver [REGISTRO 0254](REGISTROS/0254.md) para comandos, gates e commits.
+
+## Atualização Relatórios V2 — 0304, 2026-10-26
+
+| Item V2 | Fonte/semântica | Estado da implementação | Evidência desta execução |
+|---|---|---|---|
+| Filtro data civil + empresa/motoboy | `Order.createdAt`, fuso IANA da empresa; ID canônico enviado ao endpoint territorial | Implementado no renderer/consulta; sem E2E com sessão real | `test-analytics`, `test-territorial-analytics`, territorial HTTP; browser real/auth BLOCKED |
+| KPI Entregas | Deliveries distintos por Order no recorte; legado sem Delivery conta uma vez | Implementado; RETURN/REDELIVERY contam individualmente | Fixture 1 Order/2 Deliveries e reconciliação com as séries; PASS |
+| KPI sucesso | Concluídas ÷ estados reconhecidos | Implementado; desconhecidos fora do denominador | `test-analytics`; PASS |
+| KPI tempo médio | Atribuição→conclusão em concluídas com timestamps válidos | Implementado em minutos; ausentes/invertidos/futuros excluídos | `test-analytics`; PASS |
+| Faturamento por dia | Sem ledger oficial de receita/ajuste/estorno encontrado | Indisponível exibido, sem inferir de total de Orders nem Earnings | Estado vazio contextual; pendência Parte 2/decisão financeira |
+| Gráficos de entrega por dia/hora/status | Séries derivadas de Deliveries e coorte `Order.createdAt` | Implementados; horas exigem fuso; status soma KPI de operações | Cálculo controlado + CDP; PASS cálculo / PARTIAL E2E |
+| Rankings clientes/endereço/motoboys | Dados de pedidos entregues localmente; ordenação estável; visão geral minimizada | Implementado; escopo local do usuário; serviço territorial conserva escopo tenant | Testes analytics/territorial; browser autenticado BLOCKED |
+| Mapa | Serviço territorial existente, consulta somente leitura e geodados autorizados | UI ligada; sem consulta real autenticada na rodada | Territorial HTTP unitário PASS, browser integrado BLOCKED |
+| Visual e viewport | Renderer/CSS reais, shell preservado; 13 viewports × 2 temas | 26 casos, 0 overflow/exceção/resposta HTTP inválida; sem pixel score/humano | Capturas e DOM em `EVIDENCIAS/0304/relatorios-v2-2026-10-26`; PARTIAL |
+
+Limite desta atualização: ao contrário das sessões autenticadas documentadas para 0254, o browser da rodada 0304 não obteve sessão autorizada. A fixture CDP valida renderer/layout somente; não reutilizar a evidência antiga como prova dos fluxos atuais. G14 permanece FAIL.

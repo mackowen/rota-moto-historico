@@ -1,0 +1,2845 @@
+{
+  "installed": {
+    "ready": true,
+    "report": "Entregas4Operações de entrega distintas no período.Taxa de s",
+    "kpis": 4
+  },
+  "measurements": [
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 320,
+        "height": 800
+      },
+      "documentWidth": 320,
+      "bodyWidth": 320,
+      "mainWidth": 320,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 304,
+        "height": 92.8
+      },
+      "filter": {
+        "x": 12,
+        "y": 339.1,
+        "width": 296,
+        "height": 310.4
+      },
+      "kpis": {
+        "x": 12,
+        "y": 663.5,
+        "width": 296,
+        "height": 308.9
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 984.5,
+          "width": 296,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1242.4,
+          "width": 296,
+          "height": 226.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1480.7,
+          "width": 296,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1738.6,
+          "width": 142,
+          "height": 371.1
+        },
+        {
+          "title": "Top motoboys",
+          "x": 166,
+          "y": 1738.6,
+          "width": 142,
+          "height": 371.1
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 2121.7,
+          "width": 142,
+          "height": 199.8
+        },
+        {
+          "title": "Principais endereços",
+          "x": 166,
+          "y": 2121.7,
+          "width": 142,
+          "height": 199.8
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2333.4,
+          "width": 142,
+          "height": 275.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 320,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 800
+      },
+      "documentWidth": 320,
+      "bodyWidth": 320,
+      "mainWidth": 320,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 304,
+        "height": 92.8
+      },
+      "filter": {
+        "x": 12,
+        "y": 339.1,
+        "width": 296,
+        "height": 310.4
+      },
+      "kpis": {
+        "x": 12,
+        "y": 663.5,
+        "width": 296,
+        "height": 308.9
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 984.5,
+          "width": 296,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1242.4,
+          "width": 296,
+          "height": 226.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1480.7,
+          "width": 296,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1738.6,
+          "width": 142,
+          "height": 371.1
+        },
+        {
+          "title": "Top motoboys",
+          "x": 166,
+          "y": 1738.6,
+          "width": 142,
+          "height": 371.1
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 2121.7,
+          "width": 142,
+          "height": 199.8
+        },
+        {
+          "title": "Principais endereços",
+          "x": 166,
+          "y": 2121.7,
+          "width": 142,
+          "height": 199.8
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2333.4,
+          "width": 142,
+          "height": 275.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 320,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "mainWidth": 360,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 344,
+        "height": 92.8
+      },
+      "filter": {
+        "x": 12,
+        "y": 339.1,
+        "width": 336,
+        "height": 294.6
+      },
+      "kpis": {
+        "x": 12,
+        "y": 647.7,
+        "width": 336,
+        "height": 290.2
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 949.9,
+          "width": 336,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1207.8,
+          "width": 336,
+          "height": 223.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1443.7,
+          "width": 336,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1701.6,
+          "width": 162,
+          "height": 335.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 186,
+          "y": 1701.6,
+          "width": 162,
+          "height": 335.7
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 2049.2,
+          "width": 162,
+          "height": 199.8
+        },
+        {
+          "title": "Principais endereços",
+          "x": 186,
+          "y": 2049.2,
+          "width": 162,
+          "height": 199.8
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2261,
+          "width": 162,
+          "height": 257
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 360,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "mainWidth": 360,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 344,
+        "height": 92.8
+      },
+      "filter": {
+        "x": 12,
+        "y": 339.1,
+        "width": 336,
+        "height": 294.6
+      },
+      "kpis": {
+        "x": 12,
+        "y": 647.7,
+        "width": 336,
+        "height": 290.2
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 949.9,
+          "width": 336,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1207.8,
+          "width": 336,
+          "height": 223.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1443.7,
+          "width": 336,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1701.6,
+          "width": 162,
+          "height": 335.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 186,
+          "y": 1701.6,
+          "width": 162,
+          "height": 335.7
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 2049.2,
+          "width": 162,
+          "height": 199.8
+        },
+        {
+          "title": "Principais endereços",
+          "x": 186,
+          "y": 2049.2,
+          "width": 162,
+          "height": 199.8
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2261,
+          "width": 162,
+          "height": 257
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 360,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "mainWidth": 390,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 374,
+        "height": 82
+      },
+      "filter": {
+        "x": 12,
+        "y": 328.3,
+        "width": 366,
+        "height": 294.6
+      },
+      "kpis": {
+        "x": 12,
+        "y": 636.9,
+        "width": 366,
+        "height": 273.9
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 922.8,
+          "width": 366,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1180.7,
+          "width": 366,
+          "height": 223.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1416.6,
+          "width": 366,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1674.5,
+          "width": 177,
+          "height": 302.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 201,
+          "y": 1674.5,
+          "width": 177,
+          "height": 302.7
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1989.1,
+          "width": 177,
+          "height": 199.8
+        },
+        {
+          "title": "Principais endereços",
+          "x": 201,
+          "y": 1989.1,
+          "width": 177,
+          "height": 199.8
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2200.9,
+          "width": 177,
+          "height": 257
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "mainWidth": 390,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 374,
+        "height": 82
+      },
+      "filter": {
+        "x": 12,
+        "y": 328.3,
+        "width": 366,
+        "height": 294.6
+      },
+      "kpis": {
+        "x": 12,
+        "y": 636.9,
+        "width": 366,
+        "height": 273.9
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 922.8,
+          "width": 366,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1180.7,
+          "width": 366,
+          "height": 223.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1416.6,
+          "width": 366,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1674.5,
+          "width": 177,
+          "height": 302.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 201,
+          "y": 1674.5,
+          "width": 177,
+          "height": 302.7
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1989.1,
+          "width": 177,
+          "height": 199.8
+        },
+        {
+          "title": "Principais endereços",
+          "x": 201,
+          "y": 1989.1,
+          "width": 177,
+          "height": 199.8
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2200.9,
+          "width": 177,
+          "height": 257
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "documentWidth": 430,
+      "bodyWidth": 430,
+      "mainWidth": 430,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 414,
+        "height": 82
+      },
+      "filter": {
+        "x": 12,
+        "y": 328.3,
+        "width": 406,
+        "height": 294.6
+      },
+      "kpis": {
+        "x": 12,
+        "y": 636.9,
+        "width": 406,
+        "height": 248.2
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 897.1,
+          "width": 406,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1155,
+          "width": 406,
+          "height": 223.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1390.9,
+          "width": 406,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1648.8,
+          "width": 197,
+          "height": 265.9
+        },
+        {
+          "title": "Top motoboys",
+          "x": 221,
+          "y": 1648.8,
+          "width": 197,
+          "height": 265.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1926.6,
+          "width": 197,
+          "height": 180.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 221,
+          "y": 1926.6,
+          "width": 197,
+          "height": 180.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2119.5,
+          "width": 197,
+          "height": 240.5
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 866,
+        "width": 430,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "documentWidth": 430,
+      "bodyWidth": 430,
+      "mainWidth": 430,
+      "nav": {
+        "x": 8,
+        "y": 232.3,
+        "width": 414,
+        "height": 82
+      },
+      "filter": {
+        "x": 12,
+        "y": 328.3,
+        "width": 406,
+        "height": 294.6
+      },
+      "kpis": {
+        "x": 12,
+        "y": 636.9,
+        "width": 406,
+        "height": 248.2
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 897.1,
+          "width": 406,
+          "height": 245.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 1155,
+          "width": 406,
+          "height": 223.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1390.9,
+          "width": 406,
+          "height": 245.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1648.8,
+          "width": 197,
+          "height": 265.9
+        },
+        {
+          "title": "Top motoboys",
+          "x": 221,
+          "y": 1648.8,
+          "width": 197,
+          "height": 265.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1926.6,
+          "width": 197,
+          "height": 180.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 221,
+          "y": 1926.6,
+          "width": 197,
+          "height": 180.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 2119.5,
+          "width": 197,
+          "height": 240.5
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 866,
+        "width": 430,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 720,
+        "height": 360
+      },
+      "documentWidth": 705,
+      "bodyWidth": 705,
+      "mainWidth": 457,
+      "nav": {
+        "x": 269.6,
+        "y": 240,
+        "width": 413.8,
+        "height": 91
+      },
+      "filter": {
+        "x": 269.6,
+        "y": 345,
+        "width": 413.8,
+        "height": 300.4
+      },
+      "kpis": {
+        "x": 269.6,
+        "y": 659.5,
+        "width": 413.8,
+        "height": 278.1
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 269.6,
+          "y": 949.6,
+          "width": 413.8,
+          "height": 251.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 269.6,
+          "y": 1212.8,
+          "width": 413.8,
+          "height": 235.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 269.6,
+          "y": 1460.1,
+          "width": 413.8,
+          "height": 251.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 269.6,
+          "y": 1723.3,
+          "width": 200.9,
+          "height": 272.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 482.5,
+          "y": 1723.3,
+          "width": 200.9,
+          "height": 272.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 269.6,
+          "y": 2007.9,
+          "width": 200.9,
+          "height": 206.5
+        },
+        {
+          "title": "Principais endereços",
+          "x": 482.5,
+          "y": 2007.9,
+          "width": 200.9,
+          "height": 206.5
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 269.6,
+          "y": 2226.4,
+          "width": 200.9,
+          "height": 247.2
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 720,
+        "height": 360
+      },
+      "documentWidth": 705,
+      "bodyWidth": 705,
+      "mainWidth": 457,
+      "nav": {
+        "x": 269.6,
+        "y": 240,
+        "width": 413.8,
+        "height": 91
+      },
+      "filter": {
+        "x": 269.6,
+        "y": 345,
+        "width": 413.8,
+        "height": 300.4
+      },
+      "kpis": {
+        "x": 269.6,
+        "y": 659.5,
+        "width": 413.8,
+        "height": 278.1
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 269.6,
+          "y": 949.6,
+          "width": 413.8,
+          "height": 251.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 269.6,
+          "y": 1212.8,
+          "width": 413.8,
+          "height": 235.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 269.6,
+          "y": 1460.1,
+          "width": 413.8,
+          "height": 251.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 269.6,
+          "y": 1723.3,
+          "width": 200.9,
+          "height": 272.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 482.5,
+          "y": 1723.3,
+          "width": 200.9,
+          "height": 272.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 269.6,
+          "y": 2007.9,
+          "width": 200.9,
+          "height": 206.5
+        },
+        {
+          "title": "Principais endereços",
+          "x": 482.5,
+          "y": 2007.9,
+          "width": 200.9,
+          "height": 206.5
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 269.6,
+          "y": 2226.4,
+          "width": 200.9,
+          "height": 247.2
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 800,
+        "height": 360
+      },
+      "documentWidth": 785,
+      "bodyWidth": 785,
+      "mainWidth": 537,
+      "nav": {
+        "x": 272,
+        "y": 240,
+        "width": 489,
+        "height": 91
+      },
+      "filter": {
+        "x": 272,
+        "y": 345,
+        "width": 489,
+        "height": 300.4
+      },
+      "kpis": {
+        "x": 272,
+        "y": 659.5,
+        "width": 489,
+        "height": 247.2
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 272,
+          "y": 918.7,
+          "width": 489,
+          "height": 251.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 272,
+          "y": 1181.9,
+          "width": 489,
+          "height": 239.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 272,
+          "y": 1433.2,
+          "width": 489,
+          "height": 251.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 272,
+          "y": 1696.4,
+          "width": 238.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top motoboys",
+          "x": 522.5,
+          "y": 1696.4,
+          "width": 238.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top clientes",
+          "x": 272,
+          "y": 1964.5,
+          "width": 238.5,
+          "height": 186.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 522.5,
+          "y": 1964.5,
+          "width": 238.5,
+          "height": 186.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 272,
+          "y": 2162.8,
+          "width": 238.5,
+          "height": 226.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 800,
+        "height": 360
+      },
+      "documentWidth": 785,
+      "bodyWidth": 785,
+      "mainWidth": 537,
+      "nav": {
+        "x": 272,
+        "y": 240,
+        "width": 489,
+        "height": 91
+      },
+      "filter": {
+        "x": 272,
+        "y": 345,
+        "width": 489,
+        "height": 300.4
+      },
+      "kpis": {
+        "x": 272,
+        "y": 659.5,
+        "width": 489,
+        "height": 247.2
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 272,
+          "y": 918.7,
+          "width": 489,
+          "height": 251.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 272,
+          "y": 1181.9,
+          "width": 489,
+          "height": 239.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 272,
+          "y": 1433.2,
+          "width": 489,
+          "height": 251.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 272,
+          "y": 1696.4,
+          "width": 238.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top motoboys",
+          "x": 522.5,
+          "y": 1696.4,
+          "width": 238.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top clientes",
+          "x": 272,
+          "y": 1964.5,
+          "width": 238.5,
+          "height": 186.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 522.5,
+          "y": 1964.5,
+          "width": 238.5,
+          "height": 186.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 272,
+          "y": 2162.8,
+          "width": 238.5,
+          "height": 226.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 829,
+      "bodyWidth": 829,
+      "mainWidth": 581,
+      "nav": {
+        "x": 273.3,
+        "y": 242,
+        "width": 530.4,
+        "height": 91
+      },
+      "filter": {
+        "x": 273.3,
+        "y": 347,
+        "width": 530.4,
+        "height": 306.3
+      },
+      "kpis": {
+        "x": 273.3,
+        "y": 667.3,
+        "width": 530.4,
+        "height": 254.8
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 273.3,
+          "y": 934.1,
+          "width": 530.4,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 273.3,
+          "y": 1198.7,
+          "width": 530.4,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 273.3,
+          "y": 1463.3,
+          "width": 530.4,
+          "height": 252.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 273.3,
+          "y": 1727.9,
+          "width": 259.2,
+          "height": 242.3
+        },
+        {
+          "title": "Top motoboys",
+          "x": 544.5,
+          "y": 1727.9,
+          "width": 259.2,
+          "height": 242.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 273.3,
+          "y": 1982.2,
+          "width": 259.2,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 544.5,
+          "y": 1982.2,
+          "width": 259.2,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 273.3,
+          "y": 2181.8,
+          "width": 259.2,
+          "height": 194.2
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 829,
+      "bodyWidth": 829,
+      "mainWidth": 581,
+      "nav": {
+        "x": 273.3,
+        "y": 242,
+        "width": 530.4,
+        "height": 91
+      },
+      "filter": {
+        "x": 273.3,
+        "y": 347,
+        "width": 530.4,
+        "height": 306.3
+      },
+      "kpis": {
+        "x": 273.3,
+        "y": 667.3,
+        "width": 530.4,
+        "height": 254.8
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 273.3,
+          "y": 934.1,
+          "width": 530.4,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 273.3,
+          "y": 1198.7,
+          "width": 530.4,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 273.3,
+          "y": 1463.3,
+          "width": 530.4,
+          "height": 252.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 273.3,
+          "y": 1727.9,
+          "width": 259.2,
+          "height": 242.3
+        },
+        {
+          "title": "Top motoboys",
+          "x": 544.5,
+          "y": 1727.9,
+          "width": 259.2,
+          "height": 242.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 273.3,
+          "y": 1982.2,
+          "width": 259.2,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 544.5,
+          "y": 1982.2,
+          "width": 259.2,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 273.3,
+          "y": 2181.8,
+          "width": 259.2,
+          "height": 194.2
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 932,
+        "height": 430
+      },
+      "documentWidth": 917,
+      "bodyWidth": 917,
+      "mainWidth": 669,
+      "nav": {
+        "x": 276,
+        "y": 254.1,
+        "width": 613.1,
+        "height": 56.1
+      },
+      "filter": {
+        "x": 276,
+        "y": 324.2,
+        "width": 613.1,
+        "height": 288.2
+      },
+      "kpis": {
+        "x": 276,
+        "y": 626.4,
+        "width": 613.1,
+        "height": 239.6
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 276,
+          "y": 878,
+          "width": 613.1,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 276,
+          "y": 1142.6,
+          "width": 613.1,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 276,
+          "y": 1407.2,
+          "width": 300.5,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 588.5,
+          "y": 1407.2,
+          "width": 300.5,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 276,
+          "y": 1669.8,
+          "width": 300.5,
+          "height": 140.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 276,
+          "y": 1822.4,
+          "width": 300.5,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 588.5,
+          "y": 1822.4,
+          "width": 300.5,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 276,
+          "y": 2022,
+          "width": 300.5,
+          "height": 172.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 932,
+        "height": 430
+      },
+      "documentWidth": 917,
+      "bodyWidth": 917,
+      "mainWidth": 669,
+      "nav": {
+        "x": 276,
+        "y": 254.1,
+        "width": 613.1,
+        "height": 56.1
+      },
+      "filter": {
+        "x": 276,
+        "y": 324.2,
+        "width": 613.1,
+        "height": 288.2
+      },
+      "kpis": {
+        "x": 276,
+        "y": 626.4,
+        "width": 613.1,
+        "height": 239.6
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 276,
+          "y": 878,
+          "width": 613.1,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 276,
+          "y": 1142.6,
+          "width": 613.1,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 276,
+          "y": 1407.2,
+          "width": 300.5,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 588.5,
+          "y": 1407.2,
+          "width": 300.5,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 276,
+          "y": 1669.8,
+          "width": 300.5,
+          "height": 140.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 276,
+          "y": 1822.4,
+          "width": 300.5,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 588.5,
+          "y": 1822.4,
+          "width": 300.5,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 276,
+          "y": 2022,
+          "width": 300.5,
+          "height": 172.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "mainWidth": 505,
+      "nav": {
+        "x": 271,
+        "y": 240,
+        "width": 458.9,
+        "height": 91
+      },
+      "filter": {
+        "x": 271,
+        "y": 345,
+        "width": 458.9,
+        "height": 300.4
+      },
+      "kpis": {
+        "x": 271,
+        "y": 659.5,
+        "width": 458.9,
+        "height": 249.9
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 271,
+          "y": 921.4,
+          "width": 458.9,
+          "height": 251.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 271,
+          "y": 1184.6,
+          "width": 458.9,
+          "height": 235.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 271,
+          "y": 1431.9,
+          "width": 458.9,
+          "height": 251.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 271,
+          "y": 1695.1,
+          "width": 223.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top motoboys",
+          "x": 506.5,
+          "y": 1695.1,
+          "width": 223.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top clientes",
+          "x": 271,
+          "y": 1963.2,
+          "width": 223.5,
+          "height": 186.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 506.5,
+          "y": 1963.2,
+          "width": 223.5,
+          "height": 186.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 271,
+          "y": 2161.5,
+          "width": 223.5,
+          "height": 226.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "mainWidth": 505,
+      "nav": {
+        "x": 271,
+        "y": 240,
+        "width": 458.9,
+        "height": 91
+      },
+      "filter": {
+        "x": 271,
+        "y": 345,
+        "width": 458.9,
+        "height": 300.4
+      },
+      "kpis": {
+        "x": 271,
+        "y": 659.5,
+        "width": 458.9,
+        "height": 249.9
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 271,
+          "y": 921.4,
+          "width": 458.9,
+          "height": 251.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 271,
+          "y": 1184.6,
+          "width": 458.9,
+          "height": 235.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 271,
+          "y": 1431.9,
+          "width": 458.9,
+          "height": 251.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 271,
+          "y": 1695.1,
+          "width": 223.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top motoboys",
+          "x": 506.5,
+          "y": 1695.1,
+          "width": 223.5,
+          "height": 256.1
+        },
+        {
+          "title": "Top clientes",
+          "x": 271,
+          "y": 1963.2,
+          "width": 223.5,
+          "height": 186.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 506.5,
+          "y": 1963.2,
+          "width": 223.5,
+          "height": 186.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 271,
+          "y": 2161.5,
+          "width": 223.5,
+          "height": 226.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "mainWidth": 753,
+      "nav": {
+        "x": 286.7,
+        "y": 260.4,
+        "width": 691.6,
+        "height": 56.1
+      },
+      "filter": {
+        "x": 286.7,
+        "y": 330.5,
+        "width": 691.6,
+        "height": 294.2
+      },
+      "kpis": {
+        "x": 286.7,
+        "y": 638.7,
+        "width": 691.6,
+        "height": 242.7
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 286.7,
+          "y": 893.4,
+          "width": 691.6,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 286.7,
+          "y": 1158,
+          "width": 691.6,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 286.7,
+          "y": 1422.6,
+          "width": 339.8,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 638.5,
+          "y": 1422.6,
+          "width": 339.8,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 286.7,
+          "y": 1685.2,
+          "width": 339.8,
+          "height": 140.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 286.7,
+          "y": 1837.8,
+          "width": 339.8,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 638.5,
+          "y": 1837.8,
+          "width": 339.8,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 286.7,
+          "y": 2037.3,
+          "width": 339.8,
+          "height": 172.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "mainWidth": 753,
+      "nav": {
+        "x": 286.7,
+        "y": 260.4,
+        "width": 691.6,
+        "height": 56.1
+      },
+      "filter": {
+        "x": 286.7,
+        "y": 330.5,
+        "width": 691.6,
+        "height": 294.2
+      },
+      "kpis": {
+        "x": 286.7,
+        "y": 638.7,
+        "width": 691.6,
+        "height": 242.7
+      },
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 286.7,
+          "y": 893.4,
+          "width": 691.6,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 286.7,
+          "y": 1158,
+          "width": 691.6,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 286.7,
+          "y": 1422.6,
+          "width": 339.8,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 638.5,
+          "y": 1422.6,
+          "width": 339.8,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 286.7,
+          "y": 1685.2,
+          "width": 339.8,
+          "height": 140.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 286.7,
+          "y": 1837.8,
+          "width": 339.8,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 638.5,
+          "y": 1837.8,
+          "width": 339.8,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 286.7,
+          "y": 2037.3,
+          "width": 339.8,
+          "height": 172.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "mainWidth": 1009,
+      "nav": {
+        "x": 294.4,
+        "y": 247.7,
+        "width": 932.2,
+        "height": 42
+      },
+      "filter": {
+        "x": 294.4,
+        "y": 303.7,
+        "width": 932.2,
+        "height": 215.2
+      },
+      "kpis": {
+        "x": 294.4,
+        "y": 532.8,
+        "width": 932.2,
+        "height": 150
+      },
+      "kpiColumns": 4,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 294.4,
+          "y": 694.8,
+          "width": 535,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 841.4,
+          "y": 694.8,
+          "width": 385.2,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 294.4,
+          "y": 959.4,
+          "width": 460.1,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 766.5,
+          "y": 959.4,
+          "width": 460.1,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 294.4,
+          "y": 1222,
+          "width": 460.1,
+          "height": 140.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 294.4,
+          "y": 1374.6,
+          "width": 460.1,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 766.5,
+          "y": 1374.6,
+          "width": 460.1,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 294.4,
+          "y": 1574.2,
+          "width": 460.1,
+          "height": 172.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "mainWidth": 1009,
+      "nav": {
+        "x": 294.4,
+        "y": 247.7,
+        "width": 932.2,
+        "height": 42
+      },
+      "filter": {
+        "x": 294.4,
+        "y": 303.7,
+        "width": 932.2,
+        "height": 215.2
+      },
+      "kpis": {
+        "x": 294.4,
+        "y": 532.8,
+        "width": 932.2,
+        "height": 150
+      },
+      "kpiColumns": 4,
+      "chartRows": 2,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 294.4,
+          "y": 694.8,
+          "width": 535,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 841.4,
+          "y": 694.8,
+          "width": 385.2,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 294.4,
+          "y": 959.4,
+          "width": 460.1,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 766.5,
+          "y": 959.4,
+          "width": 460.1,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 294.4,
+          "y": 1222,
+          "width": 460.1,
+          "height": 140.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 294.4,
+          "y": 1374.6,
+          "width": 460.1,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 766.5,
+          "y": 1374.6,
+          "width": 460.1,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 294.4,
+          "y": 1574.2,
+          "width": 460.1,
+          "height": 172.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "mainWidth": 1169,
+      "nav": {
+        "x": 299.2,
+        "y": 251.6,
+        "width": 1082.6,
+        "height": 42
+      },
+      "filter": {
+        "x": 299.2,
+        "y": 307.6,
+        "width": 1082.6,
+        "height": 136.1
+      },
+      "kpis": {
+        "x": 299.2,
+        "y": 457.8,
+        "width": 1082.6,
+        "height": 134.8
+      },
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 299.2,
+          "y": 604.5,
+          "width": 622.5,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 933.6,
+          "y": 604.5,
+          "width": 448.2,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 299.2,
+          "y": 869.1,
+          "width": 352.9,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 664.1,
+          "y": 869.1,
+          "width": 352.9,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1028.9,
+          "y": 869.1,
+          "width": 352.9,
+          "height": 250.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 299.2,
+          "y": 1131.7,
+          "width": 352.9,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 664.1,
+          "y": 1131.7,
+          "width": 352.9,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1028.9,
+          "y": 1131.7,
+          "width": 352.9,
+          "height": 187.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "mainWidth": 1169,
+      "nav": {
+        "x": 299.2,
+        "y": 251.6,
+        "width": 1082.6,
+        "height": 42
+      },
+      "filter": {
+        "x": 299.2,
+        "y": 307.6,
+        "width": 1082.6,
+        "height": 136.1
+      },
+      "kpis": {
+        "x": 299.2,
+        "y": 457.8,
+        "width": 1082.6,
+        "height": 134.8
+      },
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 299.2,
+          "y": 604.5,
+          "width": 622.5,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 933.6,
+          "y": 604.5,
+          "width": 448.2,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 299.2,
+          "y": 869.1,
+          "width": 352.9,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 664.1,
+          "y": 869.1,
+          "width": 352.9,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1028.9,
+          "y": 869.1,
+          "width": 352.9,
+          "height": 250.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 299.2,
+          "y": 1131.7,
+          "width": 352.9,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 664.1,
+          "y": 1131.7,
+          "width": 352.9,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1028.9,
+          "y": 1131.7,
+          "width": 352.9,
+          "height": 187.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "mainWidth": 1600,
+      "nav": {
+        "x": 328.5,
+        "y": 254.2,
+        "width": 1504,
+        "height": 42
+      },
+      "filter": {
+        "x": 328.5,
+        "y": 310.2,
+        "width": 1504,
+        "height": 136.1
+      },
+      "kpis": {
+        "x": 328.5,
+        "y": 460.4,
+        "width": 1504,
+        "height": 122.5
+      },
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 328.5,
+          "y": 594.8,
+          "width": 867.4,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 1207.9,
+          "y": 594.8,
+          "width": 624.5,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 328.5,
+          "y": 859.4,
+          "width": 493.3,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 833.8,
+          "y": 859.4,
+          "width": 493.3,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1339.2,
+          "y": 859.4,
+          "width": 493.3,
+          "height": 250.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 328.5,
+          "y": 1122,
+          "width": 493.3,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 833.8,
+          "y": 1122,
+          "width": 493.3,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1339.2,
+          "y": 1122,
+          "width": 493.3,
+          "height": 187.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "mainWidth": 1600,
+      "nav": {
+        "x": 328.5,
+        "y": 254.2,
+        "width": 1504,
+        "height": 42
+      },
+      "filter": {
+        "x": 328.5,
+        "y": 310.2,
+        "width": 1504,
+        "height": 136.1
+      },
+      "kpis": {
+        "x": 328.5,
+        "y": 460.4,
+        "width": 1504,
+        "height": 122.5
+      },
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 328.5,
+          "y": 594.8,
+          "width": 867.4,
+          "height": 252.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 1207.9,
+          "y": 594.8,
+          "width": 624.5,
+          "height": 252.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 328.5,
+          "y": 859.4,
+          "width": 493.3,
+          "height": 250.6
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 833.8,
+          "y": 859.4,
+          "width": 493.3,
+          "height": 250.6
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1339.2,
+          "y": 859.4,
+          "width": 493.3,
+          "height": 250.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 328.5,
+          "y": 1122,
+          "width": 493.3,
+          "height": 187.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 833.8,
+          "y": 1122,
+          "width": 493.3,
+          "height": 187.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1339.2,
+          "y": 1122,
+          "width": 493.3,
+          "height": 187.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "05/10",
+        "09/10",
+        "13/10",
+        "17/10",
+        "21/10",
+        "25/10"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "responses": []
+}
