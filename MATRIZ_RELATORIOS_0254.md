@@ -32,3 +32,17 @@ O Browser usou sessão sintética autenticada com MFA confirmado e fixture trans
 | Visual e viewport | Renderer/CSS reais, shell preservado; 13 viewports × 2 temas | 26 casos, 0 overflow/exceção/resposta HTTP inválida; sem pixel score/humano | Capturas e DOM em `EVIDENCIAS/0304/relatorios-v2-2026-10-26`; PARTIAL |
 
 Limite desta atualização: ao contrário das sessões autenticadas documentadas para 0254, o browser da rodada 0304 não obteve sessão autorizada. A fixture CDP valida renderer/layout somente; não reutilizar a evidência antiga como prova dos fluxos atuais. G14 permanece FAIL.
+
+
+## Correção de arquitetura de visualização — Campanha 0304, Parte 1
+
+| Requisito | Fonte/implementação | Estado | Evidência/limite |
+|---|---|---|---|
+| Executivo padrão, sem as oito seções em sequência | `mainView=executive`; painel operacional inativo oculto | PASS estrutural | `test-analytics`; Chromium/CDP 20 checks |
+| Navegação operacional por oito seções | Mesmo renderer, uma seção ativa por vez; estado mantido no filtro/estado de relatório | PASS estrutural | acesso direto às oito seções, teclado e links “Ver mais” em CDP |
+| Filtros comuns | Um único formulário; datas/motoboy visíveis; status/tipo/origem avançados | PASS estrutural; integração real PARTIAL | contagem DOM de IDs únicos e retenção ao alternar; sem usuário autenticado |
+| Fontes logísticas/mapa | Serviços anteriores reutilizados; chamadas limitadas à seção visível e respostas antigas ignoradas | PASS regressão dirigida; integração autenticada BLOCKED | testes de domínio/HTTP e execução renderer isolada; sem resposta de servidor em sessão real |
+| Responsividade técnica | CSS existente acrescido de navegação estrutural; 13 larguras × dois temas | PASS técnico, revisão visual PARTIAL | 26 screenshots/medições; zero overflow; não substitui comparação/aprovação dos esboços |
+| G14 | aprovação do proprietário | **FAIL** | somente proprietário pode alterar o gate |
+
+Evidências e relatório integral: [`relatorios-v2-separacao-2026-10-26`](EVIDENCIAS/0304/relatorios-v2-separacao-2026-10-26/README.md).

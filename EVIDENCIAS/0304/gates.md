@@ -270,3 +270,22 @@ Campanha 0304 permanece PARTIAL/aberta; G8–G13 não avançam por este trabalho
 | G14 — aprovação visual do proprietário | **FAIL** | Aguardar inspeção/aprovação expressa. Captura de referência de recuperação não estava disponível localmente. |
 
 Campanha permanece PARTIAL/aberta; integração/auth persistente não avança por testes visuais. Pendências anteriores, inclusive desde 0257, continuam preservadas.
+
+
+## Correção estrutural Relatórios V2 — Parte 1 (2026-10-26)
+
+| Gate local | Estado | Evidência/limite |
+|---|---|---|
+| Executivo é padrão e exclui as oito seções detalhadas | PASS | Teste de renderer e DOM/CDP confirmaram painel operacional oculto no Executivo. |
+| Alternância das abas sem reload | PASS técnico | Funções atuais do app exercitadas no CDP isolado. |
+| Oito seções acessíveis uma de cada vez | PASS técnico | Índice acionado individualmente; uma seção visível em cada mudança. |
+| Filtros persistem entre abas | PASS estrutural | Datas e motoboy preservados em teste DOM; atualização de dados autenticada PARTIAL/BLOCKED. |
+| Teclado/foco das abas | PASS técnico | Setas e seleção/foco exercitados; leitor de tela não auditado instrumentalmente. |
+| Browser responsivo/temas sem overflow | PASS técnico | 26 combinações em 13 viewports; fixture sem overflow/exceções/HTTP inválido. Fidelidade estética PARTIAL. |
+| Exportação e fluxos preexistentes | PASS regressão de contrato; E2E PARTIAL | Serializer e testes existentes preservados; download autenticado nesta execução não exercitado. |
+| Sessão/RBAC/isolamento e sync | BLOCKED | Browser desta rodada é renderer isolado, sem sessão autorizada. |
+| Mapa integrado autenticado | BLOCKED | Não foi consultado com sessão/tenant real; não atribuir PASS com fixture. |
+| Android Chrome desktop-mode/físico | BLOCKED | Chromium headless com dimensões emuladas não substitui o device. |
+| G14 — aprovação visual do proprietário | **FAIL** | Gate continua pendente de aprovação expressa. |
+
+Evidências: [`Relatórios V2 — separação`](relatorios-v2-separacao-2026-10-26/README.md). Parte 2 visual não iniciada. Campanha 0304 PARTIAL/aberta; 0305 não iniciada.
