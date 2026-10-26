@@ -254,3 +254,19 @@ Relatório: [`qr-signing-e2e-setup-2026-10-25`](qr-signing-e2e-setup-2026-10-25/
 | G14 — aprovação visual do proprietário | **FAIL** | Mantido até aprovação expressa. Captura recente de reprovação não estava acessível localmente; teste CDP emulado não a substitui. |
 
 Campanha 0304 permanece PARTIAL/aberta; G8–G13 não avançam por este trabalho visual. Pendências anteriores, inclusive backlog desde 0257, permanecem abertas. Nenhum aplicativo foi publicado e o banco oficial não recebeu escrita.
+
+## Atualização — Recuperação de acesso/MFA/convite (2026-10-26)
+
+| Requisito | Estado | Evidência e limite |
+|---|---|---|
+| Recuperação: menu e uma etapa por vez | PASS técnico UI | CDP navegou menu, solicitar código, redefinir senha e MFA; não exibiu formulários simultâneos. |
+| Convite exclusivo com retorno | PASS técnico UI | Convite não sobrepõe login nem recuperação; link com token sintético abriu o form existente. |
+| Links de email para redefinição/MFA | PASS de navegação client-side | Campo pré-preenchido e tela correta; token usado foi sintético local, sem POST. |
+| Celular, tablet, PC e 980 CSS px em claro/escuro | PASS técnico visual | 184 estados, 40 capturas, sem overflow ou exceções; altura reduzida 390×560 confirmou rolagem até ação. Emulação CDP, não Chrome Android físico. |
+| Email inválido / submit repetido na UI | PASS client-side | Email inválido parado pelo navegador; nenhuma requisição POST foi emitida. Guardas `working` cobertas por teste de código. |
+| Email real, redefinição persistida, expiração/reuso, aprovação MFA e convites autenticados | BLOCKED | Nenhuma identidade/MFA sintética autorizada foi usada. `npm test` não equivale a jornada E2E autenticada. |
+| `npm test` Restaurante e testes dirigidos | PASS | Suíte completa exit 0, identity UI/cache/QR/dashboard/dispatch e sintaxe/diff-check passaram. |
+| PostgreSQL oficial | PASS de preservação | Nenhuma escrita ou migration nesta intervenção. |
+| G14 — aprovação visual do proprietário | **FAIL** | Aguardar inspeção/aprovação expressa. Captura de referência de recuperação não estava disponível localmente. |
+
+Campanha permanece PARTIAL/aberta; integração/auth persistente não avança por testes visuais. Pendências anteriores, inclusive desde 0257, continuam preservadas.

@@ -404,3 +404,10 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Gates 0304](EVIDENCIAS/0304/gates.md#atualizacao--login-desktop-e-modal-qr-2026-10-26)
 - [Login: medições e capturas](EVIDENCIAS/0304/login-layout-refinement-2026-10-25/README.md)
 - [Modal QR: geometrias e capturas sanitizadas](EVIDENCIAS/0304/qr-modal-refinamento-2026-10-25/README.md)
+
+### Atualização 2026-10-26 — Recuperação de acesso e convite
+
+- [Registro 0304](REGISTROS/0304.md#recuperacao-de-acesso-mfa-e-convite--2026-10-26)
+- [Resumo 0304](RESUMOS/0304.md#atualizacao-2026-10-26--recuperacao-de-acesso-e-convite)
+- [Gates 0304](EVIDENCIAS/0304/gates.md)
+- [Capturas, medições e runner CDP](EVIDENCIAS/0304/recuperacao-convite-2026-10-26/README.md)

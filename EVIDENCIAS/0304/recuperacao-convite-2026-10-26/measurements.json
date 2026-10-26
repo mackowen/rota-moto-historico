@@ -1,0 +1,7810 @@
+{
+  "browser": {
+    "product": "Chrome/155.0.8059.79",
+    "protocol": "1.3"
+  },
+  "cases": [
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 205.640625,
+          "width": 288,
+          "height": 363.71875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 194.875,
+          "width": 288,
+          "height": 385.234375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 105.9375,
+          "width": 288,
+          "height": 563.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 16,
+          "y": 197.28125,
+          "width": 288,
+          "height": 380.421875
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-320",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 655.328125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 346.671875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 385.234375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 603.078125,
+          "clientHeight": 603,
+          "scrollHeight": 603,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 546.078125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 655.328125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 380.421875
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390-short-viewport",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 655.328125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 276.15625,
+          "width": 358,
+          "height": 346.671875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 256.875,
+          "width": 358,
+          "height": 385.234375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 176.453125,
+          "width": 358,
+          "height": 546.078125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 16,
+          "y": 259.28125,
+          "width": 358,
+          "height": 380.421875
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 611.8125,
+          "clientHeight": 612,
+          "scrollHeight": 612,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.46875,
+          "clientHeight": 325,
+          "scrollHeight": 325,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.46875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 362.96875,
+          "clientHeight": 363,
+          "scrollHeight": 363,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 362.96875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 511.71875,
+          "clientHeight": 512,
+          "scrollHeight": 512,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 511.71875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 611.8125,
+          "clientHeight": 612,
+          "scrollHeight": 612,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 358.09375,
+          "clientHeight": 358,
+          "scrollHeight": 358,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 358.09375
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-portrait",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 611.8125,
+          "clientHeight": 612,
+          "scrollHeight": 612,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 655.078125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 366.203125,
+          "clientHeight": 366,
+          "scrollHeight": 366,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 366.203125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 381.96875,
+          "clientHeight": 382,
+          "scrollHeight": 382,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 381.96875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 575.828125,
+          "clientHeight": 576,
+          "scrollHeight": 576,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 575.828125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 655.078125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 397.65625,
+          "clientHeight": 398,
+          "scrollHeight": 398,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 397.65625
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "tablet-landscape",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 655.078125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375,
+          "clientHeight": 348,
+          "scrollHeight": 348,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375,
+          "clientHeight": 385,
+          "scrollHeight": 385,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 538.625,
+          "clientHeight": 539,
+          "scrollHeight": 539,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 538.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125,
+          "clientHeight": 401,
+          "scrollHeight": 401,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1280",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375,
+          "clientHeight": 348,
+          "scrollHeight": 348,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375,
+          "clientHeight": 385,
+          "scrollHeight": 385,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 538.625,
+          "clientHeight": 539,
+          "scrollHeight": 539,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 538.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125,
+          "clientHeight": 401,
+          "scrollHeight": 401,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "pc-1440",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 652.421875,
+          "clientHeight": 652,
+          "scrollHeight": 652,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 364.109375,
+          "clientHeight": 364,
+          "scrollHeight": 364,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 364.109375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875,
+          "clientHeight": 380,
+          "scrollHeight": 380,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 597.734375,
+          "clientHeight": 598,
+          "scrollHeight": 598,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 597.734375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 652.421875,
+          "clientHeight": 652,
+          "scrollHeight": 652,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625,
+          "clientHeight": 440,
+          "scrollHeight": 440,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "android-desktop-mode-980",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 652.421875,
+          "clientHeight": 652,
+          "scrollHeight": 652,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "email-link",
+      "stage": "password_recovery",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "BUTTON",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875,
+          "clientHeight": 380,
+          "scrollHeight": 380,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "tokenPrefilled": true
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "email-link",
+      "stage": "mfa_recovery",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "BUTTON",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 339.140625,
+          "clientHeight": 339,
+          "scrollHeight": 339,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 339.140625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "tokenPrefilled": true
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "email-link",
+      "stage": "membership_invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BUTTON",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625,
+          "clientHeight": 440,
+          "scrollHeight": 440,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625
+        },
+        "tokenPrefilled": true
+      }
+    },
+    {
+      "theme": "dark",
+      "viewport": "phone-390",
+      "stage": "invalid-email-native-validation",
+      "state": {
+        "valid": false,
+        "status": ""
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 205.640625,
+          "width": 288,
+          "height": 363.71875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 194.875,
+          "width": 288,
+          "height": 385.234375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 105.9375,
+          "width": 288,
+          "height": 563.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 188.90625,
+          "width": 288,
+          "height": 397.171875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 16,
+          "y": 197.28125,
+          "width": 288,
+          "height": 380.421875
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-320",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 288,
+          "height": 682,
+          "clientHeight": 682,
+          "scrollHeight": 682,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 655.328125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 346.671875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 385.234375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 603.078125,
+          "clientHeight": 603,
+          "scrollHeight": 603,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 546.078125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 655.328125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 522,
+          "clientHeight": 522,
+          "scrollHeight": 522,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 16,
+          "y": 75,
+          "width": 358,
+          "height": 380.421875
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390-short-viewport",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 560
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 655.328125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 276.15625,
+          "width": 358,
+          "height": 346.671875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 256.875,
+          "width": 358,
+          "height": 385.234375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 176.453125,
+          "width": 358,
+          "height": 546.078125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 16,
+          "y": 271.859375,
+          "width": 358,
+          "height": 355.28125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 16,
+          "y": 259.28125,
+          "width": 358,
+          "height": 380.421875
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 844
+        },
+        "content": {
+          "x": 16,
+          "y": 18,
+          "width": 358,
+          "height": 806,
+          "clientHeight": 806,
+          "scrollHeight": 806,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 611.8125,
+          "clientHeight": 612,
+          "scrollHeight": 612,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.46875,
+          "clientHeight": 325,
+          "scrollHeight": 325,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.46875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 362.96875,
+          "clientHeight": 363,
+          "scrollHeight": 363,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 362.96875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 511.71875,
+          "clientHeight": 512,
+          "scrollHeight": 512,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 511.71875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625,
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 325.65625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 611.8125,
+          "clientHeight": 612,
+          "scrollHeight": 612,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 358.09375,
+          "clientHeight": 358,
+          "scrollHeight": 358,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 358.09375
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-portrait",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 768,
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 1024
+        },
+        "content": {
+          "x": 124,
+          "y": 334.078125,
+          "width": 520,
+          "height": 611.8125,
+          "clientHeight": 612,
+          "scrollHeight": 612,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 655.078125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 366.203125,
+          "clientHeight": 366,
+          "scrollHeight": 366,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 366.203125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 381.96875,
+          "clientHeight": 382,
+          "scrollHeight": 382,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 381.96875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 575.828125,
+          "clientHeight": 576,
+          "scrollHeight": 576,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 575.828125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25,
+          "clientHeight": 394,
+          "scrollHeight": 394,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 394.25
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 655.078125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 397.65625,
+          "clientHeight": 398,
+          "scrollHeight": 398,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 397.65625
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "tablet-landscape",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1024,
+          "clientWidth": 1024,
+          "scrollWidth": 1024,
+          "scrollHeight": 768
+        },
+        "content": {
+          "x": 569.875,
+          "y": 22,
+          "width": 430.125,
+          "height": 655.078125,
+          "clientHeight": 655,
+          "scrollHeight": 655,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375,
+          "clientHeight": 348,
+          "scrollHeight": 348,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375,
+          "clientHeight": 385,
+          "scrollHeight": 385,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 538.625,
+          "clientHeight": 539,
+          "scrollHeight": 539,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 538.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125,
+          "clientHeight": 401,
+          "scrollHeight": 401,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1280",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1280,
+          "clientWidth": 1280,
+          "scrollWidth": 1280,
+          "scrollHeight": 800
+        },
+        "content": {
+          "x": 744.40625,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375,
+          "clientHeight": 348,
+          "scrollHeight": 348,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 348.484375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375,
+          "clientHeight": 385,
+          "scrollHeight": 385,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 384.84375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 538.625,
+          "clientHeight": 539,
+          "scrollHeight": 539,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 538.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125,
+          "clientHeight": 397,
+          "scrollHeight": 397,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 397.125
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125,
+          "clientHeight": 401,
+          "scrollHeight": 401,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 400.53125
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "pc-1440",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "content": {
+          "x": 869.078125,
+          "y": 22,
+          "width": 480,
+          "height": 661.640625,
+          "clientHeight": 662,
+          "scrollHeight": 662,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 652.421875,
+          "clientHeight": 652,
+          "scrollHeight": 652,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "recovery-menu",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "request-code"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 364.109375,
+          "clientHeight": 364,
+          "scrollHeight": 364,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 364.109375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "back-to-menu-request-code",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "token",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875,
+          "clientHeight": 380,
+          "scrollHeight": 380,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "back-to-menu-reset-password",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "email",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 597.734375,
+          "clientHeight": 598,
+          "scrollHeight": 598,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 597.734375
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "back-to-menu-recover-mfa",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": true,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625,
+          "clientHeight": 409,
+          "scrollHeight": 409,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 408.625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "recovery-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 652.421875,
+          "clientHeight": 652,
+          "scrollHeight": 652,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BODY",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625,
+          "clientHeight": 440,
+          "scrollHeight": 440,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "android-desktop-mode-980",
+      "stage": "invitation-back-to-login",
+      "state": {
+        "loginVisible": true,
+        "recoveryVisible": false,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "H2",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 652.421875,
+          "clientHeight": 652,
+          "scrollHeight": 652,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "email-link",
+      "stage": "password_recovery",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "reset-password"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "BUTTON",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875,
+          "clientHeight": 380,
+          "scrollHeight": 380,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 379.875
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "tokenPrefilled": true
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "email-link",
+      "stage": "mfa_recovery",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": true,
+        "invitationVisible": false,
+        "menuVisible": false,
+        "visibleScreens": [
+          "recover-mfa"
+        ],
+        "activeElementHidden": false,
+        "activeElement": "BUTTON",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 339.140625,
+          "clientHeight": 339,
+          "scrollHeight": 339,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 339.140625
+        },
+        "invitation": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "tokenPrefilled": true
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "email-link",
+      "stage": "membership_invitation",
+      "state": {
+        "loginVisible": false,
+        "recoveryVisible": false,
+        "invitationVisible": true,
+        "menuVisible": false,
+        "visibleScreens": [],
+        "activeElementHidden": false,
+        "activeElement": "BUTTON",
+        "root": {
+          "innerWidth": 980,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "scrollHeight": 720
+        },
+        "content": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625,
+          "clientHeight": 440,
+          "scrollHeight": 440,
+          "overflowY": "visible"
+        },
+        "recovery": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "invitation": {
+          "x": 545.296875,
+          "y": 22,
+          "width": 410.703125,
+          "height": 440.15625
+        },
+        "tokenPrefilled": true
+      }
+    },
+    {
+      "theme": "light",
+      "viewport": "phone-390",
+      "stage": "invalid-email-native-validation",
+      "state": {
+        "valid": false,
+        "status": ""
+      }
+    }
+  ],
+  "exceptions": [],
+  "httpErrors": [
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    },
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    }
+  ],
+  "postRequests": [],
+  "shortViewportChecks": [
+    {
+      "theme": "dark",
+      "stage": "recovery-menu",
+      "found": true,
+      "bottom": 413.28125,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "dark",
+      "stage": "request-code",
+      "found": true,
+      "bottom": 392.671875,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "dark",
+      "stage": "reset-password",
+      "found": true,
+      "bottom": 431.234375,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "dark",
+      "stage": "recover-mfa",
+      "found": true,
+      "bottom": 511.078125,
+      "viewport": 560,
+      "scrollTop": 81,
+      "scrollHeight": 641,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "dark",
+      "stage": "invitation",
+      "found": true,
+      "bottom": 426.421875,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "light",
+      "stage": "recovery-menu",
+      "found": true,
+      "bottom": 413.28125,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "light",
+      "stage": "request-code",
+      "found": true,
+      "bottom": 392.671875,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "light",
+      "stage": "reset-password",
+      "found": true,
+      "bottom": 431.234375,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "light",
+      "stage": "recover-mfa",
+      "found": true,
+      "bottom": 511.078125,
+      "viewport": 560,
+      "scrollTop": 81,
+      "scrollHeight": 641,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    },
+    {
+      "theme": "light",
+      "stage": "invitation",
+      "found": true,
+      "bottom": 426.421875,
+      "viewport": 560,
+      "scrollTop": 0,
+      "scrollHeight": 560,
+      "clientHeight": 560,
+      "overflowY": "auto"
+    }
+  ]
+}

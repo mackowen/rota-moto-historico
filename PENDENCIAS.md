@@ -2366,3 +2366,11 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - Login: correção estrutural de layout concluída e validada em CDP; permanecem pendentes inspeção física no Chrome Android e aprovação visual do proprietário. Login/MFA/convite/recuperação E2E não executados por falta de sessão sintética autorizada.
 - QR temporário: apresentação responsiva validada com fixture visual sem token; permanecem pendentes emissão real autenticada, expiração/renovação em serviço, leitura por Motoboy, persistência independente e check-in cross-app, conforme contrato. Não foi feita escrita no banco oficial.
 - Pendências anteriores de Rotas, sincronização, concorrência, RBAC, offline e regressões acumuladas permanecem vigentes; nenhuma foi encerrada nesta atualização. G14 continua FAIL; campanha 0304 PARTIAL/aberta.
+
+## Atualização Campanha 0304 — recuperação e convite — 2026-10-26
+
+- [ ] Executar E2E autenticado isolado para entrega de email neutra, consumo de código de recuperação, expiração/reuso e confirmação independente do novo login/senha.
+- [ ] Validar convites válidos, expirados, reutilizados e cross-tenant com MFA/RBAC reais no ambiente E2E autorizado.
+- [ ] Validar recuperação MFA com aprovação por outro administrador e fluxo de proprietário único conforme procedimento local; nenhuma sessão/MFA real foi contornada.
+- [ ] Conferir visualmente no Chrome Android físico e obter aprovação do proprietário. CDP emulado registrou 184 estados; não substitui inspeção física nem aprovação. G14 segue FAIL.
+- [ ] Preservar pendências anteriores desde a Campanha 0257; nenhuma foi encerrada por esta intervenção.
