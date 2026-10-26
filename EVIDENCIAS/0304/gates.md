@@ -340,3 +340,17 @@ Esta matriz não encerra gates anteriores, backlog ou a Campanha 0304. Sem PASS 
 | Fidelidade/aprovação | PARTIAL; G14 **FAIL** | Esboços acessíveis e capturas técnicas arquivadas; decisão visual final pertence ao proprietário. |
 
 A fixture CDP não equivale a E2E autenticado nem a dispositivo físico. Campanha permanece PARTIAL/aberta e backlog cumulativo preservado.
+
+## Relatórios V2 — Parte D
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| Origem/situação de sync | PASS técnico | IndexedDB declarado; confirmação exige ciclo completo e tenant atual; estados de pendência, tenant divergente, offline, sessão e erro cobertos. |
+| API/PostgreSQL E2E isolado | PASS | `test-domain-sync-postgres.js` em `rotamoto_e2e`; tenant isolation, revisão, handover/idempotência, rollback sem resíduo. |
+| Auditoria PostgreSQL oficial | BLOCKED | Papel `rotamoto_auditor` sem senha; nenhuma leitura/paridade nem contorno. |
+| Suíte/sintaxe/cache | PASS | `npm test` exit 0, node checks, diff check e hashes Nginx conferidos. |
+| Fonte de faturamento | PARTIAL/BLOCKED | Liquidação e razão consolidada de ajustes não comprovadas. |
+| Browser autenticado/Android físico | BLOCKED | Sessão autorizada e dispositivo ausentes. |
+| G14 | **FAIL** | Aprovação visual expressa pendente. |
+
+Detalhes: [`relatorios-v2-parte-d-2026-10-26`](relatorios-v2-parte-d-2026-10-26/README.md). Campanha 0304 PARTIAL/aberta; Parte E/0305 não iniciadas.
