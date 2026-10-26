@@ -1,0 +1,5557 @@
+{
+  "installed": {
+    "ready": true,
+    "report": "Visão GeralEntregasFinanceiroMotoboysHoráriosClientesEndereç",
+    "kpis": 10
+  },
+  "structuralChecks": [
+    {
+      "name": "Executive is default",
+      "ok": true
+    },
+    {
+      "name": "Operational panel starts hidden",
+      "ok": true
+    },
+    {
+      "name": "one date and rider filter shared",
+      "ok": true
+    },
+    {
+      "name": "only one executive category visible",
+      "ok": true
+    },
+    {
+      "name": "eight operational sections represented",
+      "ok": true
+    },
+    {
+      "name": "executive shows no operational section",
+      "ok": true
+    },
+    {
+      "name": "executive category changes panel",
+      "ok": true
+    },
+    {
+      "name": "main tab toggles without losing filters",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-overview-details",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-deliveries",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-fleet",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-costs",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-intelligence",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-quality",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-territory",
+      "ok": true
+    },
+    {
+      "name": "direct operational navigation report-export",
+      "ok": true
+    },
+    {
+      "name": "all eight operational sections directly reachable",
+      "ok": true
+    },
+    {
+      "name": "executive See more opens matching detailed section",
+      "ok": true
+    },
+    {
+      "name": "primary tabs support arrow-key navigation",
+      "ok": true
+    },
+    {
+      "name": "filter values and view choice remain coherent",
+      "ok": true
+    }
+  ],
+  "measurements": [
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 320,
+        "height": 800
+      },
+      "documentWidth": 305,
+      "bodyWidth": 305,
+      "mainWidth": 305,
+      "nav": {
+        "x": 8,
+        "y": 368.3,
+        "width": 289,
+        "height": 114
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 281,
+        "height": 205.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 493.3,
+        "width": 281,
+        "height": 191.7
+      },
+      "containerType": "inline-size",
+      "containerWidth": 281,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 3,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 493.3,
+          "width": 135.5,
+          "height": 82
+        },
+        {
+          "x": 157.5,
+          "y": 493.3,
+          "width": 135.5,
+          "height": 82
+        },
+        {
+          "x": 12,
+          "y": 585.3,
+          "width": 135.5,
+          "height": 99.7
+        },
+        {
+          "x": 157.5,
+          "y": 585.3,
+          "width": 135.5,
+          "height": 99.7
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(23, 32, 51)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 684.9,
+          "width": 281,
+          "height": 197.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 892.4,
+          "width": 281,
+          "height": 184.4
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1076.8,
+          "width": 281,
+          "height": 197.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1284.2,
+          "width": 281,
+          "height": 194
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1488.3,
+          "width": 281,
+          "height": 115.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1604.2,
+          "width": 281,
+          "height": 150.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1765,
+          "width": 281,
+          "height": 150.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1925.9,
+          "width": 281,
+          "height": 161
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 305,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 800
+      },
+      "documentWidth": 305,
+      "bodyWidth": 305,
+      "mainWidth": 305,
+      "nav": {
+        "x": 8,
+        "y": 368.3,
+        "width": 289,
+        "height": 114
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 281,
+        "height": 205.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 493.3,
+        "width": 281,
+        "height": 191.7
+      },
+      "containerType": "inline-size",
+      "containerWidth": 281,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 3,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 493.3,
+          "width": 135.5,
+          "height": 82
+        },
+        {
+          "x": 157.5,
+          "y": 493.3,
+          "width": 135.5,
+          "height": 82
+        },
+        {
+          "x": 12,
+          "y": 585.3,
+          "width": 135.5,
+          "height": 99.7
+        },
+        {
+          "x": 157.5,
+          "y": 585.3,
+          "width": 135.5,
+          "height": 99.7
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(23, 32, 51)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 684.9,
+          "width": 281,
+          "height": 197.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 892.4,
+          "width": 281,
+          "height": 184.4
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 1076.8,
+          "width": 281,
+          "height": 197.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1284.2,
+          "width": 281,
+          "height": 194
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1488.3,
+          "width": 281,
+          "height": 115.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1604.2,
+          "width": 281,
+          "height": 150.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1765,
+          "width": 281,
+          "height": 150.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1925.9,
+          "width": 281,
+          "height": 161
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 305,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentWidth": 345,
+      "bodyWidth": 345,
+      "mainWidth": 345,
+      "nav": {
+        "x": 8,
+        "y": 314.3,
+        "width": 329,
+        "height": 70
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 321,
+        "height": 151.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 395.3,
+        "width": 321,
+        "height": 160
+      },
+      "containerType": "inline-size",
+      "containerWidth": 321,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 395.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 176.5,
+          "y": 395.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 12,
+          "y": 479.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 176.5,
+          "y": 479.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 555.3,
+          "width": 321,
+          "height": 193.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 758.7,
+          "width": 321,
+          "height": 180.4
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 939.1,
+          "width": 321,
+          "height": 193.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1140.6,
+          "width": 321,
+          "height": 169.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1318.3,
+          "width": 321,
+          "height": 111.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1430.2,
+          "width": 321,
+          "height": 146.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1585.1,
+          "width": 321,
+          "height": 146.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1740,
+          "width": 321,
+          "height": 157
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 345,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentWidth": 345,
+      "bodyWidth": 345,
+      "mainWidth": 345,
+      "nav": {
+        "x": 8,
+        "y": 314.3,
+        "width": 329,
+        "height": 70
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 321,
+        "height": 151.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 395.3,
+        "width": 321,
+        "height": 160
+      },
+      "containerType": "inline-size",
+      "containerWidth": 321,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(63, 77, 96)",
+          "background": "rgb(225, 230, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(63, 77, 96)",
+          "background": "rgb(225, 230, 235)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 395.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 176.5,
+          "y": 395.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 12,
+          "y": 479.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 176.5,
+          "y": 479.3,
+          "width": 156.5,
+          "height": 76
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(40, 48, 66)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 555.3,
+          "width": 321,
+          "height": 193.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 758.7,
+          "width": 321,
+          "height": 180.4
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 939.1,
+          "width": 321,
+          "height": 193.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1140.6,
+          "width": 321,
+          "height": 169.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1318.3,
+          "width": 321,
+          "height": 111.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1430.2,
+          "width": 321,
+          "height": 146.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1585.1,
+          "width": 321,
+          "height": 146.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1740,
+          "width": 321,
+          "height": 157
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 734,
+        "width": 345,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "mainWidth": 375,
+      "nav": {
+        "x": 8,
+        "y": 314.3,
+        "width": 359,
+        "height": 70
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 351,
+        "height": 151.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 395.3,
+        "width": 351,
+        "height": 160
+      },
+      "containerType": "inline-size",
+      "containerWidth": 351,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 395.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 191.5,
+          "y": 395.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 12,
+          "y": 479.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 191.5,
+          "y": 479.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 555.3,
+          "width": 351,
+          "height": 193.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 758.7,
+          "width": 351,
+          "height": 180.4
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 939.1,
+          "width": 351,
+          "height": 193.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1140.6,
+          "width": 351,
+          "height": 153.2
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1301.8,
+          "width": 351,
+          "height": 111.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1413.7,
+          "width": 351,
+          "height": 146.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1568.6,
+          "width": 351,
+          "height": 146.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1723.5,
+          "width": 351,
+          "height": 157
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 778,
+        "width": 375,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "mainWidth": 375,
+      "nav": {
+        "x": 8,
+        "y": 314.3,
+        "width": 359,
+        "height": 70
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 351,
+        "height": 151.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 395.3,
+        "width": 351,
+        "height": 160
+      },
+      "containerType": "inline-size",
+      "containerWidth": 351,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(56, 70, 89)",
+          "background": "rgb(235, 239, 243)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(56, 70, 89)",
+          "background": "rgb(235, 239, 243)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 395.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 191.5,
+          "y": 395.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 12,
+          "y": 479.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 191.5,
+          "y": 479.3,
+          "width": 171.5,
+          "height": 76
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(30, 39, 57)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 555.3,
+          "width": 351,
+          "height": 193.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 758.7,
+          "width": 351,
+          "height": 180.4
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 939.1,
+          "width": 351,
+          "height": 193.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1140.6,
+          "width": 351,
+          "height": 153.2
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1301.8,
+          "width": 351,
+          "height": 111.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1413.7,
+          "width": 351,
+          "height": 146.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1568.6,
+          "width": 351,
+          "height": 146.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1723.5,
+          "width": 351,
+          "height": 157
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 778,
+        "width": 375,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "documentWidth": 415,
+      "bodyWidth": 415,
+      "mainWidth": 415,
+      "nav": {
+        "x": 8,
+        "y": 314.3,
+        "width": 399,
+        "height": 70
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 391,
+        "height": 151.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 395.3,
+        "width": 391,
+        "height": 160
+      },
+      "containerType": "inline-size",
+      "containerWidth": 391,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 395.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 211.5,
+          "y": 395.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 12,
+          "y": 479.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 211.5,
+          "y": 479.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 555.3,
+          "width": 391,
+          "height": 193.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 758.7,
+          "width": 391,
+          "height": 185.2
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 943.9,
+          "width": 391,
+          "height": 193.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1145.4,
+          "width": 391,
+          "height": 153.2
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1306.6,
+          "width": 391,
+          "height": 111.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1418.5,
+          "width": 391,
+          "height": 146.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1573.4,
+          "width": 391,
+          "height": 146.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1728.3,
+          "width": 391,
+          "height": 157
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 866,
+        "width": 415,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "documentWidth": 415,
+      "bodyWidth": 415,
+      "mainWidth": 415,
+      "nav": {
+        "x": 8,
+        "y": 314.3,
+        "width": 399,
+        "height": 70
+      },
+      "filter": {
+        "x": 12,
+        "y": 149,
+        "width": 391,
+        "height": 151.3
+      },
+      "kpis": {
+        "x": 12,
+        "y": 395.3,
+        "width": 391,
+        "height": 160
+      },
+      "containerType": "inline-size",
+      "containerWidth": 391,
+      "kpiColumns": 2,
+      "chartRows": 1,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(56, 70, 89)",
+          "background": "rgb(235, 239, 243)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(56, 70, 89)",
+          "background": "rgb(235, 239, 243)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 12,
+          "y": 395.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 211.5,
+          "y": 395.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 12,
+          "y": 479.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 211.5,
+          "y": 479.3,
+          "width": 191.5,
+          "height": 76
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(30, 39, 57)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 12,
+          "y": 555.3,
+          "width": 391,
+          "height": 193.4
+        },
+        {
+          "title": "Status das entregas",
+          "x": 12,
+          "y": 758.7,
+          "width": 391,
+          "height": 185.2
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 12,
+          "y": 943.9,
+          "width": 391,
+          "height": 193.4
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 12,
+          "y": 1145.4,
+          "width": 391,
+          "height": 153.2
+        },
+        {
+          "title": "Top motoboys",
+          "x": 12,
+          "y": 1306.6,
+          "width": 391,
+          "height": 111.9
+        },
+        {
+          "title": "Top clientes",
+          "x": 12,
+          "y": 1418.5,
+          "width": 391,
+          "height": 146.9
+        },
+        {
+          "title": "Principais endereços",
+          "x": 12,
+          "y": 1573.4,
+          "width": 391,
+          "height": 146.9
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 12,
+          "y": 1728.3,
+          "width": 391,
+          "height": 157
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 866,
+        "width": 415,
+        "height": 66
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 720,
+        "height": 360
+      },
+      "documentWidth": 705,
+      "bodyWidth": 705,
+      "mainWidth": 457,
+      "nav": {
+        "x": 269.6,
+        "y": 341.1,
+        "width": 413.8,
+        "height": 74
+      },
+      "filter": {
+        "x": 269.6,
+        "y": 186.7,
+        "width": 413.8,
+        "height": 140.4
+      },
+      "kpis": {
+        "x": 269.6,
+        "y": 426.1,
+        "width": 413.8,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 414,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 269.6,
+          "y": 426.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 481.5,
+          "y": 426.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 269.6,
+          "y": 518.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 481.5,
+          "y": 518.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 269.6,
+          "y": 600.1,
+          "width": 413.8,
+          "height": 198.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 269.6,
+          "y": 808.8,
+          "width": 413.8,
+          "height": 203.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 269.6,
+          "y": 1012.7,
+          "width": 201.9,
+          "height": 262.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 481.5,
+          "y": 1012.7,
+          "width": 201.9,
+          "height": 262.3
+        },
+        {
+          "title": "Top motoboys",
+          "x": 269.6,
+          "y": 1285,
+          "width": 201.9,
+          "height": 117.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 269.6,
+          "y": 1402.2,
+          "width": 201.9,
+          "height": 172.5
+        },
+        {
+          "title": "Principais endereços",
+          "x": 481.5,
+          "y": 1402.2,
+          "width": 201.9,
+          "height": 172.5
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 269.6,
+          "y": 1584.7,
+          "width": 201.9,
+          "height": 236.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 720,
+        "height": 360
+      },
+      "documentWidth": 705,
+      "bodyWidth": 705,
+      "mainWidth": 457,
+      "nav": {
+        "x": 269.6,
+        "y": 341.1,
+        "width": 413.8,
+        "height": 74
+      },
+      "filter": {
+        "x": 269.6,
+        "y": 186.7,
+        "width": 413.8,
+        "height": 140.4
+      },
+      "kpis": {
+        "x": 269.6,
+        "y": 426.1,
+        "width": 413.8,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 414,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(63, 77, 96)",
+          "background": "rgb(225, 230, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(63, 77, 96)",
+          "background": "rgb(225, 230, 235)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 269.6,
+          "y": 426.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 481.5,
+          "y": 426.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 269.6,
+          "y": 518.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 481.5,
+          "y": 518.1,
+          "width": 201.9,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(40, 48, 66)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 269.6,
+          "y": 600.1,
+          "width": 413.8,
+          "height": 198.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 269.6,
+          "y": 808.8,
+          "width": 413.8,
+          "height": 203.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 269.6,
+          "y": 1012.7,
+          "width": 201.9,
+          "height": 262.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 481.5,
+          "y": 1012.7,
+          "width": 201.9,
+          "height": 262.3
+        },
+        {
+          "title": "Top motoboys",
+          "x": 269.6,
+          "y": 1285,
+          "width": 201.9,
+          "height": 117.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 269.6,
+          "y": 1402.2,
+          "width": 201.9,
+          "height": 172.5
+        },
+        {
+          "title": "Principais endereços",
+          "x": 481.5,
+          "y": 1402.2,
+          "width": 201.9,
+          "height": 172.5
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 269.6,
+          "y": 1584.7,
+          "width": 201.9,
+          "height": 236.9
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 800,
+        "height": 360
+      },
+      "documentWidth": 785,
+      "bodyWidth": 785,
+      "mainWidth": 537,
+      "nav": {
+        "x": 272,
+        "y": 327.4,
+        "width": 489,
+        "height": 74
+      },
+      "filter": {
+        "x": 272,
+        "y": 186.7,
+        "width": 489,
+        "height": 126.6
+      },
+      "kpis": {
+        "x": 272,
+        "y": 412.4,
+        "width": 489,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 489,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 272,
+          "y": 412.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 521.5,
+          "y": 412.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 272,
+          "y": 504.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 521.5,
+          "y": 504.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 272,
+          "y": 586.4,
+          "width": 489,
+          "height": 198.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 272,
+          "y": 795,
+          "width": 489,
+          "height": 233.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 272,
+          "y": 1028.6,
+          "width": 239.5,
+          "height": 229.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 521.5,
+          "y": 1028.6,
+          "width": 239.5,
+          "height": 229.3
+        },
+        {
+          "title": "Top motoboys",
+          "x": 272,
+          "y": 1267.9,
+          "width": 239.5,
+          "height": 117.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 272,
+          "y": 1385.2,
+          "width": 239.5,
+          "height": 152.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 521.5,
+          "y": 1385.2,
+          "width": 239.5,
+          "height": 152.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 272,
+          "y": 1547.4,
+          "width": 239.5,
+          "height": 199
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 800,
+        "height": 360
+      },
+      "documentWidth": 785,
+      "bodyWidth": 785,
+      "mainWidth": 537,
+      "nav": {
+        "x": 272,
+        "y": 327.4,
+        "width": 489,
+        "height": 74
+      },
+      "filter": {
+        "x": 272,
+        "y": 186.7,
+        "width": 489,
+        "height": 126.6
+      },
+      "kpis": {
+        "x": 272,
+        "y": 412.4,
+        "width": 489,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 489,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(63, 77, 96)",
+          "background": "rgb(225, 230, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(63, 77, 96)",
+          "background": "rgb(225, 230, 235)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 272,
+          "y": 412.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 521.5,
+          "y": 412.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 272,
+          "y": 504.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 521.5,
+          "y": 504.4,
+          "width": 239.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(40, 48, 66)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 272,
+          "y": 586.4,
+          "width": 489,
+          "height": 198.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 272,
+          "y": 795,
+          "width": 489,
+          "height": 233.6
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 272,
+          "y": 1028.6,
+          "width": 239.5,
+          "height": 229.3
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 521.5,
+          "y": 1028.6,
+          "width": 239.5,
+          "height": 229.3
+        },
+        {
+          "title": "Top motoboys",
+          "x": 272,
+          "y": 1267.9,
+          "width": 239.5,
+          "height": 117.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 272,
+          "y": 1385.2,
+          "width": 239.5,
+          "height": 152.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 521.5,
+          "y": 1385.2,
+          "width": 239.5,
+          "height": 152.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 272,
+          "y": 1547.4,
+          "width": 239.5,
+          "height": 199
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 829,
+      "bodyWidth": 829,
+      "mainWidth": 581,
+      "nav": {
+        "x": 273.3,
+        "y": 331.1,
+        "width": 530.4,
+        "height": 74
+      },
+      "filter": {
+        "x": 273.3,
+        "y": 188.5,
+        "width": 530.4,
+        "height": 128.6
+      },
+      "kpis": {
+        "x": 273.3,
+        "y": 416.1,
+        "width": 530.4,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 530,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 273.3,
+          "y": 416.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 543.5,
+          "y": 416.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 273.3,
+          "y": 508.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 543.5,
+          "y": 508.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 273.3,
+          "y": 590.1,
+          "width": 238.4,
+          "height": 213.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 523.7,
+          "y": 590.1,
+          "width": 280,
+          "height": 213.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 273.3,
+          "y": 803.4,
+          "width": 259.2,
+          "height": 231.7
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 544.5,
+          "y": 803.4,
+          "width": 259.2,
+          "height": 231.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 273.3,
+          "y": 1047.1,
+          "width": 259.2,
+          "height": 118.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 273.3,
+          "y": 1165.7,
+          "width": 259.2,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 544.5,
+          "y": 1165.7,
+          "width": 259.2,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 273.3,
+          "y": 1331.3,
+          "width": 259.2,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "documentWidth": 829,
+      "bodyWidth": 829,
+      "mainWidth": 581,
+      "nav": {
+        "x": 273.3,
+        "y": 331.1,
+        "width": 530.4,
+        "height": 74
+      },
+      "filter": {
+        "x": 273.3,
+        "y": 188.5,
+        "width": 530.4,
+        "height": 128.6
+      },
+      "kpis": {
+        "x": 273.3,
+        "y": 416.1,
+        "width": 530.4,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 530,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(52, 66, 86)",
+          "background": "rgb(240, 244, 248)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(52, 66, 86)",
+          "background": "rgb(240, 244, 248)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 273.3,
+          "y": 416.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 543.5,
+          "y": 416.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 273.3,
+          "y": 508.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 543.5,
+          "y": 508.1,
+          "width": 260.2,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(25, 34, 52)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 273.3,
+          "y": 590.1,
+          "width": 238.4,
+          "height": 213.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 523.7,
+          "y": 590.1,
+          "width": 280,
+          "height": 213.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 273.3,
+          "y": 803.4,
+          "width": 259.2,
+          "height": 231.7
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 544.5,
+          "y": 803.4,
+          "width": 259.2,
+          "height": 231.7
+        },
+        {
+          "title": "Top motoboys",
+          "x": 273.3,
+          "y": 1047.1,
+          "width": 259.2,
+          "height": 118.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 273.3,
+          "y": 1165.7,
+          "width": 259.2,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 544.5,
+          "y": 1165.7,
+          "width": 259.2,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 273.3,
+          "y": 1331.3,
+          "width": 259.2,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 932,
+        "height": 430
+      },
+      "documentWidth": 917,
+      "bodyWidth": 917,
+      "mainWidth": 669,
+      "nav": {
+        "x": 276,
+        "y": 335.1,
+        "width": 613.1,
+        "height": 74
+      },
+      "filter": {
+        "x": 276,
+        "y": 192.5,
+        "width": 613.1,
+        "height": 128.6
+      },
+      "kpis": {
+        "x": 276,
+        "y": 420.1,
+        "width": 613.1,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 613,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 276,
+          "y": 420.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 587.5,
+          "y": 420.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 276,
+          "y": 512.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 587.5,
+          "y": 512.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 276,
+          "y": 594.1,
+          "width": 321.1,
+          "height": 213.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 609,
+          "y": 594.1,
+          "width": 280,
+          "height": 213.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 276,
+          "y": 807.4,
+          "width": 300.5,
+          "height": 213.2
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 588.5,
+          "y": 807.4,
+          "width": 300.5,
+          "height": 213.2
+        },
+        {
+          "title": "Top motoboys",
+          "x": 276,
+          "y": 1032.7,
+          "width": 300.5,
+          "height": 118.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 276,
+          "y": 1151.3,
+          "width": 300.5,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 588.5,
+          "y": 1151.3,
+          "width": 300.5,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 276,
+          "y": 1316.8,
+          "width": 300.5,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 932,
+        "height": 430
+      },
+      "documentWidth": 917,
+      "bodyWidth": 917,
+      "mainWidth": 669,
+      "nav": {
+        "x": 276,
+        "y": 335.1,
+        "width": 613.1,
+        "height": 74
+      },
+      "filter": {
+        "x": 276,
+        "y": 192.5,
+        "width": 613.1,
+        "height": 128.6
+      },
+      "kpis": {
+        "x": 276,
+        "y": 420.1,
+        "width": 613.1,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 613,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(52, 66, 86)",
+          "background": "rgb(240, 244, 248)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(52, 66, 86)",
+          "background": "rgb(240, 244, 248)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 276,
+          "y": 420.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 587.5,
+          "y": 420.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 276,
+          "y": 512.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 587.5,
+          "y": 512.1,
+          "width": 301.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(25, 34, 52)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 276,
+          "y": 594.1,
+          "width": 321.1,
+          "height": 213.3
+        },
+        {
+          "title": "Status das entregas",
+          "x": 609,
+          "y": 594.1,
+          "width": 280,
+          "height": 213.3
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 276,
+          "y": 807.4,
+          "width": 300.5,
+          "height": 213.2
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 588.5,
+          "y": 807.4,
+          "width": 300.5,
+          "height": 213.2
+        },
+        {
+          "title": "Top motoboys",
+          "x": 276,
+          "y": 1032.7,
+          "width": 300.5,
+          "height": 118.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 276,
+          "y": 1151.3,
+          "width": 300.5,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 588.5,
+          "y": 1151.3,
+          "width": 300.5,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 276,
+          "y": 1316.8,
+          "width": 300.5,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "mainWidth": 505,
+      "nav": {
+        "x": 271,
+        "y": 327.4,
+        "width": 458.9,
+        "height": 74
+      },
+      "filter": {
+        "x": 271,
+        "y": 186.7,
+        "width": 458.9,
+        "height": 126.6
+      },
+      "kpis": {
+        "x": 271,
+        "y": 412.4,
+        "width": 458.9,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 459,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 271,
+          "y": 412.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 505.5,
+          "y": 412.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 271,
+          "y": 504.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 505.5,
+          "y": 504.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 271,
+          "y": 586.4,
+          "width": 458.9,
+          "height": 198.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 271,
+          "y": 795,
+          "width": 458.9,
+          "height": 222
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 271,
+          "y": 1017,
+          "width": 224.5,
+          "height": 245.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 505.5,
+          "y": 1017,
+          "width": 224.5,
+          "height": 245.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 271,
+          "y": 1272.8,
+          "width": 224.5,
+          "height": 117.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 271,
+          "y": 1390,
+          "width": 224.5,
+          "height": 152.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 505.5,
+          "y": 1390,
+          "width": 224.5,
+          "height": 152.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 271,
+          "y": 1552.3,
+          "width": 224.5,
+          "height": 216.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "mainWidth": 505,
+      "nav": {
+        "x": 271,
+        "y": 327.4,
+        "width": 458.9,
+        "height": 74
+      },
+      "filter": {
+        "x": 271,
+        "y": 186.7,
+        "width": 458.9,
+        "height": 126.6
+      },
+      "kpis": {
+        "x": 271,
+        "y": 412.4,
+        "width": 458.9,
+        "height": 174
+      },
+      "containerType": "inline-size",
+      "containerWidth": 459,
+      "kpiColumns": 2,
+      "chartRows": 2,
+      "categoryColumns": 4,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 271,
+          "y": 412.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 505.5,
+          "y": 412.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 271,
+          "y": 504.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 505.5,
+          "y": 504.4,
+          "width": 224.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(23, 32, 51)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 271,
+          "y": 586.4,
+          "width": 458.9,
+          "height": 198.6
+        },
+        {
+          "title": "Status das entregas",
+          "x": 271,
+          "y": 795,
+          "width": 458.9,
+          "height": 222
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 271,
+          "y": 1017,
+          "width": 224.5,
+          "height": 245.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 505.5,
+          "y": 1017,
+          "width": 224.5,
+          "height": 245.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 271,
+          "y": 1272.8,
+          "width": 224.5,
+          "height": 117.3
+        },
+        {
+          "title": "Top clientes",
+          "x": 271,
+          "y": 1390,
+          "width": 224.5,
+          "height": 152.3
+        },
+        {
+          "title": "Principais endereços",
+          "x": 505.5,
+          "y": 1390,
+          "width": 224.5,
+          "height": 152.3
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 271,
+          "y": 1552.3,
+          "width": 224.5,
+          "height": 216.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "mainWidth": 753,
+      "nav": {
+        "x": 286.7,
+        "y": 290.1,
+        "width": 691.6,
+        "height": 50.2
+      },
+      "filter": {
+        "x": 286.7,
+        "y": 194.5,
+        "width": 691.6,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 286.7,
+        "y": 351.3,
+        "width": 691.6,
+        "height": 96.2
+      },
+      "containerType": "inline-size",
+      "containerWidth": 692,
+      "kpiColumns": 4,
+      "chartRows": 2,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 286.7,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 462.1,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 637.5,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 812.9,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 286.7,
+          "y": 447.5,
+          "width": 379.3,
+          "height": 228.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 678,
+          "y": 447.5,
+          "width": 300.3,
+          "height": 228.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 286.7,
+          "y": 676.4,
+          "width": 339.8,
+          "height": 228.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 638.5,
+          "y": 676.4,
+          "width": 339.8,
+          "height": 228.9
+        },
+        {
+          "title": "Top motoboys",
+          "x": 286.7,
+          "y": 917.3,
+          "width": 339.8,
+          "height": 118.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 286.7,
+          "y": 1035.9,
+          "width": 339.8,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 638.5,
+          "y": 1035.9,
+          "width": 339.8,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 286.7,
+          "y": 1201.5,
+          "width": 339.8,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "mainWidth": 753,
+      "nav": {
+        "x": 286.7,
+        "y": 290.1,
+        "width": 691.6,
+        "height": 50.2
+      },
+      "filter": {
+        "x": 286.7,
+        "y": 194.5,
+        "width": 691.6,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 286.7,
+        "y": 351.3,
+        "width": 691.6,
+        "height": 96.2
+      },
+      "containerType": "inline-size",
+      "containerWidth": 692,
+      "kpiColumns": 4,
+      "chartRows": 2,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(52, 66, 86)",
+          "background": "rgb(240, 244, 248)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(52, 66, 86)",
+          "background": "rgb(240, 244, 248)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 286.7,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 462.1,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 637.5,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 812.9,
+          "y": 351.3,
+          "width": 165.4,
+          "height": 96.2
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(25, 34, 52)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 286.7,
+          "y": 447.5,
+          "width": 379.3,
+          "height": 228.9
+        },
+        {
+          "title": "Status das entregas",
+          "x": 678,
+          "y": 447.5,
+          "width": 300.3,
+          "height": 228.9
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 286.7,
+          "y": 676.4,
+          "width": 339.8,
+          "height": 228.9
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 638.5,
+          "y": 676.4,
+          "width": 339.8,
+          "height": 228.9
+        },
+        {
+          "title": "Top motoboys",
+          "x": 286.7,
+          "y": 917.3,
+          "width": 339.8,
+          "height": 118.6
+        },
+        {
+          "title": "Top clientes",
+          "x": 286.7,
+          "y": 1035.9,
+          "width": 339.8,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 638.5,
+          "y": 1035.9,
+          "width": 339.8,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 286.7,
+          "y": 1201.5,
+          "width": 339.8,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "mainWidth": 1009,
+      "nav": {
+        "x": 294.4,
+        "y": 294,
+        "width": 932.2,
+        "height": 34
+      },
+      "filter": {
+        "x": 294.4,
+        "y": 198.4,
+        "width": 932.2,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 294.4,
+        "y": 339,
+        "width": 932.2,
+        "height": 82
+      },
+      "containerType": "inline-size",
+      "containerWidth": 932,
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 294.4,
+          "y": 339,
+          "width": 225.5,
+          "height": 82
+        },
+        {
+          "x": 529.9,
+          "y": 339,
+          "width": 225.6,
+          "height": 82
+        },
+        {
+          "x": 765.5,
+          "y": 339,
+          "width": 225.5,
+          "height": 82
+        },
+        {
+          "x": 1001,
+          "y": 339,
+          "width": 225.6,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 294.4,
+          "y": 421,
+          "width": 513.6,
+          "height": 259.8
+        },
+        {
+          "title": "Status das entregas",
+          "x": 820,
+          "y": 421,
+          "width": 406.6,
+          "height": 259.8
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 294.4,
+          "y": 680.8,
+          "width": 302.7,
+          "height": 259.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 609.1,
+          "y": 680.8,
+          "width": 302.7,
+          "height": 259.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 923.9,
+          "y": 680.8,
+          "width": 302.8,
+          "height": 259.8
+        },
+        {
+          "title": "Top clientes",
+          "x": 294.4,
+          "y": 940.6,
+          "width": 302.7,
+          "height": 163.4
+        },
+        {
+          "title": "Principais endereços",
+          "x": 609.1,
+          "y": 940.6,
+          "width": 302.7,
+          "height": 163.4
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 923.9,
+          "y": 940.6,
+          "width": 302.8,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "mainWidth": 1009,
+      "nav": {
+        "x": 294.4,
+        "y": 294,
+        "width": 932.2,
+        "height": 34
+      },
+      "filter": {
+        "x": 294.4,
+        "y": 198.4,
+        "width": 932.2,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 294.4,
+        "y": 339,
+        "width": 932.2,
+        "height": 82
+      },
+      "containerType": "inline-size",
+      "containerWidth": 932,
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 294.4,
+          "y": 339,
+          "width": 225.5,
+          "height": 82
+        },
+        {
+          "x": 529.9,
+          "y": 339,
+          "width": 225.6,
+          "height": 82
+        },
+        {
+          "x": 765.5,
+          "y": 339,
+          "width": 225.5,
+          "height": 82
+        },
+        {
+          "x": 1001,
+          "y": 339,
+          "width": 225.6,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(23, 32, 51)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 294.4,
+          "y": 421,
+          "width": 513.6,
+          "height": 259.8
+        },
+        {
+          "title": "Status das entregas",
+          "x": 820,
+          "y": 421,
+          "width": 406.6,
+          "height": 259.8
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 294.4,
+          "y": 680.8,
+          "width": 302.7,
+          "height": 259.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 609.1,
+          "y": 680.8,
+          "width": 302.7,
+          "height": 259.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 923.9,
+          "y": 680.8,
+          "width": 302.8,
+          "height": 259.8
+        },
+        {
+          "title": "Top clientes",
+          "x": 294.4,
+          "y": 940.6,
+          "width": 302.7,
+          "height": 163.4
+        },
+        {
+          "title": "Principais endereços",
+          "x": 609.1,
+          "y": 940.6,
+          "width": 302.7,
+          "height": 163.4
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 923.9,
+          "y": 940.6,
+          "width": 302.8,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "mainWidth": 1169,
+      "nav": {
+        "x": 299.2,
+        "y": 298,
+        "width": 1082.6,
+        "height": 34
+      },
+      "filter": {
+        "x": 299.2,
+        "y": 202.4,
+        "width": 1082.6,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 299.2,
+        "y": 343,
+        "width": 1082.6,
+        "height": 82
+      },
+      "containerType": "inline-size",
+      "containerWidth": 1083,
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 299.2,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 572.3,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 845.5,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 1118.7,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 299.2,
+          "y": 425,
+          "width": 597.5,
+          "height": 259.8
+        },
+        {
+          "title": "Status das entregas",
+          "x": 908.7,
+          "y": 425,
+          "width": 473.1,
+          "height": 259.8
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 299.2,
+          "y": 684.8,
+          "width": 352.9,
+          "height": 259.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 664.1,
+          "y": 684.8,
+          "width": 352.9,
+          "height": 259.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1028.9,
+          "y": 684.8,
+          "width": 352.9,
+          "height": 259.8
+        },
+        {
+          "title": "Top clientes",
+          "x": 299.2,
+          "y": 944.6,
+          "width": 352.9,
+          "height": 163.4
+        },
+        {
+          "title": "Principais endereços",
+          "x": 664.1,
+          "y": 944.6,
+          "width": 352.9,
+          "height": 163.4
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1028.9,
+          "y": 944.6,
+          "width": 352.9,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "mainWidth": 1169,
+      "nav": {
+        "x": 299.2,
+        "y": 298,
+        "width": 1082.6,
+        "height": 34
+      },
+      "filter": {
+        "x": 299.2,
+        "y": 202.4,
+        "width": 1082.6,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 299.2,
+        "y": 343,
+        "width": 1082.6,
+        "height": 82
+      },
+      "containerType": "inline-size",
+      "containerWidth": 1083,
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 299.2,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 572.3,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 845.5,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 1118.7,
+          "y": 343,
+          "width": 263.2,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(23, 32, 51)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 299.2,
+          "y": 425,
+          "width": 597.5,
+          "height": 259.8
+        },
+        {
+          "title": "Status das entregas",
+          "x": 908.7,
+          "y": 425,
+          "width": 473.1,
+          "height": 259.8
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 299.2,
+          "y": 684.8,
+          "width": 352.9,
+          "height": 259.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 664.1,
+          "y": 684.8,
+          "width": 352.9,
+          "height": 259.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1028.9,
+          "y": 684.8,
+          "width": 352.9,
+          "height": 259.8
+        },
+        {
+          "title": "Top clientes",
+          "x": 299.2,
+          "y": 944.6,
+          "width": 352.9,
+          "height": 163.4
+        },
+        {
+          "title": "Principais endereços",
+          "x": 664.1,
+          "y": 944.6,
+          "width": 352.9,
+          "height": 163.4
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1028.9,
+          "y": 944.6,
+          "width": 352.9,
+          "height": 163.4
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "mainWidth": 1600,
+      "nav": {
+        "x": 328.5,
+        "y": 298.4,
+        "width": 1504,
+        "height": 34
+      },
+      "filter": {
+        "x": 328.5,
+        "y": 202.8,
+        "width": 1504,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 328.5,
+        "y": 343.4,
+        "width": 1504,
+        "height": 82
+      },
+      "containerType": "inline-size",
+      "containerWidth": 1504,
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(210, 219, 229)",
+          "background": "rgb(32, 44, 58)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 328.5,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 707,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 1085.5,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 1464,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(244, 247, 251)",
+      "legendTextColor": "rgb(23, 32, 51)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 328.5,
+          "y": 425.4,
+          "width": 832.7,
+          "height": 259.8
+        },
+        {
+          "title": "Status das entregas",
+          "x": 1173.2,
+          "y": 425.4,
+          "width": 659.3,
+          "height": 259.8
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 328.5,
+          "y": 685.2,
+          "width": 493.3,
+          "height": 259.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 833.8,
+          "y": 685.2,
+          "width": 493.3,
+          "height": 259.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1339.2,
+          "y": 685.2,
+          "width": 493.3,
+          "height": 259.8
+        },
+        {
+          "title": "Top clientes",
+          "x": 328.5,
+          "y": 945,
+          "width": 493.3,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 833.8,
+          "y": 945,
+          "width": 493.3,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1339.2,
+          "y": 945,
+          "width": 493.3,
+          "height": 153.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(244, 247, 251)",
+        "card": "rgb(255, 255, 255)",
+        "text": "rgb(23, 32, 51)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "mainWidth": 1600,
+      "nav": {
+        "x": 328.5,
+        "y": 298.4,
+        "width": 1504,
+        "height": 34
+      },
+      "filter": {
+        "x": 328.5,
+        "y": 202.8,
+        "width": 1504,
+        "height": 81.6
+      },
+      "kpis": {
+        "x": 328.5,
+        "y": 343.4,
+        "width": 1504,
+        "height": 82
+      },
+      "containerType": "inline-size",
+      "containerWidth": 1504,
+      "kpiColumns": 4,
+      "chartRows": 3,
+      "categoryColumns": 7,
+      "categoryText": [
+        {
+          "text": "Visão Geral",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(37, 99, 235)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Entregas",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        },
+        {
+          "text": "Financeiro",
+          "color": "rgb(51, 65, 85)",
+          "background": "rgb(241, 245, 249)",
+          "opacity": "1",
+          "disabled": false
+        }
+      ],
+      "kpiRects": [
+        {
+          "x": 328.5,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 707,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 1085.5,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 1464,
+          "y": 343.4,
+          "width": 368.5,
+          "height": 82
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "legendColor": "rgb(23, 32, 51)",
+      "legendTextColor": "rgb(244, 247, 251)",
+      "cards": [
+        {
+          "title": "Entregas por dia",
+          "x": 328.5,
+          "y": 425.4,
+          "width": 832.7,
+          "height": 259.8
+        },
+        {
+          "title": "Status das entregas",
+          "x": 1173.2,
+          "y": 425.4,
+          "width": 659.3,
+          "height": 259.8
+        },
+        {
+          "title": "Entregas por horário",
+          "x": 328.5,
+          "y": 685.2,
+          "width": 493.3,
+          "height": 259.8
+        },
+        {
+          "title": "Faturamento por dia",
+          "x": 833.8,
+          "y": 685.2,
+          "width": 493.3,
+          "height": 259.8
+        },
+        {
+          "title": "Top motoboys",
+          "x": 1339.2,
+          "y": 685.2,
+          "width": 493.3,
+          "height": 259.8
+        },
+        {
+          "title": "Top clientes",
+          "x": 328.5,
+          "y": 945,
+          "width": 493.3,
+          "height": 153.6
+        },
+        {
+          "title": "Principais endereços",
+          "x": 833.8,
+          "y": 945,
+          "width": 493.3,
+          "height": 153.6
+        },
+        {
+          "title": "Mapa de entregas",
+          "x": 1339.2,
+          "y": 945,
+          "width": 493.3,
+          "height": 153.6
+        }
+      ],
+      "xlabels": [
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "01/10",
+        "07/10",
+        "13/10",
+        "19/10",
+        "25/10",
+        "00",
+        "05",
+        "10",
+        "15",
+        "20"
+      ],
+      "colors": {
+        "bg": "rgb(18, 26, 37)",
+        "card": "rgb(32, 44, 58)",
+        "text": "rgb(244, 247, 251)"
+      },
+      "bottomNav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "overflow": false
+    }
+  ],
+  "operationalMeasurements": [
+    {
+      "id": "report-overview-details",
+      "visiblePanels": 1,
+      "heading": "Visão geral operacional",
+      "panelHeight": 511.09375,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 1
+    },
+    {
+      "id": "report-deliveries",
+      "visiblePanels": 1,
+      "heading": "Entregas e desempenho",
+      "panelHeight": 475.390625,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 2
+    },
+    {
+      "id": "report-fleet",
+      "visiblePanels": 1,
+      "heading": "Motoboys e capacidade logística",
+      "panelHeight": 430.296875,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 0
+    },
+    {
+      "id": "report-costs",
+      "visiblePanels": 1,
+      "heading": "Custos e repasses",
+      "panelHeight": 549.328125,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 3
+    },
+    {
+      "id": "report-intelligence",
+      "visiblePanels": 1,
+      "heading": "Inteligência logística",
+      "panelHeight": 443,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 3
+    },
+    {
+      "id": "report-quality",
+      "visiblePanels": 1,
+      "heading": "Qualidade das decisões e estimativas",
+      "panelHeight": 390.90625,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 1
+    },
+    {
+      "id": "report-territory",
+      "visiblePanels": 1,
+      "heading": "Clientes e endereços",
+      "panelHeight": 476.140625,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 2
+    },
+    {
+      "id": "report-export",
+      "visiblePanels": 1,
+      "heading": "Exportação e detalhamento",
+      "panelHeight": 216.375,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 0
+    }
+  ],
+  "errors": [],
+  "responses": []
+}

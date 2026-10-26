@@ -289,3 +289,22 @@ Campanha permanece PARTIAL/aberta; integração/auth persistente não avança po
 | G14 — aprovação visual do proprietário | **FAIL** | Gate continua pendente de aprovação expressa. |
 
 Evidências: [`Relatórios V2 — separação`](relatorios-v2-separacao-2026-10-26/README.md). Parte 2 visual não iniciada. Campanha 0304 PARTIAL/aberta; 0305 não iniciada.
+
+## Relatórios V2 — acabamento visual Parte 2 — 2026-10-26
+
+| Gate da intervenção | Estado | Justificativa |
+|---|---|---|
+| Celular retrato claro/escuro | PARTIAL | Fixture cobre 320/360/390/430 px nos dois temas; aprovação e aparelho físico pendentes. |
+| Celular paisagem claro/escuro | PARTIAL | 720/800/844/932 px emulados; sem desenhos de referência independentes. |
+| Tablet claro | PARTIAL | 768×1024 e 1024×768 medidos; uma composição PC/tablet, sem aparelho físico. |
+| PC claro/escuro | PARTIAL | 1280×800, 1440×900 e 1920×1080 medidos; desenho ainda aguarda aceite humano. |
+| Abas, filtros persistidos e oito seções | PASS técnico | 20 checks CDP da fixture; sem E2E autenticado. |
+| Gráficos e KPIs | PARTIAL | SVG/rosca renderizam; fonte de faturamento indisponível, dados operacionais não autenticados. |
+| Rankings e mapa | PARTIAL | Sem geografia inventada; integração real não autenticada. |
+| Overflow e responsividade | PASS técnico | 26 viewport/tema sem overflow horizontal; JSON arquivado. |
+| Regressões, cache/offline, sintaxe | PASS | 12 testes direcionados, `node --check` em cinco arquivos e `git diff --check`. |
+| Acessibilidade/contraste | PARTIAL | Foco/semântica e cores consultados; WCAG instrumental/assistiva não executada. |
+| E2E autenticado/Android físico | BLOCKED | Sessão/tenant E2E autorizados e dispositivo Android indisponíveis. |
+| G14 aprovação visual | **FAIL** | Somente o proprietário pode aprovar. |
+
+Detalhes: [`relatorios-v2-acabamento-2026-10-26`](relatorios-v2-acabamento-2026-10-26/README.md). Campanha 0304 segue PARTIAL/aberta; 0305 não iniciada. Esta classificação não encerra gates ou backlog anteriores.
