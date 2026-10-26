@@ -402,4 +402,4 @@ Capturas, medidas, fonte/formula e limites: [`relatorios-v2-financeiro-parte-e`]
 | PostgreSQL oficial e promoção | BLOCKED | Não executados. `rotamoto_auditor` indisponível; migrações 0052–0055 não foram aplicadas no oficial. |
 | G14 / aprovação visual expressa | **FAIL** | Nenhuma aprovação visual expressa recebida. |
 
-Evidência detalhada/checklist não executado de promoção: [`financeiro-parte-g-2026-10-26`](financeiro-parte-g-2026-10-26/README.md). Restaurante commit local `46d1c4d`; histórico será push exclusivamente via fast-forward. Campanha 0304 permanece aberta; backlog 0257 preservado; 0305 não iniciada.
+Evidência detalhada/checklist não executado de promoção: [`financeiro-parte-g-2026-10-26`](financeiro-parte-g-2026-10-26/README.md). Restaurante commit local `46d1c4d0288a422a2f589782ea80a21db079d026`; histórico será push exclusivamente via fast-forward. Campanha 0304 permanece aberta; backlog 0257 preservado; 0305 não iniciada.

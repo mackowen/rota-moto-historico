@@ -2,7 +2,7 @@
 
 ## Escopo e base
 
-Continuação do commit Restaurante `45bcd9d9a2d449c38af015529982c9bb19d3a57b`; commit local Parte G `46d1c4d` (`feat(0304): add financial actions and concurrency guards`). Não houve alteração em `Order.money`, layout estrutural de Relatórios V2, Motoboy ou banco oficial. Migração 0055 e testes foram executados somente em `rotamoto_e2e`. Nenhuma operação financeira real foi criada.
+Continuação do commit Restaurante `45bcd9d9a2d449c38af015529982c9bb19d3a57b`; commit local Parte G `46d1c4d0288a422a2f589782ea80a21db079d026` (`feat(0304): add financial actions and concurrency guards`). Histórico da Parte G: `488f88dea6b6d3d49d7572eec018d36ae91cd072`. Não houve alteração em `Order.money`, layout estrutural de Relatórios V2, Motoboy ou banco oficial. Migração 0055 e testes foram executados somente em `rotamoto_e2e`. Nenhuma operação financeira real foi criada.
 
 ## Interface implementada
 
