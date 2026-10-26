@@ -1,0 +1,95 @@
+{
+  "installed": {
+    "ready": true,
+    "report": "Visão GeralEntregasFinanceiroMotoboysHoráriosClientesEndereç",
+    "kpis": 10
+  },
+  "structuralChecks": 20,
+  "cases": 26,
+  "overflows": [],
+  "operationalMeasurements": [
+    {
+      "id": "report-overview-details",
+      "visiblePanels": 1,
+      "heading": "Visão geral operacional",
+      "panelHeight": 511.09375,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 1
+    },
+    {
+      "id": "report-deliveries",
+      "visiblePanels": 1,
+      "heading": "Entregas e desempenho",
+      "panelHeight": 475.390625,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 2
+    },
+    {
+      "id": "report-fleet",
+      "visiblePanels": 1,
+      "heading": "Motoboys e capacidade logística",
+      "panelHeight": 430.296875,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 0
+    },
+    {
+      "id": "report-costs",
+      "visiblePanels": 1,
+      "heading": "Custos e repasses",
+      "panelHeight": 549.328125,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 3
+    },
+    {
+      "id": "report-intelligence",
+      "visiblePanels": 1,
+      "heading": "Inteligência logística",
+      "panelHeight": 443,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 3
+    },
+    {
+      "id": "report-quality",
+      "visiblePanels": 1,
+      "heading": "Qualidade das decisões e estimativas",
+      "panelHeight": 390.90625,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 1
+    },
+    {
+      "id": "report-territory",
+      "visiblePanels": 1,
+      "heading": "Clientes e endereços",
+      "panelHeight": 476.140625,
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 2
+    },
+    {
+      "id": "report-export",
+      "visiblePanels": 1,
+      "heading": "Exportação e detalhamento",
+      "panelHeight": 216.375,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "cards": 0
+    }
+  ],
+  "errors": [],
+  "responses": [],
+  "output": "/data/data/com.termux/files/home/projetos/browser-tests/.temporarias/0304-relatorios-v2-structure/capturas"
+}

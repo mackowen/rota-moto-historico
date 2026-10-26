@@ -308,3 +308,18 @@ Evidências: [`Relatórios V2 — separação`](relatorios-v2-separacao-2026-10-
 | G14 aprovação visual | **FAIL** | Somente o proprietário pode aprovar. |
 
 Detalhes: [`relatorios-v2-acabamento-2026-10-26`](relatorios-v2-acabamento-2026-10-26/README.md). Campanha 0304 segue PARTIAL/aberta; 0305 não iniciada. Esta classificação não encerra gates ou backlog anteriores.
+
+## Relatórios V2 — Parte B visual (2026-10-26)
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| Eixos e barras | PASS técnico | DOM 12 px, marcas distribuídas, contagem de pontos 0/1/5/20 coberta. |
+| KPIs e oito seções | PASS técnico | Medições 1440×900 registradas; todas continuam acessíveis. |
+| Receita e mapa indisponíveis | PASS renderer | Estados distintos, compacto e retry testado; sem dados fabricados. |
+| Responsividade técnica em claro/escuro | PASS em emulação | 28 combinações, sem overflow/erros. |
+| Regressão automatizada | PASS | `npm test` completo exit 0. |
+| Acessibilidade instrumental | PARTIAL | Semântica/foco cobertos, sem auditoria WCAG externa/leitor de tela. |
+| E2E autenticado / Android físico | BLOCKED | Não há autenticação nesta fixture; emulação não é aparelho físico. |
+| Fidelidade/aprovação visual | PARTIAL; G14 **FAIL** | Comparação visual arquivada, aguardando aprovação expressa do proprietário. |
+
+Esta matriz não encerra gates anteriores, backlog ou a Campanha 0304. Sem PASS global; 0305 não iniciada.

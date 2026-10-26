@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "mode": "empty",
+      "title": "Sem entregas elegíveisNão há entregas neste período para resumir no mapa.Atualizar mapaFiltros, cobertura e dados territoriaisIntensidadeVolumeTaxa média BRLTempo médioDistância real médiaDistância estimada médiaExecuçãoFrota própria e terceirosFrota própriaTerceirosProviderTodos0/0 com destino (indisponível)0 sem localização utilizável (0 com precisão acima de 100 m) · 0 célula(s) suprimida(s) por amostra baixaNão há entregas neste período para resumir no mapa. menor intermediária maiorBandas de volume e métricas por célula respeitam os limites mínimos de privacidade.RegiãoVolumeConcluídasCanceladasFalhasTempo médioDistância realDistância estimadaTaxa médiaPrópria/terceiroIntegraçãoSem regiões com volume suficiente neste recorte.Mapa agregado pelo servidor. Endereço, cliente, GPS individual e conteúdo do pedido não são retornados.",
+      "svg": false,
+      "details": true,
+      "manualForm": false,
+      "refresh": true,
+      "height": 84.03125
+    },
+    {
+      "mode": "insufficient",
+      "title": "Dados insuficientes para o mapaAs regiões só aparecem quando atingem o mínimo de 5 entregas; endereços individuais permanecem protegidos.Atualizar mapaFiltros, cobertura e dados territoriaisIntensidadeVolumeTaxa média BRLTempo médioDistância real médiaDistância estimada médiaExecuçãoFrota própria e terceirosFrota própriaTerceirosProviderTodos4/4 com destino (100.0%)0 sem localização utilizável (0 com precisão acima de 100 m) · 1 célula(s) suprimida(s) por amostra baixaAs regiões só aparecem quando atingem o mínimo de 5 entregas; endereços individuais permanecem protegidos. menor intermediária maiorBandas de volume e métricas por célula respeitam os limites mínimos de privacidade.RegiãoVolumeConcluídasCanceladasFalhasTempo médioDistância realDistância estimadaTaxa médiaPrópria/terceiroIntegraçãoSem regiões com volume suficiente neste recorte.Mapa agregado pelo servidor. Endereço, cliente, GPS individual e conteúdo do pedido não são retornados.",
+      "svg": false,
+      "details": true,
+      "manualForm": false,
+      "refresh": true,
+      "height": 128.25
+    },
+    {
+      "mode": "map",
+      "title": "Região 1 · 5–9 entregasRegião 2 · 10–24 entregas2 regiões agregadas · 12 de 12 entregas com destino autorizado.Atualizar mapaFiltros, cobertura e dados territoriaisIntensidadeVolumeTaxa média BRLTempo médioDistância real médiaDistância estimada médiaExecuçãoFrota própria e terceirosFrota própriaTerceirosProviderTodos12/12 com destino (100.0%)0 sem localização utilizável (0 com precisão acima de 100 m) · 0 célula(s) suprimida(s) por amostra baixaRegião 1 · 5–9 entregasRegião 2 · 10–24 entregas menor intermediária maiorBandas de volume e métricas por célula respeitam os limites mínimos de privacidade.RegiãoVolumeConcluídasCanceladasFalhasTempo médioDistância realDistância estimadaTaxa médiaPrópria/terceiroIntegraçãoRegião 15–9————————/——Região 210–24————————/——Mapa agregado pelo servidor. Endereço, cliente, GPS individual e conteúdo do pedido não são retornados.",
+      "svg": true,
+      "details": true,
+      "manualForm": false,
+      "refresh": true,
+      "height": 126.8125
+    },
+    {
+      "mode": "forbidden",
+      "text": "Acesso não autorizadoSua conta não tem permissão para consultar este resumo.",
+      "role": "alert",
+      "retry": false,
+      "form": false
+    },
+    {
+      "mode": "session",
+      "text": "Sessão necessáriaSua sessão terminou. Entre novamente para consultar este resumo.",
+      "role": "alert",
+      "retry": false,
+      "form": false
+    },
+    {
+      "mode": "retry",
+      "before": {
+        "text": "Falha ao carregar o mapaNão foi possível carregar o resumo por região. Tente novamente em instantes.Tentar novamente",
+        "retry": true,
+        "calls": 1
+      },
+      "after": {
+        "text": "Sem entregas elegíveisNão há entregas neste período para resumir no mapa.Atualizar mapaFiltros, cobertura e dados territoriaisIntensidadeVolumeTaxa média BRLTempo médioDistância real médiaDistância estimada médiaExecuçãoFrota própria e terceirosFrota própriaTerceirosProviderTodos0/0 com destino (indisponível)0 sem localização utilizável (0 com precisão acima de 100 m) · 0 célula(s) suprimida(s) por amostra baixaNão há entregas neste período para resumir no mapa. menor intermediária maiorBandas de volume e métricas por célula respeitam os limites mínimos de privacidade.RegiãoVolumeConcluídasCanceladasFalhasTempo médioDistância realDistância estimadaTaxa médiaPrópria/terceiroIntegraçãoSem regiões com volume suficiente neste recorte.Mapa agregado pelo servidor. Endereço, cliente, GPS individual e conteúdo do pedido não são retornados.",
+        "calls": 2,
+        "retry": true
+      }
+    },
+    {
+      "mode": "delayed-response",
+      "calls": 2,
+      "text": "Região 1 · 25+ entregas1 regiões agregadas · 12 de 12 entregas com destino autorizado.Atualizar mapaFiltros, cobertura e dados territoriaisIntensidadeVolumeTaxa média BRLTempo médioDistância real médiaDistância estimada médiaExecuçãoFrota própria e terceirosFrota própriaTerceirosProviderTodos12/12 com destino (100.0%)0 sem localização utilizável (0 com precisão acima de 100 m) · 0 célula(s) suprimida(s) por amostra baixaRegião 1 · 25+ entregas menor intermediária maiorBandas de volume e métricas por célula respeitam os limites mínimos de privacidade.RegiãoVolumeConcluídasCanceladasFalhasTempo médioDistância realDistância estimadaTaxa médiaPrópria/terceiroIntegraçãoRegião 125+————————/——Mapa agregado pelo servidor. Endereço, cliente, GPS individual e conteúdo do pedido não são retornados."
+    }
+  ],
+  "errors": []
+}
