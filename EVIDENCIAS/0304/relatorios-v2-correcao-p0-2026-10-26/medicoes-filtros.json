@@ -1,0 +1,2158 @@
+[
+  {
+    "viewport": {
+      "width": 320,
+      "height": 700
+    },
+    "theme": "light",
+    "documentWidth": 305,
+    "documentClientWidth": 305,
+    "containerWidth": 281,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 281,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 281,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 281,
+      "height": 231.4
+    },
+    "advancedColumns": "259px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 259,
+          "height": 44
+        },
+        "clientWidth": 257,
+        "scrollWidth": 257
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 259,
+          "height": 44
+        },
+        "clientWidth": 257,
+        "scrollWidth": 257
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 259,
+          "height": 44
+        },
+        "clientWidth": 257,
+        "scrollWidth": 257
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 281,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 700
+    },
+    "theme": "dark",
+    "documentWidth": 305,
+    "documentClientWidth": 305,
+    "containerWidth": 281,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 281,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 281,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 281,
+      "height": 231.4
+    },
+    "advancedColumns": "259px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 259,
+          "height": 44
+        },
+        "clientWidth": 257,
+        "scrollWidth": 257
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 259,
+          "height": 44
+        },
+        "clientWidth": 257,
+        "scrollWidth": 257
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 259,
+          "height": 44
+        },
+        "clientWidth": 257,
+        "scrollWidth": 257
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 281,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 360,
+      "height": 800
+    },
+    "theme": "light",
+    "documentWidth": 345,
+    "documentClientWidth": 345,
+    "containerWidth": 321,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 321,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 321,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 321,
+      "height": 231.4
+    },
+    "advancedColumns": "299px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 299,
+          "height": 44
+        },
+        "clientWidth": 297,
+        "scrollWidth": 297
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 299,
+          "height": 44
+        },
+        "clientWidth": 297,
+        "scrollWidth": 297
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 299,
+          "height": 44
+        },
+        "clientWidth": 297,
+        "scrollWidth": 297
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 321,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 360,
+      "height": 800
+    },
+    "theme": "dark",
+    "documentWidth": 345,
+    "documentClientWidth": 345,
+    "containerWidth": 321,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 321,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 321,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 321,
+      "height": 231.4
+    },
+    "advancedColumns": "299px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 299,
+          "height": 44
+        },
+        "clientWidth": 297,
+        "scrollWidth": 297
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 299,
+          "height": 44
+        },
+        "clientWidth": 297,
+        "scrollWidth": 297
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 299,
+          "height": 44
+        },
+        "clientWidth": 297,
+        "scrollWidth": 297
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 321,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "light",
+    "documentWidth": 375,
+    "documentClientWidth": 375,
+    "containerWidth": 351,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 351,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 351,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 351,
+      "height": 231.4
+    },
+    "advancedColumns": "329px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 329,
+          "height": 44
+        },
+        "clientWidth": 327,
+        "scrollWidth": 327
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 329,
+          "height": 44
+        },
+        "clientWidth": 327,
+        "scrollWidth": 327
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 329,
+          "height": 44
+        },
+        "clientWidth": 327,
+        "scrollWidth": 327
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 351,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "theme": "dark",
+    "documentWidth": 375,
+    "documentClientWidth": 375,
+    "containerWidth": 351,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 351,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 351,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 351,
+      "height": 231.4
+    },
+    "advancedColumns": "329px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 329,
+          "height": 44
+        },
+        "clientWidth": 327,
+        "scrollWidth": 327
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 329,
+          "height": 44
+        },
+        "clientWidth": 327,
+        "scrollWidth": 327
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 329,
+          "height": 44
+        },
+        "clientWidth": 327,
+        "scrollWidth": 327
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 351,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 430,
+      "height": 932
+    },
+    "theme": "light",
+    "documentWidth": 415,
+    "documentClientWidth": 415,
+    "containerWidth": 391,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 391,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 391,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 391,
+      "height": 231.4
+    },
+    "advancedColumns": "369px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 369,
+          "height": 44
+        },
+        "clientWidth": 367,
+        "scrollWidth": 367
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 369,
+          "height": 44
+        },
+        "clientWidth": 367,
+        "scrollWidth": 367
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 369,
+          "height": 44
+        },
+        "clientWidth": 367,
+        "scrollWidth": 367
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 391,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 430,
+      "height": 932
+    },
+    "theme": "dark",
+    "documentWidth": 415,
+    "documentClientWidth": 415,
+    "containerWidth": 391,
+    "primaryRect": {
+      "x": 12,
+      "y": 149,
+      "width": 391,
+      "height": 418.1
+    },
+    "detailsRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 391,
+      "height": 283.4
+    },
+    "advancedGridRect": {
+      "x": 12,
+      "y": 335.6,
+      "width": 391,
+      "height": 231.4
+    },
+    "advancedColumns": "369px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 366.4,
+          "width": 369,
+          "height": 44
+        },
+        "clientWidth": 367,
+        "scrollWidth": 367
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 23,
+          "y": 439.2,
+          "width": 369,
+          "height": 44
+        },
+        "clientWidth": 367,
+        "scrollWidth": 367
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 23,
+          "y": 512,
+          "width": 369,
+          "height": 44
+        },
+        "clientWidth": 367,
+        "scrollWidth": 367
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 12,
+      "y": 283.6,
+      "width": 391,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 720,
+      "height": 320
+    },
+    "theme": "light",
+    "documentWidth": 705,
+    "documentClientWidth": 705,
+    "containerWidth": 414,
+    "primaryRect": {
+      "x": 269.6,
+      "y": 186.7,
+      "width": 413.8,
+      "height": 343.5
+    },
+    "detailsRect": {
+      "x": 269.6,
+      "y": 317.5,
+      "width": 413.8,
+      "height": 212.8
+    },
+    "advancedGridRect": {
+      "x": 269.6,
+      "y": 369.5,
+      "width": 413.8,
+      "height": 160.8
+    },
+    "advancedColumns": "191.406px 191.406px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 280.6,
+          "y": 401.4,
+          "width": 191.4,
+          "height": 44
+        },
+        "clientWidth": 189,
+        "scrollWidth": 189
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 481,
+          "y": 401.4,
+          "width": 191.4,
+          "height": 44
+        },
+        "clientWidth": 189,
+        "scrollWidth": 189
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 280.6,
+          "y": 475.2,
+          "width": 191.4,
+          "height": 44
+        },
+        "clientWidth": 189,
+        "scrollWidth": 189
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 269.6,
+      "y": 317.5,
+      "width": 413.8,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 720,
+      "height": 320
+    },
+    "theme": "dark",
+    "documentWidth": 705,
+    "documentClientWidth": 705,
+    "containerWidth": 414,
+    "primaryRect": {
+      "x": 269.6,
+      "y": 186.7,
+      "width": 413.8,
+      "height": 343.5
+    },
+    "detailsRect": {
+      "x": 269.6,
+      "y": 317.5,
+      "width": 413.8,
+      "height": 212.8
+    },
+    "advancedGridRect": {
+      "x": 269.6,
+      "y": 369.5,
+      "width": 413.8,
+      "height": 160.8
+    },
+    "advancedColumns": "191.406px 191.406px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 280.6,
+          "y": 401.4,
+          "width": 191.4,
+          "height": 44
+        },
+        "clientWidth": 189,
+        "scrollWidth": 189
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 481,
+          "y": 401.4,
+          "width": 191.4,
+          "height": 44
+        },
+        "clientWidth": 189,
+        "scrollWidth": 189
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 280.6,
+          "y": 475.2,
+          "width": 191.4,
+          "height": 44
+        },
+        "clientWidth": 189,
+        "scrollWidth": 189
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 269.6,
+      "y": 317.5,
+      "width": 413.8,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 800,
+      "height": 360
+    },
+    "theme": "light",
+    "documentWidth": 785,
+    "documentClientWidth": 785,
+    "containerWidth": 489,
+    "primaryRect": {
+      "x": 272,
+      "y": 186.7,
+      "width": 489,
+      "height": 343.5
+    },
+    "detailsRect": {
+      "x": 272,
+      "y": 317.5,
+      "width": 489,
+      "height": 212.8
+    },
+    "advancedGridRect": {
+      "x": 272,
+      "y": 369.5,
+      "width": 489,
+      "height": 160.8
+    },
+    "advancedColumns": "229px 229px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 283,
+          "y": 401.4,
+          "width": 229,
+          "height": 44
+        },
+        "clientWidth": 227,
+        "scrollWidth": 227
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 521,
+          "y": 401.4,
+          "width": 229,
+          "height": 44
+        },
+        "clientWidth": 227,
+        "scrollWidth": 227
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 283,
+          "y": 475.2,
+          "width": 229,
+          "height": 44
+        },
+        "clientWidth": 227,
+        "scrollWidth": 227
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 272,
+      "y": 317.5,
+      "width": 489,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 800,
+      "height": 360
+    },
+    "theme": "dark",
+    "documentWidth": 785,
+    "documentClientWidth": 785,
+    "containerWidth": 489,
+    "primaryRect": {
+      "x": 272,
+      "y": 186.7,
+      "width": 489,
+      "height": 343.5
+    },
+    "detailsRect": {
+      "x": 272,
+      "y": 317.5,
+      "width": 489,
+      "height": 212.8
+    },
+    "advancedGridRect": {
+      "x": 272,
+      "y": 369.5,
+      "width": 489,
+      "height": 160.8
+    },
+    "advancedColumns": "229px 229px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 283,
+          "y": 401.4,
+          "width": 229,
+          "height": 44
+        },
+        "clientWidth": 227,
+        "scrollWidth": 227
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 521,
+          "y": 401.4,
+          "width": 229,
+          "height": 44
+        },
+        "clientWidth": 227,
+        "scrollWidth": 227
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 283,
+          "y": 475.2,
+          "width": 229,
+          "height": 44
+        },
+        "clientWidth": 227,
+        "scrollWidth": 227
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 272,
+      "y": 317.5,
+      "width": 489,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "theme": "light",
+    "documentWidth": 829,
+    "documentClientWidth": 829,
+    "containerWidth": 530,
+    "primaryRect": {
+      "x": 273.3,
+      "y": 188.5,
+      "width": 530.4,
+      "height": 347.8
+    },
+    "detailsRect": {
+      "x": 273.3,
+      "y": 321.4,
+      "width": 530.4,
+      "height": 214.9
+    },
+    "advancedGridRect": {
+      "x": 273.3,
+      "y": 373.4,
+      "width": 530.4,
+      "height": 162.9
+    },
+    "advancedColumns": "249.688px 249.688px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 284.3,
+          "y": 406.3,
+          "width": 249.7,
+          "height": 44
+        },
+        "clientWidth": 248,
+        "scrollWidth": 248
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 543,
+          "y": 406.3,
+          "width": 249.7,
+          "height": 44
+        },
+        "clientWidth": 248,
+        "scrollWidth": 248
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 284.3,
+          "y": 481.3,
+          "width": 249.7,
+          "height": 44
+        },
+        "clientWidth": 248,
+        "scrollWidth": 248
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 273.3,
+      "y": 321.4,
+      "width": 530.4,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "theme": "dark",
+    "documentWidth": 829,
+    "documentClientWidth": 829,
+    "containerWidth": 530,
+    "primaryRect": {
+      "x": 273.3,
+      "y": 188.5,
+      "width": 530.4,
+      "height": 347.8
+    },
+    "detailsRect": {
+      "x": 273.3,
+      "y": 321.4,
+      "width": 530.4,
+      "height": 214.9
+    },
+    "advancedGridRect": {
+      "x": 273.3,
+      "y": 373.4,
+      "width": 530.4,
+      "height": 162.9
+    },
+    "advancedColumns": "249.688px 249.688px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 284.3,
+          "y": 406.3,
+          "width": 249.7,
+          "height": 44
+        },
+        "clientWidth": 248,
+        "scrollWidth": 248
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 543,
+          "y": 406.3,
+          "width": 249.7,
+          "height": 44
+        },
+        "clientWidth": 248,
+        "scrollWidth": 248
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 284.3,
+          "y": 481.3,
+          "width": 249.7,
+          "height": 44
+        },
+        "clientWidth": 248,
+        "scrollWidth": 248
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 273.3,
+      "y": 321.4,
+      "width": 530.4,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 932,
+      "height": 430
+    },
+    "theme": "light",
+    "documentWidth": 917,
+    "documentClientWidth": 917,
+    "containerWidth": 613,
+    "primaryRect": {
+      "x": 276,
+      "y": 192.5,
+      "width": 613.1,
+      "height": 264.8
+    },
+    "detailsRect": {
+      "x": 276,
+      "y": 261.5,
+      "width": 613.1,
+      "height": 195.9
+    },
+    "advancedGridRect": {
+      "x": 276,
+      "y": 307.5,
+      "width": 613.1,
+      "height": 149.9
+    },
+    "advancedColumns": "291.547px 291.547px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 287,
+          "y": 340.4,
+          "width": 291.5,
+          "height": 38
+        },
+        "clientWidth": 290,
+        "scrollWidth": 290
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 586.5,
+          "y": 340.4,
+          "width": 291.5,
+          "height": 38
+        },
+        "clientWidth": 290,
+        "scrollWidth": 290
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 287,
+          "y": 408.3,
+          "width": 291.5,
+          "height": 38
+        },
+        "clientWidth": 290,
+        "scrollWidth": 290
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 276,
+      "y": 261.5,
+      "width": 613.1,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 932,
+      "height": 430
+    },
+    "theme": "dark",
+    "documentWidth": 917,
+    "documentClientWidth": 917,
+    "containerWidth": 613,
+    "primaryRect": {
+      "x": 276,
+      "y": 192.5,
+      "width": 613.1,
+      "height": 264.8
+    },
+    "detailsRect": {
+      "x": 276,
+      "y": 261.5,
+      "width": 613.1,
+      "height": 195.9
+    },
+    "advancedGridRect": {
+      "x": 276,
+      "y": 307.5,
+      "width": 613.1,
+      "height": 149.9
+    },
+    "advancedColumns": "291.547px 291.547px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 287,
+          "y": 340.4,
+          "width": 291.5,
+          "height": 38
+        },
+        "clientWidth": 290,
+        "scrollWidth": 290
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 586.5,
+          "y": 340.4,
+          "width": 291.5,
+          "height": 38
+        },
+        "clientWidth": 290,
+        "scrollWidth": 290
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 287,
+          "y": 408.3,
+          "width": 291.5,
+          "height": 38
+        },
+        "clientWidth": 290,
+        "scrollWidth": 290
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 276,
+      "y": 261.5,
+      "width": 613.1,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "theme": "light",
+    "documentWidth": 753,
+    "documentClientWidth": 753,
+    "containerWidth": 459,
+    "primaryRect": {
+      "x": 271,
+      "y": 186.7,
+      "width": 458.9,
+      "height": 343.5
+    },
+    "detailsRect": {
+      "x": 271,
+      "y": 317.5,
+      "width": 458.9,
+      "height": 212.8
+    },
+    "advancedGridRect": {
+      "x": 271,
+      "y": 369.5,
+      "width": 458.9,
+      "height": 160.8
+    },
+    "advancedColumns": "213.969px 213.969px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 282,
+          "y": 401.4,
+          "width": 214,
+          "height": 44
+        },
+        "clientWidth": 212,
+        "scrollWidth": 212
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 505,
+          "y": 401.4,
+          "width": 214,
+          "height": 44
+        },
+        "clientWidth": 212,
+        "scrollWidth": 212
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 282,
+          "y": 475.2,
+          "width": 214,
+          "height": 44
+        },
+        "clientWidth": 212,
+        "scrollWidth": 212
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 271,
+      "y": 317.5,
+      "width": 458.9,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "theme": "dark",
+    "documentWidth": 753,
+    "documentClientWidth": 753,
+    "containerWidth": 459,
+    "primaryRect": {
+      "x": 271,
+      "y": 186.7,
+      "width": 458.9,
+      "height": 343.5
+    },
+    "detailsRect": {
+      "x": 271,
+      "y": 317.5,
+      "width": 458.9,
+      "height": 212.8
+    },
+    "advancedGridRect": {
+      "x": 271,
+      "y": 369.5,
+      "width": 458.9,
+      "height": 160.8
+    },
+    "advancedColumns": "213.969px 213.969px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 282,
+          "y": 401.4,
+          "width": 214,
+          "height": 44
+        },
+        "clientWidth": 212,
+        "scrollWidth": 212
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 505,
+          "y": 401.4,
+          "width": 214,
+          "height": 44
+        },
+        "clientWidth": 212,
+        "scrollWidth": 212
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 282,
+          "y": 475.2,
+          "width": 214,
+          "height": 44
+        },
+        "clientWidth": 212,
+        "scrollWidth": 212
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 271,
+      "y": 317.5,
+      "width": 458.9,
+      "height": 44
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 980,
+      "height": 720
+    },
+    "theme": "light",
+    "documentWidth": 965,
+    "documentClientWidth": 965,
+    "containerWidth": 658,
+    "primaryRect": {
+      "x": 277.4,
+      "y": 192.5,
+      "width": 658.2,
+      "height": 264.8
+    },
+    "detailsRect": {
+      "x": 277.4,
+      "y": 261.5,
+      "width": 658.2,
+      "height": 195.9
+    },
+    "advancedGridRect": {
+      "x": 277.4,
+      "y": 307.5,
+      "width": 658.2,
+      "height": 149.9
+    },
+    "advancedColumns": "314.109px 314.109px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 288.4,
+          "y": 340.4,
+          "width": 314.1,
+          "height": 38
+        },
+        "clientWidth": 312,
+        "scrollWidth": 312
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 610.5,
+          "y": 340.4,
+          "width": 314.1,
+          "height": 38
+        },
+        "clientWidth": 312,
+        "scrollWidth": 312
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 288.4,
+          "y": 408.3,
+          "width": 314.1,
+          "height": 38
+        },
+        "clientWidth": 312,
+        "scrollWidth": 312
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 277.4,
+      "y": 261.5,
+      "width": 658.2,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 980,
+      "height": 720
+    },
+    "theme": "dark",
+    "documentWidth": 965,
+    "documentClientWidth": 965,
+    "containerWidth": 658,
+    "primaryRect": {
+      "x": 277.4,
+      "y": 192.5,
+      "width": 658.2,
+      "height": 264.8
+    },
+    "detailsRect": {
+      "x": 277.4,
+      "y": 261.5,
+      "width": 658.2,
+      "height": 195.9
+    },
+    "advancedGridRect": {
+      "x": 277.4,
+      "y": 307.5,
+      "width": 658.2,
+      "height": 149.9
+    },
+    "advancedColumns": "314.109px 314.109px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 288.4,
+          "y": 340.4,
+          "width": 314.1,
+          "height": 38
+        },
+        "clientWidth": 312,
+        "scrollWidth": 312
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 610.5,
+          "y": 340.4,
+          "width": 314.1,
+          "height": 38
+        },
+        "clientWidth": 312,
+        "scrollWidth": 312
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 288.4,
+          "y": 408.3,
+          "width": 314.1,
+          "height": 38
+        },
+        "clientWidth": 312,
+        "scrollWidth": 312
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 277.4,
+      "y": 261.5,
+      "width": 658.2,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "theme": "light",
+    "documentWidth": 1009,
+    "documentClientWidth": 1009,
+    "containerWidth": 692,
+    "primaryRect": {
+      "x": 286.7,
+      "y": 194.5,
+      "width": 691.6,
+      "height": 264.8
+    },
+    "detailsRect": {
+      "x": 286.7,
+      "y": 263.5,
+      "width": 691.6,
+      "height": 195.9
+    },
+    "advancedGridRect": {
+      "x": 286.7,
+      "y": 309.5,
+      "width": 691.6,
+      "height": 149.9
+    },
+    "advancedColumns": "330.781px 330.781px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 297.7,
+          "y": 342.4,
+          "width": 330.8,
+          "height": 38
+        },
+        "clientWidth": 329,
+        "scrollWidth": 329
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 636.5,
+          "y": 342.4,
+          "width": 330.8,
+          "height": 38
+        },
+        "clientWidth": 329,
+        "scrollWidth": 329
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 297.7,
+          "y": 410.3,
+          "width": 330.8,
+          "height": 38
+        },
+        "clientWidth": 329,
+        "scrollWidth": 329
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 286.7,
+      "y": 263.5,
+      "width": 691.6,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "theme": "dark",
+    "documentWidth": 1009,
+    "documentClientWidth": 1009,
+    "containerWidth": 692,
+    "primaryRect": {
+      "x": 286.7,
+      "y": 194.5,
+      "width": 691.6,
+      "height": 264.8
+    },
+    "detailsRect": {
+      "x": 286.7,
+      "y": 263.5,
+      "width": 691.6,
+      "height": 195.9
+    },
+    "advancedGridRect": {
+      "x": 286.7,
+      "y": 309.5,
+      "width": 691.6,
+      "height": 149.9
+    },
+    "advancedColumns": "330.781px 330.781px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 297.7,
+          "y": 342.4,
+          "width": 330.8,
+          "height": 38
+        },
+        "clientWidth": 329,
+        "scrollWidth": 329
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 636.5,
+          "y": 342.4,
+          "width": 330.8,
+          "height": 38
+        },
+        "clientWidth": 329,
+        "scrollWidth": 329
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 297.7,
+          "y": 410.3,
+          "width": 330.8,
+          "height": 38
+        },
+        "clientWidth": 329,
+        "scrollWidth": 329
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 286.7,
+      "y": 263.5,
+      "width": 691.6,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "theme": "light",
+    "documentWidth": 1265,
+    "documentClientWidth": 1265,
+    "containerWidth": 932,
+    "primaryRect": {
+      "x": 294.4,
+      "y": 198.4,
+      "width": 932.2,
+      "height": 196.9
+    },
+    "detailsRect": {
+      "x": 294.4,
+      "y": 267.3,
+      "width": 932.2,
+      "height": 127.9
+    },
+    "advancedGridRect": {
+      "x": 294.4,
+      "y": 313.3,
+      "width": 932.2,
+      "height": 81.9
+    },
+    "advancedColumns": "298.062px 298.078px 298.062px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 305.4,
+          "y": 346.3,
+          "width": 298.1,
+          "height": 38
+        },
+        "clientWidth": 296,
+        "scrollWidth": 296
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 611.5,
+          "y": 346.3,
+          "width": 298.1,
+          "height": 38
+        },
+        "clientWidth": 296,
+        "scrollWidth": 296
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 917.5,
+          "y": 346.3,
+          "width": 298.1,
+          "height": 38
+        },
+        "clientWidth": 296,
+        "scrollWidth": 296
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 294.4,
+      "y": 267.3,
+      "width": 932.2,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "theme": "dark",
+    "documentWidth": 1265,
+    "documentClientWidth": 1265,
+    "containerWidth": 932,
+    "primaryRect": {
+      "x": 294.4,
+      "y": 198.4,
+      "width": 932.2,
+      "height": 196.9
+    },
+    "detailsRect": {
+      "x": 294.4,
+      "y": 267.3,
+      "width": 932.2,
+      "height": 127.9
+    },
+    "advancedGridRect": {
+      "x": 294.4,
+      "y": 313.3,
+      "width": 932.2,
+      "height": 81.9
+    },
+    "advancedColumns": "298.062px 298.078px 298.062px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 305.4,
+          "y": 346.3,
+          "width": 298.1,
+          "height": 38
+        },
+        "clientWidth": 296,
+        "scrollWidth": 296
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 611.5,
+          "y": 346.3,
+          "width": 298.1,
+          "height": 38
+        },
+        "clientWidth": 296,
+        "scrollWidth": 296
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 917.5,
+          "y": 346.3,
+          "width": 298.1,
+          "height": 38
+        },
+        "clientWidth": 296,
+        "scrollWidth": 296
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 294.4,
+      "y": 267.3,
+      "width": 932.2,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "theme": "light",
+    "documentWidth": 1425,
+    "documentClientWidth": 1425,
+    "containerWidth": 1083,
+    "primaryRect": {
+      "x": 299.2,
+      "y": 202.4,
+      "width": 1082.6,
+      "height": 196.9
+    },
+    "detailsRect": {
+      "x": 299.2,
+      "y": 271.4,
+      "width": 1082.6,
+      "height": 127.9
+    },
+    "advancedGridRect": {
+      "x": 299.2,
+      "y": 317.4,
+      "width": 1082.6,
+      "height": 81.9
+    },
+    "advancedColumns": "348.203px 348.203px 348.219px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 310.2,
+          "y": 350.3,
+          "width": 348.2,
+          "height": 38
+        },
+        "clientWidth": 346,
+        "scrollWidth": 346
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 666.4,
+          "y": 350.3,
+          "width": 348.2,
+          "height": 38
+        },
+        "clientWidth": 346,
+        "scrollWidth": 346
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 1022.6,
+          "y": 350.3,
+          "width": 348.2,
+          "height": 38
+        },
+        "clientWidth": 346,
+        "scrollWidth": 346
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 299.2,
+      "y": 271.4,
+      "width": 1082.6,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "theme": "dark",
+    "documentWidth": 1425,
+    "documentClientWidth": 1425,
+    "containerWidth": 1083,
+    "primaryRect": {
+      "x": 299.2,
+      "y": 202.4,
+      "width": 1082.6,
+      "height": 196.9
+    },
+    "detailsRect": {
+      "x": 299.2,
+      "y": 271.4,
+      "width": 1082.6,
+      "height": 127.9
+    },
+    "advancedGridRect": {
+      "x": 299.2,
+      "y": 317.4,
+      "width": 1082.6,
+      "height": 81.9
+    },
+    "advancedColumns": "348.203px 348.203px 348.219px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 310.2,
+          "y": 350.3,
+          "width": 348.2,
+          "height": 38
+        },
+        "clientWidth": 346,
+        "scrollWidth": 346
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 666.4,
+          "y": 350.3,
+          "width": 348.2,
+          "height": 38
+        },
+        "clientWidth": 346,
+        "scrollWidth": 346
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 1022.6,
+          "y": 350.3,
+          "width": 348.2,
+          "height": 38
+        },
+        "clientWidth": 346,
+        "scrollWidth": 346
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 299.2,
+      "y": 271.4,
+      "width": 1082.6,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "theme": "light",
+    "documentWidth": 1920,
+    "documentClientWidth": 1920,
+    "containerWidth": 1504,
+    "primaryRect": {
+      "x": 336,
+      "y": 202.8,
+      "width": 1504,
+      "height": 196.9
+    },
+    "detailsRect": {
+      "x": 336,
+      "y": 271.7,
+      "width": 1504,
+      "height": 127.9
+    },
+    "advancedGridRect": {
+      "x": 336,
+      "y": 317.7,
+      "width": 1504,
+      "height": 81.9
+    },
+    "advancedColumns": "488.656px 488.672px 488.656px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 347,
+          "y": 350.7,
+          "width": 488.7,
+          "height": 38
+        },
+        "clientWidth": 487,
+        "scrollWidth": 487
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 843.7,
+          "y": 350.7,
+          "width": 488.7,
+          "height": 38
+        },
+        "clientWidth": 487,
+        "scrollWidth": 487
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 1340.3,
+          "y": 350.7,
+          "width": 488.7,
+          "height": 38
+        },
+        "clientWidth": 487,
+        "scrollWidth": 487
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 336,
+      "y": 271.7,
+      "width": 1504,
+      "height": 38
+    },
+    "noOverflow": true
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "theme": "dark",
+    "documentWidth": 1920,
+    "documentClientWidth": 1920,
+    "containerWidth": 1504,
+    "primaryRect": {
+      "x": 336,
+      "y": 202.8,
+      "width": 1504,
+      "height": 196.9
+    },
+    "detailsRect": {
+      "x": 336,
+      "y": 271.7,
+      "width": 1504,
+      "height": 127.9
+    },
+    "advancedGridRect": {
+      "x": 336,
+      "y": 317.7,
+      "width": 1504,
+      "height": 81.9
+    },
+    "advancedColumns": "488.656px 488.672px 488.656px",
+    "selects": [
+      {
+        "id": "rs",
+        "value": "Todos",
+        "rect": {
+          "x": 347,
+          "y": 350.7,
+          "width": 488.7,
+          "height": 38
+        },
+        "clientWidth": 487,
+        "scrollWidth": 487
+      },
+      {
+        "id": "rt",
+        "value": "Todos",
+        "rect": {
+          "x": 843.7,
+          "y": 350.7,
+          "width": 488.7,
+          "height": 38
+        },
+        "clientWidth": 487,
+        "scrollWidth": 487
+      },
+      {
+        "id": "ro",
+        "value": "Todas",
+        "rect": {
+          "x": 1340.3,
+          "y": 350.7,
+          "width": 488.7,
+          "height": 38
+        },
+        "clientWidth": 487,
+        "scrollWidth": 487
+      }
+    ],
+    "activeText": "08 · Exportação e detalhamento",
+    "activeColor": "rgb(255, 255, 255)",
+    "activeBackground": "rgb(37, 99, 235)",
+    "summaryRect": {
+      "x": 336,
+      "y": 271.7,
+      "width": 1504,
+      "height": 38
+    },
+    "noOverflow": true
+  }
+]
