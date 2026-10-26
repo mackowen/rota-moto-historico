@@ -354,3 +354,20 @@ A fixture CDP não equivale a E2E autenticado nem a dispositivo físico. Campanh
 | G14 | **FAIL** | Aprovação visual expressa pendente. |
 
 Detalhes: [`relatorios-v2-parte-d-2026-10-26`](relatorios-v2-parte-d-2026-10-26/README.md). Campanha 0304 PARTIAL/aberta; Parte E/0305 não iniciadas.
+
+## Relatórios V2 — Parte E financeira — 2026-10-26
+
+| Gate | Estado | Evidência/limite |
+|---|---|---|
+| Valores brutos/descontos de pedidos canônicos | PASS no escopo do modelo | Unit tests: centavos exatos, moeda, cancelamentos excluídos, cobertura, fuso, CSV; não equivale a pagamento recebido. |
+| Fluxo de sync/API/PostgreSQL isolado e reconciliação | PASS isolado | `test-domain-sync-postgres.js`: readback API reconciliado independentemente, replay idempotente, isolamento de empresa e sem resíduos. |
+| Recebimentos e contas a receber | BLOCKED | `Order.payments` não tem estado/contrato canônico validado; não inferido de Order ou `Order.status`. |
+| Estornos/ajustes | BLOCKED | Sem razão financeira/eventos compensatórios canônicos; valor líquido liquidado não calculado. |
+| Repasse pago/margem logística | BLOCKED | `Earning` apenas calcula valor devido; custo real e evento de liquidação não comprovados. |
+| API/modelagem financeira nova | PARTIAL | Nenhuma ledger concorrente, endpoint ou migration criada sem ownership/fonte e regra autorizada. |
+| PostgreSQL oficial | BLOCKED | `rotamoto_auditor` sem credencial autorizada; nenhuma leitura/escrita/migration oficial. |
+| Renderer visual financeiro | PASS fixture; integração PARTIAL | Chromium/CDP real renderer, fixture sintética em 390×844 e 1440×900, 2 temas; DOM sem overflow/erro, não autenticado. |
+| Suíte unitária completa `npm test` | PASS | Processo integral finalizado com exit 0; log de execução inclui analytics, sync, billing, segurança, shell/cache e renderer Motoboys. |
+| G14 — aprovação visual | **FAIL** | Nenhuma captura técnica substitui aprovação expressa do proprietário. |
+
+Capturas, medidas, fonte/formula e limites: [`relatorios-v2-financeiro-parte-e`](relatorios-v2-financeiro-parte-e/README.md). Campanha 0304 continua aberta/PARTIAL; backlog preservado; 0305 não iniciada.

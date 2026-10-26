@@ -1,0 +1,262 @@
+{
+  "results": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "theme": "light"
+      },
+      "kpi": "R$ 168,00",
+      "financialCards": [
+        {
+          "title": "Valor bruto registrado em pedidos por dia",
+          "rect": {
+            "x": 12,
+            "y": 467.1875,
+            "width": 366,
+            "height": 290.578125
+          }
+        },
+        {
+          "title": "Recebimentos e estornos",
+          "rect": {
+            "x": 12,
+            "y": 767.765625,
+            "width": 366,
+            "height": 108.234375
+          }
+        }
+      ],
+      "dailyCharts": [
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 27,
+            "y": 572.578125,
+            "width": 336,
+            "height": 143
+          }
+        }
+      ],
+      "unavailable": [
+        "Recebimentos confirmadosIndisponívelNão existe evento canônico de liquidação de pagamento.",
+        "Estornos e ajustesIndisponívelNão existe razão financeira canônica de estornos e ajustes.",
+        "Total de repasses devidosIndisponível0 de 4 entregas com repasse com informação válida (0%)",
+        "Média por entrega com repasseIndisponívelNão inclui os demais custos da operação. O repasse é valor calculado,…DetalhesNão inclui os demais custos da operação. O repasse é valor calculado, não pagamento.",
+        "Repasses efetivamente pagosIndisponívelNão existe evento canônico que confirme liquidação do repasse."
+      ],
+      "overflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "report": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 876
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "theme": "dark"
+      },
+      "kpi": "R$ 168,00",
+      "financialCards": [
+        {
+          "title": "Valor bruto registrado em pedidos por dia",
+          "rect": {
+            "x": 12,
+            "y": 467.1875,
+            "width": 366,
+            "height": 290.578125
+          }
+        },
+        {
+          "title": "Recebimentos e estornos",
+          "rect": {
+            "x": 12,
+            "y": 767.765625,
+            "width": 366,
+            "height": 108.234375
+          }
+        }
+      ],
+      "dailyCharts": [
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 27,
+            "y": 572.578125,
+            "width": 336,
+            "height": 143
+          }
+        }
+      ],
+      "unavailable": [
+        "Recebimentos confirmadosIndisponívelNão existe evento canônico de liquidação de pagamento.",
+        "Estornos e ajustesIndisponívelNão existe razão financeira canônica de estornos e ajustes.",
+        "Total de repasses devidosIndisponível0 de 4 entregas com repasse com informação válida (0%)",
+        "Média por entrega com repasseIndisponívelNão inclui os demais custos da operação. O repasse é valor calculado,…DetalhesNão inclui os demais custos da operação. O repasse é valor calculado, não pagamento.",
+        "Repasses efetivamente pagosIndisponívelNão existe evento canônico que confirme liquidação do repasse."
+      ],
+      "overflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "report": {
+        "x": 12,
+        "y": 0,
+        "width": 366,
+        "height": 876
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "theme": "light"
+      },
+      "kpi": "R$ 168,00",
+      "financialCards": [
+        {
+          "title": "Valor bruto registrado em pedidos por dia",
+          "rect": {
+            "x": 43.1875,
+            "y": 327.609375,
+            "width": 748.8125,
+            "height": 314.84375
+          }
+        },
+        {
+          "title": "Recebimentos e estornos",
+          "rect": {
+            "x": 804,
+            "y": 327.609375,
+            "width": 592.8125,
+            "height": 314.84375
+          }
+        }
+      ],
+      "dailyCharts": [
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 58.1875,
+            "y": 418.921875,
+            "width": 718.8125,
+            "height": 193
+          }
+        }
+      ],
+      "unavailable": [
+        "Recebimentos confirmadosIndisponívelNão existe evento canônico de liquidação de pagamento.",
+        "Estornos e ajustesIndisponívelNão existe razão financeira canônica de estornos e ajustes.",
+        "Total de repasses devidosIndisponível0 de 4 entregas com repasse com informação válida (0%)",
+        "Média por entrega com repasseIndisponívelNão inclui os demais custos da operação. O repasse é valor calculado,…DetalhesNão inclui os demais custos da operação. O repasse é valor calculado, não pagamento.",
+        "Repasses efetivamente pagosIndisponívelNão existe evento canônico que confirme liquidação do repasse."
+      ],
+      "overflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "report": {
+        "x": 43.1875,
+        "y": 28,
+        "width": 1353.625,
+        "height": 614.453125
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "theme": "dark"
+      },
+      "kpi": "R$ 168,00",
+      "financialCards": [
+        {
+          "title": "Valor bruto registrado em pedidos por dia",
+          "rect": {
+            "x": 43.1875,
+            "y": 327.609375,
+            "width": 748.8125,
+            "height": 314.84375
+          }
+        },
+        {
+          "title": "Recebimentos e estornos",
+          "rect": {
+            "x": 804,
+            "y": 327.609375,
+            "width": 592.8125,
+            "height": 314.84375
+          }
+        }
+      ],
+      "dailyCharts": [
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "label": "Valor bruto registrado de pedidos por dia em reais",
+          "rect": {
+            "x": 58.1875,
+            "y": 418.921875,
+            "width": 718.8125,
+            "height": 193
+          }
+        }
+      ],
+      "unavailable": [
+        "Recebimentos confirmadosIndisponívelNão existe evento canônico de liquidação de pagamento.",
+        "Estornos e ajustesIndisponívelNão existe razão financeira canônica de estornos e ajustes.",
+        "Total de repasses devidosIndisponível0 de 4 entregas com repasse com informação válida (0%)",
+        "Média por entrega com repasseIndisponívelNão inclui os demais custos da operação. O repasse é valor calculado,…DetalhesNão inclui os demais custos da operação. O repasse é valor calculado, não pagamento.",
+        "Repasses efetivamente pagosIndisponívelNão existe evento canônico que confirme liquidação do repasse."
+      ],
+      "overflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "report": {
+        "x": 43.1875,
+        "y": 28,
+        "width": 1353.625,
+        "height": 614.453125
+      }
+    }
+  ],
+  "errors": [],
+  "fixture": "synthetic; renderer actual; no authenticated API/database"
+}
