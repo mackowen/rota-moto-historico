@@ -239,3 +239,18 @@ Evidências completas e hashes: `motoboys-v2-refinamento-2026-10-25/README.md`. 
 | G14 — aprovação visual | **FAIL** | Estado anterior permanece. |
 
 Relatório: [`qr-signing-e2e-setup-2026-10-25`](qr-signing-e2e-setup-2026-10-25/README.md). A configuração da chave não transforma a jornada operacional em PASS.
+# Atualização — login desktop e modal QR (2026-10-26)
+
+| Requisito | Estado | Evidência e limite |
+|---|---|---|
+| Login 980 CSS px / Chrome Android desktop-mode | PASS técnico | CDP mediu apresentação e formulário lado a lado, gap 39,19 px, ambos y=22 px, sem overflow horizontal; o breakpoint anterior foi reproduzido na captura “antes”. Não foi Chrome Android físico. |
+| Login celular/tablet/PC, claro/escuro | PASS técnico de layout | 33 estados CDP; celular ≤600 px mantém formulário prioritário; 768 px retrato empilha; tablet paisagem e PC usam duas colunas. Capturas são browser emulado. |
+| Fluxos autenticados do login (MFA, recuperação, convite) | BLOCKED | Sessão 401 esperada e nenhum POST de login enviado; credenciais MFA sintéticas autorizadas não estavam disponíveis. |
+| Modal QR — layout responsivo e geometrias | PASS técnico de fixture | 26 medidas, canvas quadrado 220–300 px, sem overflow horizontal, dois temas. Canvas branco em captura é fixture sem token, não QR emitido. |
+| QR emitido/assinado em sessão autenticada | BLOCKED | Não houve emissão no runtime autenticado, validação do token ou renovação real nesta rodada. |
+| Scan físico/check-in Motoboy e presença persistida | BLOCKED | Nenhuma jornada cross-app foi executada nesta intervenção; gates anteriores continuam valendo. |
+| `npm test` Restaurante | PASS | Exit 0 após as alterações de layout/cache e testes QR. |
+| Sintaxe e diff | PASS | `node --check app.js`, `node --check sw.js`, `git diff --check`. |
+| G14 — aprovação visual do proprietário | **FAIL** | Mantido até aprovação expressa. Captura recente de reprovação não estava acessível localmente; teste CDP emulado não a substitui. |
+
+Campanha 0304 permanece PARTIAL/aberta; G8–G13 não avançam por este trabalho visual. Pendências anteriores, inclusive backlog desde 0257, permanecem abertas. Nenhum aplicativo foi publicado e o banco oficial não recebeu escrita.

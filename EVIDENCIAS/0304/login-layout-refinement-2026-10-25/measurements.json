@@ -1,0 +1,2087 @@
+{
+  "initial": {
+    "title": "Rota Moto — Painel Restaurante v5.50",
+    "login": true,
+    "appHidden": true,
+    "mapScripts": 0,
+    "stylesheet": "http://127.0.0.1:8083/identity-ui.css?v=0304-login.9"
+  },
+  "measurements": [
+    {
+      "theme": "light",
+      "name": "phone-320",
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualWidth": 320,
+        "innerHeight": 720
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 18,
+        "width": 288,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 75,
+        "width": 288,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 288,
+        "height": 741.33,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 720,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 741,
+        "clientHeight": 741,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 779,
+        "clientHeight": 720,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 320,
+        "body": 320,
+        "client": 320,
+        "docHeight": 720,
+        "clientHeight": 720
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 75
+    },
+    {
+      "theme": "light",
+      "name": "phone-360",
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualWidth": 360,
+        "innerHeight": 800
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 28.33,
+        "width": 328,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 85.33,
+        "width": 328,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 328,
+        "height": 762,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 800,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 762,
+        "clientHeight": 762,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 800,
+        "clientHeight": 800,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 360,
+        "body": 360,
+        "client": 360,
+        "docHeight": 800,
+        "clientHeight": 800
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 85.33
+    },
+    {
+      "theme": "light",
+      "name": "phone-390",
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualWidth": 390,
+        "innerHeight": 844
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 50.33,
+        "width": 358,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 107.33,
+        "width": 358,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 358,
+        "height": 806,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 806,
+        "clientHeight": 806,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 844,
+        "clientHeight": 844,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 390,
+        "body": 390,
+        "client": 390,
+        "docHeight": 844,
+        "clientHeight": 844
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 107.33
+    },
+    {
+      "theme": "light",
+      "name": "phone-430",
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualWidth": 430,
+        "innerHeight": 932
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 94.33,
+        "width": 398,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 151.33,
+        "width": 398,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 398,
+        "height": 894,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 932,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 894,
+        "clientHeight": 894,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 932,
+        "clientHeight": 932,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 430,
+        "body": 430,
+        "client": 430,
+        "docHeight": 932,
+        "clientHeight": 932
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 151.33
+    },
+    {
+      "theme": "light",
+      "name": "phone-landscape-720",
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "visualWidth": 720,
+        "innerHeight": 320
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 120,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 120,
+        "y": 65,
+        "width": 480,
+        "height": 452.94,
+        "visible": true
+      },
+      "content": {
+        "x": 120,
+        "y": 12,
+        "width": 480,
+        "height": 708.81,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 720,
+        "height": 320,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 709,
+        "clientHeight": 709,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 735,
+        "clientHeight": 320,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 720,
+        "body": 720,
+        "client": 720,
+        "docHeight": 320,
+        "clientHeight": 320
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "light",
+      "name": "phone-landscape-800",
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 800,
+        "visualWidth": 800,
+        "innerHeight": 360
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 160,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 160,
+        "y": 65,
+        "width": 480,
+        "height": 452.94,
+        "visible": true
+      },
+      "content": {
+        "x": 160,
+        "y": 12,
+        "width": 480,
+        "height": 708.81,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 360,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 709,
+        "clientHeight": 709,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 735,
+        "clientHeight": 360,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 800,
+        "body": 800,
+        "client": 800,
+        "docHeight": 360,
+        "clientHeight": 360
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "light",
+      "name": "phone-landscape-844",
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 844,
+        "visualWidth": 844,
+        "innerHeight": 390
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 182,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 182,
+        "y": 65,
+        "width": 480,
+        "height": 458.77,
+        "visible": true
+      },
+      "content": {
+        "x": 182,
+        "y": 12,
+        "width": 480,
+        "height": 717.14,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 390,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 717,
+        "clientHeight": 717,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 743,
+        "clientHeight": 390,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 844,
+        "body": 844,
+        "client": 844,
+        "docHeight": 390,
+        "clientHeight": 390
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "light",
+      "name": "phone-landscape-932",
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 932,
+        "visualWidth": 932,
+        "innerHeight": 430
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 226,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 226,
+        "y": 65,
+        "width": 480,
+        "height": 458.77,
+        "visible": true
+      },
+      "content": {
+        "x": 226,
+        "y": 12,
+        "width": 480,
+        "height": 717.14,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 932,
+        "height": 430,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 717,
+        "clientHeight": 717,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 743,
+        "clientHeight": 430,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 932,
+        "body": 932,
+        "client": 932,
+        "docHeight": 430,
+        "clientHeight": 430
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "light",
+      "name": "tablet-portrait",
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualWidth": 768,
+        "innerHeight": 1024
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 720,
+        "height": 294.08,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 124,
+        "y": 334.08,
+        "width": 520,
+        "height": 498.94,
+        "visible": true
+      },
+      "content": {
+        "x": 124,
+        "y": 334.08,
+        "width": 520,
+        "height": 701.81,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 1024,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 702,
+        "clientHeight": 702,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 1036,
+        "clientHeight": 1024,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 768,
+        "body": 768,
+        "client": 768,
+        "docHeight": 1024,
+        "clientHeight": 1024
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 18
+    },
+    {
+      "theme": "light",
+      "name": "tablet-portrait-820",
+      "viewport": {
+        "innerWidth": 820,
+        "clientWidth": 820,
+        "visualWidth": 820,
+        "innerHeight": 1180
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 772,
+        "height": 321.13,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 150,
+        "y": 361.13,
+        "width": 520,
+        "height": 504.77,
+        "visible": true
+      },
+      "content": {
+        "x": 150,
+        "y": 361.13,
+        "width": 520,
+        "height": 710.14,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 820,
+        "height": 1180,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 710,
+        "clientHeight": 710,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 1180,
+        "clientHeight": 1180,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 820,
+        "body": 820,
+        "client": 820,
+        "docHeight": 1180,
+        "clientHeight": 1180
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 18
+    },
+    {
+      "theme": "light",
+      "name": "tablet-landscape",
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualWidth": 1024,
+        "innerHeight": 768
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 504.92,
+        "height": 690,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 569.88,
+        "y": 22,
+        "width": 430.13,
+        "height": 539.7,
+        "visible": true
+      },
+      "content": {
+        "x": 569.88,
+        "y": 22,
+        "width": 430.13,
+        "height": 745.08,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 768,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 745,
+        "clientHeight": 745,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 768,
+        "clientHeight": 768,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1024,
+        "body": 1024,
+        "client": 1024,
+        "docHeight": 768,
+        "clientHeight": 768
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 40.96,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "light",
+      "name": "chrome-android-desktop-mode",
+      "viewport": {
+        "innerWidth": 980,
+        "clientWidth": 980,
+        "visualWidth": 980,
+        "innerHeight": 720
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 482.11,
+        "height": 676,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 545.3,
+        "y": 22,
+        "width": 410.7,
+        "height": 537.05,
+        "visible": true
+      },
+      "content": {
+        "x": 545.3,
+        "y": 22,
+        "width": 410.7,
+        "height": 742.42,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 980,
+        "height": 720,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 742,
+        "clientHeight": 742,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 764,
+        "clientHeight": 720,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 980,
+        "body": 980,
+        "client": 980,
+        "docHeight": 720,
+        "clientHeight": 720
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 39.19,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "light",
+      "name": "pc-1280",
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1280,
+        "visualWidth": 1280,
+        "innerHeight": 800
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 637.63,
+        "height": 690,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 744.41,
+        "y": 22,
+        "width": 480,
+        "height": 546.27,
+        "visible": true
+      },
+      "content": {
+        "x": 744.41,
+        "y": 22,
+        "width": 480,
+        "height": 751.64,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 800,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 752,
+        "clientHeight": 752,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 800,
+        "clientHeight": 800,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1280,
+        "body": 1280,
+        "client": 1280,
+        "docHeight": 800,
+        "clientHeight": 800
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 82.78,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "light",
+      "name": "pc-1440",
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualWidth": 1440,
+        "innerHeight": 900
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 720.58,
+        "height": 697.19,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 869.08,
+        "y": 22,
+        "width": 480,
+        "height": 546.27,
+        "visible": true
+      },
+      "content": {
+        "x": 869.08,
+        "y": 22,
+        "width": 480,
+        "height": 751.64,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 752,
+        "clientHeight": 752,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 900,
+        "clientHeight": 900,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1440,
+        "body": 1440,
+        "client": 1440,
+        "docHeight": 900,
+        "clientHeight": 900
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 124.5,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "light",
+      "name": "pc-1920",
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualWidth": 1920,
+        "innerHeight": 1080
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 976.31,
+        "height": 721.97,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 1240.16,
+        "y": 22,
+        "width": 480,
+        "height": 546.27,
+        "visible": true
+      },
+      "content": {
+        "x": 1240.16,
+        "y": 22,
+        "width": 480,
+        "height": 751.64,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 752,
+        "clientHeight": 752,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 1080,
+        "clientHeight": 1080,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1920,
+        "body": 1920,
+        "client": 1920,
+        "docHeight": 1080,
+        "clientHeight": 1080
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 239.85,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "dark",
+      "name": "phone-320",
+      "viewport": {
+        "innerWidth": 320,
+        "clientWidth": 320,
+        "visualWidth": 320,
+        "innerHeight": 720
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 18,
+        "width": 288,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 75,
+        "width": 288,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 288,
+        "height": 741.33,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 720,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 741,
+        "clientHeight": 741,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 779,
+        "clientHeight": 720,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 320,
+        "body": 320,
+        "client": 320,
+        "docHeight": 720,
+        "clientHeight": 720
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 75
+    },
+    {
+      "theme": "dark",
+      "name": "phone-360",
+      "viewport": {
+        "innerWidth": 360,
+        "clientWidth": 360,
+        "visualWidth": 360,
+        "innerHeight": 800
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 28.33,
+        "width": 328,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 85.33,
+        "width": 328,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 328,
+        "height": 762,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 800,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 762,
+        "clientHeight": 762,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 800,
+        "clientHeight": 800,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 360,
+        "body": 360,
+        "client": 360,
+        "docHeight": 800,
+        "clientHeight": 800
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 85.33
+    },
+    {
+      "theme": "dark",
+      "name": "phone-390",
+      "viewport": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "visualWidth": 390,
+        "innerHeight": 844
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 50.33,
+        "width": 358,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 107.33,
+        "width": 358,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 358,
+        "height": 806,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 806,
+        "clientHeight": 806,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 844,
+        "clientHeight": 844,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 390,
+        "body": 390,
+        "client": 390,
+        "docHeight": 844,
+        "clientHeight": 844
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 107.33
+    },
+    {
+      "theme": "dark",
+      "name": "phone-430",
+      "viewport": {
+        "innerWidth": 430,
+        "clientWidth": 430,
+        "visualWidth": 430,
+        "innerHeight": 932
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 16,
+        "y": 94.33,
+        "width": 398,
+        "height": 38,
+        "visible": true
+      },
+      "form": {
+        "x": 16,
+        "y": 151.33,
+        "width": 398,
+        "height": 491.89,
+        "visible": true
+      },
+      "content": {
+        "x": 16,
+        "y": 18,
+        "width": 398,
+        "height": 894,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 932,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 894,
+        "clientHeight": 894,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 932,
+        "clientHeight": 932,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 430,
+        "body": 430,
+        "client": 430,
+        "docHeight": 932,
+        "clientHeight": 932
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 151.33
+    },
+    {
+      "theme": "dark",
+      "name": "phone-landscape-720",
+      "viewport": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "visualWidth": 720,
+        "innerHeight": 320
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 120,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 120,
+        "y": 65,
+        "width": 480,
+        "height": 452.94,
+        "visible": true
+      },
+      "content": {
+        "x": 120,
+        "y": 12,
+        "width": 480,
+        "height": 708.81,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 720,
+        "height": 320,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 709,
+        "clientHeight": 709,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 735,
+        "clientHeight": 320,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 720,
+        "body": 720,
+        "client": 720,
+        "docHeight": 320,
+        "clientHeight": 320
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "dark",
+      "name": "phone-landscape-800",
+      "viewport": {
+        "innerWidth": 800,
+        "clientWidth": 800,
+        "visualWidth": 800,
+        "innerHeight": 360
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 160,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 160,
+        "y": 65,
+        "width": 480,
+        "height": 452.94,
+        "visible": true
+      },
+      "content": {
+        "x": 160,
+        "y": 12,
+        "width": 480,
+        "height": 708.81,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 360,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 709,
+        "clientHeight": 709,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 735,
+        "clientHeight": 360,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 800,
+        "body": 800,
+        "client": 800,
+        "docHeight": 360,
+        "clientHeight": 360
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "dark",
+      "name": "phone-landscape-844",
+      "viewport": {
+        "innerWidth": 844,
+        "clientWidth": 844,
+        "visualWidth": 844,
+        "innerHeight": 390
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 182,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 182,
+        "y": 65,
+        "width": 480,
+        "height": 458.77,
+        "visible": true
+      },
+      "content": {
+        "x": 182,
+        "y": 12,
+        "width": 480,
+        "height": 717.14,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 390,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 717,
+        "clientHeight": 717,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 743,
+        "clientHeight": 390,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 844,
+        "body": 844,
+        "client": 844,
+        "docHeight": 390,
+        "clientHeight": 390
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "dark",
+      "name": "phone-landscape-932",
+      "viewport": {
+        "innerWidth": 932,
+        "clientWidth": 932,
+        "visualWidth": 932,
+        "innerHeight": 430
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "mobileBrand": {
+        "x": 226,
+        "y": 12,
+        "width": 480,
+        "height": 32,
+        "visible": true
+      },
+      "form": {
+        "x": 226,
+        "y": 65,
+        "width": 480,
+        "height": 458.77,
+        "visible": true
+      },
+      "content": {
+        "x": 226,
+        "y": 12,
+        "width": 480,
+        "height": 717.14,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 932,
+        "height": 430,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 717,
+        "clientHeight": 717,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 743,
+        "clientHeight": 430,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 932,
+        "body": 932,
+        "client": 932,
+        "docHeight": 430,
+        "clientHeight": 430
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 65
+    },
+    {
+      "theme": "dark",
+      "name": "tablet-portrait",
+      "viewport": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "visualWidth": 768,
+        "innerHeight": 1024
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 720,
+        "height": 294.08,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 124,
+        "y": 334.08,
+        "width": 520,
+        "height": 498.94,
+        "visible": true
+      },
+      "content": {
+        "x": 124,
+        "y": 334.08,
+        "width": 520,
+        "height": 701.81,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 1024,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 702,
+        "clientHeight": 702,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 1036,
+        "clientHeight": 1024,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 768,
+        "body": 768,
+        "client": 768,
+        "docHeight": 1024,
+        "clientHeight": 1024
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 18
+    },
+    {
+      "theme": "dark",
+      "name": "tablet-portrait-820",
+      "viewport": {
+        "innerWidth": 820,
+        "clientWidth": 820,
+        "visualWidth": 820,
+        "innerHeight": 1180
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 772,
+        "height": 321.13,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 150,
+        "y": 361.13,
+        "width": 520,
+        "height": 504.77,
+        "visible": true
+      },
+      "content": {
+        "x": 150,
+        "y": 361.13,
+        "width": 520,
+        "height": 710.14,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 820,
+        "height": 1180,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 710,
+        "clientHeight": 710,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 1180,
+        "clientHeight": 1180,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 820,
+        "body": 820,
+        "client": 820,
+        "docHeight": 1180,
+        "clientHeight": 1180
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "stacked",
+      "horizontalColumnGap": null,
+      "verticalPanelGap": 18
+    },
+    {
+      "theme": "dark",
+      "name": "tablet-landscape",
+      "viewport": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "visualWidth": 1024,
+        "innerHeight": 768
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 504.92,
+        "height": 690,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 569.88,
+        "y": 22,
+        "width": 430.13,
+        "height": 539.7,
+        "visible": true
+      },
+      "content": {
+        "x": 569.88,
+        "y": 22,
+        "width": 430.13,
+        "height": 745.08,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 768,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 745,
+        "clientHeight": 745,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 768,
+        "clientHeight": 768,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1024,
+        "body": 1024,
+        "client": 1024,
+        "docHeight": 768,
+        "clientHeight": 768
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 40.96,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "dark",
+      "name": "chrome-android-desktop-mode",
+      "viewport": {
+        "innerWidth": 980,
+        "clientWidth": 980,
+        "visualWidth": 980,
+        "innerHeight": 720
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 482.11,
+        "height": 676,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 545.3,
+        "y": 22,
+        "width": 410.7,
+        "height": 537.05,
+        "visible": true
+      },
+      "content": {
+        "x": 545.3,
+        "y": 22,
+        "width": 410.7,
+        "height": 742.42,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 980,
+        "height": 720,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 742,
+        "clientHeight": 742,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 764,
+        "clientHeight": 720,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 980,
+        "body": 980,
+        "client": 980,
+        "docHeight": 720,
+        "clientHeight": 720
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 39.19,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "dark",
+      "name": "pc-1280",
+      "viewport": {
+        "innerWidth": 1280,
+        "clientWidth": 1280,
+        "visualWidth": 1280,
+        "innerHeight": 800
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 637.63,
+        "height": 690,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 744.41,
+        "y": 22,
+        "width": 480,
+        "height": 546.27,
+        "visible": true
+      },
+      "content": {
+        "x": 744.41,
+        "y": 22,
+        "width": 480,
+        "height": 751.64,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 800,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 752,
+        "clientHeight": 752,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 800,
+        "clientHeight": 800,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1280,
+        "body": 1280,
+        "client": 1280,
+        "docHeight": 800,
+        "clientHeight": 800
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 82.78,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "dark",
+      "name": "pc-1440",
+      "viewport": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualWidth": 1440,
+        "innerHeight": 900
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 720.58,
+        "height": 697.19,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 869.08,
+        "y": 22,
+        "width": 480,
+        "height": 546.27,
+        "visible": true
+      },
+      "content": {
+        "x": 869.08,
+        "y": 22,
+        "width": 480,
+        "height": 751.64,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 752,
+        "clientHeight": 752,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 900,
+        "clientHeight": 900,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1440,
+        "body": 1440,
+        "client": 1440,
+        "docHeight": 900,
+        "clientHeight": 900
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 124.5,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "dark",
+      "name": "pc-1920",
+      "viewport": {
+        "innerWidth": 1920,
+        "clientWidth": 1920,
+        "visualWidth": 1920,
+        "innerHeight": 1080
+      },
+      "loginVisible": true,
+      "presentation": {
+        "x": 24,
+        "y": 22,
+        "width": 976.31,
+        "height": 721.97,
+        "visible": true
+      },
+      "mobileBrand": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false
+      },
+      "form": {
+        "x": 1240.16,
+        "y": 22,
+        "width": 480,
+        "height": 546.27,
+        "visible": true
+      },
+      "content": {
+        "x": 1240.16,
+        "y": 22,
+        "width": 480,
+        "height": 751.64,
+        "visible": true
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "visible": true
+      },
+      "contentScroll": {
+        "scrollHeight": 752,
+        "clientHeight": 752,
+        "overflowY": "visible"
+      },
+      "panelScroll": {
+        "scrollHeight": 1080,
+        "clientHeight": 1080,
+        "overflowY": "auto"
+      },
+      "scroll": {
+        "doc": 1920,
+        "body": 1920,
+        "client": 1920,
+        "docHeight": 1080,
+        "clientHeight": 1080
+      },
+      "hasRememberMe": false,
+      "heavyMapRuntimeRequested": false,
+      "layout": "two-column",
+      "horizontalColumnGap": 239.85,
+      "verticalPanelGap": null
+    },
+    {
+      "theme": "dark",
+      "name": "landscape-scroll-end",
+      "scrollTop": 415,
+      "scrollHeight": 735,
+      "clientHeight": 320,
+      "overflowY": "auto",
+      "recoveryVisible": true,
+      "recoveryRect": {
+        "top": 249.81,
+        "bottom": 293.81
+      }
+    },
+    {
+      "theme": "dark",
+      "name": "password-toggle",
+      "type": "text",
+      "pressed": "true",
+      "label": "Ocultar senha"
+    },
+    {
+      "theme": "dark",
+      "name": "empty-submit",
+      "valid": false,
+      "loginError": "",
+      "submitEnabled": true,
+      "loginPosts": 0
+    }
+  ],
+  "exceptions": [],
+  "httpErrors": [
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    }
+  ],
+  "loginPosts": []
+}

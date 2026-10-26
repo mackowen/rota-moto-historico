@@ -1,0 +1,93 @@
+{
+  "method": "before is a controlled reproduction of the previous max-width:980px stacking rule, not an owner-provided screenshot; after is the current CSS served on 127.0.0.1:8083",
+  "before": {
+    "label": "old 980px stack breakpoint reproduced",
+    "viewport": {
+      "innerWidth": 980,
+      "clientWidth": 980,
+      "visualWidth": 980,
+      "innerHeight": 720,
+      "devicePixelRatio": 1
+    },
+    "presentation": {
+      "x": 24,
+      "y": 22,
+      "width": 932,
+      "height": 375.5,
+      "right": 956,
+      "bottom": 397.5
+    },
+    "form": {
+      "x": 230,
+      "y": 415.5,
+      "width": 520,
+      "height": 519.55,
+      "right": 750,
+      "bottom": 935.05
+    },
+    "content": {
+      "x": 230,
+      "y": 415.5,
+      "width": 520,
+      "height": 724.92,
+      "right": 750,
+      "bottom": 1140.42
+    },
+    "layout": "stacked",
+    "gap": null,
+    "scroll": {
+      "width": 980,
+      "clientWidth": 980,
+      "panelHeight": 1140,
+      "panelClientHeight": 720,
+      "formScrollHeight": 725,
+      "formClientHeight": 725,
+      "formOverflow": "visible"
+    }
+  },
+  "after": {
+    "label": "effective 860px two-column breakpoint",
+    "viewport": {
+      "innerWidth": 980,
+      "clientWidth": 980,
+      "visualWidth": 980,
+      "innerHeight": 720,
+      "devicePixelRatio": 1
+    },
+    "presentation": {
+      "x": 24,
+      "y": 22,
+      "width": 482.11,
+      "height": 676,
+      "right": 506.11,
+      "bottom": 698
+    },
+    "form": {
+      "x": 545.3,
+      "y": 22,
+      "width": 410.7,
+      "height": 537.05,
+      "right": 956,
+      "bottom": 559.05
+    },
+    "content": {
+      "x": 545.3,
+      "y": 22,
+      "width": 410.7,
+      "height": 742.42,
+      "right": 956,
+      "bottom": 764.42
+    },
+    "layout": "two-column",
+    "gap": 39.19,
+    "scroll": {
+      "width": 980,
+      "clientWidth": 980,
+      "panelHeight": 764,
+      "panelClientHeight": 720,
+      "formScrollHeight": 742,
+      "formClientHeight": 742,
+      "formOverflow": "visible"
+    }
+  }
+}

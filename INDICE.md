@@ -397,3 +397,10 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Resumo 0304](RESUMOS/0304.md#refinamento-mobile-e-contraste--2026-10-25)
 - [Gates 0304](EVIDENCIAS/0304/gates.md#motoboys-v2--refinamento-visual-e-navegacao-mobile-2026-10-25)
 - [Capturas, hashes e medições](EVIDENCIAS/0304/motoboys-v2-refinamento-2026-10-25/README.md)
+### Atualização 2026-10-26 — login desktop e modal QR
+
+- [Registro 0304](REGISTROS/0304.md#refinamento-do-login-desktop-e-modal-qr--2026-10-26)
+- [Resumo 0304](RESUMOS/0304.md#atualizacao-2026-10-26--login-desktop-e-modal-qr)
+- [Gates 0304](EVIDENCIAS/0304/gates.md#atualizacao--login-desktop-e-modal-qr-2026-10-26)
+- [Login: medições e capturas](EVIDENCIAS/0304/login-layout-refinement-2026-10-25/README.md)
+- [Modal QR: geometrias e capturas sanitizadas](EVIDENCIAS/0304/qr-modal-refinamento-2026-10-25/README.md)

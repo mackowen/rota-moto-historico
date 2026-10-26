@@ -2361,3 +2361,8 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - [ ] Executar leitura autorizada na UI Motoboy, confirmar check-in e verificar presença persistida por leitura independente, atualização Restaurante e regras separadas de lease/elegibilidade.
 - [ ] Executar negativos de expiração, adulteração, tenant, replay, sessão, permissão, concorrência e reconexão em fixture descartável com limpeza comprovada. A suíte atual de schema/linhas retidas não foi executada nesta rodada por ausência de teardown autorizado.
 - [ ] Disponibilizar fluxo de autenticação/MFA sintético recuperável sem registrar credenciais nos manifests, e procedimento seguro para ambiente durável descartável. Nenhuma credencial foi inferida ou recuperada nesta execução.
+# Atualização Campanha 0304 — 2026-10-26
+
+- Login: correção estrutural de layout concluída e validada em CDP; permanecem pendentes inspeção física no Chrome Android e aprovação visual do proprietário. Login/MFA/convite/recuperação E2E não executados por falta de sessão sintética autorizada.
+- QR temporário: apresentação responsiva validada com fixture visual sem token; permanecem pendentes emissão real autenticada, expiração/renovação em serviço, leitura por Motoboy, persistência independente e check-in cross-app, conforme contrato. Não foi feita escrita no banco oficial.
+- Pendências anteriores de Rotas, sincronização, concorrência, RBAC, offline e regressões acumuladas permanecem vigentes; nenhuma foi encerrada nesta atualização. G14 continua FAIL; campanha 0304 PARTIAL/aberta.
