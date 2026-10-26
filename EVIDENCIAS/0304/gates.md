@@ -403,3 +403,18 @@ Capturas, medidas, fonte/formula e limites: [`relatorios-v2-financeiro-parte-e`]
 | G14 / aprovação visual expressa | **FAIL** | Nenhuma aprovação visual expressa recebida. |
 
 Evidência detalhada/checklist não executado de promoção: [`financeiro-parte-g-2026-10-26`](financeiro-parte-g-2026-10-26/README.md). Restaurante commit local `46d1c4d0288a422a2f589782ea80a21db079d026`; histórico será push exclusivamente via fast-forward. Campanha 0304 permanece aberta; backlog 0257 preservado; 0305 não iniciada.
+
+## Parte H — provisionamento E2E autenticado e reconciliação — 2026-10-26
+
+| Gate | Estado | Evidência/limite |
+|---|---|---|
+| Causa `42501` e restauração RLS E2E | PASS | `users` global ficou com RLS ligado por teardown da concorrência; migration não o habilita. Estado E2E restaurado e fixture passa a restaurar flags originais. |
+| HTTP/API PostgreSQL autenticada | PASS | Pagamentos parciais, estornos/ajustes, payout, MFA/RBAC/CSRF, tenant isolation, idempotência, retry e reconciliação; cleanup zero. |
+| Concorrência PostgreSQL duas conexões | PASS | Backends distintos, limites, duplicação, retry e ajustes; sete eventos, cleanup zero. |
+| Roteamento de revogação sync | PASS | Só Motoboy destinatário recebe `CANONICAL_ASSIGNMENT_REVOKED`; excluído do canonical pull Restaurante. |
+| Browser autenticado | PARTIAL/BLOCKED | Bootstrap e sync passaram; pedido sintético não expôs o seletor `data-detail` esperado. UI de operações financeiras, filtros e exportações não comprovadas. |
+| Regressão `npm test` | PASS | Suíte completa exit 0 após sincronizar as referências de cache. |
+| Oficial/auditoria/promoção | BLOCKED | Credencial `rotamoto_auditor` ausente. Nenhuma consulta, escrita ou promoção; 0052–0055 somente E2E. |
+| G14 | **FAIL** | Aprovação visual expressa pendente. |
+
+Detalhes: [`financeiro-parte-h-2026-10-26`](financeiro-parte-h-2026-10-26/README.md). Commit Restaurante local `7b3ea730b792050edf22bf79840988bade260fa2`; push somente do histórico. Campanha 0304 aberta/PARTIAL, backlog 0257 preservado; 0305 não iniciada.
