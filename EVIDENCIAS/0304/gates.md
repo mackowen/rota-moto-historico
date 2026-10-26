@@ -371,3 +371,20 @@ Detalhes: [`relatorios-v2-parte-d-2026-10-26`](relatorios-v2-parte-d-2026-10-26/
 | G14 — aprovação visual | **FAIL** | Nenhuma captura técnica substitui aprovação expressa do proprietário. |
 
 Capturas, medidas, fonte/formula e limites: [`relatorios-v2-financeiro-parte-e`](relatorios-v2-financeiro-parte-e/README.md). Campanha 0304 continua aberta/PARTIAL; backlog preservado; 0305 não iniciada.
+
+## Pagamentos e razão financeiro — Parte F (2026-10-26)
+
+| Gate | Estado | Evidência/limite |
+|---|---|---|
+| Razão imutável e migrations | PASS em E2E | 0052–0054 aplicadas em `rotamoto_e2e`; RLS, imutabilidade, down guarded para razão não vazia. Nenhuma migration oficial. |
+| API autenticada, tenant, RBAC/MFA, CSRF | PASS nos cenários E2E | Handlers HTTP reais + PostgreSQL E2E; corrida concorrente single-client harness, multi-connection pendente. |
+| Recebimentos manuais e replay | PASS no escopo testado | Pagamentos parciais, concorrência, conflitos e excesso; fonte rotulada `operator_declaration`. |
+| Estornos, ajustes, repasses | PASS API E2E parcial | Estorno limitado, ajuste referenciado, payout parcial/limite Earning; formulários de estorno/ajuste/repasse ainda não existem. |
+| Relatórios V2 | PASS no renderer/testes; PARTIAL em integração visual | Eventos servidor/tenant confirmados separados de venda/logística; callbacks externos não integrados, sem cobertura completa. |
+| Offline e reconciliação | PARTIAL | Outbox IndexedDB e estados/retentativas implementados; sessão financeira browser autenticada não exercitada. |
+| `npm test` / E2E / cleanup | PASS | Suíte Restaurante PASS; API/PostgreSQL E2E autenticada PASS, cleanup sem resíduos. |
+| Chromium/CDP autenticado | BLOCKED | 401 esperado sem sessão autorizada; tela login sem overflow a 390/768/1440, sem erros JS; fluxos financeiros não navegados. |
+| Auditoria e promoção PostgreSQL oficial | BLOCKED | `rotamoto_auditor` ausente; consultas não executadas, segredo não recuperado, nenhuma escrita oficial. |
+| G14 / aprovação visual | **FAIL** | Exige aprovação visual expressa. |
+
+**Pendências cumulativas:** obter credencial/acesso autorizado ao papel `rotamoto_auditor`; executar as consultas somente leitura registradas na evidência Parte F; decidir e autorizar promoção em gate separado; implementar callbacks somente quando contrato e autenticação oficial estiverem disponíveis; completar UI de estorno, ajuste e liquidação; testar offline/reconciliação em sessão autenticada; executar browser QA financeiro autenticado e regressão Android quando disponível; obter aprovação visual expressa para G14. Baselines, backlog desde 0257 e Campanha 0304 permanecem preservados/abertos; 0305 não iniciada.
