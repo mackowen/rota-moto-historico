@@ -388,3 +388,18 @@ Capturas, medidas, fonte/formula e limites: [`relatorios-v2-financeiro-parte-e`]
 | G14 / aprovação visual | **FAIL** | Exige aprovação visual expressa. |
 
 **Pendências cumulativas:** obter credencial/acesso autorizado ao papel `rotamoto_auditor`; executar as consultas somente leitura registradas na evidência Parte F; decidir e autorizar promoção em gate separado; implementar callbacks somente quando contrato e autenticação oficial estiverem disponíveis; completar UI de estorno, ajuste e liquidação; testar offline/reconciliação em sessão autenticada; executar browser QA financeiro autenticado e regressão Android quando disponível; obter aprovação visual expressa para G14. Baselines, backlog desde 0257 e Campanha 0304 permanecem preservados/abertos; 0305 não iniciada.
+
+## Financeiro — interface e concorrência — Parte G (2026-10-26)
+
+| Gate | Estado | Evidência/limite |
+|---|---|---|
+| UI de recebimento, estorno, ajuste e pagamento de repasse | PARTIAL | Formulários integrados ao razão/endpoints; confirmação explícita, erros e estado local pendente. Sem browser autenticado. Valores Earning apresentados como cálculo local; endpoint valida valor canônico. |
+| Unicidade e corridas PostgreSQL | PASS | Migration 0055 + teste com duas conexões/backends independentes: referência repetida, excesso de recebimento/estorno/repasse e retry idempotente bloqueados; ajustes simultâneos persistem; cleanup zero. |
+| Relatórios e CSV | PARTIAL | CSV separa recebimentos/estornos/ajustes somente do ledger confirmado; analytics e view unitários PASS. Cobertura externa/callback bancário não integrado; validação visual autenticada BLOCKED. |
+| Suíte Restaurante `npm test` | PASS | Execução final completa exit 0, incluindo cross-app contract parity; código Motoboy não foi modificado. |
+| Integração HTTP/PostgreSQL autenticada | BLOCKED | Fixture `test-domain-sync-postgres.js` falhou antes dos casos com `42501` em insert sintético via `rotamoto_app` sob RLS; não contornado. Teste de concorrência serviço/PostgreSQL isolado passou separadamente. |
+| Browser financeiro autenticado | BLOCKED | Nenhuma credencial E2E autorizada disponível; não foi alegado teste visual autenticado. |
+| PostgreSQL oficial e promoção | BLOCKED | Não executados. `rotamoto_auditor` indisponível; migrações 0052–0055 não foram aplicadas no oficial. |
+| G14 / aprovação visual expressa | **FAIL** | Nenhuma aprovação visual expressa recebida. |
+
+Evidência detalhada/checklist não executado de promoção: [`financeiro-parte-g-2026-10-26`](financeiro-parte-g-2026-10-26/README.md). Restaurante commit local `46d1c4d`; histórico será push exclusivamente via fast-forward. Campanha 0304 permanece aberta; backlog 0257 preservado; 0305 não iniciada.
