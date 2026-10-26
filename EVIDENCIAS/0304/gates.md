@@ -323,3 +323,20 @@ Detalhes: [`relatorios-v2-acabamento-2026-10-26`](relatorios-v2-acabamento-2026-
 | Fidelidade/aprovação visual | PARTIAL; G14 **FAIL** | Comparação visual arquivada, aguardando aprovação expressa do proprietário. |
 
 Esta matriz não encerra gates anteriores, backlog ou a Campanha 0304. Sem PASS global; 0305 não iniciada.
+
+
+## Relatórios V2 — Parte C estrutural (2026-10-26)
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| Cabeçalho PC compartilhado/título único | PASS técnico | Renderer CDP; shell comum reutilizado; arquivo servido verificado por SHA-256. |
+| Painel de filtros e expansão persistente | PASS técnico | Um painel no DOM; campos completos em 320 px; avançados fechados por padrão, preservados ao alternar. |
+| Navegação operacional e grids | PASS técnico | Duas colunas em largura efetiva estreita, quatro em 1440; texto sem clipping. |
+| Responsividade renderer claro/escuro | PASS técnico | 28 casos executivos + 10 operacionais, overflow/cortes zero. |
+| Testes e sintaxe | PASS | `npm test` completo exit 0, `node --check`, `git diff --check`. |
+| E2E autenticado/dados tenant | PARTIAL | Não executado nesta etapa de apresentação. |
+| Chrome Android físico/modo computador | BLOCKED | Dispositivo físico não acessível. |
+| Acessibilidade instrumental | PARTIAL | Semântica/foco cobertos, sem leitor de tela ou auditoria externa. |
+| Fidelidade/aprovação | PARTIAL; G14 **FAIL** | Esboços acessíveis e capturas técnicas arquivadas; decisão visual final pertence ao proprietário. |
+
+A fixture CDP não equivale a E2E autenticado nem a dispositivo físico. Campanha permanece PARTIAL/aberta e backlog cumulativo preservado.
