@@ -98,4 +98,4 @@ Não é seguro usar `down` no PostgreSQL E2E compartilhado. O E2E está no alvo 
 
 ## Commits
 
-Nenhum commit de aplicativo nesta Parte J. Motoboy inalterado. Commit de evidência/documentação e publicação do histórico serão registrados em `REGISTROS/0304.md` depois da revisão final. Nenhum push de aplicativo.
+Nenhum commit de aplicativo nesta Parte J. Motoboy inalterado. Histórico Parte J commit `0ddd673` (publicado por fast-forward). Nenhum push de aplicativo.
