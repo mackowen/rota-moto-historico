@@ -2380,3 +2380,7 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - [ ] Validar cópia externa correspondente à chave do set L.1; envelope Downloads 0138 foi associado a chave local diferente da 0154 usada. Operação BLOCKED, sem trocar chaves automaticamente.
 - [ ] Definir com o proprietário ensaio isolado do set atual; nenhum banco adicional foi criado. Gate de promoção permanece BLOCKED.
 - G14 FAIL, 0304 aberta e 0305 não iniciada; pendências anteriores preservadas. Ver [L.1](EVIDENCIAS/0304/financeiro-parte-l1/README.md).
+
+## 0304 — Parte L.2 (2026-10-27)
+
+Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com validações técnicas PASS. O proprietário dispensou expressamente backup para esta execução; não existe restore garantido. Itens históricos de custódia L.1 são preservados e não constituíram bloqueio de L.2. Nenhuma pendência visual/E2E/backlog desde 0257 foi encerrada por isso. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [evidência](EVIDENCIAS/0304/financeiro-parte-l2/README.md).

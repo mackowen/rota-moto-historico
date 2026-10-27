@@ -416,3 +416,8 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 
 - [Backup PostgreSQL e bloqueio de custódia](EVIDENCIAS/0304/financeiro-parte-l1/README.md)
 - [Verificação sanitizada](EVIDENCIAS/0304/financeiro-parte-l1/verification.json)
+
+### 0304 — Parte L.2 — 2026-10-27
+
+- [Aplicação direta de 0048–0055 e validações](EVIDENCIAS/0304/financeiro-parte-l2/README.md)
+- [Resultado técnico sanitizado](EVIDENCIAS/0304/financeiro-parte-l2/validation.json)

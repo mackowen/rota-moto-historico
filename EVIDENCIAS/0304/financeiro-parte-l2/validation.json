@@ -1,0 +1,635 @@
+{
+  "campaign": "0304",
+  "part": "L.2",
+  "runId": "0304-l2-20261027T140334Z",
+  "result": "PASS",
+  "authorization": {
+    "directMigrationsWithoutBackupExplicitlyAuthorized": true,
+    "database": "rotamoto",
+    "through": "0055",
+    "noGuaranteedRestorePoint": true,
+    "noBackupsOrKeysOrAdditionalDatabases": true
+  },
+  "preflight": {
+    "gate": "PASS",
+    "identity": {
+      "database": "rotamoto",
+      "role": "rotamoto_migrator",
+      "version": "18.6",
+      "read_only": "on"
+    },
+    "role": {
+      "rolsuper": false,
+      "rolcreatedb": false,
+      "rolcreaterole": false,
+      "rolbypassrls": false
+    },
+    "schema": {
+      "owner": "rotamoto_migrator",
+      "can_create": true,
+      "ledger_access": true
+    },
+    "ledgerCount": 47,
+    "checksumsMatch": true,
+    "pending": [
+      {
+        "id": "0048_platform_administration",
+        "checksum": "ac8d0896daa6b5b75b98c15c79d2ade03943d0f6e5cfc93525d5d026d745e547"
+      },
+      {
+        "id": "0049_platform_administration_hardening",
+        "checksum": "de9d0eb7b63482db85d956268aae59effd1c67753d350efc9f52c01949c7eab2"
+      },
+      {
+        "id": "0050_company_role_descriptions",
+        "checksum": "9db2da4eb38d566a02eea8683f2247c3a8860bf5222bf14e01773a8f11efc054"
+      },
+      {
+        "id": "0051_company_role_description_runtime_update",
+        "checksum": "691725b152519e59529bccec2900ed5242b76030124d7f734e0e0dfa1aaabbc2"
+      },
+      {
+        "id": "0052_financial_ledger",
+        "checksum": "fc03033068a0176bd21a707b60717fbd8a53200060c0fc933d2575340424c4d6"
+      },
+      {
+        "id": "0053_financial_event_time_independence",
+        "checksum": "548d6657a6e1f376bf9c79919f1a39bfb8020d33406e8167cab0b6867f3baa51"
+      },
+      {
+        "id": "0054_adjustment_event_reference",
+        "checksum": "25e00d5757353ebadd969d098b42b762db9ff1c021cee9b674ce61d93957960e"
+      },
+      {
+        "id": "0055_financial_reference_uniqueness",
+        "checksum": "6f952f39246863199b0dd9c78b700cc89c318ffd49fbc5f9c6776992a0273aa3"
+      }
+    ],
+    "state": {
+      "waiting_locks": 0,
+      "active_other_sessions": 0,
+      "financial_absent": true,
+      "platform_absent": true,
+      "role_description_absent": true
+    }
+  },
+  "execution": {
+    "startedAt": "2026-10-27T14:03:55.872Z",
+    "finishedAt": "2026-10-27T14:03:57.028Z",
+    "elapsedMs": 1125,
+    "exitCode": 0,
+    "command": "node backend/postgres/migrate.js up --through=0055_financial_reference_uniqueness",
+    "lockTimeoutMs": 5000,
+    "statementTimeoutMs": 60000,
+    "transactionPerMigration": true,
+    "lines": [
+      {
+        "at": "2026-10-27T14:03:56.887Z",
+        "line": "aplicada 0048_platform_administration"
+      },
+      {
+        "at": "2026-10-27T14:03:56.901Z",
+        "line": "aplicada 0049_platform_administration_hardening"
+      },
+      {
+        "at": "2026-10-27T14:03:56.911Z",
+        "line": "aplicada 0050_company_role_descriptions"
+      },
+      {
+        "at": "2026-10-27T14:03:56.919Z",
+        "line": "aplicada 0051_company_role_description_runtime_update"
+      },
+      {
+        "at": "2026-10-27T14:03:56.971Z",
+        "line": "aplicada 0052_financial_ledger"
+      },
+      {
+        "at": "2026-10-27T14:03:56.977Z",
+        "line": "aplicada 0053_financial_event_time_independence"
+      },
+      {
+        "at": "2026-10-27T14:03:56.985Z",
+        "line": "aplicada 0054_adjustment_event_reference"
+      },
+      {
+        "at": "2026-10-27T14:03:56.993Z",
+        "line": "aplicada 0055_financial_reference_uniqueness"
+      }
+    ],
+    "stderr": "",
+    "backupWaivedByOwner": true
+  },
+  "postflight": {
+    "gate": "PASS",
+    "ledgerCount": 55,
+    "checksumsMatch": true,
+    "ledger": [
+      {
+        "id": "0001_identity_tenant_foundation",
+        "checksum": "91ac702d39875ee849064df27d6494e81fc388b6cf93feeb6fe19942f95b5853"
+      },
+      {
+        "id": "0002_identity_provisioning_tokens",
+        "checksum": "99ef9381fea828afa93b6d456c81132320ed9934d778ff06cef70de33deb055f"
+      },
+      {
+        "id": "0003_provisioning_membership_constraint",
+        "checksum": "74cf72f8f30e61b7c4b80a27a8f432d87a48ada4546d1e9f970e137096b4cc96"
+      },
+      {
+        "id": "0004_foundation_integrity_constraints",
+        "checksum": "cb67c42dfe7510a0884bd815097c54b5aa0daae4387a089dff75440d76082c6d"
+      },
+      {
+        "id": "0005_canonical_domain_sync",
+        "checksum": "42e280b8fd405bee8ce2e3ce9fda6cbd5fd63983b1cfc372f34b76c2ab8f436d"
+      },
+      {
+        "id": "0006_global_event_idempotency",
+        "checksum": "cb10130075666aaaf5e9b8a70b3b3da88a649823af81d0b7e180b3580d681284"
+      },
+      {
+        "id": "0007_sync_permissions",
+        "checksum": "7d33a06b8caa426776558e16525da708d6d2c75c0757dd925f3cf9c68f4bb4fd"
+      },
+      {
+        "id": "0008_sync_installation_identity",
+        "checksum": "9db94293b289a901bae1fbc07e382972092c884974521220d2e7462ace25d0fe"
+      },
+      {
+        "id": "0009_domain_model_constraints",
+        "checksum": "4185dca50f1e1b05c612d17df0c336e77d27d750d8f6171effbc952bc6a83adf"
+      },
+      {
+        "id": "0010_route_validation_runtime_grant",
+        "checksum": "97578b692aaf8b4fc0c0da9cba2fa1801ef1758bf0da872678c2d412d3a6484e"
+      },
+      {
+        "id": "0011_runtime_integration_read",
+        "checksum": "f11965d3a8d8860a14d03e37dc7a00662550f0085d00efc05bc834bbe0a64975"
+      },
+      {
+        "id": "0012_identity_rbac_lifecycle",
+        "checksum": "0f5b46d06cebf4ee7af5fee354f72e6ee49ad52e698eca17bb5c7807cd4f67f9"
+      },
+      {
+        "id": "0013_membership_driver_binding",
+        "checksum": "0fbf409785bfdf1a3815c59ab5a4d873dfa84e173f3d002b1d28f8dc8488113f"
+      },
+      {
+        "id": "0014_native_totp_lifecycle",
+        "checksum": "6155804020e22af01724755d353ee1e41f4547e311c2dcf7d24c63f8af593d36"
+      },
+      {
+        "id": "0015_proof_media_upload_intents",
+        "checksum": "87d94090218e34488e19e45a0794a4d78d18406f83a85d14a0eabd2c0e5ab9d2"
+      },
+      {
+        "id": "0016_company_timezone",
+        "checksum": "ced0023f006eaa06822d2b50521a051fce8275c76fbba3f79f12e8369f57fdca"
+      },
+      {
+        "id": "0017_logistics_fulfillment",
+        "checksum": "792f118abed9b904bed062b513a67a5bec7aaafb517c8a79fa4bd7c224f4f8c5"
+      },
+      {
+        "id": "0018_delivery_geo_snapshots",
+        "checksum": "678907ef9663708b913edfa22db791e7148cf0a0a07cf6e1d8085d85bf4819a0"
+      },
+      {
+        "id": "0019_logistics_provider_secret_least_privilege",
+        "checksum": "c7b49b85435e4b7a034e5d060cdbcdaf2af4f0037292ba36cddb651f1ed72037"
+      },
+      {
+        "id": "0020_provider_integration_runtime",
+        "checksum": "a53f23127722074c1ff13b53a0f59898b3bb2228074356ba688ad9e54928a896"
+      },
+      {
+        "id": "0021_provider_claim_tenant_scope",
+        "checksum": "d7476cd693b3540f4f139ccf1a08b491110b641410474aea938c77e5cf64deb4"
+      },
+      {
+        "id": "0022_provider_ambiguous_lease_recovery",
+        "checksum": "a0e876ba1c0a7a4cfd644a49dd51c4c44ee563aac6a9594efc58763cbef5b865"
+      },
+      {
+        "id": "0023_provider_worker_least_privilege",
+        "checksum": "dced1c37de836bcf284252f32e1c97f20e0fd253f7d955e756adecc2388b4364"
+      },
+      {
+        "id": "0024_provider_tracking_status_grant",
+        "checksum": "a60f1a0dba411360ce73f9b84d91c00a7d0e0a264b772243f62786bf88fac560"
+      },
+      {
+        "id": "0025_provider_event_worker_grants",
+        "checksum": "06ff63ec94879afaa451ec018ffe99e03baf7abdb8927d24e1b97d0678ec9053"
+      },
+      {
+        "id": "0026_provider_fulfillment_event_grants",
+        "checksum": "b72afdb2c99c55135b6a95204b8924aacb6e1cca69d2a2d2781d65760cf4fc8f"
+      },
+      {
+        "id": "0027_logistics_intelligence_settings",
+        "checksum": "fa0737c599d212c119d83319c89b7f6c6cb858e936f47291b406ef5943e112d2"
+      },
+      {
+        "id": "0028_external_account_secret_least_privilege",
+        "checksum": "0faad864fc36ae26c699bb76bc3ec6dc700ddc4eb0dbae09621a1d15b3b74c0e"
+      },
+      {
+        "id": "0029_logistics_human_decisions",
+        "checksum": "63df8c56fa95f28bba130007326b56b119b87c28d7add8a8dc50426a64bc3106"
+      },
+      {
+        "id": "0030_logistics_decision_stale_approval",
+        "checksum": "41ce7edb9f91014933843e74e1d3d3aa87a5c9f498e81c484cd93d0ac1c85378"
+      },
+      {
+        "id": "0031_logistics_decision_worker_projection",
+        "checksum": "c636aacbf5675feb92f4ecba8b52a8ff7a93a17c17d4c721ff5efc626d6ffff5"
+      },
+      {
+        "id": "0032_logistics_route_origin_settings",
+        "checksum": "cd26848428ed7e65ee62e5c086bf4f868e4d03e41c6aac0425532609003239ca"
+      },
+      {
+        "id": "0033_company_operational_location",
+        "checksum": "232c35edd68341d4f32537c058c76cb138179a5f844a88efe02cf9a4ba7eae14"
+      },
+      {
+        "id": "0034_company_route_grouping_policy",
+        "checksum": "4e8119bdf58e8d21d819600f930a4d86a50d3de78dd78f7c64c2f159ed943d8c"
+      },
+      {
+        "id": "0035_marketplace_runtime",
+        "checksum": "a652d7b8a5e335370a85cdd949772d84d3efb0fcf412313ae40d904e8c1fb895"
+      },
+      {
+        "id": "0036_marketplace_lifecycle_hardening",
+        "checksum": "7af8c2d9161d0d0d9ebc914b8565c9960f8bee1aa3abfec1064b9163ade2cc1b"
+      },
+      {
+        "id": "0037_marketplace_worker_secret_boundary",
+        "checksum": "42990538161379cc589981fcaa48f08477c4d3d61e44eb2946d0cf33b427cd56"
+      },
+      {
+        "id": "0038_marketplace_resolver_lifecycle_grants",
+        "checksum": "71ae41768635c7abff3d4768178bdf9b1f09e438f14dc66236f8681abc6b3a1d"
+      },
+      {
+        "id": "0039_driver_operational_availability",
+        "checksum": "e581cecf955381968548d5cb65b6f937d105cf5a1beace779d078a3100047494"
+      },
+      {
+        "id": "0040_restaurant_driver_queue",
+        "checksum": "58a6e6b0da458b97fdc2553b8dcf066eb14abeb6efeb93ddc6d24713ea951f85"
+      },
+      {
+        "id": "0041_delivery_custody_return",
+        "checksum": "c75063f833da16a8efdd2e8d448bf1c7c3aee7e360be8d9e1f12397d15251a9c"
+      },
+      {
+        "id": "0042_marketplace_99food_runtime",
+        "checksum": "ad036400035b8c03cbb92d9254d07fd8681ced0c06fcf325cb1678c06cdac160"
+      },
+      {
+        "id": "0043_99food_application_and_cash_commands",
+        "checksum": "35a9f9d297d6010c0704b487d85fb735ab96db0a0c8517385c4b31936be1b189"
+      },
+      {
+        "id": "0044_99food_distributed_rate_limit",
+        "checksum": "ac5f82463dd933657f4c4d921dc4dab2684437fe5e9163bf90c8750e55c28a95"
+      },
+      {
+        "id": "0045_installation_bootstrap",
+        "checksum": "459bf4fc1b5ef6bffca5110d664c25ef9ce68fdb3a2126eb98db2b4a79fdd00f"
+      },
+      {
+        "id": "0046_bootstrap_legacy_installation_latch",
+        "checksum": "28c478aa0453de3450b26faac64665728ec89a3a2a378d89324d022e58f06fa4"
+      },
+      {
+        "id": "0047_administrative_mfa_recovery",
+        "checksum": "7f222325322dda7f677f827ff7362c231a2103688dd375d5a26fd836bdb23c9d"
+      },
+      {
+        "id": "0048_platform_administration",
+        "checksum": "ac8d0896daa6b5b75b98c15c79d2ade03943d0f6e5cfc93525d5d026d745e547"
+      },
+      {
+        "id": "0049_platform_administration_hardening",
+        "checksum": "de9d0eb7b63482db85d956268aae59effd1c67753d350efc9f52c01949c7eab2"
+      },
+      {
+        "id": "0050_company_role_descriptions",
+        "checksum": "9db2da4eb38d566a02eea8683f2247c3a8860bf5222bf14e01773a8f11efc054"
+      },
+      {
+        "id": "0051_company_role_description_runtime_update",
+        "checksum": "691725b152519e59529bccec2900ed5242b76030124d7f734e0e0dfa1aaabbc2"
+      },
+      {
+        "id": "0052_financial_ledger",
+        "checksum": "fc03033068a0176bd21a707b60717fbd8a53200060c0fc933d2575340424c4d6"
+      },
+      {
+        "id": "0053_financial_event_time_independence",
+        "checksum": "548d6657a6e1f376bf9c79919f1a39bfb8020d33406e8167cab0b6867f3baa51"
+      },
+      {
+        "id": "0054_adjustment_event_reference",
+        "checksum": "25e00d5757353ebadd969d098b42b762db9ff1c021cee9b674ce61d93957960e"
+      },
+      {
+        "id": "0055_financial_reference_uniqueness",
+        "checksum": "6f952f39246863199b0dd9c78b700cc89c318ffd49fbc5f9c6776992a0273aa3"
+      }
+    ],
+    "integrity": {
+      "constraints": 914,
+      "unvalidated_constraints": 0,
+      "indexes": 138,
+      "invalid_indexes": 0,
+      "rls_tables": 40,
+      "rls_without_force": 0,
+      "policies": 43
+    },
+    "tables": [
+      {
+        "relname": "financial_events",
+        "rls": true,
+        "force_rls": true,
+        "owner": "rotamoto_migrator",
+        "app_select": true,
+        "app_insert": true,
+        "app_update": false,
+        "app_delete": false
+      },
+      {
+        "relname": "platform_admin_audit_log",
+        "rls": false,
+        "force_rls": false,
+        "owner": "rotamoto_migrator",
+        "app_select": false,
+        "app_insert": false,
+        "app_update": false,
+        "app_delete": false
+      },
+      {
+        "relname": "platform_admin_bootstrap_latch",
+        "rls": false,
+        "force_rls": false,
+        "owner": "rotamoto_migrator",
+        "app_select": false,
+        "app_insert": false,
+        "app_update": false,
+        "app_delete": false
+      },
+      {
+        "relname": "platform_administrators",
+        "rls": false,
+        "force_rls": false,
+        "owner": "rotamoto_migrator",
+        "app_select": true,
+        "app_insert": false,
+        "app_update": false,
+        "app_delete": false
+      }
+    ],
+    "financialPolicy": [
+      {
+        "polname": "tenant_isolation",
+        "using_expression": "(company_id = rotamoto.current_tenant_id())",
+        "check_expression": "(company_id = rotamoto.current_tenant_id())"
+      }
+    ],
+    "platformFunctions": [
+      {
+        "proname": "platform_admin_bootstrap_founder",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": false,
+        "public_execute": false
+      },
+      {
+        "proname": "platform_admin_context_is_active",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": true,
+        "public_execute": false
+      },
+      {
+        "proname": "platform_admin_list_companies",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": true,
+        "public_execute": false
+      },
+      {
+        "proname": "platform_admin_list_memberships",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": true,
+        "public_execute": false
+      },
+      {
+        "proname": "platform_admin_list_users",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": true,
+        "public_execute": false
+      },
+      {
+        "proname": "platform_admin_set_company_status",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": true,
+        "public_execute": false
+      },
+      {
+        "proname": "platform_admin_set_user_disabled",
+        "security_definer": true,
+        "settings": [
+          "search_path=pg_catalog, rotamoto"
+        ],
+        "app_execute": true,
+        "public_execute": false
+      }
+    ],
+    "financial": {
+      "description_not_null": true,
+      "app_description_update": true,
+      "reference_unique_valid": true,
+      "immutable_trigger": true,
+      "admin_audit_immutable_trigger": true,
+      "reference_kind_check": true,
+      "finance_read_entries": 1,
+      "finance_manage_entries": 1
+    },
+    "appRole": {
+      "rolsuper": false,
+      "rolcreatedb": false,
+      "rolcreaterole": false,
+      "rolbypassrls": false
+    }
+  },
+  "api": {
+    "database": {
+      "gate": "PASS",
+      "identity": {
+        "database": "rotamoto",
+        "role": "rotamoto_app"
+      },
+      "financeServiceListQuery": "PASS",
+      "visibleFinanceEventsWithoutTenant": 0,
+      "roleDescriptionQuery": "PASS",
+      "unprivilegedPlatformContextActive": false
+    },
+    "http": [
+      {
+        "route": "/health/live",
+        "status": 200,
+        "expected": 200,
+        "result": "PASS",
+        "serviceStatus": "live",
+        "errorCode": null
+      },
+      {
+        "route": "/health/ready",
+        "status": 200,
+        "expected": 200,
+        "result": "PASS",
+        "serviceStatus": "ready",
+        "errorCode": null
+      },
+      {
+        "route": "/api/finance/events",
+        "status": 401,
+        "expected": 401,
+        "result": "PASS",
+        "serviceStatus": null,
+        "errorCode": "UNAUTHENTICATED"
+      },
+      {
+        "route": "/api/platform-admin/companies",
+        "status": 401,
+        "expected": 401,
+        "result": "PASS",
+        "serviceStatus": null,
+        "errorCode": "UNAUTHENTICATED"
+      }
+    ],
+    "gate": "PASS"
+  },
+  "tests": [
+    {
+      "file": "tests/test-postgres-migration-targets.js",
+      "exitCode": 0
+    },
+    {
+      "file": "tests/test-platform-admin-http.js",
+      "exitCode": 0
+    },
+    {
+      "file": "tests/test-order-money.js",
+      "exitCode": 0
+    },
+    {
+      "file": "tests/test-earning-lifecycle.js",
+      "exitCode": 0
+    },
+    {
+      "file": "tests/test-analytics.js",
+      "exitCode": 0
+    },
+    {
+      "file": "tests/test-runtime-config.js",
+      "exitCode": 0
+    },
+    {
+      "file": "tests/test-server-security.js",
+      "exitCode": 1,
+      "failureClassification": "initial test invocation required E2E configuration under NODE_ENV=test; corrected to project default and passed without database fixtures"
+    },
+    {
+      "file": "tests/test-server-security.js",
+      "exitCode": 0,
+      "invocation": "default project environment (NODE_ENV unset)"
+    }
+  ],
+  "services": {
+    "rotamoto-api-official": {
+      "running": true,
+      "observedLogExists": true,
+      "entriesSinceMigrationStart": 5,
+      "errorEntries": 0
+    },
+    "postgres": {
+      "running": true,
+      "observedLogExists": true,
+      "entriesSinceMigrationStart": 11,
+      "errorEntries": 0
+    },
+    "nginx": {
+      "running": true,
+      "observedLogExists": true,
+      "entriesSinceMigrationStart": 0,
+      "errorEntries": 0
+    }
+  },
+  "apiLogObservation": {
+    "gate": "PASS",
+    "rotationObserved": false,
+    "newLines": 4,
+    "events": {
+      "unstructured": 4
+    },
+    "statusCounts": {
+      "200": 2,
+      "401": 2
+    },
+    "unexpectedErrors": [],
+    "window": "since L2 preflight; finite observation, no continuous monitoring claim"
+  },
+  "repositoryPreservation": {
+    "restaurante": {
+      "headUnchanged": true,
+      "statusUnchanged": true,
+      "tagsUnchanged": true
+    },
+    "motoboy": {
+      "headUnchanged": true,
+      "statusUnchanged": true,
+      "tagsUnchanged": true
+    },
+    "browser-tests": {
+      "headUnchanged": true,
+      "statusUnchanged": true,
+      "tagsUnchanged": true
+    }
+  },
+  "e2e": {
+    "connected": false,
+    "modified": false,
+    "databaseFixturesExecuted": false
+  },
+  "newBackupCreated": false,
+  "newKeyCreated": false,
+  "additionalDatabaseCreated": false,
+  "rollbackExecuted": false,
+  "g14": "FAIL",
+  "campaign0304": "OPEN",
+  "campaign0305": "NOT_STARTED"
+}

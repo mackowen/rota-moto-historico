@@ -2105,3 +2105,7 @@ Restaurante HEAD local `7006f20` (branch `codex/campaign-0304-visual-consolidate
 ## 0304 — Parte L.1 (2026-10-27)
 
 Backup oficial cifrado gerado e tecnicamente verificado; **BLOCKED** na custódia externa: envelope Downloads associado à chave 0138, diferente da chave 0154 usada. Restore do set atual pendente, nenhum banco criado/migration executada/E2E acessado. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [evidência L.1](EVIDENCIAS/0304/financeiro-parte-l1/README.md).
+
+## 0304 — Parte L.2 (2026-10-27)
+
+`rotamoto` atualizado até **0055** pelo runner oficial, exit 0; ledger/checksums/integridade/RLS/permissões/API/serviços e testes pertinentes PASS técnico. Aplicação sem backup autorizada expressamente pelo proprietário; sem ponto de restauração garantido. Nenhum banco/chave/backup criado, E2E intocado. Bloqueios anteriores de recuperação não impediram esta atualização por autorização posterior; custódia L.1 permanece fato histórico. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [L.2](EVIDENCIAS/0304/financeiro-parte-l2/README.md).
