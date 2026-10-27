@@ -453,3 +453,20 @@ Evidência detalhada/capturas: [`financeiro-parte-i-2026-10-27`](financeiro-part
 | G14 | **FAIL** | Aprovação visual expressa permanece pendente. |
 
 Matriz e roteiro: [`financeiro-parte-j-2026-10-27`](financeiro-parte-j-2026-10-27/README.md) e [`migration-matrix.md`](financeiro-parte-j-2026-10-27/migration-matrix.md). Campanha 0304 PARTIAL/aberta, backlog 0257 preservado, 0305 não iniciada.
+
+## Parte K — backup/restore e rehearsal 0048–0055
+
+| Gate | Estado | Limite |
+|---|---|---|
+| K1 backup oficial autorizado/íntegro | BLOCKED | Sem autorização/configuração atual; nenhum dump oficial. |
+| K2 restauração de cópia oficial | BLOCKED | Recovery set histórico citado não disponível. |
+| K3 migrations no clone | PARTIAL | Pipeline sintético 0001–0055 passou; sem checkpoint 0047→upgrade incremental. |
+| K4 integridade pós-migration | PARTIAL | Validação do schema/ledger sintético passou; sem conteúdo oficial. |
+| K5 permissões/RLS/isolation | PARTIAL | Harness isolado confirmou RLS/policies; sem auditoria ACL do clone oficial. |
+| K6 recuperação/rollback | PARTIAL | Backup/restore sintético PASS; rollback de 0048–0055 não ensaiado. |
+| K7 duração/recursos | PARTIAL | Parede ~20 s observados; sem medição por migration/CPU/memória. |
+| K8 limpeza | PARTIAL | Cluster encerrado e seu resíduo próprio removido; resíduos preexistentes preservados. |
+| K9 prontidão futura | BLOCKED / NO-GO | Dependências oficiais e ensaio incremental pendentes. |
+| Banco oficial sem escrita / G14 | PASS / **FAIL** | Oficial intacto; G14 aguarda aprovação visual expressa. |
+
+Detalhes, autorização, runbook de retomada e limitações: [`financeiro-parte-k`](financeiro-parte-k/README.md). Campanha 0304 PARTIAL/aberta; sem promoção ou 0305.
