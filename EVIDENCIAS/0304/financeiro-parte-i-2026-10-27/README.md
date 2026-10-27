@@ -40,6 +40,12 @@ O teste passou em 320, 390, 430, 768, 980 e 1440 px nos temas claro e escuro par
 - PostgreSQL oficial `rotamoto`: não acessado nem alterado. Migrations 0052–0055 não promovidas. Auditoria oficial permanece BLOCKED sem `rotamoto_auditor`.
 - Aprovação visual do proprietário G14: FAIL/pending, conforme gate obrigatório; capturas não equivalem a aprovação.
 
+## Commits
+
+- Restaurante local: `4fcb095bae2f7f2803668207a488ccae391d20a6`.
+- Histórico (fast-forward publicado): `81ffa64000c53c7a16249a2ceef63d278e839743`.
+- Motoboy: sem alteração; browser-tests permaneceu com estado preexistente preservado.
+
 ## Capturas
 
 - `operacional-390-light.png`
