@@ -436,3 +436,20 @@ Detalhes: [`financeiro-parte-h-2026-10-26`](financeiro-parte-h-2026-10-26/README
 | G14 — aprovação visual do proprietário | **FAIL** | Continua aguardando aprovação expressa; evidências técnicas não mudam o gate. |
 
 Evidência detalhada/capturas: [`financeiro-parte-i-2026-10-27`](financeiro-parte-i-2026-10-27/README.md). Campanha 0304 PARTIAL/aberta; backlog 0257 preservado; 0305 não iniciada.
+
+## Parte J — auditoria de prontidão financeira — 2026-10-27
+
+| Requisito | Estado | Evidência/limite |
+|---|---|---|
+| Inventário completo | PASS | 55 migrations; oficial 0001–0047, E2E 0001–0055, checksum matching e cadeia sem lacunas; 0041 confirmada aplicada em ambos. |
+| Credencial e consulta oficial | PASS (READ ONLY) | `rotamoto_auditor` autenticou no oficial; `transaction_read_only=on`, acesso de ledger/catalog confirmado, sessão encerrada por rollback. |
+| Catálogo/schema | PASS | Oficial PostgreSQL 18.6: 853 constraints válidas, 128 índices válidos; custody com RLS/FORCE. Finance tables ainda ausentes. |
+| Cobertura e conflitos de dados | BLOCKED | Auditor sem SELECT operacional; pedidos, Earning, permission seeds e role assignments não consultados. Não foi usada outra role. |
+| Compatibilidade de migration | PASS no E2E / PARTIAL oficial | checksums locais e constraints E2E validados; oficial ainda está em 0047. Migrations pendentes 0048–0055. |
+| Cópia sanitizada/backup | BLOCKED | Nenhum artefato local aprovado/verificável; restore não ensaiado. |
+| Ensaio de promoção/tempo/rollback | PARTIAL | Schema E2E final consultado; scripts inspecionados. Sem banco descartável/cópia autorizada, sem aplicar/reverter ou medir duração. |
+| Plano de promoção | PASS (preparado) | Checklist de autorização, backup/restore, pre/postflight, parada, ledger/idempotência, janela e recuperação documentado; não executado. |
+| Banco oficial sem escrita | PASS | Só SELECT de metadados/ledger em transações read-only; nenhuma migration, grant ou evento financeiro. |
+| G14 | **FAIL** | Aprovação visual expressa permanece pendente. |
+
+Matriz e roteiro: [`financeiro-parte-j-2026-10-27`](financeiro-parte-j-2026-10-27/README.md) e [`migration-matrix.md`](financeiro-parte-j-2026-10-27/migration-matrix.md). Campanha 0304 PARTIAL/aberta, backlog 0257 preservado, 0305 não iniciada.
