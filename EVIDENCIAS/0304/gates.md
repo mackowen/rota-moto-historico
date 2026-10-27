@@ -470,3 +470,18 @@ Matriz e roteiro: [`financeiro-parte-j-2026-10-27`](financeiro-parte-j-2026-10-2
 | Banco oficial sem escrita / G14 | PASS / **FAIL** | Oficial intacto; G14 aguarda aprovação visual expressa. |
 
 Detalhes, autorização, runbook de retomada e limitações: [`financeiro-parte-k`](financeiro-parte-k/README.md). Campanha 0304 PARTIAL/aberta; sem promoção ou 0305.
+
+## Parte L — promoção controlada ao PostgreSQL principal
+
+| Gate | Estado | Limite |
+|---|---|---|
+| Alvo e estado 0001–0047 | PASS | `rotamoto` PG 18.6, ledger contíguo. |
+| Checksums oficiais | PASS | 47/47 iguais à fonte local. |
+| E2E 0001–0055 preservado | PASS | Read-only; nenhuma escrita. |
+| Backup oficial verificado | **BLOCKED** | Configuração de key/destino/mídia/log/ator/opt-in ausente; sem export. |
+| Aplicação 0048–0055 | **BLOCKED** | Interrompida antes de qualquer migration devido ao backup obrigatório. |
+| Banco principal sem escrita | PASS | Só identificação/ledger em READ ONLY; `rotamoto` permanece em 0047. |
+| Testes pós-migration | BLOCKED | Migration não ocorreu; nenhum teste de fixture em banco principal. |
+| G14 / campanha | **FAIL** / aberta | Aprovação visual não recebida; 0305 não iniciada. |
+
+Relatório: [`financeiro-parte-l`](financeiro-parte-l/README.md). Nenhum banco criado, alteração de app ou migration executada.
