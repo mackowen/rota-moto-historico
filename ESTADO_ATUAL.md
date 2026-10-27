@@ -2101,3 +2101,7 @@ Restaurante branch `codex/campaign-0304-visual-consolidated`, commit local `819e
 ### Checkpoint 2026-10-26 — navegação de recuperação e convite
 
 Restaurante HEAD local `7006f20` (branch `codex/campaign-0304-visual-consolidated`), sem publicação. Login, recuperação, MFA recovery e convite foram organizados como views exclusivas. `npm test` PASS; CDP registrou 184 estados/40 capturas, sem exceções, sem overflow e sem POST. Sessão anônima produziu apenas os 401 esperados. E2E autenticado permanece BLOCKED; G14 FAIL; campanha 0304 PARTIAL/aberta, sem início de 0305. Veja [registro](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md) e [evidências](EVIDENCIAS/0304/recuperacao-convite-2026-10-26/README.md).
+
+## 0304 — Parte L.1 (2026-10-27)
+
+Backup oficial cifrado gerado e tecnicamente verificado; **BLOCKED** na custódia externa: envelope Downloads associado à chave 0138, diferente da chave 0154 usada. Restore do set atual pendente, nenhum banco criado/migration executada/E2E acessado. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [evidência L.1](EVIDENCIAS/0304/financeiro-parte-l1/README.md).

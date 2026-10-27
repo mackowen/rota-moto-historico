@@ -1,0 +1,125 @@
+{
+  "runId": "0304-l1-20261027T135218Z",
+  "id": "f96bb29f-b067-4b1c-8709-86e678b1b622",
+  "createdAt": "2026-10-27T13:52:59.477Z",
+  "creationExitCode": 0,
+  "verificationExitCode": 0,
+  "crypto": {
+    "manifestHmac": "PASS",
+    "databaseAes256Gcm": "PASS",
+    "mediaAuthentication": "PASS (0 objects)",
+    "keyUnchanged": "PASS"
+  },
+  "keyCustody": {
+    "localAvailable": true,
+    "externalOwnerConfirmed": true,
+    "downloadEnvelopeMetadata": "PASS",
+    "downloadCiphertextHistoricalHash": "PASS",
+    "envelopeAssociatedCampaign": "0138",
+    "backupKeyAssociatedCampaign": "0154",
+    "localSourceKeysSha256Match": false,
+    "envelopeDecryptedThisRun": false,
+    "restorationKeyCustody": "BLOCKED: downloaded envelope is associated with a different local key; current envelope plaintext not compared"
+  },
+  "database": {
+    "sizeBytes": 346462,
+    "sha256": "76aa433da699c4532da13e93b29030d6ebdd2fc78e3e45e337bf2f85a4003f1e"
+  },
+  "media": {
+    "objectCount": 0,
+    "plaintextBytes": 0
+  },
+  "components": [
+    {
+      "name": "f96bb29f-b067-4b1c-8709-86e678b1b622.dump",
+      "sizeBytes": 346462,
+      "sha256": "76aa433da699c4532da13e93b29030d6ebdd2fc78e3e45e337bf2f85a4003f1e",
+      "mode": "600"
+    },
+    {
+      "name": "f96bb29f-b067-4b1c-8709-86e678b1b622.manifest.json",
+      "sizeBytes": 374,
+      "sha256": "9882feb4346335d1e14b69f1385813f706e4cc1faacd7a80cd69a48b5d1469a5",
+      "mode": "600"
+    },
+    {
+      "name": "set.json",
+      "sizeBytes": 8363,
+      "sha256": "49dff79c67f9f49f3d86b1ab391e7b5f43983b9823ad683de67aa3590f87902b",
+      "mode": "600"
+    }
+  ],
+  "toc": {
+    "entries": 686,
+    "tableData": 51,
+    "policies": 39,
+    "tableRelatedEntries": 126
+  },
+  "pgRestoreList": "PASS",
+  "pgRestoreFullReadWithoutDatabase": "PASS",
+  "inventory": {
+    "inventoryVersion": 1,
+    "checkedAt": "2026-10-27T13:53:31.609Z",
+    "counts": {
+      "verified": 1,
+      "incomplete": 0
+    },
+    "items": [
+      {
+        "id": "f96bb29f-b067-4b1c-8709-86e678b1b622",
+        "state": "VERIFIED",
+        "format": "rotamoto-recovery-set-v1",
+        "createdAt": "2026-10-27T13:52:59.477Z",
+        "databaseBytes": 346462,
+        "databaseSha256": "76aa433da699c4532da13e93b29030d6ebdd2fc78e3e45e337bf2f85a4003f1e",
+        "mediaObjects": 0,
+        "mediaBytes": 0,
+        "schemaCoverage": {
+          "state": "STALE",
+          "appliedCount": 47,
+          "latestApplied": "0047_administrative_mfa_recovery",
+          "expectedLatest": "0055_financial_reference_uniqueness",
+          "missing": [
+            "0048_platform_administration",
+            "0049_platform_administration_hardening",
+            "0050_company_role_descriptions",
+            "0051_company_role_description_runtime_update",
+            "0052_financial_ledger",
+            "0053_financial_event_time_independence",
+            "0054_adjustment_event_reference",
+            "0055_financial_reference_uniqueness"
+          ],
+          "checksumMismatches": [],
+          "unexpected": []
+        }
+      }
+    ]
+  },
+  "restoreRehearsal": "PENDING: no database created or restored",
+  "recoverability": "PARTIAL: current archive authenticated and fully parsed; external matching key and restore rehearsal unproven",
+  "prune": false,
+  "migrationsExecuted": false,
+  "e2eAccessed": false,
+  "result": "BLOCKED",
+  "repositoriesPreserved": {
+    "restaurante": {
+      "headUnchanged": true,
+      "statusUnchanged": true,
+      "tagsUnchanged": true
+    },
+    "motoboy": {
+      "headUnchanged": true,
+      "statusUnchanged": true,
+      "tagsUnchanged": true
+    },
+    "browser-tests": {
+      "headUnchanged": true,
+      "statusUnchanged": true,
+      "tagsUnchanged": true
+    }
+  },
+  "g14": "FAIL",
+  "campaign0304": "OPEN",
+  "campaign0305": "NOT_STARTED",
+  "operationStoppedOnKeyDivergence": true
+}

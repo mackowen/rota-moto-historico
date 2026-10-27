@@ -2374,3 +2374,9 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 - [ ] Validar recuperação MFA com aprovação por outro administrador e fluxo de proprietário único conforme procedimento local; nenhuma sessão/MFA real foi contornada.
 - [ ] Conferir visualmente no Chrome Android físico e obter aprovação do proprietário. CDP emulado registrou 184 estados; não substitui inspeção física nem aprovação. G14 segue FAIL.
 - [ ] Preservar pendências anteriores desde a Campanha 0257; nenhuma foi encerrada por esta intervenção.
+
+## 0304 — Parte L.1 (2026-10-27)
+
+- [ ] Validar cópia externa correspondente à chave do set L.1; envelope Downloads 0138 foi associado a chave local diferente da 0154 usada. Operação BLOCKED, sem trocar chaves automaticamente.
+- [ ] Definir com o proprietário ensaio isolado do set atual; nenhum banco adicional foi criado. Gate de promoção permanece BLOCKED.
+- G14 FAIL, 0304 aberta e 0305 não iniciada; pendências anteriores preservadas. Ver [L.1](EVIDENCIAS/0304/financeiro-parte-l1/README.md).

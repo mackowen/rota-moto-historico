@@ -411,3 +411,8 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Resumo 0304](RESUMOS/0304.md#atualizacao-2026-10-26--recuperacao-de-acesso-e-convite)
 - [Gates 0304](EVIDENCIAS/0304/gates.md)
 - [Capturas, medições e runner CDP](EVIDENCIAS/0304/recuperacao-convite-2026-10-26/README.md)
+
+### 0304 — Parte L.1 — 2026-10-27
+
+- [Backup PostgreSQL e bloqueio de custódia](EVIDENCIAS/0304/financeiro-parte-l1/README.md)
+- [Verificação sanitizada](EVIDENCIAS/0304/financeiro-parte-l1/verification.json)
