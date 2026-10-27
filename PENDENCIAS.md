@@ -2384,3 +2384,9 @@ Capturas e medições sintéticas: `EVIDENCIAS/0304/pedidos-central-operacional-
 ## 0304 — Parte L.2 (2026-10-27)
 
 Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com validações técnicas PASS. O proprietário dispensou expressamente backup para esta execução; não existe restore garantido. Itens históricos de custódia L.1 são preservados e não constituíram bloqueio de L.2. Nenhuma pendência visual/E2E/backlog desde 0257 foi encerrada por isso. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [evidência](EVIDENCIAS/0304/financeiro-parte-l2/README.md).
+
+## 0304 — Parte M revisada (2026-10-27)
+
+- [ ] Validar Relatórios no fluxo autenticado autorizado, com dados da empresa, filtros, reload/sync e exportação real após patch. Estado BLOCKED nesta execução; amostras CDP isoladas não substituem essa prova.
+- [ ] Obter aprovação visual expressa do proprietário para Relatórios; G14 permanece FAIL.
+- Demais pendências de Restaurante/Motoboy e backlog desde 0257 permanecem abertos. PostgreSQL 0055 preservado; 0305 não iniciada. Ver [matriz CORRIGIDO/PARCIAL/PENDENTE](EVIDENCIAS/0304/relatorios-parte-m/README.md).

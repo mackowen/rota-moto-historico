@@ -1,0 +1,9 @@
+{
+  "readOnly": true,
+  "database": "rotamoto",
+  "role": "rotamoto_auditor",
+  "ledgerCount": 55,
+  "checksumsMatch": true,
+  "migrationsExecuted": false,
+  "e2eConnected": false
+}

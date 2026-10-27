@@ -421,3 +421,8 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 
 - [Aplicação direta de 0048–0055 e validações](EVIDENCIAS/0304/financeiro-parte-l2/README.md)
 - [Resultado técnico sanitizado](EVIDENCIAS/0304/financeiro-parte-l2/validation.json)
+
+### 0304 — Parte M revisada — 2026-10-27
+
+- [Relatórios: matriz de problemas, correções e limites de autenticação](EVIDENCIAS/0304/relatorios-parte-m/README.md)
+- [Observação final CDP autotestada](EVIDENCIAS/0304/relatorios-parte-m/final-observation.json)

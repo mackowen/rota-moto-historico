@@ -1,0 +1,13 @@
+{
+  "motoboy": {
+    "headUnchanged": true,
+    "statusUnchanged": true,
+    "tagsUnchanged": true
+  },
+  "browser-tests": {
+    "headUnchanged": true,
+    "statusUnchanged": true,
+    "tagsUnchanged": true
+  },
+  "restaurantBaselineUnchanged": true
+}

@@ -1,0 +1,225 @@
+{
+  "authenticatedQA": "BLOCKED",
+  "observed": {
+    "appReady": false,
+    "loginVisible": true,
+    "protectedAppHidden": true
+  },
+  "responses": [
+    {
+      "path": "/",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/99food-integration.js",
+      "status": 200,
+      "fromServiceWorker": false
+    },
+    {
+      "path": "/vendor/leaflet/leaflet.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/vendor/maplibre/maplibre-gl.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/identity-ui.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/presence-qr.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/design-system.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/pilot-views.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/backup-center.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/dashboard-v2.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/orders-v2.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/routes-v2.css",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/qr-local.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/ifood-integration.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/keeta-integration.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/backup-format.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/contract.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/indexeddb-schema.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/sync-reconciliation.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/order-money.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/ticket-renderer.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/manifest.json",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/restaurant-operations.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/browser-printer-provider.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/analytics.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/analytics-view.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/identity-session-guard.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/backup-destinations-ui.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/logistics-ui.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/server-update-coordinator.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/company-settings-persistence.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/dashboard-v2.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/identity-ui.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "fromServiceWorker": true
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 401,
+      "fromServiceWorker": false
+    },
+    {
+      "path": "/icons/icon-192.png",
+      "status": 200,
+      "fromServiceWorker": true
+    }
+  ],
+  "errors": [],
+  "unexpectedHttp": [],
+  "assets": [
+    {
+      "name": "styles.css",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "name": "analytics-view.js",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "name": "logistics-ui.js",
+      "status": 200,
+      "sha256Matches": true
+    },
+    {
+      "name": "app.js",
+      "status": 200,
+      "sha256Matches": true
+    }
+  ],
+  "limitations": "No active authorized session. Public bootstrap and assets only; no login POST, database fixture, new account or credential recovery was performed."
+}

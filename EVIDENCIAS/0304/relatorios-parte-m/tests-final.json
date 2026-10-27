@@ -1,0 +1,63 @@
+[
+  {
+    "file": "tests/test-analytics.js",
+    "exitCode": 0,
+    "output": "Analytics baseline tests passed\n"
+  },
+  {
+    "file": "tests/test-analytics-view.js",
+    "exitCode": 0,
+    "output": "Analytics renderer point-count, axis accessibility, empty and unavailable states: PASS\nReport financial read states and complete hourly distribution: PASS\nFinancial consultation loading, visible failure, retry, offline and invalid-response lifecycle: PASS\n"
+  },
+  {
+    "file": "tests/test-territorial-analytics.js",
+    "exitCode": 0,
+    "output": "Territorial analytics aggregation/privacy checks: OK\n"
+  },
+  {
+    "file": "tests/test-territorial-http.js",
+    "exitCode": 0,
+    "output": "Territorial analytics HTTP authorization/CSRF checks: OK\n"
+  },
+  {
+    "file": "tests/test-logistics-decision-quality.js",
+    "exitCode": 0,
+    "output": "Decision quality snapshot, outcomes, coverage and comparability checks passed.\n"
+  },
+  {
+    "file": "tests/test-logistics-intelligence.js",
+    "exitCode": 0,
+    "output": "Logistics intelligence capacity and deterministic route insertion: OK\n"
+  },
+  {
+    "file": "tests/test-visual-shell-cache.js",
+    "exitCode": 0,
+    "output": "Restaurant mobile header and atomic shell contracts: PASS\n"
+  },
+  {
+    "file": "tests/test-sw-atomic-install.js",
+    "exitCode": 0,
+    "output": "Restaurant service worker atomic installation and exact URL matching: PASS\n"
+  },
+  {
+    "file": "tests/test-navigation-shell-renderer.js",
+    "exitCode": 0,
+    "output": "Single-label navigation, collapse contract and desktop Orders workspace: PASS\n"
+  },
+  {
+    "file": "tests/test-mobile-more-navigation.js",
+    "exitCode": 0,
+    "output": "Restaurant grouped navigation, accessible phone More sheet, tablet sidebar and shared theme tokens: PASS\n"
+  },
+  {
+    "file": "tests/test-identity-ui.js",
+    "exitCode": 0,
+    "output": "identity UI and secure session client contract: OK",
+    "note": "rerun after updating its explicit atomic cache version assertion to v145; authentication contracts unchanged"
+  },
+  {
+    "file": "tests/test-order-money.js",
+    "exitCode": 0,
+    "output": "Order money semantics, legacy projection and server validation passed."
+  }
+]

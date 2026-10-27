@@ -2109,3 +2109,7 @@ Backup oficial cifrado gerado e tecnicamente verificado; **BLOCKED** na custódi
 ## 0304 — Parte L.2 (2026-10-27)
 
 `rotamoto` atualizado até **0055** pelo runner oficial, exit 0; ledger/checksums/integridade/RLS/permissões/API/serviços e testes pertinentes PASS técnico. Aplicação sem backup autorizada expressamente pelo proprietário; sem ponto de restauração garantido. Nenhum banco/chave/backup criado, E2E intocado. Bloqueios anteriores de recuperação não impediram esta atualização por autorização posterior; custódia L.1 permanece fato histórico. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [L.2](EVIDENCIAS/0304/financeiro-parte-l2/README.md).
+
+## 0304 — Parte M revisada (2026-10-27)
+
+Relatórios recebeu correções de layout, espaçamento, scroll, disclosures, eixos, textos e estados da consulta financeira. Regressão dinâmica dos componentes passou; jornada autenticada continua BLOCKED por falta de sessão/credencial disponível. Sem aprovação visual inferida. PostgreSQL 0055 preservado por leitura de auditor, sem migrations/fixtures. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [matriz e evidências M](EVIDENCIAS/0304/relatorios-parte-m/README.md).
