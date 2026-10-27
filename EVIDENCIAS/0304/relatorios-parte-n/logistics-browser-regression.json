@@ -1,0 +1,33 @@
+{
+  "pass": true,
+  "requests": 4,
+  "allRequestsReadOnlyAnalytics": true,
+  "outcomes": [
+    {
+      "scenario": "data-vs-allocation",
+      "showsCanonicalDeliveryCount": true,
+      "showsNoAllocationCount": true,
+      "showsCompletedCount": true,
+      "friendlyFleetName": true,
+      "leaksInternalCode": false,
+      "emptyLabel": true
+    },
+    {
+      "scenario": "forbidden",
+      "alert": "Consulta não autorizada\nSeu perfil não tem permissão para consultar estes indicadores.",
+      "code": "FORBIDDEN"
+    },
+    {
+      "scenario": "connection-failure",
+      "alert": "Falha de conexão\nConfira a conexão e tente novamente. Os dados não foram consultados.",
+      "code": "NETWORK_ERROR"
+    },
+    {
+      "scenario": "malformed-response",
+      "alert": "Resposta inválida na consulta\nO serviço não retornou os dados esperados. Nenhum contador foi presumido.",
+      "code": "LOGISTICS_RESPONSE_INVALID"
+    }
+  ],
+  "runtimeExceptions": 0,
+  "screenshot": "logistics-success-state.png"
+}
