@@ -418,3 +418,21 @@ Evidência detalhada/checklist não executado de promoção: [`financeiro-parte-
 | G14 | **FAIL** | Aprovação visual expressa pendente. |
 
 Detalhes: [`financeiro-parte-h-2026-10-26`](financeiro-parte-h-2026-10-26/README.md). Commit Restaurante local `7b3ea730b792050edf22bf79840988bade260fa2`; push somente do histórico. Campanha 0304 aberta/PARTIAL, backlog 0257 preservado; 0305 não iniciada.
+
+## Parte I — E2E financeiro autenticado — 2026-10-27
+
+| Gate | Estado | Evidência e limite |
+|---|---|---|
+| Causa do timeout de detalhe | PASS | Pedido persistido/sincronizado; teste usava seletor obsoleto `[data-detail]` em vez de `[data-orders-open]`. Sem mudança de produção ou aumento genérico de timeout. |
+| API autenticada | PASS | Recebimentos, parcial, duplicidade, estorno, ajuste, repasse, CSRF/RBAC/MFA/sessão, tenant e retry exercitados em PostgreSQL E2E. |
+| Navegador autenticado | PASS | Fluxos financeiros e relatórios reais com sessão E2E; confirmação cancelada, erros e sessão expirada verificados. Não é fixture visual isolada. |
+| Sync offline e reconciliação | PASS | Falha de rede manteve evento pendente local; reconexão confirmou evento e leitura canônica do servidor. |
+| Integridade financeira | PASS (E2E) | Referências de recebimento, estorno, ajuste, retry offline e payout lidas no PostgreSQL E2E; sete casos concorrentes/two-connection coerentes e cleanup zero. Não comprova liquidação bancária externa. |
+| Relatórios e CSV | PASS | Executivo/Operacional, filtro de dia e export CSV conferidos com eventos persistidos; comercial, financeiro e logístico separados e cobertura visível. |
+| Responsividade e teclado | PASS técnico / limite registrado | Relatório em 320/390/430/768/980/1440 px, claro/escuro; modal cabe sem overflow interno, foco/Tab conferidos. Orders V2 sob overlay mede largura acima da viewport em larguras estreitas; limite preexistente não alterado nesta Parte I. |
+| `npm test`, sintaxe/diff | PASS | Suite completa exit 0; `node --check tests/test-domain-sync-postgres.js`, `git diff --check`. |
+| Chrome Android físico | BLOCKED | Não disponível/verificável na execução; Chromium/CDP emulado não substitui aparelho físico. |
+| Banco oficial/auditoria/promoção | BLOCKED | `rotamoto_auditor` indisponível. Nenhuma consulta/escrita no banco oficial; migrations 0052–0055 não promovidas. |
+| G14 — aprovação visual do proprietário | **FAIL** | Continua aguardando aprovação expressa; evidências técnicas não mudam o gate. |
+
+Evidência detalhada/capturas: [`financeiro-parte-i-2026-10-27`](financeiro-parte-i-2026-10-27/README.md). Campanha 0304 PARTIAL/aberta; backlog 0257 preservado; 0305 não iniciada.
