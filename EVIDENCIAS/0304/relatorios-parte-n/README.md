@@ -26,3 +26,5 @@ Data: 2026-10-27. Banco oficial `rotamoto`: consultas de diagnóstico somente le
 API e contrato modificados localmente no branch próprio `codex/campaign-0304-relatorios-n`; nenhuma migration reaplicada. Aplicativos não publicados. G14 permanece **FAIL**, Campanha 0304 aberta, backlog desde 0257 preservado e 0305 não iniciada. A reprodução real da conta, a causa definitiva dos dados da empresa e a verificação ponta a ponta estão pendentes.
 
 Commit local do Restaurante: `74ac072` (`codex/campaign-0304-relatorios-n`), sem push de aplicativo. A branch técnica estava limpa após o commit.
+
+Revisão final acrescentou a mensagem específica de falha de conexão financeira (`NETWORK_ERROR`), distinta de offline, `403` e `MFA_REQUIRED`, com teste de ciclo de erro/retry. A suíte Browser + PostgreSQL em `rotamoto_e2e` foi repetida após essa mudança e passou com rollback/residual zero. Commits locais do Restaurante: `74ac072` e `af29d21`; sem publicação de aplicativo.
