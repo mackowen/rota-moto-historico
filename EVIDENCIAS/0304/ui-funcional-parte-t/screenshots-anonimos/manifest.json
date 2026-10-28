@@ -1,0 +1,141 @@
+{
+  "status": "PARTIAL_BROWSER_RUNTIME_FAILURE",
+  "captured": 12,
+  "expected": 20,
+  "screenshots": [
+    {
+      "file": "motoboy-320x700-dark.png",
+      "app": "motoboy",
+      "viewport": "320x700",
+      "theme": "dark",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        320,
+        700
+      ]
+    },
+    {
+      "file": "motoboy-320x700-light.png",
+      "app": "motoboy",
+      "viewport": "320x700",
+      "theme": "light",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        320,
+        700
+      ]
+    },
+    {
+      "file": "restaurante-1024x768-dark.png",
+      "app": "restaurante",
+      "viewport": "1024x768",
+      "theme": "dark",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        1024,
+        768
+      ]
+    },
+    {
+      "file": "restaurante-1024x768-light.png",
+      "app": "restaurante",
+      "viewport": "1024x768",
+      "theme": "light",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        1024,
+        768
+      ]
+    },
+    {
+      "file": "restaurante-1440x900-dark.png",
+      "app": "restaurante",
+      "viewport": "1440x900",
+      "theme": "dark",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        1440,
+        900
+      ]
+    },
+    {
+      "file": "restaurante-1440x900-light.png",
+      "app": "restaurante",
+      "viewport": "1440x900",
+      "theme": "light",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        1440,
+        900
+      ]
+    },
+    {
+      "file": "restaurante-320x700-dark.png",
+      "app": "restaurante",
+      "viewport": "320x700",
+      "theme": "dark",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        320,
+        700
+      ]
+    },
+    {
+      "file": "restaurante-320x700-light.png",
+      "app": "restaurante",
+      "viewport": "320x700",
+      "theme": "light",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        320,
+        700
+      ]
+    },
+    {
+      "file": "restaurante-390x844-dark.png",
+      "app": "restaurante",
+      "viewport": "390x844",
+      "theme": "dark",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "restaurante-390x844-light.png",
+      "app": "restaurante",
+      "viewport": "390x844",
+      "theme": "light",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "restaurante-768x1024-dark.png",
+      "app": "restaurante",
+      "viewport": "768x1024",
+      "theme": "dark",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        768,
+        1024
+      ]
+    },
+    {
+      "file": "restaurante-768x1024-light.png",
+      "app": "restaurante",
+      "viewport": "768x1024",
+      "theme": "light",
+      "authentication": "anonymous login only",
+      "png_dimensions_px": [
+        768,
+        1024
+      ]
+    }
+  ],
+  "failure": "CDP screenshot failed on the 13th capture; Chromium GPU process exited fatally before final metrics report was written.",
+  "authenticated_qa": "not performed; the authorized session attempt had returned HTTP 401 and was not repeated."
+}
