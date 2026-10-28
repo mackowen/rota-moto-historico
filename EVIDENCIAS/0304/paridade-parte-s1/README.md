@@ -20,3 +20,10 @@ Data de execução: 2026-10-28. Os aplicativos foram mantidos em suas branches p
 3. **RLS-TEST-01 — Restaurante**: atualizar contagem estrutural obsoleta de 54 para 55 tabelas / 40 relações FORCE RLS / 43 policies, incluindo assert específico para `financial_events`; acrescentado modo schema-only read-only para evitar inserir fixtures persistentes. Teste schema-only: PASS.
 
 Detalhes e comandos: `POSTGRESQL.md`, `TESTES.md`. Inventários: `INVENTARIO.md`, `CONFIGURACOES.md`, `RBAC.md`, `UI-UX.md`, `INTEGRACAO.md`, `PWA.md`. Pendências herdadas intactas: `PENDENCIAS.md` e backlog autoritativo do histórico.
+
+## Checkpoint de código e publicação
+
+- Restaurante: commit local `e9efbca` (`test: preserve persistent founder in PostgreSQL E2E`); sem push.
+- Motoboy: nenhum diff novo nesta parte; commit da Parte S `16f0009` segue local e sem push.
+- Histórico: commit `678246a` publicado para `main` via fast-forward seguro.
+- Baselines `v5.50-ui-mobile-fix5` e `v39.6-ui-mobile-fix2` preservadas. O diretório histórico preexistente de login redesign não foi staged.
