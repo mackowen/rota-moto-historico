@@ -1,0 +1,925 @@
+{
+  "nature": "harness de componente: chama a função de produção routes() e usa styles.css + design-system.css + demais folhas reais; dados de amostra são sintéticos e isolados",
+  "browser": {
+    "chromium": "155.0.8059.79",
+    "architecture": "aarch64",
+    "softwareRendering": true,
+    "flags": [
+      "--headless=new",
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--use-gl=swiftshader",
+      "--enable-unsafe-swiftshader",
+      "--disable-features=Vulkan",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--remote-debugging-port=0"
+    ],
+    "cdpPortSmoke": 43367,
+    "cdpPortLayoutHarness": 38599,
+    "profile": "diretórios temporários isolados, não o perfil pessoal nem qa-profile"
+  },
+  "emptyStateViewportThemeMatrix": [
+    {
+      "viewport": 320,
+      "height": 700,
+      "theme": "light",
+      "documentWidth": 320,
+      "routeRect": {
+        "x": 12,
+        "w": 296,
+        "cols": "296px"
+      },
+      "mapRect": {
+        "x": 12,
+        "y": 120,
+        "w": 296,
+        "h": 252
+      },
+      "filterbar": {
+        "x": 12,
+        "y": 73,
+        "w": 296,
+        "h": 38,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 12,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Entregas",
+          "x": 72,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Motoboys",
+          "x": 132,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Rotas",
+          "x": 192,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Ajustar",
+          "x": 252,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        }
+      ],
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 61,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 0
+        },
+        "hundredPixels": {
+          "scrollY": 58,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 578,
+        "h": 38,
+        "bottom": 616,
+        "navTop": 634,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "routeRect": {
+        "x": 12,
+        "w": 366,
+        "cols": "366px"
+      },
+      "mapRect": {
+        "x": 12,
+        "y": 120,
+        "w": 366,
+        "h": 304
+      },
+      "filterbar": {
+        "x": 12,
+        "y": 73,
+        "w": 366,
+        "h": 38,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 12,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Entregas",
+          "x": 86,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Motoboys",
+          "x": 160,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Rotas",
+          "x": 234,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Ajustar",
+          "x": 308,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        }
+      ],
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 61,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 0,
+          "topbarY": 0
+        },
+        "hundredPixels": {
+          "scrollY": 0,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 722,
+        "h": 38,
+        "bottom": 760,
+        "navTop": 778,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "routeRect": {
+        "x": 82,
+        "w": 657,
+        "cols": "657px"
+      },
+      "mapRect": {
+        "x": 82,
+        "y": 212,
+        "w": 657,
+        "h": 532
+      },
+      "filterbar": {
+        "x": 82,
+        "y": 160,
+        "w": 657,
+        "h": 40,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 82,
+          "y": 160,
+          "w": 59,
+          "h": 40
+        },
+        {
+          "label": "Entregas",
+          "x": 147,
+          "y": 160,
+          "w": 80,
+          "h": 40
+        },
+        {
+          "label": "Motoboys",
+          "x": 233,
+          "y": 160,
+          "w": 86,
+          "h": 40
+        },
+        {
+          "label": "Rotas",
+          "x": 325,
+          "y": 160,
+          "w": 58,
+          "h": 40
+        },
+        {
+          "label": "Ajustar",
+          "x": 390,
+          "y": 160,
+          "w": 90,
+          "h": 40
+        }
+      ],
+      "topbar": {
+        "x": 82,
+        "y": 12,
+        "w": 657,
+        "h": 63,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 11
+        },
+        "hundredPixels": {
+          "scrollY": 1,
+          "topbarY": 11
+        }
+      },
+      "toast": {
+        "y": 892,
+        "h": 42,
+        "bottom": 934,
+        "navTop": 0,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 1024,
+      "height": 768,
+      "theme": "light",
+      "documentWidth": 1009,
+      "routeRect": {
+        "x": 287,
+        "w": 692,
+        "cols": "220.203px 457.359px"
+      },
+      "mapRect": {
+        "x": 521,
+        "y": 290,
+        "w": 457,
+        "h": 445
+      },
+      "filterbar": {
+        "x": 287,
+        "y": 178,
+        "w": 692,
+        "h": 40,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 287,
+          "y": 178,
+          "w": 59,
+          "h": 40
+        },
+        {
+          "label": "Entregas",
+          "x": 352,
+          "y": 178,
+          "w": 80,
+          "h": 40
+        },
+        {
+          "label": "Motoboys",
+          "x": 438,
+          "y": 178,
+          "w": 86,
+          "h": 40
+        },
+        {
+          "label": "Rotas",
+          "x": 530,
+          "y": 178,
+          "w": 58,
+          "h": 40
+        },
+        {
+          "label": "Ajustar",
+          "x": 594,
+          "y": 178,
+          "w": 90,
+          "h": 40
+        }
+      ],
+      "topbar": {
+        "x": 287,
+        "y": 28,
+        "w": 692,
+        "h": 63,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 27
+        },
+        "hundredPixels": {
+          "scrollY": 58,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 636,
+        "h": 42,
+        "bottom": 678,
+        "navTop": 0,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 1440,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1425,
+      "routeRect": {
+        "x": 299,
+        "w": 1083,
+        "cols": "271.391px 797.234px"
+      },
+      "mapRect": {
+        "x": 585,
+        "y": 301,
+        "w": 797,
+        "h": 576
+      },
+      "filterbar": {
+        "x": 299,
+        "y": 189,
+        "w": 1083,
+        "h": 40,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 299,
+          "y": 189,
+          "w": 59,
+          "h": 40
+        },
+        {
+          "label": "Entregas",
+          "x": 364,
+          "y": 189,
+          "w": 80,
+          "h": 40
+        },
+        {
+          "label": "Motoboys",
+          "x": 450,
+          "y": 189,
+          "w": 86,
+          "h": 40
+        },
+        {
+          "label": "Rotas",
+          "x": 542,
+          "y": 189,
+          "w": 58,
+          "h": 40
+        },
+        {
+          "label": "Ajustar",
+          "x": 607,
+          "y": 189,
+          "w": 90,
+          "h": 40
+        }
+      ],
+      "topbar": {
+        "x": 299,
+        "y": 28,
+        "w": 1083,
+        "h": 73,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 27
+        },
+        "hundredPixels": {
+          "scrollY": 58,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 768,
+        "h": 42,
+        "bottom": 810,
+        "navTop": 0,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 320,
+      "height": 700,
+      "theme": "dark",
+      "documentWidth": 320,
+      "routeRect": {
+        "x": 12,
+        "w": 296,
+        "cols": "296px"
+      },
+      "mapRect": {
+        "x": 12,
+        "y": 120,
+        "w": 296,
+        "h": 252
+      },
+      "filterbar": {
+        "x": 12,
+        "y": 73,
+        "w": 296,
+        "h": 38,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 12,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Entregas",
+          "x": 72,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Motoboys",
+          "x": 132,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Rotas",
+          "x": 192,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        },
+        {
+          "label": "Ajustar",
+          "x": 252,
+          "y": 73,
+          "w": 56,
+          "h": 38
+        }
+      ],
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 61,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 0
+        },
+        "hundredPixels": {
+          "scrollY": 4,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 578,
+        "h": 38,
+        "bottom": 616,
+        "navTop": 634,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "routeRect": {
+        "x": 12,
+        "w": 366,
+        "cols": "366px"
+      },
+      "mapRect": {
+        "x": 12,
+        "y": 120,
+        "w": 366,
+        "h": 304
+      },
+      "filterbar": {
+        "x": 12,
+        "y": 73,
+        "w": 366,
+        "h": 38,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 12,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Entregas",
+          "x": 86,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Motoboys",
+          "x": 160,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Rotas",
+          "x": 234,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        },
+        {
+          "label": "Ajustar",
+          "x": 308,
+          "y": 73,
+          "w": 70,
+          "h": 38
+        }
+      ],
+      "topbar": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 61,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 0,
+          "topbarY": 0
+        },
+        "hundredPixels": {
+          "scrollY": 0,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 722,
+        "h": 38,
+        "bottom": 760,
+        "navTop": 778,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "routeRect": {
+        "x": 82,
+        "w": 657,
+        "cols": "657px"
+      },
+      "mapRect": {
+        "x": 82,
+        "y": 212,
+        "w": 657,
+        "h": 532
+      },
+      "filterbar": {
+        "x": 82,
+        "y": 160,
+        "w": 657,
+        "h": 40,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 82,
+          "y": 160,
+          "w": 59,
+          "h": 40
+        },
+        {
+          "label": "Entregas",
+          "x": 147,
+          "y": 160,
+          "w": 80,
+          "h": 40
+        },
+        {
+          "label": "Motoboys",
+          "x": 233,
+          "y": 160,
+          "w": 86,
+          "h": 40
+        },
+        {
+          "label": "Rotas",
+          "x": 325,
+          "y": 160,
+          "w": 58,
+          "h": 40
+        },
+        {
+          "label": "Ajustar",
+          "x": 390,
+          "y": 160,
+          "w": 90,
+          "h": 40
+        }
+      ],
+      "topbar": {
+        "x": 82,
+        "y": 12,
+        "w": 657,
+        "h": 63,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 11
+        },
+        "hundredPixels": {
+          "scrollY": 1,
+          "topbarY": 11
+        }
+      },
+      "toast": {
+        "y": 892,
+        "h": 42,
+        "bottom": 934,
+        "navTop": 0,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 1024,
+      "height": 768,
+      "theme": "dark",
+      "documentWidth": 1009,
+      "routeRect": {
+        "x": 287,
+        "w": 692,
+        "cols": "220.203px 457.359px"
+      },
+      "mapRect": {
+        "x": 521,
+        "y": 290,
+        "w": 457,
+        "h": 445
+      },
+      "filterbar": {
+        "x": 287,
+        "y": 178,
+        "w": 692,
+        "h": 40,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 287,
+          "y": 178,
+          "w": 59,
+          "h": 40
+        },
+        {
+          "label": "Entregas",
+          "x": 352,
+          "y": 178,
+          "w": 80,
+          "h": 40
+        },
+        {
+          "label": "Motoboys",
+          "x": 438,
+          "y": 178,
+          "w": 86,
+          "h": 40
+        },
+        {
+          "label": "Rotas",
+          "x": 530,
+          "y": 178,
+          "w": 58,
+          "h": 40
+        },
+        {
+          "label": "Ajustar",
+          "x": 594,
+          "y": 178,
+          "w": 90,
+          "h": 40
+        }
+      ],
+      "topbar": {
+        "x": 287,
+        "y": 28,
+        "w": 692,
+        "h": 63,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 0,
+          "topbarY": 28
+        },
+        "hundredPixels": {
+          "scrollY": 22,
+          "topbarY": 6
+        }
+      },
+      "toast": {
+        "y": 636,
+        "h": 42,
+        "bottom": 678,
+        "navTop": 0,
+        "overlapsNavigation": false
+      }
+    },
+    {
+      "viewport": 1440,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "routeRect": {
+        "x": 299,
+        "w": 1083,
+        "cols": "271.391px 797.234px"
+      },
+      "mapRect": {
+        "x": 585,
+        "y": 301,
+        "w": 797,
+        "h": 576
+      },
+      "filterbar": {
+        "x": 299,
+        "y": 189,
+        "w": 1083,
+        "h": 40,
+        "borderTop": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "previous": "routes-v2-summary"
+      },
+      "controls": [
+        {
+          "label": "Todos",
+          "x": 299,
+          "y": 189,
+          "w": 59,
+          "h": 40
+        },
+        {
+          "label": "Entregas",
+          "x": 364,
+          "y": 189,
+          "w": 80,
+          "h": 40
+        },
+        {
+          "label": "Motoboys",
+          "x": 450,
+          "y": 189,
+          "w": 86,
+          "h": 40
+        },
+        {
+          "label": "Rotas",
+          "x": 542,
+          "y": 189,
+          "w": 58,
+          "h": 40
+        },
+        {
+          "label": "Ajustar",
+          "x": 607,
+          "y": 189,
+          "w": 90,
+          "h": 40
+        }
+      ],
+      "topbar": {
+        "x": 299,
+        "y": 28,
+        "w": 1083,
+        "h": 73,
+        "position": "sticky"
+      },
+      "scroll": {
+        "onePixel": {
+          "scrollY": 1,
+          "topbarY": 27
+        },
+        "hundredPixels": {
+          "scrollY": 58,
+          "topbarY": 0
+        }
+      },
+      "toast": {
+        "y": 768,
+        "h": 42,
+        "bottom": 810,
+        "navTop": 0,
+        "overlapsNavigation": false
+      }
+    }
+  ],
+  "syntheticPopulatedState": {
+    "routeCards": 2,
+    "deliveryCards": 2,
+    "selected": "PLANO ROUTE-A\nSequência de paradas\n\nMotoboy A · Aguardando envio\n\n1 parada(s)\n1\n#QA-1 · Cliente sintético A\nRua de teste, 10\nCREATED\nEditar planejamento",
+    "mapWidth": 366,
+    "documentWidth": 390,
+    "viewport": 390
+  },
+  "stderrSummary": "Chromium emitiu avisos não fatais de DBus/NetworkManager. CDP e navegação funcionaram; não houve mensagem GPU process is not usable.",
+  "browserQaAuthenticated": "BLOCKED: qa-profile apresenta SingletonLock/SingletonSocket existentes e CDP persistente 9222 indisponível. Perfil não foi aberto, limpo nem lido."
+}
