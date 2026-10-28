@@ -16,7 +16,7 @@
 - `npm test` Motoboy: PASS, suíte completa; testes direcionados `test-command-persistence`, `test-command-cross-tab`, `test-configuration-ownership` e `test-driver-owned-goal-persistence` PASS; assets atualizados e `assets:check` PASS.
 - Restaurante PostgreSQL E2E logística: PASS; cenário confirmou execução transacional e rollback.
 - Sessão autenticada: tentativa já realizada na rodada, HTTP 401; não repetida.
-- Browser QA: páginas públicas responderam HTTP 200 em 8083/8084; captura CDP falhou na primeira screenshot (`Unable to capture screenshot`) e Chromium terminou com falha fatal do processo GPU (`GPU process isn't usable`). A infraestrutura compartilhada também não iniciou no modo padrão porque 8788 estava ocupado por endpoint que não serve o HTML esperado. Nenhuma evidência visual autenticada ou screenshot utilizável foi produzida.
+- Browser QA: páginas públicas responderam HTTP 200 em 8083/8084; CDP capturou 12 screenshots de telas anônimas (Restaurante: 320×700, 390×844, 768×1024, 1024×768 e 1440×900, temas claro/escuro; Motoboy: 320×700, claro/escuro). A execução falhou durante a 13ª captura (`Unable to capture screenshot`) e Chromium terminou com falha fatal do processo GPU (`GPU process isn't usable`), sem gravar o relatório JSON final. As imagens mostram apenas autenticação anônima, não telas operacionais. A infraestrutura compartilhada também não iniciou no modo padrão porque 8788 estava ocupado por endpoint que não serve o HTML esperado. As capturas parciais estão em `screenshots-anonimos/`; nenhuma evidência visual autenticada foi produzida.
 
 ## Arquivos e commits
 
