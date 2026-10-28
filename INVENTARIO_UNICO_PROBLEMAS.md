@@ -839,3 +839,16 @@ Intervenção pós-reprovação registrada em `REGISTROS/0304.md`: painel mobile
 | `0304-T5-SYNTHETIC-TENANTS` | T.5 ADM-04 | Restaurante / Super ADM empresas | origem dos nomes Synthetic e `__campaign_` não pode ser deduzida do nome | aviso não conclusivo sem esconder/renomear/suspender; preservado Chico Restaurante | PARTIAL até endpoint autorizado demonstrar origem/tenant |
 
 Estes IDs são aditivos. Nenhum item anterior da Campanha 0257 em diante foi apagado ou reclassificado por esta parte.
+
+## Adendo permanente — Parte T.6 (2026-10-28)
+
+| ID permanente | Origem | App/tela | Causa/evidência | Correção/teste | Estado e próxima ação |
+|---|---|---|---|---|---|
+| `0304-T6-CONTRAST` | T.6 T6-01/12 | Restaurante / Super ADM, cartões internos | aliases de superfície ausentes no tema escuro caiam em fallback quase branco; Chromium computou textos claro sobre fundo claro | tokens `--surface-soft`, `--text-primary`, `--text-secondary`; 10 combinações CDP, contraste mínimo 4,73:1 claro/5,62:1 escuro | PASS sintético; confirmar UI autenticada e Chrome Android |
+| `0304-T6-SECTION-RACE` | T.6 T6-05/08 | Restaurante / seis seções globais | resposta de listagem/roles fora de ordem poderia atualizar estado/erro após navegação | helper com AbortController/generation, connected check para roles; teste deferred fora de ordem e suites | PASS técnico; sessão real/timeout endpoint pendente |
+| `0304-T6-FINANCE-PANEL` | T.6 T6-06 | Restaurante / Resumo financeiro | form dentro do loop criava um formulário por empresa; contexto podia mudar durante fetch | painel único e invalidação empresa/período; teste de contrato/guardas, sem consulta autenticada | PARTIAL até interação/releitura real |
+| `0304-T6-NAV` | T.6 T6-09 | Restaurante / Super ADM | navegação dos seis itens ocupava altura excessiva em mobile | flex compacta e scroll horizontal mobile; 5 larguras × 2 temas sem overflow | PASS sintético; confirmação proprietário pendente |
+| `0304-T6-BACKUP-STATUS` | T.6 T6-11 | Restaurante / Ajustes > Backup | texto vem do código `BACKUP_ADMIN_NOT_CONFIGURED`, ramo sem handler administrativo no server; não determina estado dos scripts/backups locais | texto contextualizado e separado do Local-First; fonte + testes HTTP sintéticos | PARTIAL; config do processo E2E só pode ser confirmada pelo fluxo autenticado |
+| `0304-T6-AUTH-QA` | T.6 T6-12 | Restaurante / Super ADM autenticado | sessão legítima não disponível no CDP | não usar credenciais/códigos, tokens ou perfil pessoal; harness visual sintético claramente rotulado | BLOCKED até inspeção autorizada autenticada |
+
+Todos os itens têm evidência em `EVIDENCIAS/0304/super-adm-parte-t6/`. Este apêndice não reclassifica itens T5 nem os registros desde 0257.

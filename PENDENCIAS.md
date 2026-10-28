@@ -2454,3 +2454,13 @@ Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com valida�
 - `0304-T5-SYNTHETIC-TENANTS`: PARTIAL; nomes apenas identificados como padrão técnico, origem não comprovada; preservar todos os registros.
 
 Backlog histórico desde 0257 preservado. G14 FAIL; campanha 0304 aberta; 0305 não iniciada.
+
+### Parte T.6 — aditivo permanente
+
+- `0304-T6-CONTRAST`: CSS corrigido e CDP sintético em 10 combinações aprovado; tela autenticada/Android pendente.
+- `0304-T6-SECTION-RACE`: cancelamento de requests e descarte de respostas velhas testados no helper e invariantes; alternância da conta real pendente.
+- `0304-T6-FINANCE-PANEL`: um formulário por seção e contexto protegido; query/readback autenticado pendente.
+- `0304-T6-BACKUP-STATUS`: mensagem agora descreve a integração API/server; configuração do processo 8787 não verificada com sessão autorizada.
+- `0304-T6-AUTH-QA`: BLOCKED até sessão legítima já disponível no navegador de QA; não automatizar senha/código, nem acessar o perfil Chrome pessoal.
+
+Não fechar G14, não iniciar 0305 e não rebaixar/retirar problemas históricos desde 0257.

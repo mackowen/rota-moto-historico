@@ -419,3 +419,7 @@ Detalhes e limites por cenário em [REGISTROS/0295.md](REGISTROS/0295.md) e [mat
 ## Atualização aditiva — Campanha 0304 Parte T.5
 
 Console Super ADM: corrigida a incompatibilidade snake_case/camelCase, rótulos, semântica de founder latch, agrupamento/estado de perfis e consulta financeira escopada. Diálogos nativos de aplicação migrados para serviço comum e acessível nos dois apps. Suítes completas finais passaram; CDP sintético confirmou o componente em cinco viewports. Permanecem PARTIAL/BLOCKED: visual autenticado global, sessão e readback reais, origem dos registros Synthetic, estados herdados que o DTO não fornece, conflito transacional sem revision/CAS e Chrome Android. Commits apps locais `cc0ca6d`/`210c5be`, nenhum push de app. Ver `REGISTROS/0304.md` e `EVIDENCIAS/0304/padronizacao-parte-t5/`. Não fechar G14 nem apagar pendências históricas desde 0257.
+
+## 0304 Parte T.6 — aditivo
+
+Corrigido contraste escuro nos cartões internos por tokens semânticos; formulário financeiro duplicado consolidado; requests de seção/financeiro cancelam e descartam respostas obsoletas; navegação compacta. Mensagem de central de backup esclarece que `BACKUP_ADMIN_NOT_CONFIGURED` não informa o estado de artefatos/scripts locais. npm test integral passou nos dois apps e harness sintético CDP passou 10 temas/viewports. Pendentes: QA Super ADM autenticado, query financeira/readback real, runtime da central administrativa e confirmação no Chrome Android. Ver `EVIDENCIAS/0304/super-adm-parte-t6/`. Backlog desde 0257 permanece íntegro; G14 FAIL.
