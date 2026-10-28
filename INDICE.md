@@ -1,5 +1,7 @@
 # Campanha 0304 — Rotas V2
 
+- Atualização mais recente — Parte R.1 (2026-10-28): concessão global efetiva e auditada no E2E **PASS**; grants financeiros e Browser QA ainda **PARTIAL/BLOCKED**. O proprietário não localizou a ação; caminho indicado em Configurações. [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [evidência](EVIDENCIAS/0304/fundador-parte-r1/README.md). G14 **FAIL**.
+
 - Atualização mais recente — Parte R, pré-validação de regularização do fundador (2026-10-28): **BLOCKED** antes de escrita por ausência de MFA recente e status owner não comprovável sob RLS FORCE; `rotamoto` não acessado. Cache v147 corrigido nos testes, suíte integral ainda falha na paridade histórica entre contratos dos apps. [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [evidência](EVIDENCIAS/0304/fundador-parte-r/README.md). G14 **FAIL**.
 
 - Atualização mais recente — Parte Q, Super ADM Global e bootstrap seguro do fundador (2026-10-28): implementação e E2E sintético PASS; conta legacy BLOCKED por falta de prova histórica, corrida concorrente PARTIAL, G14 FAIL. [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [evidências](EVIDENCIAS/0304/super-admin-parte-q/README.md). Aplicativos sem push; 0305 não iniciada.

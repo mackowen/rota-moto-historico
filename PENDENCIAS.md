@@ -1,5 +1,12 @@
 ## Pendências vigentes — Campanha 0304 (2026-10-24)
 
+### Parte R.1 — concluir permissões e QA (2026-10-28)
+
+- **PARTIAL:** grants `finance.read`/`finance.manage` ausentes. O owner não localizou a configuração. Caminho: **Mais → Configurações → Equipe e permissões → Perfis existentes → Proprietário → Restaurar acessos financeiros do proprietário**; confirmar a janela. Depois verificar as duas permissões e a auditoria pelo contexto tenant.
+- **BLOCKED:** QA do console Super ADM autenticado em mobile/desktop; não há sessão/cookie compartilhado com o runner. Não extrair token; disponibilizar navegador autenticado ao runner ou o proprietário validar UI expressamente.
+- **PARTIAL:** diferença de seis linhas de documentação do relatório Restaurante no `CONTRACT.md`; sem sincronização automática. Resolver por decisão documental conjunta entre apps.
+- Concessão global do founder já PASS e auditada; preservar G14 FAIL, 0304 aberta e não iniciar 0305. Ver [evidência R.1](EVIDENCIAS/0304/fundador-parte-r1/README.md).
+
 ### Parte R — regularização do fundador (2026-10-28)
 
 - **BLOCKED:** autenticação/MFA recente indisponível (nenhuma sessão MFA elegível); não solicitar/transportar códigos por terminal.
