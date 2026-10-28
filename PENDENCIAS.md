@@ -1,5 +1,12 @@
 ## Pendências vigentes — Campanha 0304 (2026-10-24)
 
+### Parte R — regularização do fundador (2026-10-28)
+
+- **BLOCKED:** autenticação/MFA recente indisponível (nenhuma sessão MFA elegível); não solicitar/transportar códigos por terminal.
+- **BLOCKED:** status de membership owner não comprovável sem contexto autenticado; `companies`/`memberships` usam RLS FORCE e a role de diagnóstico não tem BYPASSRLS. Não contornar RLS.
+- **PARTIAL:** suíte integral parou em divergência entre `CONTRACT.md` do Restaurante e Motoboy; preservar o outro app e investigar em trabalho próprio.
+- Nenhuma concessão foi feita. Preservar G14 FAIL, 0304 aberta e não iniciar 0305. Evidência: [Parte R](EVIDENCIAS/0304/fundador-parte-r/README.md).
+
 ### Parte Q — Super ADM Global (2026-10-28)
 
 - **BLOCKED:** regularização da conta fundadora legacy. Digest de bootstrap antigo não comprova identidade; exigir prova administrativa inequívoca/autorização específica. Nenhum grant real foi aplicado.
