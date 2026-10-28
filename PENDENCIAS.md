@@ -1,5 +1,12 @@
 ## Pendências vigentes — Campanha 0304 (2026-10-24)
 
+### Parte Q — Super ADM Global (2026-10-28)
+
+- **BLOCKED:** regularização da conta fundadora legacy. Digest de bootstrap antigo não comprova identidade; exigir prova administrativa inequívoca/autorização específica. Nenhum grant real foi aplicado.
+- **PARTIAL:** ensaio concorrente de dois primeiros bootstraps e Browser QA do console global ainda pendentes; executar apenas em E2E descartável autorizado e identidade Super ADM válida.
+- **PENDING:** validação visual ampla e aprovação expressa do proprietário; G14 permanece FAIL.
+- Preservar todas as pendências cumulativas desde 0257; campanha 0304 aberta e 0305 não iniciada. Evidência: [Parte Q](EVIDENCIAS/0304/super-admin-parte-q/README.md).
+
 ### Acréscimos desta intervenção (2026-10-25)
 
 - **0304 — QR check-in autenticado:** emissão/leitura cross-app continua bloqueada enquanto o serviço E2E autorizado não tiver chave QR de teste configurada e o fluxo MFA/tenant sintético disponível. O tratamento genérico foi corrigido; isso não conclui o check-in. Não configurar segredos nem escrever no banco oficial como parte desta pendência.

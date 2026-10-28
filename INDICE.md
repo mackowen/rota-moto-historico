@@ -1,5 +1,7 @@
 # Campanha 0304 — Rotas V2
 
+- Atualização mais recente — Parte Q, Super ADM Global e bootstrap seguro do fundador (2026-10-28): implementação e E2E sintético PASS; conta legacy BLOCKED por falta de prova histórica, corrida concorrente PARTIAL, G14 FAIL. [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [evidências](EVIDENCIAS/0304/super-admin-parte-q/README.md). Aplicativos sem push; 0305 não iniciada.
+
 - Atualização — QR presença E2E (2026-10-25): configuração ausente diagnosticada e chave Ed25519 E2E isolada; readiness e leitura criptográfica passaram. Emissão/check-in cross-app permanecem BLOCKED sem fixture MFA recuperável e limpeza segura. [registro](REGISTROS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [evidência](EVIDENCIAS/0304/qr-signing-e2e-setup-2026-10-25/README.md). G14 **FAIL**.
 
 - Atualização mais recente — QR de check-in, largura paisagem e estado vazio Rotas (2026-10-25): [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [gates](EVIDENCIAS/0304/gates.md), [evidências](EVIDENCIAS/0304/qr-layout-empty-2026-10-25/README.md). Emissão/check-in autenticado BLOCKED; G14 **FAIL**; campanha PARTIAL/aberta.
