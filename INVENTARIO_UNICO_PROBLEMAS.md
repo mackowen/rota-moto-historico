@@ -812,3 +812,15 @@ Intervenção pós-reprovação registrada em `REGISTROS/0304.md`: painel mobile
 - E2E 0304: login respondeu `403 MFA_REQUIRED`; desafio foi atendido, mas reload não restaurou o shell. Planejamento/readback, concorrência/sync, tenant/RBAC permanecem BLOCKED/OPEN conforme matriz; sem bypass nem escrita no DB oficial.
 - G14 visual Rotas permanece FAIL. Nenhuma pendência global ou anterior de 0303/0303-A/0304 foi encerrada por este adendo.
 - Referência: `REGISTROS/0304-ADENDO-DESKTOP.md`, `EVIDENCIAS/0304/adendo-desktop/README.md` e gates `EVIDENCIAS/0304/gates.md`.
+
+---
+
+# Adendo permanente — Campanha 0304, Parte T.4 (2026-10-28)
+
+| ID permanente | Origem | App/tela | Causa/evidência | Correção/teste | Estado e próxima ação |
+|---|---|---|---|---|---|
+| `0304-T4-TOAST-REST` | T.4 | Restaurante / notificações | offsets fixos e z-index abaixo da navegação; CDP DOM/CSS mediu toast a 12px da barra nas larguras 320/390 | offset dinâmico pelo retângulo da navegação; testes de posição/duração e suíte completa | CORRIGIDO tecnicamente; proprietário deve confirmar no Chrome Android; não fecha G14 |
+| `0304-T4-TOAST-MOTO` | T.4 | Motoboy / notificações | bottom 86px ignorava safe area e altura real (68px + inset) | mesmo cálculo dinâmico; testes de posição/duração e suíte completa | CORRIGIDO tecnicamente; confirmação física segue pendente |
+| `0304-T4-SW-OFFLINE` | T.4 | Restaurante / PWA | ciclo real v1→v2 e falha v3 aprovados em perfil descartável; após simulação offline o browser retornou documento sem controller, apesar de index/assets em cache | nenhuma alteração especulativa em `sw.js`; evidência/cache-preflight em `EVIDENCIAS/0304/interface-parte-t4/CACHE-ANDROID.md` | PARTIAL; investigar fallback/recontrole com reprodução diagnóstica, sem tocar perfil pessoal |
+| `0304-T4-ANDROID-QA` | T.4 | Chrome Android pessoal | perfil do proprietário não é acessível no CDP e não foi tocado | instrução sem limpeza/apagamento em `ACAO-PROPRIETARIO.md` | BLOCKED até observação do proprietário |
+| `0304-T4-AUTH-QA` | T.4 | Configurações/Rotas protegidas | sem sessão autorizada no CDP; leitura de founder grant recusada pela role de app por RLS/schema | nenhum bypass/autenticação falsificada; suítes e harness sintético separados | BLOCKED/PARTIAL; validar sessão real quando disponível |

@@ -2435,3 +2435,11 @@ Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com valida�
 - **PostgreSQL — PARTIAL/BLOCKED:** E2E está em 0061 com founder latch persistente; principal está em 0055. Um caso de bootstrap novo foi bloqueado corretamente pelo founder já reclamado e sua transação terminou em rollback. Adaptar/validar o fixture de bootstrap sem apagar ou substituir o fundador. Só depois de PASS aplicar 0056–0061 aditivas ao principal pelo runner oficial e verificar checksum/serviços.
 - **Browser QA — PARTIAL/BLOCKED:** Chromium/CDP público cobriu viewports 320, 390, 768, 1024 e 1440, com escuro em 390/1440; sessão anônima apenas. Consoles privados, configurações e fluxos autenticados bloqueados sem sessão/browser autorizado. Android físico pendente. Capturas sanitizadas em [Parte S](EVIDENCIAS/0304/paridade-parte-s/README.md).
 - G14 continua **FAIL**, campanha 0304 aberta, 0305 não iniciada. Nenhuma pendência anterior desde 0257 foi encerrada por esta atualização.
+
+## 0304 — Parte T.4 (2026-10-28)
+
+- **Toasts — CORRIGIDO tecnicamente nos dois apps:** removidos offsets fixos que não acompanhavam safe area/altura real da navegação; testes específicos e suítes completas passaram. Confirmação de Chrome Android continua pendente.
+- **PWA — PARTIAL:** perfil descartável confirmou instalação/recarga, V2 waiting→activated ao fechar/reabrir, remoção seletiva da cache antiga e preservação da ativa após falha V3. Navegação offline/retorno online não ficou comprovada: após offline reload, Chromium não tinha controller e asset deu 503 apesar da cache preflight. Sem patch especulativo.
+- **QA autenticado / Chrome Android — BLOCKED:** perfil pessoal não acessado; sem sessão autorizada de Configurações/Rotas no CDP. Ação não destrutiva em `EVIDENCIAS/0304/interface-parte-t4/ACAO-PROPRIETARIO.md`.
+- **PostgreSQL — sem escrita:** E2E já estava em 0061; readiness 8787/8788 HTTP 200. Leitura do grant founder via role app negada por RLS/schema; evidência anterior R.1 preservada.
+- Os demais problemas do backlog desde 0257 (distribuição, corrida manual/QR/impressão, logística, Rotas, permissões, Relatórios, navegação e integração) não foram encerrados por esta parte.
