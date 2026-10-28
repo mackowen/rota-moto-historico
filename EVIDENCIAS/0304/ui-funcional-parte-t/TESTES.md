@@ -8,4 +8,4 @@
 - PWA/service worker: contratos e testes de instalação atômica passaram em ambos; teste de update/cache real no browser não executado.
 - PostgreSQL migrations: Parte S.2 registra ambos os bancos em 0061; não repetido e sem migrations nesta parte.
 - Browser QA: BLOCKED por screenshot CDP falhar e processo GPU fatal no runtime; sessão autenticada já retornara 401 e não foi repetida.
-- APIs: nenhuma alteração de readiness foi solicitada por mudança de servidor; disponibilidade autenticada não foi atestada nesta execução.
+- Readiness API PostgreSQL: `GET /health/ready` retornou `ready` com PostgreSQL `ready` em 8788 e 8787. Isso verifica serviço/dependência, não autorização de usuário.
