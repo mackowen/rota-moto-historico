@@ -31,5 +31,5 @@ Arquivos, classificação por teste, gate e consultas: `TESTES.md`, `MIGRACOES.m
 
 - Restaurante: commit local `e79c8e6` (`test: isolate tenant RLS fixtures and label skipped bootstrap branches`); sem push.
 - Motoboy: nenhuma alteração de aplicação nesta parte; sem push.
-- Histórico: alterações S.2 serão publicadas via commit e fast-forward seguro.
+- Histórico: commit `83f429b` publicado em `main` por fast-forward seguro.
 - Baselines protegidas permanecem intactas.
