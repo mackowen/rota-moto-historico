@@ -53,3 +53,11 @@ Quatro testes de cache/assets, após alinhamento de expectativas obsoletas com `
 - Banco oficial `rotamoto`: **PASS preservação** — não conectado nem consultado.
 
 Campanha 0304 continua aberta; G14 **FAIL**; backlog desde 0257 preservado; 0305 não iniciada. Nenhum banco, backup ou chave criado. Nenhum segredo ou dado pessoal foi gravado neste artefato.
+
+## Atualização após o proprietário não localizar o botão
+
+O bundle permaneceu na cache key `identity-ui.js?v=0304-login.8` apesar de conter alterações novas, permitindo servir cópia antiga. Commit local do Restaurante `de722fc` alterou a URL para `?v=0304-login.9` e avançou o cache atômico `v147`→`v148`. A validação HTTP estática confirmou que `127.0.0.1:8083` entrega o `index.html`, `sw.js` e bundle novos, e o bundle inclui o botão. Os testes `test-dashboard-v2.js`, `test-identity-ui.js`, `test-visual-shell-cache.js`, `test-presence-qr-modal.js`, `test-dispatch-assignment.js` e `test-printing-offline.js` passaram com v148.
+
+A mensagem anterior ao proprietário também foi causada por processo antigo: POST sem sessão a rota retornava `404 NOT_FOUND` nos backends ativos, embora o checkout atual tenha a rota. O serviço `rotamoto-api-e2e` foi reiniciado; health readiness ficou 200 e a rota agora responde `401 UNAUTHENTICATED` sem cookie, confirmando que está registrada e falha fechada. Serviço oficial manteve seu processo original. A última leitura tenant-scoped ainda vê os grants financeiros ausentes; o proprietário precisa atualizar/reabrir o app, autenticar-se e usar o botão uma vez. Nenhuma repetição de POST sem sessão nem grant direto foi feita.
+
+`npm test` após a correção passa pelas verificações de cache e termina em `tests/test-cross-app-contract-parity.js` devido à diferença documental já registrada. Financeiro permanece **PARTIAL** até o clique confirmado e READ ONLY pós-validação.
