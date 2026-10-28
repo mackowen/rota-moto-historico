@@ -4,8 +4,8 @@
 
 ## Checkpoint
 
-- Restaurante: branch `codex/campaign-0304-parity-s`, baseline `v5.50-ui-mobile-fix5` preservada; nenhuma alteração desta Parte T.
-- Motoboy: branch `codex/campaign-0304-parity-s`, baseline `v39.6-ui-mobile-fix2` preservada; commit local `90277dc` removeu duplicação idêntica dos helpers de rascunho de Configurações e atualizou `asset-manifest.js`/referência em `index.html`.
+- Restaurante: branch `codex/campaign-0304-parity-s`, baseline `v5.50-ui-mobile-fix5` preservada; commit local `2ebcc65` trata a duração dos avisos.
+- Motoboy: branch `codex/campaign-0304-parity-s`, baseline `v39.6-ui-mobile-fix2` preservada; commits locais `90277dc` e `66b0eeb`: remoção da duplicação idêntica dos helpers de rascunho de Configurações e atualização dos assets; o segundo também estendeu a duração mínima dos avisos.
 - Histórico: branch `codex/campaign-0304-bootstrap-p`; alteração preexistente não rastreada `EVIDENCIAS/0304/login-redesign-2026-10-25/` preservada.
 - PostgreSQL: paridade 0061 conforme gate e evidência da Parte S.2; investigação não repetida.
 - Campanha 0304 aberta; G14 FAIL; 0305 não iniciada.
@@ -20,8 +20,8 @@
 
 ## Arquivos e commits
 
-- Motoboy `app.js`, `asset-manifest.js`, `index.html` — commit `90277dc` local, sem push.
-- Restaurante sem diff nesta parte.
-- Nenhum commit/push histórico ainda nesta etapa.
+- Motoboy `app.js`, `package.json`, `tests/test-toast-duration.js`, `asset-manifest.js`, `index.html` — commits `90277dc` e `66b0eeb`, sem push.
+- Restaurante `app.js`, `package.json`, `tests/test-toast-duration.js`, `asset-manifest.js`, `index.html` — commit local `2ebcc65`, sem push.
+- Histórico: commits locais `397d2f9`, `e567818` e `533893e` documentaram o checkpoint e as capturas parciais; `533893e` foi enviado por fast-forward a `origin/main`. As atualizações desta segunda correção aguardam novo commit/push fast-forward.
 
 Detalhamento por item: [matriz T01–T18](MATRIZ-T01-T18.md) e notas especializadas nos arquivos abaixo.
