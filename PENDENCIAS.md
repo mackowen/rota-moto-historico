@@ -2397,3 +2397,9 @@ Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com valida�
 - [ ] Completar Browser QA autenticado de Configurações e Relatórios; tentativa Chromium/CDP não gerou resultado verificável nesta execução. Não converter isso em aprovação visual; G14 permanece FAIL.
 - [ ] Confirmar se o papel owner real foi afetado pelo backfill RLS da migration 0052 e, somente após evidência/autorização, avaliar uso da ação de reparo explicitamente pelo proprietário.
 - Preservar todos os demais itens do backlog desde 0257; Campanha 0304 aberta e 0305 não iniciada. [Parte O](EVIDENCIAS/0304/rbac-parte-o/README.md).
+
+## Campanha 0304 — Parte P (2026-10-28)
+
+- [ ] Obter via mecanismo oficial READ ONLY ou autorização técnica mínima de leitura para confirmar associação, grants e estado da conta proprietária real em `rotamoto`; o auditor atual não tem SELECT tenant RBAC. Não aplicar grants até diagnóstico documentado e autorização específica.
+- [ ] Executar Browser QA autenticado das Configurações/Relatórios em todos os estados e viewports; os testes automatizados não substituem validação visual.
+- Backfill 0052 em owners antigos permanece hipótese até leitura oficial; qualquer reparo do papel real segue pendente. G14 FAIL, Campanha 0304 aberta, 0305 não iniciada; backlog desde 0257 preservado. [Parte P](EVIDENCIAS/0304/bootstrap-parte-p/README.md).

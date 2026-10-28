@@ -432,3 +432,9 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Registro da Parte O](REGISTROS/0304.md#parte-o--auditoria-e-correcao-de-autorizacao-do-proprietario-2026-10-28)
 - [Resumo da Parte O](RESUMOS/0304.md#parte-o--autorizacao-do-proprietario)
 - [Causa, correção, gates e evidência sanitizada](EVIDENCIAS/0304/rbac-parte-o/README.md)
+
+### 0304 — Parte P — bootstrap e vínculo empresarial (2026-10-28)
+
+- [Registro da Parte P](REGISTROS/0304.md#parte-p--identidade-vinculo-empresarial-e-permissoes-do-bootstrap-2026-10-28)
+- [Resumo da Parte P](RESUMOS/0304.md#parte-p--diagnostico-do-bootstrap)
+- [Diagnóstico, correções, gates e evidência sanitizada](EVIDENCIAS/0304/bootstrap-parte-p/README.md)

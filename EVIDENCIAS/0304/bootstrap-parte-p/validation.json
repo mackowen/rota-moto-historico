@@ -1,0 +1,52 @@
+{
+  "campaign": "0304",
+  "part": "P",
+  "date": "2026-10-28",
+  "account_audit": {
+    "environment": "rotamoto_e2e service",
+    "login_http": 200,
+    "session_http": 200,
+    "mfa_verified": true,
+    "tenant_context_matches": true,
+    "tenant_role": "owner",
+    "company_manage": true,
+    "finance_read": false,
+    "finance_manage": false,
+    "platform_admin": false,
+    "session_closed": true,
+    "grants_modified": false,
+    "official_account_verified": false
+  },
+  "official_database": {
+    "database": "rotamoto",
+    "access": "read_only",
+    "auditor_select_memberships": false,
+    "auditor_select_roles": false,
+    "auditor_select_role_permissions": false,
+    "auditor_select_users": false,
+    "auditor_select_platform_administrators": false,
+    "migration_0052_present": true,
+    "account_rows_verified": false
+  },
+  "tests": {
+    "analytics_view": "PASS",
+    "identity_ui": "PASS",
+    "company_settings": "PASS",
+    "company_settings_persistence": "PASS",
+    "platform_admin_http": "PASS",
+    "identity_http_postgres_e2e_rollback": "PASS",
+    "platform_admin_postgres_e2e_rollback": "PASS",
+    "authenticated_browser_qa": "BLOCKED"
+  },
+  "safety": {
+    "official_writes": false,
+    "migrations_applied": false,
+    "databases_created": false,
+    "backups_created": false,
+    "keys_created": false,
+    "e2e_persistent_test_writes": false,
+    "g14": "FAIL",
+    "campaign_0304": "OPEN",
+    "campaign_0305_started": false
+  }
+}

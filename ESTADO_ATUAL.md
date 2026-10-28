@@ -2117,3 +2117,7 @@ Relatórios recebeu correções de layout, espaçamento, scroll, disclosures, ei
 ## 0304 — Parte O — 2026-10-28
 
 Distinção entre owner empresarial e administrador global esclarecida; provável lacuna do backfill 0052 documentada, sem alegar confirmação da linha real, pois `rotamoto_auditor` não tem SELECT tenant em RBAC. Implementado reparo explícito owner-only, tenant-scoped, MFA/CSRF/auditado para os dois grants financeiros ausentes e descrições/agrupamento na delegação de perfis. Testes backend/UI e E2E sintético com rollback PASS; Chromium/CDP sem resultado observável e conta real BLOCKED. Restaurante commits locais `427be6461cca35d0c092f467af48021083d96628`, `88ce785295d8813c47d193cd6537a5a40c3b473f` e `38ffa32b5836743db43546f0fd9f7f6f8d2c3704` (HEAD final), sem push. G14 FAIL, campanha aberta, backlog desde 0257 preservado, 0305 não iniciada. [Parte O](EVIDENCIAS/0304/rbac-parte-o/README.md).
+
+## Parte P — 2026-10-28
+
+Conta da sessão E2E autenticada como owner empresarial e MFA satisfeito; grants financeiros ausentes no papel/sessão, sem alteração. Conta oficial permanece BLOCKED por falta de SELECT do auditor em RBAC tenant. Fundador global separado do bootstrap owner empresarial. Ajustados rótulos de vínculo Motoboy e avisos financeiros duplicados; testes automatizados pertinentes PASS. QA visual autenticado BLOCKED. Nenhuma escrita/migration no oficial. G14 FAIL; 0304 aberta; backlog 0257 preservado; 0305 não iniciada. [Parte P](EVIDENCIAS/0304/bootstrap-parte-p/README.md).
