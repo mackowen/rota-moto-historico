@@ -824,3 +824,18 @@ Intervenção pós-reprovação registrada em `REGISTROS/0304.md`: painel mobile
 | `0304-T4-SW-OFFLINE` | T.4 | Restaurante / PWA | ciclo real v1→v2 e falha v3 aprovados em perfil descartável; após simulação offline o browser retornou documento sem controller, apesar de index/assets em cache | nenhuma alteração especulativa em `sw.js`; evidência/cache-preflight em `EVIDENCIAS/0304/interface-parte-t4/CACHE-ANDROID.md` | PARTIAL; investigar fallback/recontrole com reprodução diagnóstica, sem tocar perfil pessoal |
 | `0304-T4-ANDROID-QA` | T.4 | Chrome Android pessoal | perfil do proprietário não é acessível no CDP e não foi tocado | instrução sem limpeza/apagamento em `ACAO-PROPRIETARIO.md` | BLOCKED até observação do proprietário |
 | `0304-T4-AUTH-QA` | T.4 | Configurações/Rotas protegidas | sem sessão autorizada no CDP; leitura de founder grant recusada pela role de app por RLS/schema | nenhum bypass/autenticação falsificada; suítes e harness sintético separados | BLOCKED/PARTIAL; validar sessão real quando disponível |
+
+---
+
+# Adendo permanente — Parte T.5 (2026-10-28)
+
+| ID permanente | Origem | App/tela | Causa/evidência | Correção/teste | Estado e próxima ação |
+|---|---|---|---|---|---|
+| `0304-T5-ADM-DTO` | T.5 ADM-01..08 | Restaurante / Super ADM | DTO SQL em snake_case usado como camelCase; causa dos `undefined` e estado fundador ambíguo | mappers validados, estado ausente não vira zero, founder latch separado de privilégio atual; `test-platform-admin-ui`, suíte completa | PASS técnico; leitura/autorização real continua BLOCKED |
+| `0304-T5-ADM-RBAC` | T.5 ADM-09..16 | Restaurante / perfis globais por empresa | lista longa sem estados/agrupamento e sem conflito/readback perceptível | agrupamento e estado dirty, proteção owner, preflight/readback, endpoint oficial; testes UI + HTTP sintético | PARTIAL: backend sem revision/CAS deixa corrida residual; sessão real pendente |
+| `0304-T5-ADM-FIN` | T.5 ADM-17..19 | Restaurante / financeiro e políticas | repetição de formulário/semântica administrativa técnica | consulta por um tenant/período e políticas legíveis somente leitura | PARTIAL: nenhuma consulta autenticada nesta parte |
+| `0304-T5-DIALOG` | T.5 ADM-20 | ambos / identidade, operações, logística, financeiro | confirmações/prompts nativos inconsistentes | serviço de diálogos próprio, teste de contrato e CDP em 5 larguras | PASS técnico do componente; QA por cada fluxo autenticado/Android pendente |
+| `0304-T5-AUTH-VISUAL` | T.5 ADM-21 | ambos / telas protegidas | CDP sem sessão legítima | sem bypass ou acesso a perfil pessoal; harness separado | BLOCKED até sessão legítima ou inspeção visual pelo proprietário; G14 permanece FAIL |
+| `0304-T5-SYNTHETIC-TENANTS` | T.5 ADM-04 | Restaurante / Super ADM empresas | origem dos nomes Synthetic e `__campaign_` não pode ser deduzida do nome | aviso não conclusivo sem esconder/renomear/suspender; preservado Chico Restaurante | PARTIAL até endpoint autorizado demonstrar origem/tenant |
+
+Estes IDs são aditivos. Nenhum item anterior da Campanha 0257 em diante foi apagado ou reclassificado por esta parte.

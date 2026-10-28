@@ -2443,3 +2443,14 @@ Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com valida�
 - **QA autenticado / Chrome Android — BLOCKED:** perfil pessoal não acessado; sem sessão autorizada de Configurações/Rotas no CDP. Ação não destrutiva em `EVIDENCIAS/0304/interface-parte-t4/ACAO-PROPRIETARIO.md`.
 - **PostgreSQL — sem escrita:** E2E já estava em 0061; readiness 8787/8788 HTTP 200. Leitura do grant founder via role app negada por RLS/schema; evidência anterior R.1 preservada.
 - Os demais problemas do backlog desde 0257 (distribuição, corrida manual/QR/impressão, logística, Rotas, permissões, Relatórios, navegação e integração) não foram encerrados por esta parte.
+
+## Campanha 0304 — Parte T.5 (aditivo; 2026-10-28)
+
+- `0304-T5-ADM-DTO`: corrigido tecnicamente; Browser QA Super ADM autenticado pendente.
+- `0304-T5-ADM-RBAC`: PARTIAL; frontend agrupa/valida/salva/relê; backend sem revision/CAS deixa janela de concorrência.
+- `0304-T5-ADM-FIN`: PARTIAL; UI escopada e teste sintético; leitura financeira autenticada real não executada.
+- `0304-T5-DIALOG`: componente comum passou contrato/CDP; QA de todos os fluxos em sessão real e leitor de tela/Android pendente.
+- `0304-T5-AUTH-VISUAL`: BLOCKED por sessão legítima ausente; não tocar perfil pessoal nem contornar MFA.
+- `0304-T5-SYNTHETIC-TENANTS`: PARTIAL; nomes apenas identificados como padrão técnico, origem não comprovada; preservar todos os registros.
+
+Backlog histórico desde 0257 preservado. G14 FAIL; campanha 0304 aberta; 0305 não iniciada.

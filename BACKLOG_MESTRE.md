@@ -415,3 +415,7 @@ Detalhes e limites por cenário em [REGISTROS/0295.md](REGISTROS/0295.md) e [mat
 ## Campanha 0304 — checkpoint Relatórios V2 (2026-10-26)
 
 **Não encerra itens do backlog cumulativo.** Relatórios V2 teve implementação Parte 1/2 e commit local Restaurante `5de9258`; interface e suíte integral passaram, com CDP renderer de 26 cenários responsivos/temas sem overflow. E2E autenticado/cross-tenant, consulta real do mapa, Chrome Android físico e auditoria instrumental WCAG permanecem BLOCKED/PARTIAL. Razão oficial de receita e aprovação humana dos esboços continuam pendentes; G14 FAIL. Ver [REGISTRO 0304](REGISTROS/0304.md) e [evidências Relatórios V2](EVIDENCIAS/0304/relatorios-v2-2026-10-26/README.md). Campanha 0305 não iniciada.
+
+## Atualização aditiva — Campanha 0304 Parte T.5
+
+Console Super ADM: corrigida a incompatibilidade snake_case/camelCase, rótulos, semântica de founder latch, agrupamento/estado de perfis e consulta financeira escopada. Diálogos nativos de aplicação migrados para serviço comum e acessível nos dois apps. Suítes completas finais passaram; CDP sintético confirmou o componente em cinco viewports. Permanecem PARTIAL/BLOCKED: visual autenticado global, sessão e readback reais, origem dos registros Synthetic, estados herdados que o DTO não fornece, conflito transacional sem revision/CAS e Chrome Android. Commits apps locais `cc0ca6d`/`210c5be`, nenhum push de app. Ver `REGISTROS/0304.md` e `EVIDENCIAS/0304/padronizacao-parte-t5/`. Não fechar G14 nem apagar pendências históricas desde 0257.
