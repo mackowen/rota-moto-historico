@@ -2390,3 +2390,10 @@ Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com valida�
 - [ ] Validar Relatórios no fluxo autenticado autorizado, com dados da empresa, filtros, reload/sync e exportação real após patch. Estado BLOCKED nesta execução; amostras CDP isoladas não substituem essa prova.
 - [ ] Obter aprovação visual expressa do proprietário para Relatórios; G14 permanece FAIL.
 - Demais pendências de Restaurante/Motoboy e backlog desde 0257 permanecem abertos. PostgreSQL 0055 preservado; 0305 não iniciada. Ver [matriz CORRIGIDO/PARCIAL/PENDENTE](EVIDENCIAS/0304/relatorios-parte-m/README.md).
+
+## Campanha 0304 — Parte O (2026-10-28)
+
+- [ ] Obter leitura autorizada e READ ONLY do vínculo/perfil/grants da conta proprietária no banco oficial; o papel auditor atual não possui SELECT nas tabelas tenant RBAC. Não alterar grants reais sem autorização específica após diagnóstico.
+- [ ] Completar Browser QA autenticado de Configurações e Relatórios; tentativa Chromium/CDP não gerou resultado verificável nesta execução. Não converter isso em aprovação visual; G14 permanece FAIL.
+- [ ] Confirmar se o papel owner real foi afetado pelo backfill RLS da migration 0052 e, somente após evidência/autorização, avaliar uso da ação de reparo explicitamente pelo proprietário.
+- Preservar todos os demais itens do backlog desde 0257; Campanha 0304 aberta e 0305 não iniciada. [Parte O](EVIDENCIAS/0304/rbac-parte-o/README.md).

@@ -2113,3 +2113,7 @@ Backup oficial cifrado gerado e tecnicamente verificado; **BLOCKED** na custódi
 ## 0304 — Parte M revisada (2026-10-27)
 
 Relatórios recebeu correções de layout, espaçamento, scroll, disclosures, eixos, textos e estados da consulta financeira. Regressão dinâmica dos componentes passou; jornada autenticada continua BLOCKED por falta de sessão/credencial disponível. Sem aprovação visual inferida. PostgreSQL 0055 preservado por leitura de auditor, sem migrations/fixtures. G14 FAIL, 0304 aberta, 0305 não iniciada. Ver [matriz e evidências M](EVIDENCIAS/0304/relatorios-parte-m/README.md).
+
+## 0304 — Parte O — 2026-10-28
+
+Distinção entre owner empresarial e administrador global esclarecida; provável lacuna do backfill 0052 documentada, sem alegar confirmação da linha real, pois `rotamoto_auditor` não tem SELECT tenant em RBAC. Implementado reparo explícito owner-only, tenant-scoped, MFA/CSRF/auditado para os dois grants financeiros ausentes e descrições/agrupamento na delegação de perfis. Testes backend/UI e E2E sintético com rollback PASS; Chromium/CDP sem resultado observável e conta real BLOCKED. Restaurante commits locais `427be6461cca35d0c092f467af48021083d96628`, `88ce785295d8813c47d193cd6537a5a40c3b473f` e `38ffa32b5836743db43546f0fd9f7f6f8d2c3704` (HEAD final), sem push. G14 FAIL, campanha aberta, backlog desde 0257 preservado, 0305 não iniciada. [Parte O](EVIDENCIAS/0304/rbac-parte-o/README.md).

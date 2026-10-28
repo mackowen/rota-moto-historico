@@ -426,3 +426,9 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 
 - [Relatórios: matriz de problemas, correções e limites de autenticação](EVIDENCIAS/0304/relatorios-parte-m/README.md)
 - [Observação final CDP autotestada](EVIDENCIAS/0304/relatorios-parte-m/final-observation.json)
+
+### 0304 — Parte O — autorização do proprietário (2026-10-28)
+
+- [Registro da Parte O](REGISTROS/0304.md#parte-o--auditoria-e-correcao-de-autorizacao-do-proprietario-2026-10-28)
+- [Resumo da Parte O](RESUMOS/0304.md#parte-o--autorizacao-do-proprietario)
+- [Causa, correção, gates e evidência sanitizada](EVIDENCIAS/0304/rbac-parte-o/README.md)
