@@ -2425,3 +2425,13 @@ Atualização do PostgreSQL de desenvolvimento até 0055 concluída, com valida�
 - [ ] Executar Browser QA autenticado das Configurações/Relatórios em todos os estados e viewports; os testes automatizados não substituem validação visual.
 - Backfill 0052 em owners antigos permanece hipótese até leitura oficial; qualquer reparo do papel real segue pendente. G14 FAIL, Campanha 0304 aberta, 0305 não iniciada; backlog desde 0257 preservado. [Parte P](EVIDENCIAS/0304/bootstrap-parte-p/README.md).
 - Diagnóstico da não localização: bundle foi cache-busted (`login.9`/shell `v148`) e backend E2E reiniciado; o POST anônimo agora é 401, demonstrando rota ativa. Owner precisa reabrir/atualizar a aplicação e repetir a ação com sessão válida; finance grants ainda não alterados.
+
+## 0304 — Parte S (2026-10-28)
+
+- **Contrato comum — PASS técnico:** igualdade textual integral substituída por compatibilidade semântica; analytics exclusivo do Restaurante separado do contrato interoperável.
+- **Editor RBAC — PASS técnico:** catálogo completo e estados concedida/não concedida/não delegável; QA autenticado ainda pendente.
+- **Assets/Service Worker — PASS técnico:** manifesto SHA-256 central nos dois aplicativos e testes sem versões manuais obsoletas; implantação distribuída/offline real ainda não validada.
+- **Suítes dos apps — PASS:** `npm test` integral passou para Restaurante e Motoboy. Commits locais `bc818cc` e `16f0009`, sem push dos apps.
+- **PostgreSQL — PARTIAL/BLOCKED:** E2E está em 0061 com founder latch persistente; principal está em 0055. Um caso de bootstrap novo foi bloqueado corretamente pelo founder já reclamado e sua transação terminou em rollback. Adaptar/validar o fixture de bootstrap sem apagar ou substituir o fundador. Só depois de PASS aplicar 0056–0061 aditivas ao principal pelo runner oficial e verificar checksum/serviços.
+- **Browser QA — PARTIAL/BLOCKED:** Chromium/CDP público cobriu viewports 320, 390, 768, 1024 e 1440, com escuro em 390/1440; sessão anônima apenas. Consoles privados, configurações e fluxos autenticados bloqueados sem sessão/browser autorizado. Android físico pendente. Capturas sanitizadas em [Parte S](EVIDENCIAS/0304/paridade-parte-s/README.md).
+- G14 continua **FAIL**, campanha 0304 aberta, 0305 não iniciada. Nenhuma pendência anterior desde 0257 foi encerrada por esta atualização.
