@@ -1,0 +1,416 @@
+{
+  "result": "PASS",
+  "kind": "synthetic component harness; no authenticated session",
+  "loadedFrom": "http://127.0.0.1:8083",
+  "onDemand": {
+    "permissionInitiallyClosed": true,
+    "permissionOpensOnDemand": true,
+    "companyIdentifierInitiallyClosed": true,
+    "companyIdentifierOpensOnDemand": true
+  },
+  "measurements": [
+    {
+      "theme": "light",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 60,
+        "width": 320,
+        "height": 58
+      },
+      "card": {
+        "x": 0,
+        "y": 196,
+        "width": 320,
+        "height": 468
+      },
+      "row": {
+        "x": 24,
+        "y": 509,
+        "width": 272,
+        "height": 65
+      },
+      "toggle": {
+        "x": 24,
+        "y": 431,
+        "width": 272,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "light",
+      "viewport": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 60,
+        "width": 390,
+        "height": 58
+      },
+      "card": {
+        "x": 0,
+        "y": 196,
+        "width": 390,
+        "height": 468
+      },
+      "row": {
+        "x": 24,
+        "y": 509,
+        "width": 342,
+        "height": 65
+      },
+      "toggle": {
+        "x": 24,
+        "y": 431,
+        "width": 342,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "light",
+      "viewport": 412,
+      "documentWidth": 412,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 60,
+        "width": 412,
+        "height": 58
+      },
+      "card": {
+        "x": 0,
+        "y": 196,
+        "width": 412,
+        "height": 453
+      },
+      "row": {
+        "x": 24,
+        "y": 509,
+        "width": 364,
+        "height": 51
+      },
+      "toggle": {
+        "x": 24,
+        "y": 431,
+        "width": 364,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "light",
+      "viewport": 768,
+      "documentWidth": 768,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 64,
+        "width": 768,
+        "height": 96
+      },
+      "card": {
+        "x": 0,
+        "y": 220,
+        "width": 768,
+        "height": 409
+      },
+      "row": {
+        "x": 24,
+        "y": 535,
+        "width": 360,
+        "height": 69
+      },
+      "toggle": {
+        "x": 24,
+        "y": 456,
+        "width": 720,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "light",
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "overflow": false,
+      "nav": {
+        "x": 32,
+        "y": 65,
+        "width": 960,
+        "height": 96
+      },
+      "card": {
+        "x": 32,
+        "y": 221,
+        "width": 960,
+        "height": 396
+      },
+      "row": {
+        "x": 56,
+        "y": 539,
+        "width": 456,
+        "height": 54
+      },
+      "toggle": {
+        "x": 56,
+        "y": 458,
+        "width": 912,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "light",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": false,
+      "nav": {
+        "x": 240,
+        "y": 65,
+        "width": 960,
+        "height": 54
+      },
+      "card": {
+        "x": 240,
+        "y": 179,
+        "width": 960,
+        "height": 396
+      },
+      "row": {
+        "x": 264,
+        "y": 497,
+        "width": 456,
+        "height": 54
+      },
+      "toggle": {
+        "x": 264,
+        "y": 416,
+        "width": 912,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "dark",
+      "viewport": 320,
+      "documentWidth": 320,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 60,
+        "width": 320,
+        "height": 58
+      },
+      "card": {
+        "x": 0,
+        "y": 196,
+        "width": 320,
+        "height": 468
+      },
+      "row": {
+        "x": 24,
+        "y": 509,
+        "width": 272,
+        "height": 65
+      },
+      "toggle": {
+        "x": 24,
+        "y": 431,
+        "width": 272,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "dark",
+      "viewport": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 60,
+        "width": 390,
+        "height": 58
+      },
+      "card": {
+        "x": 0,
+        "y": 196,
+        "width": 390,
+        "height": 468
+      },
+      "row": {
+        "x": 24,
+        "y": 509,
+        "width": 342,
+        "height": 65
+      },
+      "toggle": {
+        "x": 24,
+        "y": 431,
+        "width": 342,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "dark",
+      "viewport": 412,
+      "documentWidth": 412,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 60,
+        "width": 412,
+        "height": 58
+      },
+      "card": {
+        "x": 0,
+        "y": 196,
+        "width": 412,
+        "height": 453
+      },
+      "row": {
+        "x": 24,
+        "y": 509,
+        "width": 364,
+        "height": 51
+      },
+      "toggle": {
+        "x": 24,
+        "y": 431,
+        "width": 364,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "dark",
+      "viewport": 768,
+      "documentWidth": 768,
+      "overflow": false,
+      "nav": {
+        "x": 0,
+        "y": 64,
+        "width": 768,
+        "height": 96
+      },
+      "card": {
+        "x": 0,
+        "y": 220,
+        "width": 768,
+        "height": 409
+      },
+      "row": {
+        "x": 24,
+        "y": 535,
+        "width": 360,
+        "height": 69
+      },
+      "toggle": {
+        "x": 24,
+        "y": 456,
+        "width": 720,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "dark",
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "overflow": false,
+      "nav": {
+        "x": 32,
+        "y": 65,
+        "width": 960,
+        "height": 96
+      },
+      "card": {
+        "x": 32,
+        "y": 221,
+        "width": 960,
+        "height": 396
+      },
+      "row": {
+        "x": 56,
+        "y": 539,
+        "width": 456,
+        "height": 54
+      },
+      "toggle": {
+        "x": 56,
+        "y": 458,
+        "width": 912,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    },
+    {
+      "theme": "dark",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "overflow": false,
+      "nav": {
+        "x": 240,
+        "y": 65,
+        "width": 960,
+        "height": 54
+      },
+      "card": {
+        "x": 240,
+        "y": 179,
+        "width": 960,
+        "height": 396
+      },
+      "row": {
+        "x": 264,
+        "y": 497,
+        "width": 456,
+        "height": 54
+      },
+      "toggle": {
+        "x": 264,
+        "y": 416,
+        "width": 912,
+        "height": 44
+      },
+      "companyPanelHidden": false,
+      "rolePanelHidden": false
+    }
+  ],
+  "disclosure": {
+    "companyExpanded": "true",
+    "roleExpanded": "true"
+  },
+  "screenshots": [
+    "super-admin-dark-1024-synthetic.png",
+    "super-admin-dark-1440-synthetic.png",
+    "super-admin-dark-320-synthetic.png",
+    "super-admin-dark-390-synthetic.png",
+    "super-admin-dark-412-synthetic.png",
+    "super-admin-dark-768-synthetic.png",
+    "super-admin-light-1024-synthetic.png",
+    "super-admin-light-1440-synthetic.png",
+    "super-admin-light-320-collapsed-synthetic.png",
+    "super-admin-light-320-synthetic.png",
+    "super-admin-light-390-synthetic.png",
+    "super-admin-light-412-synthetic.png",
+    "super-admin-light-768-synthetic.png"
+  ]
+}
