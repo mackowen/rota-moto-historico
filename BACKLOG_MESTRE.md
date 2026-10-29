@@ -423,3 +423,19 @@ Console Super ADM: corrigida a incompatibilidade snake_case/camelCase, rótulos,
 ## 0304 Parte T.6 — aditivo
 
 Corrigido contraste escuro nos cartões internos por tokens semânticos; formulário financeiro duplicado consolidado; requests de seção/financeiro cancelam e descartam respostas obsoletas; navegação compacta. Mensagem de central de backup esclarece que `BACKUP_ADMIN_NOT_CONFIGURED` não informa o estado de artefatos/scripts locais. npm test integral passou nos dois apps e harness sintético CDP passou 10 temas/viewports. Pendentes: QA Super ADM autenticado, query financeira/readback real, runtime da central administrativa e confirmação no Chrome Android. Ver `EVIDENCIAS/0304/super-adm-parte-t6/`. Backlog desde 0257 permanece íntegro; G14 FAIL.
+
+
+## Atualização aditiva — Parte T.7
+
+| ID permanente | Estado | Causa/correção | Próxima ação |
+|---|---|---|---|
+| `0304-T7-01` | PASS técnico / auth PARTIAL | request sem deadline; timeout 20 s com abort e teste | validar em sessão autorizada |
+| `0304-T7-02` | PARTIAL | presenter de empresa aplicado indevidamente a Users/Memberships; mapeadores por DTO e testes HTTP | validar listas com sessão Super ADM real |
+| `0304-T7-03` | PASS técnico | seção de perfis substitui a raiz e descarta requests obsoletos; cards de empresas são seletor de contexto | QA autenticado |
+| `0304-T7-04` | PASS sintético | estados e timeout corrigidos, sem loading residual em término/erro testado | QA autenticado |
+| `0304-T7-05` | PASS sintético | mobile sem orientação das opções/scroll da aba ativa | confirmar no Chrome Android |
+| `0304-T7-06` | PASS sintético | espaçamento vertical excessivo reduzido | aprovação visual do proprietário |
+| `0304-T7-07` | PARTIAL | nome técnico em destaque; exibido secundariamente, origem explicitamente não confirmada | classificar origem só por consulta autorizada |
+| `0304-T7-08` | PASS sintético | containers administrativos altos; cards/fatos/políticas compactados | confirmação visual real |
+
+Não encerra backlog anterior desde 0257; Browser QA autenticado permanece BLOCKED, G14 FAIL. Ver [evidências T.7](EVIDENCIAS/0304/super-adm-parte-t7/README.md).

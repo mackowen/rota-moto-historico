@@ -852,3 +852,8 @@ Estes IDs são aditivos. Nenhum item anterior da Campanha 0257 em diante foi apa
 | `0304-T6-AUTH-QA` | T.6 T6-12 | Restaurante / Super ADM autenticado | sessão legítima não disponível no CDP | não usar credenciais/códigos, tokens ou perfil pessoal; harness visual sintético claramente rotulado | BLOCKED até inspeção autorizada autenticada |
 
 Todos os itens têm evidência em `EVIDENCIAS/0304/super-adm-parte-t6/`. Este apêndice não reclassifica itens T5 nem os registros desde 0257.
+
+
+## Parte T.7 — complementos cumulativos (2026-10-29)
+
+IDs `0304-T7-01..08` foram adicionados de modo aditivo ao backlog. A falha Users/Memberships foi corrigida por mapeamento frontend em DTO específico; timeout/loading, navegação horizontal e densidade visual têm testes sintéticos. Origem real de nomes técnicos e navegação autenticada permanecem pendentes. Não remover nem reclassificar itens de 0257–0304. Detalhes: `EVIDENCIAS/0304/super-adm-parte-t7/`.

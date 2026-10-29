@@ -1,0 +1,3971 @@
+{
+  "mode": "synthetic-component-harness",
+  "runs": [
+    {
+      "theme": "light",
+      "viewport": "320x700",
+      "documentWidth": 320,
+      "overflow": false,
+      "nav": {
+        "left": 12,
+        "right": 308,
+        "width": 296,
+        "height": 55
+      },
+      "cards": 6,
+      "minContrast": 4.73,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(232, 239, 255)",
+          "ratio": 14.12
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(189, 61, 56)",
+          "background": "color(srgb 0.976706 0.931529 0.929765)",
+          "ratio": 4.74
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(37, 99, 235)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 4.9
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "viewport": "390x844",
+      "documentWidth": 390,
+      "overflow": false,
+      "nav": {
+        "left": 12,
+        "right": 378,
+        "width": 366,
+        "height": 55
+      },
+      "cards": 6,
+      "minContrast": 4.73,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(232, 239, 255)",
+          "ratio": 14.12
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(189, 61, 56)",
+          "background": "color(srgb 0.976706 0.931529 0.929765)",
+          "ratio": 4.74
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(37, 99, 235)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 4.9
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "viewport": "768x1024",
+      "documentWidth": 753,
+      "overflow": false,
+      "nav": {
+        "left": 12,
+        "right": 741,
+        "width": 729,
+        "height": 94
+      },
+      "cards": 6,
+      "minContrast": 4.73,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(232, 239, 255)",
+          "ratio": 14.12
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(189, 61, 56)",
+          "background": "color(srgb 0.976706 0.931529 0.929765)",
+          "ratio": 4.74
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(37, 99, 235)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 4.9
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "viewport": "1024x768",
+      "documentWidth": 1009,
+      "overflow": false,
+      "nav": {
+        "left": 24.5,
+        "right": 984.5,
+        "width": 960,
+        "height": 44
+      },
+      "cards": 6,
+      "minContrast": 4.73,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(232, 239, 255)",
+          "ratio": 14.12
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(189, 61, 56)",
+          "background": "color(srgb 0.976706 0.931529 0.929765)",
+          "ratio": 4.74
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(37, 99, 235)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 4.9
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "viewport": "1440x900",
+      "documentWidth": 1425,
+      "overflow": false,
+      "nav": {
+        "left": 232.5,
+        "right": 1192.5,
+        "width": 960,
+        "height": 44
+      },
+      "cards": 6,
+      "minContrast": 4.73,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(232, 239, 255)",
+          "ratio": 14.12
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(189, 61, 56)",
+          "background": "color(srgb 0.976706 0.931529 0.929765)",
+          "ratio": 4.74
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(37, 99, 235)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 4.9
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 16.27
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(22, 121, 74)",
+          "background": "color(srgb 0.908627 0.947451 0.92902)",
+          "ratio": 4.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 7.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(23, 32, 51)",
+          "background": "rgb(247, 249, 252)",
+          "ratio": 15.42
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(70, 85, 106)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 7.59
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": "320x700",
+      "documentWidth": 320,
+      "overflow": false,
+      "nav": {
+        "left": 12,
+        "right": 308,
+        "width": 296,
+        "height": 55
+      },
+      "cards": 6,
+      "minContrast": 5.62,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(29, 60, 105)",
+          "ratio": 9.99
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(255, 153, 146)",
+          "background": "color(srgb 0.175647 0.171765 0.208549)",
+          "ratio": 6.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(113, 167, 255)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 5.62
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": "390x844",
+      "documentWidth": 390,
+      "overflow": false,
+      "nav": {
+        "left": 12,
+        "right": 378,
+        "width": 366,
+        "height": 55
+      },
+      "cards": 6,
+      "minContrast": 5.62,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(29, 60, 105)",
+          "ratio": 9.99
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(255, 153, 146)",
+          "background": "color(srgb 0.175647 0.171765 0.208549)",
+          "ratio": 6.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(113, 167, 255)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 5.62
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": "768x1024",
+      "documentWidth": 753,
+      "overflow": false,
+      "nav": {
+        "left": 12,
+        "right": 741,
+        "width": 729,
+        "height": 94
+      },
+      "cards": 6,
+      "minContrast": 5.62,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(29, 60, 105)",
+          "ratio": 9.99
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(255, 153, 146)",
+          "background": "color(srgb 0.175647 0.171765 0.208549)",
+          "ratio": 6.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(113, 167, 255)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 5.62
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": "1024x768",
+      "documentWidth": 1009,
+      "overflow": false,
+      "nav": {
+        "left": 24.5,
+        "right": 984.5,
+        "width": 960,
+        "height": 44
+      },
+      "cards": 6,
+      "minContrast": 5.62,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(29, 60, 105)",
+          "ratio": 9.99
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(255, 153, 146)",
+          "background": "color(srgb 0.175647 0.171765 0.208549)",
+          "ratio": 6.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(113, 167, 255)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 5.62
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "viewport": "1440x900",
+      "documentWidth": 1425,
+      "overflow": false,
+      "nav": {
+        "left": 232.5,
+        "right": 1192.5,
+        "width": 960,
+        "height": 44
+      },
+      "cards": 6,
+      "minContrast": 5.62,
+      "lowContrast": [],
+      "texts": [
+        {
+          "tag": "BUTTON",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(29, 60, 105)",
+          "ratio": 9.99
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "H3",
+          "text": "Empresas",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Suspensa",
+          "color": "rgb(255, 153, 146)",
+          "background": "color(srgb 0.175647 0.171765 0.208549)",
+          "ratio": 6.73
+        },
+        {
+          "tag": "SPAN",
+          "text": "Vínculos ativos",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "2",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Usuários",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Conta ativa",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Email confirmado",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Sim",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Vínculos",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Ativo",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Papel na empresa",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Proprietário",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "admin.qa@example.invalid",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Perfis e permissões",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil empresarial",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "finance.read",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Concedida neste perfil",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H4",
+          "text": "Administrador de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Perfil protegido",
+          "color": "rgb(113, 167, 255)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 5.62
+        },
+        {
+          "tag": "H5",
+          "text": "Financeiro",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "STRONG",
+          "text": "Consultar registros financeiros",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SMALL",
+          "text": "Concedida neste perfil",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Resumo financeiro",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Consulta por período",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Registros",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "0",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Empresa sintética de QA",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        },
+        {
+          "tag": "H3",
+          "text": "Configuração da plataforma",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 14.7
+        },
+        {
+          "tag": "SPAN",
+          "text": "Verificação em duas etapas",
+          "color": "rgb(114, 214, 160)",
+          "background": "color(srgb 0.129412 0.200392 0.218039)",
+          "ratio": 7.42
+        },
+        {
+          "tag": "SPAN",
+          "text": "Obrigatória",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Bootstrap registrado",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "SPAN",
+          "text": "Identificação",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 8.55
+        },
+        {
+          "tag": "STRONG",
+          "text": "Políticas de segurança",
+          "color": "rgb(240, 244, 248)",
+          "background": "rgb(34, 47, 61)",
+          "ratio": 12.32
+        },
+        {
+          "tag": "P",
+          "text": "Dados de exemplo para medição visual; não são dados de produção.",
+          "color": "rgb(196, 206, 217)",
+          "background": "rgb(24, 33, 44)",
+          "ratio": 10.19
+        }
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "browserVersion": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.79",
+    "revision": "@a49e2e3d4addfd84e765b52afe230bedb81096db",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.23"
+  },
+  "publicShell": {
+    "title": "Rota Moto — Painel Restaurante v5.50",
+    "helperLoaded": true,
+    "adminRequestLoaded": true,
+    "identityRoot": true,
+    "appHidden": true
+  },
+  "status": "PASS"
+}
