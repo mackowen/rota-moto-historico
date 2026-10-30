@@ -69,3 +69,8 @@ Três aprovações humanas limitadas, fora do backlog aberto; não encerram revi
 ## Fontes e lacunas
 
 Veja `BACKLOG_CONSOLIDADO.md`, `MATRIZ_RASTREABILIDADE.md`, `MATRIZ_DEPENDENCIAS.md` e `CRITERIOS_HOMOLOGACAO.md`. Os documentos fonte continuam preservados. O agregado histórico `RM-HISTORY-LEGACY-OPEN` não é contado como uma única pendência: IDs com linhas foram individualizados; intervalos sem fonte própria ficam apontados como lacuna, não recebem descrição inventada.
+
+
+## Atualização de execução do Lote 1 — 2026-10-30
+
+Triagem dos 52 itens P0 atribuídos ao lote: 25 PARTIAL, 18 BLOCKED e 9 PENDING; nenhum critério P0 foi encerrado nesta execução. A matriz inclui todos os IDs e a evidência relacionada. O teste PostgreSQL de lifecycle tinha expectativa obsoleta (`availability` em vez do DTO `records[]`); corrigido e validado por execução E2E com rollback. Isso corrige o harness, não reduz por si só um P0 funcional. Nenhuma migration foi criada/aplicada; `rotamoto_e2e` e `rotamoto` mantêm ledger/checksums em 0061. Ver [evidência Lote 1](EVIDENCIAS/0304/lote-1/README.md).

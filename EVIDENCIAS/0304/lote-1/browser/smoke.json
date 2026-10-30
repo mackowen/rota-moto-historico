@@ -1,0 +1,180 @@
+{
+  "status": "complete",
+  "authenticated": false,
+  "results": [
+    {
+      "title": "Rota Moto — Painel Restaurante v5.50",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": null,
+      "theme": "light",
+      "app": "restaurante",
+      "viewportLabel": "mobile",
+      "screenshot": "restaurante-mobile-light.png"
+    },
+    {
+      "title": "Rota Moto — Painel Restaurante v5.50",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": null,
+      "theme": "dark",
+      "app": "restaurante",
+      "viewportLabel": "mobile",
+      "screenshot": "restaurante-mobile-dark.png"
+    },
+    {
+      "title": "Rota Moto — Painel Restaurante v5.50",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": null,
+      "theme": "light",
+      "app": "restaurante",
+      "viewportLabel": "desktop",
+      "screenshot": "restaurante-desktop-light.png"
+    },
+    {
+      "title": "Rota Moto — Painel Restaurante v5.50",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": null,
+      "theme": "dark",
+      "app": "restaurante",
+      "viewportLabel": "desktop",
+      "screenshot": "restaurante-desktop-dark.png"
+    },
+    {
+      "title": "Rota Moto",
+      "viewport": {
+        "width": 391,
+        "height": 847
+      },
+      "document": {
+        "width": 391,
+        "height": 1507
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": "home",
+      "theme": "light",
+      "app": "motoboy",
+      "viewportLabel": "mobile",
+      "screenshot": "motoboy-mobile-light.png"
+    },
+    {
+      "title": "Rota Moto",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1654
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": "home",
+      "theme": "dark",
+      "app": "motoboy",
+      "viewportLabel": "mobile",
+      "screenshot": "motoboy-mobile-dark.png"
+    },
+    {
+      "title": "Rota Moto",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": "home",
+      "theme": "light",
+      "app": "motoboy",
+      "viewportLabel": "desktop",
+      "screenshot": "motoboy-desktop-light.png"
+    },
+    {
+      "title": "Rota Moto",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "passwordField": true,
+      "loginText": true,
+      "activeScreen": "home",
+      "theme": "dark",
+      "app": "motoboy",
+      "viewportLabel": "desktop",
+      "screenshot": "motoboy-desktop-dark.png"
+    }
+  ],
+  "failures": [
+    {
+      "type": "http",
+      "status": 401,
+      "path": "/api/identity/session",
+      "expected": true
+    },
+    {
+      "type": "http",
+      "status": 401,
+      "path": "/api/identity/session",
+      "expected": true
+    },
+    {
+      "type": "http",
+      "status": 401,
+      "path": "/api/identity/session",
+      "expected": true
+    }
+  ],
+  "chromium": "/data/data/com.termux/files/usr/lib/chromium/chrome",
+  "stderrWarnings": 16
+}

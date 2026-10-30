@@ -425,3 +425,8 @@
 | `APP-T14-RESTAURANTE-LANDSCAPE` | T.14 | Topbar horizontal do Restaurante no Chrome Android | PASS no escopo; regressão protegida |
 
 Estas três aprovações são contadas separadamente dos defeitos canônicos e não reduzem G14 geral, que permanece FAIL.
+
+
+## Atualização de execução do Lote 1 — 2026-10-30
+
+Triagem dos 52 itens P0 atribuídos ao lote: 25 PARTIAL, 18 BLOCKED e 9 PENDING; nenhum critério P0 foi encerrado nesta execução. A matriz inclui todos os IDs e a evidência relacionada. O teste PostgreSQL de lifecycle tinha expectativa obsoleta (`availability` em vez do DTO `records[]`); corrigido e validado por execução E2E com rollback. Isso corrige o harness, não reduz por si só um P0 funcional. Nenhuma migration foi criada/aplicada; `rotamoto_e2e` e `rotamoto` mantêm ledger/checksums em 0061. Ver [evidência Lote 1](EVIDENCIAS/0304/lote-1/README.md).

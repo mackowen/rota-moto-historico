@@ -26,3 +26,8 @@
 - iFood, 99Food e Keeta são trilhas independentes, cada uma condicionada ao onboarding e credencial próprios.
 - Validação física do proprietário é paralela; não requer compartilhar credenciais.
 - Não paralelizar migrations no mesmo schema, RBAC global, fixtures concorrentes na mesma fila nem dispatch operacional.
+
+
+## Checkpoint Lote 1 — 2026-10-30
+
+P0 do Lote 1: 52 triados (25 PARTIAL, 18 BLOCKED, 9 PENDING), nenhum fechado. O checkpoint confirmou 0061 em ambos bancos, sem migration nova. Sessão global positiva e contexto empresarial do founder continuam pré-requisitos de validação, sem alteração de identidade. Consulte `EVIDENCIAS/0304/lote-1/MATRIZ-EXECUCAO.md`.
