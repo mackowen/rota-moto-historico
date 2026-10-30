@@ -44,4 +44,4 @@ Nenhum dado foi migrado do IndexedDB. Nenhuma alteração foi feita em `rotamoto
 
 ## Git
 
-Commits locais: Restaurante `a49c9d1` (`feat: persist company and delivery pricing settings`); Motoboy `88b9266` (`feat: consume canonical company pricing snapshot`). O commit documental do histórico será registrado após o push. Nenhum push de aplicativo foi feito.
+Commits locais: Restaurante `a49c9d1` (`feat: persist company and delivery pricing settings`); Motoboy `88b9266` (`feat: consume canonical company pricing snapshot`). Evidência publicada no histórico por `7d7ce3f` (push confirmado). Nenhum push de aplicativo foi feito.
