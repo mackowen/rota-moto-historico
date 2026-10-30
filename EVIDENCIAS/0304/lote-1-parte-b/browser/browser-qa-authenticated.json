@@ -1,0 +1,364 @@
+{
+  "authenticated": true,
+  "syntheticFixture": true,
+  "database": "disposable Lote 1B",
+  "viewports": [
+    "390x844"
+  ],
+  "themes": [
+    "light"
+  ],
+  "flows": {
+    "restaurantLoginMfa": true,
+    "restaurantHomeRoutesAuthenticated": true,
+    "superAdminSections": [
+      "companies",
+      "users",
+      "memberships",
+      "settings"
+    ],
+    "companyTeamRendered": true,
+    "motoboyLoginMfa": true,
+    "motoboyDriverBinding": true,
+    "motoboyReloadRestoresSession": true,
+    "motoboyLogoutRevoked": true
+  },
+  "httpChecks": {
+    "founderPlatformSettings": 200,
+    "founderCompanyList": 200
+  },
+  "layout": {
+    "restaurant": {
+      "ready": true,
+      "title": "Rota Moto — Painel Restaurante v5.50",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollWidth": 390,
+      "session": true
+    },
+    "superAdmin": {
+      "width": 390,
+      "viewport": 390,
+      "cards": 1
+    },
+    "motoboy": {
+      "title": "Rota Moto",
+      "authenticated": true,
+      "mfa": true,
+      "driver": true,
+      "screen": "home",
+      "sync": "Vínculo pendente",
+      "width": 390,
+      "viewport": 390,
+      "identity": "Sessão ativa"
+    }
+  },
+  "apiRequests": [
+    {
+      "path": "/api/identity/session",
+      "status": 401
+    },
+    {
+      "path": "/api/identity/login",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/finance/events",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/installations/restaurante",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/push",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company/profile",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/finance/events",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "path": "/api/finance/events",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/installations/restaurante",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "path": "/api/platform-admin/companies",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/push",
+      "status": 200
+    },
+    {
+      "path": "/api/platform-admin/users",
+      "status": 200
+    },
+    {
+      "path": "/api/sync/pull",
+      "status": 200
+    },
+    {
+      "path": "/api/platform-admin/memberships",
+      "status": 200
+    },
+    {
+      "path": "/api/platform-admin/companies",
+      "status": 200
+    },
+    {
+      "path": "/api/platform-admin/settings",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/memberships",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/roles",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/permissions",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/integrations",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/company",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/memberships",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/roles",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/permissions",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/integrations",
+      "status": 200
+    },
+    {
+      "path": "/api/domain/drivers",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/mfa-recovery",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/logout",
+      "status": 204
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 401
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 401
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 401
+    },
+    {
+      "path": "/api/identity/login",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/motoboy/domain/drivers/:driverId",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/driver-availability",
+      "status": 200
+    },
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/motoboy/domain/drivers/:driverId",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/logout",
+      "status": 403
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/motoboy/domain/drivers/:driverId",
+      "status": 200
+    },
+    {
+      "path": "/api/driver-availability",
+      "status": 200
+    },
+    {
+      "path": "/api/driver-availability",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 200
+    },
+    {
+      "path": "/api/identity/logout",
+      "status": 204
+    },
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 401
+    },
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 401
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 401
+    }
+  ],
+  "apiErrors": [
+    {
+      "path": "/api/identity/logout",
+      "status": 403
+    },
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 401
+    },
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 401
+    }
+  ],
+  "csrfRetryRecovered": true,
+  "postLogoutUnauthorizedRequests": [
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 401
+    },
+    {
+      "path": "/api/restaurant-driver-queue",
+      "status": 401
+    },
+    {
+      "path": "/api/identity/session",
+      "status": 401
+    }
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "restaurante-autenticado-390x844-claro.png",
+    "restaurante-super-admin-390x844-claro.png",
+    "restaurante-equipe-autenticado-390x844.png",
+    "motoboy-autenticado-390x844-claro.png"
+  ]
+}

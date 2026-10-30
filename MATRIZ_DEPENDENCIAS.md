@@ -31,3 +31,8 @@
 ## Checkpoint Lote 1 — 2026-10-30
 
 P0 do Lote 1: 52 triados (25 PARTIAL, 18 BLOCKED, 9 PENDING), nenhum fechado. O checkpoint confirmou 0061 em ambos bancos, sem migration nova. Sessão global positiva e contexto empresarial do founder continuam pré-requisitos de validação, sem alteração de identidade. Consulte `EVIDENCIAS/0304/lote-1/MATRIZ-EXECUCAO.md`.
+
+
+## Checkpoint de execução do Lote 1 Parte B — 2026-10-30
+
+O banco descartável 0304B foi criado/migrado até 0063 e validou bootstrap, MFA/RBAC, persistência limitada, concorrência e isolamento. O P0 `LEGACY-0304-E2E-AUTH` passou apenas no critério de readiness/reload autenticado; 51 dos 52 P0 do lote permanecem não PASS. Lote 1 continua PARTIAL. Migrations 0062/0063 não foram promovidas aos bancos persistentes, ambos em 0061. Veja os comandos e limites em `EVIDENCIAS/0304/lote-1-parte-b/`.

@@ -74,3 +74,10 @@ Veja `BACKLOG_CONSOLIDADO.md`, `MATRIZ_RASTREABILIDADE.md`, `MATRIZ_DEPENDENCIAS
 ## Atualização de execução do Lote 1 — 2026-10-30
 
 Triagem dos 52 itens P0 atribuídos ao lote: 25 PARTIAL, 18 BLOCKED e 9 PENDING; nenhum critério P0 foi encerrado nesta execução. A matriz inclui todos os IDs e a evidência relacionada. O teste PostgreSQL de lifecycle tinha expectativa obsoleta (`availability` em vez do DTO `records[]`); corrigido e validado por execução E2E com rollback. Isso corrige o harness, não reduz por si só um P0 funcional. Nenhuma migration foi criada/aplicada; `rotamoto_e2e` e `rotamoto` mantêm ledger/checksums em 0061. Ver [evidência Lote 1](EVIDENCIAS/0304/lote-1/README.md).
+
+
+## Atualização de execução — Lote 1 Parte B (2026-10-30)
+
+O plano documental T.15 foi seguido por execução técnica parcial. Estado atual derivado de `BACKLOG_CONSOLIDADO.md`: 411 IDs canônicos, 409 não PASS e 2 PASS de critério limitado; estados: PARTIAL=206, BLOCKED=110, PENDING=93, PASS=2, FAIL=0; prioridades totais P0=101, P1=229, P2=75, P3=6 (P0: 1 PASS, 36 PARTIAL, 49 BLOCKED, 15 PENDING). Entre os 52 P0 do Lote 1, 1 PASS, 24 PARTIAL, 18 BLOCKED e 9 PENDING; 51 continuam não PASS. O PASS é `LEGACY-0304-E2E-AUTH`, restrito a prontidão/reload/browser autenticado Home↔Rotas.
+
+Banco descartável 0304B concluiu migrations 0063 e testes autenticados; persistentes `rotamoto` e `rotamoto_e2e` não foram escritos e continuam em 0061. Não promover 0062/0063 como se houvesse paridade. Browser QA sintético MFA nos dois aplicativos passou em escopo 390×844 claro; Android físico e demais superfícies permanecem pendentes. Lote 1 PARTIAL; Lotes 2–6 não iniciados; G14 FAIL; 0305 não iniciada. Evidências: `EVIDENCIAS/0304/lote-1-parte-b/`.
