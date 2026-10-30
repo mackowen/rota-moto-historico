@@ -50,4 +50,4 @@ Esta execução testou controles representativos por seção, não todos os camp
 ## Commits
 
 - Restaurante: `fa88447` (`fix: recover local settings saves and server feedback`).
-- Histórico: preencher após commit e publicação deste registro.
+- Histórico: registro inicial publicado em `c3aa7b3` na branch `codex/campaign-0304-config-restaurante`; atualização final desta evidência será publicada em commit subsequente da mesma branch.
