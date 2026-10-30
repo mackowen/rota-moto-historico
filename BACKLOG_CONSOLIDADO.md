@@ -430,3 +430,7 @@ Estas três aprovações são contadas separadamente dos defeitos canônicos e n
 ## Atualização de execução do Lote 1 — 2026-10-30
 
 Triagem dos 52 itens P0 atribuídos ao lote: 25 PARTIAL, 18 BLOCKED e 9 PENDING; nenhum critério P0 foi encerrado nesta execução. A matriz inclui todos os IDs e a evidência relacionada. O teste PostgreSQL de lifecycle tinha expectativa obsoleta (`availability` em vez do DTO `records[]`); corrigido e validado por execução E2E com rollback. Isso corrige o harness, não reduz por si só um P0 funcional. Nenhuma migration foi criada/aplicada; `rotamoto_e2e` e `rotamoto` mantêm ledger/checksums em 0061. Ver [evidência Lote 1](EVIDENCIAS/0304/lote-1/README.md).
+
+## Atualização de execução — Lote 1 Parte C (2026-10-30)
+
+Corrigido no Motoboy um subdefeito reproduzível de `RM-D1-SETTINGS-SAVE`: autosave de aparência podia ser descartado se o lock de gravação estivesse ocupado por outra categoria. A alteração adiciona deferimento/coalescência e limpa o draft somente após ACK. O teste de regressão e a suíte completa passaram. **O ID permanece PARTIAL**: matriz integral de campos, readback/reload por categoria e fluxos de conflito/rede não foram concluídos. Contagem P0 permanece 52 no total, 1 PASS e 51 não PASS; nenhum P0 canônico foi fechado nesta execução. Ver `EVIDENCIAS/0304/lote-1-parte-c/`.

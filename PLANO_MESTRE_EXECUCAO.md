@@ -2,6 +2,8 @@
 
 **Esta entrega é documental. Nenhum lote foi iniciado; nenhum app, banco, serviço ou publicação foi alterado.** G14 geral FAIL; Campanha 0304 aberta; 0305 não iniciada.
 
+> Esse parágrafo registra o estado original na Parte T.15. A execução do Lote 1 começou posteriormente, conforme as atualizações de execução ao final deste plano.
+
 ## Totais derivados
 
 | Métrica | Total | Método |
@@ -81,3 +83,7 @@ Triagem dos 52 itens P0 atribuídos ao lote: 25 PARTIAL, 18 BLOCKED e 9 PENDING;
 O plano documental T.15 foi seguido por execução técnica parcial. Estado atual derivado de `BACKLOG_CONSOLIDADO.md`: 411 IDs canônicos, 409 não PASS e 2 PASS de critério limitado; estados: PARTIAL=206, BLOCKED=110, PENDING=93, PASS=2, FAIL=0; prioridades totais P0=101, P1=229, P2=75, P3=6 (P0: 1 PASS, 36 PARTIAL, 49 BLOCKED, 15 PENDING). Entre os 52 P0 do Lote 1, 1 PASS, 24 PARTIAL, 18 BLOCKED e 9 PENDING; 51 continuam não PASS. O PASS é `LEGACY-0304-E2E-AUTH`, restrito a prontidão/reload/browser autenticado Home↔Rotas.
 
 Banco descartável 0304B concluiu migrations 0063 e testes autenticados; persistentes `rotamoto` e `rotamoto_e2e` não foram escritos e continuam em 0061. Não promover 0062/0063 como se houvesse paridade. Browser QA sintético MFA nos dois aplicativos passou em escopo 390×844 claro; Android físico e demais superfícies permanecem pendentes. Lote 1 PARTIAL; Lotes 2–6 não iniciados; G14 FAIL; 0305 não iniciada. Evidências: `EVIDENCIAS/0304/lote-1-parte-b/`.
+
+## Atualização de execução — Lote 1 Parte C (2026-10-30)
+
+Implementada correção Motoboy para autosave concorrente de Configurações: preferência de aparência que vencia enquanto outra escrita estava ocupada agora é adiada e retomada, com draft mantido até ACK. Teste de regressão específico e `npm test`/assets passaram nos dois aplicativos. Restaurante sem alteração de produção. Browser Parte C: Company Profile Restaurante passou ACK/readback/409/reload em fixture transacional; Motoboy login/MFA e sessão/reload passaram, mas navegação para Ajustes bloqueou a persistência visual. Nenhum P0 canônico fechado; 52 totais, 1 PASS anterior e 51 não PASS. Nenhuma escrita persistente nem migration. Motoboy commits locais `80c1278` e `1fa85cd`; histórico será publicado em commit documental. G14 FAIL; Lotes 2–6 e 0305 não iniciados. Evidências: `EVIDENCIAS/0304/lote-1-parte-c/`.
