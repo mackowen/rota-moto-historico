@@ -857,3 +857,8 @@ Todos os itens têm evidência em `EVIDENCIAS/0304/super-adm-parte-t6/`. Este ap
 ## Parte T.7 — complementos cumulativos (2026-10-29)
 
 IDs `0304-T7-01..08` foram adicionados de modo aditivo ao backlog. A falha Users/Memberships foi corrigida por mapeamento frontend em DTO específico; timeout/loading, navegação horizontal e densidade visual têm testes sintéticos. Origem real de nomes técnicos e navegação autenticada permanecem pendentes. Não remover nem reclassificar itens de 0257–0304. Detalhes: `EVIDENCIAS/0304/super-adm-parte-t7/`.
+
+
+## Consolidação documental T.15
+
+Vista operacional e crosswalk ampliados: [BACKLOG_CONSOLIDADO.md](BACKLOG_CONSOLIDADO.md), [MATRIZ_RASTREABILIDADE.md](MATRIZ_RASTREABILIDADE.md). Linhas históricas preservadas.

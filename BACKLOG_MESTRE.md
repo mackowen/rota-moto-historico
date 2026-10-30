@@ -439,3 +439,8 @@ Corrigido contraste escuro nos cartões internos por tokens semânticos; formul�
 | `0304-T7-08` | PASS sintético | containers administrativos altos; cards/fatos/políticas compactados | confirmação visual real |
 
 Não encerra backlog anterior desde 0257; Browser QA autenticado permanece BLOCKED, G14 FAIL. Ver [evidências T.7](EVIDENCIAS/0304/super-adm-parte-t7/README.md).
+
+
+## Consolidação documental T.15
+
+Plano vigente: [PLANO_MESTRE_EXECUCAO.md](PLANO_MESTRE_EXECUCAO.md); backlog normalizado: [BACKLOG_CONSOLIDADO.md](BACKLOG_CONSOLIDADO.md); rastreabilidade: [MATRIZ_RASTREABILIDADE.md](MATRIZ_RASTREABILIDADE.md). Este adendo não remove registros anteriores.

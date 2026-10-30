@@ -1,0 +1,58 @@
+{
+  "markdown_files": 706,
+  "identifier_tokens": 1541,
+  "pendency_ids": 465,
+  "canonical_total": 411,
+  "open": 410,
+  "status": {
+    "PARTIAL": 207,
+    "BLOCKED": 110,
+    "PENDING": 93,
+    "FAIL": 0,
+    "PASS": 1
+  },
+  "priority": {
+    "P0": 101,
+    "P1": 229,
+    "P2": 75,
+    "P3": 6
+  },
+  "lot": {
+    "1": 120,
+    "3": 29,
+    "5": 67,
+    "4": 53,
+    "2": 87,
+    "6": 55
+  },
+  "external_open": 61,
+  "owner_open": 27,
+  "crosswalk_rows": 1541,
+  "unmapped": 997,
+  "lot_total": {
+    "1": 121,
+    "2": 91,
+    "3": 30,
+    "4": 55,
+    "5": 72,
+    "6": 42
+  },
+  "lot_open": {
+    "1": 120,
+    "2": 91,
+    "3": 30,
+    "4": 55,
+    "5": 72,
+    "6": 42
+  },
+  "owner_approved_scopes": 3,
+  "canonical_pass_specific": 1,
+  "historical_pass_source_ids": 84,
+  "pendency_rows_reconciled": {
+    "open_individual": 370,
+    "historical_pass": 84,
+    "aliases": 11,
+    "unmapped": 0
+  },
+  "literal_alias_links": 48
+}
