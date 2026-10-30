@@ -434,3 +434,7 @@ Triagem dos 52 itens P0 atribuídos ao lote: 25 PARTIAL, 18 BLOCKED e 9 PENDING;
 ## Atualização de execução — Lote 1 Parte C (2026-10-30)
 
 Corrigido no Motoboy um subdefeito reproduzível de `RM-D1-SETTINGS-SAVE`: autosave de aparência podia ser descartado se o lock de gravação estivesse ocupado por outra categoria. A alteração adiciona deferimento/coalescência e limpa o draft somente após ACK. O teste de regressão e a suíte completa passaram. **O ID permanece PARTIAL**: matriz integral de campos, readback/reload por categoria e fluxos de conflito/rede não foram concluídos. Contagem P0 permanece 52 no total, 1 PASS e 51 não PASS; nenhum P0 canônico foi fechado nesta execução. Ver `EVIDENCIAS/0304/lote-1-parte-c/`.
+
+### Atualização 2026-10-30 — Empresa e Operação
+
+`RM-D1-SETTINGS-SAVE` permanece **PARTIAL**. Restaurante agora tem leitura automática e gravação versionada única para nome, telefone, fuso, agrupamento e localização confirmada; cobrança compartilhada tem API/PostgreSQL canônicos versionados e não importa automaticamente valores locais. Teste HTTP/PostgreSQL autenticado no banco descartável comprovou readback, conflito 409, validação, CSRF e rollback; isso não comprova UI Browser autenticada, reload/nova sessão de todos os campos ou persistência nos bancos 0061. Migration 0064 está somente no descartável. Motoboy consome o snapshot sem duplicar o cálculo. Nenhum P0 foi encerrado por esta atualização. Evidência: `EVIDENCIAS/0304/empresa-operacao/RESULTADO.md`.
