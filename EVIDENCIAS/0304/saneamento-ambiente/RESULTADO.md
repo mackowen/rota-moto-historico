@@ -36,6 +36,6 @@ PARTIAL: reload pós-salvamento de Operação na UI não terminou devido a trava
 
 - Restaurante: `ac47f26` (política operacional); `8479c7a` (`fix: allow versioned company pricing updates`, correção e teste PostgreSQL transacional).
 - Motoboy: `f26ae3e` (política operacional); nenhum código funcional foi necessário.
-- Histórico: commit/push desta atualização a registrar após commit fast-forward.
+- Histórico: `6ea1414` (`docs: record 0304 e2e unblock and pricing fix`), aguardando push fast-forward e confirmação remota.
 
 G14 permanece **FAIL** até aprovação visual expressa do proprietário. Campanha 0304 permanece aberta; 0305 não iniciada.
