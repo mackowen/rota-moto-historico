@@ -60,3 +60,35 @@ O harness de Operação foi ajustado para aguardar o readback inteiro e evitar a
 Foi corrigida uma janela de edição concorrente em Operação: durante o PUT e o readback, controles de modelo, repasse, valores e faixas agora ficam desabilitados; ao terminar, recuperam o estado disabled/autorização anterior. Teste direcionado `tests/test-company-delivery-pricing.js`, suítes completas `npm test` nos dois aplicativos, assets nos dois, contrato compartilhado e `git diff --check` passaram. O estado global permanece PARTIAL: API publicada, migração persistente, QA de Operação e round-trip de todos os campos ainda pendentes. Os bancos persistentes permaneceram em 0061; a transação descartável foi encerrada sem sessão de teste remanescente.
 
 Alteração funcional desta continuação: Restaurante `app.js`, `tests/test-company-delivery-pricing.js` e manifesto de assets gerado (`asset-manifest.js`, `index.html`). Motoboy não alterado. Commit local Restaurante: `3c42266` (`fix: lock pricing controls while saving`); nenhum commit/push Motoboy. O histórico desta continuação será publicado separadamente; nenhum push de aplicativo foi executado.
+
+## Correção pontual da aba Operação — 2026-10-31
+
+**Resultado: PARTIAL; causa do erro genérico corrigida no checkout, confirmação autenticada pós-correção pendente por rate limit legítimo.**
+
+### Causa reproduzida e correção
+
+Em Chromium/CDP isolado, com a identidade sintética legítima (login/MFA) e Chico Restaurante no `rotamoto_e2e`, o formulário inicialmente mostrava `perKm` selecionado e valor `0` embora o GET canônico retornasse `model=perDelivery`, `fixedFee=10`, `perKm=2.37`, revisão 17. O carregamento tardio atualizava o estado JavaScript, mas não reconstruía a tela antes de habilitar os controles. A correção já feita nesta continuação impede edição enquanto o GET canônico está pendente, limpa o marcador de empresa carregada antes de nova tentativa e renderiza Operação com os valores canônicos antes de reabilitar seus controles.
+
+A reprodução da mensagem genérica mostrou também sua causa direta: a UI enviava o PUT e recebia HTTP 200; o readback também respondia 200. No caminho de sucesso, `saveCompanyDeliveryPricing()` gravava o objeto válido em `state.settings.deliveryPricingCanonical`, mas em seguida tentava executar `state.deliveryPricingCanonical.version`. Essa propriedade não existe, lançando `TypeError` após a persistência, entrando no `catch` genérico e afirmando incorretamente que não salvou. Removi a atribuição inválida redundante. Agora a revisão canônica, o estado e o draft são atualizados pelo objeto existente antes do feedback.
+
+### Evidência funcional observada
+
+Antes da correção do `TypeError`, a UI real autenticada em 390×844 enviou dois salvamentos consecutivos em inicializações isoladas do Chromium: `fixedFee` 10→11 (PUT 200, resposta versionada e GET/readback 200), depois `minFee` 0→1 (PUT 200 e readback 200). A segunda inicialização autenticada abriu o formulário com `fixedFee=11`, comprovando que o primeiro valor persistiu após fechar/reabrir o cliente e uma nova sessão. Esses salvamentos reproduziram a falsa mensagem de erro pós-ACK; portanto não contam como validação final da interface corrigida.
+
+Depois da alteração do `TypeError`, uma nova tentativa de login pelo harness recebeu HTTP 429 no limitador legítimo de login (janela configurada em 15 minutos). Não reiniciei a API nem limpei o limitador para contornar MFA/rate limit. Assim, não foi possível observar uma nova confirmação visual autenticada depois do patch. A leitura PostgreSQL autorizada, transacional e sem escrita confirmou que Chico está restaurado à configuração anterior: versão 30, `model=perDelivery`, `perKm=2.37`, `fixedFee=10`, `minFee=0`, `round=false`, `roundTo=1`, `ranges=[]`, repasse integral. Nenhuma alteração foi feita em `rotamoto`.
+
+### Testes, publicação e estado
+
+- PASS: `node --check app.js`.
+- PASS: `node tests/test-company-delivery-pricing.js`, com regressão para o caminho de estado canônico.
+- PASS: `node tests/test-cross-app-contract-parity.js`.
+- PASS: PostgreSQL `tests/test-company-delivery-pricing-postgres.js` com papel de aplicação/RLS; update/readback, conflito obsoleto e rollback transacional.
+- PASS: `npm run assets:check` e `git diff --check`.
+- PASS: API 8787 `/health` HTTP 200; o serviço atualizado já estava ativo e não exigiu reinício.
+- PASS: Restaurante 8083 serviu o `app.js` corrigido HTTP 200, SHA-256 `f634abfbb7e96c94b8ff617607f232ffdbb5de43f349d4379cd757ef00f0488f`; o `index.html` aponta para `app.js?v=f634abfbb7e96c94`.
+- PARTIAL: Browser QA autenticado pós-patch, erro de rede/409 mostrado na tela e reload após a correção — login temporariamente limitado a 429. O QA autenticado pré-patch reproduziu o defeito e comprovou o PUT/readback.
+- PARTIAL: `npm test` completo terminou com `BACKUP_CONTROL_LOCK_UNSAFE` em `tests/test-backup-control.js`; a falha é externa ao fluxo de cobrança. Os testes direcionados acima passaram.
+
+Arquivos de produção alterados nesta correção: Restaurante `app.js`. Regressão: `tests/test-company-delivery-pricing.js`. Artefatos gerados pelo sincronizador: `asset-manifest.js` e `index.html`. API/backend, schema e Motoboy não foram alterados. Banco persistente E2E permaneceu com Chico e configurações restauradas; não houve migration ou alteração no banco oficial. Commit local Restaurante: `1f58773` (`fix: confirm company delivery pricing saves`). Nenhum push de aplicativo foi feito.
+
+Gates desta correção: causa raiz **PASS**; correção no checkout e hash servido **PASS**; testes direcionados/PostgreSQL **PASS**; persistência sequencial pela UI **PARTIAL** (observada pré-patch e restaurada; pós-patch depende do desbloqueio natural do rate limit); conflito HTTP 409 **PASS** no teste PostgreSQL; preservação visual de draft em conflito pós-patch **PARTIAL**; Browser QA autenticado pós-patch **BLOCKED temporariamente por 429**. Não marcar Operação como aprovada até uma execução autenticada pós-patch; campanha 0304/G14 continuam abertos.
