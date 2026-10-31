@@ -39,7 +39,7 @@ Nos dois aplicativos passaram `npm run assets:check` e `git diff --check`. Motob
 
 ## Bloqueio de Browser QA autenticado
 
-O estado persistente do banco E2E foi preservado. A consulta, feita em transação `READ ONLY` e com o tenant canônico definido para respeitar RLS, confirmou exatamente uma empresa, Chico Restaurante. A consulta sem contexto de tenant retornava zero linhas por isolamento RLS; não era evidência de banco vazio.
+O estado persistente do banco E2E foi preservado. A consulta, feita em transação `READ ONLY` e com o tenant canônico definido para respeitar RLS, confirmou que o registro de Chico Restaurante está visível nesse escopo. Essa consulta não comprova a contagem global cross-tenant; a última verificação administrativa de contagem continua sendo a registrada em `saneamento-ambiente/RESULTADO.md`. A consulta sem contexto de tenant retornava zero linhas por isolamento RLS; não era evidência de banco vazio.
 
 Não havia sessão MFA de QA reutilizável disponível para o Chromium. O harness antigo `campaign-0256-settings-e2e.cjs` falhou antes da interação por procurar `.settings-nav`, seletor removido da interface atual, que usa `.settings-cards`. Esse erro pertence ao harness, não comprova defeito de produto. A execução anterior do harness usou ciclo transacional rollback-only; não deixou empresa nem outros dados persistentes. Não foi repetida: o provisionamento padrão desse harness cria temporariamente um tenant e isso não é compatível com a restrição desta tarefa de não criar empresas.
 
