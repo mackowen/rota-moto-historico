@@ -1549,3 +1549,7 @@ Varredura de 706 arquivos Markdown em REGISTROS, RESUMOS, EVIDENCIAS e três ín
 ### Adendo de execução 0304 — 2026-10-31
 
 `EVIDENCIAS/0304/logistica-origens/RESULTADO.md` acrescenta evidência para os IDs canônicos já existentes `RM-D1-LOCATION-CONSISTENCY` e `RM-D1-SETTINGS-SAVE`. Não foi criado ID canônico nem alias histórico novo; ambos permanecem PARTIAL, pois o escopo global não foi encerrado. As contagens da varredura original permanecem snapshots históricos e não foram recalculadas nesta atualização.
+
+### Adendo de execução 0304 — Conta e segurança (2026-10-31)
+
+`EVIDENCIAS/0304/conta-seguranca/RESULTADO.md` complementa os IDs existentes `RM-0256B-ACCOUNT`, `RM-D1-MFA-STATE`, `RM-D1-SETTINGS-SAVE`, `RM-0256B-AUTH` e `RM-F-MFA-PAGE-DETACH-CLEANUP`; nenhum ID ou alias histórico foi removido. Os três primeiros permanecem PARTIAL, pois esta validação sintética não encerra os critérios globais nem substitui a aprovação física. `RM-F-MFA-PAGE-DETACH-CLEANUP` conserva o PASS anterior e recebeu regressão pós-logout/login. Contagens não recalculadas.
