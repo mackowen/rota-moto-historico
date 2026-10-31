@@ -1,0 +1,33 @@
+{
+  "classification": "synthetic authenticated Chromium QA; not physical Android approval",
+  "browser": "Chromium 155.0.8059.79, headless, isolated temporary profile, CDP",
+  "viewport": "390x844",
+  "theme": "light",
+  "identity": "synthetic E2E user; legitimate password and TOTP login; secret omitted",
+  "login": { "http": 200, "mfaVerified": true, "tenant": "Chico Restaurante" },
+  "company": {
+    "uiPut": 200,
+    "serverReadback": 200,
+    "reloadReadback": "passed in authenticated run",
+    "staleRevision": 409,
+    "originalValuesRestored": true,
+    "screenshot": "empresa-e2e-autenticada-390x844.png"
+  },
+  "operation": {
+    "beforeFix": "UI save returned 409 at the current revision; root cause was the version-zero-only INSERT source",
+    "afterFix": {
+      "uiSave": "HTTP 200 and server readback completed before screenshot",
+      "databaseReadback": "confirmed canonical version 2 and test value",
+      "restore": { "authenticatedPut": 200, "readback": 200, "logout": 204, "finalVersion": 3, "originalValueRestored": true },
+      "uiReloadAfterSave": "partial; CDP stalled during the post-save continuation",
+      "screenshot": "operacao-e2e-autenticada-390x844.png"
+    }
+  },
+  "runtime": {
+    "isolatedProfileRemoved": true,
+    "CDP": "hung after Operation screenshot; only this run's isolated Chromium process was stopped",
+    "authenticationBypass": false,
+    "personalBrowserDataAccessed": false
+  },
+  "physicalChromeAndroidApproval": "pending"
+}
