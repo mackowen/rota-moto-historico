@@ -1545,3 +1545,7 @@ Varredura de 706 arquivos Markdown em REGISTROS, RESUMOS, EVIDENCIAS e três ín
 | `T9-05` | `—` | requisito/subteste; manter vínculo com campanha | /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/PENDENCIAS.md, /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/README.md | 2 |
 | `T9-06` | `—` | requisito/subteste; manter vínculo com campanha | /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/PENDENCIAS.md, /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/README.md | 2 |
 | `T9-07` | `—` | requisito/subteste; manter vínculo com campanha | /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/PENDENCIAS.md, /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/README.md | 2 |
+
+### Adendo de execução 0304 — 2026-10-31
+
+`EVIDENCIAS/0304/logistica-origens/RESULTADO.md` acrescenta evidência para os IDs canônicos já existentes `RM-D1-LOCATION-CONSISTENCY` e `RM-D1-SETTINGS-SAVE`. Não foi criado ID canônico nem alias histórico novo; ambos permanecem PARTIAL, pois o escopo global não foi encerrado. As contagens da varredura original permanecem snapshots históricos e não foram recalculadas nesta atualização.
