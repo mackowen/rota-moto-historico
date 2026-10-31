@@ -1553,3 +1553,21 @@ Varredura de 706 arquivos Markdown em REGISTROS, RESUMOS, EVIDENCIAS e três ín
 ### Adendo de execução 0304 — Conta e segurança (2026-10-31)
 
 `EVIDENCIAS/0304/conta-seguranca/RESULTADO.md` complementa os IDs existentes `RM-0256B-ACCOUNT`, `RM-D1-MFA-STATE`, `RM-D1-SETTINGS-SAVE`, `RM-0256B-AUTH` e `RM-F-MFA-PAGE-DETACH-CLEANUP`; nenhum ID ou alias histórico foi removido. Os três primeiros permanecem PARTIAL, pois esta validação sintética não encerra os critérios globais nem substitui a aprovação física. `RM-F-MFA-PAGE-DETACH-CLEANUP` conserva o PASS anterior e recebeu regressão pós-logout/login. Contagens não recalculadas.
+
+### Adendo de rastreabilidade — publicação e Configurações restantes (2026-10-31)
+
+Esta execução não cria IDs, aliases nem fecha pendências. A evidência incremental liga os testes de contrato existentes aos IDs canônicos abaixo; o estado operacional permanece o da matriz de backlog.
+
+| ID canônico | Evidência desta execução | Escopo comprovado | Limite |
+|---|---|---|---|
+| `RM-D1-SETTINGS-SAVE` | `EVIDENCIAS/0304/configuracoes-restantes/RESULTADO.md` | Hashes servidos dos commits de Conta e segurança; testes focados de navegação e serialização | Sem ciclo autenticado por campo nas categorias restantes. |
+| `RM-0256B-SETTINGS-CARDS` | mesma evidência | Contratos de navegação e shell, assets atuais | Sem inspeção autenticada visual das categorias. |
+| `RM-0256C-TEAM-RBAC` | mesma evidência | Testes de UI/contrato de equipe, catálogo e acesso administrativo | Sem edição, readback ou reload autenticados nesta rodada. |
+| `RM-0256C-DRIVER-LINK-UI` | mesma evidência | Testes de associação/eligibilidade/filas | Sem mutação autenticada do vínculo na UI. |
+| `RM-0259-IDENTITY-INVITE-LIFECYCLE` | mesma evidência | Testes de contrato e permissões de identidade | Sem convite/aceite/revogação via Browser nesta rodada. |
+| `RM-D1-INTEGRATION-UX` | mesma evidência | Testes dos adaptadores e limites de integração | Sem conexão externa ou avaliação visual autenticada. |
+| `RM-0255-GLOBAL-UI` / `RM-0257-GLOBAL-ADMIN-E2E` | mesma evidência | Contratos de Super ADM, requisições e catálogo de permissões | Sem sessão global positiva via UI. |
+| `RM-0256E-BACKUP-RECOVERY` | mesma evidência | Auditoria/HTTP/inventário de backup | Sem execução de backup, restore ou Browser autenticado. |
+| `RM-0256D-LAB` | mesma evidência | Nenhuma validação autenticada de laboratório | Permanece sem evidência funcional de UI nesta rodada. |
+
+O harness antigo `campaign-0256-settings-e2e.cjs` falhou antes de interação por seletor `.settings-nav` obsoleto. Isso não altera estados nem a contagem histórica da matriz. O tenant Chico foi conferido em contexto RLS `READ ONLY`. A tentativa anterior do harness criou tenant somente dentro da transação de fixture; rollback confirmou zero resíduos persistentes. Nenhum banco foi criado.
