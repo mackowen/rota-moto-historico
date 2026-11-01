@@ -93,3 +93,16 @@ Os cinco arquivos estáticos verificados por aplicativo (`index.html`, `asset-ma
 - Motoboy: `82826e5` — `fix(identity): refine account security dialogs`.
 - Não houve push dos repositórios de aplicativo.
 - Hashes HTTP/local: tabela reproduzível em `TESTES.md`.
+
+## Refinamento visual compacto — 2026-11-01
+
+**PASS técnico no Browser QA autenticado sintético; aprovação visual do proprietário pendente.** A visão geral deixou de usar cartões altos e botões azuis grandes. Agora apresenta o resumo da conta, grupos compactos `Segurança` e `Empresas e acesso`, linhas inteiras clicáveis e logout separado. Os seis acionadores continuam usando os mesmos handlers e diálogos; nenhuma API, autenticação, MFA, contrato ou dado foi alterado.
+
+| Aplicativo | Altura da visão geral antes → depois em 390×844 | Redução | Layouts depois |
+|---|---:|---:|---|
+| Restaurante | 1.227 → 563 px | 54,1% | 481 px em 768×1024; 423 px em 1440×900 |
+| Motoboy | 1.267 → 580 px | 54,2% | 423 px em 768×1024; 423 px em 1440×900 |
+
+As seis ações abriram e fecharam seus painéis no QA autenticado; teclado, foco, modo claro/escuro e dimensões foram verificados nos dois apps. Não houve overflow horizontal, exceções JS nem controles escondidos. Texto auxiliar manteve contraste AA. Capturas antes/depois e metodologia: [`compactacao-2026-11-01/README.md`](compactacao-2026-11-01/README.md).
+
+`npm test`, assets, teste de identidade UI e diff-check passaram nos dois apps. HTTP 8083/8084 serve os hashes locais de JS, CSS e manifesto; nenhuma reinicialização foi necessária. Commits locais: Restaurante `adb4394`, Motoboy `cfbe8fe`; nenhum push de aplicativo. O proprietário ainda deve confirmar a densidade visual no Chrome Android; G14 permanece FAIL e Campanha 0304 aberta.

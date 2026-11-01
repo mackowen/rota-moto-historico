@@ -69,3 +69,20 @@ Hashes SHA-256 dos arquivos efetivamente servidos versus checkout:
 | Motoboy 8084 | `identity-ui.js` | `1c6bf4c48ff4595d94454d2d4b2db77597a4206d04db97261285bf690d688d2b` | 200 | MATCH |
 | Motoboy 8084 | `identity-ui.css` | `353c5ed5544c10906c2f51da0383c19f86b5935b36d678088afc2e1b65127f3b` | 200 | MATCH |
 | Motoboy 8084 | `identity-session-guard.js` | `a756dc6c863d76b955f99aa3e0c39f92ce67f372577f27b597423c8053a5faf7` | 200 | MATCH |
+
+## Refinamento visual compacto — 2026-11-01
+
+Browser QA foi repetido com sessão sintética autenticada e fixture reversível após a compactação. Todos os seis botões de linha responderam a Enter; cada painel/modal abriu e fechou, sem exceções JS. Matriz clara/escura em 390×844, 768×1024 e 1440×900 nos dois apps, sem overflow horizontal.
+
+| App/viewport | Antes (overview) | Depois (overview) | Redução em 390×844 | Altura mínima das linhas | Resultado |
+|---|---:|---:|---:|---:|---|
+| Restaurante 390×844 | 1.227 px | 563 px | 54,1% | 54 px | PASS |
+| Restaurante 768×1024 | — | 481 px | — | ≥58 px (sessão 54 px) | PASS |
+| Restaurante 1440×900 | — | 423 px | — | ≥58 px (sessão 54 px) | PASS |
+| Motoboy 390×844 | 1.267 px | 580 px | 54,2% | 54 px | PASS |
+| Motoboy 768×1024 | — | 423 px | — | ≥58 px (sessão 54 px) | PASS |
+| Motoboy 1440×900 | — | 423 px | — | ≥58 px (sessão 54 px) | PASS |
+
+Contraste computado: títulos ≥13,18:1; menor texto auxiliar 4,7588:1 em claro, mínimo acima de WCAG AA. O relatório detalhado e capturas estão em [`compactacao-2026-11-01/README.md`](compactacao-2026-11-01/README.md).
+
+Suites completas `npm test` e `assets:check`, além de `node tests/test-identity-ui.js` e `git diff --check`, passaram em Restaurante e Motoboy. Os hashes atuais de `identity-ui.js`, `identity-ui.css` e `asset-manifest.js` retornam MATCH HTTP/local em 8083 e 8084; a tabela de hashes anterior neste arquivo refere-se à revisão visual/modais anterior e foi preservada. A confirmação física no Chrome Android permanece pendente.

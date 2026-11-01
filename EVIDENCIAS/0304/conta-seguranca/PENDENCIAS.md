@@ -16,3 +16,10 @@
 - O fluxo de recuperação foi exercido pelo sink de email de teste; entrega SMTP real continua fora da validação.
 - A confirmação de senha/MFA e os diálogos de vínculo/regeneração passaram no QA sintético autenticado; os itens canônicos `RM-D1-SETTINGS-SAVE`, `RM-D1-MFA-STATE` e `RM-0256B-ACCOUNT` continuam PARTIAL por seu escopo global mais amplo.
 - Não houve escrita persistente em `rotamoto`/`rotamoto_e2e` fora da fixture rollback-only, nem migration aplicada nesta revisão.
+
+## Refinamento compacto — 2026-11-01
+
+- **Pendente do proprietário:** confirmar a compactação recém-publicada no Chrome Android físico. As capturas e medidas em `compactacao-2026-11-01/` vieram de Chromium isolado, mesmo com autenticação sintética.
+- A alteração visual não reduz nem reclassifica os IDs abrangentes `RM-0256B-ACCOUNT`, `RM-D1-MFA-STATE` ou `RM-D1-SETTINGS-SAVE`; seus critérios globais permanecem PARTIAL.
+- Sem pendências conhecidas de entrega estática: os arquivos alterados estão presentes em 8083/8084 com SHA-256 igual ao checkout.
+- G14 permanece FAIL; Campanha 0304 permanece aberta; Campanha 0305 não iniciada.
