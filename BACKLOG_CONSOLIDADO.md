@@ -457,3 +457,13 @@ Acrescenta evidência a `RM-0256B-ACCOUNT`, `RM-D1-MFA-STATE`, `RM-0256B-AUTH` e
 ### Evidência incremental — Conta e segurança compacta (2026-11-01)
 
 Adiciona evidência visual e funcional aos itens existentes sem fechar IDs nem recalcular as contagens. Visão geral compactada nos dois apps, medição sintética autenticada reduziu a altura em cerca de 54% na viewport móvel, todos os seis acionadores e painéis passaram, claro/escuro e três viewports sem overflow; HTTP 8083/8084 confere com os checkouts. Permanecem PARTIAL os IDs canônicos de Conta e MFA por seus critérios globais; aprovação física do proprietário ainda não ocorreu, G14 FAIL. Commits locais: Restaurante `adb4394`, Motoboy `cfbe8fe`. Evidência: `EVIDENCIAS/0304/conta-seguranca/compactacao-2026-11-01/README.md`.
+
+### Evidência incremental — Equipe e permissões (Campanha 0304, 2026-11-01)
+
+Implementação compacta e testes automatizados do Restaurante registrados em [`EVIDENCIAS/0304/equipe-permissoes/RESULTADO.md`](EVIDENCIAS/0304/equipe-permissoes/RESULTADO.md). O teste de componente/DTO e a regressão bilateral passaram, mas não provam operações administrativas autenticadas. Os estados dos IDs abaixo permanecem **PARTIAL** e seus critérios originais não foram reduzidos:
+
+- `RM-0256C-TEAM-RBAC`: falta UI autenticada/readback e concorrência.
+- `RM-0256C-DRIVER-LINK-UI`: falta UI autenticada para associação/revogação nesta execução.
+- `RM-0259-IDENTITY-INVITE-LIFECYCLE`: falta UI autenticada para criar/reenvio/revogação, além dos critérios de concorrência e entrega externa.
+
+Não há fechamento de P0 por inferência de `npm test` ou HTTP 200.

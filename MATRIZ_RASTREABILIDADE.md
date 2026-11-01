@@ -1571,3 +1571,13 @@ Esta execução não cria IDs, aliases nem fecha pendências. A evidência incre
 | `RM-0256D-LAB` | mesma evidência | Nenhuma validação autenticada de laboratório | Permanece sem evidência funcional de UI nesta rodada. |
 
 O harness antigo `campaign-0256-settings-e2e.cjs` falhou antes de interação por seletor `.settings-nav` obsoleto. Isso não altera estados nem a contagem histórica da matriz. O tenant Chico foi conferido em contexto RLS `READ ONLY`. A tentativa anterior do harness criou tenant somente dentro da transação de fixture; rollback confirmou zero resíduos persistentes. Nenhum banco foi criado.
+
+### Evidência incremental 0304 — Equipe e permissões (2026-11-01)
+
+| ID canônico | Evidência nova | Resultado demonstrado | Estado preservado / lacuna |
+|---|---|---|---|
+| `RM-0256C-TEAM-RBAC` | `EVIDENCIAS/0304/equipe-permissoes/` | Estrutura compacta, estados e diálogos cobertos por testes; suítes Restaurante/Motoboy aprovadas. | **PARTIAL** — operações protegidas na UI, readback autenticado e concorrência não demonstrados nesta execução. |
+| `RM-0256C-DRIVER-LINK-UI` | `EVIDENCIAS/0304/equipe-permissoes/IMPACTO-MOTOBOY.md` | Contrato e regressão de acesso/Driver passaram no Motoboy. | **PARTIAL** — sem mutação autenticada da interface de associação/revogação nesta execução. |
+| `RM-0259-IDENTITY-INVITE-LIFECYCLE` | `EVIDENCIAS/0304/equipe-permissoes/TESTES.md` | DTO de vencimento tenant-scoped e estados de UI cobertos por testes direcionados. | **PARTIAL** — ciclo completo via Browser autenticado, concorrência e email real não comprovados. |
+
+Sessão de Browser autenticada não foi disponibilizada; o CDP anônimo somente validou shell pública e não muda os estados de aceite.
