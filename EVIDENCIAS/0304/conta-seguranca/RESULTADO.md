@@ -51,3 +51,45 @@ Sem overflow horizontal ou exceções JavaScript na matriz executada. As captura
 - Restaurante: `3279c2b` — `feat(identity): complete account security flows`.
 - Motoboy: `0552668` — `feat(identity): secure account and session flows`.
 - Nenhum push foi feito nos repositórios dos aplicativos.
+
+## Revisão visual e de fluxos — 2026-11-01
+
+**Resultado desta revisão: PASS técnico no Browser QA autenticado sintético; PARTIAL para homologação visual.** Os quatro relatos do proprietário foram tratados como defeitos confirmados. A aprovação física no Chrome Android não é inferida das capturas sintéticas; G14 continua FAIL.
+
+### Causas e correções
+
+- **QR vazio antes de iniciar enrollment:** o `canvas` existia visível no markup antes de haver uma resposta autorizada de enrollment. Agora inicia oculto e só é mostrado depois da validação do segredo pendente e do URI `otpauth`; falha de renderização mantém o canvas oculto e deixa apenas a alternativa manual autorizada. Cancelar o enrollment chama o endpoint de cancelamento, limpa a chave e preserva o fator ativo.
+- **Etapas MFA misturadas e ações Cancelar duplicadas:** a confirmação de identidade, o enrollment e a apresentação dos novos códigos agora são estados exclusivos. Durante cada etapa não dispensável, o cabeçalho/rodapé genérico é recolhido e permanece uma única ação contextual segura. Escape não abandona enrollment pendente silenciosamente.
+- **Modal cortado ou com espaço residual:** o diálogo usa linhas separadas para cabeçalho, corpo rolável e rodapé; o corpo tem rolagem própria e a altura usa `dvh` e safe areas. O teste de viewport reduzido confirma que o campo focado e o rodapé continuam acessíveis. Isso simula o espaço de um teclado, não dirige o teclado físico Android.
+- **Empresas vinculadas mostradas por identificador:** a tela consulta `/api/identity/companies` com autorização de servidor e apresenta nome/estado. Com uma única empresa, explica que ela já está selecionada e oculta o seletor sem alternativa. UUID fica apenas em detalhes técnicos recolhidos.
+- **Regeneração de códigos pouco clara:** a confirmação ficou compacta e separa “Cancelar” de “Gerar novos códigos”, preservando o aviso de que os anteriores serão invalidados. Cancelar não envia POST; a geração exige confirmação e só apresenta códigos após ACK HTTP 200.
+
+### Resultado por gate desta revisão
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| Etapas MFA exclusivas e QR condicionado a enrollment válido | PASS | QA autenticado: overview/reauth sem campos futuros; enrollment renderizado após HTTP 200; cancelamento preserva o fator ativo e limpa o rascunho |
+| Rolagem interna e ações utilizáveis | PASS sintético | 390×844, 768×1024, 1440×900; viewport reduzido 390×500 com foco no campo e rodapé visível |
+| Empresa pelo nome/estado, sem seletor inútil | PASS | API autorizada HTTP 200; vínculo exibido por nome/estado; seletor oculto quando há uma empresa |
+| Confirmação de códigos sem gravação acidental | PASS | Cancelar não envia POST; confirmar grava e recebe HTTP 200 |
+| Teclado físico e aprovação no Chrome Android do proprietário | BLOCKED — aguarda proprietário | Chromium headless só simulou a redução do viewport; G14 continua FAIL |
+
+Portanto, a revisão técnica dos fluxos testados passou, mas o resultado de homologação visual permanece **PARTIAL** até a verificação física do proprietário.
+
+### Evidência visual
+
+As capturas desta revisão são de Chromium/CDP isolado, com identidade/empresa sintéticas e formulário sem valores secretos. Não contêm QR, chave TOTP nem códigos de recuperação.
+
+| Aplicativo | Visão geral | Modal | Espaço de teclado simulado |
+|---|---|---|---|
+| Restaurante | [390×844 claro](screenshots/revisao-2026-11-01/restaurante/visao-geral-390x844-claro.png) | [390×844 claro](screenshots/revisao-2026-11-01/restaurante/modal-senha-390x844-claro.png) | [390×500](screenshots/revisao-2026-11-01/restaurante/viewport-teclado-simulado-390x500.png) |
+| Motoboy | [390×844 claro](screenshots/revisao-2026-11-01/motoboy/visao-geral-390x844-claro.png) | [390×844 claro](screenshots/revisao-2026-11-01/motoboy/modal-senha-390x844-claro.png) | [390×500](screenshots/revisao-2026-11-01/motoboy/viewport-teclado-simulado-390x500.png) |
+
+### Publicação e commits
+
+Os cinco arquivos estáticos verificados por aplicativo (`index.html`, `asset-manifest.js`, `identity-ui.js`, `identity-ui.css` e `identity-session-guard.js`) retornaram HTTP 200 e SHA-256 idêntico ao checkout em 8083/8084. A readiness da API 8787 e dos proxies de ambos os frontends retornou 200; `/api/identity/companies` retorna 401 sem sessão e 200 durante o fluxo autenticado. Nenhum banco ou credencial real foi alterado nesta revisão.
+
+- Restaurante: `ecb4c76` — `fix(identity): polish account security flows`.
+- Motoboy: `82826e5` — `fix(identity): refine account security dialogs`.
+- Não houve push dos repositórios de aplicativo.
+- Hashes HTTP/local: tabela reproduzível em `TESTES.md`.
