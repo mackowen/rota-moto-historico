@@ -1,0 +1,144 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-02T23:39:53.848Z",
+  "databases": {
+    "rotamoto": {
+      "applicationRows": 0,
+      "applicationTables": 52,
+      "migrations": 68,
+      "checksum0067": "1d9930ca4c30d8a3d52da57e7b9ceff3838466875ae2c81cd304f875e08fa9ba",
+      "checksum0068": "7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3",
+      "permissions": 10,
+      "forceRlsTables": 41,
+      "rlsPolicies": 44,
+      "activePlatformAdministrators": 0,
+      "founderLatchEmpty": true,
+      "installationLatchInitial": true,
+      "applicationRowsBeforeReset": 0,
+      "applicationRowsAfterReset": 0,
+      "applicationTableCount": 52
+    },
+    "rotamoto_e2e": {
+      "applicationRows": 0,
+      "applicationTables": 52,
+      "migrations": 68,
+      "checksum0067": "1d9930ca4c30d8a3d52da57e7b9ceff3838466875ae2c81cd304f875e08fa9ba",
+      "checksum0068": "7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3",
+      "permissions": 10,
+      "forceRlsTables": 41,
+      "rlsPolicies": 44,
+      "activePlatformAdministrators": 0,
+      "founderLatchEmpty": true,
+      "installationLatchInitial": true,
+      "applicationRowsBeforeReset": 179,
+      "applicationRowsAfterReset": 0,
+      "applicationTableCount": 52
+    }
+  },
+  "api": {
+    "e2e": {
+      "status": 200,
+      "body": {
+        "state": "ready",
+        "checks": {
+          "databaseAndMigrations": true,
+          "pricingConfigurationAvailable": true,
+          "mfaKeystoreConfigured": true,
+          "invitationDeliveryConfigured": false
+        }
+      }
+    },
+    "official": {
+      "status": 200,
+      "body": {
+        "state": "ready",
+        "checks": {
+          "databaseAndMigrations": true,
+          "pricingConfigurationAvailable": true,
+          "mfaKeystoreConfigured": false,
+          "invitationDeliveryConfigured": false
+        }
+      }
+    },
+    "e2eReady": {
+      "status": 200,
+      "body": {
+        "status": "ready",
+        "service": "rotamoto-api",
+        "dependencies": {
+          "postgres": "ready"
+        }
+      }
+    },
+    "officialReady": {
+      "status": 200,
+      "body": {
+        "status": "ready",
+        "service": "rotamoto-api",
+        "dependencies": {
+          "postgres": "ready"
+        }
+      }
+    }
+  },
+  "assets": [
+    {
+      "asset": "bootstrap.html",
+      "status": 200,
+      "contentType": "text/html",
+      "sha256": "d0c2035a8549a44c77e6a334028b548153a1b8bdaddd4cd3aac7b3f0f9879b15",
+      "matchesCheckout": true,
+      "bytes": 2312
+    },
+    {
+      "asset": "bootstrap-wizard.css",
+      "status": 200,
+      "contentType": "text/css",
+      "sha256": "43e8ad7ae20c50b733d9056ee8fbe615d79390eadf78a5083903ebf6c23e8879",
+      "matchesCheckout": true,
+      "bytes": 12665
+    },
+    {
+      "asset": "bootstrap-wizard.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "sha256": "f141b084cbdb54e0ff5db1367193f9d8115a0648fc29f88532d7a0e49e62c12d",
+      "matchesCheckout": true,
+      "bytes": 32659
+    }
+  ],
+  "smtp": {
+    "e2eInvitationDeliveryConfigured": false,
+    "officialInvitationDeliveryConfigured": false,
+    "e2eMfaKeystoreConfigured": true,
+    "officialMfaKeystoreConfigured": false,
+    "finalProvisionActionBlockedUntilInvitationDeliveryConfigured": true
+  },
+  "authorizationTests": {
+    "officialPair": {
+      "sessionUser": "rotamoto_app",
+      "database": "rotamoto",
+      "status": "ready",
+      "completionGuard": "reached proof validation (SQLSTATE 22023) in rollback-only test"
+    },
+    "e2ePair": {
+      "sessionUser": "rotamoto_e2e_app",
+      "currentUser": "rotamoto_app",
+      "database": "rotamoto_e2e",
+      "status": "ready",
+      "completionGuard": "reached proof validation (SQLSTATE 22023) in rollback-only test"
+    },
+    "crossDatabasePairs": "status unavailable; completion rejected with SQLSTATE 42501",
+    "migratorRole": "status unavailable; completion rejected with SQLSTATE 42501",
+    "completedLatchWithoutFounder": "unavailable in both databases; transaction rolled back"
+  },
+  "concurrency": {
+    "bootstrapStatusHttpReads": 60,
+    "perEnvironment": 30,
+    "result": "all HTTP 200/state ready"
+  },
+  "integrity": {
+    "securityMetadataParity": "41 RLS/FORCE RLS tables and 44 policies in each; relation, column, policy, constraint and index snapshots equal",
+    "securityParitySuite": "reports one unrelated pre-existing PUBLIC EXECUTE ACL difference on the trigger-only financial immutability function; 0068 does not modify it"
+  }
+}
