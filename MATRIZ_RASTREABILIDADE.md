@@ -1590,3 +1590,13 @@ Sessão de Browser autenticada não foi disponibilizada; o CDP anônimo somente 
 | RM-0259-IDENTITY-INVITE-LIFECYCLE | mesma evidência | Criar/persistir/recarregar, reenvio, revogação, expiração, aceitação/reload/nova sessão, replay negado e rollback passaram. | PARTIAL — e-mail real e disputa concorrente entre sessões ainda não comprovados. |
 
 Os registros qa-saneamento-0304-20261031@rotamoto.invalid / QA Configurações foram identificados como fixture sintética de E2E da Campanha 0304 por evento auditado e vínculo com Chico; preservados. A identidade QA Convites criada para o cenário existiu apenas na transação rollback-only. A validação autenticada usa handlers de produção no harness, não POSTs protegidos através do processo persistente 8787; após o ensaio, o serviço foi reiniciado e readiness 200. A entrega de e-mail real permanece BLOCKED por ausência de provedor. Os estados anteriores da matriz permanecem PARTIAL; não há encerramento global nem recálculo de totais.
+
+### Evidência autenticada adicional — Configurações → Motoboys (2026-11-02)
+
+| ID canônico | Evidência | Resultado desta execução | Estado preservado / lacuna |
+|---|---|---|---|
+| `RM-0256C-DRIVER-LINK-UI` | `EVIDENCIAS/0304/configuracoes-motoboys/RESULTADO.md` | UI autenticada MFA sintética, associação e readback PostgreSQL, reload/novo login, recusas duplicada/inativa/não autorizada, leitura Motoboy e encerramento seguro com entrega terminal passaram em rollback. | **PARTIAL** no backlog amplo — corrida entre sessões independentes e confirmação visual do proprietário ainda pendentes. |
+| `RM-0256C-TEAM-RBAC` | mesma evidência | Backend negou a associação sem `company.manage`; integridade e autorização verificadas no fluxo Driver. | **PARTIAL** — não amplia nem fecha critérios de equipe, perfis ou RBAC geral. |
+| `RM-0259-IDENTITY-INVITE-LIFECYCLE` | pendências relacionadas preservadas; ver `EVIDENCIAS/0304/equipe-permissoes/CONVITES-E-MAIL-RBAC-20261102.md` | Nenhuma mudança no ciclo de convites nesta execução. | **PARTIAL** — SMTP real e concorrência de convites continuam abertos. |
+
+O teste foi executado com a única empresa E2E existente, Chico Restaurante. Todas as linhas e segredos da fixture foram revertidos; nenhum banco/empresa adicional foi criado. `rotamoto` não foi tocado. Totais históricos do backlog não foram recalculados.
