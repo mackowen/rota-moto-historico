@@ -467,3 +467,6 @@ Implementação compacta e testes automatizados do Restaurante registrados em [`
 - `RM-0259-IDENTITY-INVITE-LIFECYCLE`: falta UI autenticada para criar/reenvio/revogação, além dos critérios de concorrência e entrega externa.
 
 Não há fechamento de P0 por inferência de `npm test` ou HTTP 200.
+### Evidência corretiva — ciclo de convites e RBAC (2026-11-02)
+
+Nova prova autenticada sintética cobriu UI, handler de produção, PostgreSQL/RLS e rollback para criar/readback/reload, reenvio, revogação, expiração, aceitação, replay e perfil limitado. Atualizar a evidência dos IDs sem reduzir seus critérios globais: RM-0256C-TEAM-RBAC permanece PARTIAL (edição ampla e concorrência pendentes); RM-0256C-DRIVER-LINK-UI permanece PARTIAL (vínculo operacional Motoboy não testado); RM-0259-IDENTITY-INVITE-LIFECYCLE permanece PARTIAL (entrega SMTP real e disputa entre sessões independentes pendentes). O serviço não tem provedor de e-mail; sem provedor o handler falha fechado em 503, enquanto o sink sintético capturou mensagens sem destinatários reais. Detalhes: EVIDENCIAS/0304/equipe-permissoes/CONVITES-E-MAIL-RBAC-20261102.md. Nenhuma empresa/banco adicional e nenhuma contagem global foi recalculada.

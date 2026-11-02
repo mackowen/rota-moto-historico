@@ -1581,3 +1581,12 @@ O harness antigo `campaign-0256-settings-e2e.cjs` falhou antes de interação po
 | `RM-0259-IDENTITY-INVITE-LIFECYCLE` | `EVIDENCIAS/0304/equipe-permissoes/TESTES.md` | DTO de vencimento tenant-scoped e estados de UI cobertos por testes direcionados. | **PARTIAL** — ciclo completo via Browser autenticado, concorrência e email real não comprovados. |
 
 Sessão de Browser autenticada não foi disponibilizada; o CDP anônimo somente validou shell pública e não muda os estados de aceite.
+### Evidência autenticada adicional — Equipe, convites e permissões (2026-11-02)
+
+| ID canônico | Evidência | Resultado comprovado nesta rodada | Estado canônico |
+|---|---|---|---|
+| RM-0256C-TEAM-RBAC | EVIDENCIAS/0304/equipe-permissoes/CONVITES-E-MAIL-RBAC-20261102.md | Chromium autenticado MFA sintético em 390×844; perfil orders.read persistido/readback; escalonamento platform.admin, autorrevogação administrativa e troca a tenant não associado rejeitados. | PARTIAL — edição abrangente, isolamento cross-tenant com duas empresas e concorrência separada continuam sem prova. |
+| RM-0256C-DRIVER-LINK-UI | mesma evidência | Motoboy 8084 e contratos/identidade passaram em regressão; nenhum vínculo Driver foi alterado ou testado por UI nesta execução. | PARTIAL |
+| RM-0259-IDENTITY-INVITE-LIFECYCLE | mesma evidência | Criar/persistir/recarregar, reenvio, revogação, expiração, aceitação/reload/nova sessão, replay negado e rollback passaram. | PARTIAL — e-mail real e disputa concorrente entre sessões ainda não comprovados. |
+
+Os registros qa-saneamento-0304-20261031@rotamoto.invalid / QA Configurações foram identificados como fixture sintética de E2E da Campanha 0304 por evento auditado e vínculo com Chico; preservados. A identidade QA Convites criada para o cenário existiu apenas na transação rollback-only. A validação autenticada usa handlers de produção no harness, não POSTs protegidos através do processo persistente 8787; após o ensaio, o serviço foi reiniciado e readiness 200. A entrega de e-mail real permanece BLOCKED por ausência de provedor. Os estados anteriores da matriz permanecem PARTIAL; não há encerramento global nem recálculo de totais.
