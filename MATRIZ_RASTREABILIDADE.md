@@ -1600,3 +1600,11 @@ Os registros qa-saneamento-0304-20261031@rotamoto.invalid / QA Configurações f
 | `RM-0259-IDENTITY-INVITE-LIFECYCLE` | pendências relacionadas preservadas; ver `EVIDENCIAS/0304/equipe-permissoes/CONVITES-E-MAIL-RBAC-20261102.md` | Nenhuma mudança no ciclo de convites nesta execução. | **PARTIAL** — SMTP real e concorrência de convites continuam abertos. |
 
 O teste foi executado com a única empresa E2E existente, Chico Restaurante. Todas as linhas e segredos da fixture foram revertidos; nenhum banco/empresa adicional foi criado. `rotamoto` não foi tocado. Totais históricos do backlog não foram recalculados.
+
+### Regressão de login MFA no Restaurante — 2026-11-02
+
+| ID | Evidência | Resultado desta execução | Estado |
+|---|---|---|---|
+| RM-D1-MFA-STATE | EVIDENCIAS/0304/mfa-login-restaurante/RESULTADO.md | Login MFA sintético pela interface/API HTTP real passou; fator de uma conta administradora E2E sem arquivo cifrado permanece sem recuperação executada. | PARTIAL |
+| LEGACY-0243-MFA-LOGIN | mesma evidência | Desafio, rejeição de MFA inválido, MFA válido, sessão, reload e logout reais passaram para a fixture sintética; a conta afetada não foi acessada. | BLOCKED para autenticação do titular |
+| LEGACY-0244-OWNER-MFA | mesma evidência | Cleanup do harness corrigido para remover somente segredos criados pela própria execução; cópia do fator afetado não localizada. | BLOCKED até recuperação autorizada |
