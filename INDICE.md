@@ -444,3 +444,10 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Registro da Parte P](REGISTROS/0304.md#parte-p--identidade-vinculo-empresarial-e-permissoes-do-bootstrap-2026-10-28)
 - [Resumo da Parte P](RESUMOS/0304.md#parte-p--diagnostico-do-bootstrap)
 - [Diagnóstico, correções, gates e evidência sanitizada](EVIDENCIAS/0304/bootstrap-parte-p/README.md)
+
+
+## Campanha 0304 — execução final 2026-11-02
+
+- [Registro final 0304](REGISTROS/0304.md)
+- [Resumo final 0304](RESUMOS/0304.md)
+- [Reset, publicação e Browser QA](EVIDENCIAS/0304/bootstrap-final-2026-11-02/README.md)

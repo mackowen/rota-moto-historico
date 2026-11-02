@@ -2464,3 +2464,8 @@ Backlog histórico desde 0257 preservado. G14 FAIL; campanha 0304 aberta; 0305 n
 - `0304-T6-AUTH-QA`: BLOCKED até sessão legítima já disponível no navegador de QA; não automatizar senha/código, nem acessar o perfil Chrome pessoal.
 
 Não fechar G14, não iniciar 0305 e não rebaixar/retirar problemas históricos desde 0257.
+
+
+## Execução final 0304 — bloqueio de bootstrap E2E (2026-11-02)
+
+Após o reset, o endpoint oficial reconhece `rotamoto` como `ready`; o endpoint 8787 retorna `unavailable` no `rotamoto_e2e` vazio porque a função `platform_admin_bootstrap_status()` confere `session_user=rotamoto_app`, enquanto o serviço E2E usa `rotamoto_e2e_app`. Não foi alterada a função, papel, grant ou conexão. Corrigir esse contrato com mudança de segurança/migration aprovada é requisito antes de habilitar o proprietário a concluir a instalação no ambiente 8083. Global PASS segue bloqueado. Ver [evidência da execução](EVIDENCIAS/0304/bootstrap-final-2026-11-02/README.md).

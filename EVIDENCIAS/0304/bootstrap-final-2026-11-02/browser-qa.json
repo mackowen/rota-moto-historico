@@ -1,0 +1,285 @@
+{
+  "target": "http://127.0.0.1:8083/bootstrap.html",
+  "browser": "Chromium headless through chrome-remote-interface/CDP",
+  "result": "PARTIAL",
+  "rows": [
+    {
+      "viewport": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "actualTheme": "light",
+      "title": "Prepare o RotaMoto",
+      "headline": "Primeira instalação indisponível",
+      "content": "Primeira instalação indisponível\n\nEste ambiente já tem uma instalação, uma reserva ou dados de identidade. O assistente não pode iniciar outra instalação.\n\nVoltar ao acesso",
+      "css": [
+        "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7"
+      ],
+      "jsLoaded": true,
+      "progress": 7,
+      "inputs": 0,
+      "toggle": "Tema escuro",
+      "requestedTheme": "light",
+      "toggleWorks": true,
+      "overflow": false
+    },
+    {
+      "viewport": 768,
+      "docWidth": 753,
+      "bodyWidth": 753,
+      "actualTheme": "light",
+      "title": "Prepare o RotaMoto",
+      "headline": "Primeira instalação indisponível",
+      "content": "Primeira instalação indisponível\n\nEste ambiente já tem uma instalação, uma reserva ou dados de identidade. O assistente não pode iniciar outra instalação.\n\nVoltar ao acesso",
+      "css": [
+        "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7"
+      ],
+      "jsLoaded": true,
+      "progress": 7,
+      "inputs": 0,
+      "toggle": "Tema escuro",
+      "requestedTheme": "light",
+      "toggleWorks": true,
+      "overflow": false
+    },
+    {
+      "viewport": 1440,
+      "docWidth": 1425,
+      "bodyWidth": 1425,
+      "actualTheme": "light",
+      "title": "Prepare o RotaMoto",
+      "headline": "Primeira instalação indisponível",
+      "content": "Primeira instalação indisponível\n\nEste ambiente já tem uma instalação, uma reserva ou dados de identidade. O assistente não pode iniciar outra instalação.\n\nVoltar ao acesso",
+      "css": [
+        "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7"
+      ],
+      "jsLoaded": true,
+      "progress": 7,
+      "inputs": 0,
+      "toggle": "Tema escuro",
+      "requestedTheme": "light",
+      "toggleWorks": true,
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "actualTheme": "dark",
+      "title": "Prepare o RotaMoto",
+      "headline": "Primeira instalação indisponível",
+      "content": "Primeira instalação indisponível\n\nEste ambiente já tem uma instalação, uma reserva ou dados de identidade. O assistente não pode iniciar outra instalação.\n\nVoltar ao acesso",
+      "css": [
+        "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7"
+      ],
+      "jsLoaded": true,
+      "progress": 7,
+      "inputs": 0,
+      "toggle": "Tema claro",
+      "requestedTheme": "dark",
+      "toggleWorks": true,
+      "overflow": false
+    },
+    {
+      "viewport": 768,
+      "docWidth": 753,
+      "bodyWidth": 753,
+      "actualTheme": "dark",
+      "title": "Prepare o RotaMoto",
+      "headline": "Primeira instalação indisponível",
+      "content": "Primeira instalação indisponível\n\nEste ambiente já tem uma instalação, uma reserva ou dados de identidade. O assistente não pode iniciar outra instalação.\n\nVoltar ao acesso",
+      "css": [
+        "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7"
+      ],
+      "jsLoaded": true,
+      "progress": 7,
+      "inputs": 0,
+      "toggle": "Tema claro",
+      "requestedTheme": "dark",
+      "toggleWorks": true,
+      "overflow": false
+    },
+    {
+      "viewport": 1440,
+      "docWidth": 1425,
+      "bodyWidth": 1425,
+      "actualTheme": "dark",
+      "title": "Prepare o RotaMoto",
+      "headline": "Primeira instalação indisponível",
+      "content": "Primeira instalação indisponível\n\nEste ambiente já tem uma instalação, uma reserva ou dados de identidade. O assistente não pode iniciar outra instalação.\n\nVoltar ao acesso",
+      "css": [
+        "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7"
+      ],
+      "jsLoaded": true,
+      "progress": 7,
+      "inputs": 0,
+      "toggle": "Tema claro",
+      "requestedTheme": "dark",
+      "toggleWorks": true,
+      "overflow": false
+    }
+  ],
+  "allObservedResources200": true,
+  "events": {
+    "console": [],
+    "exceptions": [],
+    "httpErrors": [],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:8083/bootstrap.html",
+        "status": 200,
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7",
+        "status": 200,
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=2cc446987361df41",
+        "status": 200,
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:8083/health/ready",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/api/identity/bootstrap/status",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap.html",
+        "status": 200,
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7",
+        "status": 200,
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=2cc446987361df41",
+        "status": 200,
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:8083/api/identity/bootstrap/status",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/health/ready",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap.html",
+        "status": 200,
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7",
+        "status": 200,
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=2cc446987361df41",
+        "status": 200,
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:8083/health/ready",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/api/identity/bootstrap/status",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap.html",
+        "status": 200,
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7",
+        "status": 200,
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=2cc446987361df41",
+        "status": 200,
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:8083/health/ready",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/api/identity/bootstrap/status",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap.html",
+        "status": 200,
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7",
+        "status": 200,
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=2cc446987361df41",
+        "status": 200,
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:8083/health/ready",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/api/identity/bootstrap/status",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap.html",
+        "status": 200,
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=43e8ad7ae20c50b7",
+        "status": 200,
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=2cc446987361df41",
+        "status": 200,
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:8083/health/ready",
+        "status": 200,
+        "mimeType": "application/json"
+      },
+      {
+        "url": "http://127.0.0.1:8083/api/identity/bootstrap/status",
+        "status": 200,
+        "mimeType": "application/json"
+      }
+    ]
+  }
+}

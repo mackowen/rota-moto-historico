@@ -2121,3 +2121,8 @@ Distinção entre owner empresarial e administrador global esclarecida; prováve
 ## Parte P — 2026-10-28
 
 Conta da sessão E2E autenticada como owner empresarial e MFA satisfeito; grants financeiros ausentes no papel/sessão, sem alteração. Conta oficial permanece BLOCKED por falta de SELECT do auditor em RBAC tenant. Fundador global separado do bootstrap owner empresarial. Ajustados rótulos de vínculo Motoboy e avisos financeiros duplicados; testes automatizados pertinentes PASS. QA visual autenticado BLOCKED. Nenhuma escrita/migration no oficial. G14 FAIL; 0304 aberta; backlog 0257 preservado; 0305 não iniciada. [Parte P](EVIDENCIAS/0304/bootstrap-parte-p/README.md).
+
+
+## Atualização operacional 0304 — 2026-11-02
+
+Reset executado em `rotamoto` e `rotamoto_e2e`, ambos com zero dados de aplicação e schema 0067; detalhes e limites em [registro 0304](REGISTROS/0304.md). Bootstrap publicado em 8083. Readiness oficial/E2E permanece 200. Status E2E `unavailable` por incompatibilidade entre o guard SQL (`rotamoto_app`) e o papel de runtime restrito (`rotamoto_e2e_app`); segurança preservada, sem bypass. Campanha não está em PASS; G14 FAIL; 0305 não iniciada.
