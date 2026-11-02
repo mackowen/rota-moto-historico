@@ -32,4 +32,4 @@ Capturas sintéticas estão em [`capturas/`](capturas/). Não contêm sessão ou
 
 ## Git
 
-Commit local Restaurante: `6821b42efc264340009454000057eeda0aea1ea3` (`feat(bootstrap): add guarded browser first-install wizard`). Motoboy: sem alteração. Push de aplicativo: nenhum. Commit/push do histórico: preencher após publicação.
+Commit local Restaurante: `6821b42efc264340009454000057eeda0aea1ea3` (`feat(bootstrap): add guarded browser first-install wizard`). Motoboy: sem alteração. Push de aplicativo: nenhum. Commit documental do histórico `a903afc370dc3f18a4f9ea58422d7778b9a8af27` publicado por fast-forward; `git ls-remote` confirmou o mesmo SHA na branch `codex/campaign-0304-config-restaurante`.
