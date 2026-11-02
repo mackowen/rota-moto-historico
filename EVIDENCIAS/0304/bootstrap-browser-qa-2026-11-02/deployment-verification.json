@@ -139,6 +139,6 @@
   },
   "integrity": {
     "securityMetadataParity": "41 RLS/FORCE RLS tables and 44 policies in each; relation, column, policy, constraint and index snapshots equal",
-    "securityParitySuite": "reports one unrelated pre-existing PUBLIC EXECUTE ACL difference on the trigger-only financial immutability function; 0068 does not modify it"
+    "securityParitySuite": "PASS; strict parity across schemas/ledgers with one explicit unchanged trigger-only ACL difference documented and tested"
   }
 }
