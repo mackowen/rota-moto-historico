@@ -1,0 +1,214 @@
+{
+  "result": "PASS",
+  "url": "http://127.0.0.1:8083/bootstrap.html",
+  "flow": "status/readiness, published JS/CSS, complete local-only wizard navigation with synthetic .invalid form values; final submission remained disabled; no provisioning POST",
+  "bootstrap": {
+    "state": "ready",
+    "checks": {
+      "databaseAndMigrations": true,
+      "pricingConfigurationAvailable": true,
+      "mfaKeystoreConfigured": true,
+      "invitationDeliveryConfigured": false
+    }
+  },
+  "health": {
+    "status": "ready",
+    "service": "rotamoto-api",
+    "dependencies": {
+      "postgres": "ready"
+    }
+  },
+  "page": {
+    "title": "Primeira instalação · RotaMoto",
+    "heading": "Prepare o RotaMoto",
+    "initialStep": "Diagnóstico · Etapa 1 de 7"
+  },
+  "assets": [
+    {
+      "url": "/design-system.css",
+      "status": 200,
+      "bytes": 32932
+    },
+    {
+      "url": "/bootstrap-wizard.css",
+      "status": 200,
+      "bytes": 12665
+    },
+    {
+      "url": "/bootstrap-wizard.js",
+      "status": 200,
+      "bytes": 32659
+    }
+  ],
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "overflow": false,
+      "card": {
+        "x": 12,
+        "width": 366
+      },
+      "formMessage": true,
+      "screenshot": "bootstrap-light-390.png"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "viewportWidth": 768,
+      "overflow": false,
+      "card": {
+        "x": 14,
+        "width": 725
+      },
+      "formMessage": true,
+      "screenshot": "bootstrap-light-768.png"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "card": {
+        "x": 253,
+        "width": 920
+      },
+      "formMessage": true,
+      "screenshot": "bootstrap-light-1440.png"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "overflow": false,
+      "card": {
+        "x": 12,
+        "width": 366
+      },
+      "formMessage": true,
+      "screenshot": "bootstrap-dark-390.png"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "viewportWidth": 768,
+      "overflow": false,
+      "card": {
+        "x": 14,
+        "width": 725
+      },
+      "formMessage": true,
+      "screenshot": "bootstrap-dark-768.png"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "overflow": false,
+      "card": {
+        "x": 253,
+        "width": 920
+      },
+      "formMessage": true,
+      "screenshot": "bootstrap-dark-1440.png"
+    }
+  ],
+  "formViewports": [
+    {
+      "theme": "light",
+      "width": 390,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "cardWidth": 336,
+      "heading": "Administrador fundador",
+      "visibleEmail": true,
+      "screenshot": "bootstrap-form-light-390.png"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "overflow": false,
+      "cardWidth": 669,
+      "heading": "Administrador fundador",
+      "visibleEmail": true,
+      "screenshot": "bootstrap-form-light-768.png"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "cardWidth": 846,
+      "heading": "Administrador fundador",
+      "visibleEmail": true,
+      "screenshot": "bootstrap-form-light-1440.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "cardWidth": 336,
+      "heading": "Administrador fundador",
+      "visibleEmail": true,
+      "screenshot": "bootstrap-form-dark-390.png"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "overflow": false,
+      "cardWidth": 669,
+      "heading": "Administrador fundador",
+      "visibleEmail": true,
+      "screenshot": "bootstrap-form-dark-768.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "cardWidth": 846,
+      "heading": "Administrador fundador",
+      "visibleEmail": true,
+      "screenshot": "bootstrap-form-dark-1440.png"
+    }
+  ],
+  "formStep": {
+    "heading": "Administrador fundador",
+    "hasEmail": true,
+    "hasAuthorization": true,
+    "continueEnabled": true,
+    "query": "/bootstrap.html"
+  },
+  "finalGate": {
+    "step": "Finalização · Etapa 7 de 7",
+    "heading": "Pronto para iniciar",
+    "submitDisabled": true,
+    "deliveryPending": true,
+    "state": "ready"
+  },
+  "provisionPosts": [],
+  "consoleErrors": [],
+  "httpErrors": []
+}
