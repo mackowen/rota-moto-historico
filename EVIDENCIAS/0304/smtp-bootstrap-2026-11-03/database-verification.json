@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-11-03",
+  "databases": {
+    "rotamoto": {
+      "application": "restaurante oficial",
+      "latestMigration": "0069_bootstrap_smtp_test_replay",
+      "checksums": {
+        "0067": "1d9930ca4c30d8a3d52da57e7b9ceff3838466875ae2c81cd304f875e08fa9ba",
+        "0068": "7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3",
+        "0069": "256ce3ced9a52d267ffe2ce85ea2bbac5b038c5abdae23f1a7f8deccf4f6a871"
+      },
+      "companies": 0,
+      "users": 0,
+      "activePlatformAdministrators": 0,
+      "founderLatchEmpty": true,
+      "installationLatchUnclaimed": true,
+      "smtpTestAttemptRowsAfterTests": 0,
+      "permissionCatalogRows": 10,
+      "smtpAttemptTablesRlsAndForceRls": true,
+      "directAppReadOfAttemptTables": false,
+      "authorizedFunctionGrantedToOfficialApp": true,
+      "authorizedFunctionGrantedToE2eApp": false,
+      "bootstrapApiState": "ready",
+      "invitationDeliveryConfigured": false
+    },
+    "rotamoto_e2e": {
+      "application": "E2E",
+      "latestMigration": "0069_bootstrap_smtp_test_replay",
+      "checksums": {
+        "0067": "1d9930ca4c30d8a3d52da57e7b9ceff3838466875ae2c81cd304f875e08fa9ba",
+        "0068": "7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3",
+        "0069": "256ce3ced9a52d267ffe2ce85ea2bbac5b038c5abdae23f1a7f8deccf4f6a871"
+      },
+      "companies": 0,
+      "users": 0,
+      "activePlatformAdministrators": 0,
+      "founderLatchEmpty": true,
+      "installationLatchUnclaimed": true,
+      "smtpTestAttemptRowsAfterTests": 0,
+      "permissionCatalogRows": 10,
+      "smtpAttemptTablesRlsAndForceRls": true,
+      "directE2eAppReadOfAttemptTables": false,
+      "officialSmtpAuthorityAccepted": false,
+      "bootstrapApiState": "ready",
+      "invitationDeliveryConfigured": false
+    }
+  },
+  "services": {
+    "officialApi8788": "ready",
+    "e2eApi8787": "ready",
+    "bootstrapHtml8083": "HTTP 200, exact installer HTML",
+    "smtpRouteOfficialAnonymous": "HTTP 403",
+    "smtpRouteE2e": "HTTP 404"
+  },
+  "privacy": "No SMTP username, mailbox address, password, invitation token, founder data, or message body copied into this evidence."
+}

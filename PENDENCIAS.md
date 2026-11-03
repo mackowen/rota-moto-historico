@@ -2469,3 +2469,12 @@ Não fechar G14, não iniciar 0305 e não rebaixar/retirar problemas históricos
 ## Execução final 0304 — bloqueio de bootstrap E2E (2026-11-02)
 
 Após o reset, o endpoint oficial reconhece `rotamoto` como `ready`; o endpoint 8787 retorna `unavailable` no `rotamoto_e2e` vazio porque a função `platform_admin_bootstrap_status()` confere `session_user=rotamoto_app`, enquanto o serviço E2E usa `rotamoto_e2e_app`. Não foi alterada a função, papel, grant ou conexão. Corrigir esse contrato com mudança de segurança/migration aprovada é requisito antes de habilitar o proprietário a concluir a instalação no ambiente 8083. Global PASS segue bloqueado. Ver [evidência da execução](EVIDENCIAS/0304/bootstrap-final-2026-11-02/README.md).
+
+
+## Bootstrap SMTP — primeiro uso (2026-11-03)
+
+- [ ] Informar a URL HTTPS pública correta que os titulares usarão para abrir convites.
+- [ ] No Bootstrap 8083, revisar os dados reais de instalação, manter a credencial protegida Gmail existente e pressionar **Testar e-mail**; conferir a mensagem na caixa do remetente. O servidor SMTP só confirma aceitação, não entrega final.
+- [ ] Após o transporte ficar pronto, revisar e avançar para os controles existentes de fundador/MFA sem iniciar instalação até o proprietário decidir.
+
+A credencial Gmail existente foi autenticada e o servidor aceitou uma mensagem de teste ao remetente configurado. Nenhum valor sensível está registrado. Ver `EVIDENCIAS/0304/smtp-bootstrap-2026-11-03/README.md`. G14 e backlog anteriores sem alteração; 0304 aberta; 0305 não iniciada.

@@ -1,0 +1,175 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-03T00:30:05.848Z",
+  "url": "http://127.0.0.1:8083/bootstrap.html",
+  "initial": {
+    "title": "Primeira instalação · RotaMoto",
+    "html": true,
+    "status": {
+      "state": "ready",
+      "checks": {
+        "databaseAndMigrations": true,
+        "pricingConfigurationAvailable": true,
+        "mfaKeystoreConfigured": true,
+        "invitationDeliveryConfigured": false
+      }
+    },
+    "health": {
+      "status": "ready",
+      "service": "rotamoto-api",
+      "dependencies": {
+        "postgres": "ready"
+      },
+      "time": "2026-11-03T00:30:00.798Z",
+      "requestId": "57f5006c-845c-4c28-9a6a-2f26270103db"
+    },
+    "assets": [
+      {
+        "url": "http://127.0.0.1:8083/design-system.css?v=3cf184ae73a556ff",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.css?v=4079d49e957949ee",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=331aa3b6abd3c449",
+        "status": 200
+      }
+    ]
+  },
+  "step": "E-mail e notificações",
+  "viewports": [
+    {
+      "theme": "light",
+      "width": 390,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "cardWidth": 366,
+      "heading": "E-mail e notificações",
+      "provider": true,
+      "testButton": true,
+      "reuseAvailable": true,
+      "recipientPrefilled": true,
+      "passwordDisabled": true,
+      "continueDisabled": true,
+      "passwordStoredInSession": false,
+      "screenshot": "smtp-light-390.png"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "overflow": false,
+      "cardWidth": 725,
+      "heading": "E-mail e notificações",
+      "provider": true,
+      "testButton": true,
+      "reuseAvailable": true,
+      "recipientPrefilled": true,
+      "passwordDisabled": true,
+      "continueDisabled": true,
+      "passwordStoredInSession": false,
+      "screenshot": "smtp-light-768.png"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "cardWidth": 920,
+      "heading": "E-mail e notificações",
+      "provider": true,
+      "testButton": true,
+      "reuseAvailable": true,
+      "recipientPrefilled": true,
+      "passwordDisabled": true,
+      "continueDisabled": true,
+      "passwordStoredInSession": false,
+      "screenshot": "smtp-light-1440.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "overflow": false,
+      "cardWidth": 366,
+      "heading": "E-mail e notificações",
+      "provider": true,
+      "testButton": true,
+      "reuseAvailable": true,
+      "recipientPrefilled": true,
+      "passwordDisabled": true,
+      "continueDisabled": true,
+      "passwordStoredInSession": false,
+      "screenshot": "smtp-dark-390.png"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "overflow": false,
+      "cardWidth": 725,
+      "heading": "E-mail e notificações",
+      "provider": true,
+      "testButton": true,
+      "reuseAvailable": true,
+      "recipientPrefilled": true,
+      "passwordDisabled": true,
+      "continueDisabled": true,
+      "passwordStoredInSession": false,
+      "screenshot": "smtp-dark-768.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "cardWidth": 920,
+      "heading": "E-mail e notificações",
+      "provider": true,
+      "testButton": true,
+      "reuseAvailable": true,
+      "recipientPrefilled": true,
+      "passwordDisabled": true,
+      "continueDisabled": true,
+      "passwordStoredInSession": false,
+      "screenshot": "smtp-dark-1440.png"
+    }
+  ],
+  "blocked": {
+    "disabled": true,
+    "requestMade": false,
+    "heading": "E-mail e notificações",
+    "providerOptions": [
+      "gmail",
+      "microsoft365",
+      "custom"
+    ],
+    "oauthDisabled": true,
+    "reuseAvailable": true,
+    "recipientPrefilled": true,
+    "passwordDisabled": true,
+    "recipient": true,
+    "httpsInvitation": true
+  },
+  "consoleErrors": [],
+  "httpErrors": [],
+  "externalSend": "not attempted: no authorized test recipient and public invitation URL provided; no external message sent",
+  "syntheticData": "only browser-memory QA values using .invalid domains; no provisioning POST",
+  "browserExternalSend": "No external SMTP request was made by the browser runner.",
+  "separateAuthorizedExternalSmtpTest": {
+    "connection": "verified",
+    "authentication": "accepted",
+    "smtpSubmission": "accepted_by_smtp",
+    "delivery": "unconfirmed",
+    "destination": "existing configured sender mailbox"
+  },
+  "smtpStatusFixture": "Protected Bootstrap status was fulfilled locally in CDP with synthetic .invalid metadata; SMTP credentials were not exposed or submitted by browser QA."
+}
