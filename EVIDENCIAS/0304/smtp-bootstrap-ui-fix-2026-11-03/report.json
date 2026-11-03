@@ -1,0 +1,280 @@
+{
+  "result": "PASS",
+  "url": "http://127.0.0.1:8083/bootstrap.html",
+  "initial": {
+    "status": {
+      "state": "ready",
+      "checks": {
+        "databaseAndMigrations": true,
+        "pricingConfigurationAvailable": true,
+        "mfaKeystoreConfigured": true,
+        "smtpTransportConfigured": false,
+        "invitationDeliveryConfigured": false,
+        "localOnlyBootstrapAvailable": true
+      }
+    },
+    "health": {
+      "status": "ready",
+      "service": "rotamoto-api",
+      "dependencies": {
+        "postgres": "ready"
+      },
+      "time": "2026-11-03T04:11:17.345Z",
+      "requestId": "99605418-ddca-421a-bac2-f2305c972101"
+    },
+    "assets": [
+      200,
+      200,
+      200
+    ]
+  },
+  "checks": {
+    "originError": {
+      "password": "synthetic-password-not-real",
+      "passwordAttr": "",
+      "host": "smtp.example.test",
+      "recipient": "qa-recipient@example.invalid",
+      "status": "A origem local foi rejeitada. Abra o Bootstrap em http://127.0.0.1:8083/bootstrap.html e tente novamente.",
+      "kind": "error",
+      "validateDisabled": false,
+      "testDisabled": false,
+      "storageHasSecret": false,
+      "htmlHasSecret": false
+    },
+    "validateSuccess": {
+      "password": "synthetic-password-not-real",
+      "passwordAttr": "",
+      "host": "smtp.example.test",
+      "recipient": "qa-recipient@example.invalid",
+      "status": "Parâmetros válidos para smtp.example.test:587 com STARTTLS. Formato e resolução segura do host passaram; não houve autenticação nem envio.",
+      "kind": "success",
+      "validateDisabled": false,
+      "testDisabled": false,
+      "storageHasSecret": false,
+      "htmlHasSecret": false
+    },
+    "authFailure": {
+      "password": "synthetic-password-not-real",
+      "passwordAttr": "",
+      "host": "smtp.example.test",
+      "recipient": "qa-recipient@example.invalid",
+      "status": "O provedor recusou a autenticação. Confira usuário e senha SMTP; no Gmail, use uma senha de app.",
+      "kind": "error",
+      "validateDisabled": false,
+      "testDisabled": false,
+      "storageHasSecret": false,
+      "htmlHasSecret": false
+    },
+    "timeoutFailure": {
+      "password": "synthetic-password-not-real",
+      "passwordAttr": "",
+      "host": "smtp.example.test",
+      "recipient": "qa-recipient@example.invalid",
+      "status": "O servidor SMTP não respondeu no tempo limite. Confira a rede e tente novamente.",
+      "kind": "error",
+      "validateDisabled": false,
+      "testDisabled": false,
+      "storageHasSecret": false,
+      "htmlHasSecret": false
+    },
+    "accepted": {
+      "password": "",
+      "passwordAttr": "",
+      "host": "smtp.example.test",
+      "recipient": "qa-recipient@example.invalid",
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "kind": "success",
+      "validateDisabled": false,
+      "testDisabled": false,
+      "storageHasSecret": false,
+      "htmlHasSecret": false
+    }
+  },
+  "mockedRequests": [
+    {
+      "path": "/api/identity/bootstrap/smtp/validate",
+      "method": "POST",
+      "hasPassword": true,
+      "hasRecipient": true,
+      "origin": "http://127.0.0.1:8083",
+      "containsCredential": true
+    },
+    {
+      "path": "/api/identity/bootstrap/smtp/validate",
+      "method": "POST",
+      "hasPassword": true,
+      "hasRecipient": true,
+      "origin": "http://127.0.0.1:8083",
+      "containsCredential": true
+    },
+    {
+      "path": "/api/identity/bootstrap/smtp/test",
+      "method": "POST",
+      "hasPassword": true,
+      "hasRecipient": true,
+      "origin": "http://127.0.0.1:8083",
+      "containsCredential": true
+    },
+    {
+      "path": "/api/identity/bootstrap/smtp/test",
+      "method": "POST",
+      "hasPassword": true,
+      "hasRecipient": true,
+      "origin": "http://127.0.0.1:8083",
+      "containsCredential": true
+    },
+    {
+      "path": "/api/identity/bootstrap/smtp/test",
+      "method": "POST",
+      "hasPassword": true,
+      "hasRecipient": true,
+      "origin": "http://127.0.0.1:8083",
+      "containsCredential": true
+    }
+  ],
+  "screenshots": [
+    {
+      "theme": "light",
+      "width": 390,
+      "height": 844,
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "cardWidth": 366,
+      "step": "E-mail e notificações",
+      "buttons": [
+        {
+          "text": "Validar parâmetros",
+          "disabled": false
+        },
+        {
+          "text": "Testar e-mail",
+          "disabled": false
+        }
+      ],
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "secretInHtml": false,
+      "file": "smtp-light-390x844.png"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "height": 1024,
+      "viewportWidth": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "cardWidth": 725,
+      "step": "E-mail e notificações",
+      "buttons": [
+        {
+          "text": "Validar parâmetros",
+          "disabled": false
+        },
+        {
+          "text": "Testar e-mail",
+          "disabled": false
+        }
+      ],
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "secretInHtml": false,
+      "file": "smtp-light-768x1024.png"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "height": 900,
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "cardWidth": 920,
+      "step": "E-mail e notificações",
+      "buttons": [
+        {
+          "text": "Validar parâmetros",
+          "disabled": false
+        },
+        {
+          "text": "Testar e-mail",
+          "disabled": false
+        }
+      ],
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "secretInHtml": false,
+      "file": "smtp-light-1440x900.png"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "cardWidth": 366,
+      "step": "E-mail e notificações",
+      "buttons": [
+        {
+          "text": "Validar parâmetros",
+          "disabled": false
+        },
+        {
+          "text": "Testar e-mail",
+          "disabled": false
+        }
+      ],
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "secretInHtml": false,
+      "file": "smtp-dark-390x844.png"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "height": 1024,
+      "viewportWidth": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "cardWidth": 725,
+      "step": "E-mail e notificações",
+      "buttons": [
+        {
+          "text": "Validar parâmetros",
+          "disabled": false
+        },
+        {
+          "text": "Testar e-mail",
+          "disabled": false
+        }
+      ],
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "secretInHtml": false,
+      "file": "smtp-dark-768x1024.png"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "height": 900,
+      "viewportWidth": 1440,
+      "scrollWidth": 1425,
+      "overflow": false,
+      "cardWidth": 920,
+      "step": "E-mail e notificações",
+      "buttons": [
+        {
+          "text": "Validar parâmetros",
+          "disabled": false
+        },
+        {
+          "text": "Testar e-mail",
+          "disabled": false
+        }
+      ],
+      "status": "Servidor SMTP aceitou a mensagem; entrega não confirmada.",
+      "secretInHtml": false,
+      "file": "smtp-dark-1440x900.png"
+    }
+  ],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "externalEmailSent": false,
+  "installationCompleted": false,
+  "notes": "SMTP validate/test routes were intercepted in Chromium and answered with synthetic fixtures; no SMTP connection, message send, or founder provision occurred."
+}
