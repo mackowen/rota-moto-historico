@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-11-03",
+  "classification": "PARTIAL",
+  "reason": "Local installation path and disposable full-flow validation passed; owner has not completed installation with real data. External invitation links require a public HTTPS URL.",
+  "operationalDatabases": {
+    "rotamoto": {
+      "purpose": "official",
+      "migrationLedger": ["0067", "0068", "0069", "0070"],
+      "0067Checksum": "1d9930ca4c30d8a3d52da57e7b9ceff3838466875ae2c81cd304f875e08fa9ba",
+      "0068Checksum": "7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3",
+      "0069Checksum": "256ce3ced9a52d267ffe2ce85ea2bbac5b038c5abdae23f1a7f8deccf4f6a871",
+      "0070Checksum": "7ca26baeb2fc82966d2cc0ae0318ccc7696a5a37bc3bf0963e15f5396609b22d",
+      "companies": 0,
+      "users": 0,
+      "activeFounderGrants": 0,
+      "founderLatchClaimed": false,
+      "installationLatchClaimed": false,
+      "permissionCatalogRows": 10,
+      "rlsAndForceRlsPreserved": true,
+      "smtpTransportConfigured": false,
+      "externalInvitationDeliveryConfigured": false,
+      "bootstrapState": "ready",
+      "localOnlyAvailable": true
+    },
+    "rotamoto_e2e": {
+      "purpose": "E2E",
+      "migrationLedger": ["0067", "0068", "0069", "0070"],
+      "0067Checksum": "1d9930ca4c30d8a3d52da57e7b9ceff3838466875ae2c81cd304f875e08fa9ba",
+      "0068Checksum": "7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3",
+      "0069Checksum": "256ce3ced9a52d267ffe2ce85ea2bbac5b038c5abdae23f1a7f8deccf4f6a871",
+      "0070Checksum": "7ca26baeb2fc82966d2cc0ae0318ccc7696a5a37bc3bf0963e15f5396609b22d",
+      "companies": 0,
+      "users": 0,
+      "activeFounderGrants": 0,
+      "founderLatchClaimed": false,
+      "installationLatchClaimed": false,
+      "permissionCatalogRows": 10,
+      "rlsAndForceRlsPreserved": true,
+      "smtpTransportConfigured": false,
+      "externalInvitationDeliveryConfigured": false,
+      "bootstrapState": "ready",
+      "localOnlyAvailable": false
+    }
+  },
+  "runtime": {
+    "nginxListener": "127.0.0.1:8083",
+    "restaurantDocumentRoot": "~/projetos/repos/rota-moto-restaurante",
+    "officialApi": "127.0.0.1:8788",
+    "e2eApi": "127.0.0.1:8787",
+    "bootstrapHtml": 200,
+    "bootstrapCss": 200,
+    "bootstrapJs": 200,
+    "officialStatus": 200,
+    "officialReadiness": 200,
+    "e2eStatus": 200,
+    "e2eReadiness": 200
+  },
+  "security": {
+    "localOnlyOfficialExactDatabase": true,
+    "localOnlyPeerSocketLoopbackRequired": true,
+    "localHostOrOriginRequired": true,
+    "forwardedHeadersTrusted": false,
+    "e2eLocalOnlyAllowed": false,
+    "smtpTransportIndependentFromPublicInvitationUrl": true,
+    "externalInvitationsWithoutPublicHttps": false,
+    "mfaRequiredForFounderGrant": true,
+    "operationalInstallationCompleted": false,
+    "disposableClusterDiscarded": true
+  },
+  "browserQa": {
+    "browser": "Chromium via CDP",
+    "url": "http://127.0.0.1:8083/bootstrap.html",
+    "themes": ["light", "dark"],
+    "widths": [390, 768, 1440],
+    "combinationsPassed": 6,
+    "overflow": false,
+    "consoleErrors": 0,
+    "httpErrors": 0,
+    "provisionRequests": 0,
+    "installationCompleted": false,
+    "screenshots": [
+      "smtp-light-390.png", "smtp-light-768.png", "smtp-light-1440.png",
+      "smtp-dark-390.png", "smtp-dark-768.png", "smtp-dark-1440.png"
+    ]
+  },
+  "localApplicationCommit": "4585a60a21ac57ee8613ac5c8339a15c41036d69",
+  "secretsIncluded": false
+}

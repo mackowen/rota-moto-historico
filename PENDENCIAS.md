@@ -2478,3 +2478,10 @@ Após o reset, o endpoint oficial reconhece `rotamoto` como `ready`; o endpoint 
 - [ ] Após o transporte ficar pronto, revisar e avançar para os controles existentes de fundador/MFA sem iniciar instalação até o proprietário decidir.
 
 A credencial Gmail existente foi autenticada e o servidor aceitou uma mensagem de teste ao remetente configurado. Nenhum valor sensível está registrado. Ver `EVIDENCIAS/0304/smtp-bootstrap-2026-11-03/README.md`. G14 e backlog anteriores sem alteração; 0304 aberta; 0305 não iniciada.
+
+### Instalação local — atualização 2026-11-03
+
+- [ ] Proprietário preencher dados reais e concluir a primeira instalação pelo navegador local, seguindo senha e MFA obrigatórios. Nenhuma conta/empresa foi criada durante os testes.
+- [ ] Para convites com links externos, definir futuramente uma URL HTTPS pública e testar o envio; SMTP pode ser persistido/testado antes disso, mas envio de convites permanece bloqueado enquanto os links forem locais/inacessíveis.
+
+Modo `local-only` já pode iniciar a primeira instalação pelo loopback, sem domínio público. Sintético integral passou apenas em PostgreSQL descartável. Evidências em `EVIDENCIAS/0304/smtp-bootstrap-2026-11-03/README.md`. G14, demais pendências e Campanha 0304 seguem abertos; 0305 não iniciada.

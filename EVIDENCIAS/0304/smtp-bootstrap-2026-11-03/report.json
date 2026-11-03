@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "testedAt": "2026-11-03T00:30:05.848Z",
+  "testedAt": "2026-11-03T00:51:20.357Z",
   "url": "http://127.0.0.1:8083/bootstrap.html",
   "initial": {
     "title": "Primeira instalação · RotaMoto",
@@ -11,7 +11,9 @@
         "databaseAndMigrations": true,
         "pricingConfigurationAvailable": true,
         "mfaKeystoreConfigured": true,
-        "invitationDeliveryConfigured": false
+        "smtpTransportConfigured": false,
+        "invitationDeliveryConfigured": false,
+        "localOnlyBootstrapAvailable": true
       }
     },
     "health": {
@@ -20,8 +22,8 @@
       "dependencies": {
         "postgres": "ready"
       },
-      "time": "2026-11-03T00:30:00.798Z",
-      "requestId": "57f5006c-845c-4c28-9a6a-2f26270103db"
+      "time": "2026-11-03T00:51:18.624Z",
+      "requestId": "c7f47c85-3a02-4c3c-8ac4-ac7f3d5080db"
     },
     "assets": [
       {
@@ -33,7 +35,7 @@
         "status": 200
       },
       {
-        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=331aa3b6abd3c449",
+        "url": "http://127.0.0.1:8083/bootstrap-wizard.js?v=284d1dc90fa7d512",
         "status": 200
       }
     ]
@@ -53,7 +55,9 @@
       "reuseAvailable": true,
       "recipientPrefilled": true,
       "passwordDisabled": true,
-      "continueDisabled": true,
+      "continueDisabled": false,
+      "localOnlySelected": true,
+      "publicUrlOptional": true,
       "passwordStoredInSession": false,
       "screenshot": "smtp-light-390.png"
     },
@@ -70,7 +74,9 @@
       "reuseAvailable": true,
       "recipientPrefilled": true,
       "passwordDisabled": true,
-      "continueDisabled": true,
+      "continueDisabled": false,
+      "localOnlySelected": true,
+      "publicUrlOptional": true,
       "passwordStoredInSession": false,
       "screenshot": "smtp-light-768.png"
     },
@@ -87,7 +93,9 @@
       "reuseAvailable": true,
       "recipientPrefilled": true,
       "passwordDisabled": true,
-      "continueDisabled": true,
+      "continueDisabled": false,
+      "localOnlySelected": true,
+      "publicUrlOptional": true,
       "passwordStoredInSession": false,
       "screenshot": "smtp-light-1440.png"
     },
@@ -104,7 +112,9 @@
       "reuseAvailable": true,
       "recipientPrefilled": true,
       "passwordDisabled": true,
-      "continueDisabled": true,
+      "continueDisabled": false,
+      "localOnlySelected": true,
+      "publicUrlOptional": true,
       "passwordStoredInSession": false,
       "screenshot": "smtp-dark-390.png"
     },
@@ -121,7 +131,9 @@
       "reuseAvailable": true,
       "recipientPrefilled": true,
       "passwordDisabled": true,
-      "continueDisabled": true,
+      "continueDisabled": false,
+      "localOnlySelected": true,
+      "publicUrlOptional": true,
       "passwordStoredInSession": false,
       "screenshot": "smtp-dark-768.png"
     },
@@ -138,13 +150,18 @@
       "reuseAvailable": true,
       "recipientPrefilled": true,
       "passwordDisabled": true,
-      "continueDisabled": true,
+      "continueDisabled": false,
+      "localOnlySelected": true,
+      "publicUrlOptional": true,
       "passwordStoredInSession": false,
       "screenshot": "smtp-dark-1440.png"
     }
   ],
   "blocked": {
-    "disabled": true,
+    "disabled": false,
+    "localOnlySelected": true,
+    "localOnlyAvailable": true,
+    "publicUrlOptional": true,
     "requestMade": false,
     "heading": "E-mail e notificações",
     "providerOptions": [
@@ -161,15 +178,7 @@
   },
   "consoleErrors": [],
   "httpErrors": [],
+  "protectedOperationPosts": [],
   "externalSend": "not attempted: no authorized test recipient and public invitation URL provided; no external message sent",
-  "syntheticData": "only browser-memory QA values using .invalid domains; no provisioning POST",
-  "browserExternalSend": "No external SMTP request was made by the browser runner.",
-  "separateAuthorizedExternalSmtpTest": {
-    "connection": "verified",
-    "authentication": "accepted",
-    "smtpSubmission": "accepted_by_smtp",
-    "delivery": "unconfirmed",
-    "destination": "existing configured sender mailbox"
-  },
-  "smtpStatusFixture": "Protected Bootstrap status was fulfilled locally in CDP with synthetic .invalid metadata; SMTP credentials were not exposed or submitted by browser QA."
+  "syntheticData": "only .invalid synthetic metadata in browser memory; SMTP/provision endpoints were not called; installation was not completed"
 }
