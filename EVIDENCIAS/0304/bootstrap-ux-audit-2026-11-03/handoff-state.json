@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-03T01:46:34.748Z",
+  "scenario": "synthetic browser-only local handoff; provision endpoint intercepted by CDP before backend",
+  "data": {
+    "heading": "Instalação local preparada",
+    "linkPath": "/",
+    "linkSameOrigin": true,
+    "activationAction": true,
+    "tokenLength": 43,
+    "orientation": true,
+    "message": "Cadastro inicial registrado.",
+    "scrollWidth": 390,
+    "viewportWidth": 390,
+    "tokenRedacted": true
+  },
+  "databaseWrite": false,
+  "externalMessage": false,
+  "screenshot": "08-owner-handoff-390-light.png"
+}

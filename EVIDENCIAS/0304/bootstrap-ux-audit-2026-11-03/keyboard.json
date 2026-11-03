@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "tool": "Chromium/CDP",
+  "input": "Tab key repeated through visible focus order",
+  "viewport": {
+    "width": 320,
+    "height": 720
+  },
+  "focusTarget": "Continuar button",
+  "focusVisible": true,
+  "keyboardActivation": "not verified",
+  "pointerFlow": "Browser QA advanced through stages using the visible primary button",
+  "note": "Headless CDP does not display the Android virtual keyboard; physical Chrome Android validation pending."
+}

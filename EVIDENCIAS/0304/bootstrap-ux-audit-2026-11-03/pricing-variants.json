@@ -1,0 +1,565 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-03T01:46:29.114Z",
+  "variant": "range pricing with two ranges and percentage payout; synthetic form state only; no submit/write",
+  "results": [
+    {
+      "device": "phone-compact",
+      "width": 320,
+      "height": 720,
+      "theme": "light",
+      "documentWidth": 320,
+      "viewportWidth": 320,
+      "controls": [
+        {
+          "name": "pricingModel",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "minFee",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repasseMode",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repassePercent",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        }
+      ],
+      "rangeRows": 2,
+      "repasse": "85",
+      "screenshot": "05-logistics-range-phone-compact-light.png"
+    },
+    {
+      "device": "phone-compact",
+      "width": 320,
+      "height": 720,
+      "theme": "dark",
+      "documentWidth": 320,
+      "viewportWidth": 320,
+      "controls": [
+        {
+          "name": "pricingModel",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "minFee",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 41,
+          "right": 279,
+          "width": 238,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repasseMode",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repassePercent",
+          "x": 27,
+          "right": 293,
+          "width": 266,
+          "height": 44,
+          "inside": true
+        }
+      ],
+      "rangeRows": 2,
+      "repasse": "85",
+      "screenshot": "05-logistics-range-phone-compact-dark.png"
+    },
+    {
+      "device": "tablet-portrait",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "documentWidth": 753,
+      "viewportWidth": 768,
+      "controls": [
+        {
+          "name": "pricingModel",
+          "x": 41.875,
+          "right": 711.125,
+          "width": 669.25,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "minFee",
+          "x": 41.875,
+          "right": 370.5,
+          "width": 328.625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 55.875,
+          "right": 261.625,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 273.625,
+          "right": 479.375,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 491.375,
+          "right": 697.125,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 55.875,
+          "right": 261.625,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 273.625,
+          "right": 479.375,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 491.375,
+          "right": 697.125,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repasseMode",
+          "x": 41.875,
+          "right": 711.125,
+          "width": 669.25,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repassePercent",
+          "x": 41.875,
+          "right": 711.125,
+          "width": 669.25,
+          "height": 44,
+          "inside": true
+        }
+      ],
+      "rangeRows": 2,
+      "repasse": "85",
+      "screenshot": "05-logistics-range-tablet-portrait-light.png"
+    },
+    {
+      "device": "tablet-portrait",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "documentWidth": 753,
+      "viewportWidth": 768,
+      "controls": [
+        {
+          "name": "pricingModel",
+          "x": 41.875,
+          "right": 711.125,
+          "width": 669.25,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "minFee",
+          "x": 41.875,
+          "right": 370.5,
+          "width": 328.625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 55.875,
+          "right": 261.625,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 273.625,
+          "right": 479.375,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 491.375,
+          "right": 697.125,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 55.875,
+          "right": 261.625,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 273.625,
+          "right": 479.375,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 491.375,
+          "right": 697.125,
+          "width": 205.75,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repasseMode",
+          "x": 41.875,
+          "right": 711.125,
+          "width": 669.25,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repassePercent",
+          "x": 41.875,
+          "right": 711.125,
+          "width": 669.25,
+          "height": 44,
+          "inside": true
+        }
+      ],
+      "rangeRows": 2,
+      "repasse": "85",
+      "screenshot": "05-logistics-range-tablet-portrait-dark.png"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "controls": [
+        {
+          "name": "pricingModel",
+          "x": 289.5,
+          "right": 1135.5,
+          "width": 846,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "minFee",
+          "x": 289.5,
+          "right": 706.5,
+          "width": 417,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 303.5,
+          "right": 568.15625,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 580.15625,
+          "right": 844.828125,
+          "width": 264.671875,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 856.828125,
+          "right": 1121.484375,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 303.5,
+          "right": 568.15625,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 580.15625,
+          "right": 844.828125,
+          "width": 264.671875,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 856.828125,
+          "right": 1121.484375,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repasseMode",
+          "x": 289.5,
+          "right": 1135.5,
+          "width": 846,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repassePercent",
+          "x": 289.5,
+          "right": 1135.5,
+          "width": 846,
+          "height": 44,
+          "inside": true
+        }
+      ],
+      "rangeRows": 2,
+      "repasse": "85",
+      "screenshot": "05-logistics-range-desktop-light.png"
+    },
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "controls": [
+        {
+          "name": "pricingModel",
+          "x": 289.5,
+          "right": 1135.5,
+          "width": 846,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "minFee",
+          "x": 289.5,
+          "right": 706.5,
+          "width": 417,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 303.5,
+          "right": 568.15625,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 580.15625,
+          "right": 844.828125,
+          "width": 264.671875,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 856.828125,
+          "right": 1121.484375,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeFrom",
+          "x": 303.5,
+          "right": 568.15625,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeTo",
+          "x": 580.15625,
+          "right": 844.828125,
+          "width": 264.671875,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "rangeValue",
+          "x": 856.828125,
+          "right": 1121.484375,
+          "width": 264.65625,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repasseMode",
+          "x": 289.5,
+          "right": 1135.5,
+          "width": 846,
+          "height": 44,
+          "inside": true
+        },
+        {
+          "name": "repassePercent",
+          "x": 289.5,
+          "right": 1135.5,
+          "width": 846,
+          "height": 44,
+          "inside": true
+        }
+      ],
+      "rangeRows": 2,
+      "repasse": "85",
+      "screenshot": "05-logistics-range-desktop-dark.png"
+    }
+  ]
+}

@@ -2485,3 +2485,10 @@ A credencial Gmail existente foi autenticada e o servidor aceitou uma mensagem d
 - [ ] Para convites com links externos, definir futuramente uma URL HTTPS pública e testar o envio; SMTP pode ser persistido/testado antes disso, mas envio de convites permanece bloqueado enquanto os links forem locais/inacessíveis.
 
 Modo `local-only` já pode iniciar a primeira instalação pelo loopback, sem domínio público. Sintético integral passou apenas em PostgreSQL descartável. Evidências em `EVIDENCIAS/0304/smtp-bootstrap-2026-11-03/README.md`. G14, demais pendências e Campanha 0304 seguem abertos; 0305 não iniciada.
+
+### UX/UI do Bootstrap — atualização 2026-11-03
+
+- [ ] Validar a interface em Chrome Android físico, incluindo teclado virtual, recorte/safe-area e landscape baixo.
+- [ ] Proprietário revisar a aparência da instalação real antes de inserir os dados definitivos; a auditoria automatizada não substitui aprovação visual nem encerra G14.
+
+Os sete viewports × dois temas e oito passos foram auditados em Chromium/CDP; divergências medidas foram corrigidas. Nota visual 4,4/5, **PARTIAL** até a validação física. Capturas e matriz: `EVIDENCIAS/0304/bootstrap-ux-audit-2026-11-03/README.md`. Backlog anterior permanece intacto; Campanha 0304 aberta, G14 FAIL, 0305 não iniciada.

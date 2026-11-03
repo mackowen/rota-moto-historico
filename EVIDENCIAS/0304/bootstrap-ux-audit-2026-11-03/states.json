@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-03T01:26:13.637Z",
+  "states": {
+    "unavailable": { "heading": "Primeira instalação indisponível", "actions": 0 },
+    "apiError": { "alert": "Não foi possível consultar o serviço de instalação. Verifique a API e tente novamente.", "actions": 1 },
+    "loading": { "kind": "working", "text": "Conectando, autenticando e enviando uma mensagem de teste…", "button": "Testando…" },
+    "smtpError": { "kind": "error", "text": "Falha SMTP sintética sanitizada." },
+    "smtpSuccess": { "kind": "success", "text": "Servidor SMTP aceitou a mensagem sintética; entrega externa não testada.", "continueDisabled": true, "invitationLinksReady": false },
+    "smtpTransportSeparatedFromInvitationReadiness": true,
+    "blockedExternalModeWithoutPublicHttps": true
+  },
+  "navigation": {
+    "stageFocusedAfterAdvance": true,
+    "backNavigationPreservedCompanyName": { "companyName": "Restaurante QA", "focusReturned": true }
+  },
+  "smtpTestCallsIntercepted": 2,
+  "externalNetworkSend": false,
+  "provisionCalls": 0,
+  "syntheticValuesOnly": true
+}
