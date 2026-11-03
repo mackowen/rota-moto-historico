@@ -2492,3 +2492,11 @@ Modo `local-only` já pode iniciar a primeira instalação pelo loopback, sem do
 - [ ] Proprietário revisar a aparência da instalação real antes de inserir os dados definitivos; a auditoria automatizada não substitui aprovação visual nem encerra G14.
 
 Os sete viewports × dois temas e oito passos foram auditados em Chromium/CDP; divergências medidas foram corrigidas. Nota visual 4,4/5, **PARTIAL** até a validação física. Capturas e matriz: `EVIDENCIAS/0304/bootstrap-ux-audit-2026-11-03/README.md`. Backlog anterior permanece intacto; Campanha 0304 aberta, G14 FAIL, 0305 não iniciada.
+
+### Autorização local do Bootstrap — pronto para operador
+
+- [ ] Proprietário revisar os dados reais e decidir quando concluir a instalação pelo navegador.
+- [ ] Para a etapa 2, abrir uma sessão TTY local no Termux e executar `cd "$HOME/projetos/repos/rota-moto-restaurante" && npm run bootstrap:prepare-browser`. Confirmar `PREPARAR PRIMEIRA INSTALACAO` somente quando pronto; colar a autorização no campo mascarado em até 10 minutos. O valor é de uso único; se vencer, aguardar a expiração e emitir outro. Uma autorização ativa impede nova emissão.
+- [ ] Seguir senha e MFA obrigatório do titular. Convites externos seguem pendentes até configurar SMTP e uma URL pública HTTPS; o modo local-only não exige domínio.
+
+O emissor e o fluxo foram exercitados em PostgreSQL descartável via PTY e Browser QA; bancos persistentes continuam sem instalação e sem autorização ativa. Manual completo e evidências: `EVIDENCIAS/0304/bootstrap-local-auth-2026-11-03/README.md` e no app `docs/operations/BOOTSTRAP-AUTORIZACAO-LOCAL.md`. Campanha 0304 aberta, G14 FAIL, backlog desde 0257 preservado, 0305 não iniciada.

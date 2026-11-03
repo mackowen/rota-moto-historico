@@ -1,0 +1,497 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-03T02:44:11.032Z",
+  "url": "http://127.0.0.1:8083/bootstrap.html",
+  "apiCalls": "read-only diagnostics only",
+  "realProvisionPosts": 0,
+  "tested": 20,
+  "devices": [
+    {
+      "name": "compact",
+      "width": 320,
+      "height": 720
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "large",
+      "width": 430,
+      "height": 932
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "step2": "command copy control, instructions, required browser fields, in-memory authorization retention and non-persistence",
+  "matrix": [
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "compact",
+      "width": 320,
+      "height": 720,
+      "theme": "light",
+      "scrollWidth": 320,
+      "card": {
+        "left": 12,
+        "right": 308,
+        "width": 296
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-compact-light.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "compact",
+      "width": 320,
+      "height": 720,
+      "theme": "dark",
+      "scrollWidth": 320,
+      "card": {
+        "left": 12,
+        "right": 308,
+        "width": 296
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-compact-dark.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "phone",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "scrollWidth": 390,
+      "card": {
+        "left": 12,
+        "right": 378,
+        "width": 366
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-phone-light.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "phone",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "scrollWidth": 390,
+      "card": {
+        "left": 12,
+        "right": 378,
+        "width": 366
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-phone-dark.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "large",
+      "width": 430,
+      "height": 932,
+      "theme": "light",
+      "scrollWidth": 430,
+      "card": {
+        "left": 12,
+        "right": 418,
+        "width": 406
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-large-light.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "large",
+      "width": 430,
+      "height": 932,
+      "theme": "dark",
+      "scrollWidth": 430,
+      "card": {
+        "left": 12,
+        "right": 418,
+        "width": 406
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-large-dark.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "scrollWidth": 753,
+      "card": {
+        "left": 14,
+        "right": 739,
+        "width": 725
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-tablet-light.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "scrollWidth": 753,
+      "card": {
+        "left": 14,
+        "right": 739,
+        "width": 725
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-tablet-dark.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "scrollWidth": 1425,
+      "card": {
+        "left": 253,
+        "right": 1173,
+        "width": 920
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-desktop-light.png"
+    },
+    {
+      "step": "Diagnóstico · Etapa 1 de 8",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "scrollWidth": 1425,
+      "card": {
+        "left": 253,
+        "right": 1173,
+        "width": 920
+      },
+      "heading": "Antes de começar",
+      "operatorGuide": false,
+      "operatorGuideOpen": false,
+      "command": null,
+      "copyButton": false,
+      "categoryHeadings": [
+        "Obrigatório para iniciar",
+        "Avisos e opções"
+      ],
+      "screenshot": "diagnostic-desktop-dark.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "compact",
+      "width": 320,
+      "height": 720,
+      "theme": "light",
+      "scrollWidth": 320,
+      "card": {
+        "left": 12,
+        "right": 308,
+        "width": 296
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-compact-light.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "compact",
+      "width": 320,
+      "height": 720,
+      "theme": "dark",
+      "scrollWidth": 320,
+      "card": {
+        "left": 12,
+        "right": 308,
+        "width": 296
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-compact-dark.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "phone",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "scrollWidth": 390,
+      "card": {
+        "left": 12,
+        "right": 378,
+        "width": 366
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-phone-light.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "phone",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "scrollWidth": 390,
+      "card": {
+        "left": 12,
+        "right": 378,
+        "width": 366
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-phone-dark.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "large",
+      "width": 430,
+      "height": 932,
+      "theme": "light",
+      "scrollWidth": 430,
+      "card": {
+        "left": 12,
+        "right": 418,
+        "width": 406
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-large-light.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "large",
+      "width": 430,
+      "height": 932,
+      "theme": "dark",
+      "scrollWidth": 430,
+      "card": {
+        "left": 12,
+        "right": 418,
+        "width": 406
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-large-dark.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "theme": "light",
+      "scrollWidth": 768,
+      "card": {
+        "left": 14,
+        "right": 754,
+        "width": 740
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-tablet-light.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "theme": "dark",
+      "scrollWidth": 768,
+      "card": {
+        "left": 14,
+        "right": 754,
+        "width": 740
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-tablet-dark.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "scrollWidth": 1440,
+      "card": {
+        "left": 260,
+        "right": 1180,
+        "width": 920
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-desktop-light.png"
+    },
+    {
+      "step": "Administrador · Etapa 2 de 8",
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "scrollWidth": 1440,
+      "card": {
+        "left": 260,
+        "right": 1180,
+        "width": 920
+      },
+      "heading": "Administrador fundador",
+      "operatorGuide": true,
+      "operatorGuideOpen": false,
+      "command": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+      "copyButton": true,
+      "categoryHeadings": [],
+      "screenshot": "administrator-desktop-dark.png"
+    }
+  ],
+  "copiedCommand": "cd \"$HOME/projetos/repos/rota-moto-restaurante\" && npm run bootstrap:prepare-browser",
+  "errors": [],
+  "badResponses": [],
+  "screenshots": [
+    "diagnostic-compact-light.png",
+    "diagnostic-compact-dark.png",
+    "diagnostic-phone-light.png",
+    "diagnostic-phone-dark.png",
+    "diagnostic-large-light.png",
+    "diagnostic-large-dark.png",
+    "diagnostic-tablet-light.png",
+    "diagnostic-tablet-dark.png",
+    "diagnostic-desktop-light.png",
+    "diagnostic-desktop-dark.png",
+    "administrator-compact-light.png",
+    "administrator-compact-dark.png",
+    "administrator-phone-light.png",
+    "administrator-phone-dark.png",
+    "administrator-large-light.png",
+    "administrator-large-dark.png",
+    "administrator-tablet-light.png",
+    "administrator-tablet-dark.png",
+    "administrator-desktop-light.png",
+    "administrator-desktop-dark.png"
+  ]
+}
