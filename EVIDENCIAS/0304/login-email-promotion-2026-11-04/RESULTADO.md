@@ -204,6 +204,6 @@ O proprietário informou o nome **Chico Restaurante Pte Rasa** e autorizou procu
 | G5 | **BLOCKED** | Sem autenticação positiva HTTP, Browser real não executado. |
 | G6 | **PARTIAL** | E2E 0071; oficial 0070. |
 | G7 | **BLOCKED** | API não promovida nem reiniciada. |
-| G8 | **PARTIAL** | Motoboy e Restaurante estavam publicados/alinhados; esta atualização do histórico ainda não foi publicada. |
+| G8 | **PASS** | Motoboy (`9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6`) e Restaurante (`61a5e9c1e8d3150629714322ad90b1d90dab0fac`) já estavam alinhados; este registro foi publicado no Histórico (`9548474`). |
 
 Para prosseguir, o mecanismo precisa receber um UUID ou sessão de QA válida que já tenha escopo autorizado à empresa; não é necessário compartilhar senha, MFA, cookie ou fator. Sem esse contexto não é permitido usar o papel de backup, enumeração cross-tenant ou criar uma sessão administrativa sintética.
