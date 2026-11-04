@@ -31,7 +31,8 @@ Exclusão executada somente em `/data/data/com.termux/files/home/projetos/codex-
 - Verificação de links locais dos Markdown alterados: 311 links conferidos, zero quebrados após corrigir um caminho.
 - Nenhum banco oficial, migration, serviço, credencial, SMTP ou keystore alterado; nenhum segredo ou e-mail real usado.
 - `git diff --check`: PASS. 866 links locais em 36 Markdown alterados: PASS, zero quebrados. Todos os 2.087 paths rastreados da árvore origem existem na árvore remota reconciliada. 37/37 evidências de login verificadas em hashes de blob; arquivo comercial não existe no remoto e tem cópia privada validada.
+- Browser QA/CDP não foi reexecutado nesta operação: não houve mudança funcional nos aplicativos durante a reconciliação (apenas remoção de linhas vazias excedentes no SQL do Restaurante); capturas existentes foram preservadas como evidência histórica, sem declará-las como QA novo.
 
 ## E. Estado
 
-Os três pushes e o conteúdo reconciliado foram confirmados antes da exclusão. A pasta exata foi removida; a captura privada continua válida. Após publicar este registro final e conferir o HEAD remoto do histórico, a operação fica PASS. O backlog/G14 de 0304 permanece aberto; 0305 não iniciada.
+Os três pushes e o conteúdo reconciliado foram confirmados antes da exclusão. A pasta exata foi removida; a captura privada continua válida. A operação de reconciliação/publicação/exclusão é PASS. O backlog/G14 da Campanha 0304 permanece aberto (PARTIAL); 0305 não iniciada.
