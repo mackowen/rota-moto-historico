@@ -97,7 +97,7 @@ Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descar
 
 ## Retomada da campanha — 2026-11-04 (sem criação de bancos ou empresas)
 
-**Resultado: Campanha 0304 PARTIAL; promoção interrompida nos gates de bootstrap e integração. Campanha 0305 não iniciada.** Aplicada somente uma correção de integridade no checkout Restaurante; nenhuma migration foi executada em qualquer banco, nenhum serviço foi reiniciado e nenhum dado empresarial foi escrito.
+**Resultado: Campanha 0304 PARTIAL; promoção interrompida nos gates de bootstrap e integração. Campanha 0305 não iniciada.** Corrigidas a integridade de migrations e a ordem de autorização do endpoint no checkout Restaurante; nenhuma migration foi executada em qualquer banco, nenhum serviço foi reiniciado e nenhum dado empresarial foi escrito.
 
 ### Preflight, causa da divergência e correção
 
@@ -110,7 +110,7 @@ Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descar
 ### Testes, limites e estado dos bancos
 
 - Passaram: `node tests/test-postgres-migration-targets.js`, `node tests/test-identity-ui.js` e `node tests/test-cross-app-contract-parity.js` no Restaurante; `node tests/test-identity-ui.js` e `node tests/test-cross-app-contract-parity.js` no Motoboy.
-- Commits locais específicos no Restaurante: `1f366e582cfc5851f615106b032c97537cc6e6e3` (restaura hashes históricos) e `38d6e5b7de78b11db6b24169a9db2df676e62132` (ordem de autorização HTTP e teste restrito). A publicação e o registro final de G8 ainda estão pendentes neste ponto do registro.
+- Commits específicos no Restaurante, publicados em `origin/main`: `1f366e582cfc5851f615106b032c97537cc6e6e3` (restaura hashes históricos) e `38d6e5b7de78b11db6b24169a9db2df676e62132` (ordem de autorização HTTP e teste restrito). Motoboy `main` permaneceu em `9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6`, sem alterações necessárias, e foi confirmado igual a `origin/main`. Histórico publicou o registro inicial em `9fb5fb8b288c4114e03ed50ced53307441ca7937`; esta atualização final do gate G8 também será publicada em `main`.
 - O modo restrito `IDENTITY_HTTP_PREFLIGHT_ONLY=1` de `tests/test-identity-http-postgres.js` passou no E2E real com transação revertida: pedido sem autorização recebeu 403 `PROVISIONER_UNAUTHORIZED`; pedido autorizado continuou bloqueado com 503 `BOOTSTRAP_NOT_READY`; nenhum convite foi enviado nem tenant/empresa gravado. A causa da falha HTTP anterior foi a ordem da rota: ela consultava `bootstrapReadiness` (SMTP/URL) antes de autenticar o operador. `backend/identity/http.js` agora autentica primeiro; `backend/identity/service.js` entrega uma prova interna de uso único ao provisionamento, sem autenticar duas vezes. O guard de readiness permanece. A suíte HTTP completa não foi executada porque prossegue para provisionar uma empresa; `tests/test-identity-login-context-postgres.js` não foi executado porque cria três empresas. MFA, CSRF, sessão HTTP de login e Browser E2E real ainda não foram aprovados.
 - Os dois bancos autorizados permaneceram sem DDL desta execução: 70 migrations cada, 0071 pendente. E2E não foi limpo nem recebeu uma empresa; oficial `rotamoto` não foi alterado. Nenhum banco adicional foi conectado, criado ou removido. Nenhum backup foi feito, conforme dispensa do proprietário.
 - Serviços atuais não foram reiniciados nem promovidos. Por isso o commit de backend carregado, readiness pós-promoção, contrato de autenticação real e assets servidos não foram revalidados aqui. Nenhum login operacional foi feito.
@@ -126,6 +126,6 @@ Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descar
 | G5 | **BLOCKED** | Browser E2E com backend real não executado; pré-condição de bootstrap E2E não concluída. |
 | G6 | **BLOCKED** | E2E e oficial continuam em 0070, 70 migrations; não executar 0071 antes dos gates anteriores. |
 | G7 | **BLOCKED** | Backend não promovido/reiniciado; contrato real ainda não validado. |
-| G8 | **PARTIAL** | Correção do Restaurante e este registro precisam ser publicados; Motoboy não requer alteração de código nesta retomada. |
+| G8 | **PASS** | Correções do Restaurante publicadas; Motoboy `main` confirmado igual ao remoto; histórico atualizado e publicado, incluindo esta atualização final. Nenhum force push. |
 
 **Continuidade:** preparar um caminho de teste HTTP que use apenas a única empresa E2E preexistente, sem provisionar empresas e sem alterar dados persistentes; então validar autenticação/MFA/CSRF/sessões/RLS e Browser E2E. Somente depois, revisar pendências dos dois ledgers e aplicar 0071 e demais migrations válidas em `rotamoto_e2e` e `rotamoto`. Não criar bancos adicionais, não completar bootstrap com empresa fictícia e não iniciar 0305.
