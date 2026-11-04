@@ -1545,3 +1545,66 @@ Varredura de 706 arquivos Markdown em REGISTROS, RESUMOS, EVIDENCIAS e três ín
 | `T9-05` | `—` | requisito/subteste; manter vínculo com campanha | /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/PENDENCIAS.md, /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/README.md | 2 |
 | `T9-06` | `—` | requisito/subteste; manter vínculo com campanha | /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/PENDENCIAS.md, /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/README.md | 2 |
 | `T9-07` | `—` | requisito/subteste; manter vínculo com campanha | /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/PENDENCIAS.md, /data/data/com.termux/files/home/projetos/codex-historico/EVIDENCIAS/0304/ui-parte-t9/README.md | 2 |
+
+### Adendo de execução 0304 — 2026-10-31
+
+`EVIDENCIAS/0304/logistica-origens/RESULTADO.md` acrescenta evidência para os IDs canônicos já existentes `RM-D1-LOCATION-CONSISTENCY` e `RM-D1-SETTINGS-SAVE`. Não foi criado ID canônico nem alias histórico novo; ambos permanecem PARTIAL, pois o escopo global não foi encerrado. As contagens da varredura original permanecem snapshots históricos e não foram recalculadas nesta atualização.
+
+### Adendo de execução 0304 — Conta e segurança (2026-10-31)
+
+`EVIDENCIAS/0304/conta-seguranca/RESULTADO.md` complementa os IDs existentes `RM-0256B-ACCOUNT`, `RM-D1-MFA-STATE`, `RM-D1-SETTINGS-SAVE`, `RM-0256B-AUTH` e `RM-F-MFA-PAGE-DETACH-CLEANUP`; nenhum ID ou alias histórico foi removido. Os três primeiros permanecem PARTIAL, pois esta validação sintética não encerra os critérios globais nem substitui a aprovação física. `RM-F-MFA-PAGE-DETACH-CLEANUP` conserva o PASS anterior e recebeu regressão pós-logout/login. Contagens não recalculadas.
+
+### Adendo de rastreabilidade — publicação e Configurações restantes (2026-10-31)
+
+Esta execução não cria IDs, aliases nem fecha pendências. A evidência incremental liga os testes de contrato existentes aos IDs canônicos abaixo; o estado operacional permanece o da matriz de backlog.
+
+| ID canônico | Evidência desta execução | Escopo comprovado | Limite |
+|---|---|---|---|
+| `RM-D1-SETTINGS-SAVE` | `EVIDENCIAS/0304/configuracoes-restantes/RESULTADO.md` | Hashes servidos dos commits de Conta e segurança; testes focados de navegação e serialização | Sem ciclo autenticado por campo nas categorias restantes. |
+| `RM-0256B-SETTINGS-CARDS` | mesma evidência | Contratos de navegação e shell, assets atuais | Sem inspeção autenticada visual das categorias. |
+| `RM-0256C-TEAM-RBAC` | mesma evidência | Testes de UI/contrato de equipe, catálogo e acesso administrativo | Sem edição, readback ou reload autenticados nesta rodada. |
+| `RM-0256C-DRIVER-LINK-UI` | mesma evidência | Testes de associação/eligibilidade/filas | Sem mutação autenticada do vínculo na UI. |
+| `RM-0259-IDENTITY-INVITE-LIFECYCLE` | mesma evidência | Testes de contrato e permissões de identidade | Sem convite/aceite/revogação via Browser nesta rodada. |
+| `RM-D1-INTEGRATION-UX` | mesma evidência | Testes dos adaptadores e limites de integração | Sem conexão externa ou avaliação visual autenticada. |
+| `RM-0255-GLOBAL-UI` / `RM-0257-GLOBAL-ADMIN-E2E` | mesma evidência | Contratos de Super ADM, requisições e catálogo de permissões | Sem sessão global positiva via UI. |
+| `RM-0256E-BACKUP-RECOVERY` | mesma evidência | Auditoria/HTTP/inventário de backup | Sem execução de backup, restore ou Browser autenticado. |
+| `RM-0256D-LAB` | mesma evidência | Nenhuma validação autenticada de laboratório | Permanece sem evidência funcional de UI nesta rodada. |
+
+O harness antigo `campaign-0256-settings-e2e.cjs` falhou antes de interação por seletor `.settings-nav` obsoleto. Isso não altera estados nem a contagem histórica da matriz. O tenant Chico foi conferido em contexto RLS `READ ONLY`. A tentativa anterior do harness criou tenant somente dentro da transação de fixture; rollback confirmou zero resíduos persistentes. Nenhum banco foi criado.
+
+### Evidência incremental 0304 — Equipe e permissões (2026-11-01)
+
+| ID canônico | Evidência nova | Resultado demonstrado | Estado preservado / lacuna |
+|---|---|---|---|
+| `RM-0256C-TEAM-RBAC` | `EVIDENCIAS/0304/equipe-permissoes/` | Estrutura compacta, estados e diálogos cobertos por testes; suítes Restaurante/Motoboy aprovadas. | **PARTIAL** — operações protegidas na UI, readback autenticado e concorrência não demonstrados nesta execução. |
+| `RM-0256C-DRIVER-LINK-UI` | `EVIDENCIAS/0304/equipe-permissoes/IMPACTO-MOTOBOY.md` | Contrato e regressão de acesso/Driver passaram no Motoboy. | **PARTIAL** — sem mutação autenticada da interface de associação/revogação nesta execução. |
+| `RM-0259-IDENTITY-INVITE-LIFECYCLE` | `EVIDENCIAS/0304/equipe-permissoes/TESTES.md` | DTO de vencimento tenant-scoped e estados de UI cobertos por testes direcionados. | **PARTIAL** — ciclo completo via Browser autenticado, concorrência e email real não comprovados. |
+
+Sessão de Browser autenticada não foi disponibilizada; o CDP anônimo somente validou shell pública e não muda os estados de aceite.
+### Evidência autenticada adicional — Equipe, convites e permissões (2026-11-02)
+
+| ID canônico | Evidência | Resultado comprovado nesta rodada | Estado canônico |
+|---|---|---|---|
+| RM-0256C-TEAM-RBAC | EVIDENCIAS/0304/equipe-permissoes/CONVITES-E-MAIL-RBAC-20261102.md | Chromium autenticado MFA sintético em 390×844; perfil orders.read persistido/readback; escalonamento platform.admin, autorrevogação administrativa e troca a tenant não associado rejeitados. | PARTIAL — edição abrangente, isolamento cross-tenant com duas empresas e concorrência separada continuam sem prova. |
+| RM-0256C-DRIVER-LINK-UI | mesma evidência | Motoboy 8084 e contratos/identidade passaram em regressão; nenhum vínculo Driver foi alterado ou testado por UI nesta execução. | PARTIAL |
+| RM-0259-IDENTITY-INVITE-LIFECYCLE | mesma evidência | Criar/persistir/recarregar, reenvio, revogação, expiração, aceitação/reload/nova sessão, replay negado e rollback passaram. | PARTIAL — e-mail real e disputa concorrente entre sessões ainda não comprovados. |
+
+Os registros qa-saneamento-0304-20261031@rotamoto.invalid / QA Configurações foram identificados como fixture sintética de E2E da Campanha 0304 por evento auditado e vínculo com Chico; preservados. A identidade QA Convites criada para o cenário existiu apenas na transação rollback-only. A validação autenticada usa handlers de produção no harness, não POSTs protegidos através do processo persistente 8787; após o ensaio, o serviço foi reiniciado e readiness 200. A entrega de e-mail real permanece BLOCKED por ausência de provedor. Os estados anteriores da matriz permanecem PARTIAL; não há encerramento global nem recálculo de totais.
+
+### Evidência autenticada adicional — Configurações → Motoboys (2026-11-02)
+
+| ID canônico | Evidência | Resultado desta execução | Estado preservado / lacuna |
+|---|---|---|---|
+| `RM-0256C-DRIVER-LINK-UI` | `EVIDENCIAS/0304/configuracoes-motoboys/RESULTADO.md` | UI autenticada MFA sintética, associação e readback PostgreSQL, reload/novo login, recusas duplicada/inativa/não autorizada, leitura Motoboy e encerramento seguro com entrega terminal passaram em rollback. | **PARTIAL** no backlog amplo — corrida entre sessões independentes e confirmação visual do proprietário ainda pendentes. |
+| `RM-0256C-TEAM-RBAC` | mesma evidência | Backend negou a associação sem `company.manage`; integridade e autorização verificadas no fluxo Driver. | **PARTIAL** — não amplia nem fecha critérios de equipe, perfis ou RBAC geral. |
+| `RM-0259-IDENTITY-INVITE-LIFECYCLE` | pendências relacionadas preservadas; ver `EVIDENCIAS/0304/equipe-permissoes/CONVITES-E-MAIL-RBAC-20261102.md` | Nenhuma mudança no ciclo de convites nesta execução. | **PARTIAL** — SMTP real e concorrência de convites continuam abertos. |
+
+O teste foi executado com a única empresa E2E existente, Chico Restaurante. Todas as linhas e segredos da fixture foram revertidos; nenhum banco/empresa adicional foi criado. `rotamoto` não foi tocado. Totais históricos do backlog não foram recalculados.
+
+### Regressão de login MFA no Restaurante — 2026-11-02
+
+| ID | Evidência | Resultado desta execução | Estado |
+|---|---|---|---|
+| RM-D1-MFA-STATE | EVIDENCIAS/0304/mfa-login-restaurante/RESULTADO.md | Login MFA sintético pela interface/API HTTP real passou; fator de uma conta administradora E2E sem arquivo cifrado permanece sem recuperação executada. | PARTIAL |
+| LEGACY-0243-MFA-LOGIN | mesma evidência | Desafio, rejeição de MFA inválido, MFA válido, sessão, reload e logout reais passaram para a fixture sintética; a conta afetada não foi acessada. | BLOCKED para autenticação do titular |
+| LEGACY-0244-OWNER-MFA | mesma evidência | Cleanup do harness corrigido para remover somente segredos criados pela própria execução; cópia do fator afetado não localizada. | BLOCKED até recuperação autorizada |

@@ -1,0 +1,13 @@
+{
+  "before": {
+    "loaded": false,
+    "runtimeRequests": 0
+  },
+  "afterRuntimeRequests": 0,
+  "errors": [
+    {
+      "status": 401,
+      "url": "http://127.0.0.1:8083/api/identity/session"
+    }
+  ]
+}

@@ -372,7 +372,7 @@
 
 | 0244 | 2026-10-17 | Restaurante / Motoboy / `rotamoto_e2e` | SEGURANÇA / MFA / AUTORIZAÇÃO | Bloqueio pré-MFA e correção mobile/desktop | PASS: gate central bloqueia operações sem permission key e leituras/escritas API pré-MFA; enrollment/TOTP sintético permitido; confirmação libera o papel autorizado. CDP sintético passou 1280×900 e 390×844 nos dois apps. npm completo passou. Oficial sem DDL/DML; APIs reiniciadas/readiness 200. Sessão persistente do proprietário pendente de enrollment. | [REGISTROS/0244.md](REGISTROS/0244.md) · [RESUMOS/0244.md](RESUMOS/0244.md) |
 
-| 0261 | 2026-10-20 | Restaurante / Motoboy / `rotamoto_e2e` / Browser CDP | PERSISTÊNCIA EMPRESARIAL / LOCALIZAÇÃO | Hidratação Company, confirmação do mapa e origem custom | PARTIAL: DOM Empresa e Logística, Company Profile, coordenadas sintéticas confirmadas na UI, ACK/GET readback, revisão, reload/segunda sessão, origem custom isolada, RBAC negativo e 400/409 passaram. Faltam outras configurações, erro de rede/draft/retry, snapshot sync/pull Motoboy e validação física. Commits locais Restaurante `33244f2`, Browser `8120dce`; somente histórico será publicado. | [REGISTROS/0261.md](REGISTROS/0261.md) · [Browser evidence](../browser-tests/evidencias/campanhas/0261/report.json) |
+| 0261 | 2026-10-20 | Restaurante / Motoboy / `rotamoto_e2e` / Browser CDP | PERSISTÊNCIA EMPRESARIAL / LOCALIZAÇÃO | Hidratação Company, confirmação do mapa e origem custom | PARTIAL: DOM Empresa e Logística, Company Profile, coordenadas sintéticas confirmadas na UI, ACK/GET readback, revisão, reload/segunda sessão, origem custom isolada, RBAC negativo e 400/409 passaram. Faltam outras configurações, erro de rede/draft/retry, snapshot sync/pull Motoboy e validação física. Commits locais Restaurante `33244f2`, Browser `8120dce`; somente histórico será publicado. | [REGISTROS/0261.md](REGISTROS/0261.md) · Browser evidence: `~/projetos/browser-tests/evidencias/campanhas/0261/report.json` (infraestrutura local compartilhada, fora deste repositório) |
 
 | 0303-A (adendos) | 2026-10-23 | Restaurante / Browser QA | Sticky e alinhamento horizontal | Home header imóvel e ações alinhadas ao operacional | PARTIAL (medição CDP: top=0 em 8 offsets; gap lateral corrigido de 18 para 12 px; diferenças entre renderers 0 px; sessão autenticada HTTP 403 e validação final Android pendentes). | [REGISTROS/0303-A.md](REGISTROS/0303-A.md) · [RESUMOS/0303-A.md](RESUMOS/0303-A.md) · [evidências](EVIDENCIAS/0303-A/) |
 
@@ -451,3 +451,11 @@ Correção da rolagem interna da Central operacional: [registro 0304](REGISTROS/
 - [Registro final 0304](REGISTROS/0304.md)
 - [Resumo final 0304](RESUMOS/0304.md)
 - [Reset, publicação e Browser QA](EVIDENCIAS/0304/bootstrap-final-2026-11-02/README.md)
+
+## Campanha 0304 — reconciliação dos históricos e publicação — 2026-11-04
+
+- [Registro da reconciliação e fast-forward dos aplicativos](REGISTROS/0304.md#reconciliacao-e-publicacao-dos-tres-repositorios--2026-11-04)
+- [Resumo atualizado da campanha](RESUMOS/0304.md#consolidacao-dos-repositorios-e-historico--2026-11-04)
+- [Resultado, publicação e checklist de exclusão](EVIDENCIAS/0304/consolidacao-historico-2026-11-04/RESULTADO.md)
+- [Inventário e decisões de reconciliação](EVIDENCIAS/0304/consolidacao-historico-2026-11-04/INVENTARIO.md)
+- [Evidências antigas do redesign de login](EVIDENCIAS/0304/login-redesign-2026-10-25/README.md)
