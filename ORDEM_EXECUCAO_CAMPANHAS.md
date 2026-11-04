@@ -268,3 +268,7 @@ D6 comprovou e corrigiu a causa de agrupamento de rotas: a leitura canônica de 
 ## Atualização — 0299
 
 0299 concluiu como **PARTIAL / PENDING_USER_APPROVAL**. A prévia isolada do Início v2 foi validada em Browser autenticado nos viewports registrados, sem overflow, com acesso RBAC e saída para o Início atual. A imagem de referência foi obtida da pasta Downloads. A versão existente permanece preservada. A avaliação visual do proprietário é o próximo gate; não integrar a POC nem iniciar 0300 antes da decisão humana. Ver [REGISTROS/0299.md](REGISTROS/0299.md) e [evidências](EVIDENCIAS/0299/).
+
+## Atualização da execução — 0304
+
+0304 continua **PARTIAL**. Auditoria pós-ativação confirmou o estado oficial atual sem entregas/motoboys operacionais; origem específica dos dados exibidos não foi recuperada do dispositivo, mas o caminho de cache IndexedDB sem filtro de tenant foi reproduzido e corrigido localmente em Restaurante/Motoboy. RLS negativo descartável e Browser sintético passaram; backend global tem escopo operacional limitado, mas listagem administrativa de memberships e validação HTTP da notificação ficam PARTIAL. Correções não foram publicadas. Promoção operacional bloqueada até deploy e revalidação. G14 continua FAIL, backlog preservado e 0305 não iniciada. Ver [REGISTROS/0304.md](REGISTROS/0304.md) e [evidências](EVIDENCIAS/0304/isolamento-pos-ativacao-2026-11-04/README.md).

@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "kind": "synthetic browser session; mocked API; disposable Chromium profile",
+  "tenants": {
+    "tenantB": {
+      "visibleOwn": true,
+      "hiddenForeign": true,
+      "appVisible": true
+    },
+    "tenantA": {
+      "visibleOwn": true,
+      "hiddenForeign": true,
+      "appVisible": true
+    },
+    "missingDriver": {
+      "appVisible": false,
+      "gateVisible": true,
+      "heading": "Ativação do Motoboy pendente",
+      "body": false
+    }
+  },
+  "exceptions": [],
+  "artifacts": [
+    "driver-link-required.png",
+    "tenant-a.png",
+    "tenant-b.png"
+  ]
+}
