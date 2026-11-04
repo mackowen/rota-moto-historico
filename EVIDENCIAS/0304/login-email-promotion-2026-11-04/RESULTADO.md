@@ -181,6 +181,6 @@ Para continuar sem violar as regras, é necessária uma via segura para confirma
 | G5 | **BLOCKED** | Não executado porque G4 positivo não passou; nenhum mock usado como substituto. |
 | G6 | **PARTIAL** | E2E em 0071; oficial em 0070. |
 | G7 | **BLOCKED** | API não promovida/reiniciada; banco oficial e autenticação completa ainda pendentes. |
-| G8 | **PARTIAL** | Este registro de aplicação E2E ainda precisa ser publicado. |
+| G8 | **PASS** | Registro de aplicação E2E publicado em `origin/main` (`08d5626c42c1dc8d20e79713716b1f6b9fd95b49`); Restaurante e Motoboy seguem iguais aos remotos, sem alterações pendentes. |
 
 **Próximo bloqueio objetivo:** é necessário um UUID atual da empresa confirmado por contexto autorizado ou uma sessão QA existente que permita resolver a empresa sem bypass. Se a única empresa for outra que não o UUID histórico, não há base segura para inserir identidade sintética/membership nela. Após obter esse contexto, fixture sintética e login completo poderão usar só essa empresa e rollback; então Browser real, 0071 oficial e promoção podem seguir na ordem autorizada. Nenhum banco adicional ou empresa será criado.
