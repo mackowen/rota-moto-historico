@@ -217,3 +217,28 @@ Como a conta indicada não existe, criar uma identidade com esse endereço não 
 ### Busca no banco oficial solicitada pelo proprietário — 2026-11-04
 
 Em `rotamoto`, a consulta `READ ONLY` como `rotamoto_app` encontrou a conta correspondente ao endereço indicado pelo proprietário e uma credencial associada. Não foram lidos nem registrados email, segredo, hash, senha ou detalhes de MFA. O nome da empresa pesquisado não ficou visível para essa role; como `companies` está protegida por RLS/FORCE RLS, isso não é tratado como prova de ausência global. Não houve tentativa de login nem alteração no banco oficial. A conta oficial não foi usada para substituir o usuário E2E ausente.
+
+## Limpeza autorizada e preparação para novo bootstrap — 2026-11-04
+
+**Esta seção atualiza o estado operacional descrito acima:** por autorização expressa do proprietário, a limpeza completa dos dados de aplicação foi efetivada somente nos bancos existentes `rotamoto_e2e` e `rotamoto`. Sem backup, como dispensado. Nenhum banco adicional foi criado; Campanha 0305 não iniciada.
+
+- Preflight imediato: os três repositórios estavam em `main`, worktrees limpos e sem divergência. Motoboy `9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6`; Restaurante `61a5e9c1e8d3150629714322ad90b1d90dab0fac`; Histórico `a6fd3e7047fdf3d98a41ba1c3126aa506d381b5a` antes deste registro.
+- O primeiro ensaio rollback do E2E passou. O ensaio rollback do oficial detectou 8 linhas em `bootstrap_smtp_test_attempts`; por isso nenhum dado foi apagado nessa tentativa. O script `backend/postgres/admin/reset-application-data.sql` foi corrigido para incluir também `bootstrap_smtp_test_attempts` e `platform_smtp_test_attempts`. Os ensaios rollback seguintes passaram nos dois bancos. Correção publicada no Restaurante, commit `be1b27a573f0918ee67807314e7ade2f9473a58c`.
+- Migration runner validou integridade histórica e confirmou 0071 como única pendente no oficial. A migration `0071_identity_login_company_options` foi aplicada no `rotamoto` pelo usuário autorizado `rotamoto_migrator`. Up SHA-256 `5f9bd787fbe3c734c490f56f0a18aa5ba248b12d7c58a8eee48e4bed66d7da5c`; down SHA-256 `3b6500d93b7169333b2179951a815892a010fd38b2c21b51793e4aaa1f2915c`.
+- O script de reset foi executado com `commit_reset=true` primeiro no E2E e depois no oficial. Ambos imprimiram `RESET COMMIT aplicado e verificado.` O script preserva e compara a assinatura do schema, índices, constraints, triggers, policies, funções/grants, ledger e catálogo de permissões; RLS não foi desabilitado. O reset limpa os dados de aplicação, preserva `schema_migrations` e `permissions`, e recria os dois latches singleton em estado inicial. O ensaio rollback posterior confirmou que todas as tabelas de aplicação estão vazias, exceto esses latches estruturais.
+- Pós-validação por runner/catálogo: `rotamoto_e2e` e `rotamoto` estão em 0071, 71/71 migrations; o ledger de ambos tem 0071 com checksum up correspondente. A função de contexto existe, EXECUTE de `rotamoto_app` é verdadeiro e PUBLIC EXECUTE é falso. `companies`, `memberships` e `role_permissions` mantêm RLS + FORCE RLS. No E2E a sessão runtime efetiva é `rotamoto_app` via login `rotamoto_e2e_app`; nenhum papel superuser ou BYPASSRLS foi usado.
+- Depois da limpeza, a função autorizada `platform_admin_bootstrap_status()` retornou `ready` em ambos. Portanto não há empresa, usuário, credencial, sessão, pedido ou outro dado de aplicação nos bancos; a conta anteriormente indicada também foi removida como parte da limpeza autorizada. O catálogo RBAC e o ledger continuam presentes. Não se declarou empresa anterior preservada após a autorização de limpeza.
+- O serviço runit `rotamoto-api-e2e` foi reiniciado após o reset (novo processo PID `24876`) e segue ativo em `127.0.0.1:8787`. Sua configuração instalada usa `E2E_RUNTIME_DATABASE_URL=postgresql://rotamoto_e2e_app@127.0.0.1:5432/rotamoto_e2e`, `NODE_ENV=test`, e aplica role runtime `rotamoto_app`. `/health/ready` respondeu `ready`; `/api/identity/bootstrap/status` confirmou `state=ready` e schema/migrations prontos. O serviço oficial separado continua em `8788` apontado a `rotamoto`; não houve chamada de escrita nele.
+- Limite do bootstrap E2E: status indica keystore MFA presente, mas SMTP, entrega de convite e modo local-only indisponíveis. Nenhum convite foi enviado nem bootstrap empresarial concluído. O banco E2E está preparado no latch inicial; não se contornaram os guards de bootstrap. O serviço oficial informa seu estado pronto, mas seu banco permanece limpo.
+- Nenhum backup, restauração, empresa criada, branch, clone ou repositório adicional. A limpeza foi apenas nos dois bancos autorizados. A publicação da atualização do Restaurante ocorreu no commit acima; este registro será publicado no Histórico.
+
+### Estado desta operação
+
+| Critério | Estado | Evidência |
+|---|---|---|
+| Backup | **WAIVED BY OWNER** | Dispensado; nenhum backup realizado. |
+| Integridade e aplicação de migrations | **PASS** | Runner 71/71 e checksum 0071 alinhado nos dois bancos. |
+| Limpeza dos bancos | **PASS** | Reset transacional com verificação integral; latches iniciais e schema preservado. |
+| Backend E2E | **PASS** | Serviço reiniciado em `8787`, runtime E2E validado e API pronta. |
+| Bootstrap novo | **PARTIAL** | Estado `ready`; SMTP/convite/local-only indisponíveis no E2E, então nenhum owner/empresa foi provisionado. |
+| Oficial sem dados de aplicação | **PASS** | Reset confirmado; status de bootstrap `ready`; somente schema, catálogo RBAC e ledger preservados. |
