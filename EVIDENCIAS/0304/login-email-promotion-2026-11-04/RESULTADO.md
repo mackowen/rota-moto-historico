@@ -130,3 +130,30 @@ Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descar
 | G8 | **PASS** | Correções do Restaurante publicadas; Motoboy `main` confirmado igual ao remoto; histórico atualizado e publicado, incluindo a atualização de RLS. Nenhum force push. |
 
 **Continuidade:** preparar um caminho de teste HTTP que use apenas a única empresa E2E preexistente, sem provisionar empresas e sem alterar dados persistentes; então validar autenticação/MFA/CSRF/sessões/RLS e Browser E2E. Somente depois, revisar pendências dos dois ledgers e aplicar 0071 e demais migrations válidas em `rotamoto_e2e` e `rotamoto`. Não criar bancos adicionais, não completar bootstrap com empresa fictícia e não iniciar 0305.
+
+## Continuidade final — 2026-11-04 (teste HTTP sem tenant e dependências pendentes)
+
+**Resultado: Campanha 0304 ainda PARTIAL; sem alteração de banco ou serviço; 0305 não iniciada.** O proprietário reiterou que `rotamoto` está vazio e que a validação deve usar `rotamoto_e2e`. Nenhum acesso de autenticação ao oficial foi feito.
+
+- Preflight desta continuidade: Restaurante `main` `38d6e5b7de78b11db6b24169a9db2df676e62132`, Motoboy `main` `9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6` e histórico `main` `bb32ce6b3220378de808163a9c6f3206264435ce`; os três estavam limpos e iguais a `origin/main` antes das alterações desta etapa. Baselines preservadas.
+- Consulta ao E2E foi feita por `rotamoto_app`, sem `BYPASSRLS`: em transação `READ ONLY`, `users=0`, `credentials=0` e `to_regprocedure('rotamoto.identity_login_company_options(uuid)')` ausente. O ID histórico conhecido de Chico Restaurante (`01a14b34-2f79-7b57-a29d-9535574e3806`) não retornou empresa quando consultado com `app.tenant_id` igual a esse ID. As políticas `FORCE RLS` impedem transformar essa consulta em contagem global; não é seguro declarar qual a contagem global atual nem escolher outro tenant. Nenhuma identidade foi examinada por email/PII.
+- Bootstrap: o serviço de autenticação normal não consulta o latch. `authenticate()` verifica credenciais e membership; o latch aparece nos caminhos de provisionamento e conclusão do primeiro bootstrap. O status SQL `platform_admin_bootstrap_status()` retornou `unavailable` no E2E porque a função 0068 só autoriza `session_user='rotamoto_e2e_app'`, enquanto o perfil/runtime permitido aqui é `rotamoto_app`. Isso não prova que o latch bloqueia login normal; o latch `completed_at=false` continua impedindo bootstrap/provisionamento. Não se alterou o latch.
+- A migration 0071 segue necessária para o fluxo sem `companyId`: `authenticate()` chama `identity_login_company_options(uuid)` depois da senha válida. A função ainda não existe no E2E nem no oficial. Portanto há uma dependência circular nas pré-condições prescritas: validar login positivo e Browser de login antes de 0071, embora o próprio caminho sem `companyId` dependa dela. Não apliquei 0071 antecipadamente nem alterei a ordem definida pelo proprietário.
+- Acrescentado o modo `IDENTITY_HTTP_AUTH_NO_TENANT_ONLY=1` ao teste PostgreSQL HTTP. Ele usa somente `rotamoto_app`, sem conectar o migrator, envolve as chamadas em transação revertida e não cria fixtures empresariais. Passou: login sem `companyId` para identidades sintéticas inexistentes devolve 401 genérico idêntico, sem lista de empresas nem cookie; `/api/identity/session` e `/api/admin/memberships` sem sessão devolvem 401. Isso valida somente caminhos negativos/anônimos, não prova login válido, MFA ou sessão autenticada.
+- Commit local Restaurante `61a5e9c1e8d3150629714322ad90b1d90dab0fac` contém somente esse modo de teste; ainda pendente de push neste ponto do registro.
+- Status dos runners, repetido sem escrita: `rotamoto_e2e` e `rotamoto` têm 70 migrations até 0070; 0071 é a única pendente em ambos; sem divergência de checksums. Nenhuma migration foi aplicada, nenhum backup ou envio de email foi realizado, nenhum serviço foi reiniciado e nenhum dado persistente foi alterado.
+
+### Gates após esta continuidade
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| G1 | **WAIVED BY OWNER** | Backup dispensado e não realizado. |
+| G2 | **PASS** | Checksums históricos alinhados; status dos dois runners sem divergência. |
+| G3 | **BLOCKED** | 0071 pendente; ordem de gate requer HTTP e Browser completos primeiro. |
+| G4 | **PARTIAL** | Regressões HTTP negativas/anônimas passaram; nenhum usuário autorizado/credencial existe visível ao runtime, e login positivo depende de 0071. |
+| G5 | **BLOCKED** | Login/MFA autenticado não pode ser validado no navegador sem usuário/tenant acessível e 0071; nenhum mock será tratado como aprovação. |
+| G6 | **BLOCKED** | Ambos os bancos permanecem em 0070, 70 migrations. |
+| G7 | **BLOCKED** | Serviço oficial não reiniciado/promovido; G3–G6 não passaram. |
+| G8 | **PARTIAL** | Novo modo de teste e este registro ainda precisam ser commitados/publicados. |
+
+Para continuar sem violar as regras, é necessária uma via segura para confirmar a empresa atual sob RLS e obter uma identidade E2E de teste já vinculada, ou uma decisão do proprietário para reordenar a promoção de 0071 no E2E como pré-requisito técnico dos testes positivos. Até lá, não criar empresa/usuário empresarial, não elevar privilégios, não consultar via bypass e não promover o oficial.
