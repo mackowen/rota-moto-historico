@@ -1,7 +1,7 @@
 # Reconciliação, publicação e integridade — Campanha 0304
 
 **Execução em:** 2026-11-04.
-**Estado:** três repositórios publicados e verificados; conteúdo reconciliado confirmado no `main` remoto. Exclusão da cópia local está autorizada pelo checklist e será registrada após a última conferência.
+**Resultado da operação:** PASS. Três repositórios publicados e verificados, conteúdo reconciliado confirmado no GitHub e pasta duplicada removida após checklist completo. A Campanha 0304 permanece PARTIAL por seus gates e pendências próprios.
 
 ## A. Reconciliação
 
@@ -17,11 +17,11 @@ Dos 38 artefatos não rastreados, 37 evidências antigas do redesign de login fo
 |---|---|---|---|---|
 | `rota-moto` | `main` | `9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6` | confirmado; fast-forward de `64d2e13`; `git ls-remote` igual | [commit no GitHub](https://github.com/mackowen/rota-moto/commit/9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6) |
 | `rota-moto-restaurante` | `main` | `e23d06c754c5b5d654d2a233e88ed6ebee42785d` | confirmado; fast-forward de `65a0239`; `git ls-remote` igual | [commit no GitHub](https://github.com/mackowen/rota-moto-restaurante/commit/e23d06c754c5b5d654d2a233e88ed6ebee42785d) |
-| `rota-moto-historico` | `main` | `92b4349eed3ee24fcd4b0e1a9d4d625f69a7644f` | confirmado; `git ls-remote` e fetch iguais | [commit no GitHub](https://github.com/mackowen/rota-moto-historico/commit/92b4349eed3ee24fcd4b0e1a9d4d625f69a7644f) |
+| `rota-moto-historico` | `main` | `92b4349` (merge), `6eabf52` (verificação); commit de encerramento pós-exclusão no registro | confirmado; `git ls-remote` e fetch iguais | [merge no GitHub](https://github.com/mackowen/rota-moto-historico/commit/92b4349eed3ee24fcd4b0e1a9d4d625f69a7644f), [verificação](https://github.com/mackowen/rota-moto-historico/commit/6eabf52f29ee3118602ccb911d1d617f36a0d4a6) |
 
 ## C. Exclusão
 
-`codex-historico` ainda não foi excluído. Os gates prévios da exclusão foram conferidos: os três `main` locais/remotos têm SHAs iguais; o commit `92b4349` tem os dois ancestrais esperados; `origin/main` contém os 2.087 paths rastreados da origem, as 37 evidências não rastreadas aprovadas e os documentos 0304 requeridos. A captura comercial potencialmente sensível permanece fora do GitHub em cópia privada idêntica (0700/0600). Todos os 39 branch tips locais da origem estão alcançáveis em branches remotos; não há arquivos ignorados ou outro projeto na pasta. A exclusão exata da origem seguirá após esta confirmação, e seu resultado será registrado em commit final.
+Exclusão executada somente em `/data/data/com.termux/files/home/projetos/codex-historico`, após os gates prévios. O caminho não existe mais; `/data/data/com.termux/files/home/projetos/repos/rota-moto-historico` permanece presente e íntegro. Antes da remoção, os três `main` locais/remotos tinham SHAs iguais; o merge `92b4349` continha os pais esperados; `origin/main` continha os 2.087 paths rastreados da origem, as 37 evidências aprovadas e os documentos 0304 requeridos. A captura comercial potencialmente sensível segue fora do GitHub em cópia privada idêntica (diretório 0700, arquivo 0600). Os 39 branch tips locais da origem estavam alcançáveis em branches remotos; não havia arquivos ignorados ou conteúdo de outro projeto.
 
 ## D. Integridade e testes
 
@@ -34,4 +34,4 @@ Dos 38 artefatos não rastreados, 37 evidências antigas do redesign de login fo
 
 ## E. Estado
 
-Os três pushes e o conteúdo reconciliado foram confirmados. Após remover somente `/data/data/com.termux/files/home/projetos/codex-historico`, validar ausência, confirmar preservação da cópia privada e fazer o commit documental final em `main`, a operação poderá ser classificada PASS.
+Os três pushes e o conteúdo reconciliado foram confirmados antes da exclusão. A pasta exata foi removida; a captura privada continua válida. Após publicar este registro final e conferir o HEAD remoto do histórico, a operação fica PASS. O backlog/G14 de 0304 permanece aberto; 0305 não iniciada.
