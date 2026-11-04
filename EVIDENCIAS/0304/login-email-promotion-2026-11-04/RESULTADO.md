@@ -94,3 +94,38 @@ O primeiro passo para retomada é o operador de backup restabelecer, por procedi
 A causa operacional comprovada da incompatibilidade é promoção parcial: os dois frontends servem o contrato atual, mas o processo oficial da API foi iniciado antes do commit que adicionou login por email e a função 0071 não existe no PostgreSQL oficial (ledger 0070). Isso impede afirmar que o login oficial funciona; não prova falha de senha, Gmail ou MFA. Não houve defeito de aplicação comprovado nesta rodada que justificasse alteração de código. A promoção não prosseguiu porque os gates de segurança, cadeia de migrations, HTTP e Browser QA não alcançaram PASS, mesmo com G1 expressamente dispensado.
 
 Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descartável de forma documentada sem reescrever migration aplicada; restabelecer fixture bootstrap isolada e repetir regressões MFA/HTTP/RLS; executar QA claro/escuro completo; então revalidar processo/API e ledger oficial antes de qualquer promoção. Não executar login do proprietário até API/schema alinhados. Estado final: banco oficial continua em 0070; nenhum serviço reiniciado; nenhum e-mail enviado; credenciais, autorização, keystore, latches e dados preservados.
+
+## Retomada da campanha — 2026-11-04 (sem criação de bancos ou empresas)
+
+**Resultado: Campanha 0304 PARTIAL; promoção interrompida nos gates de bootstrap e integração. Campanha 0305 não iniciada.** Aplicada somente uma correção de integridade no checkout Restaurante; nenhuma migration foi executada em qualquer banco, nenhum serviço foi reiniciado e nenhum dado empresarial foi escrito.
+
+### Preflight, causa da divergência e correção
+
+- Preflight dos repositórios autorizados: Motoboy `main` `9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6`, Restaurante `main` `e23d06c754c5b5d654d2a233e88ed6ebee42785d`, histórico `main` `caf144aed3c549d4ca629756c4ff4b842b0bc17e`; os três estavam limpos e alinhados com `origin`. Nenhuma branch foi criada/trocada. Tags-base preservadas.
+- A causa foi o commit Restaurante `e23d06c` (`style(postgres): trim blank lines at migration EOF`), que alterou bytes de quatro migrations históricas já aplicadas. Em 0060, o SHA-256 do arquivo corrente era `533c689405c3123de8936b316530285105187db1533bf1b6ad27ac2867418042`, mas ambos os ledgers registravam `196417e7d247c1e3c0f4c562d9895aad29ff3858ea1ef26ffe5f7ef99e42520e`. A versão imediatamente anterior a `e23d06c`, também presente desde o commit de introdução `35c6778`, tem exatamente o hash registrado nos dois bancos. Isso prova alteração apenas do newline final; o SQL executável é o mesmo.
+- Restauradas de forma rastreável as versões pre-`e23d06c` de `0060_platform_admin_permission_reason_guard.up.sql`, `0061_platform_admin_permission_reason_null_guard.up.sql` e `0068_bootstrap_runtime_identity_pairing.up.sql`/`.down.sql`. Hashes up restaurados: 0060 `196417e7d247c1e3c0f4c562d9895aad29ff3858ea1ef26ffe5f7ef99e42520e`; 0061 `018ec167fde4488ce26ea07078f0dfa471a5b568e91779c1a2975619f8683849`; 0068 `7860c046e0208beb8fd503c48ac3809fdf55488f88978c1193b6b331d1a9ddc3`. Os ledgers E2E e oficial registram esses mesmos hashes. Nenhum checksum de ledger foi alterado.
+- `NODE_ENV=test E2E_MIGRATOR_DATABASE_URL=postgresql://rotamoto_migrator@127.0.0.1:5432/rotamoto_e2e node backend/postgres/migrate.js status --e2e` e `NODE_ENV=production MIGRATOR_DATABASE_URL=postgresql://rotamoto_migrator@127.0.0.1:5432/rotamoto node backend/postgres/migrate.js status` validaram as cadeias sem divergências. Cada banco contém 70 migrations até `0070_founder_mfa_audit_actor_kind`; `0071_identity_login_company_options` é a única pendente. Hashes locais 0071: up `5f9bd787fbe3c734c490f56f0a18aa5ba248b12d7c58a8eee48e4bed66d7da5c`, down `3b6500d93b7169333b2179951a815892a010fd38b2c21b51793e4aaa1f2915c`.
+- Leitura do latch E2E em transação `READ ONLY` como `rotamoto_migrator` mostrou `completed_at IS NOT NULL = false`. Contagens de empresas sob esse papel estão sujeitas a RLS e não foram tratadas como globais. Isso permanece uma pré-condição não resolvida para fluxos completos de instalação; não foi tentado completar instalação nem provisionar empresa.
+
+### Testes, limites e estado dos bancos
+
+- Passaram: `node tests/test-postgres-migration-targets.js`, `node tests/test-identity-ui.js` e `node tests/test-cross-app-contract-parity.js` no Restaurante; `node tests/test-identity-ui.js` e `node tests/test-cross-app-contract-parity.js` no Motoboy.
+- Commits locais específicos no Restaurante: `1f366e582cfc5851f615106b032c97537cc6e6e3` (restaura hashes históricos) e `38d6e5b7de78b11db6b24169a9db2df676e62132` (ordem de autorização HTTP e teste restrito). A publicação e o registro final de G8 ainda estão pendentes neste ponto do registro.
+- O modo restrito `IDENTITY_HTTP_PREFLIGHT_ONLY=1` de `tests/test-identity-http-postgres.js` passou no E2E real com transação revertida: pedido sem autorização recebeu 403 `PROVISIONER_UNAUTHORIZED`; pedido autorizado continuou bloqueado com 503 `BOOTSTRAP_NOT_READY`; nenhum convite foi enviado nem tenant/empresa gravado. A causa da falha HTTP anterior foi a ordem da rota: ela consultava `bootstrapReadiness` (SMTP/URL) antes de autenticar o operador. `backend/identity/http.js` agora autentica primeiro; `backend/identity/service.js` entrega uma prova interna de uso único ao provisionamento, sem autenticar duas vezes. O guard de readiness permanece. A suíte HTTP completa não foi executada porque prossegue para provisionar uma empresa; `tests/test-identity-login-context-postgres.js` não foi executado porque cria três empresas. MFA, CSRF, sessão HTTP de login e Browser E2E real ainda não foram aprovados.
+- Os dois bancos autorizados permaneceram sem DDL desta execução: 70 migrations cada, 0071 pendente. E2E não foi limpo nem recebeu uma empresa; oficial `rotamoto` não foi alterado. Nenhum banco adicional foi conectado, criado ou removido. Nenhum backup foi feito, conforme dispensa do proprietário.
+- Serviços atuais não foram reiniciados nem promovidos. Por isso o commit de backend carregado, readiness pós-promoção, contrato de autenticação real e assets servidos não foram revalidados aqui. Nenhum login operacional foi feito.
+
+### Gates desta retomada
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| G1 | **WAIVED BY OWNER** | Backup expressamente dispensado; nenhum backup realizado. |
+| G2 | **PASS** | Versão histórica de 0060 recuperada do Git; SHA-256 coincide com ambos os ledgers; migration runner agora valida as cadeias. |
+| G3 | **BLOCKED** | 0071 é a única pendente nos dois bancos; aplicação suspensa até os gates de autenticação/browser. |
+| G4 | **PARTIAL** | Regressão HTTP real da ordem autorização/readiness passou sem escrita; login, MFA, CSRF e sessão ainda não validados. |
+| G5 | **BLOCKED** | Browser E2E com backend real não executado; pré-condição de bootstrap E2E não concluída. |
+| G6 | **BLOCKED** | E2E e oficial continuam em 0070, 70 migrations; não executar 0071 antes dos gates anteriores. |
+| G7 | **BLOCKED** | Backend não promovido/reiniciado; contrato real ainda não validado. |
+| G8 | **PARTIAL** | Correção do Restaurante e este registro precisam ser publicados; Motoboy não requer alteração de código nesta retomada. |
+
+**Continuidade:** preparar um caminho de teste HTTP que use apenas a única empresa E2E preexistente, sem provisionar empresas e sem alterar dados persistentes; então validar autenticação/MFA/CSRF/sessões/RLS e Browser E2E. Somente depois, revisar pendências dos dois ledgers e aplicar 0071 e demais migrations válidas em `rotamoto_e2e` e `rotamoto`. Não criar bancos adicionais, não completar bootstrap com empresa fictícia e não iniciar 0305.
