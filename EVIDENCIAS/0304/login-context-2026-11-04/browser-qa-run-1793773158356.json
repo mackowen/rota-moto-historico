@@ -1,0 +1,159 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-04T06:19:36.950Z",
+  "tests": 6,
+  "cleanBrowserProfile": true,
+  "isolatedNetwork": "identity API mocked; all non-identity requests return synthetic 503; no real login or mutation",
+  "results": [
+    {
+      "app": "restaurante",
+      "width": 390,
+      "initial": {
+        "companyFields": [],
+        "required": true,
+        "scroll": 390,
+        "width": 390
+      },
+      "chooser": [
+        "Mercado Vila · código ENANTA",
+        "Mercado Vila · código ENANTB"
+      ],
+      "selectedContext": {
+        "appReady": true,
+        "tenantHint": null,
+        "tenantRequest": "{\"companyId\":\"tenant-b\"}",
+        "fields": [
+          "email",
+          "password",
+          "mfaCode"
+        ]
+      },
+      "jsErrors": 0
+    },
+    {
+      "app": "restaurante",
+      "width": 768,
+      "initial": {
+        "companyFields": [],
+        "required": true,
+        "scroll": 768,
+        "width": 768
+      },
+      "chooser": [
+        "Mercado Vila · código ENANTA",
+        "Mercado Vila · código ENANTB"
+      ],
+      "selectedContext": {
+        "appReady": true,
+        "tenantHint": null,
+        "tenantRequest": "{\"companyId\":\"tenant-b\"}",
+        "fields": [
+          "email",
+          "password",
+          "mfaCode"
+        ]
+      },
+      "jsErrors": 0
+    },
+    {
+      "app": "restaurante",
+      "width": 1440,
+      "initial": {
+        "companyFields": [],
+        "required": true,
+        "scroll": 1440,
+        "width": 1440
+      },
+      "chooser": [
+        "Mercado Vila · código ENANTA",
+        "Mercado Vila · código ENANTB"
+      ],
+      "selectedContext": {
+        "appReady": true,
+        "tenantHint": null,
+        "tenantRequest": "{\"companyId\":\"tenant-b\"}",
+        "fields": [
+          "email",
+          "password",
+          "mfaCode"
+        ]
+      },
+      "jsErrors": 0
+    },
+    {
+      "app": "motoboy",
+      "width": 390,
+      "initial": {
+        "companyFields": [],
+        "required": true,
+        "scroll": 391,
+        "width": 391
+      },
+      "chooser": [
+        "Mercado Vila · código ENANTA",
+        "Mercado Vila · código ENANTB"
+      ],
+      "selectedContext": {
+        "appReady": true,
+        "tenantHint": null,
+        "tenantRequest": "{\"companyId\":\"tenant-b\"}",
+        "fields": [
+          "email",
+          "password",
+          "mfaCode"
+        ]
+      },
+      "jsErrors": 0
+    },
+    {
+      "app": "motoboy",
+      "width": 768,
+      "initial": {
+        "companyFields": [],
+        "required": true,
+        "scroll": 768,
+        "width": 768
+      },
+      "chooser": [
+        "Mercado Vila · código ENANTA",
+        "Mercado Vila · código ENANTB"
+      ],
+      "selectedContext": {
+        "appReady": true,
+        "tenantHint": null,
+        "tenantRequest": "{\"companyId\":\"tenant-b\"}",
+        "fields": [
+          "email",
+          "password",
+          "mfaCode"
+        ]
+      },
+      "jsErrors": 0
+    },
+    {
+      "app": "motoboy",
+      "width": 1440,
+      "initial": {
+        "companyFields": [],
+        "required": true,
+        "scroll": 1440,
+        "width": 1440
+      },
+      "chooser": [
+        "Mercado Vila · código ENANTA",
+        "Mercado Vila · código ENANTB"
+      ],
+      "selectedContext": {
+        "appReady": true,
+        "tenantHint": null,
+        "tenantRequest": "{\"companyId\":\"tenant-b\"}",
+        "fields": [
+          "email",
+          "password",
+          "mfaCode"
+        ]
+      },
+      "jsErrors": 0
+    }
+  ]
+}
