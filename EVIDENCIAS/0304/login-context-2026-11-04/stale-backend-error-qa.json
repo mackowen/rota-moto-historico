@@ -1,0 +1,62 @@
+{
+  "result": "PASS",
+  "testedAt": "2026-11-04T02:48:30.207Z",
+  "profile": "temporary clean Chromium profile per app",
+  "backend": "synthetic HTTP 400 INVALID_INPUT; no real credentials, DB writes, login session or external requests",
+  "cases": [
+    {
+      "app": "restaurante",
+      "width": 390,
+      "message": "Este servidor ainda não oferece login sem código da empresa. Peça ao operador para atualizar o serviço; não altere sua senha.",
+      "companyIdSent": false,
+      "companyHintStored": false,
+      "noOverflow": true,
+      "jsExceptions": 0
+    },
+    {
+      "app": "restaurante",
+      "width": 768,
+      "message": "Este servidor ainda não oferece login sem código da empresa. Peça ao operador para atualizar o serviço; não altere sua senha.",
+      "companyIdSent": false,
+      "companyHintStored": false,
+      "noOverflow": true,
+      "jsExceptions": 0
+    },
+    {
+      "app": "restaurante",
+      "width": 1440,
+      "message": "Este servidor ainda não oferece login sem código da empresa. Peça ao operador para atualizar o serviço; não altere sua senha.",
+      "companyIdSent": false,
+      "companyHintStored": false,
+      "noOverflow": true,
+      "jsExceptions": 0
+    },
+    {
+      "app": "motoboy",
+      "width": 390,
+      "message": "Este servidor ainda não oferece login sem código da empresa. Peça ao operador para atualizar o serviço; não altere sua senha.",
+      "companyIdSent": false,
+      "companyHintStored": false,
+      "noOverflow": true,
+      "jsExceptions": 0
+    },
+    {
+      "app": "motoboy",
+      "width": 768,
+      "message": "Este servidor ainda não oferece login sem código da empresa. Peça ao operador para atualizar o serviço; não altere sua senha.",
+      "companyIdSent": false,
+      "companyHintStored": false,
+      "noOverflow": true,
+      "jsExceptions": 0
+    },
+    {
+      "app": "motoboy",
+      "width": 1440,
+      "message": "Este servidor ainda não oferece login sem código da empresa. Peça ao operador para atualizar o serviço; não altere sua senha.",
+      "companyIdSent": false,
+      "companyHintStored": false,
+      "noOverflow": true,
+      "jsExceptions": 0
+    }
+  ]
+}

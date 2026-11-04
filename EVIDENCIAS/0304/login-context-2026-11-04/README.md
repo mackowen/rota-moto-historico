@@ -38,3 +38,19 @@ A migration aditiva `0071_identity_login_company_options` foi aplicada somente a
 - Push desta atualização permitido somente neste repositório de histórico. Nenhum push de aplicativo.
 
 G14 e backlog permanecem preservados. Campanha 0304 continua aberta e não se inicia 0305.
+
+## Incidente de login oficial — 2026-11-04
+
+Diagnóstico read-only: o frontend servido em 8083/8084 corresponde ao código atualizado (hashes do `identity-ui.js` registrados no JSON). A API oficial em 8788 está respondendo. A consulta anônima `GET /identity/session` devolveu o esperado `401 UNAUTHENTICATED`; o status público de Bootstrap diz `complete`, mas esse indicador é amplo e não garante a migration 0071.
+
+O processo `rotamoto-api-official` já estava em execução há cerca de 5h50 quando consultado. Os arquivos do backend no root configurado foram modificados depois do início do processo. Nos logs do mesmo serviço há três POSTs `/api/identity/login` com `400 INVALID_INPUT` em 02:14:15, 02:14:32 e 02:15:02 e um `401 INVALID_CREDENTIALS` em 02:14:48. Logs não guardam corpo, email, identidade ou ID de tentativa que permita atribuir cada registro diretamente ao proprietário; não foram lidos dados privados para associá-los.
+
+O código anterior (`791f494`) valida a senha e, depois, exige `companyId` UUID; ausente, `validateUuid(undefined)` lança `INVALID_INPUT` antes de consultar membership ou verificar MFA. Portanto, os 400 são compatíveis com o contrato antigo do backend, e o formulário novo fica preso ao contexto técnico removido. O 401 isolado não pode ser atribuído e permanece indistinguível entre email/senha inválidos, conta não autorizada ou outra tentativa. Não se concluiu que falta vínculo. Nenhuma sessão é criada pelo caminho 400.
+
+O ledger oficial confirma a última migration como `0070_founder_mfa_audit_actor_kind`; `0071_identity_login_company_options` e sua função estão ausentes. Isso é um segundo bloqueio: reiniciar o processo sozinho carregaria código que chama uma função inexistente e converteria o login em falha interna. As tabelas de membership/empresa/perfis verificadas mantêm RLS e FORCE RLS; a consulta foi READ ONLY e rollback. O registro global `platform_administrators` tem RLS desativado e runtime somente leitura; nenhuma linha foi consultada nem essa política foi alterada, mantendo a revisão dentro do gate anterior.
+
+Correção local: ambos formulários distinguem o `400 INVALID_INPUT` sem código MFA e orientam o operador a atualizar o serviço, sem sugerir troca de senha e sem adicionar tenant id. Browser QA de perfis limpos simulou exatamente o 400 em ambos apps, mobile/tablet/desktop (12 cenários), com zero overflow/exceções; não fez autenticação, consulta externa ou escrita. `npm test` completo passou nos dois apps; teste PostgreSQL descartável de múltiplos vínculos/não enumeração/troca/logout passou com rollback.
+
+**Causa classificada:** backend oficial em memória desatualizado + migration oficial 0071 ausente. Frontend transmite corretamente o novo contrato; a mensagem genérica era uma lacuna de feedback. MFA e vínculo do proprietário não foram a causa demonstrada. A migration é aditiva e seu down remove função/policies, mas não foram validados backup/janela de manutenção nem liberado o gate de segurança; por instrução, não foi aplicada, e o processo API não foi reiniciado. Login oficial permanece **BLOCKED**, não validado. Nenhuma senha/token foi lido, nenhuma tentativa real foi feita por esta execução.
+
+Commits locais de UX: Restaurante `c97d007`; Motoboy `9da9e6c`. Evidência técnica sanitizada: [`runtime-compatibility-diagnostic.json`](runtime-compatibility-diagnostic.json). Sem push dos aplicativos; somente o histórico pode ser publicado.

@@ -1,0 +1,93 @@
+{
+  "campaign": "0304",
+  "observedAt": "2026-11-04T02:49:36Z",
+  "classification": {
+    "officialLogin": "BLOCKED",
+    "frontendContract": "PASS",
+    "backendRuntimeCompatibility": "FAIL",
+    "officialMigration0071": "BLOCKED",
+    "membership": "PARTIAL",
+    "mfa": "PARTIAL"
+  },
+  "frontend": {
+    "restaurant": {
+      "origin": "http://127.0.0.1:8083",
+      "identityAsset": "identity-ui.js?v=b7b6f6a156f2508b",
+      "matchesWorkspace": true
+    },
+    "driver": {
+      "origin": "http://127.0.0.1:8084",
+      "identityAsset": "identity-ui.js?v=136e52fee8c30a02",
+      "matchesWorkspace": true
+    },
+    "loginPayloadContract": "email/password/optional-MFA; no companyId"
+  },
+  "backend": {
+    "officialApiOrigin": "http://127.0.0.1:8788",
+    "identitySessionAnonymousRead": {
+      "status": 401,
+      "code": "UNAUTHENTICATED",
+      "interpretation": "expected for a read without session cookie; no account login performed"
+    },
+    "bootstrapStatusRead": {
+      "status": 200,
+      "state": "complete",
+      "note": "coarse readiness does not prove migration 0071 is installed"
+    },
+    "process": {
+      "service": "rotamoto-api-official",
+      "pid": 25365,
+      "observedUptimeSeconds": 21021,
+      "applicationRootMatchesWorkspace": true,
+      "identityServiceFileModifiedAfterProcessStart": true,
+      "interpretation": "the running Node process predates the on-disk login-without-companyId implementation"
+    },
+    "sanitizedLoginRequests": [
+      { "timeAsDisplayedByServiceLog": "2026-11-04_02:14:15.70863", "status": 400, "errorCode": "INVALID_INPUT", "durationMs": 517 },
+      { "timeAsDisplayedByServiceLog": "2026-11-04_02:14:32.14861", "status": 400, "errorCode": "INVALID_INPUT", "durationMs": 371 },
+      { "timeAsDisplayedByServiceLog": "2026-11-04_02:14:48.21211", "status": 401, "errorCode": "INVALID_CREDENTIALS", "durationMs": 430 },
+      { "timeAsDisplayedByServiceLog": "2026-11-04_02:15:02.06449", "status": 400, "errorCode": "INVALID_INPUT", "durationMs": 298 }
+    ],
+    "logPrivacy": "only time, method/path class, HTTP status, allowlisted operational code and duration were read; no body, email, user ID, password, hash, cookie or token"
+  },
+  "database": {
+    "queryMode": "rotamoto_migrator, default_transaction_read_only=on, explicit BEGIN READ ONLY/ROLLBACK",
+    "latestMigrations": ["0068_bootstrap_runtime_identity_pairing", "0069_bootstrap_smtp_test_replay", "0070_founder_mfa_audit_actor_kind"],
+    "migration0071Applied": false,
+    "identityLoginCompanyOptionsFunctionPresent": false,
+    "requiredTablesPresent": ["companies", "memberships", "roles", "role_permissions", "platform_administrators"],
+    "rlsForceRls": {
+      "companies": [true, true],
+      "memberships": [true, true],
+      "roles": [true, true],
+      "role_permissions": [true, true]
+    },
+    "platformAdministratorRegistry": {
+      "rowLevelSecurity": false,
+      "runtimePrivileges": { "select": true, "insert": false, "update": false, "delete": false },
+      "dataRead": false,
+      "note": "existing global authorization registry; no change in this diagnosis; retain review under the prior security gate"
+    },
+    "officialWrites": 0
+  },
+  "rootCause": {
+    "confirmed": "frontend is ahead of the already-running API process; that process still requires a company UUID during authentication",
+    "requestPath": "the pre-update service validates the password, then validateUuid(undefined) throws INVALID_INPUT before membership lookup or MFA verification",
+    "additionalBlocker": "the current backend source calls identity_login_company_options(uuid), but the official ledger lacks migration 0071 and the function is absent; restarting alone would produce an internal database error",
+    "membership": "not reached by the 400 INVALID_INPUT requests; absence of a membership is not evidenced",
+    "mfa": "not reached by the 400 INVALID_INPUT requests; the separate 401 log entry cannot be attributed to an identity or classified further"
+  },
+  "corrections": {
+    "code": "login UI maps the observed no-MFA 400 INVALID_INPUT legacy-contract response to a safe operator instruction; it does not add companyId or retry",
+    "browserQa": "PASS, 12 synthetic cases: both apps, 390/768/1440px, clean Chromium profiles, simulated HTTP 400, no real credentials, no DB writes, no real session"
+  },
+  "notPerformed": [
+    "no login using the owner's password",
+    "no MFA attempt",
+    "no real email",
+    "no membership/user creation or credential mutation",
+    "no official database migration",
+    "no API restart",
+    "no installation or security-gate promotion"
+  ]
+}
