@@ -154,6 +154,6 @@ Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descar
 | G5 | **BLOCKED** | Login/MFA autenticado não pode ser validado no navegador sem usuário/tenant acessível e 0071; nenhum mock será tratado como aprovação. |
 | G6 | **BLOCKED** | Ambos os bancos permanecem em 0070, 70 migrations. |
 | G7 | **BLOCKED** | Serviço oficial não reiniciado/promovido; G3–G6 não passaram. |
-| G8 | **PARTIAL** | Novo modo de teste e este registro ainda precisam ser commitados/publicados. |
+| G8 | **PASS** | Modo de teste `61a5e9c1e8d3150629714322ad90b1d90dab0fac` e histórico atualizados em `origin/main`; Motoboy confirmado igual ao remoto; publicação sem force push. |
 
 Para continuar sem violar as regras, é necessária uma via segura para confirmar a empresa atual sob RLS e obter uma identidade E2E de teste já vinculada, ou uma decisão do proprietário para reordenar a promoção de 0071 no E2E como pré-requisito técnico dos testes positivos. Até lá, não criar empresa/usuário empresarial, não elevar privilégios, não consultar via bypass e não promover o oficial.
