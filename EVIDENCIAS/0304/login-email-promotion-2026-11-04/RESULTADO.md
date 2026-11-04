@@ -184,3 +184,26 @@ Para continuar sem violar as regras, é necessária uma via segura para confirma
 | G8 | **PASS** | Registro de aplicação E2E publicado em `origin/main` (`08d5626c42c1dc8d20e79713716b1f6b9fd95b49`); Restaurante e Motoboy seguem iguais aos remotos, sem alterações pendentes. |
 
 **Próximo bloqueio objetivo:** é necessário um UUID atual da empresa confirmado por contexto autorizado ou uma sessão QA existente que permita resolver a empresa sem bypass. Se a única empresa for outra que não o UUID histórico, não há base segura para inserir identidade sintética/membership nela. Após obter esse contexto, fixture sintética e login completo poderão usar só essa empresa e rollback; então Browser real, 0071 oficial e promoção podem seguir na ordem autorizada. Nenhum banco adicional ou empresa será criado.
+
+## Busca autorizada da empresa informada pelo proprietário — 2026-11-04
+
+O proprietário informou o nome **Chico Restaurante Pte Rasa** e autorizou procurar no E2E. Preflight dos três repositórios confirmou branches `main`, worktrees limpos e HEADs iguais aos remotos; nenhuma branch foi criada ou trocada.
+
+- A pesquisa pelo nome exato foi feita em `rotamoto_e2e` como `rotamoto_app`, em transação `READ ONLY`, sem tenant conhecido; retornou zero linhas visíveis. A mesma busca de escopo tentada antes pelo UUID histórico não retornou linha. Como `companies` tem RLS + FORCE RLS, estes resultados **não provam ausência global** e não permitem descobrir o UUID.
+- Os papéis `rotamoto_app`, `rotamoto_migrator` e `rotamoto_auditor` não têm BYPASSRLS; o migrator não foi usado para atravessar políticas. O papel `rotamoto_backup` tem BYPASSRLS e foi excluído. A função `platform_admin_list_companies()` exige contexto ativo de Super ADM Global; a função `identity_company_options(bytea)` exige digest de sessão válida. O E2E não tem usuário ou credencial de teste visível ao runtime, e não há sessão autorizada para essas funções. Não foram lidas identidades por email, fatores MFA ou hashes.
+- Nenhum dado foi alterado nesta busca. E2E segue em 0071 (71 migrations); `rotamoto` permanece em 0070 (70), com 0071 pendente. O teste HTTP negativo/anônimo permanece PASS limitado. Não houve login positivo, Browser E2E, backup, email, restart, empresa/usuário criado ou alteração no oficial.
+
+### Estado após a busca do proprietário
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| G1 | **WAIVED BY OWNER** | Backup dispensado; nenhum backup realizado. |
+| G2 | **PASS** | Integridade histórica e hash 0071 conferidos. |
+| G3 | **PARTIAL** | 0071 aplicada/validada no E2E; oficial ainda pendente. |
+| G4 | **PARTIAL** | HTTP negativo aprovado; identidade/tenant autorizado não localizados para login positivo/MFA. |
+| G5 | **BLOCKED** | Sem autenticação positiva HTTP, Browser real não executado. |
+| G6 | **PARTIAL** | E2E 0071; oficial 0070. |
+| G7 | **BLOCKED** | API não promovida nem reiniciada. |
+| G8 | **PARTIAL** | Motoboy e Restaurante estavam publicados/alinhados; esta atualização do histórico ainda não foi publicada. |
+
+Para prosseguir, o mecanismo precisa receber um UUID ou sessão de QA válida que já tenha escopo autorizado à empresa; não é necessário compartilhar senha, MFA, cookie ou fator. Sem esse contexto não é permitido usar o papel de backup, enumeração cross-tenant ou criar uma sessão administrativa sintética.
