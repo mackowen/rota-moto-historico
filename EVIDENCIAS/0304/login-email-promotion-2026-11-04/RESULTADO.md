@@ -157,3 +157,30 @@ Continuidade segura: corrigir a divergência de checksum 0060 no ambiente descar
 | G8 | **PASS** | Modo de teste `61a5e9c1e8d3150629714322ad90b1d90dab0fac` e histórico atualizados em `origin/main`; Motoboy confirmado igual ao remoto; publicação sem force push. |
 
 Para continuar sem violar as regras, é necessária uma via segura para confirmar a empresa atual sob RLS e obter uma identidade E2E de teste já vinculada, ou uma decisão do proprietário para reordenar a promoção de 0071 no E2E como pré-requisito técnico dos testes positivos. Até lá, não criar empresa/usuário empresarial, não elevar privilégios, não consultar via bypass e não promover o oficial.
+
+## Continuidade da ordem de promoção — 2026-11-04
+
+**Resultado: 0071 aplicada somente no E2E; autenticação positiva ainda bloqueada pela ausência de identidade e contexto de empresa verificáveis sob RLS. Banco oficial e serviços não alterados. Campanha 0304 PARTIAL; 0305 não iniciada.** O proprietário autorizou corrigir a sequência e aplicar 0071 primeiro no E2E.
+
+- Preflight: Motoboy `main` `9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6`, Restaurante `main` `61a5e9c1e8d3150629714322ad90b1d90dab0fac`, histórico `main` `3b28c289bdc9918afa835aa292b4b09e5f2a234a`; worktrees limpos e iguais a `origin/main`. Nenhuma branch foi criada/trocada. Baselines preservadas.
+- Hashes 0071 verificados antes da aplicação: up `5f9bd787fbe3c734c490f56f0a18aa5ba248b12d7c58a8eee48e4bed66d7da5c`; down `3b6500d93b7169333b2179951a815892a010fd38b2c21b51793a4eaaa1f2915c`. O up cria somente três policies de leitura, a função `identity_login_company_options(uuid)`, revoga EXECUTE de PUBLIC e concede EXECUTE a `rotamoto_app`; não insere nem atualiza dados empresariais.
+- O runner oficial executou `NODE_ENV=test E2E_MIGRATOR_DATABASE_URL=postgresql://rotamoto_migrator@127.0.0.1:5432/rotamoto_e2e node backend/postgres/migrate.js up --e2e` e registrou 0071. Não foi feita escrita no oficial. Status posterior do runner E2E confirmou 0071 aplicada; catalog read-only confirmou ledger/hash iguais, função presente, EXECUTE para `rotamoto_app`, sem EXECUTE para PUBLIC e as três policies com as expressões esperadas. `companies`, `memberships` e `role_permissions` continuam RLS + FORCE RLS; `rotamoto_app` e `rotamoto_migrator` continuam sem SUPERUSER/BYPASSRLS. A transação de catalog foi somente leitura.
+- Verificação de identidade autorizada no E2E: por `rotamoto_app`, sem BYPASSRLS, a conta QA sintética de registro anterior (`qa-saneamento-0304-20261031@rotamoto.invalid`) não foi encontrada; `users` e `credentials` retornaram contagem zero (essas relações não têm RLS). O UUID histórico de Chico Restaurante (`01a14b34-2f79-7b57-a29d-9535574e3806`) não foi visível nem quando usado como `app.tenant_id`. Isso não é tratado como contagem global de empresas: a tabela `companies` tem FORCE RLS. Não há identidade, membership, credencial ou contexto MFA utilizável confirmado para um teste positivo. Nenhuma senha/hash/fator foi lido.
+- A consulta sem tenant do E2E não pode provar ausência global. O catálogo oferece `platform_admin_list_companies()`, mas a função exige contexto de sessão de Super ADM Global; nenhuma sessão autorizada de teste está disponível. Não se falsificou `app.platform_admin_user_id`, não se usou migrator para contornar RLS e não se tentou listar dados como administrador. O status Bootstrap `unavailable` também decorre da função 0068 aceitar `session_user='rotamoto_e2e_app'`, enquanto o perfil autorizado é `rotamoto_app`; o login normal não chama essa função. Não se alterou latch ou bootstrap.
+- Após 0071, `IDENTITY_HTTP_AUTH_NO_TENANT_ONLY=1` foi repetido com `rotamoto_app` e rollback: respostas genéricas 401 para identidades inexistentes sem `companyId`, sem empresas/cookie, e rotas de sessão/admin protegidas com 401. PASS limitado a caminhos negativos/anônimos; não comprova login vinculado, MFA, CSRF autenticado ou sessão positiva.
+- Banco E2E agora está em 0071/71 migrations. Status oficial repetido em transação de leitura pelo runner confirma `rotamoto` em 0070/70, com 0071 pendente; nenhum comando de escrita foi executado no oficial. Não foi executado Browser E2E, não houve restart, backup, e-mail, criação de empresa/usuário ou alteração permanente de dados.
+
+### Gates nesta etapa
+
+| Gate | Estado | Evidência |
+|---|---|---|
+| G1 | **WAIVED BY OWNER** | Nenhum backup feito. |
+| G2 | **PASS** | Hashes históricos íntegros; runner sem divergência antes/depois. |
+| G3 | **PARTIAL** | 0071 aplicada/validada no E2E; oficial continua em 0070 até HTTP e Browser aprovados. |
+| G4 | **PARTIAL** | Testes negativos HTTP reais aprovados após 0071; login válido e MFA bloqueados sem identidade/empresa contextualizada. |
+| G5 | **BLOCKED** | Não executado porque G4 positivo não passou; nenhum mock usado como substituto. |
+| G6 | **PARTIAL** | E2E em 0071; oficial em 0070. |
+| G7 | **BLOCKED** | API não promovida/reiniciada; banco oficial e autenticação completa ainda pendentes. |
+| G8 | **PARTIAL** | Este registro de aplicação E2E ainda precisa ser publicado. |
+
+**Próximo bloqueio objetivo:** é necessário um UUID atual da empresa confirmado por contexto autorizado ou uma sessão QA existente que permita resolver a empresa sem bypass. Se a única empresa for outra que não o UUID histórico, não há base segura para inserir identidade sintética/membership nela. Após obter esse contexto, fixture sintética e login completo poderão usar só essa empresa e rollback; então Browser real, 0071 oficial e promoção podem seguir na ordem autorizada. Nenhum banco adicional ou empresa será criado.
