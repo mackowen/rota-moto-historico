@@ -207,3 +207,9 @@ O proprietário informou o nome **Chico Restaurante Pte Rasa** e autorizou procu
 | G8 | **PASS** | Motoboy (`9da9e6cd4b1b8f0b895f1d825735f04cb96f78c6`) e Restaurante (`61a5e9c1e8d3150629714322ad90b1d90dab0fac`) já estavam alinhados; este registro foi publicado no Histórico (`9548474`). |
 
 Para prosseguir, o mecanismo precisa receber um UUID ou sessão de QA válida que já tenha escopo autorizado à empresa; não é necessário compartilhar senha, MFA, cookie ou fator. Sem esse contexto não é permitido usar o papel de backup, enumeração cross-tenant ou criar uma sessão administrativa sintética.
+
+### Verificação do usuário QA indicado pelo proprietário — 2026-11-04
+
+O proprietário indicou um endereço para reutilizar como usuário de QA. A consulta foi executada em `rotamoto_e2e` como `rotamoto_app`, em transação `READ ONLY`, comparando o endereço sem registrar seu valor neste histórico. As relações `users` e `credentials` não têm RLS (`relrowsecurity=false`, `relforcerowsecurity=false`); a correspondência exata retornou `user_exists=false` e `credential_exists=false`. Portanto, não existe essa conta no E2E para autenticar ou verificar MFA. Não foi tentada senha, não houve alteração de contador/credencial, sessão, MFA ou envio de email.
+
+Como a conta indicada não existe, criar uma identidade com esse endereço não seria reutilizar o mesmo usuário. Também não foi possível confirmar a empresa atual sob o contexto autorizado da aplicação: a busca pelo nome não retornou linha visível, e o UUID histórico não foi visível com `app.tenant_id`. Nenhuma fixture, membership ou alteração permanente foi criada. G4 continua parcial; G5 e G7 permanecem bloqueados, G3/G6 continuam parciais conforme o estado dos bancos registrado acima. A única via segura para o QA positivo é uma conta de teste realmente existente e autorizada no E2E, ou autorização explícita para fixture sintética transacional vinculada à empresa depois de sua resolução por mecanismo autorizado.
