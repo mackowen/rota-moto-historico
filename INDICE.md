@@ -1,8 +1,16 @@
-# Auditoria de rotas e APIs — atualização 2026-11-09
+# Recuperação das APIs e auditoria runtime — atualização 2026-11-09
+
+- Registro: [REGISTROS/0307.md](REGISTROS/0307.md), [resumo](RESUMOS/0307.md), [evidências](EVIDENCIAS/0307/recuperacao-api-auditoria-2026-11-09.md).
+- Resultado: API oficial `8788` e E2E `8787` saudáveis; readiness HTTP 200 via 8081–8084. Runtime/keystore locais ignorados pelo Git, secrets E2E rotacionados. Restaurante commit local `b21ce4c`; Motoboy sem alteração.
+- Testes unitários completos do Restaurante, paridade cross-app, logistics/territorial PostgreSQL E2E rollback, guards e browser público mobile/desktop passaram no escopo registrado. SMTP/marketplace, fluxo autenticado, mapas com tiles/GPS/ruas e dead-code semântico permanecem pendentes.
+
+---
+
+# Diagnóstico inicial de rotas e APIs — atualização 2026-11-09 (resolvido em 0307)
 
 - Adendo: [REGISTROS/0306.md](REGISTROS/0306.md), [resumo](RESUMOS/0306.md), [evidências](EVIDENCIAS/0306/rotas-e-servicos-2026-11-09.md).
 - Rotas confirmadas/corrigidas: oficial 8081/8082 → 8788; E2E 8083/8084 → 8787. O virtual host E2E Restaurante apontava ao oficial; quatro upstreams corrigidos, backup preservado, `nginx -t` e reload passaram.
-- APIs continuam DOWN: `runtime.env` oficial e keystore/chave E2E ausentes; DBs e `.pgpass` respondem. Health por Nginx 502 enquanto os serviços não sobem. O Registro 0305 foi esclarecido: os 404 do browser ocorreram durante servidores Python temporários nas portas de upstream.
+- No checkpoint 0306, APIs DOWN por ausência do `runtime.env` oficial e keystore/chave E2E; health Nginx 502. Esses bloqueios foram resolvidos em 0307 com runtime privado local. O Registro 0305 foi esclarecido: seus 404 ocorreram durante servidores Python temporários nas portas de upstream.
 
 ---
 # Auditoria geral 0305 — RotaMoto — 2026-11-09

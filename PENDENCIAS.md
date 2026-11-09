@@ -1,8 +1,15 @@
-## Pendências novas — Diagnóstico de serviços 0306 (2026-11-09)
+## Atualização 0307 — estado das pendências de serviços (2026-11-09)
 
-- **BLOCKED — oficial:** restaurar `~/rotamoto-data/official-api/runtime.env` original, proprietário e permissões privadas esperadas (400/600). Não reconstruir valores de credenciais por inferência.
-- **BLOCKED — E2E:** localizar/restaurar a árvore original do keystore E2E e master key sob `~/rotamoto-data`. Preservar referências e envelopes existentes; não gerar chave nova como substituição.
-- **PARTIAL — APIs:** depois de recuperar os arquivos originais, validar owner/modos, acompanhar `sv status`, health/readiness nos front doors 8081–8084 e browser E2E autenticado. Hoje ambos os processos API estão DOWN e Nginx retorna 502.
+- **RESOLVIDO — oficial:** runtime local privado e keystore novo permitiram iniciar a API; readiness 200 em 8788 e por 8081/8082. SMTP e integrações que precisem de credenciais continuam sem provisionamento/validação; não recuperar credenciais por inferência.
+- **RESOLVIDO — E2E:** keystore privado novo, ref/kid Ed25519 exclusivos, serviço ativo; readiness 200 em 8787 e por 8083/8084. A chave antiga não foi recuperada; tokens QR E2E antigos não são verificáveis após a rotação.
+- **RESOLVIDO — roteamento/serviços:** ambos os processos API e Nginx RUN, quatro front doors live/ready HTTP 200. Ver [Registro 0307](REGISTROS/0307.md).
+- **PARTIAL:** auditoria geral ainda precisa de fluxo autenticado Restaurante↔Motoboy, bootstrap descartável completo e mapa com tiles/GPS/rota por ruas; dead-code requer inspeção semântica. Não alterar ou encerrar pendências antigas sem evidência do respectivo escopo.
+
+## Diagnóstico anterior — serviços 0306 (2026-11-09; resolvido em 0307)
+
+- **RESOLVIDO em 0307 — oficial:** runtime original não localizado; runtime local privado novo foi configurado sem recriar credenciais. SMTP e outras referências continuam pendentes.
+- **RESOLVIDO em 0307 — E2E:** keystore original não localizado; chave exclusiva foi rotacionada com novo `kid`/ref, invalidando QRs antigos.
+- **RESOLVIDO em 0307 — APIs:** processos em RUN, health/readiness HTTP 200 em 8081–8084; detalhes em [0307](REGISTROS/0307.md).
 - **RESOLVIDO — roteamento:** Nginx instalado do Restaurante E2E corrigido para upstream `127.0.0.1:8787`; backup preservado e `nginx -t`/reload aprovados. Template versionado já estava correto.
 
 O adendo esclarece a interpretação do browser no Registro 0305; não apagar nem editar registro anterior. Ver [Registro 0306](REGISTROS/0306.md).
@@ -10,8 +17,8 @@ O adendo esclarece a interpretação do browser no Registro 0305; não apagar ne
 ---
 ## Pendências novas — Auditoria geral 0305 (2026-11-09)
 
-- **BLOCKED:** fluxo completo autenticado Restaurante↔Motoboy e ações de negócio não foram exercitados nesta rodada; Browser usou servidor estático e não tinha sessão MFA sintética. Disponibilizar backend E2E e identidade descartável autorizados, sem usar sessão pessoal ou escrever no banco oficial.
-- **PARTIAL:** mapas/ruas/GPS; Chromium headless exibiu contêiner e marcador, mas sem tiles carregados, GPS concluído ou paradas atribuídas. Repetir em fixture E2E com rede de tiles e coordenadas de teste; proprietário validar Chrome Android físico.
+- **PARTIAL/BLOCKED:** API E2E está disponível (0307), mas o fluxo autenticado Restaurante↔Motoboy não foi exercitado por falta de identidade/sessão E2E; usar usuário descartável autorizado, sem sessão pessoal ou escrita no banco oficial.
+- **PARTIAL:** telas públicas e contratos/lifecycle automatizados passaram, mas browser autenticado não foi aberto; tiles, GPS real e rota por ruas seguem sem validação visual. Repetir com fixture e rede de tiles; proprietário validar Chrome Android físico.
 - **PARTIAL:** bootstrap inicial; testes de setup, status, CLI e guards passaram, mas o bootstrap operacional completo não foi executado. Validar criação inicial em banco descartável com teardown seguro.
 - **PARTIAL:** código obsoleto; manifests, referências de assets e integridade estática passaram, mas não houve scanner semântico completo de código morto/endpoints não referenciados.
 
