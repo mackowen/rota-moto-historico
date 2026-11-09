@@ -1,3 +1,13 @@
+## Pendências novas — Diagnóstico de serviços 0306 (2026-11-09)
+
+- **BLOCKED — oficial:** restaurar `~/rotamoto-data/official-api/runtime.env` original, proprietário e permissões privadas esperadas (400/600). Não reconstruir valores de credenciais por inferência.
+- **BLOCKED — E2E:** localizar/restaurar a árvore original do keystore E2E e master key sob `~/rotamoto-data`. Preservar referências e envelopes existentes; não gerar chave nova como substituição.
+- **PARTIAL — APIs:** depois de recuperar os arquivos originais, validar owner/modos, acompanhar `sv status`, health/readiness nos front doors 8081–8084 e browser E2E autenticado. Hoje ambos os processos API estão DOWN e Nginx retorna 502.
+- **RESOLVIDO — roteamento:** Nginx instalado do Restaurante E2E corrigido para upstream `127.0.0.1:8787`; backup preservado e `nginx -t`/reload aprovados. Template versionado já estava correto.
+
+O adendo esclarece a interpretação do browser no Registro 0305; não apagar nem editar registro anterior. Ver [Registro 0306](REGISTROS/0306.md).
+
+---
 ## Pendências novas — Auditoria geral 0305 (2026-11-09)
 
 - **BLOCKED:** fluxo completo autenticado Restaurante↔Motoboy e ações de negócio não foram exercitados nesta rodada; Browser usou servidor estático e não tinha sessão MFA sintética. Disponibilizar backend E2E e identidade descartável autorizados, sem usar sessão pessoal ou escrever no banco oficial.

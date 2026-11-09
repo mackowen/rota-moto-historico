@@ -1,3 +1,10 @@
+# Estado vigente — Diagnóstico das APIs 0306 (2026-11-09)
+
+**Roteamento corrigido; serviços continuam BLOCKED.** Oficial Restaurante/Motoboy: 8081/8082 → API 8788. E2E Restaurante/Motoboy: 8083/8084 → API 8787. Corrigidas as quatro diretivas E2E do Restaurante que apontavam ao backend oficial; backup local preservado, `nginx -t` e reload aprovados.
+
+Causa oficial: `~/rotamoto-data/official-api/runtime.env` ausente, guard do run encerra 111. Causa E2E: keystore e master key configurados sob `~/rotamoto-data` ausentes; leitura do provider resulta em ENOENT. PostgreSQL e `.pgpass` foram validados somente por leitura. Runit indica ambos os serviços DOWN; health check 8081–8084 retorna 502. Nenhum serviço foi iniciado; nenhuma credencial/chave foi recriada; nenhuma escrita em banco. Próxima ação é recuperar os arquivos privados originais de backup confiável, depois validar e iniciar os serviços. Ver [Registro 0306](REGISTROS/0306.md), [resumo](RESUMOS/0306.md) e [evidências](EVIDENCIAS/0306/rotas-e-servicos-2026-11-09.md). Registro 0305 complementado sem alteração do relato imutável.
+
+---
 # Estado vigente — Auditoria geral 0305 (checkpoint 2026-11-09)
 
 **PARTIAL; sem PASS global.** Branches locais próprias foram abertas nos apps: Restaurante `codex/audit-full-stack-2026-11-09` em `be1b27a` e Motoboy `codex/audit-full-stack-2026-11-09` em `9da9e6c`. Ambas sem alterações de código. `npm test` completo passou em ambos. Paridade dos contratos compartilhados passou. Auditoria somente leitura confirmou bancos oficial/E2E com checksums e metadados comparáveis na migração `0071_identity_login_company_options`; teste E2E de logística passou com rollback. Bootstrap unitário/CLI/guards passaram.

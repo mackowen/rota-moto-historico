@@ -1,3 +1,10 @@
+# Auditoria de rotas e APIs — atualização 2026-11-09
+
+- Adendo: [REGISTROS/0306.md](REGISTROS/0306.md), [resumo](RESUMOS/0306.md), [evidências](EVIDENCIAS/0306/rotas-e-servicos-2026-11-09.md).
+- Rotas confirmadas/corrigidas: oficial 8081/8082 → 8788; E2E 8083/8084 → 8787. O virtual host E2E Restaurante apontava ao oficial; quatro upstreams corrigidos, backup preservado, `nginx -t` e reload passaram.
+- APIs continuam DOWN: `runtime.env` oficial e keystore/chave E2E ausentes; DBs e `.pgpass` respondem. Health por Nginx 502 enquanto os serviços não sobem. O Registro 0305 foi esclarecido: os 404 do browser ocorreram durante servidores Python temporários nas portas de upstream.
+
+---
 # Auditoria geral 0305 — RotaMoto — 2026-11-09
 
 - Registro: [REGISTROS/0305.md](REGISTROS/0305.md)

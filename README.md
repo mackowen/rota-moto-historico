@@ -13,6 +13,7 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 
 ## Trabalho vigente
 
+- Adendo 0306 (2026-11-09): [registro](REGISTROS/0306.md), [resumo](RESUMOS/0306.md), [evidências](EVIDENCIAS/0306/rotas-e-servicos-2026-11-09.md). Corrigido upstream do Restaurante E2E 8788→8787; APIs seguem DOWN por `runtime.env` oficial e keystore/chave E2E ausentes. Sem recriação de secrets ou escrita em DB.
 - Auditoria geral 0305, solicitada em 2026-11-09: [registro](REGISTROS/0305.md), [resumo](RESUMOS/0305.md) e [evidências](EVIDENCIAS/0305/auditoria-2026-11-09.md). Estado PARTIAL; `npm test` completo, contrato compartilhado e paridade read-only oficial/E2E passaram. Sessão/browser autenticado, bootstrap operacional, tiles/GPS/rotas por ruas e Android físico continuam pendentes. Nenhum patch de app foi confirmado como necessário; banco oficial sem escrita.
 - Campanha 0304 segue aberta e sem mudança nos gates anteriores: [registro cumulativo](REGISTROS/0304.md), [adendo desktop](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md) e [gates/evidências](EVIDENCIAS/0304/). G14 continua FAIL conforme aprovação visual pendente.
 - A auditoria 0305 não altera nem encerra pendências históricas de 0304 e campanhas anteriores.
