@@ -1,3 +1,12 @@
+# Auditoria geral 0305 — RotaMoto — 2026-11-09
+
+- Registro: [REGISTROS/0305.md](REGISTROS/0305.md)
+- Resumo: [RESUMOS/0305.md](RESUMOS/0305.md)
+- Evidências: [EVIDENCIAS/0305/auditoria-2026-11-09.md](EVIDENCIAS/0305/auditoria-2026-11-09.md)
+- Resultado PARTIAL: suítes completas dos dois apps, contrato cross-app, paridade read-only oficial/E2E e testes de logística/bootstrap passaram; browser autenticado, tiles/GPS/rota por ruas e validação Android físico continuam pendentes. Nenhum código dos apps foi alterado; banco oficial sem escrita.
+
+---
+
 # Campanha 0304 — Rotas V2
 
 - Atualização mais recente — Parte R.1 (2026-10-28): concessão global efetiva e auditada no E2E **PASS**; grants financeiros e Browser QA ainda **PARTIAL/BLOCKED**. O proprietário não localizou a ação; caminho indicado em Configurações. [registro](REGISTROS/0304.md), [resumo](RESUMOS/0304.md), [evidência](EVIDENCIAS/0304/fundador-parte-r1/README.md). G14 **FAIL**.

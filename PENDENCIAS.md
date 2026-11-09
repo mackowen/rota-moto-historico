@@ -1,3 +1,14 @@
+## Pendências novas — Auditoria geral 0305 (2026-11-09)
+
+- **BLOCKED:** fluxo completo autenticado Restaurante↔Motoboy e ações de negócio não foram exercitados nesta rodada; Browser usou servidor estático e não tinha sessão MFA sintética. Disponibilizar backend E2E e identidade descartável autorizados, sem usar sessão pessoal ou escrever no banco oficial.
+- **PARTIAL:** mapas/ruas/GPS; Chromium headless exibiu contêiner e marcador, mas sem tiles carregados, GPS concluído ou paradas atribuídas. Repetir em fixture E2E com rede de tiles e coordenadas de teste; proprietário validar Chrome Android físico.
+- **PARTIAL:** bootstrap inicial; testes de setup, status, CLI e guards passaram, mas o bootstrap operacional completo não foi executado. Validar criação inicial em banco descartável com teardown seguro.
+- **PARTIAL:** código obsoleto; manifests, referências de assets e integridade estática passaram, mas não houve scanner semântico completo de código morto/endpoints não referenciados.
+
+Não alterar ou encerrar pendências antigas de 0304, 0303-A ou campanhas anteriores. Ver [REGISTRO 0305](REGISTROS/0305.md) e [evidências](EVIDENCIAS/0305/auditoria-2026-11-09.md).
+
+---
+
 ## Pendências vigentes — Campanha 0304 (2026-10-24)
 
 ### Parte R.1 — concluir permissões e QA (2026-10-28)

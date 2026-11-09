@@ -1,3 +1,13 @@
+# Estado vigente — Auditoria geral 0305 (checkpoint 2026-11-09)
+
+**PARTIAL; sem PASS global.** Branches locais próprias foram abertas nos apps: Restaurante `codex/audit-full-stack-2026-11-09` em `be1b27a` e Motoboy `codex/audit-full-stack-2026-11-09` em `9da9e6c`. Ambas sem alterações de código. `npm test` completo passou em ambos. Paridade dos contratos compartilhados passou. Auditoria somente leitura confirmou bancos oficial/E2E com checksums e metadados comparáveis na migração `0071_identity_login_company_options`; teste E2E de logística passou com rollback. Bootstrap unitário/CLI/guards passaram.
+
+Chromium/CDP público verificou páginas em 1440, 768 e 390 px sem overflow horizontal de documento ou exceção JS. O harness local era estático e retornou 404 para APIs; não houve Browser autenticado. O Motoboy mostrou contêiner/marcadores, mas tiles não carregaram e GPS ficou pendente; sem dados de parada não foi possível validar uma rota real por ruas. Código obsoleto não recebeu análise semântica dedicada. Nenhum defeito de código foi confirmado, portanto nenhum patch foi aplicado. Sem escrita no banco oficial, deploy ou alteração de sistema Termux.
+
+Próximos gates: sessão sintética autenticada e backend E2E acessível; fluxo integrado Restaurante↔Motoboy e bootstrap real em ambiente descartável; mapa com tiles/GPS/paradas de fixture e validação Chrome Android físico; inspeção semântica de dead code. Nenhuma pendência anterior foi encerrada; campanha 0304/G14 mantida como registrada. Ver [registro](REGISTROS/0305.md), [resumo](RESUMOS/0305.md) e [evidências](EVIDENCIAS/0305/auditoria-2026-11-09.md).
+
+---
+
 # Estado vigente — Campanha 0304 (checkpoint 2026-10-25)
 
 ## QR de presença — configuração E2E (2026-10-25)

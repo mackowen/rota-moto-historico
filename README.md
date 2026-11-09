@@ -13,9 +13,9 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 
 ## Trabalho vigente
 
-- Campanha 0304: [registro original e atualizações cumulativas](REGISTROS/0304.md), [adendo desktop e shell responsivo](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md), [gates e evidências](EVIDENCIAS/0304/), incluindo a [intervenção visual responsiva mais recente](EVIDENCIAS/0304/intervencao-visual-2026-10-24/README.md).
-- Consolidação da publicação de 0304: [auditoria dos branches e fast-forward](REGISTROS/0304-CONSOLIDACAO-HISTORICO.md).
-- Status: campanha PARTIAL e aberta; G14 continua FAIL por reprovação visual do proprietário. G8 é PASS somente para persistência local-first; E2E autenticado cross-app e commit PostgreSQL durável foram comprovados em escopo delimitado, mas reload ainda offline, RETURN, concorrência de UI e testes adversariais permanecem pendentes. A intervenção visual mais recente passou `npm test` e fixtures CDP, sem E2E MFA pós-patch ou Chrome Android físico. G15 é regressões; suplementos atuais G16 integridade, G17 histórico/evidências e G18 política de publicação. Não iniciar a campanha 0305 nem publicar os repositórios de aplicação.
+- Auditoria geral 0305, solicitada em 2026-11-09: [registro](REGISTROS/0305.md), [resumo](RESUMOS/0305.md) e [evidências](EVIDENCIAS/0305/auditoria-2026-11-09.md). Estado PARTIAL; `npm test` completo, contrato compartilhado e paridade read-only oficial/E2E passaram. Sessão/browser autenticado, bootstrap operacional, tiles/GPS/rotas por ruas e Android físico continuam pendentes. Nenhum patch de app foi confirmado como necessário; banco oficial sem escrita.
+- Campanha 0304 segue aberta e sem mudança nos gates anteriores: [registro cumulativo](REGISTROS/0304.md), [adendo desktop](REGISTROS/0304-ADENDO-DESKTOP.md), [resumo](RESUMOS/0304.md) e [gates/evidências](EVIDENCIAS/0304/). G14 continua FAIL conforme aprovação visual pendente.
+- A auditoria 0305 não altera nem encerra pendências históricas de 0304 e campanhas anteriores.
 
 ## Histórico, estado, decisões e pendências
 
