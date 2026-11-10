@@ -1,3 +1,11 @@
+# Reset para bootstrap inicial — atualização 2026-11-10
+
+- Registro: [REGISTROS/0308.md](REGISTROS/0308.md), [resumo](RESUMOS/0308.md), [evidências](EVIDENCIAS/0308/reset-bancos-bootstrap-2026-11-10.md).
+- `rotamoto` e `rotamoto_e2e`: tabelas de aplicação vazias; schema, 71 migrations, 10 permissões e latches iniciais preservados. Rehearsal com rollback e commit verificado nos dois alvos.
+- Serviços reiniciados; bootstrap status `ready` e health/readiness HTTP 200 nas frentes 8081–8084. Empresa/owner ainda não provisionados.
+
+---
+
 # Recuperação das APIs e auditoria runtime — atualização 2026-11-09
 
 - Registro: [REGISTROS/0307.md](REGISTROS/0307.md), [resumo](RESUMOS/0307.md), [evidências](EVIDENCIAS/0307/recuperacao-api-auditoria-2026-11-09.md).

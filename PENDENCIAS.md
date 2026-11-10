@@ -1,3 +1,9 @@
+## Atualização 0308 — limpeza concluída e bootstrap inicial (2026-11-10)
+
+- **RESOLVIDO:** bancos oficial `rotamoto` e E2E `rotamoto_e2e` limpos para primeiro bootstrap. Estrutura/migrations/RBAC preservados, latches reabertos, validação de todas as tabelas de aplicação vazias passou.
+- **PRÓXIMO PASSO:** executar o bootstrap local interativo quando estiverem disponíveis o nome da empresa e email do primeiro proprietário. A API oficial reporta bootstrap local-only disponível; SMTP/entrega por convite permanecem sem configuração, então não declarar convite por email operacional.
+- Nenhum owner/empresa foi criado nesta limpeza. Ver [Registro 0308](REGISTROS/0308.md).
+
 ## Atualização 0307 — estado das pendências de serviços (2026-11-09)
 
 - **RESOLVIDO — oficial:** runtime local privado e keystore novo permitiram iniciar a API; readiness 200 em 8788 e por 8081/8082. SMTP e integrações que precisem de credenciais continuam sem provisionamento/validação; não recuperar credenciais por inferência.
