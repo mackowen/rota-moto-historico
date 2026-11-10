@@ -1,3 +1,9 @@
+## Atualização 0309 — bootstrap E2E corrigido (2026-11-10)
+
+- **RESOLVIDO:** a página 8083 identifica `rotamoto_e2e` e copia o comando `npm run bootstrap:prepare-browser:e2e`; API E2E disponibiliza modo local-only apenas na campanha 0243/loopback. Guardas, CLI e browser público passaram. Ver [Registro 0309](REGISTROS/0309.md).
+- **PRÓXIMO PASSO:** executar o emissor local e concluir bootstrap quando o proprietário fornecer os dados do titular. Não houve emissão nem escrita neste trabalho; estado vazio pós-reset 0308 permanece.
+- Permanecem pendentes os itens cumulativos abaixo: bootstrap operacional completo, sessão integrada autenticada, mapas reais e inspeção semântica de código obsoleto conforme escopo da auditoria 0305.
+
 ## Atualização 0308 — limpeza concluída e bootstrap inicial (2026-11-10)
 
 - **RESOLVIDO:** bancos oficial `rotamoto` e E2E `rotamoto_e2e` limpos para primeiro bootstrap. Estrutura/migrations/RBAC preservados, latches reabertos, validação de todas as tabelas de aplicação vazias passou.

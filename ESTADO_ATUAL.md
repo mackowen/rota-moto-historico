@@ -1,3 +1,11 @@
+# Estado vigente — Correção do comando de bootstrap E2E 0309 (2026-11-10)
+
+A página em `8083` identifica o alvo real da API como `e2e`, informa que usa `rotamoto_e2e` e oferece/copía `npm run bootstrap:prepare-browser:e2e`. O emissor exige TTY local, confirmação de ambiente/banco, keystore privado E2E, identity/readiness corretas e grava autorização de uso único auditada; o modo local-only requer campanha 0243 e loopback. Verificações em 8081 (oficial) e 8083 (E2E) reportaram ready. Chromium/CDP em 390×844 confirmou cópia correta sem overflow, erros JS ou HTTP 4xx/5xx.
+
+Nenhuma autorização foi emitida e nenhum dado foi gravado; bancos seguem vazios e prontos ao bootstrap inicial conforme 0308. O bootstrap interativo ainda depende de dados do proprietário e de execução local. Restaurante commit local `e74d950`, sem push; Motoboy sem alteração. Ver [Registro 0309](REGISTROS/0309.md), [resumo](RESUMOS/0309.md) e [evidências](EVIDENCIAS/0309/bootstrap-e2e-copy-2026-11-10.md).
+
+---
+
 # Estado vigente — Bancos resetados para bootstrap inicial 0308 (2026-11-10)
 
 **Os dois bancos foram limpos e estão prontos para o bootstrap inicial; APIs saudáveis.** `rotamoto` e `rotamoto_e2e` mantêm a estrutura, 71 migrations, 10 permissões canônicas e latches singleton vazios/reabertos; todas as demais tabelas operacionais ficaram sem registros. Nenhum schema, função, grant, RLS, índice ou constraint foi removido. O procedimento administrativo comparou estrutura antes/depois e passou em ensaio rollback antes do commit em cada DB.

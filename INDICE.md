@@ -1,3 +1,10 @@
+# Correção de bootstrap E2E — atualização 2026-11-10
+
+- Registro: [REGISTROS/0309.md](REGISTROS/0309.md), [resumo](RESUMOS/0309.md), [evidências](EVIDENCIAS/0309/bootstrap-e2e-copy-2026-11-10.md).
+- A página `8083` agora identifica o banco `rotamoto_e2e` e copia o comando emissor E2E correspondente; API status, guards, suíte E2E e Chromium/CDP móvel passaram. Nenhuma autorização ou dado foi emitido.
+
+---
+
 # Reset para bootstrap inicial — atualização 2026-11-10
 
 - Registro: [REGISTROS/0308.md](REGISTROS/0308.md), [resumo](RESUMOS/0308.md), [evidências](EVIDENCIAS/0308/reset-bancos-bootstrap-2026-11-10.md).
