@@ -13,6 +13,7 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 
 ## Trabalho vigente
 
+- Atualização 0310 (2026-11-10): [registro](REGISTROS/0310.md), [resumo](RESUMOS/0310.md), [evidências](EVIDENCIAS/0310/bootstrap-cache-key-2026-11-10.md). Corrigida a referência cacheada do JavaScript do Bootstrap e o manifesto; HTML servido em 8083 e cópia E2E confirmados por Chromium/CDP.
 - Atualização 0309 (2026-11-10): [registro](REGISTROS/0309.md), [resumo](RESUMOS/0309.md), [evidências](EVIDENCIAS/0309/bootstrap-e2e-copy-2026-11-10.md). Página 8083 identificou `rotamoto_e2e` e agora copia o comando E2E próprio; CLI, guards, status HTTP e browser CDP passaram. Nenhuma autorização ou dado de bootstrap foi emitido.
 - Atualização 0308 (2026-11-10): [registro](REGISTROS/0308.md), [resumo](RESUMOS/0308.md), [evidências](EVIDENCIAS/0308/reset-bancos-bootstrap-2026-11-10.md). Os bancos `rotamoto` e `rotamoto_e2e` foram limpos mantendo estrutura/migrations/RBAC e prontos para bootstrap inicial; APIs e latches verificados `ready`.
 - Atualização 0307 (2026-11-09): [registro](REGISTROS/0307.md), [resumo](RESUMOS/0307.md), [evidências](EVIDENCIAS/0307/recuperacao-api-auditoria-2026-11-09.md). As APIs oficial/E2E voltaram e readiness passou nas quatro frentes. Runtime privado e chaves novas foram gerados dentro do repositório Restaurante em `.rotamoto-private/` (ignorado pelo Git); SMTP/marketplace não foram provisionados, QRs E2E antigos foram invalidados pela rotação, e auditoria autenticada/mapas reais permanecem PARTIAL.

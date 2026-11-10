@@ -1,3 +1,9 @@
+# Estado vigente — Cache do Bootstrap E2E corrigido 0310 (2026-11-10)
+
+O HTML servido em 8083 referencia agora `bootstrap-wizard.js?v=14dd2ade9d51b7d2`; o manifesto offline/cache também foi regenerado. Chromium/CDP confirmou que a página E2E exibe e copia o comando `npm run bootstrap:prepare-browser:e2e`. Não houve autorização ou escrita de dados. Restaurante commit local `eb578b8`, sem push. Ver [Registro 0310](REGISTROS/0310.md), [resumo](RESUMOS/0310.md) e [evidências](EVIDENCIAS/0310/bootstrap-cache-key-2026-11-10.md).
+
+---
+
 # Estado vigente — Correção do comando de bootstrap E2E 0309 (2026-11-10)
 
 A página em `8083` identifica o alvo real da API como `e2e`, informa que usa `rotamoto_e2e` e oferece/copía `npm run bootstrap:prepare-browser:e2e`. O emissor exige TTY local, confirmação de ambiente/banco, keystore privado E2E, identity/readiness corretas e grava autorização de uso único auditada; o modo local-only requer campanha 0243 e loopback. Verificações em 8081 (oficial) e 8083 (E2E) reportaram ready. Chromium/CDP em 390×844 confirmou cópia correta sem overflow, erros JS ou HTTP 4xx/5xx.

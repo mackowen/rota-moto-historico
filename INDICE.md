@@ -1,3 +1,10 @@
+# Cache do Bootstrap E2E — atualização 2026-11-10
+
+- Registro: [REGISTROS/0310.md](REGISTROS/0310.md), [resumo](RESUMOS/0310.md), [evidências](EVIDENCIAS/0310/bootstrap-cache-key-2026-11-10.md).
+- Referência de cache do JS e manifesto atualizados; HTML 8083 e cópia do comando E2E verificados em Chromium/CDP.
+
+---
+
 # Correção de bootstrap E2E — atualização 2026-11-10
 
 - Registro: [REGISTROS/0309.md](REGISTROS/0309.md), [resumo](RESUMOS/0309.md), [evidências](EVIDENCIAS/0309/bootstrap-e2e-copy-2026-11-10.md).
