@@ -1,3 +1,10 @@
+# Fluxo E2E e comando do Bootstrap — atualização 2026-11-10
+
+- Registro: [REGISTROS/0311.md](REGISTROS/0311.md), [resumo](RESUMOS/0311.md), [evidências](EVIDENCIAS/0311/bootstrap-wizard-command-2026-11-10.md).
+- Assistente completo de oito etapas restaurado; comando enxuto, navegação e cópia verificados por Chromium/CDP.
+
+---
+
 # Cache do Bootstrap E2E — atualização 2026-11-10
 
 - Registro: [REGISTROS/0310.md](REGISTROS/0310.md), [resumo](RESUMOS/0310.md), [evidências](EVIDENCIAS/0310/bootstrap-cache-key-2026-11-10.md).

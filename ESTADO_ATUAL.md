@@ -1,3 +1,9 @@
+# Estado vigente — Fluxo E2E restaurado e comando compacto 0311 (2026-11-10)
+
+A página 8083 voltou ao assistente completo de oito etapas; em Chromium/CDP móvel foi validada a navegação de Diagnóstico 1/8 para Administrador 2/8. O guia da etapa Administrador mostra `npm run --silent bootstrap:prepare-browser:e2e`, que fixa internamente ambiente/caminhos E2E e não expõe a lista de variáveis do npm. CLI, asset manifest e guards passaram. Nenhuma autorização ou dado foi criado. Restaurante commit local `7f564c4`, sem push. Ver [Registro 0311](REGISTROS/0311.md), [resumo](RESUMOS/0311.md) e [evidências](EVIDENCIAS/0311/bootstrap-wizard-command-2026-11-10.md).
+
+---
+
 # Estado vigente — Cache do Bootstrap E2E corrigido 0310 (2026-11-10)
 
 O HTML servido em 8083 referencia agora `bootstrap-wizard.js?v=14dd2ade9d51b7d2`; o manifesto offline/cache também foi regenerado. Chromium/CDP confirmou que a página E2E exibe e copia o comando `npm run bootstrap:prepare-browser:e2e`. Não houve autorização ou escrita de dados. Restaurante commit local `eb578b8`, sem push. Ver [Registro 0310](REGISTROS/0310.md), [resumo](RESUMOS/0310.md) e [evidências](EVIDENCIAS/0310/bootstrap-cache-key-2026-11-10.md).

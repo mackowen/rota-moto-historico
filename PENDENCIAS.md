@@ -1,3 +1,8 @@
+## Atualização 0311 — fluxo e comando (2026-11-10)
+
+- **RESOLVIDO:** as oito etapas voltaram ao assistente E2E; a etapa Administrador apresenta comando E2E conciso com saída npm silenciosa e parâmetros fixos dentro do CLI. Navegação e browser passaram. Ver [Registro 0311](REGISTROS/0311.md).
+- Bootstrap real ainda aguarda execução deliberada/interativa e dados do proprietário; nenhum dado foi criado.
+
 ## Atualização 0310 — cache do Bootstrap (2026-11-10)
 
 - **RESOLVIDO:** atualizada a versão cacheada do script e o asset manifest; a página realmente servida por 8083 carrega a implementação E2E. Cópia verificada por Chromium/CDP. Ver [Registro 0310](REGISTROS/0310.md).
