@@ -1,3 +1,9 @@
+# Estado vigente — SMTP E2E alinhado à API 0312 (2026-11-10)
+
+A API E2E em 8083 não publica configuração/teste SMTP externo por isolamento. A interface de bootstrap agora informa isso na etapa E-mail 6/8, oferece a continuação local sem e-mail e não apresenta controles nem chama endpoints ausentes. A rota SMTP oficial em 8081 permanece inalterada e protegida por autorização. Verificações HTTP, teste de contrato e CDP móvel passaram; nenhum e-mail ou dado foi enviado/salvo. Restaurante commit local `20a144c`, sem push. Ver [Registro 0312](REGISTROS/0312.md), [resumo](RESUMOS/0312.md) e [evidências](EVIDENCIAS/0312/bootstrap-e2e-smtp-2026-11-10.md).
+
+---
+
 # Estado vigente — Fluxo E2E restaurado e comando compacto 0311 (2026-11-10)
 
 A página 8083 voltou ao assistente completo de oito etapas; em Chromium/CDP móvel foi validada a navegação de Diagnóstico 1/8 para Administrador 2/8. O guia da etapa Administrador mostra `npm run --silent bootstrap:prepare-browser:e2e`, que fixa internamente ambiente/caminhos E2E e não expõe a lista de variáveis do npm. CLI, asset manifest e guards passaram. Nenhuma autorização ou dado foi criado. Restaurante commit local `7f564c4`, sem push. Ver [Registro 0311](REGISTROS/0311.md), [resumo](RESUMOS/0311.md) e [evidências](EVIDENCIAS/0311/bootstrap-wizard-command-2026-11-10.md).

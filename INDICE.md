@@ -1,3 +1,10 @@
+# Bootstrap E2E / SMTP — atualização 2026-11-10
+
+- Registro: [REGISTROS/0312.md](REGISTROS/0312.md), [resumo](RESUMOS/0312.md), [evidências](EVIDENCIAS/0312/bootstrap-e2e-smtp-2026-11-10.md).
+- E2E explica SMTP externo indisponível, mantém ativação local e não chama API SMTP ausente; SMTP oficial permanece protegido.
+
+---
+
 # Fluxo E2E e comando do Bootstrap — atualização 2026-11-10
 
 - Registro: [REGISTROS/0311.md](REGISTROS/0311.md), [resumo](RESUMOS/0311.md), [evidências](EVIDENCIAS/0311/bootstrap-wizard-command-2026-11-10.md).

@@ -1,3 +1,8 @@
+## Atualização 0312 — SMTP externo no E2E (2026-11-10)
+
+- **RESOLVIDO:** removeu-se o formulário SMTP que chamava rotas intencionalmente ausentes no E2E. A etapa explica o modo local-only; verificação de API/contrato/browser passou. Ver [Registro 0312](REGISTROS/0312.md).
+- **LIMITAÇÃO DELIBERADA:** não testar ou enviar e-mail externo pela API E2E. Para SMTP externo real, usar o serviço oficial protegido e sua autorização local. Nenhum e-mail foi enviado nesta correção.
+
 ## Atualização 0311 — fluxo e comando (2026-11-10)
 
 - **RESOLVIDO:** as oito etapas voltaram ao assistente E2E; a etapa Administrador apresenta comando E2E conciso com saída npm silenciosa e parâmetros fixos dentro do CLI. Navegação e browser passaram. Ver [Registro 0311](REGISTROS/0311.md).

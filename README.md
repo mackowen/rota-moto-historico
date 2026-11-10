@@ -13,6 +13,7 @@ Este diretório mantém memória estruturada, local e fora dos repositórios dos
 
 ## Trabalho vigente
 
+- Atualização 0312 (2026-11-10): [registro](REGISTROS/0312.md), [resumo](RESUMOS/0312.md), [evidências](EVIDENCIAS/0312/bootstrap-e2e-smtp-2026-11-10.md). UI do E2E explica SMTP externo indisponível e mantém ativação local; chamadas a rotas ausentes foram removidas. SMTP oficial intacto; nenhum envio realizado.
 - Atualização 0311 (2026-11-10): [registro](REGISTROS/0311.md), [resumo](RESUMOS/0311.md), [evidências](EVIDENCIAS/0311/bootstrap-wizard-command-2026-11-10.md). Restaurado o assistente E2E de oito etapas; comando local abreviado com `npm --silent`, navegação e cópia confirmadas em CDP.
 - Atualização 0310 (2026-11-10): [registro](REGISTROS/0310.md), [resumo](RESUMOS/0310.md), [evidências](EVIDENCIAS/0310/bootstrap-cache-key-2026-11-10.md). Corrigida a referência cacheada do JavaScript do Bootstrap e o manifesto; HTML servido em 8083 e cópia E2E confirmados por Chromium/CDP.
 - Atualização 0309 (2026-11-10): [registro](REGISTROS/0309.md), [resumo](RESUMOS/0309.md), [evidências](EVIDENCIAS/0309/bootstrap-e2e-copy-2026-11-10.md). Página 8083 identificou `rotamoto_e2e` e agora copia o comando E2E próprio; CLI, guards, status HTTP e browser CDP passaram. Nenhuma autorização ou dado de bootstrap foi emitido.
